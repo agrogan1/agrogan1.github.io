@@ -1,0 +1,42 @@
+---
+title: "R and Stata Materials"
+author: "Andrew Grogan-Kaylor"
+date: '`r format(Sys.Date(), format="%B %d, %Y")`'
+output: 
+  html_document: 
+    highlight: haddock
+    number_sections: yes
+    theme: yeti
+    toc: yes
+  ioslides_presentation: 
+    highlight: haddock
+  rmdshower::shower_presentation:
+    self_contained: false
+    katex: true
+    theme: ribbon
+  tufte::tufte_html: 
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Materials
+
+* *Introduction to R*: [HTML Web Book](http://www-personal.umich.edu/~agrogan/R/background.html), [PDF](http://www-personal.umich.edu/~agrogan/R/introduction-to-R.pdf), [epub](http://www-personal.umich.edu/~agrogan/R/introduction-to-R.epub)
+* *Quick Introduction to ggplot2*: [HTML Web Book](http://www-personal.umich.edu/~agrogan/quick-intro-ggplot2/ggplot-in-3-easy-steps-maybe-2-easy-steps.html),  [PDF](http://www-personal.umich.edu/~agrogan/quick-intro-ggplot2/quick-intro-to-ggplot2.pdf), [epub](http://www-personal.umich.edu/~agrogan/quick-intro-ggplot2/quick-intro-to-ggplot2.epub)
+
+## Stata Materials
+
+* *Two Page Stata*: [HTML](http://www-personal.umich.edu/~agrogan/stata/TwoPageStata.html), [PDF](http://www-personal.umich.edu/~agrogan/stata/TwoPageStata.pdf)
+* ["Michigan Graph Scheme" for Stata](https://agroganweb.wordpress.com/michigan-graph-scheme-for-stata/)
+
+## Created by:
+
+Andrew Grogan-Kaylor
+
+* [http://www.umich.edu/~agrogan](http://www.umich.edu/~agrogan) 
+* [agrogan@umich.edu](agrogan@umich.edu).  
+
+
