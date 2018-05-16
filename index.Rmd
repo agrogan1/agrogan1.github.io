@@ -33,13 +33,23 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## R Materials
 
-* *Introduction to R*: [HTML Web Book](http://www-personal.umich.edu/~agrogan/R/background.html), [PDF](http://www-personal.umich.edu/~agrogan/R/introduction-to-R.pdf), [epub](http://www-personal.umich.edu/~agrogan/R/introduction-to-R.epub)
-* *Quick Introduction to ggplot2*: [HTML Web Book](http://www-personal.umich.edu/~agrogan/quick-intro-ggplot2/ggplot-in-3-easy-steps-maybe-2-easy-steps.html),  [PDF](http://www-personal.umich.edu/~agrogan/quick-intro-ggplot2/quick-intro-to-ggplot2.pdf), [epub](http://www-personal.umich.edu/~agrogan/quick-intro-ggplot2/quick-intro-to-ggplot2.epub)
-* University of Michigan colors for R Graphs: [web page](http://www-personal.umich.edu/~agrogan/R/Michigan_Colors.html), [R package](https://github.com/agrogan1/michigancolors/blob/master/README.md)
+* *Introduction to R*: 
+     + [HTML Web Book](http://www-personal.umich.edu/~agrogan/R/background.html) 
+     + [PDF](http://www-personal.umich.edu/~agrogan/R/introduction-to-R.pdf) 
+     + [epub](http://www-personal.umich.edu/~agrogan/R/introduction-to-R.epub)
+* *Quick Introduction to ggplot2*: 
+     + [HTML Web Book](http://www-personal.umich.edu/~agrogan/quick-intro-ggplot2/ggplot-in-3-easy-steps-maybe-2-easy-steps.html) 
+     + [PDF](http://www-personal.umich.edu/~agrogan/quick-intro-ggplot2/quick-intro-to-ggplot2.pdf)
+     + [epub](http://www-personal.umich.edu/~agrogan/quick-intro-ggplot2/quick-intro-to-ggplot2.epub)
+* University of Michigan colors for R Graphs: 
+     + [web page](http://www-personal.umich.edu/~agrogan/R/Michigan_Colors.html), 
+     + [R package](https://github.com/agrogan1/michigancolors/blob/master/README.md)
 
 ## Stata Materials
 
-* *Two Page Stata*: [HTML](http://www-personal.umich.edu/~agrogan/stata/TwoPageStata.html), [PDF](http://www-personal.umich.edu/~agrogan/stata/TwoPageStata.pdf)
+* *Two Page Stata*: 
+     + [HTML](http://www-personal.umich.edu/~agrogan/stata/TwoPageStata.html), 
+     + [PDF](http://www-personal.umich.edu/~agrogan/stata/TwoPageStata.pdf)
 * ["Michigan Graph Scheme" for Stata](https://agroganweb.wordpress.com/michigan-graph-scheme-for-stata/)
 
 ## Created by:
