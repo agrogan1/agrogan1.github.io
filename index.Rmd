@@ -42,8 +42,8 @@ knitr::opts_chunk$set(echo = TRUE)
      + [PDF](http://www-personal.umich.edu/~agrogan/quick-intro-ggplot2/quick-intro-to-ggplot2.pdf)
      + [epub](http://www-personal.umich.edu/~agrogan/quick-intro-ggplot2/quick-intro-to-ggplot2.epub)
 * University of Michigan colors for R Graphs: 
-     + [web page](http://www-personal.umich.edu/~agrogan/R/Michigan_Colors.html), 
-     + [R package](https://github.com/agrogan1/michigancolors/blob/master/README.md)
+     + [web page](http://www-personal.umich.edu/~agrogan/R/Michigan_Colors.html) 
+     + [R package](https://agrogan1.github.io/michigancolors/)
 * *Two Page ggplot2*: 
      + [PDF](https://agrogan1.github.io/two_page_ggplot2.pdf)
 
@@ -51,8 +51,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Stata Materials
 
 * *Two Page Stata*: 
-     + [HTML](http://www-personal.umich.edu/~agrogan/stata/TwoPageStata.html), 
+     + [HTML](http://www-personal.umich.edu/~agrogan/stata/TwoPageStata.html) 
      + [PDF](http://www-personal.umich.edu/~agrogan/stata/TwoPageStata.pdf)
+     + [epub](http://www-personal.umich.edu/~agrogan/stata/TwoPageStata.epub)
 * ["Michigan Graph Scheme" for Stata](https://agroganweb.wordpress.com/michigan-graph-scheme-for-stata/)
 
 ## Created by:
