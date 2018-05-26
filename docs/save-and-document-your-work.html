@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Introduction to R</title>
+  <meta name="description" content="an introduction to R">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Introduction to R" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:image" content="Introduction-to-R-Forest-letter.png" />
+  <meta property="og:description" content="an introduction to R" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Introduction to R" />
+  
+  <meta name="twitter:description" content="an introduction to R" />
+  <meta name="twitter:image" content="Introduction-to-R-Forest-letter.png" />
+
+<meta name="author" content="Andy Grogan-Kaylor">
+
+
+<meta name="date" content="2018-05-15">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="save-your-data-in-r-format.html">
+<link rel="next" href="process-your-data.html">
+<script src="libs/jquery/jquery.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="background.html"><a href="background.html"><i class="fa fa-check"></i><b>1</b> Background</a></li>
+<li class="chapter" data-level="2" data-path="base-r-and-libraries.html"><a href="base-r-and-libraries.html"><i class="fa fa-check"></i><b>2</b> Base R and Libraries</a></li>
+<li class="chapter" data-level="3" data-path="working-directory.html"><a href="working-directory.html"><i class="fa fa-check"></i><b>3</b> Working Directory</a></li>
+<li class="chapter" data-level="4" data-path="writing-r-code-or-script.html"><a href="writing-r-code-or-script.html"><i class="fa fa-check"></i><b>4</b> Writing R Code or Script</a></li>
+<li class="chapter" data-level="5" data-path="graphical-user-interface.html"><a href="graphical-user-interface.html"><i class="fa fa-check"></i><b>5</b> Graphical User Interface</a></li>
+<li class="chapter" data-level="6" data-path="get-your-data.html"><a href="get-your-data.html"><i class="fa fa-check"></i><b>6</b> Get Your Data</a><ul>
+<li class="chapter" data-level="6.1" data-path="get-your-data.html"><a href="get-your-data.html#r-format-.rdata"><i class="fa fa-check"></i><b>6.1</b> R format (*.RData)</a></li>
+<li class="chapter" data-level="6.2" data-path="get-your-data.html"><a href="get-your-data.html#comma-separated-values-.csv"><i class="fa fa-check"></i><b>6.2</b> Comma Separated Values (*.csv)</a></li>
+<li class="chapter" data-level="6.3" data-path="get-your-data.html"><a href="get-your-data.html#statistical-packages-and-excel"><i class="fa fa-check"></i><b>6.3</b> Statistical Packages and Excel</a></li>
+<li class="chapter" data-level="6.4" data-path="get-your-data.html"><a href="get-your-data.html#foreign"><i class="fa fa-check"></i><b>6.4</b> <code>foreign</code></a></li>
+<li class="chapter" data-level="6.5" data-path="get-your-data.html"><a href="get-your-data.html#readxl"><i class="fa fa-check"></i><b>6.5</b> <code>readxl</code></a></li>
+<li class="chapter" data-level="6.6" data-path="get-your-data.html"><a href="get-your-data.html#haven"><i class="fa fa-check"></i><b>6.6</b> <code>haven</code></a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="save-your-data-in-r-format.html"><a href="save-your-data-in-r-format.html"><i class="fa fa-check"></i><b>7</b> Save Your Data in R Format</a></li>
+<li class="chapter" data-level="8" data-path="save-and-document-your-work.html"><a href="save-and-document-your-work.html"><i class="fa fa-check"></i><b>8</b> Save and Document Your Work</a></li>
+<li class="chapter" data-level="9" data-path="process-your-data.html"><a href="process-your-data.html"><i class="fa fa-check"></i><b>9</b> Process Your Data</a><ul>
+<li class="chapter" data-level="9.1" data-path="process-your-data.html"><a href="process-your-data.html#data-subsets"><i class="fa fa-check"></i><b>9.1</b> Data Subsets</a></li>
+<li class="chapter" data-level="9.2" data-path="process-your-data.html"><a href="process-your-data.html#numeric-and-factor-variables"><i class="fa fa-check"></i><b>9.2</b> Numeric and Factor Variables</a></li>
+<li class="chapter" data-level="9.3" data-path="process-your-data.html"><a href="process-your-data.html#missing-values"><i class="fa fa-check"></i><b>9.3</b> Missing Values</a></li>
+<li class="chapter" data-level="9.4" data-path="process-your-data.html"><a href="process-your-data.html#renaming-variables"><i class="fa fa-check"></i><b>9.4</b> Renaming Variables</a></li>
+<li class="chapter" data-level="9.5" data-path="process-your-data.html"><a href="process-your-data.html#sorting-data"><i class="fa fa-check"></i><b>9.5</b> Sorting Data</a></li>
+<li class="chapter" data-level="9.6" data-path="process-your-data.html"><a href="process-your-data.html#creating-new-variables"><i class="fa fa-check"></i><b>9.6</b> Creating New Variables</a></li>
+<li class="chapter" data-level="9.7" data-path="process-your-data.html"><a href="process-your-data.html#scales-or-measures"><i class="fa fa-check"></i><b>9.7</b> Scales or Measures</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>10</b> Descriptive Statistics</a></li>
+<li class="chapter" data-level="11" data-path="bivariate-statistics.html"><a href="bivariate-statistics.html"><i class="fa fa-check"></i><b>11</b> Bivariate Statistics</a></li>
+<li class="chapter" data-level="12" data-path="multivariate-statistics.html"><a href="multivariate-statistics.html"><i class="fa fa-check"></i><b>12</b> Multivariate Statistics</a></li>
+<li class="chapter" data-level="13" data-path="graphing.html"><a href="graphing.html"><i class="fa fa-check"></i><b>13</b> Graphing</a></li>
+<li class="chapter" data-level="14" data-path="comments-questions-and-corrections.html"><a href="comments-questions-and-corrections.html"><i class="fa fa-check"></i><b>14</b> Comments, Questions and Corrections</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="save-and-document-your-work" class="section level1">
+<h1><span class="header-section-number">8</span> Save and Document Your Work</h1>
+<p>Use the Script Editor to save R commands that you want to use again, or to modify for the next project, as well as to create an “audit trail” of your work so that your workflow is documented and replicable. R commands are saved in a <em>.R</em> file, e.g. <strong>myscript.R</strong>.</p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="save-your-data-in-r-format.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="process-your-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/lunr.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": ["introduction-to-R.pdf", "introduction-to-R.epub"],
+"toc": {
+"collapse": "subsection"
+},
+"search": false
+});
+});
+</script>
+
+</body>
+
+</html>
