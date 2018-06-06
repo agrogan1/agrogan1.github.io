@@ -44,6 +44,8 @@ knitr::opts_chunk$set(echo = TRUE)
 * University of Michigan colors for R Graphs: 
      + [web page](http://www-personal.umich.edu/~agrogan/R/Michigan_Colors.html) 
      + [R package](https://agrogan1.github.io/michigancolors/)
+* *Two Page R*: 
+     + [PDF](https://agrogan1.github.io/docs/R/two_page_R.pdf)
 * *Two Page ggplot2*: 
      + [PDF](https://agrogan1.github.io/docs/ggplot2/two_page_ggplot2.pdf)
 
