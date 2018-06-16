@@ -3,9 +3,6 @@ title: "R and Stata Materials"
 author: "Andrew Grogan-Kaylor"
 date: '`r format(Sys.Date(), format="%B %d, %Y")`'
 output: 
-  prettydoc::html_pretty:
-    theme: cayman
-    highlight: github
   html_document: 
     highlight: haddock
     number_sections: yes
@@ -14,6 +11,9 @@ output:
     toc_float:
       collapsed: yes
       smooth_scroll: yes    
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
   ioslides_presentation: 
     highlight: haddock
   rmdshower::shower_presentation:
