@@ -6,24 +6,24 @@ output:
   html_document: 
     highlight: haddock
     number_sections: yes
-    theme: yeti
+    theme: default
     toc: yes
     toc_float:
       collapsed: yes
       smooth_scroll: yes    
-  tufte::tufte_html: 
-    toc: yes
-    number_sections: yes
-    css: styles.css
+  prettydoc::html_pretty:
+    theme: architect
+    highlight: github
   rmdshower::shower_presentation:
     self_contained: false
     katex: true
     theme: ribbon
   ioslides_presentation: 
     highlight: haddock
-  prettydoc::html_pretty:
-    theme: cayman
-    highlight: github
+  tufte::tufte_html: 
+    toc: yes
+    number_sections: yes
+    css: styles.css
 ---
 
 ```{r setup, include=FALSE}
