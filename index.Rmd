@@ -1,5 +1,5 @@
 ---
-title: "R and Stata Materials"
+title: "R, Stata and Other Statistical Materials"
 author: "Andrew Grogan-Kaylor"
 date: '`r format(Sys.Date(), format="%B %d, %Y")`'
 output: 
@@ -11,19 +11,19 @@ output:
     toc_float:
       collapsed: yes
       smooth_scroll: yes    
-  prettydoc::html_pretty:
-    theme: architect
-    highlight: github
+  tufte::tufte_html: 
+    toc: yes
+    number_sections: yes
+    css: styles.css
   rmdshower::shower_presentation:
     self_contained: false
     katex: true
     theme: ribbon
   ioslides_presentation: 
     highlight: haddock
-  tufte::tufte_html: 
-    toc: yes
-    number_sections: yes
-    css: styles.css
+  prettydoc::html_pretty:
+    theme: architect
+    highlight: github
 ---
 
 ```{r setup, include=FALSE}
@@ -50,7 +50,6 @@ knitr::opts_chunk$set(echo = TRUE)
 * *Two Page ggplot2*: 
      + [PDF](https://agrogan1.github.io/docs/ggplot2/two_page_ggplot2.pdf)
 
-
 # Stata Materials
 
 * *Two Page Stata*: 
@@ -58,6 +57,10 @@ knitr::opts_chunk$set(echo = TRUE)
      + [PDF](http://www-personal.umich.edu/~agrogan/stata/TwoPageStata.pdf)
      + [epub](http://www-personal.umich.edu/~agrogan/stata/TwoPageStata.epub)
 * ["Michigan Graph Scheme" for Stata](https://agroganweb.wordpress.com/michigan-graph-scheme-for-stata/)
+
+# Bayesian Statistics
+
+* [Demonstration of Bayesian Ideas](https://agrogan.shinyapps.io/shinyBayes/)
 
 # Created by:
 
