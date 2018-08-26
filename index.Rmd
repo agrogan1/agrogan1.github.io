@@ -55,6 +55,8 @@ knitr::opts_chunk$set(echo = TRUE)
 Andrew Grogan-Kaylor
 
 * [http://www.umich.edu/~agrogan](http://www.umich.edu/~agrogan) 
-* [agrogan@umich.edu](agrogan@umich.edu).  
+* [agrogan@umich.edu](agrogan@umich.edu)
+
+
 
 
