@@ -50,6 +50,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * [Demonstration of Bayesian Ideas](https://agrogan.shinyapps.io/shinyBayes/)
 
+# Data Visualization
+
+* [How to Choose a Chart: A Visual Guide](http://www-personal.umich.edu/~agrogan/how_to_choose_a_chart/how_to_choose_a_chart_a_visual_guide.pdf)
+* [Variables and Visualization](http://www-personal.umich.edu/~agrogan/dataviz/visualization.html#/)
+* [Graphing Change Over Time](http://www-personal.umich.edu/~agrogan/graphing_change_over_time/graphing_change_over_time.pdf)
+
 # Created by:
 
 Andrew Grogan-Kaylor
