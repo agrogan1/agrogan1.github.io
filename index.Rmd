@@ -12,6 +12,10 @@ output:
     toc_float:
       collapsed: no
       smooth_scroll: no
+  radix::radix_article:
+    highlight: haddock
+    number_sections: yes
+    theme: default
 ---
 
 ```{r setup, include=FALSE}
@@ -37,6 +41,8 @@ knitr::opts_chunk$set(echo = TRUE)
      + [PDF](https://agrogan1.github.io/docs/R/two_page_R.pdf)
 * *Two Page ggplot2*: 
      + [PDF](https://agrogan1.github.io/docs/ggplot2/two_page_ggplot2.pdf)
+* *Comparing Program Outcomes with ggplot2* 
+     + [PDF]()
 
 # Stata Materials
 
