@@ -1,8 +1,15 @@
 ---
 title: "R, Stata, and Other Statistical Materials"
-author: "Andrew Grogan-Kaylor"
-date: "`r format(Sys.Date(), format='%B %d, %Y')`"
+author:
+  - name: "Andrew Grogan-Kaylor"
+    url: https://umich.edu/~agrogan
+    affiliation: University of Michigan
+    affiliation_url: https://www.umich.edu
+date: "`r Sys.Date()`"
 output:
+  radix::radix_article:
+    toc: true
+    toc_depth: 2
   html_document:
     highlight: haddock
     number_sections: yes
@@ -16,10 +23,6 @@ output:
     highlight: haddock
     number_sections: yes
     toc: yes
-  radix::radix_article:
-    highlight: haddock
-    number_sections: yes
-    theme: default
 ---
 
 ```{r setup, include=FALSE}
@@ -68,11 +71,11 @@ knitr::opts_chunk$set(echo = TRUE)
 * [Variables and Visualization](http://www-personal.umich.edu/~agrogan/dataviz/visualization.html#/)
 * [Graphing Change Over Time](http://www-personal.umich.edu/~agrogan/graphing_change_over_time/graphing_change_over_time.pdf)
 
-# Created by:
+# Created By 
 
 Andrew Grogan-Kaylor
 
-* [http://www.umich.edu/~agrogan](http://www.umich.edu/~agrogan) 
+* [https://umich.edu/~agrogan](https://umich.edu/~agrogan) 
 * [agrogan@umich.edu](agrogan@umich.edu)
 
 
