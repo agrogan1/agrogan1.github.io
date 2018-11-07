@@ -1,5 +1,5 @@
 ---
-title: "R, Stata, and Other Statistical Materials"
+title: "Research on Parenting and Statistical Materials"
 author:
   - name: "Andrew Grogan-Kaylor"
     url: https://umich.edu/~agrogan
@@ -30,6 +30,11 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 
 ```
+
+# Research on Parenting 
+
+* [Data Visualization](https://agrogan1.github.io/MICS1/) for "Spanking and young children's socioemotional development in low- and middle-income countries"
+* [Research On Corporal Punishment](https://agroganweb.wordpress.com/research-on-corporal-punishment/)
 
 # R Materials
 
