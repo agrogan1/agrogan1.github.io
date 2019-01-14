@@ -31,6 +31,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```
 
+# "Blog-ish" Posts
+
+* [posts](https://agrogan1.github.io/myposts/)
+
 # Research on Parenting 
 
 * [Data Visualization](https://agrogan1.github.io/MICS1/) for "Spanking and young children's socioemotional development in low- and middle-income countries"
