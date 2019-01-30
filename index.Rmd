@@ -61,7 +61,7 @@ knitr::opts_chunk$set(echo = TRUE)
 * *Four Page dplyr*:
      + [PDF](https://agrogan1.github.io/docs/dplyr/four-page-dplyr.pdf)
 * *Comparing Program Outcomes with ggplot2* 
-     + [PDF](https://agrogan1.github.io/docs/comparing-program-outcomes-with-ggplot2/comparing-program-outcomes-with-ggplot2.pdf)
+     + [HTML](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.html)
 
 # Stata Materials
 
