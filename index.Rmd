@@ -7,6 +7,10 @@ author:
     affiliation_url: https://www.umich.edu
 date: "`r Sys.Date()`"
 output:
+  tint::tintHtml:
+    highlight: haddock
+    number_sections: yes
+    toc: yes
   radix::radix_article:
     toc: true
     toc_depth: 2
@@ -19,10 +23,6 @@ output:
     toc_float:
       collapsed: no
       smooth_scroll: yes
-  tint::tintHtml:
-    highlight: haddock
-    number_sections: yes
-    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -78,7 +78,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Data Visualization
 
-* [How to Choose a Chart: A Visual Guide](http://www-personal.umich.edu/~agrogan/how_to_choose_a_chart/how_to_choose_a_chart_a_visual_guide.pdf)
+* [How to Choose a Chart: A Visual Guide](http://www-personal.umich.edu/~agrogan/how_to_choose_a_chart/how_to_choose_a_chart_a_visual_guide.pdf). [[Extended Version]](http://www-personal.umich.edu/~agrogan/how_to_choose_a_chart/how_to_choose_a_chart_v3.html)
 * [Variables and Visualization](http://www-personal.umich.edu/~agrogan/dataviz/visualization.html#/)
 * [Graphing Change Over Time](http://www-personal.umich.edu/~agrogan/graphing_change_over_time/graphing_change_over_time.pdf)
 
