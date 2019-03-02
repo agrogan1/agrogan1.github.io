@@ -7,13 +7,6 @@ author:
     affiliation_url: https://www.umich.edu
 date: "`r Sys.Date()`"
 output:
-  tint::tintHtml:
-    highlight: haddock
-    number_sections: yes
-    toc: yes
-  radix::radix_article:
-    toc: true
-    toc_depth: 2
   html_document:
     highlight: haddock
     number_sections: yes
@@ -23,6 +16,13 @@ output:
     toc_float:
       collapsed: no
       smooth_scroll: yes
+  radix::radix_article:
+    toc: true
+    toc_depth: 2
+  tint::tintHtml:
+    highlight: haddock
+    number_sections: yes
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
