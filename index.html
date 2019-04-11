@@ -10,7 +10,7 @@
 
 
 
-<meta name="date" content="2019-03-02" />
+<meta name="date" content="2019-04-11" />
 
 <title>Research on Parenting and Statistical Materials</title>
 
@@ -1321,9 +1321,7 @@ background-color: #375E97;
 border-color: #375E97;
 }</style>
 
-</head>
 
-<body>
 
 <style type="text/css">
 .main-container {
@@ -1348,21 +1346,82 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
 
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
 });
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
 </script>
 
 <!-- code folding -->
-
 
 
 
@@ -1457,6 +1516,16 @@ div.tocify {
 
 </style>
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
 <!-- setup 3col/9col grid for toc_float and main content  -->
 <div class="row-fluid">
 <div class="col-xs-12 col-sm-4 col-md-3">
@@ -1474,9 +1543,9 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Research on Parenting and Statistical Materials</h1>
-<h4 class="author"><em>Andrew Grogan-Kaylor</em></h4>
+<h4 class="author">Andrew Grogan-Kaylor</h4>
 <address class="author_afil">
-University of Michigan<br><h4 class="date"><em>2019-03-02</em></h4>
+University of Michigan<br><h4 class="date">2019-04-11</h4>
 
 </div>
 
@@ -1523,10 +1592,10 @@ University of Michigan<br><h4 class="date"><em>2019-03-02</em></h4>
 <ul>
 <li><a href="https://agrogan1.github.io/docs/ggplot2/two_page_ggplot2.pdf">PDF</a></li>
 </ul></li>
-<li><em>Four Page dplyr</em>:
+<li><em>Five Page dplyr</em>:
 <ul>
-<li><a href="https://agrogan1.github.io/docs/dplyr/four-page-dplyr.pdf">PDF</a></li>
-<li><a href="https://agrogan1.github.io/docs/dplyr/four-page-dplyr.html">HTML</a></li>
+<li><a href="https://agrogan1.github.io/docs/dplyr/five-page-dplyr.pdf">PDF</a></li>
+<li><a href="https://agrogan1.github.io/docs/dplyr/five-page-dplyr.html">HTML</a></li>
 </ul></li>
 <li><em>Comparing Program Outcomes with ggplot2</em>
 <ul>

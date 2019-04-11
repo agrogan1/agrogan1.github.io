@@ -16,13 +16,13 @@ output:
     toc_float:
       collapsed: no
       smooth_scroll: yes
-  radix::radix_article:
-    toc: true
-    toc_depth: 2
   tint::tintHtml:
     highlight: haddock
     number_sections: yes
     toc: yes
+  radix::radix_article:
+    toc: true
+    toc_depth: 2
 ---
 
 ```{r setup, include=FALSE}
@@ -58,9 +58,9 @@ knitr::opts_chunk$set(echo = TRUE)
      + [PDF](https://agrogan1.github.io/docs/R/two_page_R.pdf)
 * *Two Page ggplot2*: 
      + [PDF](https://agrogan1.github.io/docs/ggplot2/two_page_ggplot2.pdf)
-* *Four Page dplyr*:
-     + [PDF](https://agrogan1.github.io/docs/dplyr/four-page-dplyr.pdf)
-     + [HTML](https://agrogan1.github.io/docs/dplyr/four-page-dplyr.html)
+* *Five Page dplyr*:
+     + [PDF](https://agrogan1.github.io/docs/dplyr/five-page-dplyr.pdf)
+     + [HTML](https://agrogan1.github.io/docs/dplyr/five-page-dplyr.html)
 * *Comparing Program Outcomes with ggplot2* 
      + [HTML](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.html)
 
