@@ -7,10 +7,6 @@ author:
     affiliation_url: https://www.umich.edu
 date: "`r Sys.Date()`"
 output:
-  tint::tintHtml:
-    highlight: haddock
-    number_sections: yes
-    toc: yes
   html_document:
     highlight: haddock
     number_sections: yes
@@ -20,6 +16,10 @@ output:
     toc_float:
       collapsed: no
       smooth_scroll: yes
+  tint::tintHtml:
+    highlight: haddock
+    number_sections: yes
+    toc: yes
   radix::radix_article:
     toc: true
     toc_depth: 2
@@ -38,33 +38,11 @@ knitr::opts_chunk$set(echo = TRUE,
 
 # Research on Parenting
 
-```{r, echo=FALSE, fig.margin = TRUE}
-
-library(png) # for reading png's
-
-library(jpeg) # for reading jpg's
-
-library(grid) # grid graphics
-
-img <- readPNG("./images/globe.png") # read the image 
-
-grid.raster(img) # display the image
-
-```
-
 * [Data Visualization](https://agrogan1.github.io/MICS1/) for "Spanking and young children's socioemotional development in low- and middle-income countries"
 * [Research On Corporal Punishment](https://agroganweb.wordpress.com/research-on-corporal-punishment/)
 * Data Visualization of [Country Level Bans on Corporal Punishment](http://www-personal.umich.edu/~agrogan/cpbans/)
 
 # R Materials
-
-```{r, echo=FALSE, fig.margin = TRUE}
-
-img <- readPNG("./images/introduction-to-R.png") # read the image 
-
-grid.raster(img) # display the image
-
-```
 
 * *Introduction to R*: 
      + [HTML Web Book](http://www-personal.umich.edu/~agrogan/R/background.html) 
