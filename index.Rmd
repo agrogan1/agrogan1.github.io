@@ -1,10 +1,6 @@
 ---
 title: "Research on Parenting, and Statistical Materials"
-author:
-  - name: "Andrew Grogan-Kaylor"
-    url: https://umich.edu/~agrogan
-    affiliation: University of Michigan
-    affiliation_url: https://www.umich.edu
+author: "Andrew Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
   html_document:
@@ -16,6 +12,11 @@ output:
     toc_float:
       collapsed: no
       smooth_scroll: yes
+  pagedown::html_paged: 
+    highlight: haddock
+    toc: yes
+    number_sections: yes
+    theme: default
   tint::tintHtml:
     highlight: haddock
     number_sections: yes
