@@ -3,6 +3,10 @@ title: "Research on Parenting, and Statistical Materials"
 author: "Andrew Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
+  radix::radix_article:
+    toc: true
+    toc_depth: 2
+    number_sections: yes
   html_document:
     highlight: haddock
     number_sections: yes
@@ -17,10 +21,6 @@ output:
     toc: yes
     number_sections: yes
     theme: default
-  radix::radix_article:
-    toc: true
-    toc_depth: 2
-    number_sections: yes
   tint::tintHtml:
     highlight: haddock
     number_sections: yes

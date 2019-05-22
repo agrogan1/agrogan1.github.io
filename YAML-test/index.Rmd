@@ -3,6 +3,25 @@ title: "RMarkdown YAML Test"
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
+  bookdown::gitbook:
+    highlight: haddock
+    css: styles.css
+    config:
+      download:
+      - introduction-to-R.pdf
+      - introduction-to-R.epub
+  pagedown::html_paged: 
+    highlight: haddock
+    toc: yes
+    number_sections: yes
+    theme: default
+  tint::tintHtml:
+    highlight: haddock
+    number_sections: yes
+    toc: yes
+  radix::radix_article:
+    toc: true
+    toc_depth: 2
   revealjs::revealjs_presentation:
     fig_height: 4
     highlight: haddock
@@ -20,25 +39,6 @@ output:
     self_contained: no
     theme: solarized
     transition: convex
-  pagedown::html_paged: 
-    highlight: haddock
-    toc: yes
-    number_sections: yes
-    theme: default
-  tint::tintHtml:
-    highlight: haddock
-    number_sections: yes
-    toc: yes
-  radix::radix_article:
-    toc: true
-    toc_depth: 2
-  bookdown::gitbook:
-    highlight: haddock
-    css: styles.css
-    config:
-      download:
-      - introduction-to-R.pdf
-      - introduction-to-R.epub
   tint::tintPdf:
     highlight: haddock
     number_sections: yes
