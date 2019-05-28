@@ -70,7 +70,7 @@ knitr::opts_chunk$set(echo = TRUE,
      + [PDF](http://www-personal.umich.edu/~agrogan/stata/TwoPageStata.pdf)
      + [epub](http://www-personal.umich.edu/~agrogan/stata/TwoPageStata.epub)
 * ["Michigan Graph Scheme" for Stata](https://agroganweb.wordpress.com/michigan-graph-scheme-for-stata/)
-* [Better Graphing in Stata](https://agrogan1.github.io/stata-graphing/)
+* [Better Graphing in Stata](https://agrogan1.github.io/stata/stata-graphing/)
 * [Miscellaneous Stata Programs](https://agrogan1.github.io/stata/)
 
 # Bayesian Statistics
