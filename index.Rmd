@@ -3,10 +3,14 @@ title: "Research on Parenting, and Statistical Materials"
 author: "Andrew Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
+  bookdown::gitbook:
+    highlight: haddock
+    css: styles.css
+    split_by: none
   html_document:
     highlight: haddock
     number_sections: yes
-    theme: default
+    theme: flatly
     css: styles.css
     toc: yes
     toc_float:
