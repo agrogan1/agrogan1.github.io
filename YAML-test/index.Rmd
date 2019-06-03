@@ -65,6 +65,18 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```
 
+```{r, eval = FALSE}
+
+# You will need to install some of these packages from CRAN
+# install.packages(c("bookdown", "radix", "revealjs", "tint", "tufte"))
+
+# You will need to install pagedown from GitHub
+
+# remotes::install_github('rstudio/pagedown')
+
+
+```
+
 # Background
 
 ## R Markdown
