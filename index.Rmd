@@ -83,6 +83,10 @@ knitr::opts_chunk$set(echo = TRUE,
 * [Demonstration of Bayesian Ideas](https://agrogan.shinyapps.io/shinyBayes/)
 * [Bayesian Calculations](https://agrogan1.github.io/bayes/) [[Draft Interactive Version](https://agrogan.shinyapps.io/shinyBayes2/)]
 
+# Statistical Visualizations
+
+* [Cohen's d Calculator](https://agrogan.shinyapps.io/effect_size_calculator/)
+
 # Data Visualization
 
 * [How to Choose a Chart: A Visual Guide](http://www-personal.umich.edu/~agrogan/how_to_choose_a_chart/how_to_choose_a_chart_a_visual_guide.pdf). [[Extended Version](http://www-personal.umich.edu/~agrogan/how_to_choose_a_chart/how_to_choose_a_chart_v3.html)]
