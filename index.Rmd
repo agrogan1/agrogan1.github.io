@@ -81,6 +81,7 @@ knitr::opts_chunk$set(echo = TRUE,
 # Bayesian Statistics
 
 * [Demonstration of Bayesian Ideas](https://agrogan.shinyapps.io/shinyBayes/)
+* [Bayesian Calculations](https://agrogan1.github.io/bayes/) [[Draft Interactive Version](https://agrogan.shinyapps.io/shinyBayes2/)]
 
 # Data Visualization
 
