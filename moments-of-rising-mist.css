@@ -25,9 +25,11 @@ p {
 }
 ul {
   font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif; 
+    font-size: 110%;
 }
 ol {
   font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif; 
+  font-size: 110%;
 }
 .book .book-body .page-wrapper .page-inner section.normal blockquote {
     margin: 0 0 .85em;
