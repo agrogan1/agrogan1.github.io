@@ -6,12 +6,12 @@ output:
   word_document: 
     fig_height: 3
     toc: yes
-  html_document: 
+  pdf_document: 
     fig_height: 3
     highlight: haddock
     number_sections: yes
     toc: yes
-  pdf_document: 
+  html_document: 
     fig_height: 3
     highlight: haddock
     number_sections: yes
@@ -64,13 +64,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ggplot(gapminder,
        aes(x = gdpPercap,
            y = lifeExp,
-           color = year)) +
+           color = continent)) +
   geom_point() +
   geom_smooth() +
   labs(title = "Life Expectancy by GDP",
        x = "GDP Per Capita",
        y = "Life Expectancy") +
-  scale_color_viridis_c() +
+  scale_color_viridis_d() +
   theme_minimal()
 
 ```
