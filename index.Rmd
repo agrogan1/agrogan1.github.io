@@ -5,14 +5,14 @@ date: "`r Sys.Date()`"
 output:
   bookdown::gitbook:
     highlight: haddock
-    css: moments-of-rising-mist.css
+    css: styles.css
     github-repo: "agrogan1/agrogan1.github.io"
     split_by: none
   html_document:
     highlight: haddock
     number_sections: yes
     theme: default
-    css: moments-of-rising-mist.css
+    css: styles.css
     toc: yes
     toc_float:
       collapsed: no
