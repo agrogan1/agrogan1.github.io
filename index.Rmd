@@ -8,11 +8,15 @@ output:
     css: styles.css
     github-repo: "agrogan1/agrogan1.github.io"
     split_by: none
+  tint::tintHtml:
+    highlight: haddock
+    number_sections: yes
+    toc: yes
   html_document:
     highlight: haddock
     number_sections: yes
     theme: default
-    css: styles.css
+    css: ggpomological.css
     toc: yes
     toc_float:
       collapsed: no
@@ -22,10 +26,6 @@ output:
     toc: yes
     number_sections: yes
     theme: default
-  tint::tintHtml:
-    highlight: haddock
-    number_sections: yes
-    toc: yes
 ---
 
 ```{r setup, include=FALSE}
