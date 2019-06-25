@@ -22,3 +22,15 @@ blockquote {
   margin: 1.5em 10px;
   padding: 0.5em 10px;
 }
+#TOC ul,
+#TOC li,
+#TOC span,
+#TOC a {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  color: #c03728;
+  background: #fffeea;
+  background-color: #fffeea;
+}
+
