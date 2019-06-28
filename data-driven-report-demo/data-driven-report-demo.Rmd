@@ -65,13 +65,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ggplot(gapminder,
        aes(x = gdpPercap,
            y = lifeExp,
-           color = continent)) +
+           color = region)) +
   geom_point() +
   geom_smooth() +
   labs(title = "Life Expectancy by GDP",
        x = "GDP Per Capita",
        y = "Life Expectancy") +
-  scale_color_viridis_d() +
+  scale_color_viridis_c() +
   theme_minimal()
 
 ```
