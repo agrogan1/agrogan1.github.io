@@ -40,6 +40,12 @@ library(ggplot2)
 
 ```
 
+```{r, layout="l-screen"}
+
+knitr::include_graphics("images/SSW.png")
+
+```
+
 # "Blog-ish" Posts 
 
 * [posts](https://agrogan1.github.io/myposts/)
