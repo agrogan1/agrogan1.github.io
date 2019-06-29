@@ -3,6 +3,9 @@ title: "Research on Parenting, and Statistical Materials"
 author: "Andrew Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
+  distill::distill_article:
+    highlight: haddock
+    toc: yes
   radix::radix_article:
     highlight: haddock
     toc: yes
@@ -94,17 +97,17 @@ knitr::include_graphics("images/cpbansglobe.png")
 # Stata Materials
 
 * *Two Page Stata*: 
-     + [HTML](http://www-personal.umich.edu/~agrogan/stata/TwoPageStata.html) 
-     + [PDF](http://www-personal.umich.edu/~agrogan/stata/TwoPageStata.pdf)
-     + [epub](http://www-personal.umich.edu/~agrogan/stata/TwoPageStata.epub)
-* ["Michigan Graph Scheme" for Stata](https://agroganweb.wordpress.com/michigan-graph-scheme-for-stata/)
+     + [HTML](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.html) 
+     + [PDF](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.pdf)
+     + [epub](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.epub)
+* ["Michigan Graph Scheme" for Stata](https://agrogan1.github.io/Stata/)
 * [Better Graphing in Stata](https://agrogan1.github.io/stata/stata-graphing/)
 * [Miscellaneous Stata Programs](https://agrogan1.github.io/stata/)
 
 # Bayesian Statistics
 
 * [Demonstration of Bayesian Ideas](https://agrogan.shinyapps.io/shinyBayes/)
-* [Bayesian Calculations](https://agrogan1.github.io/bayes/) [[Draft Interactive Version](https://agrogan.shinyapps.io/shinyBayes2/)]
+* [Bayesian Calculations](https://agrogan1.github.io/Bayes/) [[Draft Interactive Version](https://agrogan.shinyapps.io/shinyBayes2/)]
 
 # Statistical Visualizations
 
