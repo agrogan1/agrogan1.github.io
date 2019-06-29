@@ -3,14 +3,14 @@ title: "Research on Parenting, and Statistical Materials"
 author: "Andrew Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
+  radix::radix_article:
+    highlight: haddock
+    toc: yes
   bookdown::gitbook:
     highlight: haddock
     css: styles.css
     github-repo: "agrogan1/agrogan1.github.io"
     split_by: none
-  radix::radix_article:
-    highlight: haddock
-    toc: yes
   tint::tintHtml:
     highlight: haddock
     number_sections: yes
@@ -33,8 +33,10 @@ output:
 
 ```{r setup, include=FALSE}
 
-knitr::opts_chunk$set(echo = TRUE,
+knitr::opts_chunk$set(echo = FALSE,
                       fig.margin = TRUE)
+
+library(ggplot2)
 
 ```
 
@@ -47,6 +49,18 @@ knitr::opts_chunk$set(echo = TRUE,
 * [Data Visualization](https://agrogan1.github.io/MICS1/) for "Spanking and young children's socioemotional development in low- and middle-income countries"
 * [Research On Corporal Punishment](https://agrogan1.github.io/research/cp/)
 * Data Visualization of [Country Level Bans on Corporal Punishment](https://agrogan1.github.io/research/cpbans/)
+
+
+<aside>
+```{r}
+
+knitr::include_graphics("images/MICSglobe.png")
+
+knitr::include_graphics("images/cpbansglobe.png")
+
+```
+</aside>
+
 
 # R Materials
 
