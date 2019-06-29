@@ -8,6 +8,9 @@ output:
     css: styles.css
     github-repo: "agrogan1/agrogan1.github.io"
     split_by: none
+  radix::radix_article:
+    highlight: haddock
+    toc: yes
   tint::tintHtml:
     highlight: haddock
     number_sections: yes
@@ -35,7 +38,7 @@ knitr::opts_chunk$set(echo = TRUE,
 
 ```
 
-# "Blog-ish" Posts
+# "Blog-ish" Posts 
 
 * [posts](https://agrogan1.github.io/myposts/)
 
