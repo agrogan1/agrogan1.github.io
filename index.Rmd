@@ -70,7 +70,6 @@ knitr::include_graphics("images/cpbansglobe.png")
 ```
 </aside>
 
-
 # R Materials
 
 * *Introduction to R*: 
@@ -89,8 +88,8 @@ knitr::include_graphics("images/cpbansglobe.png")
 * *Two Page ggplot2*: 
      + [PDF](https://agrogan1.github.io/R/two-page-ggplot2/two-page-ggplot2.pdf)
 * *Five Page dplyr*:
-     + [PDF](https://agrogan1.github.io/docs/dplyr/five-page-dplyr.pdf)
-     + [HTML](https://agrogan1.github.io/docs/dplyr/five-page-dplyr.html)
+     + [PDF](https://agrogan1.github.io/R/five-page-dplyr/five-page-dplyr.pdf)
+     + [HTML](https://agrogan1.github.io/R/five-page-dplyr/five-page-dplyr.html)
 * *Comparing Program Outcomes with ggplot2* 
      + [HTML](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.html)
 
