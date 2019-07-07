@@ -6,9 +6,6 @@ output:
   distill::distill_article:
     highlight: haddock
     toc: yes
-  radix::radix_article:
-    highlight: haddock
-    toc: yes
   bookdown::gitbook:
     highlight: haddock
     css: styles.css
@@ -27,11 +24,6 @@ output:
     toc_float:
       collapsed: no
       smooth_scroll: yes
-  pagedown::html_paged: 
-    highlight: haddock
-    toc: yes
-    number_sections: yes
-    theme: default
 ---
 
 ```{r setup, include=FALSE}
@@ -76,10 +68,10 @@ knitr::include_graphics("images/cpbansglobe.png")
      + [HTML Web Book](https://agrogan1.github.io/R/introduction-to-R/background.html) 
      + [PDF](https://agrogan1.github.io/R/introduction-to-R/introduction-to-R.pdf) 
      + [epub](https://agrogan1.github.io/R/introduction-to-R/introduction-to-R.epub)
-* *Quick Introduction to ggplot2*: 
-     + [HTML Web Book](http://www-personal.umich.edu/~agrogan/quick-intro-ggplot2/ggplot-in-3-easy-steps-maybe-2-easy-steps.html) 
-     + [PDF](http://www-personal.umich.edu/~agrogan/quick-intro-ggplot2/quick-intro-to-ggplot2.pdf)
-     + [epub](http://www-personal.umich.edu/~agrogan/quick-intro-ggplot2/quick-intro-to-ggplot2.epub)
+* *Introduction to ggplot2*: 
+     + [HTML Web Book](https://agrogan1.github.io/R/introduction-to-ggplot2/background.html) 
+     + [PDF](https://agrogan1.github.io/R/introduction-to-ggplot2/introduction-to-ggplot2.pdf)
+     + [epub](https://agrogan1.github.io/R/introduction-to-ggplot2/introduction-to-ggplot2.epub)
 * University of Michigan colors for R Graphs: 
      + [web page](http://www-personal.umich.edu/~agrogan/R/Michigan_Colors.html) 
      + [R package](https://agrogan1.github.io/michigancolors/)
