@@ -45,6 +45,18 @@ knitr::include_graphics("images/SSW.png")
 
 * [posts](https://agrogan1.github.io/myposts/)
 
+# Courses
+
+* [Multilevel and Longitudinal Modeling](https://agrogan1.github.io/multilevel/)
+
+<aside>
+```{r}
+
+knitr::include_graphics("images/schools.png")
+
+```
+</aside>
+
 # Research on Parenting
 
 * [Data Visualization](https://agrogan1.github.io/research/MICS1/) for "Spanking and young children's socioemotional development in low- and middle-income countries"
