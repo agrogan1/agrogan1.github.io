@@ -62,6 +62,10 @@ knitr::include_graphics("images/cpbansglobe.png")
 ```
 </aside>
 
+# Selected Collaborations
+
+* Work with [Performance Measurement Initiative](https://agrogan1.github.io/research/performance-measurement-initiative) at William Davidson Institute
+
 # R Materials
 
 * *Introduction to R*: 
