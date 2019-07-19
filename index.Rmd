@@ -1,6 +1,10 @@
 ---
 title: "Research on Parenting, and Statistical Materials"
-author: "Andrew Grogan-Kaylor"
+author:
+  - name: Andy Grogan-Kaylor 
+    url: https://agrogan1.github.io/
+    affiliation: University of Michigan
+    affiliation_url: https://umich.edu/
 date: "`r Sys.Date()`"
 output:
   distill::distill_article:
@@ -22,6 +26,10 @@ library(ggplot2)
 knitr::include_graphics("images/SSW.png")
 
 ```
+
+# My Background
+
+A little bit about [my background](./background.html)
 
 # "Blog-ish" Posts 
 
