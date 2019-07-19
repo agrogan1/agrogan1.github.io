@@ -6,24 +6,6 @@ output:
   distill::distill_article:
     highlight: haddock
     toc: yes
-  bookdown::gitbook:
-    highlight: haddock
-    css: styles.css
-    github-repo: "agrogan1/agrogan1.github.io"
-    split_by: none
-  tint::tintHtml:
-    highlight: haddock
-    number_sections: yes
-    toc: yes
-  html_document:
-    highlight: haddock
-    number_sections: yes
-    theme: default
-    css: ggpomological.css
-    toc: yes
-    toc_float:
-      collapsed: no
-      smooth_scroll: yes
 ---
 
 ```{r setup, include=FALSE}
