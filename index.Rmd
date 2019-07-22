@@ -21,6 +21,7 @@ library(ggplot2)
 
 ```
 
+
 ```{r, layout="l-screen"}
 
 knitr::include_graphics("images/SSW.png")
@@ -116,6 +117,7 @@ knitr::include_graphics("images/Introduction-to-R-Forest-letter.png")
 
 # Statistical Visualizations
 
+* [Exploring Logistic Regression](https://agrogan.shinyapps.io/exploring_logistic_regression/)
 * [Cohen's d Calculator](https://agrogan.shinyapps.io/effect_size_calculator/)
 
 # Data Visualization
