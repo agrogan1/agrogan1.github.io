@@ -90,6 +90,7 @@ y$x <- 1
 
 plot_geo(y) %>% 
   add_trace(locations = ~country_code, 
+            color = ~id,
             z = ~id,
             hoverinfo = 'text',
             text = ~countries,
