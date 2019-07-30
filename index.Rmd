@@ -115,9 +115,20 @@ knitr::include_graphics("images/Introduction-to-R-Forest-letter.png")
 * [Demonstration of Bayesian Ideas](https://agrogan.shinyapps.io/shinyBayes/)
 * [Bayesian Calculations](https://agrogan1.github.io/Bayes/) [[Draft Interactive Version](https://agrogan.shinyapps.io/shinyBayes2/)]
 
+<aside>
+```{r}
+
+knitr::include_graphics("images/BayesianDoughnut.png")
+
+```
+</aside>
+
 # Statistical Visualizations
 
-* [Exploring Logistic Regression](https://agrogan.shinyapps.io/exploring_logistic_regression/)
+* [t-test](https://agrogan.shinyapps.io/shiny-t-test/)
+* [correlation](https://agrogan.shinyapps.io/correlation_demo/)
+* [regression](https://agrogan.shinyapps.io/regression_demo/)
+* [logistic regression](https://agrogan.shinyapps.io/exploring_logistic_regression/)
 * [Cohen's d Calculator](https://agrogan.shinyapps.io/effect_size_calculator/)
 
 # Data Visualization
