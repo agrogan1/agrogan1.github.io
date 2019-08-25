@@ -19,6 +19,12 @@ knitr::opts_chunk$set(echo = FALSE,
 
 library(ggplot2)
 
+library(dplyr) # data wrangling
+
+library(DT) # nice data table
+
+library(tibble) # tibbles
+
 ```
 
 
@@ -35,6 +41,33 @@ A little bit about [my background](./background.html)
 # "Blog-ish" Posts 
 
 * [posts](https://agrogan1.github.io/myposts/)
+
+```{r}
+
+load("../myposts/myHTMLfiles.RData") # get data on blog-ish posts
+
+myHTMLfiles %>% 
+  rownames_to_column(var = "filename") %>% # rownames to column
+  filter(filename != "blogtest.html") %>%
+  filter(filename != "blogtest-tint.html") %>%
+  mutate(modified = mtime) %>% # copy mtime to modified
+  mutate(url = paste0("<a href='", # paste together URL
+                      filename,
+                      "'>",
+                      filename, 
+                      "</a>")) %>% 
+  select(modified, url) %>% # select columns
+  datatable(rownames = FALSE, # no row names
+            escape = 1, # escape URL column
+            caption = "My Most Recent Blog-ish Posts",
+            # sort by descending date
+            options = list(pageLength = 3, 
+                           order = list(list(0, 
+                                             'desc')))) %>% 
+  formatDate(1, 'toDateString') # format column 1 as dates
+
+```
+
 
 # Courses
 
