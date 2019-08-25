@@ -52,6 +52,7 @@ myHTMLfiles %>%
   filter(filename != "blogtest-tint.html") %>%
   mutate(modified = mtime) %>% # copy mtime to modified
   mutate(url = paste0("<a href='", # paste together URL
+                      "../myposts/", # URL is in another repo
                       filename,
                       "'>",
                       filename, 
