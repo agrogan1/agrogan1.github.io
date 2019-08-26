@@ -125,14 +125,6 @@ knitr::include_graphics("images/cpbansglobe.png")
 * *Comparing Program Outcomes with ggplot2* 
      + [HTML](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.html)
 
-<aside>
-```{r}
-
-knitr::include_graphics("images/Introduction-to-R-Forest-letter.png")
-
-```
-</aside>
-
 # Stata Materials
 
 * *Two Page Stata*: 
