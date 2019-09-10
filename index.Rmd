@@ -124,6 +124,7 @@ knitr::include_graphics("images/cpbansglobe.png")
      + [HTML](https://agrogan1.github.io/R/five-page-dplyr/five-page-dplyr.html)
 * *Comparing Program Outcomes with ggplot2* 
      + [HTML](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.html)
+     + [PDF](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.pdf)
 * *Working With Data From the World Bank Indicators*
      + [HTML](https://agrogan1.github.io/R/wbdemo/)
      
