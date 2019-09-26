@@ -72,6 +72,16 @@ myHTMLfiles %>%
 
 # Courses
 
+* [Data Visualization](https://agrogan1.github.io/dataviz/dataviz-course)
+
+<aside>
+```{r}
+
+knitr::include_graphics("images/chartgrid.png")
+
+```
+</aside>
+
 * [Multilevel and Longitudinal Modeling](https://agrogan1.github.io/multilevel/)
 
 <aside>
