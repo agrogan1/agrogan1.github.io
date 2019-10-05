@@ -62,7 +62,7 @@ myHTMLfiles %>%
             escape = 1, # escape URL column
             caption = "My Most Recent Blog-ish Posts",
             # sort by descending date
-            options = list(pageLength = 3, 
+            options = list(pageLength = 5, 
                            order = list(list(0, 
                                              'desc')))) %>% 
   formatDate(1, 'toDateString') # format column 1 as dates
