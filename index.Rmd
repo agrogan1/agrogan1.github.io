@@ -77,7 +77,7 @@ myHTMLfiles %>%
 <aside>
 ```{r}
 
-knitr::include_graphics("images/chartgrid.png")
+knitr::include_graphics("images/banner.png")
 
 ```
 </aside>
@@ -175,6 +175,14 @@ knitr::include_graphics("images/BayesianDoughnut.png")
 * [Variables and Visualization](https://agrogan1.github.io/dataviz/variables-and-visualization/variables-and-visualization.html#/)
 * [Graphing Change Over Time](https://agrogan1.github.io/dataviz/graphing-change-over-time/index.html) [[PDF](https://agrogan1.github.io/dataviz/graphing-change-over-time/index.pdf)]
 * Slides for a Lecture on [Data Visualization for Political Social Work](https://agrogan1.github.io/dataviz/political-social-work/)
+
+<aside>
+```{r}
+
+knitr::include_graphics("images/chartgrid.png")
+
+```
+</aside>
 
 # Created By 
 
