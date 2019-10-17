@@ -1,0 +1,46 @@
+---
+title: "New Paper Using UNICEF MICS Data"
+description: |
+  A new paper on corporal punishment.
+author:
+  - name: Andy Grogan-Kaylor 
+    url: https://www.umich.edu/~agrogan
+    affiliation: University of Michigan
+    affiliation_url: https://www.umich.edu
+date: "`r Sys.Date()`"
+citation_url: https://agrogan1.github.io/myposts/
+output:
+  html_document:
+    fig_height: 3
+    highlight: haddock
+    keep_md: no
+    number_sections: yes
+    theme: default
+    toc: no
+    toc_float:
+      collapsed: yes
+      smooth_scroll: yes
+  radix::radix_article:
+    toc: true
+    number_sections: yes
+    toc_depth: 2
+    fig_height: 3
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+With my colleagues Garrett Pace and Shawna Lee, I've published a new paper, "Spanking and young children’s socioemotional development in low- and middle-income countries":
+
+* https://agrogan1.github.io/MICS1/
+* https://www.sciencedirect.com/science/article/pii/S0145213418304095?via%3Dihub
+
+
+![](./images/MICS1.png)
+
+
+
+
+
+

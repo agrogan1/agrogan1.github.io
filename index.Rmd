@@ -44,7 +44,7 @@ A little bit about [my background](./background.html)
 
 ```{r}
 
-load("../myposts/myHTMLfiles.RData") # get data on blog-ish posts
+load("./myposts/myHTMLfiles.RData") # get data on blog-ish posts
 
 myHTMLfiles %>% 
   rownames_to_column(var = "filename") %>% # rownames to column

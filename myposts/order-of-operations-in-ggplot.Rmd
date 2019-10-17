@@ -1,0 +1,92 @@
+---
+title: "Order of Operations in ggplot"
+description: |
+  A very abbreviated post on order of operations in ggplot
+author:
+  - name: Andy Grogan-Kaylor 
+    url: https://www.umich.edu/~agrogan
+    affiliation: University of Michigan
+    affiliation_url: https://www.umich.edu
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    fig_height: 3
+    highlight: haddock
+    keep_md: no
+    number_sections: yes
+    theme: default
+    toc: yes
+    toc_float:
+      collapsed: yes
+      smooth_scroll: yes
+  radix::radix_article:
+    toc: true
+    number_sections: yes
+    toc_depth: 2
+    fig_height: 3
+citation_url: https://agrogan1.github.io/myposts/
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE,
+                      message = FALSE,
+                      warning = FALSE)
+
+```
+
+# Simple Graph
+
+```{r}
+
+data("iris")
+
+library(ggplot2)
+
+ggplot(iris, # data I am using
+       aes(x = Petal.Length, # x is ...
+           y = Petal.Width, # y is ...
+           color = Species)) + # color is ...
+  geom_point()
+
+```
+
+# Add Some Options
+
+```{r, eval=FALSE}
+
+# basic structure of a ggplot call
+# data I am using
+# aesthetic(what I am graphing)
+# geoms (how I am graphing this); last geom drawn on top
+# titles
+# scale_fill_... and scale_color_...
+# general theme
+# tweaks to theme
+
+
+```
+
+```{r}
+
+ggplot(iris, # data I am using
+       aes(x = Petal.Length, # x is ...
+           y = Petal.Width, # y is ...
+           color = Species)) + # color is ...
+  geom_point() + # how I am graphing it
+  geom_smooth() + # last geom goes on top
+  labs(title = "My title", 
+       x = "title for x axis", 
+       y = "title for y axis") + 
+  scale_colour_manual(name = "Group",
+                      values = c("steelblue", 
+                                 "blue",
+                                 "gold"), # manual colors 
+                      labels = c("group1", 
+                                 "group2",
+                                 "group3")) +
+  theme_minimal() + # theme
+  theme(plot.title = element_text(size = 20, # modify theme above
+                                  color = "darkgrey"))
+
+```

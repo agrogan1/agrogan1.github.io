@@ -1,0 +1,31 @@
+---
+title: "Data Visualization for Political Social Work"
+description: |
+  Slides for an online lecture
+author:
+  - name: Andrew Grogan-Kaylor
+    url: https://agrogan1.github.io/
+    affiliation: University of Michigan
+    affiliation_url: https://www.umich.edu
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+This is just a quick post to note that I have developed a video lecture on *Data Visualization for Political Social Work* for the University of Michigan School of Social Work Continuing Education Program on *Political Social Work*. 
+
+<aside>
+```{r}
+
+knitr::include_graphics("./images/data-visualization-for-political-social-work.png")
+
+```
+</aside>
+
+You can hear the lecture by [signing up for the course](https://ssw.umich.edu/offices/continuing-education/certificate-courses/political-social-work), but I have posted a link to the slides [on my main page](https://agrogan1.github.io/#data-visualization). Here is a [direct link](https://agrogan1.github.io/dataviz/political-social-work/#/).
+

@@ -1,0 +1,99 @@
+---
+title: "Bar Charts in ggplot With Multiple Outcomes"
+description: |
+  An abbreviated description.
+author:
+  - name: Andy Grogan-Kaylor 
+    url: https://www.umich.edu/~agrogan
+    affiliation: University of Michigan
+    affiliation_url: https://www.umich.edu
+date: "`r Sys.Date()`"
+citation_url: https://agrogan1.github.io/myposts/
+output:
+  html_document:
+    fig_height: 3
+    highlight: haddock
+    keep_md: no
+    number_sections: yes
+    theme: default
+    toc: yes
+    toc_float:
+      collapsed: yes
+      smooth_scroll: yes
+  radix::radix_article:
+    toc: true
+    number_sections: yes
+    toc_depth: 2
+    fig_height: 3
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+# Setup
+
+```{r}
+
+library(ggplot2) # beautiful graphs
+
+library(tidyr) # tidy data
+
+```
+
+# Simulated Data
+
+```{r}
+
+x <- c(1,2,3) # independent variable
+
+y <- c(4,5,6) # first outcome
+
+z <- c(7,8,9) # second outcome
+
+mydata <-data.frame(x,y,z)
+
+mydata # replay mydata
+
+```
+
+# Reshape Data With Gather
+
+```{r}
+
+myReshapedData <- gather(mydata, # dataframe
+                         key, # name of column for key
+                         value, # name of column for value
+                         2:3) # columns to gather
+
+myReshapedData # replay myReshapedData
+
+```
+
+# Graph
+
+```{r}
+
+ggplot(myReshapedData,
+       aes(x = x,
+           y = value,
+           fill = key)) +
+  geom_bar(stat = "identity",
+           position = position_dodge())
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+

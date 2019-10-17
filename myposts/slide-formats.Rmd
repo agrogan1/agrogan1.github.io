@@ -1,0 +1,153 @@
+---
+title: "Some Thoughts on Various R HTML Slide Formats"
+author:
+  - name: Andy Grogan-Kaylor 
+    url: https://agrogan1.github.io/
+    affiliation: University of Michigan
+    affiliation_url: https://umich.edu/
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    highlight: haddock
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+## Background
+
+Over the past few months, I have been experimenting *a lot* with different slide show formats.  Some slide formats make beautiful slides, but every format seems to have its own limitations. 
+
+Here are some key dimensions of slide formats:
+
+* *Basic Aesthetic*: Does the slide format look pleasing and well designed *out of the box*?
+
+* *Overflow*: Does the slide format allow for overflow of content automatically, or if content is too long, is it cut off at the bottom? 
+
+> This seems an especially relevant feature for designing the often complicated and lengthy slides that might go into a class. I do try to keep my slides short and simple, but some topics are inherently complicated, and lead to lengthier slides that may overflow the screen size.
+
+* *Themes*: Can the slides be easily customized for different looks?
+
+* *Two Dimensional Slideshows*: Right now *reveal.js* seems to be the only format that allows for 2D slideshows.
+
+* *CSS*: Another customization consideration. Can CSS be easily used?
+
+* *Outline View*: Does the format have an outline view? This seems especially useful, again, for classes, and online lectures.
+
+* *Printing*: Is it easy to print, especially to PDF? Again, especially useful for classes.
+
+```{r}
+
+library(dplyr) # data wrangling
+
+library(labelled) # for data labels
+
+library(DT) # nifty data tables
+
+```
+
+
+```{r}
+
+package_name <- c("ioslides",
+                  "slidy",
+                  "reveal.js",
+                  "xaringan")
+
+URL <- c("https://bookdown.org/yihui/rmarkdown/ioslides-presentation.html",
+         "https://bookdown.org/yihui/rmarkdown/slidy-presentation.html",
+         "https://bookdown.org/yihui/rmarkdown/revealjs.html",
+         "https://slides.yihui.name/xaringan/")
+
+basic_aesthetic <- c("nice clean design",
+                     "boring",
+                     "good basic design",
+                     "good basic design")
+
+overflow <- c("no",
+              "yes",
+              "no",
+              "no")
+
+themes <- c("no",
+            "bootstrap",
+            "reveal.js",
+            "Xaringan")
+
+two_dimensional_slideshows <- c("no",
+                                "no",
+                                "yes",
+                                "no")
+css <- c("difficult",
+         "easy",
+         "easy",
+         "easy")
+
+outline_view <- c("yes",
+                  "no",
+                  "yes",
+                  "no")
+
+printing <- c("easy",
+              "difficult",
+              "difficult",
+              "easy")
+
+
+printing <- labelled(printing, 
+                     NULL, 
+                     label = "Printable e.g. to PDF")
+
+slideformats <- tibble::tibble(package_name,
+                               URL,
+                               basic_aesthetic, 
+                               overflow,
+                               themes, 
+                               two_dimensional_slideshows,
+                               css,
+                               outline_view, 
+                               printing)
+
+slideformats <- slideformats %>% 
+  mutate(package_name = paste0("<a href='", 
+                      URL,
+                      "'>",
+                      package_name, 
+                      "</a>")) %>% 
+  select(-URL)
+
+
+```
+
+# Formats
+
+Note that the table below will scroll to the right.
+
+```{r}
+
+datatable(slideformats,
+          escape = 1, # escape URL column
+          extensions = c('Buttons','FixedColumns'),
+          options = list(
+            dom = 't',
+            scrollX = TRUE,
+            fixedColumns = list(leftColumns = 2)))
+
+```
+
+# A Quick Note About `xaringan`.
+
+[xaringan](https://slides.yihui.name/xaringan/) is a new package that makes it easy to make nicely formatted slides. It is worth noting, however. that: 
+
+* `xaringan` makes use of `remark.js` to format slides, while other Rmarkdown formats use `pandoc`. `remark.js` implements most of the basic Rmarkdown syntax, but not all. Some features, such as *footnotes*, may not work as expected with `xaringan`.
+* `xaringan` uses `---` to separate slides, rather than using headings (`#`) as do other formats. Thus, `xaringan` may not work well in situations where you want to write the same RMarkdown file out to *multiple* formats, such as slides, HTML, PDF handouts, etc.  If you are going to also write your slides out to another format, such as PDF handouts, `slidy` may produce better results.
+
+
+
+
+
+

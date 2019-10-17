@@ -1,0 +1,296 @@
+---
+title: 'Telling Stories With Data: Comparing Program Outcomes with ggplot2'
+author: "Andy Grogan-Kaylor"
+date: "`r Sys.Date()`"
+output:
+  tint::tintPdf:
+    highlight: haddock
+    number_sections: yes
+    toc: yes
+  pdf_document: 
+    fig_caption: yes
+    fig_height: 2
+    highlight: haddock
+    latex_engine: xelatex
+    number_sections: yes
+    toc: yes
+  html_document:
+    fig_height: 2
+    highlight: haddock
+    keep_md: no
+    css: styles.css
+    number_sections: yes
+    theme: default
+    toc: yes
+    toc_float:
+      collapsed: yes
+      smooth_scroll: yes
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE,
+                      fig.margin = TRUE)
+
+library(knitr)
+
+library(pander)
+
+library(DT)
+
+```
+
+# Background
+
+`ggplot2` is a powerful graphing library that can make beautiful graphs.   `ggplot2` can also help us to understand ideas of an underlying *"grammar of graphics"*.
+
+However, ggplot can be difficult to learn. I am thinking that one way to better understand `ggplot2` might be to see how this graphing library could be applied to a concrete example of comparing program outcomes. 
+
+> In this example, **program** is a *factor* and **outcome** is *numeric*.
+
+# Load the Simulated Social Service Agency Data
+
+```{r}
+
+load("social_service_agency.RData") # simulated data
+
+```
+
+```{r, echo=FALSE}
+
+myformat <- opts_knit$get("rmarkdown.pandoc.to")
+
+if (myformat == "latex") {
+  
+  pander(head(clients)) # take a look at the clients data
+  
+} else {
+  
+  datatable(clients) %>%
+    formatRound(columns = c('age', 
+                            'mental_health_T1', 
+                            'mental_health_T2', 
+                            'latitude', 
+                            'longitude'), 
+                digits=2)
+}
+
+```
+
+# Load the Libraries
+
+```{r}
+
+library(ggplot2) # beautiful graphs
+
+library(ggthemes) # beautiful themes
+
+```
+
+# First Approach (x is program; y is mental health)
+
+There is *a lot of code* below. This is where we are setting up the *grammatical logic* of the graphing approach. 
+
+Devoting some time to setting up the initial logic of the plot will pay dividends in terms of exploring multiple geometries later on.
+
+> Note that I am adding optional `scale_...` and `theme...` arguments just to make the graphs look a little nicer, but these are not an essential part of the code.
+
+```{r, tidy=FALSE}
+
+myplot1 <- ggplot(clients, # the data I am using
+                 aes(x = program, # x is program
+                     y = mental_health_T2, # y is mental health
+                     color = program, # color is also program
+                     fill = program)) + # fill is also program
+  labs(y = "mental health at time 2") + # labels
+  scale_color_viridis_d() + # beautiful colors
+  scale_fill_viridis_d() + # beautiful fills
+  theme_minimal() + # minimal theme
+  theme(axis.text.x = element_text(size = rel(.5))) # smaller labels
+
+```
+
+# Add Geometries That Show The Average
+
+Now that we have devoted *a lot of code* to setting up the *grammar* of the graph, it is a relatively simple matter to try out different `geom`etries. The `geom`etries show the *average* value. 
+
+## Bar Chart
+
+```{r, fig.cap="Bar Chart"}
+
+myplot1 + stat_summary(fun.y = "mean", geom = "bar")
+
+```
+
+## Horizontal Bar Chart
+
+```{r, fig.cap="Horizontal Bar Chart"}
+
+myplot1 + stat_summary(fun.y = "mean", geom = "bar") +
+  coord_flip()
+
+```
+
+## Point Chart
+
+```{r, fig.cap="Point Chart"}
+
+myplot1 + stat_summary(fun.y = "mean", geom = "point", size = 5)
+
+```
+
+## "Lollipop" Chart
+
+The segments connecting the x axis with the points, require their own `geom`etry that has its own `aes`thetic.
+
+```{r, fig.cap="Lollipop Chart"}
+
+myplot1 + 
+  stat_summary(fun.y = "mean", 
+               geom = "point", 
+               size = 5) +
+  geom_segment(aes(x = program,
+                   xend = program, 
+                   y = 0,
+                   yend = mean(mental_health_T2)))
+
+```
+
+## Line Chart
+
+An extra element of the `aes`thetic is required for lines.
+
+```{r, fig.cap="Line Chart"}
+
+myplot1 + 
+  stat_summary(aes(group = 1),  
+               color = "black", # consistent color
+               fun.y = "mean", 
+               geom = "line") 
+
+```
+
+# Add Geometries That Show the Distribution
+
+Now that we have devoted *a lot of code* to setting up the *grammar* of the graph, it is a relatively simple matter to try out different `geom`etries. The `geom`etries show the *distribution* of all values.
+
+## Boxplot
+
+```{r, fig.cap="Boxplot"}
+
+myplot1 + geom_boxplot(fill="white")
+
+```
+
+## Violin Plot
+
+```{r, fig.cap="Violin Plot"}
+
+myplot1 + geom_violin()
+
+```
+
+## Points
+
+```{r, fig.cap="Points"}
+
+myplot1 + geom_point()
+
+```
+
+\newpage
+
+## Jittered Points
+
+```{r, fig.cap="Jittered Points"}
+
+myplot1 + geom_jitter()
+
+```
+
+## Beeswarm Plot
+
+```{r, fig.cap="Beeswarm Plot"}
+
+library(ggbeeswarm) # beeswarm geometry
+
+myplot1 + geom_beeswarm()
+
+```
+
+# Second Approach (x is mental health; facet wrap on program)
+
+Again, there is a *lot of code* below. This is where we are setting up the *grammatical logic* of the graphing approach. 
+
+```{r, tidy=FALSE}
+
+myplot2 <- ggplot(clients, # the data I am using
+                  aes(x = mental_health_T2, # x is mental health
+                      fill = program)) + # fill is program
+  facet_wrap(~program) + # facet on this variable
+  labs(x = "mental health at time 2") + # labels
+  scale_color_viridis_d() + # beautiful colors
+  scale_fill_viridis_d() + # beautiful fills
+  theme_bw() # bw theme makes facets more clear
+
+```
+
+# Add Geometries
+
+However, now that we have devoted *a lot of code* to setting up the *grammar* of the graph, it is again a relatively simple matter to try out different `geom`etries.
+
+## Histogram
+
+```{r, fig.cap="Histogram"}
+
+myplot2 + geom_histogram()
+
+```
+
+## Density
+
+```{r, fig.cap="Density"}
+
+myplot2 + geom_density()
+
+```
+
+# Third Approach (x is mental health; transparent geometries)
+
+One last time, there is a *lot of code* below. This is where we are setting up the *grammatical logic* of the graphing approach. 
+
+```{r, tidy = FALSE}
+
+myplot3 <- ggplot(clients, # the data I am using
+                  aes(x = mental_health_T2, # x is mental health
+                      fill = program)) + # fill is program
+  labs(x = "mental health at time 2") + # labels
+  scale_color_viridis_d() + # beautiful colors
+  scale_fill_viridis_d() + # beautiful fills
+  theme_minimal() # minimal theme
+
+```
+
+# Add Geometries
+
+And again, now that we have devoted a lot of code to setting up the *grammar* of the graph, it is again a relatively simple matter to try out different `geom`etries.[^transparency]
+
+[^transparency]: It is important to use `(alpha = ...)` to create transparency with these `geom`s.
+
+## Histogram
+
+```{r, fig.cap="Histogram"}
+
+myplot3 + geom_histogram(alpha = .5)
+
+```
+
+## Density
+
+```{r, fig.cap="Density"}
+
+myplot3 + geom_density(alpha = .5)
+
+```
