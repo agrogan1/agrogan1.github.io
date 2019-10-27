@@ -130,8 +130,8 @@ knitr::include_graphics("images/cpbansglobe.png")
 * *Two Page ggplot2*: 
      + [PDF](https://agrogan1.github.io/R/two-page-ggplot2/two-page-ggplot2.pdf)
 * *Five Page dplyr*:
-     + [PDF](https://agrogan1.github.io/R/five-page-dplyr/five-page-dplyr.pdf)
-     + [HTML](https://agrogan1.github.io/R/five-page-dplyr/five-page-dplyr.html)
+     + [PDF](https://agrogan1.github.io/R/multi-page-dplyr/multi-page-dplyr.pdf)
+     + [HTML](https://agrogan1.github.io/R/multi-page-dplyr/multi-page-dplyr.html)
 * *Comparing Program Outcomes with ggplot2* 
      + [HTML](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.html)
      + [PDF](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.pdf)
@@ -163,10 +163,12 @@ knitr::include_graphics("images/BayesianDoughnut.png")
 
 # Statistical Visualizations
 
-* [t-test](https://agrogan.shinyapps.io/shiny-t-test/)
-* [correlation](https://agrogan.shinyapps.io/correlation_demo/)
-* [regression](https://agrogan.shinyapps.io/regression_demo/)
-* [logistic regression](https://agrogan.shinyapps.io/exploring_logistic_regression/)
+* [t-Test](https://agrogan.shinyapps.io/shiny-t-test/)
+* [Correlation](https://agrogan.shinyapps.io/correlation_demo/)
+* Regression
+     - [Tutorial](https://agrogan1.github.io/R/new-regression-tutorial/)
+     - [Demo](https://agrogan.shinyapps.io/regression_demo/)
+* [Logistic Regression](https://agrogan.shinyapps.io/exploring_logistic_regression/)
 * [Cohen's d Calculator](https://agrogan.shinyapps.io/effect_size_calculator/)
 
 # Data Visualization

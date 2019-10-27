@@ -40,6 +40,8 @@ Here are some key dimensions of slide formats:
 
 * *Printing*: Is it easy to print, especially to PDF? Again, especially useful for classes.
 
+> In thinking about using RMarkdown slide formats, it is worth noting that most of these formats seem to behave best making use of Level 2 (`##`) Headings in RMarkdown. Various slide formats have various behaviors with Level 1 (`#`) Headings, or mixtures of Level 1 (`#`) and Level 2 (`##`) Headings, that you may be accustomed to using in other RMarkdown formats. Therefore, if you are developing one single RMarkdown document that you intend to write out to slides and to another format such as PDF, it is worth thinnking about the fact that headings seem to behave uniquely in RMarkdown slide formats.
+
 ```{r}
 
 library(dplyr) # data wrangling
