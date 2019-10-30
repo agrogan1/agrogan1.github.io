@@ -70,7 +70,7 @@ myHTMLfiles %>%
 ```
 
 
-# Courses
+# Selected Courses
 
 * [Data Visualization](https://agrogan1.github.io/dataviz/dataviz-course)
 
