@@ -7,6 +7,10 @@ author:
     affiliation_url: https://umich.edu/
 date: "`r Sys.Date()`"
 output:
+  tint::tintHtml:
+    number_sections: yes
+    toc: yes
+    highlight: haddock
   distill::distill_article:
     highlight: haddock
     toc: yes
@@ -14,13 +18,44 @@ output:
 
 ```{r setup, include=FALSE}
 
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, 
+                      warning = FALSE,
+                      message = FALSE,
+                      fig.margin = TRUE)
+
+library(tint)
+
+library(pander)
 
 ```
 
 ## Background
 
-Over the past few months, I have been experimenting *a lot* with different slide show formats.  Some slide formats make beautiful slides, but every format seems to have its own limitations. 
+Over the past few months, I have been experimenting *a lot* with different slide show formats. Some slide formats make beautiful slides, but every format seems to have its own limitations.
+
+```{r, fig.cap="Slidy"}
+
+knitr::include_graphics("images/Slidy.png")
+
+```
+
+```{r, fig.cap="RevealJS with Sky Theme"}
+
+knitr::include_graphics("images/RevealJS-sky.png")
+
+```
+
+```{r, fig.cap="Xaringan"}
+
+knitr::include_graphics("images/Xaringan.png")
+
+```
+
+```{r, fig.cap="Ioslides"}
+
+knitr::include_graphics("images/Ioslides.png")
+
+```
 
 Here are some key dimensions of slide formats:
 
@@ -40,7 +75,7 @@ Here are some key dimensions of slide formats:
 
 * *Printing*: Is it easy to print, especially to PDF? Again, especially useful for classes.
 
-> In thinking about using RMarkdown slide formats, it is worth noting that most of these formats seem to behave best making use of Level 2 (`##`) Headings in RMarkdown. Various slide formats have various behaviors with Level 1 (`#`) Headings, or mixtures of Level 1 (`#`) and Level 2 (`##`) Headings, that you may be accustomed to using in other RMarkdown formats. Therefore, if you are developing one single RMarkdown document that you intend to write out to slides and to another format such as PDF, it is worth thinnking about the fact that headings seem to behave uniquely in RMarkdown slide formats.
+> In thinking about using RMarkdown slide formats, it is worth noting that most of these formats seem to behave best making use of Level 2 (`##`) Headings in RMarkdown. Various slide formats have various behaviors with Level 1 (`#`) Headings, or mixtures of Level 1 (`#`) and Level 2 (`##`) Headings, that you may be accustomed to using in other RMarkdown formats. Therefore, if you are developing one single RMarkdown document that you intend to write out to slides and to another format such as PDF, it is worth thinking about the fact that headings seem to behave uniquely in RMarkdown slide formats.
 
 ```{r}
 
@@ -138,6 +173,7 @@ datatable(slideformats,
             dom = 't',
             scrollX = TRUE,
             fixedColumns = list(leftColumns = 2)))
+
 
 ```
 
