@@ -29,13 +29,13 @@ library(pander)
 
 ```
 
-## Background
+# Background
 
 Over the past few months, I have been experimenting *a lot* with different slide show formats. Some slide formats make beautiful slides, but every format seems to have its own limitations.
 
-```{r, fig.cap="Slidy"}
+```{r, fig.cap="Slidy with Custom CSS"}
 
-knitr::include_graphics("images/Slidy.png")
+knitr::include_graphics("images/Slidy-better-CSS.png")
 
 ```
 
@@ -76,6 +76,8 @@ Here are some key dimensions of slide formats:
 * *Printing*: Is it easy to print, especially to PDF? Again, especially useful for classes.
 
 > In thinking about using RMarkdown slide formats, it is worth noting that most of these formats seem to behave best making use of Level 2 (`##`) Headings in RMarkdown. Various slide formats have various behaviors with Level 1 (`#`) Headings, or mixtures of Level 1 (`#`) and Level 2 (`##`) Headings, that you may be accustomed to using in other RMarkdown formats. Therefore, if you are developing one single RMarkdown document that you intend to write out to slides and to another format such as PDF, it is worth thinking about the fact that headings seem to behave uniquely in RMarkdown slide formats.
+
+> My favorite format is Slidy right now, because it allows slides to easily overflow, and because it can easily be modified with [custom CSS](https://agrogan1.github.io/R/YAML-test/slidy.css).
 
 ```{r}
 
