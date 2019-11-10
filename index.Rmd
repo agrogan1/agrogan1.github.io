@@ -129,7 +129,7 @@ knitr::include_graphics("images/cpbansglobe.png")
      + [PDF](https://agrogan1.github.io/R/two-page-R/two-page-R.pdf)
 * *Two Page ggplot2*: 
      + [PDF](https://agrogan1.github.io/R/two-page-ggplot2/two-page-ggplot2.pdf)
-* *Five Page dplyr*:
+* *Multi-Page dplyr*:
      + [PDF](https://agrogan1.github.io/R/multi-page-dplyr/multi-page-dplyr.pdf)
      + [HTML](https://agrogan1.github.io/R/multi-page-dplyr/multi-page-dplyr.html)
 * *Comparing Program Outcomes with ggplot2* 
