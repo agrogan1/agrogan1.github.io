@@ -95,7 +95,8 @@ knitr::include_graphics("images/schools.png")
 # Research on Parenting
 
 * [Data Visualization](https://agrogan1.github.io/research/MICS1/) for "Spanking and young children's socioemotional development in low- and middle-income countries". *Child Trends News Service* has released a well done [video summarizing this research](https://youtu.be/8LYZ-UpR5wE).
-* [Research On Corporal Punishment](https://agrogan1.github.io/research/cp/)
+* [Meta-Analysis](https://agrogan1.github.io/research/cp/#meta-analysis) of Research on Corporal Punishment
+* [All Research On Corporal Punishment](https://agrogan1.github.io/research/cp/)
 * Data Visualization of [Country Level Bans on Corporal Punishment](https://agrogan1.github.io/research/cpbans/)
 
 <aside>
