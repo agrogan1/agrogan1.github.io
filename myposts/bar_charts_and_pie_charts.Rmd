@@ -1,5 +1,6 @@
 ---
 title: "Telling Stories With Data: Bar Charts and Pie Charts"
+subtitle: "Conceptual Relationships Among Graphs, and the Grammar of Graphics"
 author:
   - name: "Andrew Grogan-Kaylor"
     url: https://umich.edu/~agrogan
@@ -7,22 +8,16 @@ author:
     affiliation_url: https://www.umich.edu
 date: "`r Sys.Date()`"
 output:
-  html_document:
+  html_document: 
+    code_folding: hide
+    css: styles.css
     fig_height: 3
     highlight: haddock
-    keep_md: no
     number_sections: yes
-    theme: default
-    code_folding: hide
     toc: yes
     toc_float:
       collapsed: yes
       smooth_scroll: yes
-  radix::radix_article:
-    toc: true
-    number_sections: yes
-    toc_depth: 2
-    fig_height: 3
 citation_url: https://agrogan1.github.io/myposts/
 always_allow_html: yes
 ---
@@ -38,7 +33,9 @@ knitr::opts_chunk$set(echo = TRUE,
 
 # Background
 
-In this document, I talk about **bar charts**, **stacked bar charts**, and **pie charts**.  I want to focus on the *conceptual relationships* between these kinds of graphs. These graphs were made in `ggplot2`. The code for each graph is provided, as it may be useful for some audiences, but the focus here is really on the relationships between these graphs, and the advantages and disadvantages of different graphing strategies in terms of *telling a story with the data*. Those not interested in the intricacies of `ggplot` may feel free to ignore the code. 
+In this document, I talk about **bar charts**, **stacked bar charts**, and **pie charts**.  I want to focus on the *conceptual relationships* between these kinds of graphs, using the idea of *grammar of graphics*. 
+
+> These graphs were made in `ggplot2`. The code for each graph is provided, as it may be useful for some audiences, but the focus here is really on the relationships between these graphs, and the advantages and disadvantages of different graphing strategies in terms of *telling a story with the data*. Those not interested in the intricacies of `ggplot` may feel free to ignore the code. 
 
 ```{r, echo=FALSE}
 
@@ -50,7 +47,7 @@ library(pander) # nice tables
 
 library(tibble) # new data frames
 
-library(DiagrammeR)
+library(DiagrammeR) # digrams
 
 ```
 
@@ -73,7 +70,7 @@ group <- factor(group,
 
 mydata <- tibble::tibble(group)
 
-pander(head(mydata))
+pander(head(mydata, 10))
 
 ```
 
@@ -115,7 +112,7 @@ ggplot(data = mydata,
 
 ## Grammar of Graphics
 
-I'm going to rely on Wilkinson's idea of a *Grammar of Graphics*. Wilkinson talks about such a grammar being characterized by *has a* relationships which I have indicated here with `->` symbols. 
+I'm going to rely on Wilkinson's idea of a *Grammar of Graphics*. Wilkinson talks about such a grammar being characterized by *has a* relationships which I have indicated here with $\leftarrow$ symbols. 
 
 So, for example, this graph has an *x axis*, and a *y axis*, and *color*. 
 
