@@ -12,7 +12,7 @@
 
 <meta name="author" content="Andy Grogan-Kaylor" />
 
-<meta name="date" content="2019-11-17" />
+<meta name="date" content="2019-11-18" />
 
 <title>Quick Look At How Dates Work in R</title>
 
@@ -1565,7 +1565,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Quick Look At How Dates Work in R</h1>
 <h4 class="author">Andy Grogan-Kaylor</h4>
-<h4 class="date">2019-11-17</h4>
+<h4 class="date">2019-11-18</h4>
 
 </div>
 
@@ -1596,27 +1596,41 @@ div.tocify {
 <p>Right now R understands these data as <em>character</em> variables.</p>
 <p>Format these quantities as dates so that R understands that they are dates.</p>
 <blockquote>
-<p><em>Internally</em>, R understands dates as the number of days that have elapsed since <strong>January 1, 1970</strong>. Hence, dates are numbers that can be <em>compared</em>, <em>added</em>, and <em>subtracted</em> in a fashion similar to other numbers. However, when numbers are formatted as dates, they are presented as dates in summary statistics and graphs.</p>
+<p><em>Internally</em>, R understands dates as the number of days that have elapsed since <strong>January 1, 1970</strong>. Hence, dates are numbers that can be <em>compared</em>, <em>added</em>, and <em>subtracted</em> in a fashion similar to other numbers. When numbers are formatted as dates, they are presented as dates in many situations, such as summary statistics and graphs.</p>
 </blockquote>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">startdate &lt;-<span class="st"> </span><span class="kw">ymd</span>(startdate) <span class="co"># format as dates</span></a>
 <a class="sourceLine" id="cb3-2" title="2"></a>
 <a class="sourceLine" id="cb3-3" title="3">enddate &lt;-<span class="st"> </span><span class="kw">ymd</span>(enddate) <span class="co"># format as dates</span></a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">summary</span>(startdate)</a></code></pre></div>
+<pre><code>##         Min.      1st Qu.       Median         Mean      3rd Qu. 
+## &quot;2019-01-01&quot; &quot;2019-01-23&quot; &quot;2019-02-15&quot; &quot;2019-02-04&quot; &quot;2019-02-22&quot; 
+##         Max. 
+## &quot;2019-03-01&quot;</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">summary</span>(enddate)</a></code></pre></div>
+<pre><code>##         Min.      1st Qu.       Median         Mean      3rd Qu. 
+## &quot;2019-01-30&quot; &quot;2019-03-16&quot; &quot;2019-04-30&quot; &quot;2019-04-10&quot; &quot;2019-05-15&quot; 
+##         Max. 
+## &quot;2019-05-30&quot;</code></pre>
 </div>
 <div id="calculate-duration" class="section level2">
 <h2><span class="header-section-number">2.4</span> Calculate Duration</h2>
 <p>Simply subtract <code>startdate</code> from <code>enddate</code> to calculate duration.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">howlong &lt;-<span class="st"> </span>enddate <span class="op">-</span><span class="st"> </span>startdate <span class="co"># calculate duration</span></a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1">howlong &lt;-<span class="st"> </span>enddate <span class="op">-</span><span class="st"> </span>startdate <span class="co"># calculate duration</span></a>
+<a class="sourceLine" id="cb8-2" title="2"></a>
+<a class="sourceLine" id="cb8-3" title="3"><span class="kw">summary</span>(howlong)</a></code></pre></div>
+<pre><code>##   Length    Class     Mode 
+##        3 difftime  numeric</code></pre>
 </div>
 <div id="test-length-of-duration" class="section level2">
 <h2><span class="header-section-number">2.5</span> Test Length of Duration</h2>
 <p>Use the <code>variable[test]</code> syntax to figure out if duration is longer than 90 days.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">mydata &lt;-<span class="st"> </span><span class="kw">data.frame</span>(startdate, enddate, howlong) <span class="co"># bundle into a data set</span></a>
-<a class="sourceLine" id="cb5-2" title="2"></a>
-<a class="sourceLine" id="cb5-3" title="3">mydata<span class="op">$</span>over90 &lt;-<span class="st"> &quot;no&quot;</span>  <span class="co"># initialize this variable to &quot;no&quot;</span></a>
-<a class="sourceLine" id="cb5-4" title="4"></a>
-<a class="sourceLine" id="cb5-5" title="5">mydata<span class="op">$</span>over90[mydata<span class="op">$</span>howlong <span class="op">&gt;</span><span class="st"> </span><span class="dv">90</span>] &lt;-<span class="st"> &quot;yes&quot;</span> <span class="co"># change to &quot;yes&quot; when howlong &gt; 90</span></a>
-<a class="sourceLine" id="cb5-6" title="6"></a>
-<a class="sourceLine" id="cb5-7" title="7">mydata <span class="co"># replay data set</span></a></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1">mydata &lt;-<span class="st"> </span><span class="kw">data.frame</span>(startdate, enddate, howlong) <span class="co"># bundle into a data set</span></a>
+<a class="sourceLine" id="cb10-2" title="2"></a>
+<a class="sourceLine" id="cb10-3" title="3">mydata<span class="op">$</span>over90 &lt;-<span class="st"> &quot;no&quot;</span>  <span class="co"># initialize this variable to &quot;no&quot;</span></a>
+<a class="sourceLine" id="cb10-4" title="4"></a>
+<a class="sourceLine" id="cb10-5" title="5">mydata<span class="op">$</span>over90[mydata<span class="op">$</span>howlong <span class="op">&gt;</span><span class="st"> </span><span class="dv">90</span>] &lt;-<span class="st"> &quot;yes&quot;</span> <span class="co"># change to &quot;yes&quot; when howlong &gt; 90</span></a>
+<a class="sourceLine" id="cb10-6" title="6"></a>
+<a class="sourceLine" id="cb10-7" title="7">mydata <span class="co"># replay data set</span></a></code></pre></div>
 <pre><code>##    startdate    enddate  howlong over90
 ## 1 2019-01-01 2019-01-30  29 days     no
 ## 2 2019-02-15 2019-05-30 104 days    yes

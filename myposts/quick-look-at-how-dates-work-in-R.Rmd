@@ -57,13 +57,21 @@ Right now R understands these data as *character* variables.
 
 Format these quantities as dates so that R understands that they are dates.
 
-> *Internally*, R understands dates as the number of days that have elapsed since **January 1, 1970**. Hence, dates are numbers that can be *compared*, *added*, and *subtracted* in a fashion similar to other numbers. However, when numbers are formatted as dates, they are presented as dates in summary statistics and graphs.
+> *Internally*, R understands dates as the number of days that have elapsed since **January 1, 1970**. Hence, dates are numbers that can be *compared*, *added*, and *subtracted* in a fashion similar to other numbers. When numbers are formatted as dates, they are presented as dates in many situations, such as summary statistics and graphs.
 
 ```{r}
 
 startdate <- ymd(startdate) # format as dates
 
 enddate <- ymd(enddate) # format as dates
+
+```
+
+```{r}
+
+summary(startdate)
+
+summary(enddate)
 
 ```
 
@@ -74,6 +82,8 @@ Simply subtract `startdate` from `enddate` to calculate duration.
 ```{r}
 
 howlong <- enddate - startdate # calculate duration
+
+summary(howlong)
 
 ```
 
