@@ -68,6 +68,7 @@ mydata <- tibble::tibble(group, risk)
 pander(table(mydata$group))
 
 ```
+
 ```{r, echo=FALSE}
 
 library(ggplot2)
@@ -112,15 +113,18 @@ myplot0 <- ggplot(data = mydata,
            y = risk)) + # y is risk
   stat_summary(fun.y = mean, 
                geom = "bar") +
-  labs(title = "Risk by Group")  # labels
+  labs(title = "Risk by Group",
+       subtitle = "Minimalist Philosophy")  # labels
   
 myplot1 <- ggplot(data = mydata,
        aes(x = group, # x is the group
            fill = group, # fill is the group
            color = group, # color is the group
            y = risk)) + # y is risk
-  stat_summary(fun.y = mean, geom = "bar") +
-  labs(title = "Risk by Group") + # labels
+  stat_summary(fun.y = mean, 
+               geom = "bar") +
+  labs(title = "Risk by Group",
+       subtitle = "Color Added For Visual Interest") + # labels
   scale_fill_manual(values = c("darkgrey", "red", "black")) +
   scale_color_manual(values = c("darkgrey", "red", "black")) +
   theme(legend.position = "none")
@@ -139,7 +143,7 @@ An alternative philosophy, represented on the right hand side, might say that fo
 
 # A More Visually Interesting Grammatical Statement
 
-In the graphs below, *group* will again go on the x axis.  *Risk* will go on the y axis.  In drawing this information in various ways--employing various geometries--I am going use colors (the *Viridis* color palettes) for fill and color. 
+In the graphs below, *group* will again go on the x axis.  *Risk* will go on the y axis.  In drawing this information in various ways--employing various geometries--I am going use colors (black, red and grey) for fill and color. 
 
 These decisions are echoed in the (admittedly complicated) `ggplot` code below which sets up the graphs to follow.  Again, however, it's not necessary to follow the code to follow the discussion.
 
@@ -152,7 +156,8 @@ myplot <- ggplot(data = mydata,
            y = risk)) + # y is risk
   labs(title = "Risk by Group") + # labels
   scale_fill_manual(values = c("darkgrey", "red", "black")) +
-  scale_color_manual(values = c("darkgrey", "red", "black")) 
+  scale_color_manual(values = c("darkgrey", "red", "black")) + 
+  theme_minimal()
 
 ```
 
@@ -168,7 +173,8 @@ As noted above, a bar graph might be the most intuitive, or at least the most co
 
 ```{r}
 
-myplot + stat_summary(fun.y = mean, geom = "bar") +
+myplot + 
+  stat_summary(fun.y = mean, geom = "bar") +
   labs(title = "Mean Risk By Group")
 
 
@@ -227,9 +233,10 @@ mydata %>%
                    yend = mean_risk),
                size = 2) +
   ylim(0,160) + 
+  labs(title = "Mean Risk By Group") +
   scale_fill_manual(values = c("grey", "red", "black")) +
   scale_color_manual(values = c("grey", "red", "black")) + 
-  labs(title = "Mean Risk By Group")
+  theme_minimal()
 
 ```
 
@@ -297,7 +304,8 @@ This of course requires slightly different code to tweak the colors.
 
 ```{r}
 
-myplot + stat_summary(fun.y = mean, geom = "bar") +
+myplot + 
+  stat_summary(fun.y = mean, geom = "bar") +
   labs(title = "Mean Risk By Group",
        y = "Mean Risk") +
   scale_color_manual(values = c("darkgrey", "red", "darkgrey")) +
@@ -316,7 +324,8 @@ We may wish to modify the title to be less studiously neutral, and to encapsulat
 
 ```{r}
 
-myplot + stat_summary(fun.y = mean, geom = "bar") +
+myplot + 
+  stat_summary(fun.y = mean, geom = "bar") +
   labs(title = "Group B Is At Highest Risk",
        y = "Mean Risk") +
   scale_color_manual(values = c("darkgrey", "red", "darkgrey")) +
@@ -330,7 +339,7 @@ myplot + stat_summary(fun.y = mean, geom = "bar") +
 
 # Add A Big Number
 
-We can add a big number as a data label and for emphasis.
+We can add a big number as a data label and for emphasis. This requires more complicated code so that we can generate the labels.
 
 ```{r}
 
@@ -341,10 +350,10 @@ mydata %>%
   # summarize by group
   summarise(mean_risk = round(mean(risk), 
                               digits = 1)) %>% 
-  ggplot(aes(x = group,
-             y = mean_risk,
-             fill = group,
-             label = mean_risk)) +
+  ggplot(aes(x = group, # x is group
+             y = mean_risk, # y is mean risk
+             fill = group, # fill is group
+             label = mean_risk)) + # label is mean of risk
   geom_bar(stat = "identity") + # y is actual bar height
   geom_text(aes(y = mean_risk - 10), # placement
             vjust = 1, # vertical justification
@@ -356,8 +365,9 @@ mydata %>%
                                "Group C"),
                     values = c("darkgrey", "red", "darkgrey")) + 
   labs(title = "Group B Is At Highest Risk",
-       y = "Mean Risk") +
-    theme(plot.title = element_text(color = "red"))
+       y = "Mean Risk") + 
+  theme_minimal() +
+  theme(plot.title = element_text(color = "red"))
 
 ```
 
@@ -391,6 +401,7 @@ mydata %>%
                     values = c("darkgrey", "red", "darkgrey")) + 
   labs(title = "Group B Is At Highest Risk",
        y = "Mean Risk") +
+  theme_minimal() +
   theme(plot.title = element_text(color = "red")) +
   coord_flip()
 

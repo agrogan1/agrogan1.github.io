@@ -4,6 +4,7 @@ author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output: 
   html_document: 
+    css: styles.css
     highlight: haddock
     number_sections: yes
     toc: yes
@@ -40,11 +41,11 @@ Make up some simulated data for demonstration purposes.
 
 ```{r}
 
-startdate <- c("2019-01-01", 
+startdate <- c("2019-01-01", # hypothetical start dates
                 "2019-02-15",
                 "2019-03-01")
 
-enddate <- c("2019-1-30",
+enddate <- c("2019-1-30", # hypothetical end dates
               "2019-5-30",
               "2019-4-30")
 
@@ -52,7 +53,11 @@ enddate <- c("2019-1-30",
 
 ## Format As Dates
 
+Right now R understands these data as *character* variables.
+
 Format these quantities as dates so that R understands that they are dates.
+
+> *Internally*, R understands dates as the number of days that have elapsed since **January 1, 1970**. Hence, dates are numbers that can be *compared*, *added*, and *subtracted* in a fashion similar to other numbers. However, when numbers are formatted as dates, they are presented as dates in summary statistics and graphs.
 
 ```{r}
 
@@ -64,7 +69,7 @@ enddate <- ymd(enddate) # format as dates
 
 ## Calculate Duration
 
-Subtract `startdate` from `enddate` to calculate duration.
+Simply subtract `startdate` from `enddate` to calculate duration.
 
 ```{r}
 
@@ -80,11 +85,16 @@ Use the `variable[test]` syntax to figure out if duration is longer than 90 days
 
 mydata <- data.frame(startdate, enddate, howlong) # bundle into a data set
 
-mydata$over90 <- "no"  # initialize to "no"
+mydata$over90 <- "no"  # initialize this variable to "no"
 
-mydata$over90[mydata$howlong > 90] <- "yes"
+mydata$over90[mydata$howlong > 90] <- "yes" # change to "yes" when howlong > 90
 
 mydata # replay data set
 
 ```
+
+
+
+
+
 
