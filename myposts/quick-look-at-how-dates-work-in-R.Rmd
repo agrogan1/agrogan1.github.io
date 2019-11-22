@@ -7,6 +7,8 @@ output:
     css: styles.css
     highlight: haddock
     number_sections: yes
+    code_folding: show
+    code_download: true
     toc: yes
     toc_float:
       collapsed: no
@@ -55,9 +57,18 @@ enddate <- c("2019-1-30", # hypothetical end dates
 
 Right now R understands these data as *character* variables.
 
-Format these quantities as dates so that R understands that they are dates.
+```{r}
 
-> *Internally*, R understands dates as the number of days that have elapsed since **January 1, 1970**. Hence, dates are numbers that can be *compared*, *added*, and *subtracted* in a fashion similar to other numbers. When numbers are formatted as dates, they are presented as dates in many situations, such as summary statistics and graphs.
+summary(startdate)
+
+summary(enddate)
+
+```
+
+
+> Format these quantities as dates so that R understands that they are dates.
+
+> *Internally*, once numbers are formatted as dates, R understands dates as the number of days that have elapsed since **January 1, 1970**. Hence, dates are numbers that can be *compared*, *added*, and *subtracted* in a fashion similar to other numbers. When numbers are formatted as dates, they are presented as dates in many situations, such as summary statistics and graphs.
 
 ```{r}
 

@@ -12,7 +12,7 @@
 
 <meta name="author" content="Andy Grogan-Kaylor" />
 
-<meta name="date" content="2019-11-18" />
+<meta name="date" content="2019-11-22" />
 
 <title>Quick Look At How Dates Work in R</title>
 
@@ -1265,6 +1265,79 @@ window.buildTabsets = function(tocID) {
 };
 
 </script>
+<script>
+window.initializeCodeFolding = function(show) {
+
+  // handlers for show-all and hide all
+  $("#rmd-show-all-code").click(function() {
+    $('div.r-code-collapse').each(function() {
+      $(this).collapse('show');
+    });
+  });
+  $("#rmd-hide-all-code").click(function() {
+    $('div.r-code-collapse').each(function() {
+      $(this).collapse('hide');
+    });
+  });
+
+  // index for unique code element ids
+  var currentIndex = 1;
+
+  // select all R code blocks
+  var rCodeBlocks = $('pre.r, pre.python, pre.bash, pre.sql, pre.cpp, pre.stan, pre.julia');
+  rCodeBlocks.each(function() {
+
+    // create a collapsable div to wrap the code in
+    var div = $('<div class="collapse r-code-collapse"></div>');
+    if (show || $(this)[0].classList.contains('fold-show'))
+      div.addClass('in');
+    var id = 'rcode-643E0F36' + currentIndex++;
+    div.attr('id', id);
+    $(this).before(div);
+    $(this).detach().appendTo(div);
+
+    // add a show code button right above
+    var showCodeText = $('<span>' + (show ? 'Hide' : 'Code') + '</span>');
+    var showCodeButton = $('<button type="button" class="btn btn-default btn-xs code-folding-btn pull-right"></button>');
+    showCodeButton.append(showCodeText);
+    showCodeButton
+        .attr('data-toggle', 'collapse')
+        .attr('data-target', '#' + id)
+        .attr('aria-expanded', show)
+        .attr('aria-controls', id);
+
+    var buttonRow = $('<div class="row"></div>');
+    var buttonCol = $('<div class="col-md-12"></div>');
+
+    buttonCol.append(showCodeButton);
+    buttonRow.append(buttonCol);
+
+    div.before(buttonRow);
+
+    // update state of button on show/hide
+    div.on('hidden.bs.collapse', function () {
+      showCodeText.text('Code');
+    });
+    div.on('show.bs.collapse', function () {
+      showCodeText.text('Hide');
+    });
+  });
+
+}
+</script>
+<script>
+window.initializeSourceEmbed = function(filename) {
+  $("#rmd-download-source").click(function() {
+    var src = $("#rmd-source-code").html();
+    var a = document.createElement('a');
+    a.href = "data:text/x-r-markdown;base64," + src;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  });
+};
+</script>
 
 
 <style type="text/css">code{white-space: pre;}</style>
@@ -1326,6 +1399,15 @@ code span.va { } /* Variable */
 code span.vs { color: #008080; } /* VerbatimString */
 code span.wa { color: #008000; font-weight: bold; } /* Warning */
 
+.sourceCode .row {
+  width: 100%;
+}
+.sourceCode {
+  overflow-x: auto;
+}
+.code-folding-btn {
+  margin-right: -30px;
+}
 </style>
 <script>
 // apply pandoc div.sourceCode style to pre.sourceCode instead
@@ -1379,6 +1461,9 @@ h6 {
 }
 .table th:not([align]) {
   text-align: left;
+}
+#rmd-source-code {
+  display: none;
 }
 </style>
 
@@ -1472,6 +1557,9 @@ summary {
 </style>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
 
 
 
@@ -1561,11 +1649,21 @@ div.tocify {
 
 <div class="fluid-row" id="header">
 
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+<li role="separator" class="divider"></li>
+<li><a id="rmd-download-source" href="#">Download Rmd</a></li>
+</ul>
+</div>
+
 
 
 <h1 class="title toc-ignore">Quick Look At How Dates Work in R</h1>
 <h4 class="author">Andy Grogan-Kaylor</h4>
-<h4 class="date">2019-11-18</h4>
+<h4 class="date">2019-11-22</h4>
 
 </div>
 
@@ -1594,19 +1692,27 @@ div.tocify {
 <div id="format-as-dates" class="section level2">
 <h2><span class="header-section-number">2.3</span> Format As Dates</h2>
 <p>Right now R understands these data as <em>character</em> variables.</p>
-<p>Format these quantities as dates so that R understands that they are dates.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">summary</span>(startdate)</a></code></pre></div>
+<pre><code>##    Length     Class      Mode 
+##         3 character character</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">summary</span>(enddate)</a></code></pre></div>
+<pre><code>##    Length     Class      Mode 
+##         3 character character</code></pre>
 <blockquote>
-<p><em>Internally</em>, R understands dates as the number of days that have elapsed since <strong>January 1, 1970</strong>. Hence, dates are numbers that can be <em>compared</em>, <em>added</em>, and <em>subtracted</em> in a fashion similar to other numbers. When numbers are formatted as dates, they are presented as dates in many situations, such as summary statistics and graphs.</p>
+<p>Format these quantities as dates so that R understands that they are dates.</p>
 </blockquote>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">startdate &lt;-<span class="st"> </span><span class="kw">ymd</span>(startdate) <span class="co"># format as dates</span></a>
-<a class="sourceLine" id="cb3-2" title="2"></a>
-<a class="sourceLine" id="cb3-3" title="3">enddate &lt;-<span class="st"> </span><span class="kw">ymd</span>(enddate) <span class="co"># format as dates</span></a></code></pre></div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">summary</span>(startdate)</a></code></pre></div>
+<blockquote>
+<p><em>Internally</em>, once numbers are formatted as dates, R understands dates as the number of days that have elapsed since <strong>January 1, 1970</strong>. Hence, dates are numbers that can be <em>compared</em>, <em>added</em>, and <em>subtracted</em> in a fashion similar to other numbers. When numbers are formatted as dates, they are presented as dates in many situations, such as summary statistics and graphs.</p>
+</blockquote>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1">startdate &lt;-<span class="st"> </span><span class="kw">ymd</span>(startdate) <span class="co"># format as dates</span></a>
+<a class="sourceLine" id="cb7-2" title="2"></a>
+<a class="sourceLine" id="cb7-3" title="3">enddate &lt;-<span class="st"> </span><span class="kw">ymd</span>(enddate) <span class="co"># format as dates</span></a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="kw">summary</span>(startdate)</a></code></pre></div>
 <pre><code>##         Min.      1st Qu.       Median         Mean      3rd Qu. 
 ## &quot;2019-01-01&quot; &quot;2019-01-23&quot; &quot;2019-02-15&quot; &quot;2019-02-04&quot; &quot;2019-02-22&quot; 
 ##         Max. 
 ## &quot;2019-03-01&quot;</code></pre>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">summary</span>(enddate)</a></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1"><span class="kw">summary</span>(enddate)</a></code></pre></div>
 <pre><code>##         Min.      1st Qu.       Median         Mean      3rd Qu. 
 ## &quot;2019-01-30&quot; &quot;2019-03-16&quot; &quot;2019-04-30&quot; &quot;2019-04-10&quot; &quot;2019-05-15&quot; 
 ##         Max. 
@@ -1615,22 +1721,22 @@ div.tocify {
 <div id="calculate-duration" class="section level2">
 <h2><span class="header-section-number">2.4</span> Calculate Duration</h2>
 <p>Simply subtract <code>startdate</code> from <code>enddate</code> to calculate duration.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1">howlong &lt;-<span class="st"> </span>enddate <span class="op">-</span><span class="st"> </span>startdate <span class="co"># calculate duration</span></a>
-<a class="sourceLine" id="cb8-2" title="2"></a>
-<a class="sourceLine" id="cb8-3" title="3"><span class="kw">summary</span>(howlong)</a></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1">howlong &lt;-<span class="st"> </span>enddate <span class="op">-</span><span class="st"> </span>startdate <span class="co"># calculate duration</span></a>
+<a class="sourceLine" id="cb12-2" title="2"></a>
+<a class="sourceLine" id="cb12-3" title="3"><span class="kw">summary</span>(howlong)</a></code></pre></div>
 <pre><code>##   Length    Class     Mode 
 ##        3 difftime  numeric</code></pre>
 </div>
 <div id="test-length-of-duration" class="section level2">
 <h2><span class="header-section-number">2.5</span> Test Length of Duration</h2>
 <p>Use the <code>variable[test]</code> syntax to figure out if duration is longer than 90 days.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1">mydata &lt;-<span class="st"> </span><span class="kw">data.frame</span>(startdate, enddate, howlong) <span class="co"># bundle into a data set</span></a>
-<a class="sourceLine" id="cb10-2" title="2"></a>
-<a class="sourceLine" id="cb10-3" title="3">mydata<span class="op">$</span>over90 &lt;-<span class="st"> &quot;no&quot;</span>  <span class="co"># initialize this variable to &quot;no&quot;</span></a>
-<a class="sourceLine" id="cb10-4" title="4"></a>
-<a class="sourceLine" id="cb10-5" title="5">mydata<span class="op">$</span>over90[mydata<span class="op">$</span>howlong <span class="op">&gt;</span><span class="st"> </span><span class="dv">90</span>] &lt;-<span class="st"> &quot;yes&quot;</span> <span class="co"># change to &quot;yes&quot; when howlong &gt; 90</span></a>
-<a class="sourceLine" id="cb10-6" title="6"></a>
-<a class="sourceLine" id="cb10-7" title="7">mydata <span class="co"># replay data set</span></a></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1">mydata &lt;-<span class="st"> </span><span class="kw">data.frame</span>(startdate, enddate, howlong) <span class="co"># bundle into a data set</span></a>
+<a class="sourceLine" id="cb14-2" title="2"></a>
+<a class="sourceLine" id="cb14-3" title="3">mydata<span class="op">$</span>over90 &lt;-<span class="st"> &quot;no&quot;</span>  <span class="co"># initialize this variable to &quot;no&quot;</span></a>
+<a class="sourceLine" id="cb14-4" title="4"></a>
+<a class="sourceLine" id="cb14-5" title="5">mydata<span class="op">$</span>over90[mydata<span class="op">$</span>howlong <span class="op">&gt;</span><span class="st"> </span><span class="dv">90</span>] &lt;-<span class="st"> &quot;yes&quot;</span> <span class="co"># change to &quot;yes&quot; when howlong &gt; 90</span></a>
+<a class="sourceLine" id="cb14-6" title="6"></a>
+<a class="sourceLine" id="cb14-7" title="7">mydata <span class="co"># replay data set</span></a></code></pre></div>
 <pre><code>##    startdate    enddate  howlong over90
 ## 1 2019-01-01 2019-01-30  29 days     no
 ## 2 2019-02-15 2019-05-30 104 days    yes
@@ -1638,6 +1744,7 @@ div.tocify {
 </div>
 </div>
 
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlF1aWNrIExvb2sgQXQgSG93IERhdGVzIFdvcmsgaW4gUiINCmF1dGhvcjogIkFuZHkgR3JvZ2FuLUtheWxvciINCmRhdGU6ICJgciBTeXMuRGF0ZSgpYCINCm91dHB1dDogDQogIGh0bWxfZG9jdW1lbnQ6IA0KICAgIGNzczogc3R5bGVzLmNzcw0KICAgIGhpZ2hsaWdodDogaGFkZG9jaw0KICAgIG51bWJlcl9zZWN0aW9uczogeWVzDQogICAgY29kZV9mb2xkaW5nOiBzaG93DQogICAgY29kZV9kb3dubG9hZDogdHJ1ZQ0KICAgIHRvYzogeWVzDQogICAgdG9jX2Zsb2F0Og0KICAgICAgY29sbGFwc2VkOiBubw0KICAgICAgc21vb3RoX3Njcm9sbDogeWVzDQotLS0NCg0KYGBge3Igc2V0dXAsIGluY2x1ZGU9RkFMU0V9DQoNCmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSwNCiAgICAgICAgICAgICAgICAgICAgICB3YXJuaW5nID0gRkFMU0UsDQogICAgICAgICAgICAgICAgICAgICAgbWVzc2FnZSA9IEZBTFNFKQ0KDQpgYGANCg0KIyBCYWNrZ3JvdW5kDQoNCltodHRwczovL3d3dy5zdGF0bWV0aG9kcy5uZXQvaW5wdXQvZGF0ZXMuaHRtbF0oaHR0cHM6Ly93d3cuc3RhdG1ldGhvZHMubmV0L2lucHV0L2RhdGVzLmh0bWwpDQoNCiMgRGVtbw0KDQojIyBMaWJyYXJpZXMNCg0KYGBge3J9DQoNCmxpYnJhcnkobHVicmlkYXRlKSAjIGVhc2llciB0byB3b3JrIHdpdGggZGF0ZXMNCg0KYGBgDQoNCiMjIEZha2UgRGF0YQ0KDQpNYWtlIHVwIHNvbWUgc2ltdWxhdGVkIGRhdGEgZm9yIGRlbW9uc3RyYXRpb24gcHVycG9zZXMuDQoNCmBgYHtyfQ0KDQpzdGFydGRhdGUgPC0gYygiMjAxOS0wMS0wMSIsICMgaHlwb3RoZXRpY2FsIHN0YXJ0IGRhdGVzDQogICAgICAgICAgICAgICAgIjIwMTktMDItMTUiLA0KICAgICAgICAgICAgICAgICIyMDE5LTAzLTAxIikNCg0KZW5kZGF0ZSA8LSBjKCIyMDE5LTEtMzAiLCAjIGh5cG90aGV0aWNhbCBlbmQgZGF0ZXMNCiAgICAgICAgICAgICAgIjIwMTktNS0zMCIsDQogICAgICAgICAgICAgICIyMDE5LTQtMzAiKQ0KDQpgYGANCg0KIyMgRm9ybWF0IEFzIERhdGVzDQoNClJpZ2h0IG5vdyBSIHVuZGVyc3RhbmRzIHRoZXNlIGRhdGEgYXMgKmNoYXJhY3RlciogdmFyaWFibGVzLg0KDQpgYGB7cn0NCg0Kc3VtbWFyeShzdGFydGRhdGUpDQoNCnN1bW1hcnkoZW5kZGF0ZSkNCg0KYGBgDQoNCg0KPiBGb3JtYXQgdGhlc2UgcXVhbnRpdGllcyBhcyBkYXRlcyBzbyB0aGF0IFIgdW5kZXJzdGFuZHMgdGhhdCB0aGV5IGFyZSBkYXRlcy4NCg0KPiAqSW50ZXJuYWxseSosIG9uY2UgbnVtYmVycyBhcmUgZm9ybWF0dGVkIGFzIGRhdGVzLCBSIHVuZGVyc3RhbmRzIGRhdGVzIGFzIHRoZSBudW1iZXIgb2YgZGF5cyB0aGF0IGhhdmUgZWxhcHNlZCBzaW5jZSAqKkphbnVhcnkgMSwgMTk3MCoqLiBIZW5jZSwgZGF0ZXMgYXJlIG51bWJlcnMgdGhhdCBjYW4gYmUgKmNvbXBhcmVkKiwgKmFkZGVkKiwgYW5kICpzdWJ0cmFjdGVkKiBpbiBhIGZhc2hpb24gc2ltaWxhciB0byBvdGhlciBudW1iZXJzLiBXaGVuIG51bWJlcnMgYXJlIGZvcm1hdHRlZCBhcyBkYXRlcywgdGhleSBhcmUgcHJlc2VudGVkIGFzIGRhdGVzIGluIG1hbnkgc2l0dWF0aW9ucywgc3VjaCBhcyBzdW1tYXJ5IHN0YXRpc3RpY3MgYW5kIGdyYXBocy4NCg0KYGBge3J9DQoNCnN0YXJ0ZGF0ZSA8LSB5bWQoc3RhcnRkYXRlKSAjIGZvcm1hdCBhcyBkYXRlcw0KDQplbmRkYXRlIDwtIHltZChlbmRkYXRlKSAjIGZvcm1hdCBhcyBkYXRlcw0KDQpgYGANCg0KYGBge3J9DQoNCnN1bW1hcnkoc3RhcnRkYXRlKQ0KDQpzdW1tYXJ5KGVuZGRhdGUpDQoNCmBgYA0KDQojIyBDYWxjdWxhdGUgRHVyYXRpb24NCg0KU2ltcGx5IHN1YnRyYWN0IGBzdGFydGRhdGVgIGZyb20gYGVuZGRhdGVgIHRvIGNhbGN1bGF0ZSBkdXJhdGlvbi4NCg0KYGBge3J9DQoNCmhvd2xvbmcgPC0gZW5kZGF0ZSAtIHN0YXJ0ZGF0ZSAjIGNhbGN1bGF0ZSBkdXJhdGlvbg0KDQpzdW1tYXJ5KGhvd2xvbmcpDQoNCmBgYA0KDQojIyBUZXN0IExlbmd0aCBvZiBEdXJhdGlvbg0KDQpVc2UgdGhlIGB2YXJpYWJsZVt0ZXN0XWAgc3ludGF4IHRvIGZpZ3VyZSBvdXQgaWYgZHVyYXRpb24gaXMgbG9uZ2VyIHRoYW4gOTAgZGF5cy4NCg0KYGBge3J9DQoNCm15ZGF0YSA8LSBkYXRhLmZyYW1lKHN0YXJ0ZGF0ZSwgZW5kZGF0ZSwgaG93bG9uZykgIyBidW5kbGUgaW50byBhIGRhdGEgc2V0DQoNCm15ZGF0YSRvdmVyOTAgPC0gIm5vIiAgIyBpbml0aWFsaXplIHRoaXMgdmFyaWFibGUgdG8gIm5vIg0KDQpteWRhdGEkb3ZlcjkwW215ZGF0YSRob3dsb25nID4gOTBdIDwtICJ5ZXMiICMgY2hhbmdlIHRvICJ5ZXMiIHdoZW4gaG93bG9uZyA+IDkwDQoNCm15ZGF0YSAjIHJlcGxheSBkYXRhIHNldA0KDQpgYGANCg0KDQoNCg0KDQoNCg==</div>
 
 
 </div>
@@ -1673,6 +1780,12 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeSourceEmbed("quick-look-at-how-dates-work-in-R.Rmd");
+  window.initializeCodeFolding("show" === "show");
+});
+</script>
 
 <script>
 $(document).ready(function ()  {
