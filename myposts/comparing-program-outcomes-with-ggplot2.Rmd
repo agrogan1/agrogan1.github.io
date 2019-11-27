@@ -3,6 +3,17 @@ title: 'Telling Stories With Data: Comparing Program Outcomes with ggplot2'
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
+  tint::tintPdf:
+    highlight: haddock
+    number_sections: yes
+    toc: yes
+  pdf_document: 
+    fig_caption: yes
+    fig_height: 2
+    highlight: haddock
+    latex_engine: xelatex
+    number_sections: yes
+    toc: yes
   html_document:
     fig_height: 2
     highlight: haddock
@@ -14,17 +25,6 @@ output:
     toc_float:
       collapsed: yes
       smooth_scroll: yes
-  pdf_document: 
-    fig_caption: yes
-    fig_height: 2
-    highlight: haddock
-    latex_engine: xelatex
-    number_sections: yes
-    toc: yes
-  tint::tintPdf:
-    highlight: haddock
-    number_sections: yes
-    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -192,6 +192,8 @@ myplot1 + geom_violin()
 
 ```
 
+\newpage
+
 ## Points
 
 ```{r, fig.cap="Points"}
@@ -199,8 +201,6 @@ myplot1 + geom_violin()
 myplot1 + geom_point()
 
 ```
-
-\newpage
 
 ## Jittered Points
 
