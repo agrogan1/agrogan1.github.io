@@ -104,6 +104,10 @@ knitr::include_graphics("images/schools.png")
 
 knitr::include_graphics("images/MICSglobe.png")
 
+```
+
+```{r}
+
 knitr::include_graphics("images/cpbansglobe.png")
 
 ```

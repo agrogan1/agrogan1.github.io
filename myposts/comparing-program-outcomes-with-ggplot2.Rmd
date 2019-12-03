@@ -3,17 +3,6 @@ title: 'Telling Stories With Data: Comparing Program Outcomes with ggplot2'
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
-  tint::tintPdf:
-    highlight: haddock
-    number_sections: yes
-    toc: yes
-  pdf_document: 
-    fig_caption: yes
-    fig_height: 2
-    highlight: haddock
-    latex_engine: xelatex
-    number_sections: yes
-    toc: yes
   html_document:
     fig_height: 2
     highlight: haddock
@@ -25,6 +14,17 @@ output:
     toc_float:
       collapsed: yes
       smooth_scroll: yes
+  pdf_document: 
+    fig_caption: yes
+    fig_height: 2
+    highlight: haddock
+    latex_engine: xelatex
+    number_sections: yes
+    toc: yes
+  tint::tintPdf:
+    highlight: haddock
+    number_sections: yes
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -120,7 +120,9 @@ Now that we have devoted *a lot of code* to setting up the *grammar* of the grap
 
 ```{r, fig.cap="Bar Chart"}
 
-myplot1 + stat_summary(fun.y = "mean", geom = "bar")
+myplot1 + 
+  stat_summary(fun.y = "mean", # summarize at mean
+               geom = "bar") # bar geometry
 
 ```
 
@@ -128,8 +130,10 @@ myplot1 + stat_summary(fun.y = "mean", geom = "bar")
 
 ```{r, fig.cap="Horizontal Bar Chart"}
 
-myplot1 + stat_summary(fun.y = "mean", geom = "bar") +
-  coord_flip()
+myplot1 + 
+  stat_summary(fun.y = "mean", # summarize at mean
+               geom = "bar") + # bar geometry 
+  coord_flip() # flip coordinates
 
 ```
 
@@ -137,7 +141,9 @@ myplot1 + stat_summary(fun.y = "mean", geom = "bar") +
 
 ```{r, fig.cap="Point Chart"}
 
-myplot1 + stat_summary(fun.y = "mean", geom = "point", size = 5)
+myplot1 + 
+  stat_summary(fun.y = "mean", # summarize at mean
+               geom = "point", size = 5) # point geometry
 
 ```
 
@@ -151,10 +157,10 @@ myplot1 +
   stat_summary(fun.y = "mean", 
                geom = "point", 
                size = 5) +
-  geom_segment(aes(x = program,
-                   xend = program, 
-                   y = 0,
-                   yend = mean(mental_health_T2)))
+  geom_segment(aes(x = program, # x starts at
+                   xend = program, # x ends at
+                   y = 0, # y starts at
+                   yend = mean(mental_health_T2))) # y ends at
 
 ```
 
@@ -165,7 +171,7 @@ An extra element of the `aes`thetic is required for lines.
 ```{r, fig.cap="Line Chart"}
 
 myplot1 + 
-  stat_summary(aes(group = 1),  
+  stat_summary(aes(group = 1), # line geom needs group aesthetic  
                color = "black", # consistent color
                fun.y = "mean", 
                geom = "line") 
@@ -180,7 +186,7 @@ Now that we have devoted *a lot of code* to setting up the *grammar* of the grap
 
 ```{r, fig.cap="Boxplot"}
 
-myplot1 + geom_boxplot(fill="white")
+myplot1 + geom_boxplot(fill="white") # boxplot geometry
 
 ```
 
@@ -188,7 +194,7 @@ myplot1 + geom_boxplot(fill="white")
 
 ```{r, fig.cap="Violin Plot"}
 
-myplot1 + geom_violin()
+myplot1 + geom_violin() # violinplot geometry
 
 ```
 
@@ -198,7 +204,7 @@ myplot1 + geom_violin()
 
 ```{r, fig.cap="Points"}
 
-myplot1 + geom_point()
+myplot1 + geom_point() # point geometry
 
 ```
 
@@ -206,7 +212,7 @@ myplot1 + geom_point()
 
 ```{r, fig.cap="Jittered Points"}
 
-myplot1 + geom_jitter()
+myplot1 + geom_jitter() # jittered point geometry
 
 ```
 
@@ -216,7 +222,7 @@ myplot1 + geom_jitter()
 
 library(ggbeeswarm) # beeswarm geometry
 
-myplot1 + geom_beeswarm()
+myplot1 + geom_beeswarm() # beeswarm geometry
 
 ```
 
@@ -245,7 +251,7 @@ However, now that we have devoted *a lot of code* to setting up the *grammar* of
 
 ```{r, fig.cap="Histogram"}
 
-myplot2 + geom_histogram()
+myplot2 + geom_histogram() # histogram geometry
 
 ```
 
@@ -253,7 +259,7 @@ myplot2 + geom_histogram()
 
 ```{r, fig.cap="Density"}
 
-myplot2 + geom_density()
+myplot2 + geom_density() # density geometry
 
 ```
 
@@ -283,7 +289,8 @@ And again, now that we have devoted a lot of code to setting up the *grammar* of
 
 ```{r, fig.cap="Histogram"}
 
-myplot3 + geom_histogram(alpha = .5)
+myplot3 + 
+  geom_histogram(alpha = .5) # histogram geometry (transparent)
 
 ```
 
@@ -291,6 +298,7 @@ myplot3 + geom_histogram(alpha = .5)
 
 ```{r, fig.cap="Density"}
 
-myplot3 + geom_density(alpha = .5)
+myplot3 + 
+  geom_density(alpha = .5) # density geometry (transparent)
 
 ```
