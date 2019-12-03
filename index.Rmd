@@ -73,19 +73,18 @@ myHTMLfiles %>%
 # Selected Courses
 
 * [Data Visualization](https://agrogan1.github.io/dataviz/dataviz-course)
+* [Multilevel and Longitudinal Modeling](https://agrogan1.github.io/multilevel/)
 
 <aside>
-```{r}
+```{r, fig.cap="Data Visualization"}
 
 knitr::include_graphics("images/banner.png")
 
 ```
 </aside>
 
-* [Multilevel and Longitudinal Modeling](https://agrogan1.github.io/multilevel/)
-
 <aside>
-```{r}
+```{r, fig.cap="Data from High School and Beyond Study"}
 
 knitr::include_graphics("images/schools.png")
 
@@ -100,13 +99,13 @@ knitr::include_graphics("images/schools.png")
 * Data Visualization of [Country Level Bans on Corporal Punishment](https://agrogan1.github.io/research/cpbans/)
 
 <aside>
-```{r}
+```{r, fig.cap="Spanking and young children's socioemotional development in low- and middle-income countries"}
 
 knitr::include_graphics("images/MICSglobe.png")
 
 ```
 
-```{r}
+```{r, fig.cap="Country Level Bans on Corporal Punishment"}
 
 knitr::include_graphics("images/cpbansglobe.png")
 
