@@ -1,5 +1,5 @@
 ---
-title: "Research on Parenting, and Statistical Materials"
+title: "Research on Parenting and Child Development, and Selected Statistical Materials"
 author:
   - name: Andy Grogan-Kaylor 
     url: https://agrogan1.github.io/
@@ -34,7 +34,7 @@ knitr::include_graphics("images/SSW.png")
 
 ```
 
-# My Background
+# About Me
 
 A little bit about [my background](./background.html)
 
