@@ -165,7 +165,7 @@ knitr::include_graphics("images/BayesianDoughnut.png")
 ```
 </aside>
 
-# Statistical Visualizations
+# Statistical Tutorials and Visualizations
 
 * [t-Test](https://agrogan.shinyapps.io/shiny-t-test/)
 * [Correlation](https://agrogan.shinyapps.io/correlation_demo/)
@@ -197,8 +197,11 @@ knitr::include_graphics("images/chartgrid.png")
 
 Andrew Grogan-Kaylor
 
-* [https://umich.edu/~agrogan](https://umich.edu/~agrogan) 
-* [agrogan@umich.edu](agrogan@umich.edu)
+* **Email:** [agrogan@umich.edu](agrogan@umich.edu)
+* **GitHub**: [https://agrogan1.github.io/](https://agrogan1.github.io/)
+* **ResearchGate**:  [https://www.researchgate.net/profile/Andrew_Grogan-Kaylor](https://www.researchgate.net/profile/Andrew_Grogan-Kaylor)
+* **Google Scholar**:  [https://scholar.google.com/citations?user=iLvsGzgAAAAJ&hl=en](https://scholar.google.com/citations?user=iLvsGzgAAAAJ&hl=en)
+* **ORCID** <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">[https://orcid.org/0000-0003-0065-9991](https://orcid.org/0000-0003-0065-9991)
 
 
 
