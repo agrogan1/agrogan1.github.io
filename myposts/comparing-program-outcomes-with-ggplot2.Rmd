@@ -3,6 +3,17 @@ title: 'Telling Stories With Data: Comparing Program Outcomes with ggplot2'
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
+  tint::tintPdf:
+    highlight: haddock
+    number_sections: yes
+    toc: yes
+  pdf_document: 
+    fig_caption: yes
+    fig_height: 2
+    highlight: haddock
+    latex_engine: xelatex
+    number_sections: yes
+    toc: yes
   html_document:
     fig_height: 2
     highlight: haddock
@@ -14,17 +25,6 @@ output:
     toc_float:
       collapsed: yes
       smooth_scroll: yes
-  pdf_document: 
-    fig_caption: yes
-    fig_height: 2
-    highlight: haddock
-    latex_engine: xelatex
-    number_sections: yes
-    toc: yes
-  tint::tintPdf:
-    highlight: haddock
-    number_sections: yes
-    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -39,6 +39,8 @@ library(knitr)
 library(pander)
 
 library(DT)
+
+library(patchwork)
 
 ```
 
@@ -122,7 +124,14 @@ Now that we have devoted *a lot of code* to setting up the *grammar* of the grap
 
 myplot1 + 
   stat_summary(fun.y = "mean", # summarize at mean
-               geom = "bar") # bar geometry
+               geom = "bar") + # bar geometry 
+  labs(title = "Bar Chart")
+
+```
+
+```{r, echo=FALSE}
+
+p1 <- last_plot()
 
 ```
 
@@ -133,7 +142,14 @@ myplot1 +
 myplot1 + 
   stat_summary(fun.y = "mean", # summarize at mean
                geom = "bar") + # bar geometry 
-  coord_flip() # flip coordinates
+  coord_flip() + # flip coordinates
+  labs(title = "Horizontal Bar Chart")
+
+```
+
+```{r, echo=FALSE}
+
+p2 <- last_plot()
 
 ```
 
@@ -143,7 +159,14 @@ myplot1 +
 
 myplot1 + 
   stat_summary(fun.y = "mean", # summarize at mean
-               geom = "point", size = 5) # point geometry
+               geom = "point", size = 5) + # point geometry
+  labs(title = "Point Chart")
+
+```
+
+```{r, echo=FALSE}
+
+p3 <- last_plot()
 
 ```
 
@@ -160,7 +183,14 @@ myplot1 +
   geom_segment(aes(x = program, # x starts at
                    xend = program, # x ends at
                    y = 0, # y starts at
-                   yend = mean(mental_health_T2))) # y ends at
+                   yend = mean(mental_health_T2))) + # y ends at
+  labs(title = "Lollipop Chart")
+
+```
+
+```{r, echo=FALSE}
+
+p4 <- last_plot()
 
 ```
 
@@ -174,7 +204,14 @@ myplot1 +
   stat_summary(aes(group = 1), # line geom needs group aesthetic  
                color = "black", # consistent color
                fun.y = "mean", 
-               geom = "line") 
+               geom = "line") +
+  labs(title = "Line Chart")
+
+```
+
+```{r, echo=FALSE}
+
+p5 <- last_plot()
 
 ```
 
@@ -186,25 +223,46 @@ Now that we have devoted *a lot of code* to setting up the *grammar* of the grap
 
 ```{r, fig.cap="Boxplot"}
 
-myplot1 + geom_boxplot(fill="white") # boxplot geometry
+myplot1 + geom_boxplot(fill="white") + # boxplot geometry
+  labs(title = "Boxplot")
 
 ```
 
-## Violin Plot
+```{r, echo=FALSE}
 
-```{r, fig.cap="Violin Plot"}
-
-myplot1 + geom_violin() # violinplot geometry
+p6 <- last_plot()
 
 ```
 
 \newpage
 
+## Violin Plot
+
+```{r, fig.cap="Violin Plot"}
+
+myplot1 + geom_violin() + # violinplot geometry
+  labs(title = "Violin Plot")
+
+```
+
+```{r, echo=FALSE}
+
+p7 <- last_plot()
+
+```
+
 ## Points
 
 ```{r, fig.cap="Points"}
 
-myplot1 + geom_point() # point geometry
+myplot1 + geom_point() + # point geometry
+  labs(title = "Points")
+
+```
+
+```{r, echo=FALSE}
+
+p8 <- last_plot()
 
 ```
 
@@ -212,7 +270,14 @@ myplot1 + geom_point() # point geometry
 
 ```{r, fig.cap="Jittered Points"}
 
-myplot1 + geom_jitter() # jittered point geometry
+myplot1 + geom_jitter() + # jittered point geometry
+  labs(title = "Jittered Points")
+
+```
+
+```{r, echo=FALSE}
+
+p9 <- last_plot()
 
 ```
 
@@ -222,7 +287,14 @@ myplot1 + geom_jitter() # jittered point geometry
 
 library(ggbeeswarm) # beeswarm geometry
 
-myplot1 + geom_beeswarm() # beeswarm geometry
+myplot1 + geom_beeswarm() + # beeswarm geometry
+  labs(title = "Beeswarm Plot")
+
+```
+
+```{r, echo=FALSE}
+
+p10 <- last_plot()
 
 ```
 
@@ -251,7 +323,14 @@ However, now that we have devoted *a lot of code* to setting up the *grammar* of
 
 ```{r, fig.cap="Histogram"}
 
-myplot2 + geom_histogram() # histogram geometry
+myplot2 + geom_histogram() + # histogram geometry
+  labs(title = "Histogram")
+
+```
+
+```{r, echo=FALSE}
+
+p11 <- last_plot()
 
 ```
 
@@ -259,7 +338,14 @@ myplot2 + geom_histogram() # histogram geometry
 
 ```{r, fig.cap="Density"}
 
-myplot2 + geom_density() # density geometry
+myplot2 + geom_density() + # density geometry
+  labs(title = "Density")
+
+```
+
+```{r, echo=FALSE}
+
+p12 <- last_plot()
 
 ```
 
@@ -290,7 +376,14 @@ And again, now that we have devoted a lot of code to setting up the *grammar* of
 ```{r, fig.cap="Histogram"}
 
 myplot3 + 
-  geom_histogram(alpha = .5) # histogram geometry (transparent)
+  geom_histogram(alpha = .5) + # histogram geometry (transparent)
+  labs(title="Histogram")
+
+```
+
+```{r, echo=FALSE}
+
+p13 <- last_plot()
 
 ```
 
@@ -299,6 +392,25 @@ myplot3 +
 ```{r, fig.cap="Density"}
 
 myplot3 + 
-  geom_density(alpha = .5) # density geometry (transparent)
+  geom_density(alpha = .5) + # density geometry (transparent)
+  labs(title = "Density")
 
 ```
+
+```{r, echo=FALSE}
+
+p14 <- last_plot()
+
+```
+
+
+```{r, eval=FALSE, echo=FALSE, fig.margin = FALSE}
+
+ptotal <- p1 + p2 + p3 + p4 + p5
+
+ptotal
+
+# ggsave("comparing-program-outcomes.png", ptotal)
+
+```
+
