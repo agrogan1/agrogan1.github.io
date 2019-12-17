@@ -2,10 +2,10 @@
 
 library(rmarkdown)
 
-# render first to update blog post data RData file
+# first render blog index to update blog post RData file
 
 render("./myposts/index.Rmd") 
 
-# render home page
+# then render home page
 
 render("index.Rmd")
