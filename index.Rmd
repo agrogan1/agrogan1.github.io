@@ -36,7 +36,8 @@ knitr::include_graphics("images/SSW.png")
 
 # About Me
 
-A little bit about [my background](./background.html)
+* A little bit about [my background](./background.html)
+* My [CV](https://ssw.umich.edu/sites/default/files/documents/faculty/cvs/agrogan_cv.pdf)
 
 # "Blog-ish" Posts 
 
