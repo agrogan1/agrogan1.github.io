@@ -182,7 +182,6 @@ knitr::include_graphics("images/BayesianDoughnut.png")
 * [How to Choose a Chart: A Visual Guide](https://agrogan1.github.io/dataviz/how-to-choose-a-chart/how-to-choose-a-chart-a-visual-guide.pdf). [[Extended Version](https://agrogan1.github.io/dataviz/how-to-choose-a-chart/how-to-choose-a-chart-v3.html)]
 * [Data Driven Report Demo](https://agrogan1.github.io/dataviz/data-driven-report-demo/)
 * [Variables and Visualization](https://agrogan1.github.io/dataviz/variables-and-visualization/variables-and-visualization.html#/)
-* [Graphing Change Over Time](https://agrogan1.github.io/dataviz/graphing-change-over-time/index.html) [[PDF](https://agrogan1.github.io/dataviz/graphing-change-over-time/index.pdf)]
 * Slides for a Lecture on [Data Visualization for Political Social Work](https://agrogan1.github.io/dataviz/political-social-work/)
 
 <aside>
@@ -192,6 +191,12 @@ knitr::include_graphics("images/chartgrid.png")
 
 ```
 </aside>
+
+## Telling Stories With Data
+
+* [Visualizing Disparities in a Continuous Risk Factor](https://agrogan1.github.io/myposts/visualizing-disparities.html) [[PDF](https://agrogan1.github.io/myposts/visualizing-disparities.pdf)]
+* [Comparing Program Outcomes With ggplot](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.html) [[PDF](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.pdf)]
+* [Graphing Change Over Time](https://agrogan1.github.io/dataviz/graphing-change-over-time/index.html) [[PDF](https://agrogan1.github.io/dataviz/graphing-change-over-time/index.pdf)]
 
 # Created By 
 
