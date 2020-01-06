@@ -155,8 +155,9 @@ knitr::include_graphics("images/cpbansglobe.png")
 
 # Bayesian Statistics
 
-* [Demonstration of Bayesian Ideas](https://agrogan.shinyapps.io/shinyBayes/)
+* [Thinking Through Bayesian Ideas](https://agrogan.shinyapps.io/Thinking-Through-Bayes/)
 * [Bayesian Calculations](https://agrogan1.github.io/Bayes/) [[Draft Interactive Version](https://agrogan.shinyapps.io/shinyBayes2/)]
+* Notes on [Accepting the Null ($H_0$) Hypothesis](https://agrogan1.github.io/Bayes/accepting-H0/accepting-H0.html)
 
 <aside>
 ```{r}

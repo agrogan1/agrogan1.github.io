@@ -20,7 +20,7 @@ output:
     number_sections: yes
     toc: yes
 geometry: margin=1.0in
-mainfont: Tw Cen MT
+mainfont: Futura
 fontsize: 12pt
 ---
 
