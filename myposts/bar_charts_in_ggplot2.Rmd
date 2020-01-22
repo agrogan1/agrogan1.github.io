@@ -1,10 +1,6 @@
 ---
 title: "Bar Charts in ggplot2"
-author:
-- affiliation: University of Michigan
-  affiliation_url: https://www.umich.edu
-  name: Andy Grogan-Kaylor
-  url: https://www.umich.edu/~agrogan
+author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
   html_document:
@@ -365,7 +361,7 @@ ggplot(mydata, # the data that I am using
 
 # More Examples
 
-More examples can be found [here](http://www-personal.umich.edu/~agrogan/how_to_choose_a_chart/how_to_choose_a_chart_v3.html)
+More examples can be found [here](https://agrogan1.github.io/dataviz/how-to-choose-a-chart/how-to-choose-a-chart-v3.html)
 
 
 
