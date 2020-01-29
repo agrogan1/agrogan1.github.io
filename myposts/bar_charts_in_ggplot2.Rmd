@@ -3,14 +3,6 @@ title: "Bar Charts in ggplot2"
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
-  html_document: 
-    fig_height: 3
-    highlight: haddock
-    number_sections: yes
-    toc: yes
-    toc_float:
-      collapsed: yes
-      smooth_scroll: yes
   pdf_document: 
     fig_height: 2
     highlight: haddock
@@ -18,6 +10,15 @@ output:
     number_sections: yes
     toc: yes
     toc_depth: 2
+  html_document: 
+    fig_height: 3
+    highlight: haddock
+    number_sections: yes
+    theme: default
+    toc: yes
+    toc_float:
+      collapsed: yes
+      smooth_scroll: yes
 mainfont: Tw Cen MT
 ---
 
@@ -39,6 +40,7 @@ knitr::opts_chunk$set(echo = TRUE,
     z-index: 2;
     color: black;
     background-color: grey;
+    border-color: blue;
 }
 </style>
 
@@ -335,16 +337,13 @@ ggplot(mydata, # the data that I am using
 
 library(ggplot2)
 
-library(viridis) # wonderful colors
-
 ggplot(mydata, # the data that I am using
        aes(x = 1, 
            fill = factor(x))) + 
   geom_bar() + # using bars to graph 
   coord_polar(theta = "y") + # polar coordinates 
-  scale_fill_viridis(discrete = TRUE,
-                     name = "x") + # name for legend
-  theme_void()
+  scale_fill_viridis_d(name = "x") + # beautiful colors; name for legend
+  theme_void() # get rid of distracting numbers
 
 ```
 
@@ -362,8 +361,7 @@ ggplot(mydata, # the data that I am using
        aes(x = x, # x is on the x axis
            fill = factor(x))) + # x is also a factor for fill
   geom_bar() + # using bars to graph 
-  scale_fill_viridis(discrete = TRUE,
-                     name = "x")
+  scale_fill_viridis_d(name = "x") # beautiful colors; name for legend
 
 ```
 
