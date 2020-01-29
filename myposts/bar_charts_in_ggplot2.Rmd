@@ -3,12 +3,10 @@ title: "Bar Charts in ggplot2"
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
-  html_document:
+  html_document: 
     fig_height: 3
     highlight: haddock
-    keep_md: no
     number_sections: yes
-    theme: default
     toc: yes
     toc_float:
       collapsed: yes
@@ -34,6 +32,16 @@ knitr::opts_chunk$set(echo = TRUE,
 
 # Background
 
+<style>
+.list-group-item.active, 
+.list-group-item.active:focus, 
+.list-group-item.active:hover {
+    z-index: 2;
+    color: black;
+    background-color: grey;
+}
+</style>
+
 While `ggplot2`, and the ideas of an underlying *"grammar of graphics"*, make some kinds of graphing easier, `ggplot2` can make other types of graphing more difficult. 
 
 One often tricky type of graph is the bar chart.  I have come to think that part of the difficulty with thinking about bar charts in `ggplot2` is that sometimes <span style="background-color: #FFFF00">**three very different types of bar charts look similar**</span>.
@@ -50,7 +58,7 @@ library(ggplot2)
 
 ggplot(data = NULL,
        aes(x = x)) + 
-  geom_bar(fill = "royalblue") +
+  geom_bar(fill = "blue") +
   ylab("what does y represent?") 
 
 ```
@@ -91,7 +99,7 @@ library(ggplot2)
 
 ggplot(mydata, # the data that I am using
        aes(x = x)) + # 'aesthetic' only includes x
-  geom_bar(fill = "royalblue") # using bars to graph
+  geom_bar(fill = "blue") # using bars to graph
 
 ```
 
@@ -119,7 +127,7 @@ Adding labels requires adding an extra geom, `geom_text`. We have to add a new, 
 
 ggplot(mydata, # the data that I am using
        aes(x = x)) + # 'aesthetic' only includes x
-  geom_bar(fill = "royalblue") + # using bars to graph
+  geom_bar(fill = "blue") + # using bars to graph
   geom_text(stat = "count", 
             aes(label = ..count.., # text of the label
                 y = ..count.. + .5), # location of the label
@@ -138,7 +146,7 @@ ggplot(mydata, # the data that I am using
            y = y)) + # and y
   stat_summary(fun.y = mean, # summarizing y 
                geom = "bar", # with bars
-               fill = "royalblue") +
+               fill = "blue") +
   labs(y = "average y")
 
 ```
@@ -155,7 +163,7 @@ ggplot(mydata, # the data that I am using
            group = 1)) + # add 'group'
    stat_summary(geom = "line", # with line
                 fun.y = mean,
-                color = "royalblue")
+                color = "blue")
 
 ```
 
@@ -190,7 +198,7 @@ ggplot(mydata, # the data that I am using
        aes(x = x, # 'aesthetic' includes x
            y = y)) + # and y
   geom_bar(stat = "identity", # use ACTUAL y for bar height
-           fill = "royalblue") 
+           fill = "blue") 
 
 ```
 
@@ -214,7 +222,7 @@ ggplot(mydata, # the data that I am using
        aes(x = x,
            y = y)) + # 'aesthetic' only includes x
   geom_bar(stat="identity", # use ACTUAL y for bar height
-           fill = "royalblue", # fill
+           fill = "blue", # fill
            color = "red", # outline
            alpha = .5) # transparency
 
@@ -252,7 +260,7 @@ ggplot(mydataREVISED, # the data that I am using
        aes(x = xREVISED, # 'aesthetic' includes x
            y = yREVISED)) + # and y
   geom_bar(stat = "identity", # use ACTUAL y for bar height
-           fill = "royalblue")
+           fill = "blue")
 
 ```
 
@@ -266,7 +274,7 @@ ggplot(mydataREVISED, # the data that I am using
        aes(x = xREVISED, # 'aesthetic' includes x
            y = yREVISED)) + # and y
   geom_line(stat = "identity", # use ACTUAL y for bar height
-           color = "royalblue")
+           color = "blue")
 
 ```
 
