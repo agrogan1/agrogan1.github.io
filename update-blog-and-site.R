@@ -1,4 +1,4 @@
-# blog update
+# update blog and site
 
 library(rmarkdown)
 
