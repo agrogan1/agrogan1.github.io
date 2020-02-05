@@ -3,13 +3,6 @@ title: "Bar Charts in ggplot2"
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
-  pdf_document: 
-    fig_height: 2
-    highlight: haddock
-    latex_engine: xelatex
-    number_sections: yes
-    toc: yes
-    toc_depth: 2
   html_document: 
     fig_height: 3
     highlight: haddock
@@ -19,6 +12,13 @@ output:
     toc_float:
       collapsed: yes
       smooth_scroll: yes
+  pdf_document: 
+    fig_height: 2
+    highlight: haddock
+    latex_engine: xelatex
+    number_sections: yes
+    toc: yes
+    toc_depth: 2
 mainfont: Tw Cen MT
 ---
 
@@ -42,6 +42,12 @@ knitr::opts_chunk$set(echo = TRUE,
     background-color: grey;
     border-color: blue;
 }
+blockquote { 
+    margin: 0 0 .85em;
+    padding: 0 15px;
+    opacity: 1.00;
+    border-left: 5px solid gold;
+}    
 </style>
 
 While `ggplot2`, and the ideas of an underlying *"grammar of graphics"*, make some kinds of graphing easier, `ggplot2` can make other types of graphing more difficult. 
@@ -138,6 +144,8 @@ ggplot(mydata, # the data that I am using
 ```
 
 # Bar charts where the <span style="background-color: #FFFF00">height of the bars is the **average value of the y variable** for that category</span>.
+
+> For this kind of bar chart, we need ask R to summarize the value of `y` for different categories of `x`. The syntax is--shall we say--not very intuitive, but does make sense.
 
 ```{r}
 
