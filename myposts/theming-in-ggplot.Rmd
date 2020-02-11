@@ -53,9 +53,18 @@ h1, h2 {
     background-color: navy;
 
 }
+blockquote {
+  background: #FFFFFF;
+  color: #000;
+  border-left: 5px solid #ffcb05;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
 </style>
 
-# Basic ggplot Graph
+# Get The Data
+
+> In the HTML version, click on the `code` buttons to see the code.
 
 ```{r}
 
@@ -63,11 +72,15 @@ data("iris") # famous iris flower data
 
 ```
 
+# Load The `ggplot` Library
+
 ```{r}
 
 library(ggplot2)
 
 ```
+
+# Basic ggplot Graph
 
 ```{r}
 
@@ -77,22 +90,32 @@ p0 <- ggplot(iris,
                  color = Species)) + # color is species
   geom_point() + # use points
   geom_smooth() + # use smoother
-  scale_color_viridis_d() + # viridis color palette
   labs(title = "Sepal Length by Petal Length",
        subtitle = "by Species",
        x = "Petal Length",
-       y = "Sepal Length") +
-  theme_minimal() # minimal "preset" theme
+       y = "Sepal Length") 
 
 p0 # replay
 
 ```
 
-# Theming Added
+# Add A Built-In Theme and Built-In Color Scheme
 
 ```{r}
 
 p0 + 
+    scale_color_viridis_d() + # viridis color palette
+    theme_minimal() # minimal "preset" theme
+
+```
+
+# Add More Modifications Using `theme()`
+
+```{r}
+
+p0 + 
+  scale_color_viridis_d() + # viridis color palette
+  theme_minimal() + # minimal "preset" theme 
   theme(plot.title = element_text(size = 20,), # larger title
         plot.subtitle = element_text(size = 18, # larger subtitle
                                      color = "grey"), # grey subtitle
