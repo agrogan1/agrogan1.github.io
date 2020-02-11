@@ -1,0 +1,74 @@
+---
+title: "Theming in ggplot"
+author:  Andy Grogan-Kaylor 
+date: "`r Sys.Date()`"
+output: 
+  html_document: 
+    fig_height: 3
+    highlight: haddock
+    number_sections: yes
+    theme: default
+    toc: yes
+    toc_float:
+      collapsed: yes
+      smooth_scroll: yes
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE,
+                      message = FALSE,
+                      warning = FALSE)
+
+```
+
+# Basic ggplot Graph
+
+```{r}
+
+data("iris") # famous iris flower data
+
+```
+
+```{r}
+
+library(ggplot2)
+
+```
+
+```{r}
+
+p0 <- ggplot(iris,
+             aes(x = Petal.Length, # x is petal length
+                 y = Sepal.Length, # y is sepal length
+                 color = Species)) + # color is species
+  geom_point() + # use points
+  geom_smooth() + # use smoother
+  scale_color_viridis_d() + # viridis color palette
+  labs(title = "Sepal Length by Petal Length",
+       subtitle = "by Species",
+       x = "Petal Length",
+       y = "Sepal Length") +
+  theme_minimal() # minimal "preset" theme
+
+p0 # replay
+
+```
+
+# Theming Added
+
+```{r}
+
+p0 + 
+  theme(plot.title = element_text(size = 20,), # larger title
+        plot.subtitle = element_text(size = 18, # larger subtitle
+                                     color = "grey"), # grey subtitle
+        axis.text.x = element_text(angle = -45), # rotate x axis labels
+        axis.text.y = element_text(angle = 45, # rotate y axis labels
+                                   color = "red")) # y axis label color
+
+
+
+```
+
+
