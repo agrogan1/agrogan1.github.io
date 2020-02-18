@@ -1,30 +1,23 @@
 ---
 title: "Bar Charts in ggplot With Multiple Outcomes"
-description: |
-  An abbreviated description.
-author:
-  - name: Andy Grogan-Kaylor 
-    url: https://www.umich.edu/~agrogan
-    affiliation: University of Michigan
-    affiliation_url: https://www.umich.edu
+author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
-citation_url: https://agrogan1.github.io/myposts/
 output:
-  html_document:
+  pdf_document: 
     fig_height: 3
     highlight: haddock
-    keep_md: no
+    latex_engine: xelatex
     number_sections: yes
-    theme: default
+    toc: yes
+  html_document:
+    css: UM.css
+    fig_height: 3
+    highlight: haddock
+    number_sections: yes
     toc: yes
     toc_float:
       collapsed: yes
       smooth_scroll: yes
-  radix::radix_article:
-    toc: true
-    number_sections: yes
-    toc_depth: 2
-    fig_height: 3
 ---
 
 ```{r setup, include=FALSE}
@@ -72,18 +65,34 @@ myReshapedData # replay myReshapedData
 
 ```
 
-# Graph
+# Graphs
+
+## Bar Chart With Unstacked Bars
 
 ```{r}
 
-ggplot(myReshapedData,
-       aes(x = x,
-           y = value,
-           fill = key)) +
-  geom_bar(stat = "identity",
-           position = position_dodge())
+ggplot(myReshapedData, # data I am using
+       aes(x = x, # x is x
+           y = value, # y is value
+           fill = key)) + # fill is key
+  geom_bar(stat = "identity", # stat is 'identity'
+           position = position_dodge()) # unstack bars
 
 ```
+
+## Line Chart
+
+```{r}
+
+ggplot(myReshapedData, # data I am using
+       aes(x = x, # x is x
+           y = value, # y is value
+           color = key, # color is key
+           group = key)) + # line needs a group aesthetic
+  geom_line()
+
+```
+
 
 
 

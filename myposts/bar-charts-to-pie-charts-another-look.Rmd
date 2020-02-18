@@ -3,9 +3,18 @@ title: "Bar Charts to Pie Charts: Another Look"
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
-  tint::tintPdf:
+  html_document: 
+    fig_height: 3
+    highlight: haddock
     number_sections: yes
+    theme: default
+    css: UM.css
+    code_folding: hide 
+    code_download: yes
     toc: yes
+    toc_float:
+      collapsed: yes
+      smooth_scroll: yes
   tufte::tufte_handout:
     number_sections: yes
     toc: yes
@@ -14,17 +23,9 @@ output:
     fig_height: 3
     number_sections: yes
     toc: yes
-  html_document: 
-    fig_height: 3
-    highlight: haddock
+  tint::tintPdf:
     number_sections: yes
-    theme: default
-    code_folding: hide 
-    code_download: yes
     toc: yes
-    toc_float:
-      collapsed: yes
-      smooth_scroll: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -35,38 +36,6 @@ knitr::opts_chunk$set(echo = TRUE,
                       fig.margin = TRUE)
 
 ```
-
-<style>
-h1, h2 {
-  color: navy;
-  font-family: "Helvetica", "Arial", sans-serif; 
-  font-weight: normal;
-}
-.list-group-item.active, 
-.list-group-item.active:focus, 
-.list-group-item.active:hover {
-    z-index: 2;
-    color: gold;
-    background-color: navy;
-    border-color: blue;
-}
-.nav-pills > li.active > a, .nav-pills > li.active > a:focus {
-    color: gold;
-    background-color: navy;
-}
-.nav-pills > li.active > a:hover {
-    color: gold;
-    background-color: navy;
-
-}
-blockquote {
-  background: #FFFFFF;
-  color: #000;
-  border-left: 5px solid #ffcb05;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-}
-</style>
 
 # Background
 
