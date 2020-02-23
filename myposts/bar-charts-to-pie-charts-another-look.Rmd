@@ -3,6 +3,9 @@ title: "Bar Charts to Pie Charts: Another Look"
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
+  tint::tintPdf:
+    number_sections: yes
+    toc: yes
   html_document: 
     fig_height: 3
     highlight: haddock
@@ -15,17 +18,14 @@ output:
     toc_float:
       collapsed: yes
       smooth_scroll: yes
-  tufte::tufte_handout:
-    number_sections: yes
-    toc: yes
-    latex_engine: xelatex
   pdf_document: 
     fig_height: 3
     number_sections: yes
     toc: yes
-  tint::tintPdf:
+  tufte::tufte_handout:
     number_sections: yes
     toc: yes
+    latex_engine: xelatex
 ---
 
 ```{r setup, include=FALSE}

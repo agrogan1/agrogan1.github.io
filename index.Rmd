@@ -159,7 +159,7 @@ knitr::include_graphics("images/cpbansglobe.png")
      + [PDF](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.pdf)
      + [epub](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.epub)
 * ["Michigan Graph Scheme" for Stata](https://agrogan1.github.io/Stata/)
-* [Better Graphing in Stata](https://agrogan1.github.io/Stata/stata-graphing/)
+* [Data Visualization With Stata](https://agrogan1.github.io/Stata/stata-graphing/)
 * [Miscellaneous Stata Programs](https://agrogan1.github.io/Stata/)
 
 # Bayesian Statistics
