@@ -1,0 +1,40 @@
+---
+title: "Updated Michigan Colors for R Graphs"
+author:
+  - name: Andy Grogan-Kaylor
+    url: https://www.umich.edu/~agrogan
+    affiliation: University of Michigan
+    affiliation_url: https://www.umich.edu
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r, echo=FALSE, fig.height=2}
+
+library(ggplot2)
+
+library(michigancolors)
+
+x <- seq(1,12)
+
+ggplot(data = NULL,
+       aes(xmin = x,
+           xmax = x + 1,
+           ymin = 0,
+           ymax = 1,
+           fill = factor(x),
+           y = 1)) +
+  geom_rect() +
+  scale_fill_manual(values = michigancolors()) +
+  theme_void() + # empty theme
+  theme(legend.position = "none",
+        axis.text = element_blank(),
+        axis.title = element_blank())
+
+```
+
+I've updated my *Demonstration of Michigan Colors for R Graphs* at:  [https://agrogan1.github.io/R/michigancolors-demo/michigancolors-demo.html](https://agrogan1.github.io/R/michigancolors-demo/michigancolors-demo.html)
