@@ -85,6 +85,7 @@ knitr::include_graphics("images/banner.png")
 ```
 </aside>
 
+
 <aside>
 ```{r, fig.cap="Data from High School and Beyond Study"}
 
