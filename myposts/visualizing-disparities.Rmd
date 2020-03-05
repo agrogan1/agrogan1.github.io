@@ -3,9 +3,15 @@ title: 'Telling Stories With Data: Visualizing Disparities in a Continuous Risk 
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
+  pdf_document: 
+    fig_height: 3
+    highlight: haddock
+    latex_engine: xelatex
+    number_sections: yes
+    toc: yes
   html_document:
     code_folding: hide
-    css: styles.css
+    css: UM.css
     fig_height: 3
     highlight: haddock
     number_sections: yes
@@ -13,12 +19,6 @@ output:
     toc_float:
       collapsed: no
       smooth_scroll: yes
-  pdf_document: 
-    fig_height: 3
-    highlight: haddock
-    latex_engine: xelatex
-    number_sections: yes
-    toc: yes
 geometry: margin=1.0in
 mainfont: Futura
 fontsize: 12pt
@@ -39,7 +39,7 @@ In this document, I am trying to think through some best practices in showing di
 
 > I am using the graphing library `ggplot`. As I often do, I am going to show the code. The code can be useful, especially if you are trying to replicate some of these graphs.  
 
-> <span style="background-color: #FFFF00">However, the discussion is intended to be more conceptual, and you do not need to understand the code to follow the discussion. Indeed, the discussion is intended to be applicable to a wide variety of data visualization tools, including those that do not rely on coding. </span>
+> <span style="background-color: cyan">However, the discussion is intended to be more conceptual, and you do not need to understand the code to follow the discussion. Indeed, the discussion is intended to be applicable to a wide variety of data visualization tools, including those that do not rely on coding. </span>
 
 I'm going to start by imagining that we have different groups of people.
 
@@ -106,7 +106,9 @@ And then I'm going to think about how I draw the information, which `ggplot` the
 
 ```{r, echo = FALSE, eval=TRUE, fig.cap="Two Philosophies"}
 
-library(cowplot) # arrange plots
+# library(cowplot) # arrange plots
+
+library(patchwork) # arrange plots
 
 myplot0 <- ggplot(data = mydata,
        aes(x = group, # x is the group
@@ -129,7 +131,9 @@ myplot1 <- ggplot(data = mydata,
   scale_color_manual(values = c("darkgrey", "red", "black")) +
   theme(legend.position = "none")
 
-plot_grid(myplot0, myplot1)
+# plot_grid(myplot0, myplot1)
+
+myplot0 + myplot1
 
 ```
 
@@ -233,7 +237,8 @@ mydata %>%
                    yend = mean_risk),
                size = 2) +
   ylim(0,160) + 
-  labs(title = "Mean Risk By Group") +
+  labs(title = "Mean Risk By Group",
+       y = "mean risk") +
   scale_fill_manual(values = c("grey", "red", "black")) +
   scale_color_manual(values = c("grey", "red", "black")) + 
   theme_minimal()
@@ -246,7 +251,7 @@ There are various geometries that make use of points to show the full range of t
 
 I think that bars may be the best if we wish to focus on differences in group *averages*.  However, there is something very intuitive about graphs where each individual person is represented by an individual point.
 
-Additionally, points give us a better idea of the exact nature of how risk is distributed, and the highest and lowest values of risk for each group.
+Additionally, points give us a better idea of the exact nature of how risk *is distributed*, and the highest and lowest values of risk for each group.
 
 ### Simple Points
 
@@ -347,8 +352,7 @@ library(dplyr) # data wrangling
 
 mydata %>% 
   group_by(group) %>% # group by group
-  # summarize by group
-  summarise(mean_risk = round(mean(risk), 
+  summarise(mean_risk = round(mean(risk), # summarize by group
                               digits = 1)) %>% 
   ggplot(aes(x = group, # x is group
              y = mean_risk, # y is mean risk
@@ -381,8 +385,7 @@ library(dplyr) # data wrangling
 
 mydata %>% 
   group_by(group) %>% # group by group
-  # summarize by group
-  summarise(mean_risk = round(mean(risk), 
+  summarise(mean_risk = round(mean(risk), # summarize by group
                               digits = 1)) %>% 
   ggplot(aes(x = group,
              y = mean_risk,
