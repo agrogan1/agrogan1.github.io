@@ -3,6 +3,17 @@ title: 'Telling Stories With Data: Comparing Program Outcomes with ggplot2'
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
+  tint::tintPdf:
+    highlight: haddock
+    number_sections: yes
+    toc: yes
+  pdf_document: 
+    fig_caption: yes
+    fig_height: 2
+    highlight: haddock
+    latex_engine: xelatex
+    number_sections: yes
+    toc: yes
   html_document:
     fig_height: 2
     highlight: haddock
@@ -14,17 +25,6 @@ output:
     toc_float:
       collapsed: yes
       smooth_scroll: yes
-  pdf_document: 
-    fig_caption: yes
-    fig_height: 2
-    highlight: haddock
-    latex_engine: xelatex
-    number_sections: yes
-    toc: yes
-  tint::tintPdf:
-    highlight: haddock
-    number_sections: yes
-    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -93,9 +93,9 @@ library(ggthemes) # beautiful themes
 
 # First Approach (x is program; y is mental health)
 
-There is *a lot of code* below. This is where we are setting up the *grammatical logic* of the graphing approach. 
+> There is *a lot of code* below. This is where we are setting up the *grammatical logic* of the graphing approach. 
 
-Devoting some time to setting up the initial logic of the plot will pay dividends in terms of exploring multiple geometries later on.
+> Devoting some time to setting up the initial logic of the plot will pay dividends in terms of exploring multiple geometries later on.
 
 > Note that I am adding optional `scale_...` and `theme...` arguments just to make the graphs look a little nicer, but these are not an essential part of the code.
 
@@ -300,7 +300,7 @@ p10 <- last_plot()
 
 # Second Approach (x is mental health; facet wrap on program)
 
-Again, there is a *lot of code* below. This is where we are setting up the *grammatical logic* of the graphing approach. 
+> Again, there is a *lot of code* below. This is where we are setting up the *grammatical logic* of the graphing approach. 
 
 ```{r, tidy=FALSE}
 
@@ -351,7 +351,7 @@ p12 <- last_plot()
 
 # Third Approach (x is mental health; transparent geometries)
 
-One last time, there is a *lot of code* below. This is where we are setting up the *grammatical logic* of the graphing approach. 
+> One last time, there is a *lot of code* below. This is where we are setting up the *grammatical logic* of the graphing approach. 
 
 ```{r, tidy = FALSE}
 
