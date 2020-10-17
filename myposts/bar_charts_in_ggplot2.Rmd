@@ -19,7 +19,11 @@ output:
     number_sections: yes
     toc: yes
     toc_depth: 2
-mainfont: Tw Cen MT
+  tint::tintPdf:
+    highlight: haddock
+    number_sections: yes
+    toc: yes
+mainfont: Futura
 ---
 
 ```{r setup, include=FALSE}
@@ -33,13 +37,14 @@ knitr::opts_chunk$set(echo = TRUE,
 
 # Background
 
-<style>
+```{css, echo=FALSE}
+
 .list-group-item.active, 
 .list-group-item.active:focus, 
 .list-group-item.active:hover {
     z-index: 2;
     color: black;
-    background-color: grey;
+    background-color: lightblue;
     border-color: blue;
 }
 blockquote { 
@@ -48,7 +53,9 @@ blockquote {
     opacity: 1.00;
     border-left: 5px solid gold;
 }    
-</style>
+
+```
+
 
 While `ggplot2`, and the ideas of an underlying *"grammar of graphics"*, make some kinds of graphing easier, `ggplot2` can make other types of graphing more difficult. 
 
@@ -67,7 +74,8 @@ library(ggplot2)
 ggplot(data = NULL,
        aes(x = x)) + 
   geom_bar(fill = "blue") +
-  ylab("what does y represent?") 
+  labs(title = "Many Bar Charts Look Similar",
+       y = "What does y represent?") 
 
 ```
 
@@ -198,7 +206,7 @@ This generates the following error message:
 
 The reason that we are getting this error is that, by default, `geom_bar()` is trying to **count up** the number of *x* values, and in **counting up** the number of *x* values, `geom_bar()` does not know what to do with the *y* value.
 
-So we change this...
+So we change this using `stat = "identity"` to indicate that *y* represents the *actual* height of the bars ...
 
 ```{r}
 
@@ -350,7 +358,7 @@ ggplot(mydata, # the data that I am using
            fill = factor(x))) + 
   geom_bar() + # using bars to graph 
   coord_polar(theta = "y") + # polar coordinates 
-  scale_fill_viridis_d(name = "x") + # beautiful colors; name for legend
+  scale_fill_viridis_d(name = "x") + # beautiful colors; named legend
   theme_void() # get rid of distracting numbers
 
 ```
@@ -369,7 +377,7 @@ ggplot(mydata, # the data that I am using
        aes(x = x, # x is on the x axis
            fill = factor(x))) + # x is also a factor for fill
   geom_bar() + # using bars to graph 
-  scale_fill_viridis_d(name = "x") # beautiful colors; name for legend
+  scale_fill_viridis_d(name = "x") # colors; named legend
 
 ```
 
