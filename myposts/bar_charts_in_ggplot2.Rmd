@@ -3,6 +3,15 @@ title: "Bar Charts in ggplot2"
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
+  tufte::tufte_handout:
+    toc: yes
+    number_sections: yes
+    latex_engine: xelatex
+  tint::tintPdf:
+    highlight: haddock
+    latex_engine: xelatex
+    number_sections: yes
+    toc: yes
   html_document: 
     fig_height: 3
     highlight: haddock
@@ -19,10 +28,6 @@ output:
     number_sections: yes
     toc: yes
     toc_depth: 2
-  tint::tintPdf:
-    highlight: haddock
-    number_sections: yes
-    toc: yes
 mainfont: Futura
 ---
 
