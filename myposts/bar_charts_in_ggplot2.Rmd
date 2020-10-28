@@ -3,15 +3,6 @@ title: "Bar Charts in ggplot2"
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
-  tufte::tufte_handout:
-    toc: yes
-    number_sections: yes
-    latex_engine: xelatex
-  tint::tintPdf:
-    highlight: haddock
-    latex_engine: xelatex
-    number_sections: yes
-    toc: yes
   html_document: 
     fig_height: 3
     highlight: haddock
@@ -21,6 +12,15 @@ output:
     toc_float:
       collapsed: yes
       smooth_scroll: yes
+  tint::tintPdf:
+    highlight: haddock
+    latex_engine: xelatex
+    number_sections: yes
+    toc: yes
+  tufte::tufte_handout:
+    toc: yes
+    number_sections: yes
+    latex_engine: xelatex
   pdf_document: 
     fig_height: 2
     highlight: haddock
@@ -28,7 +28,6 @@ output:
     number_sections: yes
     toc: yes
     toc_depth: 2
-mainfont: Futura
 ---
 
 ```{r setup, include=FALSE}
@@ -79,8 +78,9 @@ library(ggplot2)
 ggplot(data = NULL,
        aes(x = x)) + 
   geom_bar(fill = "blue") +
-  labs(title = "Many Bar Charts Look Similar",
-       y = "What does y represent?") 
+  labs(title = "Many Bar Charts Look The Same",
+       y = "What does y represent?",
+       caption = "Similar looking bar charts can represent different underlying 'data stories'.") 
 
 ```
 
@@ -167,7 +167,7 @@ library(ggplot2)
 ggplot(mydata, # the data that I am using
        aes(x = x, # 'aesthetic' includes x
            y = y)) + # and y
-  stat_summary(fun.y = mean, # summarizing y 
+  stat_summary(fun = mean, # summarizing y 
                geom = "bar", # with bars
                fill = "blue") +
   labs(y = "average y")
@@ -185,7 +185,7 @@ ggplot(mydata, # the data that I am using
            y = y,
            group = 1)) + # add 'group'
    stat_summary(geom = "line", # with line
-                fun.y = mean,
+                fun = mean,
                 color = "blue")
 
 ```
@@ -224,6 +224,21 @@ ggplot(mydata, # the data that I am using
            fill = "blue") 
 
 ```
+
+> Alternatively, we could use `geom_col()` whose default *stat* is *identity*.
+
+```{r}
+
+library(ggplot2)
+
+ggplot(mydata, # the data that I am using
+       aes(x = x, # 'aesthetic' includes x
+           y = y)) + # and y
+  geom_col(fill = "blue") # use ACTUAL y for bar height
+
+```
+
+# A Potential Problem
 
 If we go back and look at our data, we remember that we have some duplicate *x*'s, 
 
