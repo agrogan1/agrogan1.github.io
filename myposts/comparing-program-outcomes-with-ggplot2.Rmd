@@ -3,17 +3,10 @@ title: 'Telling Stories With Data: Comparing Program Outcomes with ggplot2'
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
-  html_document:
-    fig_height: 2
+  tint::tintPdf:
     highlight: haddock
-    keep_md: no
-    css: UM.css
     number_sections: yes
-    theme: default
     toc: yes
-    toc_float:
-      collapsed: yes
-      smooth_scroll: yes
   pdf_document: 
     fig_caption: yes
     fig_height: 2
@@ -21,10 +14,18 @@ output:
     latex_engine: xelatex
     number_sections: yes
     toc: yes
-  tint::tintPdf:
+  html_document:
+    fig_height: 2
     highlight: haddock
+    keep_md: no
+    css: UM.css
     number_sections: yes
+    theme: default
+    code_folding: hide
     toc: yes
+    toc_float:
+      collapsed: yes
+      smooth_scroll: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -51,6 +52,8 @@ library(patchwork)
 However, ggplot can be difficult to learn. I am thinking that one way to better understand `ggplot2` might be to see how this graphing library could be applied to a concrete example of comparing program outcomes. 
 
 > In this example, **program** is a *factor* and **outcome** is *numeric*.
+
+> In HTML versions of this document, you can see the code by clicking on the `code` buttons on the right hand side of the document.
 
 # Load the Simulated Social Service Agency Data
 
@@ -123,7 +126,7 @@ Now that we have devoted *a lot of code* to setting up the *grammar* of the grap
 ```{r, fig.cap="Bar Chart"}
 
 myplot1 + 
-  stat_summary(fun.y = "mean", # summarize at mean
+  stat_summary(fun = "mean", # summarize at mean
                geom = "bar") + # bar geometry 
   labs(title = "Bar Chart")
 
@@ -140,7 +143,7 @@ p1 <- last_plot()
 ```{r, fig.cap="Horizontal Bar Chart"}
 
 myplot1 + 
-  stat_summary(fun.y = "mean", # summarize at mean
+  stat_summary(fun = "mean", # summarize at mean
                geom = "bar") + # bar geometry 
   coord_flip() + # flip coordinates
   labs(title = "Horizontal Bar Chart")
@@ -158,7 +161,7 @@ p2 <- last_plot()
 ```{r, fig.cap="Point Chart"}
 
 myplot1 + 
-  stat_summary(fun.y = "mean", # summarize at mean
+  stat_summary(fun = "mean", # summarize at mean
                geom = "point", size = 5) + # point geometry
   labs(title = "Point Chart")
 
@@ -177,7 +180,7 @@ The segments connecting the x axis with the points, require their own `geom`etry
 ```{r, fig.cap="Lollipop Chart"}
 
 myplot1 + 
-  stat_summary(fun.y = "mean", 
+  stat_summary(fun = "mean", 
                geom = "point", 
                size = 5) +
   geom_segment(aes(x = program, # x starts at
@@ -203,7 +206,7 @@ An extra element of the `aes`thetic is required for lines.
 myplot1 + 
   stat_summary(aes(group = 1), # line geom needs group aesthetic  
                color = "black", # consistent color
-               fun.y = "mean", 
+               fun = "mean", 
                geom = "line") +
   labs(title = "Line Chart")
 
@@ -214,6 +217,8 @@ myplot1 +
 p5 <- last_plot()
 
 ```
+
+> A line chart is likely *not* an appropriate way to show these program outcomes as a line chart is more appropriate when the x axis represents some kind of *time trend*.
 
 # Add Geometries That Show the Distribution
 
@@ -234,7 +239,6 @@ p6 <- last_plot()
 
 ```
 
-\newpage
 
 ## Violin Plot
 
@@ -297,6 +301,8 @@ myplot1 + geom_beeswarm() + # beeswarm geometry
 p10 <- last_plot()
 
 ```
+
+\newpage
 
 # Second Approach (x is mental health; facet wrap on program)
 
