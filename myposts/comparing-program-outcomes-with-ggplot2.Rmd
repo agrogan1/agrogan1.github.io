@@ -21,7 +21,6 @@ output:
     css: UM.css
     number_sections: yes
     theme: default
-    code_folding: hide
     toc: yes
     toc_float:
       collapsed: yes
@@ -52,8 +51,6 @@ library(patchwork)
 However, ggplot can be difficult to learn. I am thinking that one way to better understand `ggplot2` might be to see how this graphing library could be applied to a concrete example of comparing program outcomes. 
 
 > In this example, **program** is a *factor* and **outcome** is *numeric*.
-
-> In HTML versions of this document, you can see the code by clicking on the `code` buttons on the right hand side of the document.
 
 # Load the Simulated Social Service Agency Data
 
