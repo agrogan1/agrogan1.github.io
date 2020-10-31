@@ -14,6 +14,10 @@ output:
     toc_float:
       collapsed: yes
       smooth_scroll: yes
+  tufte::tufte_handout:
+    toc: yes
+    number_sections: yes
+    latex_engine: xelatex
   pdf_document: 
     fig_caption: yes
     fig_height: 2
@@ -25,6 +29,7 @@ output:
     highlight: haddock
     number_sections: yes
     toc: yes
+mainfont: Futura
 ---
 
 ```{r setup, include=FALSE}
