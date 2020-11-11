@@ -67,7 +67,7 @@ Here are some key dimensions of slide formats:
 
 * *Two Dimensional Slideshows*: Right now *reveal.js* seems to be the only format that allows for 2D slideshows.
 
-* *CSS*: Another customization consideration. Can CSS be easily used?
+* *CSS*: Another customization consideration. Can CSS be easily used to customize the design of slides?
 
 * *Outline View*: Does the format have an outline view? This seems especially useful, again, for classes, and online lectures.
 
@@ -127,7 +127,7 @@ css <- c("difficult",
 outline_view <- c("yes",
                   "no",
                   "yes",
-                  "no")
+                  "yes, with xaringanExtra()")
 
 printing <- c("easy",
               "difficult",
@@ -182,7 +182,7 @@ datatable(slideformats,
 [xaringan](https://slides.yihui.name/xaringan/) is a new package that makes it easy to make nicely formatted slides. It is worth noting, however. that: 
 
 * `xaringan` makes use of `remark.js` to format slides, while other Rmarkdown formats use `pandoc`. `remark.js` implements most of the basic Rmarkdown syntax, but not all. Some features, such as *footnotes*, may not work as expected with `xaringan`.
-* `xaringan` uses `---` to separate slides, rather than using headings (`#`) as do other formats. Thus, `xaringan` may not work well in situations where you want to write the same RMarkdown file out to *multiple* formats, such as slides, HTML, PDF handouts, etc.  If you are going to also write your slides out to another format, such as PDF handouts, `slidy` may produce better results.
+* `xaringan` uses `---` to separate slides, while also using (`#`) to indicate headings. But `#` by itself does not indicate a new slide. Thus, `xaringan` may not work well in situations where you want to write the same RMarkdown file out to *multiple* formats, such as slides, HTML, PDF handouts, etc.  If you are going to also write your slides out to another format, such as PDF handouts, `slidy` may produce better results.
 
 
 
