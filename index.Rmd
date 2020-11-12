@@ -30,7 +30,7 @@ library(tibble) # tibbles
 
 ```{r, layout="l-screen"}
 
-knitr::include_graphics("images/SSW.png")
+knitr::include_graphics("images/forest.png")
 
 ```
 
@@ -208,10 +208,11 @@ knitr::include_graphics("images/chartgrid.png")
 * [Comparing Program Outcomes With ggplot](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.html) [[PDF](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.pdf)]
 * [Graphing Change Over Time](https://agrogan1.github.io/dataviz/graphing-change-over-time/index.html) [[PDF](https://agrogan1.github.io/dataviz/graphing-change-over-time/index.pdf)]
 
-# Created By 
+# Created By
 
 Andrew Grogan-Kaylor
 
+* **Web:** [https://www.umich.edu/~agrogan](https://www.umich.edu/~agrogan)
 * **Email:** [agrogan@umich.edu](agrogan@umich.edu)
 * **GitHub**: [https://agrogan1.github.io/](https://agrogan1.github.io/)
 * **ResearchGate**:  [https://www.researchgate.net/profile/Andrew_Grogan-Kaylor](https://www.researchgate.net/profile/Andrew_Grogan-Kaylor)
