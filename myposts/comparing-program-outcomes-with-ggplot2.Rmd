@@ -3,6 +3,10 @@ title: 'Telling Stories With Data: Comparing Program Outcomes with ggplot2'
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
+  tufte::tufte_handout:
+    toc: yes
+    number_sections: yes
+    latex_engine: xelatex
   html_document:
     fig_height: 2
     highlight: haddock
@@ -14,10 +18,6 @@ output:
     toc_float:
       collapsed: yes
       smooth_scroll: yes
-  tufte::tufte_handout:
-    toc: yes
-    number_sections: yes
-    latex_engine: xelatex
   pdf_document: 
     fig_caption: yes
     fig_height: 2
@@ -29,7 +29,7 @@ output:
     highlight: haddock
     number_sections: yes
     toc: yes
-mainfont: Futura
+mainfont: Tw Cen MT
 ---
 
 ```{r setup, include=FALSE}
