@@ -12,6 +12,9 @@ output:
     toc_float:
       collapsed: yes
       smooth_scroll: yes
+  distill::distill_article:
+    highlight: haddock
+    toc: yes
   pdf_document: 
     fig_height: 2
     highlight: haddock
@@ -19,10 +22,7 @@ output:
     number_sections: yes
     toc: yes
     toc_depth: 2
-  distill::distill_article:
-    highlight: haddock
-    toc: yes
-mainfont: Arial
+mainfont: Tw Cen MT
 ---
 
 ```{r setup, include=FALSE}
