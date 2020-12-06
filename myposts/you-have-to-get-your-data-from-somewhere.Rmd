@@ -3,7 +3,10 @@ title: "You Have To Get Your Data From Somewhere"
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
-  tint::tintPdf:
+  tufte::tufte_html: 
+    css: myTufteCSS.css
+    highlight: haddock
+    number_sections: yes
     toc: yes
   html_document:
     css: UM.css
@@ -14,16 +17,13 @@ output:
     toc_float:
       collapsed: yes
       smooth_scroll: yes
-  tufte::tufte_html: 
-    css: myTufteCSS.css
-    highlight: haddock
-    number_sections: yes
-    toc: yes
   tufte::tufte_handout:
     number_sections: yes
     toc: yes
   pdf_document:
     toc: no
+  tint::tintPdf:
+    toc: yes
 header-includes: \usepackage{xcolor}
 ---
 
@@ -42,19 +42,23 @@ options(htmltools.dir.version = FALSE)
 
 # You Have To Get Your Data From Somewhere
 
-> In learning R, as well as RMarkdown, one of the most difficult tasks seems to be understanding how to import data.
+In learning R, as well as RMarkdown, one of the most difficult tasks seems to be understanding how to import data.
 
-> Read your data into a dataset using the *right function* for the *right format* from the *correct location*.
+Read your data into a dataset using the *right function* for the *right format* from the *correct location*.
+
+Note that while learning the correct syntax is *very helpful*, RStudio can generate much of this syntax for you using the **File | Import Dataset | ...** menu.
 
 # Basic Idea
 
-`mydata`[^1] `<- function`[^2]`("path/to/`[^3]`file.extension`[^4]`")`
+`mydata`[^1] `<- function`[^2]`("path/to/`[^3]`file.extension`[^4]`")`[^tilde]
 
 [^1]: How R will refer to your data. R's *nickname* for your data.
 
 [^2]: The correct function for the type of data you are reading in, e.g. RData, CSV, Excel.
 
 [^3]: Where is your data located? The *directory path* to your data.
+
+[^tilde]: <mark>Sometimes, especially on a Mac, it is necessary to refer to your directory with a `~`, e.g. `~/downloads/project1.RData` or `~/project1/project1.RData`.</mark>
 
 [^4]: What is the *filename* of the file containing your data? Note that the extension often tells you *what kind* of data this is.
 
@@ -64,7 +68,7 @@ options(htmltools.dir.version = FALSE)
 
 ```{r, eval=FALSE}
 
-mydata <- load("/project1/mydata.RData") # load data in R format
+mydata <- load("/project1/mydata.RData") # load R format data
 
 ```
 
@@ -80,8 +84,8 @@ CSV stands for *comma separated values*, and is essentially a raw text format fo
 1320,28,"Female","Program B",89.17,107.48,42.0398163096771,-83.6793088312261
 1211,20,"Male","Program D",94.15,95.71,42.2673004816002,-83.8247411126595
 2293,20,"Female","Program D",85.38,105.09,42.300730845518,-83.7526918820329
-```
 
+```
 
 ```{r, eval=FALSE}
 
@@ -137,9 +141,9 @@ setwd("/project1") # set your working directory
 
 ```
 
-* Note that R uses a forward slash `/` to specify directory paths. R does not understand the use of a backward slash `\` to specify directories. R uses `~` to refer to the user's (usually your) home directory.
+* Note that R uses a forward slash `/` to specify directory paths. R does not understand the use of a backward slash `\` to specify directories. R uses `~` to refer to the user's (usually your) home directory. 
 * If you are working in RStudio, you can use the menu option *Session | Set Working Directory | Choose Directory* to choose a particular working directory.
-* If you double click on a `*.Rmd` file to start RStudio, R will assume that your working directory is the directory in which that `*.Rmd` file is located.
+* If you double click on a `*.Rmd` file to start RStudio, R will assume that your working directory is the directory in which that `*.Rmd` file is located. <mark>Thus, it is often a good idea to have your data and RMarkdown document saved in the same directory.</mark>
 
  
 
