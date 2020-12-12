@@ -13,15 +13,11 @@ output:
     keep_md: no
     number_sections: yes
     theme: default
+    css: UM.css
     toc: yes
     toc_float:
       collapsed: yes
       smooth_scroll: yes
-  radix::radix_article:
-    toc: true
-    number_sections: yes
-    toc_depth: 2
-    fig_height: 3
 citation_url: https://agrogan1.github.io/myposts/
 ---
 
