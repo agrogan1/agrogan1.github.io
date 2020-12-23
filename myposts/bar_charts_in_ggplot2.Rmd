@@ -43,7 +43,7 @@ knitr::opts_chunk$set(echo = TRUE,
 .list-group-item.active:hover {
     z-index: 2;
     color: black;
-    background-color: lightblue;
+    background-color: cyan;
     border-color: blue;
 }
 blockquote { 
@@ -52,6 +52,7 @@ blockquote {
     opacity: 1.00;
     border-left: 5px solid gold;
 }    
+
 
 ```
 
