@@ -105,7 +105,7 @@ knitr::include_graphics("images/logistic.png")
 
 # Research on Parenting
 
-My interests are in developing more knowledge about people, social problems, and potential interventions in order to reduce violence against children and improve child and family wellbeing. My current research focuses on parenting and child development across cultures and social contexts.
+My interests are in developing more knowledge about people, social problems, and potential interventions in order to reduce violence against children and improve child and family well-being. My current research focuses on parenting and child development across cultures and social contexts.
 
 * [Data Visualization](https://agrogan1.github.io/research/MICS1/) for "Spanking and young children's socioemotional development in low- and middle-income countries". *Child Trends News Service* has released a well done [video summarizing this research](https://youtu.be/8LYZ-UpR5wE).
 * [Meta-Analysis](https://agrogan1.github.io/research/cp/CP-meta.html) of Research on Corporal Punishment
