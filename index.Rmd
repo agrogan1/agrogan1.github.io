@@ -138,7 +138,7 @@ knitr::include_graphics("images/cpbansglobe.png")
      + [PDF](https://agrogan1.github.io/R/introduction-to-R/introduction-to-R.pdf) 
      + [epub](https://agrogan1.github.io/R/introduction-to-R/introduction-to-R.epub)
 * *Introduction to ggplot2*: 
-     + [HTML Web Book](https://agrogan1.github.io/R/introduction-to-ggplot2/introduction-to-ggplot2.pdf) 
+     + [HTML Web Book](https://agrogan1.github.io/R/introduction-to-ggplot2/introduction-to-ggplot2.html) 
      + [PDF](https://agrogan1.github.io/R/introduction-to-ggplot2/introduction-to-ggplot2.pdf)
      + [epub](https://agrogan1.github.io/R/introduction-to-ggplot2/introduction-to-ggplot2.epub)
 * University of Michigan colors for R Graphs: 
@@ -164,7 +164,7 @@ knitr::include_graphics("images/cpbansglobe.png")
      + [PDF](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.pdf)
      + [epub](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.epub)
 * ["Michigan Graph Scheme" for Stata](https://agrogan1.github.io/Stata/)
-* [Data Visualization With Stata](https://agrogan1.github.io/Stata/stata-graphing/)
+* [Data Visualization With Stata](https://agrogan1.github.io/newstuff/data-visualization-with-Stata/data-visualization-with-Stata-slidy.html)
 * [Miscellaneous Stata Programs](https://agrogan1.github.io/Stata/)
 
 # Bayesian Statistics
