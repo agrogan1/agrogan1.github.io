@@ -2,7 +2,7 @@
 
 library(rmarkdown)
 
-# first render blog index to update blog post RData file
+# first render blog index to update blog post .RData file
 
 render("./myposts/index.Rmd") 
 
