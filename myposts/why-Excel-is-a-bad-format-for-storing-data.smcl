@@ -1,0 +1,92 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\agrogan\Box Sync\Box Sync\GitHub\agrogan1.github.io\myposts\why-Excel-is-a-bad-format-for-storing-data.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}14 Jan 2021, 15:58:21
+{txt}
+{com}. //_1
+. display c(current_date)
+{res}14 Jan 2021
+{txt}
+{com}. //_2
+. display c(current_time)
+{res}15:58:21
+{txt}
+{com}. //_3
+. clear all
+{res}{txt}
+{com}. //_4
+. set obs 100 // 100 observations
+{txt}{p}
+number of observations (_N)  was 0,
+now 100
+{p_end}
+
+{com}. //_5
+. generate Q1 = runiformint(1,4) // randomly simulated Question 1
+{txt}
+{com}. //_6
+. label variable Q1 "How often do you feel happy?" // add variable label
+{txt}
+{com}. //_7
+. label define Likert1 1 "Never" 2 "Rarely" 3 "Sometimes" 4 "Often" // define value label
+{txt}
+{com}. //_8
+. label values Q1 Likert1 // add value label to Q1
+{txt}
+{com}. //_9
+. tabulate Q1
+
+  {txt}How often {c |}
+do you feel {c |}
+     happy? {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      Never {c |}{res}         20       20.00       20.00
+{txt}     Rarely {c |}{res}         24       24.00       44.00
+{txt}  Sometimes {c |}{res}         29       29.00       73.00
+{txt}      Often {c |}{res}         27       27.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        100      100.00
+{txt}
+{com}. //_10
+. graph bar, over(Q1) scheme(michigan)
+{res}{txt}
+{com}. //_11
+. graph export mybar1.png, width(500) replace
+{txt}(file mybar1.png written in PNG format)
+
+{com}. //_12
+. label variable Q1 // drop variable label
+{txt}
+{com}. //_13
+. label values Q1 // drop value label 
+{txt}
+{com}. //_14
+. tabulate Q1
+
+         {txt}Q1 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}         20       20.00       20.00
+{txt}          2 {c |}{res}         24       24.00       44.00
+{txt}          3 {c |}{res}         29       29.00       73.00
+{txt}          4 {c |}{res}         27       27.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        100      100.00
+{txt}
+{com}. //_15
+. graph bar, over(Q1) scheme(michigan)
+{res}{txt}
+{com}. //_16
+. graph export mybar2.png, width(500) replace
+{txt}(file mybar2.png written in PNG format)
+
+{com}. //_^
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\agrogan\Box Sync\Box Sync\GitHub\agrogan1.github.io\myposts\why-Excel-is-a-bad-format-for-storing-data.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}14 Jan 2021, 15:58:24
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

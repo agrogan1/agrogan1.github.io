@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+/* CSS for Markstat 2.0 using Pandoc 2.0 */
+body{padding:14px 28px;}
+body, table {font-family: Helvetica, Arial, Sans-serif; font-size: 14px;}
+h1, h2, h3, h4 {font-weight: normal; color: #3366cc}
+h1 {font-size: 200%;}
+h2 {font-size: 150%;}
+h3 {font-size: 120%;}
+h4 {font-size: 100%; font-weight:bold}
+img.center {display:block; margin-left:auto; margin-right:auto}
+.small{font-size:8pt;}
+a {color: black;}
+a:visited {color: #808080;}
+a.plain {text-decoration:none;}
+a.plain:hover {text-decoration:underline;}
+.em {font-weight:bold;}
+pre, code {font-family: "lucida console", monospace;}
+pre.stata {font-size:13px; line-height:13px;}
+pre {padding:8px; border:1px solid #c0c0c0; border-radius:8px; background-color:#fdfdfd;}
+code {color:#3366cc; background-color:#fafafa;}
+pre code { color:black; background-color:white}
+/* Added for Pandoc */
+figure > img, div.figure > img {display:block; margin:auto}
+figcaption, p.caption {text-align:center; font-weight:bold; color:#3366cc;}
+h1.title {text-align:center; margin-bottom:0}
+p.author, h2.author {font-style:italic; text-align:center;margin-top:4px;margin-bottom:0}
+p.date, h3.date {text-align:center;margin-top:4px; margin-bottom:0}
+/* Tables*/
+table { margin:auto; border-collapse:collapse; }
+table caption { margin-bottom:1ex;}
+th, td { padding:4px 6px;}
+thead tr:first-child th {border-top:1px solid black; padding-top:6px}
+thead tr:last-child  th {padding-bottom:6px}
+tbody tr:first-child td {border-top:1px solid black; padding-top:6px}
+tbody tr:last-child  td {padding-bottom:6px;}
+table tbody:last-child tr:last-child td {border-bottom:1px solid black;}
+</style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Andy Grogan-Kaylor" />
+  <title>Why Excel Is A Bad Format For Storing Data</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Why Excel Is A Bad Format For Storing Data</h1>
+<h2 class="author">Andy Grogan-Kaylor</h2>
+<h3 class="date">14 Jan 2021 15:58:21</h3>
+</div>
+<style>h1 {color: #00274C;} h2 {color: #2F65A7;} blockquote {border-left: 5px solid #ffcb05; margin: 1.5em 10px; padding: 0.5em 10px;} code {color: red;}</style>
+<h1 id="setup">Setup</h1>
+<pre class='stata'>. clear all
+</pre>
+<h1 id="simulate-data">Simulate Data</h1>
+<pre class='stata'>. set obs 100 // 100 observations
+number of observations (_N) was 0, now 100
+</pre>
+<pre class='stata'>. generate Q1 = runiformint(1,4) // randomly simulated Question 1
+</pre>
+<pre class='stata'>. label variable Q1 "How often do you feel happy?" // add variable label
+</pre>
+<pre class='stata'>. label define Likert1 1 "Never" 2 "Rarely" 3 "Sometimes" 4 "Often" // define value label
+</pre>
+<pre class='stata'>. label values Q1 Likert1 // add value label to Q1
+</pre>
+<h1 id="descriptive-statistics-and-bar-graph">Descriptive Statistics and Bar Graph</h1>
+<blockquote>
+<p>Notice how the descriptive statistics and graph are informative in that they contain information on the <em>variable name</em> and <em>value label</em>. These help us to get an intuitive sense of the information in the data.</p>
+</blockquote>
+<pre class='stata'>. tabulate Q1
+
+  How often │
+do you feel │
+     happy? │      Freq.     Percent        Cum.
+────────────┼───────────────────────────────────
+      Never │         20       20.00       20.00
+     Rarely │         24       24.00       44.00
+  Sometimes │         29       29.00       73.00
+      Often │         27       27.00      100.00
+────────────┼───────────────────────────────────
+      Total │        100      100.00
+</pre>
+<pre class='stata'>. graph bar, over(Q1) scheme(michigan)
+</pre>
+<pre class='stata'>. graph export mybar1.png, width(500) replace
+(file mybar1.png written in PNG format)
+</pre>
+<div class="figure">
+<img src="mybar1.png" alt="Bar Graph" />
+<p class="caption">Bar Graph</p>
+</div>
+<h1 id="now-simulate-removing-the-information-that-is-lost-when-saving-to-excel">Now Simulate Removing The Information That Is Lost When Saving to Excel</h1>
+<pre class='stata'>. label variable Q1 // drop variable label
+</pre>
+<pre class='stata'>. label values Q1 // drop value label 
+</pre>
+<h1 id="descriptive-statistics-and-bar-graph-1">Descriptive Statistics and Bar Graph</h1>
+<blockquote>
+<p>Notice how the descriptive statistics and graph are much less informative. The information on variable label and value label will have to be added back into the data when preparing a report for dissemination.</p>
+</blockquote>
+<pre class='stata'>. tabulate Q1
+
+         Q1 │      Freq.     Percent        Cum.
+────────────┼───────────────────────────────────
+          1 │         20       20.00       20.00
+          2 │         24       24.00       44.00
+          3 │         29       29.00       73.00
+          4 │         27       27.00      100.00
+────────────┼───────────────────────────────────
+      Total │        100      100.00
+</pre>
+<pre class='stata'>. graph bar, over(Q1) scheme(michigan)
+</pre>
+<pre class='stata'>. graph export mybar2.png, width(500) replace
+(file mybar2.png written in PNG format)
+</pre>
+<div class="figure">
+<img src="mybar2.png" alt="Bar Graph" />
+<p class="caption">Bar Graph</p>
+</div>
+</body>
+</html>
