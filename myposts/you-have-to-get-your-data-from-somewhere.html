@@ -12,7 +12,7 @@
 
 <meta name="author" content="Andy Grogan-Kaylor" />
 
-<meta name="date" content="2020-12-06" />
+<meta name="date" content="2021-02-04" />
 
 <title>You Have To Get Your Data From Somewhere</title>
 
@@ -239,6 +239,15 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
@@ -326,6 +335,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 
 
 
+
 <style type="text/css">body {background-color: white;}h1 {color: #333333;font-family: "Helvetica", "Arial", sans-serif; font-weight: bold;}h2, h3, h4 {color: black;font-family: "Helvetica", "Arial", sans-serif; font-weight: normal;}p {color: black;font-family: "Helvetica", "Arial", sans-serif; font-size: 100%;}ul {font-family: "Helvetica", "Arial", sans-serif; }ol {font-family: "Helvetica", "Arial", sans-serif; }</style>
 
 
@@ -340,21 +350,22 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 
 <h1 class="title toc-ignore">You Have To Get Your Data From Somewhere</h1>
 <h4 class="author">Andy Grogan-Kaylor</h4>
-<h4 class="date">2020-12-06</h4>
+<h4 class="date">2021-02-04</h4>
 
 
 <div id="TOC">
 <ul>
 <li><a href="#you-have-to-get-your-data-from-somewhere"><span class="toc-section-number">1</span> You Have To Get Your Data From Somewhere</a></li>
 <li><a href="#basic-idea"><span class="toc-section-number">2</span> Basic Idea</a></li>
-<li><a href="#examples"><span class="toc-section-number">3</span> Examples</a><ul>
-<li><a href="#data-already-in-r-format"><span class="toc-section-number">3.1</span> Data Already in R Format</a></li>
-<li><a href="#data-in-csv"><span class="toc-section-number">3.2</span> Data in CSV</a></li>
-<li><a href="#data-in-excel"><span class="toc-section-number">3.3</span> Data in Excel</a></li>
-<li><a href="#data-in-stata"><span class="toc-section-number">3.4</span> Data in Stata</a></li>
-<li><a href="#data-in-spss"><span class="toc-section-number">3.5</span> Data in SPSS</a></li>
+<li><a href="#setting-up-your-data-before-importing"><span class="toc-section-number">3</span> Setting Up Your Data Before Importing</a></li>
+<li><a href="#examples"><span class="toc-section-number">4</span> Examples</a><ul>
+<li><a href="#data-already-in-r-format"><span class="toc-section-number">4.1</span> Data Already in R Format</a></li>
+<li><a href="#data-in-csv"><span class="toc-section-number">4.2</span> Data in CSV</a></li>
+<li><a href="#data-in-excel"><span class="toc-section-number">4.3</span> Data in Excel</a></li>
+<li><a href="#data-in-stata"><span class="toc-section-number">4.4</span> Data in Stata</a></li>
+<li><a href="#data-in-spss"><span class="toc-section-number">4.5</span> Data in SPSS</a></li>
 </ul></li>
-<li><a href="#working-directory"><span class="toc-section-number">4</span> Working Directory</a></li>
+<li><a href="#working-directory"><span class="toc-section-number">5</span> Working Directory</a></li>
 </ul>
 </div>
 
@@ -368,14 +379,48 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <h1><span class="header-section-number">2</span> Basic Idea</h1>
 <p><code>mydata</code><label for="tufte-sn-1" class="margin-toggle sidenote-number">1</label><input type="checkbox" id="tufte-sn-1" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">1</span> How R will refer to your data. R’s <em>nickname</em> for your data.</span> <code>&lt;- function</code><label for="tufte-sn-2" class="margin-toggle sidenote-number">2</label><input type="checkbox" id="tufte-sn-2" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">2</span> The correct function for the type of data you are reading in, e.g. RData, CSV, Excel.</span><code>(&quot;path/to/</code><label for="tufte-sn-3" class="margin-toggle sidenote-number">3</label><input type="checkbox" id="tufte-sn-3" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">3</span> Where is your data located? The <em>directory path</em> to your data.</span><code>file.extension</code><label for="tufte-sn-4" class="margin-toggle sidenote-number">4</label><input type="checkbox" id="tufte-sn-4" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">4</span> What is the <em>filename</em> of the file containing your data? Note that the extension often tells you <em>what kind</em> of data this is.</span><code>&quot;)</code><label for="tufte-sn-5" class="margin-toggle sidenote-number">5</label><input type="checkbox" id="tufte-sn-5" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">5</span> <mark>Sometimes, especially on a Mac, it is necessary to refer to your directory with a <code>~</code>, e.g. <code>~/downloads/project1.RData</code> or <code>~/project1/project1.RData</code>.</mark></span></p>
 </div>
+<div id="setting-up-your-data-before-importing" class="section level1">
+<h1><span class="header-section-number">3</span> Setting Up Your Data Before Importing</h1>
+<p>Your data may already be set up in this way, but remember that any statistical or data visualization software is going to be happier with <strong>shorter column names</strong> like <em>happy</em>, rather than longer column names like <em>“Generally speaking, how happy would you say that you are on most days?”</em>.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">id</th>
+<th align="left">happy</th>
+<th align="left">income</th>
+<th align="left">neighborhood</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">12</td>
+<td align="left">12</td>
+<td align="left">12</td>
+<td align="left">12</td>
+</tr>
+<tr class="even">
+<td align="left">123</td>
+<td align="left">123</td>
+<td align="left">123</td>
+<td align="left">123</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div id="examples" class="section level1">
-<h1><span class="header-section-number">3</span> Examples</h1>
+<h1><span class="header-section-number">4</span> Examples</h1>
 <div id="data-already-in-r-format" class="section level2">
-<h2><span class="header-section-number">3.1</span> Data Already in R Format</h2>
+<h2><span class="header-section-number">4.1</span> Data Already in R Format</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>mydata &lt;-<span class="st"> </span><span class="kw">load</span>(<span class="st">&quot;/project1/mydata.RData&quot;</span>) <span class="co"># load R format data</span></span></code></pre></div>
 </div>
 <div id="data-in-csv" class="section level2">
-<h2><span class="header-section-number">3.2</span> Data in CSV</h2>
+<h2><span class="header-section-number">4.2</span> Data in CSV</h2>
 <p>CSV stands for <em>comma separated values</em>, and is essentially a raw text format for storing data. CSV is often an excellent format for exchanging data between programs. A few lines of <em>simulated data on clients</em> in CSV format are reproduced below.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="st">&quot;ID&quot;</span>,<span class="st">&quot;age&quot;</span>,<span class="st">&quot;gender&quot;</span>,<span class="st">&quot;program&quot;</span>,<span class="st">&quot;mental_health_T1&quot;</span>,<span class="st">&quot;mental_health_T2&quot;</span>,<span class="st">&quot;latitude&quot;</span>,<span class="st">&quot;longitude&quot;</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="dv">2941</span>,<span class="dv">32</span>,<span class="st">&quot;Male&quot;</span>,<span class="st">&quot;Program A&quot;</span>,<span class="fl">98.81</span>,<span class="fl">95.49</span>,<span class="fl">42.1108308238603</span>,<span class="op">-</span><span class="fl">83.6103627437424</span></span>
@@ -388,26 +433,26 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <span id="cb3-3"><a href="#cb3-3"></a>dataset &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;/project1/mydata.csv&quot;</span>)</span></code></pre></div>
 </div>
 <div id="data-in-excel" class="section level2">
-<h2><span class="header-section-number">3.3</span> Data in Excel</h2>
+<h2><span class="header-section-number">4.3</span> Data in Excel</h2>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">library</span>(readxl) <span class="co"># library to read Excel</span></span>
 <span id="cb4-2"><a href="#cb4-2"></a></span>
 <span id="cb4-3"><a href="#cb4-3"></a>dataset &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="st">&quot;/project1/mydata.xlsx&quot;</span>)</span></code></pre></div>
 </div>
 <div id="data-in-stata" class="section level2">
-<h2><span class="header-section-number">3.4</span> Data in Stata</h2>
+<h2><span class="header-section-number">4.4</span> Data in Stata</h2>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">library</span>(haven) <span class="co"># library to read other file formats</span></span>
 <span id="cb5-2"><a href="#cb5-2"></a></span>
 <span id="cb5-3"><a href="#cb5-3"></a>dataset &lt;-<span class="st"> </span><span class="kw">read_stata</span>(<span class="st">&quot;/project1/mydata.dta&quot;</span>)</span></code></pre></div>
 </div>
 <div id="data-in-spss" class="section level2">
-<h2><span class="header-section-number">3.5</span> Data in SPSS</h2>
+<h2><span class="header-section-number">4.5</span> Data in SPSS</h2>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">library</span>(haven) <span class="co"># library to read other file formats</span></span>
 <span id="cb6-2"><a href="#cb6-2"></a></span>
 <span id="cb6-3"><a href="#cb6-3"></a>dataset &lt;-<span class="st"> </span><span class="kw">read_sav</span>(<span class="st">&quot;/project1/mydata.sav&quot;</span>)</span></code></pre></div>
 </div>
 </div>
 <div id="working-directory" class="section level1">
-<h1><span class="header-section-number">4</span> Working Directory</h1>
+<h1><span class="header-section-number">5</span> Working Directory</h1>
 <p>R uses the concept of a <em>working directory</em> to know where to find files, and where to save files.</p>
 <p>If you do not specify a particular path to the data file that you are trying to import, R will assume that it is in your working directory.</p>
 <p>It is often helpful to simply set your working directory to a particular location and by default, files will be accessed from, and saved to, that directory e.g.:</p>

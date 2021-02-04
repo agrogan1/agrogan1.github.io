@@ -62,6 +62,16 @@ Note that while learning the correct syntax is *very helpful*, RStudio can gener
 
 [^4]: What is the *filename* of the file containing your data? Note that the extension often tells you *what kind* of data this is.
 
+# Setting Up Your Data Before Importing
+
+Your data may already be set up in this way, but remember that any statistical or data visualization software is going to be happier with **shorter column names** like *happy*, rather than longer column names like *"Generally speaking, how happy would you say that you are on most days?"*. 
+
+id          happy  income       neighborhood
+-------     ------ ----------   -------------
+     12     12        12        12
+    123     123       123       123
+      1     1          1        1
+
 # Examples
 
 ## Data Already in R Format
