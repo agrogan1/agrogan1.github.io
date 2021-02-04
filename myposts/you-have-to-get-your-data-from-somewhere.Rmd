@@ -72,7 +72,7 @@ id          happy  income       neighborhood
 
 ## Data Already in R Format
 
-```{r, eval=FALSE}
+```{r, eval=FALSE, echo=TRUE}
 
 mydata <- load("/project1/mydata.RData") # load R format data
 
@@ -82,7 +82,7 @@ mydata <- load("/project1/mydata.RData") # load R format data
 
 CSV stands for *comma separated values*, and is essentially a raw text format for storing data. CSV is often an excellent format for exchanging data between programs. A few lines of *simulated data on clients* in CSV format are reproduced below.
 
-```{r, eval=FALSE}
+```{r, eval=FALSE, echo=TRUE}
 
 "ID","age","gender","program","mental_health_T1","mental_health_T2","latitude","longitude"
 2941,32,"Male","Program A",98.81,95.49,42.1108308238603,-83.6103627437424
@@ -93,7 +93,7 @@ CSV stands for *comma separated values*, and is essentially a raw text format fo
 
 ```
 
-```{r, eval=FALSE}
+```{r, eval=FALSE, echo=TRUE}
 
 library(readr) # library to read CSV
 
@@ -103,7 +103,7 @@ dataset <- read_csv("/project1/mydata.csv")
 
 ## Data in Excel
 
-```{r, eval=FALSE}
+```{r, eval=FALSE, echo=TRUE}
 
 library(readxl) # library to read Excel
 
@@ -113,7 +113,7 @@ dataset <- read_excel("/project1/mydata.xlsx")
 
 ## Data in Stata
 
-```{r, eval=FALSE}
+```{r, eval=FALSE, echo=TRUE}
 
 library(haven) # library to read other file formats
 
@@ -123,7 +123,7 @@ dataset <- read_stata("/project1/mydata.dta")
 
 ## Data in SPSS
 
-```{r, eval=FALSE}
+```{r, eval=FALSE, echo=TRUE}
 
 library(haven) # library to read other file formats
 
