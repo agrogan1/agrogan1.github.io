@@ -3,20 +3,14 @@ title: "You Have To Get Your Data From Somewhere"
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
+  distill::distill_article:
+    highlight: haddock
+    toc: yes  
   tufte::tufte_html: 
     css: myTufteCSS.css
     highlight: haddock
     number_sections: yes
     toc: yes
-  html_document:
-    css: UM.css
-    fig_height: 3
-    highlight: haddock
-    number_sections: yes
-    toc: yes
-    toc_float:
-      collapsed: yes
-      smooth_scroll: yes
   tufte::tufte_handout:
     number_sections: yes
     toc: yes
@@ -49,6 +43,8 @@ Read your data into a dataset using the *right function* for the *right format* 
 Note that while learning the correct syntax is *very helpful*, RStudio can generate much of this syntax for you using the **File | Import Dataset | ...** menu.
 
 # Basic Idea
+
+> In web versions of this document, hover over the footnotes to see what different parts of this syntax do.
 
 `mydata`[^1] `<- function`[^2]`("path/to/`[^3]`file.extension`[^4]`")`[^tilde]
 
