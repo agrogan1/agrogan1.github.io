@@ -138,7 +138,7 @@ ggplot(mydata, # the data that I am using
 
 ## Add Labels
 
-Adding labels requires adding an extra geom, `geom_text`. We have to add a new, non-intuitive aesthetic to `geom_text` to tell it where the labels are located, and that they represent the count of observations in each category.
+Adding labels requires adding an extra geom, `geom_text`. We have to add a new, non-intuitive aesthetic to `geom_text` to tell it where the labels are located, and that they represent the count of observations in each category. This aesthetic uses the special variable `..count..` to tell us how many observations are in each category.
 
 ```{r}
 
@@ -149,6 +149,23 @@ ggplot(mydata, # the data that I am using
             aes(label = ..count.., # text of the label
                 y = ..count.. + .5), # location of the label
             size = 5) # size of the label
+
+```
+Alternatively, we could use `..prop..` to calculate and display proportions.
+
+```{r}
+
+ggplot(mydata, # the data that I am using
+       aes(x = x)) + # 'aesthetic' only includes x
+  geom_bar(aes(y = ..prop..),
+           stat = "count",
+           fill = "blue") + # using bars to graph
+  geom_text(aes(label = round(..prop.., digits = 2), # text of the label 
+                y = ..prop.. ), # location of the label
+            stat = "count", 
+            size = 5, # size of the label
+            vjust = -1) + # vertical justification
+  ylim(0, .7)
 
 ```
 
