@@ -151,6 +151,7 @@ ggplot(mydata, # the data that I am using
             size = 5) # size of the label
 
 ```
+
 Alternatively, we could use `..prop..` to calculate and display proportions.
 
 ```{r}
