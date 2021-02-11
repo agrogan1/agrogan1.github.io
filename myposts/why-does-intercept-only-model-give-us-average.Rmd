@@ -1,0 +1,121 @@
+---
+title: "Why Does An Intercept Only Model Give Us The Average?"
+author: "Andy Grogan-Kaylor"
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    highlight: haddock
+    toc: yes
+    code_folding: true
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+```{r}
+
+library(pander)
+
+library(ggplot2)
+
+```
+
+
+## Introduction
+
+In statistics classes, a question that sometimes comes up is: "Why does an intercept only model ($y = \beta_0 + e$) give us the average?
+
+In this post, we develop some intuitions to understand this issue, employing simulated data.
+
+> The formula used to construct this data is $y = \beta_0 + \beta_1 x + e$, where $\beta_0 = 0$ and $\beta_1 = 1$.
+
+```{r}
+
+N <- 100
+
+x <- rnorm(N, 100, 10)
+
+e <- rnorm(N, 0, 1)
+
+y <- x + e
+
+mydata <- tibble::tibble(x, e, y)
+
+pander(head(mydata), caption = "Sample of Simulated Data")
+
+```
+
+## A Graph
+
+```{r}
+
+ggplot(mydata,
+       aes(x = x,
+           y = y)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  ylim(0, 130) +
+  theme_minimal()
+
+```
+
+## A Regression *WITH* An Independent Variable
+
+It's worth remembering what a regression is trying to accomplish. Whether estimated via *OLS*, or *Maximum Likelihood*, a regression is--generally speaking--trying to find the line that best fits the data.
+
+We know how the data was constructed, $y = 0 + 1 * x + e$, and a regression *WITH* an independent variable captures this relationship well.
+
+```{r}
+
+myfit1 <- lm(y ~ x, data = mydata)
+
+pander(myfit1)
+
+```
+
+## A Regression *WITHOUT* An Independent Variable
+
+A regression *WITHOUT* an independent variable has a similar, but more difficult, task. This regression is trying to find a best fit to the data, with only a single constant parameter, $\beta_0$.
+
+The <span style="color: blue;">blue</span> line, the average, does the best job we can do of fitting a regression line with a single constant parameter, $\beta_0$. Any other constant line, e.g. the <span style="color: red;">red</span> line at 0, would not do such a good job of fitting the data.
+
+```{r}
+
+ggplot(mydata,
+       aes(x = x,
+           y = y)) +
+  geom_point() +
+  
+  geom_hline(yintercept = mean(y), color = "blue") +
+  geom_hline(yintercept = 0, color = "red") +
+  ylim(0, 130) +
+  theme_minimal()
+
+```
+We see this in the regression ...
+
+```{r}
+
+myfit2 <- lm(y ~ 1, data = mydata)
+
+pander(myfit2)
+
+```
+
+... which gives us the same value as the average.
+
+```{r}
+
+pander(mean(y))
+
+```
+
+
+
+
+
+
+
