@@ -24,7 +24,7 @@ library(ggplot2)
 ```
 
 
-## Introduction
+# Introduction
 
 In statistics classes, a question that sometimes comes up is: "Why does an intercept only model ($y = \beta_0 + e$) give us the average?
 
@@ -48,7 +48,7 @@ pander(head(mydata), caption = "Sample of Simulated Data")
 
 ```
 
-## A Graph
+# A Graph
 
 ```{r}
 
@@ -62,7 +62,7 @@ ggplot(mydata,
 
 ```
 
-## A Regression *WITH* An Independent Variable
+# A Regression *WITH* An Independent Variable
 
 It's worth remembering what a regression is trying to accomplish. Whether estimated via *OLS*, or *Maximum Likelihood*, a regression is--generally speaking--trying to find the line that best fits the data.
 
@@ -76,7 +76,7 @@ pander(myfit1)
 
 ```
 
-## A Regression *WITHOUT* An Independent Variable
+# A Regression *WITHOUT* An Independent Variable
 
 A regression *WITHOUT* an independent variable has a similar, but more difficult, task. This regression is trying to find a best fit to the data, with only a single constant parameter, $\beta_0$.
 
@@ -95,6 +95,8 @@ ggplot(mydata,
   theme_minimal()
 
 ```
+## Regression
+
 We see this in the regression ...
 
 ```{r}
@@ -104,6 +106,8 @@ myfit2 <- lm(y ~ 1, data = mydata)
 pander(myfit2)
 
 ```
+
+## Mean
 
 ... which gives us the same value as the average.
 
