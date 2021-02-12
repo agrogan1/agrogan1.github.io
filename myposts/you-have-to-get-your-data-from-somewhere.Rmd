@@ -3,21 +3,26 @@ title: "You Have To Get Your Data From Somewhere"
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
-  distill::distill_article:
-    highlight: haddock
-    toc: yes  
-  tufte::tufte_html: 
+  pdf_document:
+    toc: yes
+    number_sections: yes
+  tufte::tufte_html:
     css: myTufteCSS.css
     highlight: haddock
     number_sections: yes
     toc: yes
+  distill::distill_article:
+    highlight: haddock
+    toc: yes
+  tint::tintPdf:
+    toc: yes
   tufte::tufte_handout:
     number_sections: yes
     toc: yes
-  pdf_document:
-    toc: no
-  tint::tintPdf:
+  word_document:
     toc: yes
+    highlight: haddock
+    number_sections: yes
 header-includes: \usepackage{xcolor}
 ---
 
@@ -78,7 +83,7 @@ mydata <- load("/project1/mydata.RData") # load R format data
 
 ```
 
-## Data in CSV
+## Data in CSV Format
 
 CSV stands for *comma separated values*, and is essentially a raw text format for storing data. CSV is often an excellent format for exchanging data between programs. A few lines of *simulated data on clients* in CSV format are reproduced below.
 
@@ -97,17 +102,17 @@ CSV stands for *comma separated values*, and is essentially a raw text format fo
 
 library(readr) # library to read CSV
 
-dataset <- read_csv("/project1/mydata.csv")
+mydata <- read_csv("/project1/mydata.csv")
 
 ```
 
-## Data in Excel
+## Data in Excel Format
 
 ```{r, eval=FALSE, echo=TRUE}
 
 library(readxl) # library to read Excel
 
-dataset <- read_excel("/project1/mydata.xlsx")
+mydata <- read_excel("/project1/mydata.xlsx")
 
 ```
 
@@ -117,19 +122,42 @@ dataset <- read_excel("/project1/mydata.xlsx")
 
 library(haven) # library to read other file formats
 
-dataset <- read_stata("/project1/mydata.dta")
+mydata <- read_stata("/project1/mydata.dta")
 
 ```
 
-## Data in SPSS
+## Data in SPSS Format
 
 ```{r, eval=FALSE, echo=TRUE}
 
 library(haven) # library to read other file formats
 
-dataset <- read_sav("/project1/mydata.sav")
+mydata <- read_sav("/project1/mydata.sav")
 
 ```
+
+## Data in SAS Format
+
+```{r, eval=FALSE, echo=TRUE}
+
+library(haven) # library to read other file formats
+
+mydata <- read_sas("/project1/mydata.sas7bdat")
+
+```
+
+# Save Your Data in R Format
+
+Once your data has been imported into R, you may wish to save it to R format for future use.
+
+Alternatively, one of the advantages of R is that it can read data from so many formats. It may be that your data is consistently being updated by other members of your team. For example, members of your team may be constantly updating an Excel file with your data. In such cases, you may wish to keep a line in your script to always import the most recent version of your data from that other format.
+
+```{r, eval=FALSE, echo=TRUE}
+
+save(mydata, file = "mydata.RData")
+
+```
+
 
 # Working Directory
 
