@@ -15,6 +15,10 @@ geometry: margin=1 in
 # Simulate Data
 
     set obs 100 // 100 observations
+	
+	generate id = _n // id variable
+	
+	label variable id "id"
 
     generate Q1 = runiformint(1,4) // randomly simulated Question 1
 
@@ -24,11 +28,23 @@ geometry: margin=1 in
 	
     label values Q1 Likert1 // add value label to Q1
 
+# Describe The Data
+
+    describe
+	
+# List Out A Sample Of The Data
+
+    list in 1/10
+	
 # Descriptive Statistics and Bar Graph
 
 > Notice how the descriptive statistics and graph are informative in that they contain information on the *variable name* and *value label*. These help us to get an intuitive sense of the information in the data.
 
+## Descriptive Statistics
+
 	tabulate Q1
+
+## Bar Graph
 
     graph bar, over(Q1) scheme(michigan)
 	
@@ -46,8 +62,12 @@ geometry: margin=1 in
 
 > Notice how the descriptive statistics and graph are much less informative. The information on variable label and value label will have to be added back into the data when preparing a report for dissemination.
 
+## Descriptive Statistics
+
 	tabulate Q1
 
+## Bar Graph
+	
     graph bar, over(Q1) scheme(michigan)
 	
     graph export mybar2.png, width(500) replace
