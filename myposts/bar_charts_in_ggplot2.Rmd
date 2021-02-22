@@ -23,6 +23,7 @@ output:
     toc: yes
     toc_depth: 2
 mainfont: Tw Cen MT
+fontsize: 12pt
 ---
 
 ```{r setup, include=FALSE}
@@ -225,7 +226,20 @@ This generates the following error message:
 
 The reason that we are getting this error is that, by default, `geom_bar()` is trying to **count up** the number of *x* values, and in **counting up** the number of *x* values, `geom_bar()` does not know what to do with the *y* value.
 
-So we change this using `stat = "identity"` to indicate that *y* represents the *actual* height of the bars ...
+So we change this using a different *geometry*, `geom_col()`, whose default behavior is defined to fit this situation: y = height of bars.
+
+```{r}
+
+library(ggplot2)
+
+ggplot(mydata, # the data that I am using
+       aes(x = x, # 'aesthetic' includes x
+           y = y)) + # and y
+  geom_col(fill = "blue") # use ACTUAL y for bar height
+
+```
+
+Alternatively, we could also use `stat = "identity"` within `geom_bar()` to indicate that *y* represents the *actual* height of the bars ...
 
 ```{r}
 
@@ -236,19 +250,6 @@ ggplot(mydata, # the data that I am using
            y = y)) + # and y
   geom_bar(stat = "identity", # use ACTUAL y for bar height
            fill = "blue") 
-
-```
-
-> Alternatively, we could use `geom_col()` whose default *stat* is *identity*.
-
-```{r}
-
-library(ggplot2)
-
-ggplot(mydata, # the data that I am using
-       aes(x = x, # 'aesthetic' includes x
-           y = y)) + # and y
-  geom_col(fill = "blue") # use ACTUAL y for bar height
 
 ```
 
