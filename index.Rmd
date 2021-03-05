@@ -84,19 +84,14 @@ myHTMLfiles %>%
 knitr::include_graphics("images/banner.png")
 
 ```
-</aside>
 
-
-<aside>
-```{r, fig.cap="Data from High School and Beyond Study"}
+```{r, fig.cap="Data from High School and Beyond Study", eval=FALSE}
 
 knitr::include_graphics("images/schools.png")
 
 ```
-</aside>
 
-<aside>
-```{r, fig.cap="Logistic Regression"}
+```{r, fig.cap="Categorical Data Analysis"}
 
 knitr::include_graphics("images/logistic.png")
 
@@ -114,7 +109,13 @@ My interests are in developing more knowledge to reduce violence against childre
 * Data Visualization of [Country Level Bans on Corporal Punishment](https://agrogan1.github.io/research/cpbans/)
 
 <aside>
-```{r, fig.cap="Spanking and young children's socioemotional development in low- and middle-income countries"}
+```{r, fig.cap="Countries in MICS Data", eval=FALSE}
+
+knitr::include_graphics("images/NewMICSglobe.png")
+
+```
+
+```{r, fig.cap="Spanking and young children's socioemotional development in low- and middle-income countries", eval=FALSE}
 
 knitr::include_graphics("images/MICSglobe.png")
 
@@ -144,6 +145,15 @@ knitr::include_graphics("images/cpbansglobe.png")
 * University of Michigan colors for R Graphs: 
      + [web page](https://agrogan1.github.io/R/michigancolors-demo/michigancolors-demo.html) 
      + [R package](https://agrogan1.github.io/michigancolors/)
+     
+<aside>
+```{r, fig.cap="Michigan Color Scheme For R Graphs"}
+
+knitr::include_graphics("images/MichiganColorsR.png")
+
+```
+</aside>
+
 * *Two Page R*: 
      + [PDF](https://agrogan1.github.io/R/two-page-R/two-page-R.pdf)
 * *Two Page ggplot2*: 
@@ -176,7 +186,7 @@ knitr::include_graphics("images/cpbansglobe.png")
 <aside>
 ```{r}
 
-knitr::include_graphics("images/BayesianDoughnut.png")
+knitr::include_graphics("images/BayesianWaffle.png")
 
 ```
 </aside>
