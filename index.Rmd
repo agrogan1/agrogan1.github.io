@@ -184,7 +184,7 @@ knitr::include_graphics("images/MichiganColorsR.png")
 * Notes on [Accepting the Null ($H_0$) Hypothesis](https://agrogan1.github.io/Bayes/accepting-H0/accepting-H0.html)
 
 <aside>
-```{r}
+```{r, fig.cap="Thinking Through Bayesian Ideas"}
 
 knitr::include_graphics("images/BayesianWaffle.png")
 
@@ -212,7 +212,7 @@ knitr::include_graphics("images/BayesianWaffle.png")
 * Slides for a Lecture on [Data Visualization for Political Social Work](https://agrogan1.github.io/dataviz/political-social-work/)
 
 <aside>
-```{r}
+```{r, fig.cap="How To Choose A Chart"}
 
 knitr::include_graphics("images/chartgrid.png")
 
