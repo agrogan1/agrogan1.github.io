@@ -174,6 +174,15 @@ knitr::include_graphics("images/MichiganColorsR.png")
      + [PDF](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.pdf)
      + [epub](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.epub)
 * ["Michigan Graph Scheme" for Stata](https://agrogan1.github.io/Stata/)
+
+<aside>
+```{r, fig.cap="Michigan Color Scheme For Stata Graphs"}
+
+knitr::include_graphics("images/MichiganColorsStata.png")
+
+```
+</aside>
+
 * [Data Visualization With Stata](https://agrogan1.github.io/newstuff/data-visualization-with-Stata/data-visualization-with-Stata-slidy.html)
 * [Miscellaneous Stata Programs](https://agrogan1.github.io/Stata/)
 
