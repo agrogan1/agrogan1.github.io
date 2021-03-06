@@ -86,8 +86,8 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
   
   
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2021-03-02" />
-  <meta property="article:created" itemprop="dateCreated" content="2021-03-02" />
+  <meta property="article:published" itemprop="datePublished" content="2021-03-06" />
+  <meta property="article:created" itemprop="dateCreated" content="2021-03-06" />
   <meta name="article:author" content="Andy Grogan-Kaylor" />
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -103,7 +103,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Bar Charts in ggplot With Multiple Outcomes"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Andy Grogan-Kaylor"]}]}]},{"type":"character","attributes":{},"value":["2021-03-02"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article","tint::tintPdf","tufte::tufte_handout"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["highlight","toc"]}},"value":[{"type":"character","attributes":{},"value":["haddock"]},{"type":"logical","attributes":{},"value":[true]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["highlight","number_sections","toc"]}},"value":[{"type":"character","attributes":{},"value":["haddock"]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","number_sections","latex_engine"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["xelatex"]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Bar Charts in ggplot With Multiple Outcomes"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Andy Grogan-Kaylor"]}]}]},{"type":"character","attributes":{},"value":["2021-03-06"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article","tint::tintPdf","tufte::tufte_handout"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["highlight","toc"]}},"value":[{"type":"character","attributes":{},"value":["haddock"]},{"type":"logical","attributes":{},"value":[true]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["highlight","number_sections","toc"]}},"value":[{"type":"character","attributes":{},"value":["haddock"]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","number_sections","latex_engine"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["xelatex"]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2452,7 +2452,7 @@ distill-header .nav a {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Bar Charts in ggplot With Multiple Outcomes","authors":[{"author":"Andy Grogan-Kaylor","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-03-02T00:00:00.000-05:00","citationText":"Grogan-Kaylor, 2021"}
+{"title":"Bar Charts in ggplot With Multiple Outcomes","authors":[{"author":"Andy Grogan-Kaylor","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-03-06T00:00:00.000-05:00","citationText":"Grogan-Kaylor, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2472,7 +2472,7 @@ distill-header .nav a {
   
   Andy Grogan-Kaylor
   
-<br />2021-03-02
+<br />2021-03-06
 </div>
 
 <div class="d-article">
@@ -2523,9 +2523,9 @@ distill-header .nav a {
 <h1 id="reshape-data-with-pivot_longer">Reshape Data With <code>pivot_longer</code></h1>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class="va">myReshapedData</span> <span class="op">&lt;-</span> <span class="va">mydata</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span><span class="fl">2</span><span class="op">:</span><span class="fl">3</span>,
-                                          names_to <span class="op">=</span> <span class="st">&quot;newnames&quot;</span>, 
-                                          values_to <span class="op">=</span> <span class="st">&quot;newvalues&quot;</span><span class="op">)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="va">myReshapedData</span> <span class="op">&lt;-</span> <span class="va">mydata</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span><span class="fl">2</span><span class="op">:</span><span class="fl">3</span>, <span class="co"># values to pivot or reshape</span>
+                                          names_to <span class="op">=</span> <span class="st">&quot;newnames&quot;</span>, <span class="co"># names will be</span>
+                                          values_to <span class="op">=</span> <span class="st">&quot;newvalues&quot;</span><span class="op">)</span> <span class="co"># values will be</span>
 
 <span class="va">myReshapedData</span> <span class="co"># replay myReshapedData</span>
 </code></pre>

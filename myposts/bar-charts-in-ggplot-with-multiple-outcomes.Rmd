@@ -3,12 +3,12 @@ title: "Bar Charts in ggplot With Multiple Outcomes"
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
-  distill::distill_article:
-    highlight: haddock
-    toc: yes
   tint::tintPdf:
     highlight: haddock
     number_sections: yes
+    toc: yes
+  distill::distill_article:
+    highlight: haddock
     toc: yes
   tufte::tufte_handout:
     toc: yes
@@ -52,9 +52,9 @@ mydata # replay mydata
 
 ```{r}
 
-myReshapedData <- mydata %>% pivot_longer(2:3,
-                                          names_to = "newnames", 
-                                          values_to = "newvalues")
+myReshapedData <- mydata %>% pivot_longer(2:3, # values to pivot or reshape
+                                          names_to = "newnames", # names will be
+                                          values_to = "newvalues") # values will be
 
 myReshapedData # replay myReshapedData
 
