@@ -5,4 +5,4 @@ output:
   postcards::jolla
 ---
  
-We've published a new paper: Global Perspectives on Positive and Negative Parenting: A Bayesian Multilevel Analysis. More information on the paper can be found [here](https://agrogan1.github.io/research/Bayes3MICS/).
+We've published a new paper: "Global Perspectives on Positive and Negative Parenting: A Bayesian Multilevel Analysis". More information on the paper can be found [here](https://agrogan1.github.io/research/Bayes3MICS/).
