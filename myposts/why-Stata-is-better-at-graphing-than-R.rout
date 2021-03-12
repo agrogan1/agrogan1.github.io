@@ -1,0 +1,40 @@
+
+R version 4.0.3 (2020-10-10) -- "Bunny-Wunnies Freak Out"
+Copyright (C) 2020 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> #_1
+> library(readr) # library to import data
+>     
+> clients <- read_csv("clients.csv") # import data
+>     
+> library(ggplot2)
+>     
+> library(michigancolors)
+> 
+> ggplot(clients, # the data that I am using
++   aes(x = program, # 'aesthetic' includes x
++       y = mental_health_T2, # and y
++       fill = program)) + 
++   stat_summary(fun = mean, # summarizing y 
++                geom = "bar") + # with bars
++   scale_fill_manual(values = michigancolors()) +
++   theme(axis.text.x = element_text(size = rel(.3)))
+> #_2q
+> # ggsave("mybarR.png", width = 3, height = 3)
+> #_^
+> 
