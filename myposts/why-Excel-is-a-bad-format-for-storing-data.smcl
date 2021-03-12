@@ -1,0 +1,133 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\agrogan\Box Sync\Box Sync\GitHub\agrogan1.github.io\myposts\why-Excel-is-a-bad-format-for-storing-data.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}11 Mar 2021, 15:27:17
+{txt}
+{com}. //_1
+. display c(current_date)
+{res}11 Mar 2021
+{txt}
+{com}. //_2
+. display c(current_time)
+{res}15:27:17
+{txt}
+{com}. //_3
+. clear all
+{res}{txt}
+{com}. //_4
+. set obs 100 // 100 observations
+{txt}{p}
+number of observations (_N)  was 0,
+now 100
+{p_end}
+
+{com}. //_5
+. generate id = _n // id variable
+{txt}
+{com}. //_6
+. label variable id "id"
+{txt}
+{com}. //_7
+. generate Q1 = runiformint(1,4) // randomly simulated Question 1
+{txt}
+{com}. //_8
+. label variable Q1 "How often do you feel happy?" // add variable label
+{txt}
+{com}. //_9
+. label define Likert1 1 "Never" 2 "Rarely" 3 "Sometimes" 4 "Often" // define value label
+{txt}
+{com}. //_10
+. label values Q1 Likert1 // add value label to Q1
+{txt}
+{com}. //_11
+. describe
+
+{txt}Contains data
+  obs:{res}           100                          
+{txt} vars:{res}             2                          
+{txt}{hline}
+              storage   display    value
+variable name   type    format     label      variable label
+{hline}
+{p 0 48}{res}{bind:id             }{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}id{p_end}
+{p 0 48}{bind:Q1             }{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:Likert1  }{bind:  }{res}{res}How often do you feel happy?{p_end}
+{txt}{hline}
+Sorted by: 
+{res}     Note: Dataset has changed since last saved.
+{txt}
+{com}. //_12
+. list in 1/10
+{txt}
+     {c TLC}{hline 4}{c -}{hline 11}{c TRC}
+     {c |} {res}id          Q1 {txt}{c |}
+     {c LT}{hline 4}{c -}{hline 11}{c RT}
+  1. {c |} {res} 1      Rarely {txt}{c |}
+  2. {c |} {res} 2      Rarely {txt}{c |}
+  3. {c |} {res} 3       Never {txt}{c |}
+  4. {c |} {res} 4       Never {txt}{c |}
+  5. {c |} {res} 5       Often {txt}{c |}
+     {c LT}{hline 4}{c -}{hline 11}{c RT}
+  6. {c |} {res} 6      Rarely {txt}{c |}
+  7. {c |} {res} 7       Never {txt}{c |}
+  8. {c |} {res} 8      Rarely {txt}{c |}
+  9. {c |} {res} 9   Sometimes {txt}{c |}
+ 10. {c |} {res}10       Often {txt}{c |}
+     {c BLC}{hline 4}{c -}{hline 11}{c BRC}
+
+{com}. //_13
+. tabulate Q1
+
+  {txt}How often {c |}
+do you feel {c |}
+     happy? {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      Never {c |}{res}         27       27.00       27.00
+{txt}     Rarely {c |}{res}         26       26.00       53.00
+{txt}  Sometimes {c |}{res}         21       21.00       74.00
+{txt}      Often {c |}{res}         26       26.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        100      100.00
+{txt}
+{com}. //_14
+. graph bar, over(Q1) scheme(michigan)
+{res}{txt}
+{com}. //_15
+. graph export mybar1.png, width(500) replace
+{txt}(file mybar1.png written in PNG format)
+
+{com}. //_16
+. label variable Q1 // drop variable label
+{txt}
+{com}. //_17
+. label values Q1 // drop value label 
+{txt}
+{com}. //_18
+. tabulate Q1
+
+         {txt}Q1 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}         27       27.00       27.00
+{txt}          2 {c |}{res}         26       26.00       53.00
+{txt}          3 {c |}{res}         21       21.00       74.00
+{txt}          4 {c |}{res}         26       26.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        100      100.00
+{txt}
+{com}. //_19
+. graph bar, over(Q1) scheme(michigan)
+{res}{txt}
+{com}. //_20
+. graph export mybar2.png, width(500) replace
+{txt}(file mybar2.png written in PNG format)
+
+{com}. //_^
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\agrogan\Box Sync\Box Sync\GitHub\agrogan1.github.io\myposts\why-Excel-is-a-bad-format-for-storing-data.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}11 Mar 2021, 15:27:19
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
