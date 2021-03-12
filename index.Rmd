@@ -98,9 +98,9 @@ knitr::include_graphics("images/logistic.png")
 ```
 </aside>
 
-# Research on Parenting
+# Research on Parenting and Child Development
 
-My interests are in developing more knowledge to reduce violence against children and to improve child and family wellbeing. In this research I try to understand the family and community origins of aggression, antisocial behavior, anxiety and depression. My current research focuses on parenting and child development across cultures and social contexts. 
+My interests are in developing more knowledge to reduce violence against children and to improve child and family wellbeing. In this research I try to understand the family and community origins of aggression, antisocial behavior, anxiety and depression. My current research focuses on parenting and child development across cultures and social contexts. I try to understand these issues within the context of current conversations about children's rights.
 
 * ["Global Perspectives on Positive and Negative Parenting: A Bayesian Multilevel Analysis"](https://agrogan1.github.io/research/Bayes3MICS/).
 * [Data Visualization](https://agrogan1.github.io/research/MICS1/) for "Spanking and young children's socioemotional development in low- and middle-income countries". *Child Trends News Service* has released a well done [video summarizing this research](https://youtu.be/8LYZ-UpR5wE).
@@ -131,6 +131,25 @@ knitr::include_graphics("images/cpbansglobe.png")
 # Selected Collaborations
 
 * Work with [Performance Measurement Initiative](https://agrogan1.github.io/research/performance-measurement-initiative) at William Davidson Institute
+
+# Stata Materials
+
+* *Two Page Stata*: 
+     + [HTML](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.html) 
+     + [PDF](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.pdf)
+     + [epub](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.epub)
+* ["Michigan Graph Scheme" for Stata](https://agrogan1.github.io/Stata/)
+
+<aside>
+```{r, fig.cap="Michigan Color Scheme For Stata Graphs"}
+
+knitr::include_graphics("images/MichiganColorsStata.png")
+
+```
+</aside>
+
+* [Data Visualization With Stata](https://agrogan1.github.io/newstuff/data-visualization-with-Stata/data-visualization-with-Stata-slidy.html)
+* [Miscellaneous Stata Programs](https://agrogan1.github.io/Stata/)
 
 # R Materials
 
@@ -167,24 +186,6 @@ knitr::include_graphics("images/MichiganColorsR.png")
 * *Working With Data From the World Bank Indicators*
      + [HTML](https://agrogan1.github.io/R/wbdemo/)
      
-# Stata Materials
-
-* *Two Page Stata*: 
-     + [HTML](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.html) 
-     + [PDF](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.pdf)
-     + [epub](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.epub)
-* ["Michigan Graph Scheme" for Stata](https://agrogan1.github.io/Stata/)
-
-<aside>
-```{r, fig.cap="Michigan Color Scheme For Stata Graphs"}
-
-knitr::include_graphics("images/MichiganColorsStata.png")
-
-```
-</aside>
-
-* [Data Visualization With Stata](https://agrogan1.github.io/newstuff/data-visualization-with-Stata/data-visualization-with-Stata-slidy.html)
-* [Miscellaneous Stata Programs](https://agrogan1.github.io/Stata/)
 
 # Bayesian Statistics
 
