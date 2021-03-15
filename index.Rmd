@@ -85,9 +85,9 @@ knitr::include_graphics("images/banner.png")
 
 ```
 
-```{r, fig.cap="Data from High School and Beyond Study", eval=FALSE}
+```{r, fig.cap="Multilevel Modeling", eval=TRUE}
 
-knitr::include_graphics("images/schools.png")
+knitr::include_graphics("images/MLM.png")
 
 ```
 
@@ -109,7 +109,7 @@ My interests are in developing more knowledge to reduce violence against childre
 * Data Visualization of [Country Level Bans on Corporal Punishment](https://agrogan1.github.io/research/cpbans/)
 
 <aside>
-```{r, fig.cap="Countries in MICS Data", eval=FALSE}
+```{r, fig.cap="Countries in MICS Data", eval=TRUE}
 
 knitr::include_graphics("images/NewMICSglobe.png")
 
