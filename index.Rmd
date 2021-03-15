@@ -75,10 +75,13 @@ myHTMLfiles %>%
 # Selected Courses
 
 * [Data Visualization](https://agrogan1.github.io/dataviz/dataviz-course)
+
 * [Multilevel and Longitudinal Modeling](https://agrogan1.github.io/multilevel/)
+
 * [Categorical Data Analysis](https://agrogan1.github.io/newstuff/categorical/)
 
 <aside>
+
 ```{r, fig.cap="Data Visualization"}
 
 knitr::include_graphics("images/banner.png")
@@ -87,7 +90,7 @@ knitr::include_graphics("images/banner.png")
 
 ```{r, fig.cap="Multilevel Modeling", eval=TRUE}
 
-knitr::include_graphics("images/MLM.png")
+knitr::include_graphics("images/schools.png")
 
 ```
 
