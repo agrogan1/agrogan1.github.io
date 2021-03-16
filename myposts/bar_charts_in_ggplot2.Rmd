@@ -3,16 +3,6 @@ title: "Bar Charts in ggplot2"
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
-  pdf_document: 
-    fig_height: 2
-    highlight: haddock
-    latex_engine: xelatex
-    number_sections: yes
-    toc: yes
-    toc_depth: 2
-  distill::distill_article:
-    highlight: haddock
-    toc: yes
   html_document: 
     fig_height: 3
     highlight: haddock
@@ -22,7 +12,16 @@ output:
     toc_float:
       collapsed: yes
       smooth_scroll: yes
-mainfont: Tw Cen MT
+  distill::distill_article:
+    highlight: haddock
+    toc: yes
+  pdf_document: 
+    fig_height: 3
+    highlight: haddock
+    latex_engine: xelatex
+    number_sections: yes
+    toc: yes
+    toc_depth: 2
 fontsize: 12pt
 ---
 
@@ -44,7 +43,7 @@ knitr::opts_chunk$set(echo = TRUE,
 .list-group-item.active:hover {
     z-index: 2;
     color: black;
-    background-color: cyan;
+    background-color: #00BFFF;
     border-color: blue;
 }
 blockquote { 
