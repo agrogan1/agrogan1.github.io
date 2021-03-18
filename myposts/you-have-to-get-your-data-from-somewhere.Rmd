@@ -28,8 +28,6 @@ header-includes: \usepackage{xcolor}
 
 ```{r setup, include=FALSE}
 
-library(tint)
-
 # invalidate cache when the package version changes
 
 knitr::opts_chunk$set(tidy = FALSE, 
@@ -37,6 +35,18 @@ knitr::opts_chunk$set(tidy = FALSE,
 
 options(htmltools.dir.version = FALSE)
 
+library(tint)
+
+```
+
+```{css, echo=FALSE}
+
+d-article blockquote {
+  color: black;
+  border-left: 2px solid gold; 
+  padding: 0.5em 10px;
+  }
+  
 ```
 
 # You Have To Get Your Data From Somewhere
@@ -46,6 +56,10 @@ In learning R, as well as RMarkdown, one of the most difficult tasks seems to be
 Read your data into a dataset using the *right function* for the *right format* from the *correct location*.
 
 Note that while learning the correct syntax is *very helpful*, RStudio can generate much of this syntax for you using the **File | Import Dataset | ...** menu.
+
+# RMarkdown
+
+> Note that--in particular--each RMarkdown document needs to have a line, or lines, of code that import the data file for that individual RMarkdown document.
 
 # Basic Idea
 
