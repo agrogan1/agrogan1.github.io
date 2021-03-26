@@ -3,10 +3,6 @@ title: 'Telling Stories With Data: Comparing Program Outcomes with ggplot2'
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
-  tufte::tufte_handout:
-    toc: yes
-    number_sections: yes
-    latex_engine: xelatex
   html_document:
     fig_height: 2
     highlight: haddock
@@ -18,6 +14,10 @@ output:
     toc_float:
       collapsed: yes
       smooth_scroll: yes
+  tufte::tufte_handout:
+    toc: yes
+    number_sections: yes
+    latex_engine: xelatex
   pdf_document: 
     fig_caption: yes
     fig_height: 2
@@ -231,7 +231,8 @@ Now that we have devoted *a lot of code* to setting up the *grammar* of the grap
 
 ```{r, fig.cap="Boxplot"}
 
-myplot1 + geom_boxplot(fill="white") + # boxplot geometry
+myplot1 + 
+  geom_boxplot(fill="white") + # boxplot geometry
   labs(title = "Boxplot")
 
 ```
@@ -247,7 +248,8 @@ p6 <- last_plot()
 
 ```{r, fig.cap="Violin Plot"}
 
-myplot1 + geom_violin() + # violinplot geometry
+myplot1 + 
+  geom_violin() + # violinplot geometry
   labs(title = "Violin Plot")
 
 ```
@@ -262,7 +264,8 @@ p7 <- last_plot()
 
 ```{r, fig.cap="Points"}
 
-myplot1 + geom_point() + # point geometry
+myplot1 + 
+  geom_point() + # point geometry
   labs(title = "Points")
 
 ```
@@ -277,7 +280,8 @@ p8 <- last_plot()
 
 ```{r, fig.cap="Jittered Points"}
 
-myplot1 + geom_jitter() + # jittered point geometry
+myplot1 + 
+  geom_jitter() + # jittered point geometry
   labs(title = "Jittered Points")
 
 ```
@@ -294,7 +298,8 @@ p9 <- last_plot()
 
 library(ggbeeswarm) # beeswarm geometry
 
-myplot1 + geom_beeswarm() + # beeswarm geometry
+myplot1 + 
+  geom_beeswarm() + # beeswarm geometry
   labs(title = "Beeswarm Plot")
 
 ```
@@ -302,6 +307,18 @@ myplot1 + geom_beeswarm() + # beeswarm geometry
 ```{r, echo=FALSE}
 
 p10 <- last_plot()
+
+```
+
+## Dotplots
+
+```{r, fig.cap="Dotplot"}
+
+library(ggdist) # dotplot geometry
+
+myplot1 +
+  stat_dots() + # dotplot geometry
+  labs(title = "Dotlot")
 
 ```
 
@@ -332,7 +349,8 @@ However, now that we have devoted *a lot of code* to setting up the *grammar* of
 
 ```{r, fig.cap="Histogram"}
 
-myplot2 + geom_histogram() + # histogram geometry
+myplot2 + 
+  geom_histogram() + # histogram geometry
   labs(title = "Histogram")
 
 ```
@@ -347,7 +365,8 @@ p11 <- last_plot()
 
 ```{r, fig.cap="Density"}
 
-myplot2 + geom_density() + # density geometry
+myplot2 + 
+  geom_density() + # density geometry
   labs(title = "Density")
 
 ```
@@ -357,6 +376,7 @@ myplot2 + geom_density() + # density geometry
 p12 <- last_plot()
 
 ```
+
 
 # Third Approach (x is mental health; transparent geometries)
 
