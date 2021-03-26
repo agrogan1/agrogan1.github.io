@@ -43,7 +43,7 @@ save(myHTMLfiles, file = "myHTMLfiles.RData")
 
 myHTMLfiles %>% 
 rownames_to_column(var = "filename") %>% # rownames to column
-  filter(filename != "blogtest.html") %>%
+  filter(filename != "blogtest.html") %>% # filter out these file names
   filter(filename != "blogtest-tint.html") %>%
   mutate(modified = mtime) %>% # copy mtime to modified
   mutate(url = paste0("<a href='", # paste together URL
