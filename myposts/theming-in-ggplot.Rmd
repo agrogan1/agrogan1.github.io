@@ -3,6 +3,10 @@ title: "Theming in ggplot"
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
+  distill::distill_article:
+    highlight: haddock
+    toc: yes
+    code_folding: hide 
   html_document:
     fig_height: 3
     highlight: haddock
@@ -30,41 +34,10 @@ knitr::opts_chunk$set(echo = TRUE,
 
 ```
 
-<style>
-h1, h2 {
-  color: navy;
-  font-family: "Helvetica", "Arial", sans-serif; 
-  font-weight: normal;
-}
-.list-group-item.active, 
-.list-group-item.active:focus, 
-.list-group-item.active:hover {
-    z-index: 2;
-    color: gold;
-    background-color: navy;
-    border-color: blue;
-}
-.nav-pills > li.active > a, .nav-pills > li.active > a:focus {
-    color: gold;
-    background-color: navy;
-}
-.nav-pills > li.active > a:hover {
-    color: gold;
-    background-color: navy;
-
-}
-blockquote {
-  background: #FFFFFF;
-  color: #000;
-  border-left: 5px solid #ffcb05;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-}
-</style>
 
 # Get The Data
 
-> In the HTML version, click on the `code` buttons to see the code.
+> In the HTML version, click on the `hide` buttons to see the code.
 
 ```{r}
 
@@ -105,7 +78,7 @@ p0 # replay
 
 p0 + 
     scale_color_viridis_d() + # viridis color palette
-    theme_minimal() # minimal "preset" theme
+    theme_minimal() # minimal (built-in) theme
 
 ```
 
