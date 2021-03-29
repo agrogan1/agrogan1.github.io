@@ -1,0 +1,152 @@
+---
+title: "Raincloud Plots"
+description: |
+  An innovative format to show variable distributions.
+author:
+  - name: Andy Grogan-Kaylor 
+    url: https://www.umich.edu/~agrogan
+    affiliation: University of Michigan
+    affiliation_url: https://www.umich.edu
+date: "`r Sys.Date()`"
+output: 
+  distill::distill_article:
+    highlight: haddock
+    toc: yes
+    code_folding: hide
+bibliography: raincloud.bib
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+# Introduction
+
+*Effectively* conveying the distribution of a variable is a difficult problem. There are many `geom`etries for showing distributions. However, showing the distribution of a variable in an intuitive fashion for decision makers is still difficult.
+
+# Sample Data
+
+```{r}
+
+load("social_service_agency.RData")
+
+```
+
+# Call `ggplot`
+
+```{r}
+
+library(ggplot2)
+
+```
+
+# Some Common Distributions
+
+## Histogram
+
+```{r}
+
+ggplot(clients,
+       aes(x = mental_health_T2,
+           fill = program)) + 
+  geom_histogram() +
+  scale_fill_viridis_d() +
+  facet_wrap(~program) +
+  labs(title = "Mental Health of Clients",
+       subtitle = "by Program",
+       x = "Mental Health At Time 2",
+       caption = "Higher Scores Equal Better Mental Health") +
+  theme_minimal()
+
+```
+
+## Density
+
+```{r}
+
+ggplot(clients,
+       aes(x = mental_health_T2,
+           fill = program)) + 
+  geom_density() +
+  scale_fill_viridis_d() +
+  facet_wrap(~program) +
+  labs(title = "Mental Health of Clients",
+       subtitle = "by Program",
+       x = "Mental Health At Time 2", 
+       caption = "Higher Scores Equal Better Mental Health") +
+  theme_minimal()
+
+```
+
+## Boxplot
+
+```{r}
+
+ggplot(clients,
+       aes(x = mental_health_T2,
+           fill = program)) + 
+  geom_boxplot() +
+  scale_fill_viridis_d() +
+  facet_wrap(~program) +
+  labs(title = "Mental Health of Clients",
+       subtitle = "by Program",
+       x = "Mental Health At Time 2",
+       caption = "Higher Scores Equal Better Mental Health") +
+  theme_minimal()
+
+```
+## Jittered Points
+
+```{r}
+
+ggplot(clients,
+       aes(x = mental_health_T2,
+           y = 1,
+           color = program)) + 
+  geom_jitter() +
+  scale_color_viridis_d() +
+  facet_wrap(~program) +
+  labs(title = "Mental Health of Clients",
+       subtitle = "by Program",
+       x = "Mental Health At Time 2", 
+       caption = "Higher Scores Equal Better Mental Health") +
+  theme_minimal()
+
+```
+# Raincloud Plots
+
+The Raincloud Plot [@raincloud] works by combining the last three of these geometries: a density; a boxplot, and jittered points. Below is one (relatively simplified) implementation of these ideas. More detailed implementations can be found in @raincloud.
+
+```{r}
+
+library(ggplot2)
+
+library(ggdist)
+
+ggplot(clients,
+       aes(x = mental_health_T2,
+           y = program)) +
+  stat_slab(aes(fill = program),
+            position = position_nudge(x = 0, 
+                                      y = .20),
+            scale = .5) +
+  geom_boxplot(color = "grey",
+               width = .20,
+               size = 1,
+               show.legend = FALSE) +
+  geom_point(aes(color = program),
+             position = position_jitter(height = .20),
+             size = 1.0,
+             alpha = .5) +
+  labs(title = "Mental Health of Clients",
+       subtitle = "by Program",
+       x = "Mental Health At Time 2",
+       caption = "Higher Scores Equal Better Mental Health") +
+  scale_fill_viridis_d() + 
+  scale_color_viridis_d() + 
+  theme_minimal() 
+
+```
+
