@@ -28,9 +28,13 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Sample Data
 
+We will be using simulated data from a social service agency.
+
 ```{r}
 
 load("social_service_agency.RData")
+
+pander::pander(head(clients))
 
 ```
 
@@ -53,7 +57,7 @@ ggplot(clients,
            fill = program)) + 
   geom_histogram() +
   scale_fill_viridis_d() +
-  facet_wrap(~program) +
+  facet_wrap(~program, ncol = 1) +
   labs(title = "Mental Health of Clients",
        subtitle = "by Program",
        x = "Mental Health At Time 2",
@@ -71,7 +75,7 @@ ggplot(clients,
            fill = program)) + 
   geom_density() +
   scale_fill_viridis_d() +
-  facet_wrap(~program) +
+  facet_wrap(~program, ncol = 1) +
   labs(title = "Mental Health of Clients",
        subtitle = "by Program",
        x = "Mental Health At Time 2", 
@@ -89,7 +93,7 @@ ggplot(clients,
            fill = program)) + 
   geom_boxplot() +
   scale_fill_viridis_d() +
-  facet_wrap(~program) +
+  facet_wrap(~program, ncol = 1) +
   labs(title = "Mental Health of Clients",
        subtitle = "by Program",
        x = "Mental Health At Time 2",
@@ -97,6 +101,7 @@ ggplot(clients,
   theme_minimal()
 
 ```
+
 ## Jittered Points
 
 ```{r}
@@ -107,7 +112,7 @@ ggplot(clients,
            color = program)) + 
   geom_jitter() +
   scale_color_viridis_d() +
-  facet_wrap(~program) +
+  facet_wrap(~program, ncol = 1) +
   labs(title = "Mental Health of Clients",
        subtitle = "by Program",
        x = "Mental Health At Time 2", 
@@ -115,6 +120,7 @@ ggplot(clients,
   theme_minimal()
 
 ```
+
 # Raincloud Plots
 
 The Raincloud Plot [@raincloud] works by combining the last three of these geometries: a density; a boxplot, and jittered points. Below is one (relatively simplified) implementation of these ideas. More detailed implementations can be found in @raincloud.
