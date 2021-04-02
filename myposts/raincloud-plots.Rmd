@@ -32,7 +32,7 @@ We will be using simulated data from a social service agency.
 
 ```{r}
 
-load("social_service_agency.RData")
+load("social-service-agency.RData")
 
 pander::pander(head(clients))
 
@@ -125,25 +125,26 @@ ggplot(clients,
 
 The Raincloud Plot [@raincloud] works by combining the last three of these geometries: a density; a boxplot, and jittered points. Below is one (relatively simplified) implementation of these ideas. More detailed implementations can be found in @raincloud.
 
+The code for this raincloud plot relies on `position` arguments to position the three different geometries, and is also substantially improved by `scale`, `color`, `size` and `alpha` (transparency) arguments. These settings may need to be tweaked for your particular implementation of a raincloud plot.
+
 ```{r}
 
 library(ggplot2)
 
 library(ggdist)
 
-ggplot(clients,
+ggplot(clients, # data we are using
        aes(x = mental_health_T2,
            y = program)) +
-  stat_slab(aes(fill = program),
-            position = position_nudge(x = 0, 
-                                      y = .20),
+  stat_slab(aes(fill = program), # slab geometry
+            position = position_nudge(y = .20), # nudged up by .20
             scale = .5) +
-  geom_boxplot(color = "grey",
+  geom_boxplot(color = "grey", # boxplot geometry; grey contrast w/ points
                width = .20,
                size = 1,
                show.legend = FALSE) +
-  geom_point(aes(color = program),
-             position = position_jitter(height = .20),
+  geom_point(aes(color = program), # point geometry
+             position = position_jitter(height = .20), # jittering
              size = 1.0,
              alpha = .5) +
   labs(title = "Mental Health of Clients",
