@@ -1,18 +1,15 @@
 ---
 title: "Quick Look At How Dates Work in R"
-author: "Andy Grogan-Kaylor"
+author:
+  - name: Andy Grogan-Kaylor 
+    url: https://www.umich.edu/~agrogan
+    affiliation: University of Michigan
+    affiliation_url: https://www.umich.edu
 date: "`r Sys.Date()`"
 output: 
-  html_document: 
-    css: styles.css
+  distill::distill_article:
     highlight: haddock
-    number_sections: yes
-    code_folding: show
-    code_download: true
     toc: yes
-    toc_float:
-      collapsed: no
-      smooth_scroll: yes
 ---
 
 ```{r setup, include=FALSE}
