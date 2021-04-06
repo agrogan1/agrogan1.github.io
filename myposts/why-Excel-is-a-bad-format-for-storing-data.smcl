@@ -1,17 +1,17 @@
 {smcl}
-{txt}{sf}{ul off}{.-}
+{com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}C:\Users\agrogan\Box Sync\Box Sync\GitHub\agrogan1.github.io\myposts\why-Excel-is-a-bad-format-for-storing-data.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}11 Mar 2021, 15:27:17
+ {txt}opened on:  {res} 6 Apr 2021, 16:56:18
 {txt}
 {com}. //_1
 . display c(current_date)
-{res}11 Mar 2021
+{res} 6 Apr 2021
 {txt}
 {com}. //_2
 . display c(current_time)
-{res}15:27:17
+{res}16:56:18
 {txt}
 {com}. //_3
 . clear all
@@ -127,7 +127,7 @@ do you feel {c |}
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}C:\Users\agrogan\Box Sync\Box Sync\GitHub\agrogan1.github.io\myposts\why-Excel-is-a-bad-format-for-storing-data.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}11 Mar 2021, 15:27:19
+ {txt}closed on:  {res} 6 Apr 2021, 16:56:21
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
