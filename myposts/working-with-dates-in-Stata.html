@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+/* CSS for Markstat 2.0 using Pandoc 2.0 */
+body{padding:14px 28px;}
+body, table {font-family: Helvetica, Arial, Sans-serif; font-size: 14px;}
+h1, h2, h3, h4 {font-weight: normal; color: #3366cc}
+h1 {font-size: 200%;}
+h2 {font-size: 150%;}
+h3 {font-size: 120%;}
+h4 {font-size: 100%; font-weight:bold}
+img.center {display:block; margin-left:auto; margin-right:auto}
+.small{font-size:8pt;}
+a {color: black;}
+a:visited {color: #808080;}
+a.plain {text-decoration:none;}
+a.plain:hover {text-decoration:underline;}
+.em {font-weight:bold;}
+pre, code {font-family: "lucida console", monospace;}
+pre.stata {font-size:13px; line-height:13px;}
+pre {padding:8px; border:1px solid #c0c0c0; border-radius:8px; background-color:#fdfdfd;}
+code {color:#3366cc; background-color:#fafafa;}
+pre code { color:black; background-color:white}
+/* Added for Pandoc */
+figure > img, div.figure > img {display:block; margin:auto}
+figcaption, p.caption {text-align:center; font-weight:bold; color:#3366cc;}
+h1.title {text-align:center; margin-bottom:0}
+p.author, h2.author {font-style:italic; text-align:center;margin-top:4px;margin-bottom:0}
+p.date, h3.date {text-align:center;margin-top:4px; margin-bottom:0}
+/* Tables*/
+table { margin:auto; border-collapse:collapse; }
+table caption { margin-bottom:1ex;}
+th, td { padding:4px 6px;}
+thead tr:first-child th {border-top:1px solid black; padding-top:6px}
+thead tr:last-child  th {padding-bottom:6px}
+tbody tr:first-child td {border-top:1px solid black; padding-top:6px}
+tbody tr:last-child  td {padding-bottom:6px;}
+table tbody:last-child tr:last-child td {border-bottom:1px solid black;}
+</style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Andy Grogan-Kaylor" />
+  <title>Working With Dates in Stata</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Working With Dates in Stata</h1>
+<h2 class="author">Andy Grogan-Kaylor</h2>
+<h3 class="date">6 Apr 2021 16:54:57</h3>
+</div>
+<style>h1 {color: #00274C;} h2 {color: #2F65A7;} blockquote {border-left: 5px solid #ffcb05; margin: 1.5em 10px; padding: 0.5em 10px;} code {color: red;}</style>
+<h1 id="introduction">Introduction</h1>
+<p>Dates in any statistical software (Stata, R) are complicated.</p>
+<p>For example, a particular date could be coded as &quot;4-5-2021&quot;, or &quot;5-4-2021&quot; or &quot;April 5, 2021&quot; or &quot;5APR2021&quot;.</p>
+<p>In addition to the multiplicity of possible formats it is also difficult to do calculations on these kinds of quantities e.g. &quot;how many days have elapsed from Day A to Day B?&quot;</p>
+<p>To address these issues, Stata wants these dates to be encoded as a number, specifically the number of days since January 1, 1960. We then make sure to format these numbers as dates.</p>
+<h1 id="get-the-data">Get The Data</h1>
+<pre class='stata'>. use "simulated-date.dta", clear
+</pre>
+<h1 id="list-and-describe-the-data">List And Describe The Data</h1>
+<p>We see that both date variables are formatted as strings</p>
+<pre class='stata'>. list
+
+     ┌────────────────────────┐
+     │  startdate     enddate │
+     ├────────────────────────┤
+  1. │ 2019-01-01   2019-1-30 │
+  2. │ 2019-02-15   2019-5-30 │
+  3. │ 2019-03-01   2019-4-30 │
+     └────────────────────────┘
+</pre>
+<pre class='stata'>. describe
+
+Contains data from simulated-date.dta
+  obs:             3                          
+ vars:             2                          6 Apr 2021 16:46
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+              storage   display    value
+variable name   type    format     label      variable label
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+startdate       str10   %10s                  startdate
+enddate         str9    %9s                   enddate
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Sorted by: 
+</pre>
+<h1 id="create-date-variables">Create Date Variables</h1>
+<pre class='stata'>. generate startdate2 = date(startdate, "YMD") // create a date specifying order of elements
+</pre>
+<pre class='stata'>. generate enddate2 = date(enddate, "YMD") // create a date specifying order of elements
+</pre>
+<blockquote>
+<p>The command has created 2 dates in numeric form, but they display as numbers.</p>
+</blockquote>
+<pre class='stata'>. describe
+
+Contains data from simulated-date.dta
+  obs:             3                          
+ vars:             4                          6 Apr 2021 16:46
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+              storage   display    value
+variable name   type    format     label      variable label
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+startdate       str10   %10s                  startdate
+enddate         str9    %9s                   enddate
+startdate2      float   %9.0g                 
+enddate2        float   %9.0g                 
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Sorted by: 
+     Note: Dataset has changed since last saved.
+</pre>
+<pre class='stata'>. list
+
+     ┌──────────────────────────────────────────────┐
+     │  startdate     enddate   startd~2   enddate2 │
+     ├──────────────────────────────────────────────┤
+  1. │ 2019-01-01   2019-1-30      21550      21579 │
+  2. │ 2019-02-15   2019-5-30      21595      21699 │
+  3. │ 2019-03-01   2019-4-30      21609      21669 │
+     └──────────────────────────────────────────────┘
+</pre>
+<h1 id="format-as-dates">Format As Dates</h1>
+<pre class='stata'>. format %d startdate2 enddate2
+</pre>
+<pre class='stata'>. describe
+
+Contains data from simulated-date.dta
+  obs:             3                          
+ vars:             4                          6 Apr 2021 16:46
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+              storage   display    value
+variable name   type    format     label      variable label
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+startdate       str10   %10s                  startdate
+enddate         str9    %9s                   enddate
+startdate2      float   %d                    
+enddate2        float   %d                    
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Sorted by: 
+     Note: Dataset has changed since last saved.
+</pre>
+<pre class='stata'>. list
+
+     ┌────────────────────────────────────────────────┐
+     │  startdate     enddate   startda~2    enddate2 │
+     ├────────────────────────────────────────────────┤
+  1. │ 2019-01-01   2019-1-30   01jan2019   30jan2019 │
+  2. │ 2019-02-15   2019-5-30   15feb2019   30may2019 │
+  3. │ 2019-03-01   2019-4-30   01mar2019   30apr2019 │
+     └────────────────────────────────────────────────┘
+</pre>
+</body>
+</html>

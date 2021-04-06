@@ -1,0 +1,120 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\agrogan\Box Sync\Box Sync\GitHub\agrogan1.github.io\myposts\working-with-dates-in-Stata.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 6 Apr 2021, 16:54:57
+{txt}
+{com}. //_1
+. display c(current_date)
+{res} 6 Apr 2021
+{txt}
+{com}. //_2
+. display c(current_time)
+{res}16:54:57
+{txt}
+{com}. //_3
+. use "simulated-date.dta", clear
+{txt}
+{com}. //_4
+. list
+{txt}
+     {c TLC}{hline 12}{c -}{hline 11}{c TRC}
+     {c |} {res} startdate     enddate {txt}{c |}
+     {c LT}{hline 12}{c -}{hline 11}{c RT}
+  1. {c |} {res}2019-01-01   2019-1-30 {txt}{c |}
+  2. {c |} {res}2019-02-15   2019-5-30 {txt}{c |}
+  3. {c |} {res}2019-03-01   2019-4-30 {txt}{c |}
+     {c BLC}{hline 12}{c -}{hline 11}{c BRC}
+
+{com}. //_5
+. describe
+
+{txt}Contains data from {res}simulated-date.dta
+{txt}  obs:{res}             3                          
+{txt} vars:{res}             2                          6 Apr 2021 16:46
+{txt}{hline}
+              storage   display    value
+variable name   type    format     label      variable label
+{hline}
+{p 0 48}{res}{bind:startdate      }{txt}{bind: str10   }{bind:{txt}%10s      }{space 1}{bind:         }{bind:  }{res}{res}startdate{p_end}
+{p 0 48}{bind:enddate        }{txt}{bind: str9    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}enddate{p_end}
+{txt}{hline}
+Sorted by: 
+
+{com}. //_6
+. generate startdate2 = date(startdate, "YMD") // create a date specifying order of elements
+{txt}
+{com}. //_7
+. generate enddate2 = date(enddate, "YMD") // create a date specifying order of elements
+{txt}
+{com}. //_8
+. describe
+
+{txt}Contains data from {res}simulated-date.dta
+{txt}  obs:{res}             3                          
+{txt} vars:{res}             4                          6 Apr 2021 16:46
+{txt}{hline}
+              storage   display    value
+variable name   type    format     label      variable label
+{hline}
+{p 0 48}{res}{bind:startdate      }{txt}{bind: str10   }{bind:{txt}%10s      }{space 1}{bind:         }{bind:  }{res}{res}startdate{p_end}
+{p 0 48}{bind:enddate        }{txt}{bind: str9    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}enddate{p_end}
+{p 0 48}{bind:startdate2     }{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:enddate2       }{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{txt}{hline}
+Sorted by: 
+{res}     Note: Dataset has changed since last saved.
+{txt}
+{com}. //_9
+. list
+{txt}
+     {c TLC}{hline 12}{c -}{hline 11}{c -}{hline 10}{c -}{hline 10}{c TRC}
+     {c |} {res} startdate     enddate   startd~2   enddate2 {txt}{c |}
+     {c LT}{hline 12}{c -}{hline 11}{c -}{hline 10}{c -}{hline 10}{c RT}
+  1. {c |} {res}2019-01-01   2019-1-30      21550      21579 {txt}{c |}
+  2. {c |} {res}2019-02-15   2019-5-30      21595      21699 {txt}{c |}
+  3. {c |} {res}2019-03-01   2019-4-30      21609      21669 {txt}{c |}
+     {c BLC}{hline 12}{c -}{hline 11}{c -}{hline 10}{c -}{hline 10}{c BRC}
+
+{com}. //_10
+. format %d startdate2 enddate2
+{txt}
+{com}. //_11
+. describe
+
+{txt}Contains data from {res}simulated-date.dta
+{txt}  obs:{res}             3                          
+{txt} vars:{res}             4                          6 Apr 2021 16:46
+{txt}{hline}
+              storage   display    value
+variable name   type    format     label      variable label
+{hline}
+{p 0 48}{res}{bind:startdate      }{txt}{bind: str10   }{bind:{txt}%10s      }{space 1}{bind:         }{bind:  }{res}{res}startdate{p_end}
+{p 0 48}{bind:enddate        }{txt}{bind: str9    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}enddate{p_end}
+{p 0 48}{bind:startdate2     }{txt}{bind: float   }{bind:{txt}%d        }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:enddate2       }{txt}{bind: float   }{bind:{txt}%d        }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{txt}{hline}
+Sorted by: 
+{res}     Note: Dataset has changed since last saved.
+{txt}
+{com}. //_12
+. list
+{txt}
+     {c TLC}{hline 12}{c -}{hline 11}{c -}{hline 11}{c -}{hline 11}{c TRC}
+     {c |} {res} startdate     enddate   startda~2    enddate2 {txt}{c |}
+     {c LT}{hline 12}{c -}{hline 11}{c -}{hline 11}{c -}{hline 11}{c RT}
+  1. {c |} {res}2019-01-01   2019-1-30   01jan2019   30jan2019 {txt}{c |}
+  2. {c |} {res}2019-02-15   2019-5-30   15feb2019   30may2019 {txt}{c |}
+  3. {c |} {res}2019-03-01   2019-4-30   01mar2019   30apr2019 {txt}{c |}
+     {c BLC}{hline 12}{c -}{hline 11}{c -}{hline 11}{c -}{hline 11}{c BRC}
+
+{com}. //_^
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\agrogan\Box Sync\Box Sync\GitHub\agrogan1.github.io\myposts\working-with-dates-in-Stata.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 6 Apr 2021, 16:54:57
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
