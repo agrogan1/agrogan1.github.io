@@ -1,17 +1,17 @@
 {smcl}
 {com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
-       {txt}log:  {res}C:\Users\agrogan\Box Sync\Box Sync\GitHub\agrogan1.github.io\myposts\working-with-dates-in-Stata.smcl
+       {txt}log:  {res}/Users/agrogan/Box Sync/GitHub/agrogan1.github.io/myposts/working-with-dates-in-Stata.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 6 Apr 2021, 16:54:57
+ {txt}opened on:  {res} 7 Apr 2021, 12:22:32
 {txt}
 {com}. //_1
 . display c(current_date)
-{res} 6 Apr 2021
+{res} 7 Apr 2021
 {txt}
 {com}. //_2
 . display c(current_time)
-{res}16:54:57
+{res}12:22:32
 {txt}
 {com}. //_3
 . use "simulated-date.dta", clear
@@ -112,9 +112,9 @@ Sorted by:
 {com}. //_^
 . log close
       {txt}name:  {res}<unnamed>
-       {txt}log:  {res}C:\Users\agrogan\Box Sync\Box Sync\GitHub\agrogan1.github.io\myposts\working-with-dates-in-Stata.smcl
+       {txt}log:  {res}/Users/agrogan/Box Sync/GitHub/agrogan1.github.io/myposts/working-with-dates-in-Stata.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 6 Apr 2021, 16:54:57
+ {txt}closed on:  {res} 7 Apr 2021, 12:22:32
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

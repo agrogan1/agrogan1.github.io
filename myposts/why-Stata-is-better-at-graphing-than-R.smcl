@@ -1,17 +1,17 @@
 {smcl}
 {com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
-       {txt}log:  {res}C:\Users\agrogan\Box Sync\Box Sync\GitHub\agrogan1.github.io\myposts\why-Stata-is-better-at-graphing-than-R.smcl
+       {txt}log:  {res}/Users/agrogan/Box Sync/GitHub/agrogan1.github.io/myposts/why-Stata-is-better-at-graphing-than-R.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 6 Apr 2021, 16:55:30
+ {txt}opened on:  {res} 7 Apr 2021, 14:05:35
 {txt}
 {com}. //_1
 . display c(current_date)
-{res} 6 Apr 2021
+{res} 7 Apr 2021
 {txt}
 {com}. //_2
 . display c(current_time)
-{res}16:55:30
+{res}14:05:35
 {txt}
 {com}. //_3
 . import delimited "clients.csv", encoding(ISO-8859-2) clear // import data
@@ -26,9 +26,9 @@
 {com}. //_^
 . log close
       {txt}name:  {res}<unnamed>
-       {txt}log:  {res}C:\Users\agrogan\Box Sync\Box Sync\GitHub\agrogan1.github.io\myposts\why-Stata-is-better-at-graphing-than-R.smcl
+       {txt}log:  {res}/Users/agrogan/Box Sync/GitHub/agrogan1.github.io/myposts/why-Stata-is-better-at-graphing-than-R.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 6 Apr 2021, 16:55:32
+ {txt}closed on:  {res} 7 Apr 2021, 14:05:48
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

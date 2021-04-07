@@ -6,6 +6,8 @@ doedit "working-with-dates-in-Stata.stmd"
 
 markstat using "working-with-dates-in-Stata.stmd"
 
+markstat using "working-with-dates-in-Stata.stmd", pdf
+
 graph close _all
 
 * what Stata is better at graphing than R
@@ -13,6 +15,8 @@ graph close _all
 doedit "why-Stata-is-better-at-graphing-than-R.stmd"
 
 markstat using "why-Stata-is-better-at-graphing-than-R.stmd"
+
+markstat using "why-Stata-is-better-at-graphing-than-R.stmd", pdf
 
 graph close _all
 
