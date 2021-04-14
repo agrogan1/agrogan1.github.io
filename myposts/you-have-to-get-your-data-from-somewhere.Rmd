@@ -6,12 +6,12 @@ output:
   distill::distill_article:
     highlight: haddock
     toc: yes
+  tufte::tufte_handout:
+    number_sections: yes
+    toc: yes
   tufte::tufte_html:
     css: myTufteCSS.css
     highlight: haddock
-    number_sections: yes
-    toc: yes
-  tufte::tufte_handout:
     number_sections: yes
     toc: yes
   pdf_document:
@@ -59,7 +59,9 @@ Note that while learning the correct syntax is *very helpful*, RStudio can gener
 
 # RMarkdown
 
-> Note that--in particular--each RMarkdown document needs to have a line, or lines, of code that import the data file for that individual RMarkdown document.
+> When you are working with RMarkdown, each RMarkdown document creates its own separate **working environment**. Therefore each RMarkdown document needs to have a line, or lines, of code that import the data file for that individual RMarkdown document.
+
+\newpage
 
 # Basic Idea
 
@@ -73,7 +75,7 @@ Note that while learning the correct syntax is *very helpful*, RStudio can gener
 
 [^3]: Where is your data located? The *directory path* to your data.
 
-[^tilde]: <mark>Sometimes, especially on a Mac, it is necessary to refer to your directory with a `~`, e.g. `~/downloads/project1.RData` or `~/project1/project1.RData`.</mark>
+[^tilde]: Sometimes, especially on a Mac, it is necessary to refer to your directory with a `~`, e.g. `~/downloads/project1.RData` or `~/project1/project1.RData`.
 
 [^4]: What is the *filename* of the file containing your data? Note that the extension often tells you *what kind* of data this is.
 
