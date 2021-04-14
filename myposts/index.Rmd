@@ -32,11 +32,34 @@ library(DT) # nice data table
 
 library(tibble) # tibbles
 
+library(xaringan)
+
+library(xaringanExtra)
+
+xaringanExtra::use_panelset()
+
 # get info about my HTML files
 
 myHTMLfiles = file.info(list.files(pattern="*html"))
 
 save(myHTMLfiles, file = "myHTMLfiles.RData")
+
+# get info about my PDF files
+
+myPDFfiles = file.info(list.files(pattern="*pdf"))
+
+save(myPDFfiles, file = "myPDFfiles.RData")
+
+```
+
+
+::::: {.panelset}
+
+::: {.panel}
+
+## HTML Files {.panel-name}
+
+```{r}
 
 # make a nicely formatted, labeled and sorted datatable
 # of my files
@@ -62,6 +85,44 @@ rownames_to_column(var = "filename") %>% # rownames to column
   
   
 ```
+
+:::
+
+::: {.panel}
+
+## PDF Files {.panel-name}
+
+```{r}
+
+# make a nicely formatted, labeled and sorted datatable
+# of my files
+
+myPDFfiles %>% 
+rownames_to_column(var = "filename") %>% # rownames to column
+  filter(filename != "Rplots.pdf") %>% # filter out these file names
+  mutate(modified = mtime) %>% # copy mtime to modified
+  mutate(url = paste0("<a href='", # paste together URL
+                      filename,
+                      "'>",
+                      filename, 
+                      "</a>")) %>% 
+  select(modified, url) %>% # select columns
+  datatable(rownames = FALSE, # no row names
+            escape = 1, # escape URL column
+            caption = "Blog-ish Posts",
+            # sort by descending date
+            options = list(order = list(list(0, 
+                                             'desc')))) %>% 
+  formatDate(1, 'toDateString') # format column 1 as dates
+  
+  
+```
+
+
+:::
+
+:::::
+
 
 # Credits
 
