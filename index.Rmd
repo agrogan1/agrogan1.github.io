@@ -81,14 +81,13 @@ myHTMLfiles %>%
 * [Categorical Data Analysis](https://agrogan1.github.io/newstuff/categorical/)
 
 <aside>
-
 ```{r, fig.cap="Data Visualization"}
 
 knitr::include_graphics("images/banner.png")
 
 ```
 
-```{r, fig.cap="Multilevel Modeling", eval=TRUE}
+```{r, fig.cap="Multilevel Modeling"}
 
 knitr::include_graphics("images/schools.png")
 
