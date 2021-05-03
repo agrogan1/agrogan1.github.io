@@ -37,6 +37,10 @@ knitr::include_graphics("images/forest.png")
 
 # About Me
 
+My interests are in developing more knowledge to reduce violence against children and to improve child and family wellbeing. In this research I try to understand the family and community origins of aggression, antisocial behavior, anxiety and depression. My current research focuses on parenting and child development in international context. I try to understand these issues within the context of current conversations about children’s rights.
+
+I teach courses mostly in the area of statistics, quantitative methods and data visualization.
+
 * A little bit about [my background](./background.html)
 * My [CV](https://ssw.umich.edu/sites/default/files/documents/faculty/cvs/agrogan_cv.pdf)
 
@@ -101,8 +105,6 @@ knitr::include_graphics("images/logistic.png")
 </aside>
 
 # Research on Parenting and Child Development
-
-My interests are in developing more knowledge to reduce violence against children and to improve child and family wellbeing. In this research I try to understand the family and community origins of aggression, antisocial behavior, anxiety and depression. My current research focuses on parenting and child development across cultures and social contexts. I try to understand these issues within the context of current conversations about children's rights.
 
 * ["Global Perspectives on Positive and Negative Parenting: A Bayesian Multilevel Analysis"](https://agrogan1.github.io/research/Bayes3MICS/).
 * [Data Visualization](https://agrogan1.github.io/research/MICS1/) for "Spanking and young children's socioemotional development in low- and middle-income countries". *Child Trends News Service* has released a well done [video summarizing this research](https://youtu.be/8LYZ-UpR5wE).
