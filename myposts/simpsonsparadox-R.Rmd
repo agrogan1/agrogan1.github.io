@@ -127,6 +127,7 @@ ggplot(mydata_expanded) +
   labs(title = "The Treatment Appears To Have NO Effect",
        subtitle = "In The Sample As A Whole",
        caption = "An Equal % Of Those Receiving And Not Receiving Treatment Are Alive") +
+  scale_fill_manual(values = michigancolors()) +
   theme_bw()
 
 ```
@@ -146,6 +147,7 @@ ggplot(mydata_expanded,
        caption = "An Equal % Of Those Receiving And Not Receiving Treatment Are Alive") +
   coord_polar(theta = "y") +
   facet_wrap(~treatment) +
+  scale_fill_manual(values = michigancolors()) +
   theme_bw() +
   theme(axis.text = element_blank(),
         axis.ticks = element_blank(),
@@ -179,6 +181,7 @@ ggplot(mydata_expanded) +
        subtitle = "When Examined By Group",
        caption = "A Greater % Of Those Recieving Treatment Are Alive") +
   facet_wrap(~group) +
+  scale_fill_manual(values = michigancolors()) +
   theme_bw()
 
 ```
@@ -197,6 +200,7 @@ ggplot(mydata_expanded,
   coord_polar(theta = "y") +
   facet_wrap(~group + treatment, nrow = 1) +
   theme_bw() +
+  scale_fill_manual(values = michigancolors()) +
   theme(axis.text = element_blank(),
         axis.ticks = element_blank(),
         axis.title = element_blank())
