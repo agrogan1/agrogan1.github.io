@@ -28,6 +28,8 @@ library(ggplot2)
 
 library(ggmosaic)
 
+library(michigancolors)
+
 library(pander)
 
 library(foreign)
