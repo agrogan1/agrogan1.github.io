@@ -52,9 +52,9 @@ I am not a particular fan of Stata's default graphing scheme, so I am going to u
 	subtitle("In The Sample As A Whole") ///
 	note("An Equal % Of Those Receiving And Not Receiving Treatment Are Alive")
 	
-	graph export myspineplot.png, width(1000) replace
+	graph export my_Simpsons_spineplot.png, width(1000) replace
 
-![Spineplot or Mosaic Plot](myspineplot.png)
+![Spineplot or Mosaic Plot](my_Simpsons_spineplot.png)
 	
 ## Bar Chart
 
@@ -65,9 +65,9 @@ I am not a particular fan of Stata's default graphing scheme, so I am going to u
 	subtitle("In The Sample As A Whole") ///
 	note("An Equal % Of Those Receiving And Not Receiving Treatment Are Alive")
 	
-	graph export mybarchart.png, width(1000) replace
+	graph export my_Simpsons_barchart.png, width(1000) replace
 
-![Bar Chart](mybarchart.png)
+![Bar Chart](my_Simpsons_barchart.png)
 
 ## Pie Chart
 
@@ -78,9 +78,9 @@ I am not a particular fan of Stata's default graphing scheme, so I am going to u
 	subtitle("In The Sample As A Whole") ///
 	note("An Equal % Of Those Receiving And Not Receiving Treatment Are Alive"))
 	
-	graph export mypiechart.png, width(1000) replace
+	graph export my_Simpsons_piechart.png, width(1000) replace
 
-![Pie Chart](mypiechart.png)
+![Pie Chart](my_Simpsons_piechart.png)
 
 # Sample Divided By Groups
 
@@ -107,9 +107,9 @@ I am not a particular fan of Stata's default graphing scheme, so I am going to u
 	subtitle("When Examined By Group") ///
 	note("A Greater % Of Those Receiving Treatment Are Alive") 
 	
-	graph export myspineplot2.png, width(1000) replace
+	graph export my_Simpsons_spineplot2.png, width(1000) replace
 	
-![Spineplot or Mosaic Plot](myspineplot2.png)
+![Spineplot or Mosaic Plot](my_Simpsons_spineplot2.png)
 
 ## Bar Chart
 
@@ -119,9 +119,9 @@ I am not a particular fan of Stata's default graphing scheme, so I am going to u
 	subtitle("When Examined By Group") ///
 	note("A Greater % Of Those Receiving Treatment Are Alive"))
 
-	graph export mybarchart2.png, width(1000) replace
+	graph export my_Simpsons_barchart2.png, width(1000) replace
 
-![Bar Chart](mybarchart2.png)	
+![Bar Chart](my_Simpsons_barchart2.png)	
 
 ## Pie Chart
 
@@ -138,9 +138,9 @@ I am not a particular fan of Stata's default graphing scheme, so I am going to u
 	subtitle("When Examined By Group") ///
 	note("A Greater % Of Those Receiving Treatment Are Alive") 
 	
-	graph export mypiechart2.png, width(1000) replace
+	graph export my_Simpsons_piechart2.png, width(1000) replace
 
-![Pie Chart](mypiechart2.png)	
+![Pie Chart](my_Simpsons_piechart2.png)	
 
 # Reference
 

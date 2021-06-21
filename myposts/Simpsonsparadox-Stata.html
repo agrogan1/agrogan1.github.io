@@ -49,7 +49,7 @@ table tbody:last-child tr:last-child td {border-bottom:1px solid black;}
 <div id="header">
 <h1 class="title">Simpson's Paradox</h1>
 <h2 class="author">Andy Grogan-Kaylor</h2>
-<h3 class="date">21 Jun 2021 12:16:19</h3>
+<h3 class="date">21 Jun 2021 12:25:29</h3>
 </div>
 <style>h1 {color: #00274C;} h2 {color: #2F65A7;} blockquote {border-left: 5px solid #ffcb05; margin: 1.5em 10px; padding: 0.5em 10px;} code {color: red;}</style>
 <h1 id="introduction">Introduction</h1>
@@ -128,11 +128,12 @@ table tbody:last-child tr:last-child td {border-bottom:1px solid black;}
 (note:  named style % 100 not found in class intensity, default attributes used)
 (note:  named style % 100 not found in class intensity, default attributes used)
 </pre>
-<pre class='stata'>. graph export myspineplot.png, width(1000) replace
-file myspineplot.png saved as PNG format
+<pre class='stata'>. graph export my_Simpsons_spineplot.png, width(1000) replace
+(file my_Simpsons_spineplot.png not found)
+file my_Simpsons_spineplot.png saved as PNG format
 </pre>
 <div class="figure">
-<img src="myspineplot.png" alt="Spineplot or Mosaic Plot" />
+<img src="my_Simpsons_spineplot.png" alt="Spineplot or Mosaic Plot" />
 <p class="caption">Spineplot or Mosaic Plot</p>
 </div>
 <h2 id="bar-chart">Bar Chart</h2>
@@ -144,11 +145,12 @@ file myspineplot.png saved as PNG format
 > subtitle("In The Sample As A Whole") ///
 > note("An Equal % Of Those Receiving And Not Receiving Treatment Are Alive")
 </pre>
-<pre class='stata'>. graph export mybarchart.png, width(1000) replace
-file mybarchart.png saved as PNG format
+<pre class='stata'>. graph export my_Simpsons_barchart.png, width(1000) replace
+(file my_Simpsons_barchart.png not found)
+file my_Simpsons_barchart.png saved as PNG format
 </pre>
 <div class="figure">
-<img src="mybarchart.png" alt="Bar Chart" />
+<img src="my_Simpsons_barchart.png" alt="Bar Chart" />
 <p class="caption">Bar Chart</p>
 </div>
 <h2 id="pie-chart">Pie Chart</h2>
@@ -160,11 +162,12 @@ file mybarchart.png saved as PNG format
 > subtitle("In The Sample As A Whole") ///
 > note("An Equal % Of Those Receiving And Not Receiving Treatment Are Alive"))
 </pre>
-<pre class='stata'>. graph export mypiechart.png, width(1000) replace
-file mypiechart.png saved as PNG format
+<pre class='stata'>. graph export my_Simpsons_piechart.png, width(1000) replace
+(file my_Simpsons_piechart.png not found)
+file my_Simpsons_piechart.png saved as PNG format
 </pre>
 <div class="figure">
-<img src="mypiechart.png" alt="Pie Chart" />
+<img src="my_Simpsons_piechart.png" alt="Pie Chart" />
 <p class="caption">Pie Chart</p>
 </div>
 <h1 id="sample-divided-by-groups">Sample Divided By Groups</h1>
@@ -250,11 +253,12 @@ file mypiechart.png saved as PNG format
 (note:  named style % 100 not found in class intensity, default attributes used)
 (note:  named style % 100 not found in class intensity, default attributes used)
 </pre>
-<pre class='stata'>. graph export myspineplot2.png, width(1000) replace
-file myspineplot2.png saved as PNG format
+<pre class='stata'>. graph export my_Simpsons_spineplot2.png, width(1000) replace
+(file my_Simpsons_spineplot2.png not found)
+file my_Simpsons_spineplot2.png saved as PNG format
 </pre>
 <div class="figure">
-<img src="myspineplot2.png" alt="Spineplot or Mosaic Plot" />
+<img src="my_Simpsons_spineplot2.png" alt="Spineplot or Mosaic Plot" />
 <p class="caption">Spineplot or Mosaic Plot</p>
 </div>
 <h2 id="bar-chart-1">Bar Chart</h2>
@@ -264,11 +268,12 @@ file myspineplot2.png saved as PNG format
 > subtitle("When Examined By Group") ///
 > note("A Greater % Of Those Receiving Treatment Are Alive"))
 </pre>
-<pre class='stata'>. graph export mybarchart2.png, width(1000) replace
-file mybarchart2.png saved as PNG format
+<pre class='stata'>. graph export my_Simpsons_barchart2.png, width(1000) replace
+(file my_Simpsons_barchart2.png not found)
+file my_Simpsons_barchart2.png saved as PNG format
 </pre>
 <div class="figure">
-<img src="mybarchart2.png" alt="Bar Chart" />
+<img src="my_Simpsons_barchart2.png" alt="Bar Chart" />
 <p class="caption">Bar Chart</p>
 </div>
 <h2 id="pie-chart-1">Pie Chart</h2>
@@ -285,11 +290,12 @@ file mybarchart2.png saved as PNG format
 > subtitle("When Examined By Group") ///
 > note("A Greater % Of Those Receiving Treatment Are Alive") 
 </pre>
-<pre class='stata'>. graph export mypiechart2.png, width(1000) replace
-file mypiechart2.png saved as PNG format
+<pre class='stata'>. graph export my_Simpsons_piechart2.png, width(1000) replace
+(file my_Simpsons_piechart2.png not found)
+file my_Simpsons_piechart2.png saved as PNG format
 </pre>
 <div class="figure">
-<img src="mypiechart2.png" alt="Pie Chart" />
+<img src="my_Simpsons_piechart2.png" alt="Pie Chart" />
 <p class="caption">Pie Chart</p>
 </div>
 <h1 id="reference">Reference</h1>

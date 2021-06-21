@@ -1,9 +1,9 @@
 {smcl}
 {com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
-       {txt}log:  {res}C:\Users\agrogan\Desktop\Simpsonsparadox-Stata\Simpsonsparadox-Stata.smcl
+       {txt}log:  {res}C:\Users\agrogan\Box Sync\Box Sync\GitHub\agrogan1.github.io\myposts\Simpsonsparadox-Stata.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}21 Jun 2021, 12:16:31
+ {txt}opened on:  {res}21 Jun 2021, 12:25:29
 {txt}
 {com}. //_1
 . display c(current_date)
@@ -11,7 +11,7 @@
 {txt}
 {com}. //_2
 . display c(current_time)
-{res}12:16:31
+{res}12:25:29
 {txt}
 {com}. //_3
 . use simpsonsparadox.dta, clear
@@ -80,10 +80,15 @@ intensity,  default attributes used)
 {p_end}
 {res}{txt}
 {com}. //_8
-. graph export myspineplot.png, width(1000) replace
+. graph export my_Simpsons_spineplot.png, width(1000) replace
 {txt}{p 0 4 2}
+(file {bf}
+my_Simpsons_spineplot.png{rm}
+not found)
+{p_end}
+{p 0 4 2}
 file {bf}
-myspineplot.png{rm}
+my_Simpsons_spineplot.png{rm}
 saved as
 PNG
 format
@@ -96,10 +101,15 @@ format
 > note("An Equal % Of Those Receiving And Not Receiving Treatment Are Alive")
 {res}{txt}
 {com}. //_10
-. graph export mybarchart.png, width(1000) replace
+. graph export my_Simpsons_barchart.png, width(1000) replace
 {txt}{p 0 4 2}
+(file {bf}
+my_Simpsons_barchart.png{rm}
+not found)
+{p_end}
+{p 0 4 2}
 file {bf}
-mybarchart.png{rm}
+my_Simpsons_barchart.png{rm}
 saved as
 PNG
 format
@@ -112,10 +122,15 @@ format
 > note("An Equal % Of Those Receiving And Not Receiving Treatment Are Alive"))
 {res}{txt}
 {com}. //_12
-. graph export mypiechart.png, width(1000) replace
+. graph export my_Simpsons_piechart.png, width(1000) replace
 {txt}{p 0 4 2}
+(file {bf}
+my_Simpsons_piechart.png{rm}
+not found)
+{p_end}
+{p 0 4 2}
 file {bf}
-mypiechart.png{rm}
+my_Simpsons_piechart.png{rm}
 saved as
 PNG
 format
@@ -236,10 +251,15 @@ intensity,  default attributes used)
 {p_end}
 {res}{txt}
 {com}. //_17
-. graph export myspineplot2.png, width(1000) replace
+. graph export my_Simpsons_spineplot2.png, width(1000) replace
 {txt}{p 0 4 2}
+(file {bf}
+my_Simpsons_spineplot2.png{rm}
+not found)
+{p_end}
+{p 0 4 2}
 file {bf}
-myspineplot2.png{rm}
+my_Simpsons_spineplot2.png{rm}
 saved as
 PNG
 format
@@ -253,10 +273,15 @@ format
 > note("A Greater % Of Those Receiving Treatment Are Alive"))
 {res}{txt}
 {com}. //_19
-. graph export mybarchart2.png, width(1000) replace
+. graph export my_Simpsons_barchart2.png, width(1000) replace
 {txt}{p 0 4 2}
+(file {bf}
+my_Simpsons_barchart2.png{rm}
+not found)
+{p_end}
+{p 0 4 2}
 file {bf}
-mybarchart2.png{rm}
+my_Simpsons_barchart2.png{rm}
 saved as
 PNG
 format
@@ -279,10 +304,15 @@ format
 > note("A Greater % Of Those Receiving Treatment Are Alive") 
 {res}{txt}
 {com}. //_23
-. graph export mypiechart2.png, width(1000) replace
+. graph export my_Simpsons_piechart2.png, width(1000) replace
 {txt}{p 0 4 2}
+(file {bf}
+my_Simpsons_piechart2.png{rm}
+not found)
+{p_end}
+{p 0 4 2}
 file {bf}
-mypiechart2.png{rm}
+my_Simpsons_piechart2.png{rm}
 saved as
 PNG
 format
@@ -291,9 +321,9 @@ format
 {com}. //_^
 . log close
       {txt}name:  {res}<unnamed>
-       {txt}log:  {res}C:\Users\agrogan\Desktop\Simpsonsparadox-Stata\Simpsonsparadox-Stata.smcl
+       {txt}log:  {res}C:\Users\agrogan\Box Sync\Box Sync\GitHub\agrogan1.github.io\myposts\Simpsonsparadox-Stata.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}21 Jun 2021, 12:16:42
+ {txt}closed on:  {res}21 Jun 2021, 12:25:40
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
