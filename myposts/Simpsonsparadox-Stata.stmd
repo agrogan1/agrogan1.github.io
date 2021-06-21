@@ -1,0 +1,148 @@
+% Simpson's Paradox
+% Andy Grogan-Kaylor 
+% `s c(current_date)` `s c(current_time)`
+
+---
+geometry: margin=1 in
+---
+
+<style>h1 {color: #00274C;} h2 {color: #2F65A7;} blockquote {border-left: 5px solid #ffcb05; margin: 1.5em 10px; padding: 0.5em 10px;} code {color: red;}</style>
+
+# Introduction
+
+*Simpson's Paradox* is the idea that associations between variables that are found between two variables in the sample as a whole, can be *very different* (or even *reversed*) when a third variable is introduced.
+
+There are specific mathematical conditions under which Simpson's Paradox applies. However, thinking through these mathematical conditions may not be helpful to develop intuitions about Simpson's Paradox.
+
+Careful inspection of visualizations can help us to develop some understanding of Simpson's Paradox.
+
+> The key substantive conclusion is that models of the data that only account for two variables may provide *very different*--or even *opposite*--conclusions from models of the world that account for many variables.
+
+# Some Hypothetical Data
+
+These data are based on the hypothetical data provided by Simpson (1951).
+
+    use simpsonsparadox.dta, clear
+	
+	list // list out the data
+
+> Because these are weighted data--where every row of data represents more than one individual--we will need to use the `[fweight=count]` syntax.
+
+# Graph Scheme
+
+I am not a particular fan of Stata's default graphing scheme, so I am going to use the `michigan` graph scheme here. (To install, type `net from https://agrogan1.github.io/Stata`)
+
+    set scheme michigan // use Michigan graph scheme
+	
+# Sample As A Whole
+
+> The treatment appears to have NO effect. An equal percentage of those receiving and not receiving treatment are alive.
+
+## Cross Tabulation
+
+    tabulate status treatment [fweight=count], row col
+
+## Mosaic Plot
+
+> Mosaic Plots are a little bit counterintuive at first. However, I believe that--after a little bit of study--Mosaic Plots provide the best visual representation of these relationships. The command for a Mosaic Plot in Stata is `spineplot`, installed by typing `ssc install spineplot`.
+
+    spineplot status treatment [fweight=count], ///
+	bar1(color(gold) fintensity(%100)) bar2(color(navy %100) fintensity(%100)) ///
+	title("The Treatment Appears To Have NO Effect") ///
+	subtitle("In The Sample As A Whole") ///
+	note("An Equal % Of Those Receiving And Not Receiving Treatment Are Alive")
+	
+	graph export myspineplot.png, width(1000) replace
+
+![Spineplot or Mosaic Plot](myspineplot.png)
+	
+## Bar Chart
+
+> It is sometimes said that every data visualization should, or could, be a bar chart, so I present one here. Bar charts are a common and useful type of data visualization.
+
+    graph bar [fweight=count], over(status) over(treatment) asyvars ///
+	title("The Treatment Appears To Have NO Effect") ///
+	subtitle("In The Sample As A Whole") ///
+	note("An Equal % Of Those Receiving And Not Receiving Treatment Are Alive")
+	
+	graph export mybarchart.png, width(1000) replace
+
+![Bar Chart](mybarchart.png)
+
+## Pie Chart
+
+> A Pie Chart sometimes is more intuitive at first, but actually has less information than a Mosaic Chart.
+
+    graph pie, over(status) by(treatment, ///
+	title("The Treatment Appears To Have NO Effect") ///
+	subtitle("In The Sample As A Whole") ///
+	note("An Equal % Of Those Receiving And Not Receiving Treatment Are Alive"))
+	
+	graph export mypiechart.png, width(1000) replace
+
+![Pie Chart](mypiechart.png)
+
+# Sample Divided By Groups
+
+> The treatment appears to have an effect. A greater percentage of those recieving treatment are alive.
+
+## Cross Tabulation
+
+    bysort group: tabulate status treatment [fweight=count], row col
+
+## Mosaic Plot
+
+	spineplot status treatment [fweight=count] if group == 1, ///
+	bar1(color(gold) fintensity(%100)) bar2(color(navy) fintensity(%100)) ///
+	caption("Group A") ///
+	name(spineplotA, replace)
+	
+	spineplot status treatment [fweight=count] if group == 2, ///
+	bar1(color(gold) fintensity(%100)) bar2(color(navy) fintensity(%100)) ///
+	caption("Group B") ///
+	name(spineplotB, replace)
+	
+	graph combine spineplotA spineplotB, ///
+	title("The Treatment Does Appear To Have An Effect") ///
+	subtitle("When Examined By Group") ///
+	note("A Greater % Of Those Receiving Treatment Are Alive") 
+	
+	graph export myspineplot2.png, width(1000) replace
+	
+![Spineplot or Mosaic Plot](myspineplot2.png)
+
+## Bar Chart
+
+    graph bar [fweight=count], over(status) over(treatment) asyvars ///
+	by(group, ///
+	title("The Treatment Does Appear To Have An Effect") ///
+	subtitle("When Examined By Group") ///
+	note("A Greater % Of Those Receiving Treatment Are Alive"))
+
+	graph export mybarchart2.png, width(1000) replace
+
+![Bar Chart](mybarchart2.png)	
+
+## Pie Chart
+
+    graph pie if group == 1 [fweight=count], over(status) by(treatment, ///
+	caption("Group A")) ///
+	name(piechartA, replace)
+	
+	graph pie if group == 2 [fweight=count], over(status) by(treatment, ///
+	caption("Group B")) ///
+	name(piechartB, replace)
+	
+	graph combine piechartA piechartB, ///
+	title("The Treatment Does Appear To Have An Effect") ///
+	subtitle("When Examined By Group") ///
+	note("A Greater % Of Those Receiving Treatment Are Alive") 
+	
+	graph export mypiechart2.png, width(1000) replace
+
+![Pie Chart](mypiechart2.png)	
+
+# Reference
+
+Simpson, E. (1951). The Interpretation of Interaction in Contingency Tables. *Journal of the Royal Statistical Society. Series B (Methodological)*, 13(2), 238-241. Retrieved February 2, 2021, from [http://www.jstor.org/stable/2984065](http://www.jstor.org/stable/2984065)
+
