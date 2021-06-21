@@ -20,6 +20,18 @@ markstat using "why-Stata-is-better-at-graphing-than-R.stmd", pdf
 
 graph close _all
 
+* Simpson's Paradox Stata
+
+doedit "Simpsonsparadox-Stata.stmd"
+
+markstat using "Simpsonsparadox-Stata.stmd", mathjax // HTML
+
+graph close _all
+
+markstat using "Simpsonsparadox-Stata.stmd", pdf // PDF
+
+graph close _all
+
 * why Excel is a bad format for storing data
 
 doedit "why-Excel-is-a-bad-format-for-storing-data.stmd"
