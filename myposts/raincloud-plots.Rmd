@@ -138,15 +138,18 @@ ggplot(clients, # data we are using
            y = program)) +
   stat_slab(aes(fill = program), # slab geometry
             position = position_nudge(y = .20), # nudged up by .20
-            scale = .5) +
+            scale = .5,
+            alpha = 1.0) + # transparency
   geom_boxplot(color = "grey", # boxplot geometry; grey contrast w/ points
                width = .20,
                size = 1,
-               show.legend = FALSE) +
+               show.legend = FALSE,
+               alpha = .5) + # transparency
   geom_point(aes(color = program), # point geometry
              position = position_jitter(height = .20), # jittering
              size = 1.0,
-             alpha = .5) +
+             shape = 19, # circles
+             alpha = .5) + # transparency
   labs(title = "Mental Health of Clients",
        subtitle = "by Program",
        x = "Mental Health At Time 2",
