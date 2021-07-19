@@ -1,17 +1,17 @@
 {smcl}
 {com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
-       {txt}log:  {res}C:\Users\agrogan\Box Sync\Box Sync\GitHub\agrogan1.github.io\myposts\Simpsonsparadox-Stata.smcl
+       {txt}log:  {res}C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\myposts\Simpsonsparadox-Stata.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}21 Jun 2021, 12:25:29
+ {txt}opened on:  {res}19 Jul 2021, 13:40:50
 {txt}
 {com}. //_1
 . display c(current_date)
-{res}21 Jun 2021
+{res}19 Jul 2021
 {txt}
 {com}. //_2
 . display c(current_time)
-{res}12:25:29
+{res}13:40:50
 {txt}
 {com}. //_3
 . use simpsonsparadox.dta, clear
@@ -82,11 +82,6 @@ intensity,  default attributes used)
 {com}. //_8
 . graph export my_Simpsons_spineplot.png, width(1000) replace
 {txt}{p 0 4 2}
-(file {bf}
-my_Simpsons_spineplot.png{rm}
-not found)
-{p_end}
-{p 0 4 2}
 file {bf}
 my_Simpsons_spineplot.png{rm}
 saved as
@@ -103,11 +98,6 @@ format
 {com}. //_10
 . graph export my_Simpsons_barchart.png, width(1000) replace
 {txt}{p 0 4 2}
-(file {bf}
-my_Simpsons_barchart.png{rm}
-not found)
-{p_end}
-{p 0 4 2}
 file {bf}
 my_Simpsons_barchart.png{rm}
 saved as
@@ -124,11 +114,6 @@ format
 {com}. //_12
 . graph export my_Simpsons_piechart.png, width(1000) replace
 {txt}{p 0 4 2}
-(file {bf}
-my_Simpsons_piechart.png{rm}
-not found)
-{p_end}
-{p 0 4 2}
 file {bf}
 my_Simpsons_piechart.png{rm}
 saved as
@@ -253,11 +238,6 @@ intensity,  default attributes used)
 {com}. //_17
 . graph export my_Simpsons_spineplot2.png, width(1000) replace
 {txt}{p 0 4 2}
-(file {bf}
-my_Simpsons_spineplot2.png{rm}
-not found)
-{p_end}
-{p 0 4 2}
 file {bf}
 my_Simpsons_spineplot2.png{rm}
 saved as
@@ -275,11 +255,6 @@ format
 {com}. //_19
 . graph export my_Simpsons_barchart2.png, width(1000) replace
 {txt}{p 0 4 2}
-(file {bf}
-my_Simpsons_barchart2.png{rm}
-not found)
-{p_end}
-{p 0 4 2}
 file {bf}
 my_Simpsons_barchart2.png{rm}
 saved as
@@ -306,11 +281,6 @@ format
 {com}. //_23
 . graph export my_Simpsons_piechart2.png, width(1000) replace
 {txt}{p 0 4 2}
-(file {bf}
-my_Simpsons_piechart2.png{rm}
-not found)
-{p_end}
-{p 0 4 2}
 file {bf}
 my_Simpsons_piechart2.png{rm}
 saved as
@@ -321,9 +291,9 @@ format
 {com}. //_^
 . log close
       {txt}name:  {res}<unnamed>
-       {txt}log:  {res}C:\Users\agrogan\Box Sync\Box Sync\GitHub\agrogan1.github.io\myposts\Simpsonsparadox-Stata.smcl
+       {txt}log:  {res}C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\myposts\Simpsonsparadox-Stata.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}21 Jun 2021, 12:25:40
+ {txt}closed on:  {res}19 Jul 2021, 13:41:03
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
