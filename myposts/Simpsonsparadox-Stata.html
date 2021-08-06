@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <style>
 /* CSS for Markstat 2.0 using Pandoc 2.0 */
@@ -38,26 +38,166 @@ tbody tr:first-child td {border-top:1px solid black; padding-top:6px}
 tbody tr:last-child  td {padding-bottom:6px;}
 table tbody:last-child tr:last-child td {border-bottom:1px solid black;}
 </style>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Andy Grogan-Kaylor" />
-  <title>Simpson's Paradox</title>
-  <style type="text/css">code{white-space: pre;}</style>
+  <title>Simpson’s Paradox</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
 </head>
 <body>
-<div id="header">
-<h1 class="title">Simpson's Paradox</h1>
-<h2 class="author">Andy Grogan-Kaylor</h2>
-<h3 class="date">19 Jul 2021 13:40:50</h3>
-</div>
-<style>h1 {color: #00274C;} h2 {color: #2F65A7;} blockquote {border-left: 5px solid #ffcb05; margin: 1.5em 10px; padding: 0.5em 10px;} code {color: red;}</style>
+<header id="title-block-header">
+<h1 class="title">Simpson’s Paradox</h1>
+<p class="author">Andy Grogan-Kaylor</p>
+<p class="date">6 Aug 2021 10:11:56</p>
+</header>
+<style>body {max-width: 90%} h1 {color: #00274C;} h2 {color: #2F65A7;} blockquote {border-left: 5px solid #ffcb05; margin: 1.5em 10px; padding: 0.5em 10px;} code {color: red;}</style>
 <h1 id="introduction">Introduction</h1>
-<p><em>Simpson's Paradox</em> is the idea that associations between variables that are found between two variables in the sample as a whole, can be <em>very different</em> (or even <em>reversed</em>) when a third variable is introduced.</p>
-<p>There are specific mathematical conditions under which Simpson's Paradox applies. However, thinking through these mathematical conditions may not be helpful to develop intuitions about Simpson's Paradox.</p>
-<p>Careful inspection of visualizations can help us to develop some understanding of Simpson's Paradox.</p>
+<p><em>Simpson’s Paradox</em> is the idea that associations between variables that are found between two variables in the sample as a whole, can be <em>very different</em> (or even <em>reversed</em>) when a third variable is introduced.</p>
+<p>There are specific mathematical conditions under which Simpson’s Paradox applies. However, thinking through these mathematical conditions may not be helpful to develop intuitions about Simpson’s Paradox.</p>
+<p>Careful inspection of visualizations can help us to develop some understanding of Simpson’s Paradox.</p>
 <blockquote>
-<p>The key substantive conclusion is that models of the data that only account for two variables may provide <em>very different</em>--or even <em>opposite</em>--conclusions from models of the world that account for many variables.</p>
+<p>The key substantive conclusion is that models of the data that only account for two variables may provide <em>very different</em>–or even <em>opposite</em>–conclusions from models of the world that account for many variables.</p>
 </blockquote>
 <h1 id="some-hypothetical-data">Some Hypothetical Data</h1>
 <p>These data are based on the hypothetical data provided by Simpson (1951).</p>
@@ -80,10 +220,10 @@ table tbody:last-child tr:last-child td {border-bottom:1px solid black;}
      └────────────────────────────────────┘
 </pre>
 <blockquote>
-<p>Because these are weighted data--where every row of data represents more than one individual--we will need to use the <code>[fweight=count]</code> syntax.</p>
+<p>Because these are weighted data–where every row of data represents more than one individual–we will need to use the <code>[fweight=count]</code> syntax.</p>
 </blockquote>
 <h1 id="graph-scheme">Graph Scheme</h1>
-<p>I am not a particular fan of Stata's default graphing scheme, so I am going to use the <code>michigan</code> graph scheme here. (To install, type <code>net from https://agrogan1.github.io/Stata</code>)</p>
+<p>I am not a particular fan of Stata’s default graphing scheme, so I am going to use the <code>michigan</code> graph scheme here. (To install, type <code>net from https://agrogan1.github.io/Stata</code>)</p>
 <pre class='stata'>. set scheme michigan // use Michigan graph scheme
 </pre>
 <h1 id="sample-as-a-whole">Sample As A Whole</h1>
@@ -118,7 +258,7 @@ table tbody:last-child tr:last-child td {border-bottom:1px solid black;}
 </pre>
 <h2 id="mosaic-plot">Mosaic Plot</h2>
 <blockquote>
-<p>Mosaic Plots are a little bit counterintuive at first. However, I believe that--after a little bit of study--Mosaic Plots provide the best visual representation of these relationships. The command for a Mosaic Plot in Stata is <code>spineplot</code>, installed by typing <code>ssc install spineplot</code>.</p>
+<p>Mosaic Plots are a little bit counterintuive at first. However, I believe that–after a little bit of study–Mosaic Plots provide the best visual representation of these relationships. The command for a Mosaic Plot in Stata is <code>spineplot</code>, installed by typing <code>ssc install spineplot</code>.</p>
 </blockquote>
 <pre class='stata'>. spineplot status treatment [fweight=count], ///
 > bar1(color(gold) fintensity(%100)) bar2(color(navy %100) fintensity(%100)) ///
@@ -129,12 +269,12 @@ table tbody:last-child tr:last-child td {border-bottom:1px solid black;}
 (note:  named style % 100 not found in class intensity, default attributes used)
 </pre>
 <pre class='stata'>. graph export my_Simpsons_spineplot.png, width(1000) replace
-file my_Simpsons_spineplot.png saved as PNG format
+file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/my_Simpsons_spineplot.png
+    saved as PNG format
 </pre>
-<div class="figure">
-<img src="my_Simpsons_spineplot.png" alt="Spineplot or Mosaic Plot" />
-<p class="caption">Spineplot or Mosaic Plot</p>
-</div>
+<figure>
+<img src="my_Simpsons_spineplot.png" alt="Spineplot or Mosaic Plot" /><figcaption aria-hidden="true">Spineplot or Mosaic Plot</figcaption>
+</figure>
 <h2 id="bar-chart">Bar Chart</h2>
 <blockquote>
 <p>It is sometimes said that every data visualization should, or could, be a bar chart, so I present one here. Bar charts are a common and useful type of data visualization.</p>
@@ -145,12 +285,12 @@ file my_Simpsons_spineplot.png saved as PNG format
 > note("An Equal % Of Those Receiving And Not Receiving Treatment Are Alive")
 </pre>
 <pre class='stata'>. graph export my_Simpsons_barchart.png, width(1000) replace
-file my_Simpsons_barchart.png saved as PNG format
+file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/my_Simpsons_barchart.png saved
+    as PNG format
 </pre>
-<div class="figure">
-<img src="my_Simpsons_barchart.png" alt="Bar Chart" />
-<p class="caption">Bar Chart</p>
-</div>
+<figure>
+<img src="my_Simpsons_barchart.png" alt="Bar Chart" /><figcaption aria-hidden="true">Bar Chart</figcaption>
+</figure>
 <h2 id="pie-chart">Pie Chart</h2>
 <blockquote>
 <p>A Pie Chart sometimes is more intuitive at first, but actually has less information than a Mosaic Chart.</p>
@@ -161,12 +301,12 @@ file my_Simpsons_barchart.png saved as PNG format
 > note("An Equal % Of Those Receiving And Not Receiving Treatment Are Alive"))
 </pre>
 <pre class='stata'>. graph export my_Simpsons_piechart.png, width(1000) replace
-file my_Simpsons_piechart.png saved as PNG format
+file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/my_Simpsons_piechart.png saved
+    as PNG format
 </pre>
-<div class="figure">
-<img src="my_Simpsons_piechart.png" alt="Pie Chart" />
-<p class="caption">Pie Chart</p>
-</div>
+<figure>
+<img src="my_Simpsons_piechart.png" alt="Pie Chart" /><figcaption aria-hidden="true">Pie Chart</figcaption>
+</figure>
 <h1 id="sample-divided-by-groups">Sample Divided By Groups</h1>
 <blockquote>
 <p>The treatment appears to have an effect. A greater percentage of those recieving treatment are alive.</p>
@@ -174,7 +314,7 @@ file my_Simpsons_piechart.png saved as PNG format
 <h2 id="cross-tabulation-1">Cross Tabulation</h2>
 <pre class='stata'>. bysort group: tabulate status treatment [fweight=count], row col
 
-────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────────────────────────────────────
 -> group = A
 
 ┌───────────────────┐
@@ -200,7 +340,7 @@ file my_Simpsons_piechart.png saved as PNG format
            │     35.00      65.00 │    100.00 
            │    100.00     100.00 │    100.00 
 
-────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────────────────────────────────────
 -> group = B
 
 ┌───────────────────┐
@@ -223,7 +363,7 @@ file my_Simpsons_piechart.png saved as PNG format
            │     40.00      44.44 │     43.75 
 ───────────┼──────────────────────┼──────────
      Total │         5         27 │        32 
-           │     15.63      84.38 │    100.00 
+           │     15.62      84.38 │    100.00 
            │    100.00     100.00 │    100.00 
 </pre>
 <h2 id="mosaic-plot-1">Mosaic Plot</h2>
@@ -251,12 +391,12 @@ file my_Simpsons_piechart.png saved as PNG format
 (note:  named style % 100 not found in class intensity, default attributes used)
 </pre>
 <pre class='stata'>. graph export my_Simpsons_spineplot2.png, width(1000) replace
-file my_Simpsons_spineplot2.png saved as PNG format
+file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/my_Simpsons_spineplot2.png
+    saved as PNG format
 </pre>
-<div class="figure">
-<img src="my_Simpsons_spineplot2.png" alt="Spineplot or Mosaic Plot" />
-<p class="caption">Spineplot or Mosaic Plot</p>
-</div>
+<figure>
+<img src="my_Simpsons_spineplot2.png" alt="Spineplot or Mosaic Plot" /><figcaption aria-hidden="true">Spineplot or Mosaic Plot</figcaption>
+</figure>
 <h2 id="bar-chart-1">Bar Chart</h2>
 <pre class='stata'>. graph bar [fweight=count], over(status) over(treatment) asyvars ///
 > by(group, ///
@@ -265,12 +405,12 @@ file my_Simpsons_spineplot2.png saved as PNG format
 > note("A Greater % Of Those Receiving Treatment Are Alive"))
 </pre>
 <pre class='stata'>. graph export my_Simpsons_barchart2.png, width(1000) replace
-file my_Simpsons_barchart2.png saved as PNG format
+file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/my_Simpsons_barchart2.png
+    saved as PNG format
 </pre>
-<div class="figure">
-<img src="my_Simpsons_barchart2.png" alt="Bar Chart" />
-<p class="caption">Bar Chart</p>
-</div>
+<figure>
+<img src="my_Simpsons_barchart2.png" alt="Bar Chart" /><figcaption aria-hidden="true">Bar Chart</figcaption>
+</figure>
 <h2 id="pie-chart-1">Pie Chart</h2>
 <pre class='stata'>. graph pie if group == 1 [fweight=count], over(status) by(treatment, ///
 > caption("Group A")) ///
@@ -286,13 +426,13 @@ file my_Simpsons_barchart2.png saved as PNG format
 > note("A Greater % Of Those Receiving Treatment Are Alive") 
 </pre>
 <pre class='stata'>. graph export my_Simpsons_piechart2.png, width(1000) replace
-file my_Simpsons_piechart2.png saved as PNG format
+file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/my_Simpsons_piechart2.png
+    saved as PNG format
 </pre>
-<div class="figure">
-<img src="my_Simpsons_piechart2.png" alt="Pie Chart" />
-<p class="caption">Pie Chart</p>
-</div>
+<figure>
+<img src="my_Simpsons_piechart2.png" alt="Pie Chart" /><figcaption aria-hidden="true">Pie Chart</figcaption>
+</figure>
 <h1 id="reference">Reference</h1>
-<p>Simpson, E. (1951). The Interpretation of Interaction in Contingency Tables. <em>Journal of the Royal Statistical Society. Series B (Methodological)</em>, 13(2), 238-241. Retrieved February 2, 2021, from <a href="http://www.jstor.org/stable/2984065" class="uri">http://www.jstor.org/stable/2984065</a></p>
+<p>Simpson, E. (1951). The Interpretation of Interaction in Contingency Tables. <em>Journal of the Royal Statistical Society. Series B (Methodological)</em>, 13(2), 238-241. Retrieved February 2, 2021, from <a href="http://www.jstor.org/stable/2984065">http://www.jstor.org/stable/2984065</a></p>
 </body>
 </html>

@@ -127,7 +127,7 @@ The Raincloud Plot [@raincloud] works by combining the last three of these geome
 
 The code for this raincloud plot relies on `position` arguments to position the three different geometries, and is also substantially improved by `scale`, `color`, `size` and `alpha` (transparency) arguments. These settings may need to be tweaked for your particular implementation of a raincloud plot.
 
-```{r}
+```{r, fig.height=6}
 
 library(ggplot2)
 

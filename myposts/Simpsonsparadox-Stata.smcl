@@ -1,17 +1,17 @@
 {smcl}
 {com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
-       {txt}log:  {res}C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\myposts\Simpsonsparadox-Stata.smcl
+       {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/Simpsonsparadox-Stata.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}19 Jul 2021, 13:40:50
+ {txt}opened on:  {res} 6 Aug 2021, 10:11:56
 {txt}
 {com}. //_1
 . display c(current_date)
-{res}19 Jul 2021
+{res} 6 Aug 2021
 {txt}
 {com}. //_2
 . display c(current_time)
-{res}13:40:50
+{res}10:11:56
 {txt}
 {com}. //_3
 . use simpsonsparadox.dta, clear
@@ -83,7 +83,7 @@ intensity,  default attributes used)
 . graph export my_Simpsons_spineplot.png, width(1000) replace
 {txt}{p 0 4 2}
 file {bf}
-my_Simpsons_spineplot.png{rm}
+/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/my_Simpsons_spineplot.png{rm}
 saved as
 PNG
 format
@@ -99,7 +99,7 @@ format
 . graph export my_Simpsons_barchart.png, width(1000) replace
 {txt}{p 0 4 2}
 file {bf}
-my_Simpsons_barchart.png{rm}
+/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/my_Simpsons_barchart.png{rm}
 saved as
 PNG
 format
@@ -115,7 +115,7 @@ format
 . graph export my_Simpsons_piechart.png, width(1000) replace
 {txt}{p 0 4 2}
 file {bf}
-my_Simpsons_piechart.png{rm}
+/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/my_Simpsons_piechart.png{rm}
 saved as
 PNG
 format
@@ -173,7 +173,7 @@ format
            {txt}{c |}{res}     40.00      44.44 {txt}{c |}{res}     43.75 
 {txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
      Total {c |}{res}         5         27 {txt}{c |}{res}        32 
-           {txt}{c |}{res}     15.63      84.38 {txt}{c |}{res}    100.00 
+           {txt}{c |}{res}     15.62      84.38 {txt}{c |}{res}    100.00 
            {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
 
 {txt}
@@ -239,7 +239,7 @@ intensity,  default attributes used)
 . graph export my_Simpsons_spineplot2.png, width(1000) replace
 {txt}{p 0 4 2}
 file {bf}
-my_Simpsons_spineplot2.png{rm}
+/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/my_Simpsons_spineplot2.png{rm}
 saved as
 PNG
 format
@@ -256,7 +256,7 @@ format
 . graph export my_Simpsons_barchart2.png, width(1000) replace
 {txt}{p 0 4 2}
 file {bf}
-my_Simpsons_barchart2.png{rm}
+/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/my_Simpsons_barchart2.png{rm}
 saved as
 PNG
 format
@@ -282,7 +282,7 @@ format
 . graph export my_Simpsons_piechart2.png, width(1000) replace
 {txt}{p 0 4 2}
 file {bf}
-my_Simpsons_piechart2.png{rm}
+/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/my_Simpsons_piechart2.png{rm}
 saved as
 PNG
 format
@@ -291,9 +291,9 @@ format
 {com}. //_^
 . log close
       {txt}name:  {res}<unnamed>
-       {txt}log:  {res}C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\myposts\Simpsonsparadox-Stata.smcl
+       {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/Simpsonsparadox-Stata.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}19 Jul 2021, 13:41:03
+ {txt}closed on:  {res} 6 Aug 2021, 10:12:18
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

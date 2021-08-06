@@ -1,5 +1,9 @@
 * markstat for blog posts
 
+clear all
+
+cd "/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts"
+
 * working with dates in Stata
 
 doedit "working-with-dates-in-Stata.stmd"

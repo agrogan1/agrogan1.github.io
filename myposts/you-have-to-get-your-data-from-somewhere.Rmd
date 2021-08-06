@@ -3,22 +3,22 @@ title: "You Have To Get Your Data From Somewhere"
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
-  distill::distill_article:
-    highlight: haddock
-    toc: yes
   tufte::tufte_handout:
     number_sections: yes
+    toc: yes
+  distill::distill_article:
+    highlight: haddock
     toc: yes
   tufte::tufte_html:
     css: myTufteCSS.css
     highlight: haddock
     number_sections: yes
     toc: yes
+  tint::tintPdf:
+    toc: yes
   pdf_document:
     toc: yes
     number_sections: yes
-  tint::tintPdf:
-    toc: yes
   word_document:
     toc: yes
     highlight: haddock
@@ -60,8 +60,6 @@ Note that while learning the correct syntax is *very helpful*, RStudio can gener
 # RMarkdown
 
 > When you are working with RMarkdown, each RMarkdown document creates its own separate **working environment**. Therefore each RMarkdown document needs to have a line, or lines, of code that import the data file for that individual RMarkdown document.
-
-\newpage
 
 # Basic Idea
 
