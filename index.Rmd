@@ -70,7 +70,7 @@ myHTMLfiles %>%
             # sort by descending date
             options = list(pageLength = 5, 
                            order = list(list(0, 
-                                             'desc')))) %>% 
+                                             'asc')))) %>% 
   formatDate(1, 'toDateString') # format column 1 as dates
 
 ```

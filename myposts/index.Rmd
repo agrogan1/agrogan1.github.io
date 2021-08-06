@@ -80,7 +80,7 @@ rownames_to_column(var = "filename") %>% # rownames to column
             caption = "Blog-ish Posts",
             # sort by descending date
             options = list(order = list(list(0, 
-                                             'desc')))) %>% 
+                                             'asc')))) %>% 
   formatDate(1, 'toDateString') # format column 1 as dates
   
   
