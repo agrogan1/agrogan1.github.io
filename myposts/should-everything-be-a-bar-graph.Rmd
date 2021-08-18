@@ -8,7 +8,11 @@ author:
     affiliation: University of Michigan
     affiliation_url: https://www.umich.edu/
 date: "`r Sys.Date()`"
-output: distill::distill_article
+output: 
+  distill::distill_article:
+    highlight: haddock
+    toc: yes
+    code_folding: true
 ---
 
 ```{r setup, include=FALSE}
@@ -16,6 +20,8 @@ output: distill::distill_article
 knitr::opts_chunk$set(echo = FALSE)
 
 ```
+
+# Background
 
 There are many different kinds of data visualization. In the language of the `ggplot` package for R, there are many different kinds of `geom`etries that we can apply to data.
 
@@ -27,6 +33,10 @@ knitr::include_graphics("./images/banner.png")
 
 However, after a number of years of working on data visualization, I have started to think about the advantages of bar graphs. While *not every visualization needs to be a bar graph*, it sometimes seems as though many data visualizations *would work well as a bar graph*.
 
+# Some Bar Graphs
+
 In this slide deck, I use the `ggplot` package to develop bar graphs with `geom_col`, one of the bar graph `geom`etries. After building a basic bar graph, I apply many formatting ideas, most of which I have learned from the blog of Cedric Scherer ([https://www.cedricscherer.com/](https://www.cedricscherer.com/)).
+
+# Slides
 
 I discuss these ideas [here](https://agrogan1.github.io/dataviz/should-everything-be-a-bar-graph/#1)

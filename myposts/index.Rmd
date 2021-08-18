@@ -52,12 +52,7 @@ save(myPDFfiles, file = "myPDFfiles.RData")
 
 ```
 
-
-::::: {.panelset}
-
-::: {.panel}
-
-## HTML Files {.panel-name}
+## HTML Files
 
 ```{r}
 
@@ -86,11 +81,8 @@ rownames_to_column(var = "filename") %>% # rownames to column
   
 ```
 
-:::
 
-::: {.panel}
-
-## PDF Files {.panel-name}
+## PDF Files 
 
 ```{r}
 
@@ -104,8 +96,8 @@ rownames_to_column(var = "filename") %>% # rownames to column
   mutate(url = paste0("<a href='", # paste together URL
                       filename,
                       "'>",
-                      filename, 
-                      "</a>")) %>% 
+                      filename,
+                      "</a>")) %>%
   select(modified, url) %>% # select columns
   datatable(rownames = FALSE, # no row names
             escape = 1, # escape URL column
@@ -115,13 +107,7 @@ rownames_to_column(var = "filename") %>% # rownames to column
                                              'desc')))) %>% 
   formatDate(1, 'toDateString') # format column 1 as dates
   
-  
 ```
-
-
-:::
-
-:::::
 
 
 # Credits
