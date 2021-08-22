@@ -80,28 +80,20 @@ myHTMLfiles %>%
 
 * [Data Visualization](https://agrogan1.github.io/dataviz/dataviz-course)
 
+
+
 * [Multilevel and Longitudinal Modeling](https://agrogan1.github.io/multilevel/)
+
 
 * [Categorical Data Analysis](https://agrogan1.github.io/newstuff/categorical/)
 
 <aside>
-```{r, fig.cap="Data Visualization"}
+![Data Visualization](images/banner.png)
 
-knitr::include_graphics("images/banner.png")
+![Multilevel and Longitudinal Modeling](images/schools.png)
 
-```
+![Categorical Data Analysis](images/logistic.png)
 
-```{r, fig.cap="Multilevel Modeling"}
-
-knitr::include_graphics("images/schools.png")
-
-```
-
-```{r, fig.cap="Categorical Data Analysis"}
-
-knitr::include_graphics("images/logistic.png")
-
-```
 </aside>
 
 # Research on Parenting and Child Development
