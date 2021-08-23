@@ -90,7 +90,9 @@ myHTMLfiles %>%
 <aside>
 ![Data Visualization](images/banner.png)
 
-![Multilevel and Longitudinal Modeling](images/schools.png)
+![Cross Sectional Multilevel Models](images/cross-sectional.png)
+
+![Longitudinal Multilevel Models](images/longitudinal.png)
 
 ![Categorical Data Analysis](images/logistic.png)
 
