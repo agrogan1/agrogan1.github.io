@@ -37,7 +37,7 @@ knitr::include_graphics("images/forest.png")
 
 # About Me
 
-My interests are in developing more knowledge to reduce violence against children and to improve child and family wellbeing. In this research I try to understand the family and community origins of aggression, antisocial behavior, anxiety and depression. My current research focuses on parenting and child development in international context. I try to understand these issues within the context of current conversations about children’s rights.
+My interests are in developing more knowledge to reduce violence against children and Adverse Childhood Experiences (ACES), with the aim of improving child and family wellbeing. In this research I try to understand the family and community origins of aggression, antisocial behavior, anxiety and depression. My current research focuses on parenting and child development in international context. I try to understand these issues within the context of current conversations about children’s rights.
 
 I teach courses mostly in the area of statistics, quantitative methods and data visualization.
 
