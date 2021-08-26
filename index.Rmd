@@ -1,5 +1,7 @@
 ---
-title: "Research on Parenting and Child Development, and Selected Statistical Materials"
+title: "Andrew Grogan-Kaylor"
+description: |
+  Professor of Social Work
 author:
   - name: Andy Grogan-Kaylor 
     url: https://agrogan1.github.io/

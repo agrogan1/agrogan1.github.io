@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.4.2)  6 AUG 2021 10:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.8.25)  26 AUG 2021 08:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **you-have-to-get-your-data-from-somewhere.tex
 (./you-have-to-get-your-data-from-somewhere.tex
-LaTeX2e <2020-10-01> patch level 4
-L3 programming layer <2021-02-18>
+LaTeX2e <2021-06-01> patch level 1
+L3 programming layer <2021-07-12>
 (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/tufte-latex/tufte-handout.
 cls
 Document Class: tufte-handout 2015/06/21 v3.5.2 Tufte-handout class
@@ -18,27 +18,27 @@ File: tufte-common.def 2015/06/21 v3.5.2 Common code for the Tufte-LaTeX styles
 Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/Us
 ers/agrogan/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks15
-\XKV@tempa@toks=\toks16
+\XKV@toks=\toks16
+\XKV@tempa@toks=\toks17
 (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/keyval.tex))
-\XKV@depth=\count179
+\XKV@depth=\count182
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/xifthen/xifthen.sty
 Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
 (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count180
-\calc@Bcount=\count181
+\calc@Acount=\count183
+\calc@Bcount=\count184
 \calc@Adimen=\dimen138
 \calc@Bdimen=\dimen139
 \calc@Askip=\skip47
 \calc@Bskip=\skip48
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count182
+\calc@Ccount=\count185
 \calc@Cskip=\skip49
 ) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 ) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
 Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
 )) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/hardwrap/hardwrap.sty
@@ -61,24 +61,24 @@ Package pdftexcmds Info: \pdfdraftmode found.
 ) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
 )
-\hw@charcount=\count183
-\hw@wordcount=\count184
-\hw@maxprintline=\count185
+\hw@charcount=\count186
+\hw@wordcount=\count187
+\hw@maxprintline=\count188
 (|kpsewhich -var-value=max_print_line))
 Class tufte-handout Info: Loading the base class `article'
 (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+Document Class: article 2021/02/12 v1.4n Standard LaTeX document class
 (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+File: size10.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count186
-\c@section=\count187
-\c@subsection=\count188
-\c@subsubsection=\count189
-\c@paragraph=\count190
-\c@subparagraph=\count191
-\c@figure=\count192
-\c@table=\count193
+\c@part=\count189
+\c@section=\count190
+\c@subsection=\count191
+\c@subsubsection=\count192
+\c@paragraph=\count193
+\c@subparagraph=\count194
+\c@figure=\count195
+\c@table=\count196
 \abovecaptionskip=\skip50
 \belowcaptionskip=\skip51
 \bibindent=\dimen140
@@ -87,21 +87,21 @@ Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
 ) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 ) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/titlesec/titlesec.sty
-Package: titlesec 2019/10/16 v2.13 Sectioning titles
-\ttl@box=\box47
+Package: titlesec 2021/07/05 v2.14 Sectioning titles
+\ttl@box=\box50
 \beforetitleunit=\skip52
 \aftertitleunit=\skip53
 \ttl@plus=\dimen141
 \ttl@minus=\dimen142
-\ttl@toksa=\toks17
+\ttl@toksa=\toks18
 \titlewidth=\dimen143
 \titlewidthlast=\dimen144
 \titlewidthfirst=\dimen145
 ) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/titlesec/titletoc.sty
-Package: titletoc 2019/10/16 v2.13 TOC entries
+Package: titletoc 2021/07/05 v2.14 TOC entries
 \ttl@leftsep=\dimen146
 ) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
+Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
 (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 )
@@ -123,25 +123,25 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
 \@linkdim=\dimen147
-\Hy@linkcounter=\count194
-\Hy@pagecounter=\count195
+\Hy@linkcounter=\count197
+\Hy@pagecounter=\count198
 (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
 (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref-langpatc
 hes.def
-File: hyperref-langpatches.def 2021-02-27 v7.00k Hyperref: patches for babel la
+File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
 nguages
 ) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count196
+\Hy@SavedSpaceFactor=\count199
 (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
@@ -154,7 +154,7 @@ Package hyperref Info: Plain pages OFF on input line 4207.
 Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count197
+\c@Hy@tempcnt=\count266
 (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -169,36 +169,35 @@ y
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count198
+\Fld@menulength=\count267
 \Field@Width=\dimen149
 \Fld@charsize=\dimen150
-Package hyperref Info: Hyper figures OFF on input line 6075.
-Package hyperref Info: Link nesting OFF on input line 6080.
-Package hyperref Info: Hyper index ON on input line 6083.
-Package hyperref Info: backreferencing OFF on input line 6090.
-Package hyperref Info: Link coloring OFF on input line 6095.
-Package hyperref Info: Link coloring with OCG OFF on input line 6100.
-Package hyperref Info: PDF/A mode OFF on input line 6105.
-LaTeX Info: Redefining \ref on input line 6145.
-LaTeX Info: Redefining \pageref on input line 6149.
+Package hyperref Info: Hyper figures OFF on input line 6076.
+Package hyperref Info: Link nesting OFF on input line 6081.
+Package hyperref Info: Hyper index ON on input line 6084.
+Package hyperref Info: backreferencing OFF on input line 6091.
+Package hyperref Info: Link coloring OFF on input line 6096.
+Package hyperref Info: Link coloring with OCG OFF on input line 6101.
+Package hyperref Info: PDF/A mode OFF on input line 6106.
+LaTeX Info: Redefining \ref on input line 6146.
+LaTeX Info: Redefining \pageref on input line 6150.
 (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.sty
-Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
-ge
-with kernel methods
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
 )
-\Hy@abspage=\count199
-\c@Item=\count266
+\Hy@abspage=\count268
+\c@Item=\count269
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2021-02-27 v7.00k Hyperref driver for pdfTeX
+File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
 (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
 e
 with kernel methods
 )
-\Fld@listcount=\count267
-\c@bookmark@seq@number=\count268
+\Fld@listcount=\count270
+\c@bookmark@seq@number=\count271
 
 (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilech
 eck.sty
@@ -214,11 +213,6 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip54
 ) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/ragged2e/ragged2e.sty
 Package: ragged2e 2021/02/05 v3.0 ragged2e Package
-(/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/everysel/everysel.sty
-Package: everysel 2021/01/20 v2.1 EverySelectfont Package (MS)
-
-(/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/everysel/everysel-2011-10-
-28.sty))
 \CenteringLeftskip=\skip55
 \RaggedLeftLeftskip=\skip56
 \RaggedRightLeftskip=\skip57
@@ -238,9 +232,9 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count269
-\Gm@cntv=\count270
-\c@Gm@tempcnt=\count271
+\Gm@cnth=\count272
+\Gm@cntv=\count273
+\c@Gm@tempcnt=\count274
 \Gm@bindingoffset=\dimen151
 \Gm@wd@mp=\dimen152
 \Gm@odd@mp=\dimen153
@@ -249,12 +243,12 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutheight=\dimen156
 \Gm@layouthoffset=\dimen157
 \Gm@layoutvoffset=\dimen158
-\Gm@dimlist=\toks18
+\Gm@dimlist=\toks19
 ) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/changepage/changepage.st
 y
 Package: changepage 2009/10/20 v1.0c check page and change page layout
-\c@cp@cntr=\count272
-\cp@tempcnt=\count273
+\c@cp@cntr=\count275
+\cp@tempcnt=\count276
 )
 \@tufte@overhang=\skip69
 \@tufte@fullwidth=\skip70
@@ -265,7 +259,7 @@ Package: paralist 2017/01/22 v2.7 Extended list environments
 \plpartopsep=\skip73
 \plitemsep=\skip74
 \plparsep=\skip75
-\pl@lab=\toks19
+\pl@lab=\toks20
 ) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/textcase/textcase.sty
 Package: textcase 2019/09/14 v1.00 Text only upper/lower case changing (DPC)
 )
@@ -302,12 +296,12 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip76
 \bibsep=\skip77
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count274
+\c@NAT@ctr=\count277
 ) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/natbib/bibentry.sty
 Package: bibentry 2007/10/30 1.5 (PWD)
 )
 No file you-have-to-get-your-data-from-somewhere.bbl.
-\c@@tufte@num@bibkeys=\count275
+\c@@tufte@num@bibkeys=\count278
 (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/sauerj/optparams.sty
 Package: optparams 2004/08/14 v0.9 multiple optional parameters in macros
 )
@@ -315,14 +309,23 @@ Package: optparams 2004/08/14 v0.9 multiple optional parameters in macros
 (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
 )
-\@tufte@margin@floatbox=\box48
-\@tufte@figure@box=\box49
-\@tufte@caption@box=\box50
+\@tufte@margin@floatbox=\box51
+\@tufte@figure@box=\box52
+\@tufte@caption@box=\box53
 \@tufte@caption@vertical@offset=\skip79
 \@tufte@float@contents@width=\skip80
-(/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
-) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/base/textcomp.sty
+(/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/psnfss/mathpazo.sty
+Package: mathpazo 2020/03/25 PSNFSS-v9.3 Palatino w/ Pazo Math (D.Puga, WaS) 
+\symupright=\mathgroup4
+) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/psnfss/helvet.sty
+Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
+) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+pplj on input line 1
+12.
+(/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/psnfss/t1pplj.fd
+File: t1pplj.fd 2004/09/06 font definitions for T1/pplj.
+)) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 ) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
@@ -340,30 +343,27 @@ rs
 \tufteskipamount=\skip90
 (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
-\c@tracingmulticols=\count276
-\mult@box=\box51
+\c@tracingmulticols=\count279
+\mult@box=\box54
 \multicol@leftmargin=\dimen159
-\c@unbalance=\count277
-\c@collectmore=\count278
-\doublecol@number=\count279
-\multicoltolerance=\count280
-\multicolpretolerance=\count281
+\c@unbalance=\count280
+\c@collectmore=\count281
+\doublecol@number=\count282
+\multicoltolerance=\count283
+\multicolpretolerance=\count284
 \full@width=\dimen160
 \page@free=\dimen161
 \premulticols=\dimen162
 \postmulticols=\dimen163
 \multicolsep=\skip91
 \multicolbaselineskip=\skip92
-\partial@page=\box52
-\last@line=\box53
+\partial@page=\box55
+\last@line=\box56
 \maxbalancingoverflow=\dimen164
-\mult@rightbox=\box54
-\mult@grightbox=\box55
-\mult@gfirstbox=\box56
-\mult@firstbox=\box57
-\@tempa=\box58
-\@tempa=\box59
-\@tempa=\box60
+\mult@rightbox=\box57
+\mult@grightbox=\box58
+\mult@gfirstbox=\box59
+\mult@firstbox=\box60
 \@tempa=\box61
 \@tempa=\box62
 \@tempa=\box63
@@ -398,34 +398,37 @@ Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \@tempa=\box92
 \@tempa=\box93
 \@tempa=\box94
-\c@minrows=\count282
-\c@columnbadness=\count283
-\c@finalcolumnbadness=\count284
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\c@minrows=\count285
+\c@columnbadness=\count286
+\c@finalcolumnbadness=\count287
 \last@try=\dimen165
 \multicolovershoot=\dimen166
 \multicolundershoot=\dimen167
-\mult@nat@firstbox=\box95
-\colbreak@box=\box96
-\mc@col@check@num=\count285
+\mult@nat@firstbox=\box98
+\colbreak@box=\box99
+\mc@col@check@num=\count288
 ))) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks20
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
+\@emptytoks=\toks21
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2020/09/23 v2.17i AMS math features
+Package: amsmath 2021/04/20 v2.17j AMS math features
 \@mathmargin=\skip93
 For additional information on amsmath, use the `?' option.
 (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks21
+\@emptytoks=\toks22
 \ex@=\dimen168
 )) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
@@ -433,41 +436,41 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count286
+\inf@bad=\count289
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count287
-\leftroot@=\count288
+\uproot@=\count290
+\leftroot@=\count291
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count289
-\DOTSCASE@=\count290
+\classnum@=\count292
+\DOTSCASE@=\count293
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box97
-\strutbox@=\box98
+\Mathstrutbox@=\box100
+\strutbox@=\box101
 \big@size=\dimen170
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count291
-\c@MaxMatrixCols=\count292
+\macc@depth=\count294
+\c@MaxMatrixCols=\count295
 \dotsspace@=\muskip17
-\c@parentequation=\count293
-\dspbrk@lvl=\count294
-\tag@help=\toks22
-\row@=\count295
-\column@=\count296
-\maxfields@=\count297
-\andhelp@=\toks23
+\c@parentequation=\count296
+\dspbrk@lvl=\count297
+\tag@help=\toks23
+\row@=\count298
+\column@=\count299
+\maxfields@=\count300
+\andhelp@=\toks24
 \eqnshift@=\dimen171
 \alignsep@=\dimen172
 \tagshift@=\dimen173
 \tagwidth@=\dimen174
 \totwidth@=\dimen175
 \lineht@=\dimen176
-\@envbody=\toks24
+\@envbody=\toks25
 \multlinegap=\skip94
 \multlinetaggap=\skip95
-\mathdisplay@stack=\toks25
+\mathdisplay@stack=\toks26
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
 ) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/base/fixltx2e.sty
@@ -480,22 +483,22 @@ Package fixltx2e Warning: fixltx2e is not required with releases after 2015
 
 Already applied: [0000/00/00] Old fixltx2e package on input line 53.
 ) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2020/08/01 v1.3d Input encoding file
-\inpenc@prehook=\toks26
-\inpenc@posthook=\toks27
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks27
+\inpenc@posthook=\toks28
 ) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
 (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
 (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 ) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cf
 g
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 105.
+Package graphics Info: Driver file: pdftex.def on input line 107.
 )
 \Gin@req@height=\dimen177
 \Gin@req@width=\dimen178
@@ -511,12 +514,12 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen186
 \cmidrulekern=\dimen187
 \defaultaddspace=\dimen188
-\@cmidla=\count298
-\@cmidlb=\count299
+\@cmidla=\count301
+\@cmidlb=\count302
 \@aboverulesep=\dimen189
 \@belowrulesep=\dimen190
-\@thisruleclass=\count300
-\@lastruleclass=\count301
+\@thisruleclass=\count303
+\@lastruleclass=\count304
 \@thisrulewidth=\dimen191
 ) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/units/units.sty
 Package: units 1998/08/04 v0.9b Typesetting units
@@ -526,39 +529,40 @@ Package: nicefrac 1998/08/04 v0.9b Nice fractions
 \L@UnitsRaiseTextstyle=\skip97
 \L@UnitsRaiseScriptstyle=\skip98
 )) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
-Package: fancyvrb 2021/01/20 v3.7 verbatim text (tvz,hv)
-\FV@CodeLineNo=\count302
+Package: fancyvrb 2021/08/12 v3.8 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count305
 \FV@InFile=\read2
-\FV@TabBox=\box99
-\c@FancyVerbLine=\count303
-\FV@StepNumber=\count304
+\FV@TabBox=\box102
+\c@FancyVerbLine=\count306
+\FV@StepNumber=\count307
 \FV@OutFile=\write3
 ) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
-Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+Package: longtable 2021-05-07 v4.16 Multi-page Table package (DPC)
 \LTleft=\skip99
 \LTright=\skip100
 \LTpre=\skip101
 \LTpost=\skip102
-\LTchunksize=\count305
+\LTchunksize=\count308
 \LTcapwidth=\dimen192
-\LT@head=\box100
-\LT@firsthead=\box101
-\LT@foot=\box102
-\LT@lastfoot=\box103
-\LT@cols=\count306
-\LT@rows=\count307
-\c@LT@tables=\count308
-\c@LT@chunks=\count309
-\LT@p@ftn=\toks28
+\LT@head=\box103
+\LT@firsthead=\box104
+\LT@foot=\box105
+\LT@lastfoot=\box106
+\LT@gbox=\box107
+\LT@cols=\count309
+\LT@rows=\count310
+\c@LT@tables=\count311
+\c@LT@chunks=\count312
+\LT@p@ftn=\toks29
 ) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box104
-\UL@hyphenbox=\box105
+\UL@box=\box108
+\UL@hyphenbox=\box109
 \UL@skip=\skip103
-\UL@hook=\toks29
+\UL@hook=\toks30
 \UL@height=\dimen193
-\UL@pe=\count310
+\UL@pe=\count313
 \UL@pixel=\dimen194
-\ULC@box=\box106
+\ULC@box=\box110
 Package: ulem 2019/11/18
 \ULdepth=\dimen195
 ) (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/morefloats/morefloats.st
@@ -571,9 +575,9 @@ Package morefloats Info: Maximum number of possible floats asked for: 36
 )
 (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex
 .def
-File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count311
-\l__pdf_internal_box=\box107
+File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count314
+\l__pdf_internal_box=\box111
 ) (./you-have-to-get-your-data-from-somewhere.aux)
 \openout1 = `you-have-to-get-your-data-from-somewhere.aux'.
 
@@ -605,7 +609,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 tring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count312
+\c@section@level=\count315
 )
 LaTeX Info: Redefining \ref on input line 110.
 LaTeX Info: Redefining \pageref on input line 110.
@@ -615,8 +619,6 @@ rom-somewhere.out)
 \@outlinefile=\write4
 \openout4 = `you-have-to-get-your-data-from-somewhere.out'.
 
-ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 110.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -672,16 +674,52 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
 (/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 154
-.
-(/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+LaTeX Font Info:    Trying to load font information for OT1+pplx on input line 
+154.
+(/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ot1pplx.fd
+File: ot1pplx.fd 2004/09/06 font definitions for OT1/pplx.
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 154
-.
-(/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
+154.
+(/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/psnfss/omlzplm.fd
+File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
+)
+LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
+154.
+(/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/psnfss/omszplm.fd
+File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
+)
+LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
+154.
+(/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/psnfss/omxzplm.fd
+File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
+)
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
+154.
+(/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ot1zplm.fd
+File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+)
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 154.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 154.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 154.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 154.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 154.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 154.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 154.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 154.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 154.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 154.
+[1
 
 {/Users/agrogan/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
@@ -723,6 +761,11 @@ set up.
 This message occurred on input line 305.
 
 [3]
+LaTeX Font Info:    Trying to load font information for TS1+pplj on input line 
+312.
+(/Users/agrogan/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ts1pplj.fd
+File: ts1pplj.fd 2004/09/06 font definitions for TS1/pplj.
+)
 
 Package bibentry Warning: You have used \nobibliography* 
 (bibentry)                without a following \bibliography.
@@ -739,37 +782,28 @@ Package rerunfilecheck Info: File `you-have-to-get-your-data-from-somewhere.out
 (rerunfilecheck)             Checksum: 11890A317F51148FDE1FD976E99ECEF2;1093.
  ) 
 Here is how much of TeX's memory you used:
- 12936 strings out of 480962
- 190049 string characters out of 5906686
- 535267 words of memory out of 5000000
- 29839 multiletter control sequences out of 15000+600000
- 421488 words of font info for 68 fonts, out of 8000000 for 9000
+ 13341 strings out of 480502
+ 197706 string characters out of 5898668
+ 539415 words of memory out of 5000000
+ 30666 multiletter control sequences out of 15000+600000
+ 462425 words of font info for 122 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 92i,11n,91p,343b,515s stack positions out of 5000i,500n,10000p,200000b,80000s
- </Users/agrogan/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm10
+ 81i,11n,83p,343b,515s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </Users/agrogan/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecit10
 00.600pk> </Users/agrogan/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec
-/ecit1000.600pk> </Users/agrogan/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jkna
-ppen/ec/ectt0800.600pk> </Users/agrogan/Library/TinyTeX/texmf-var/fonts/pk/ljfo
-ur/jknappen/ec/ecti0800.600pk> </Users/agrogan/Library/TinyTeX/texmf-var/fonts/
-pk/ljfour/jknappen/ec/ecrm0500.600pk> </Users/agrogan/Library/TinyTeX/texmf-var
-/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </Users/agrogan/Library/TinyTeX/te
-xmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </Users/agrogan/Library/Tin
-yTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0900.600pk> </Users/agrogan/Libr
-ary/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </Users/agrog
-an/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </User
-s/agrogan/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk>
- </Users/agrogan/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000
-.600pk> </Users/agrogan/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/e
-crm1095.600pk> </Users/agrogan/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknapp
-en/ec/ecti1095.600pk> </Users/agrogan/Library/TinyTeX/texmf-var/fonts/pk/ljfour
-/jknappen/ec/ecrm1200.600pk> </Users/agrogan/Library/TinyTeX/texmf-var/fonts/pk
-/ljfour/jknappen/ec/ecti1200.600pk> </Users/agrogan/Library/TinyTeX/texmf-var/f
-onts/pk/ljfour/jknappen/ec/ecti1440.600pk>
-Output written on you-have-to-get-your-data-from-somewhere.pdf (4 pages, 130479
+/ectt0800.600pk> </Users/agrogan/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jkna
+ppen/ec/ectt1000.600pk>{/Users/agrogan/Library/TinyTeX/texmf-dist/fonts/enc/dvi
+ps/base/8r.enc}</Users/agrogan/Library/TinyTeX/texmf-dist/fonts/type1/public/fp
+l/fplrc8a.pfb></Users/agrogan/Library/TinyTeX/texmf-dist/fonts/type1/public/fpl
+/fplrij8a.pfb></Users/agrogan/Library/TinyTeX/texmf-dist/fonts/type1/urw/palati
+no/uplb8a.pfb></Users/agrogan/Library/TinyTeX/texmf-dist/fonts/type1/urw/palati
+no/uplr8a.pfb></Users/agrogan/Library/TinyTeX/texmf-dist/fonts/type1/urw/palati
+no/uplri8a.pfb>
+Output written on you-have-to-get-your-data-from-somewhere.pdf (4 pages, 114417
  bytes).
 PDF statistics:
- 587 PDF objects out of 1000 (max. 8388607)
- 154 compressed objects within 2 object streams
+ 249 PDF objects out of 1000 (max. 8388607)
+ 114 compressed objects within 2 object streams
  32 named destinations out of 1000 (max. 500000)
  57 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -33,9 +33,9 @@ knitr::include_graphics("./images/banner.png")
 
 However, after a number of years of working on data visualization, I have started to think about the advantages of bar graphs. While *not every visualization needs to be a bar graph*, it sometimes seems as though many data visualizations *would work well as a bar graph*.
 
-# Some Bar Graphs
+# Bar Graphs
 
-In this slide deck, I use the `ggplot` package to develop bar graphs with `geom_col`, one of the bar graph `geom`etries. After building a basic bar graph, I apply many formatting ideas, most of which I have learned from the blog of Cedric Scherer ([https://www.cedricscherer.com/](https://www.cedricscherer.com/)).
+In this slide deck, I use the `ggplot` package to develop bar graphs with `geom_bar`, one of the bar graph `geom`etries. After building a basic bar graph, I apply many formatting ideas, most of which I have learned from the blog of Cedric Scherer ([https://www.cedricscherer.com/](https://www.cedricscherer.com/)).
 
 # Slides
 

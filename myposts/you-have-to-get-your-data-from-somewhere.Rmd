@@ -3,11 +3,11 @@ title: "You Have To Get Your Data From Somewhere"
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
-  tufte::tufte_handout:
-    number_sections: yes
-    toc: yes
   distill::distill_article:
     highlight: haddock
+    toc: yes
+  tufte::tufte_handout:
+    number_sections: yes
     toc: yes
   tufte::tufte_html:
     css: myTufteCSS.css

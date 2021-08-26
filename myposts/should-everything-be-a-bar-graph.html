@@ -87,8 +87,8 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 
 
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2021-08-18" />
-  <meta property="article:created" itemprop="dateCreated" content="2021-08-18" />
+  <meta property="article:published" itemprop="datePublished" content="2021-08-26" />
+  <meta property="article:created" itemprop="dateCreated" content="2021-08-26" />
   <meta name="article:author" content="Andy Grogan-Kaylor" />
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -106,7 +106,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Should Everything Be A Bar Graph?"]},{"type":"character","attributes":{},"value":["Are bar graphs the best visualization for most situations?\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Andy Grogan-Kaylor"]},{"type":"character","attributes":{},"value":["https://www.umich.edu/~agrogan"]},{"type":"character","attributes":{},"value":["University of Michigan"]},{"type":"character","attributes":{},"value":["https://www.umich.edu/"]}]}]},{"type":"character","attributes":{},"value":["2021-08-18"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["highlight","toc","code_folding"]}},"value":[{"type":"character","attributes":{},"value":["haddock"]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Should Everything Be A Bar Graph?"]},{"type":"character","attributes":{},"value":["Are bar graphs the best visualization for most situations?\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Andy Grogan-Kaylor"]},{"type":"character","attributes":{},"value":["https://www.umich.edu/~agrogan"]},{"type":"character","attributes":{},"value":["University of Michigan"]},{"type":"character","attributes":{},"value":["https://www.umich.edu/"]}]}]},{"type":"character","attributes":{},"value":["2021-08-26"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["highlight","toc","code_folding"]}},"value":[{"type":"character","attributes":{},"value":["haddock"]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1450,7 +1450,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Should Everything Be A Bar Graph?","description":"Are bar graphs the best visualization for most situations?","authors":[{"author":"Andy Grogan-Kaylor","authorURL":"https://www.umich.edu/~agrogan","affiliation":"University of Michigan","affiliationURL":"https://www.umich.edu/","orcidID":""}],"publishedDate":"2021-08-18T00:00:00.000+00:00","citationText":"Grogan-Kaylor, 2021"}
+{"title":"Should Everything Be A Bar Graph?","description":"Are bar graphs the best visualization for most situations?","authors":[{"author":"Andy Grogan-Kaylor","authorURL":"https://www.umich.edu/~agrogan","affiliation":"University of Michigan","affiliationURL":"https://www.umich.edu/","orcidID":""}],"publishedDate":"2021-08-26T00:00:00.000+00:00","citationText":"Grogan-Kaylor, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1469,7 +1469,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div class="d-byline">
   Andy Grogan-Kaylor <a href="https://www.umich.edu/~agrogan" class="uri">https://www.umich.edu/~agrogan</a> (University of Michigan)<a href="https://www.umich.edu/" class="uri">https://www.umich.edu/</a>
   
-<br />2021-08-18
+<br />2021-08-26
 </div>
 
 <div class="d-article">
@@ -1478,7 +1478,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <h3>Contents</h3>
 <ul>
 <li><a href="#background">Background</a></li>
-<li><a href="#some-bar-graphs">Some Bar Graphs</a></li>
+<li><a href="#bar-graphs">Bar Graphs</a></li>
 <li><a href="#slides">Slides</a></li>
 </ul>
 </nav>
@@ -1503,8 +1503,8 @@ Figure 1: Multiple Geometries for Data Visualization
 </div>
 </div>
 <p>However, after a number of years of working on data visualization, I have started to think about the advantages of bar graphs. While <em>not every visualization needs to be a bar graph</em>, it sometimes seems as though many data visualizations <em>would work well as a bar graph</em>.</p>
-<h1 id="some-bar-graphs">Some Bar Graphs</h1>
-<p>In this slide deck, I use the <code>ggplot</code> package to develop bar graphs with <code>geom_col</code>, one of the bar graph <code>geom</code>etries. After building a basic bar graph, I apply many formatting ideas, most of which I have learned from the blog of Cedric Scherer (<a href="https://www.cedricscherer.com/">https://www.cedricscherer.com/</a>).</p>
+<h1 id="bar-graphs">Bar Graphs</h1>
+<p>In this slide deck, I use the <code>ggplot</code> package to develop bar graphs with <code>geom_bar</code>, one of the bar graph <code>geom</code>etries. After building a basic bar graph, I apply many formatting ideas, most of which I have learned from the blog of Cedric Scherer (<a href="https://www.cedricscherer.com/">https://www.cedricscherer.com/</a>).</p>
 <h1 id="slides">Slides</h1>
 <p>I discuss these ideas <a href="https://agrogan1.github.io/dataviz/should-everything-be-a-bar-graph/#1">here</a></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
