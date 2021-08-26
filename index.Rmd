@@ -82,10 +82,7 @@ myHTMLfiles %>%
 
 * [Data Visualization](https://agrogan1.github.io/dataviz/dataviz-course)
 
-
-
 * [Multilevel and Longitudinal Modeling](https://agrogan1.github.io/multilevel/)
-
 
 * [Categorical Data Analysis](https://agrogan1.github.io/newstuff/categorical/)
 
@@ -182,12 +179,13 @@ knitr::include_graphics("images/MichiganColorsR.png")
 * *Two Page ggplot2*: 
      + [PDF](https://agrogan1.github.io/R/two-page-ggplot2/two-page-ggplot2.pdf)
 * [*ggplot Flipbook*](https://agrogan1.github.io/R/ggplot-flipbook/ggplot-flipbook.html#1)
-* *Multi-Page dplyr*:
-     + [PDF](https://agrogan1.github.io/R/multi-page-dplyr/multi-page-dplyr.pdf)
-     + [HTML](https://agrogan1.github.io/R/multi-page-dplyr/multi-page-dplyr.html)
 * *Comparing Program Outcomes with ggplot2* 
      + [HTML](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.html)
      + [PDF](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.pdf)
+* *Multi-Page dplyr*:
+     + [PDF](https://agrogan1.github.io/R/multi-page-dplyr/multi-page-dplyr.pdf)
+     + [HTML](https://agrogan1.github.io/R/multi-page-dplyr/multi-page-dplyr.html)
+* [*Themes for the Xaringan Slide Show System*](https://agrogan1.github.io/R/xaringan-themes/)
 * *Working With Data From the World Bank Indicators*
      + [HTML](https://agrogan1.github.io/R/wbdemo/)
      
