@@ -93,7 +93,7 @@ myHTMLfiles %>%
 
 ![Longitudinal Multilevel Models](images/longitudinal.png)
 
-![Categorical Data Analysis](images/logistic.png)
+![Categorical Data Analysis](images/logit.png)
 
 </aside>
 
