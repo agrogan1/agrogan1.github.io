@@ -19,6 +19,20 @@ options(htmltools.dir.version = FALSE)
 
 ```
 
+```{css, echo=FALSE}
+
+.title-slide {
+  background-image: url(math.png);
+  background-size: cover;
+}
+
+.title-slide h1, h2, h3 {
+  color: #FFCB05;
+  background-color: black;
+}
+
+```
+
 
 Why can’t numbers be beautiful too? 
 
