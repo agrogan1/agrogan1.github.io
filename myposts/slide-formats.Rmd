@@ -120,9 +120,9 @@ two_dimensional_slideshows <- c("no",
                                 "yes",
                                 "no")
 css <- c("difficult",
-         "easy",
-         "easy",
-         "easy")
+         "easy-ish",
+         "easy-ish",
+         "easy-ish")
 
 outline_view <- c("yes",
                   "no",
