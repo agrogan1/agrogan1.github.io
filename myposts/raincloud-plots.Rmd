@@ -139,12 +139,13 @@ ggplot(clients, # data we are using
   stat_slab(aes(fill = program), # slab geometry
             position = position_nudge(y = .20), # nudged up by .20
             scale = .5,
+            # color = "grey",
             alpha = 1.0) + # transparency
   geom_boxplot(color = "grey", # boxplot geometry; grey contrast w/ points
                width = .20,
                size = 1,
                show.legend = FALSE,
-               alpha = .5) + # transparency
+               alpha = .25) + # transparency
   geom_point(aes(color = program), # point geometry
              position = position_jitter(height = .20), # jittering
              size = 1.0,
