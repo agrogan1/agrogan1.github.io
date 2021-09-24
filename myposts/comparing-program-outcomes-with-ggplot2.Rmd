@@ -3,11 +3,13 @@ title: 'Telling Stories With Data: Comparing Program Outcomes with ggplot2'
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
-  tufte::tufte_handout:
-    toc: yes
-    number_sections: yes
+  pdf_document: 
+    fig_caption: yes
+    fig_height: 2
     highlight: haddock
     latex_engine: xelatex
+    number_sections: yes
+    toc: yes
   html_document:
     fig_height: 2
     highlight: haddock
@@ -19,18 +21,17 @@ output:
     toc_float:
       collapsed: yes
       smooth_scroll: yes
-  pdf_document: 
-    fig_caption: yes
-    fig_height: 2
-    highlight: haddock
-    latex_engine: xelatex
-    number_sections: yes
-    toc: yes
   tint::tintPdf:
     highlight: haddock
     number_sections: yes
     toc: yes
     latex_engine: xelatex
+  tufte::tufte_handout:
+    toc: yes
+    number_sections: yes
+    highlight: haddock
+    latex_engine: xelatex
+mainfont: Arial
 ---
 
 ```{r setup, include=FALSE}
@@ -65,6 +66,8 @@ However, ggplot can be difficult to learn. I am thinking that one way to better 
 load("social-service-agency.RData") # simulated data
 
 ```
+
+> The *mental health* variables are scaled to have an average of 100. Lower numbers indicate lower mental health, while higher numbers indicate higher mental health.
 
 ```{r, echo=FALSE}
 
