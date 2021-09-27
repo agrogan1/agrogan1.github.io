@@ -336,14 +336,16 @@ ggplot(mydataREVISED, # the data that I am using
 
 In some ways it is confusing, and in some ways it is helpful, that according to the underlying *grammar of graphics* in `ggplot2`, pie charts can be seen as **bar charts that use polar coordinates**. With that in mind, we take some of our earlier code, and add `coord_polar()`.
 
-In the code below, I need to ensure that `ggplot2` sees *x* as a **factor**, and to use *x* as a **fill**.  **Fill** is a crucial piece of information in a pie chart.
+In the code below, I need to ensure that `ggplot2` sees *x* as a **factor**, and to use *x* as a **fill**.  **Fill** is a *crucial* piece of information in a pie chart. 
+
+I also need to change `x=` in the `aes`thetic to `1` so that ggplot locates all the slices at the same place in terms of *polar coordinates*.
 
 ```{r}
 
 library(ggplot2)
 
 ggplot(mydata, # the data that I am using
-       aes(x = 1, 
+       aes(x = 1, # all the slices have the same x
            fill = factor(x))) + # x is now the fill
   geom_bar() + # using bars to graph 
   coord_polar(theta = "y") + # polar coordinates
