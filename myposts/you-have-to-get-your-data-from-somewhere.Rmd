@@ -3,11 +3,11 @@ title: "You Have To Get Your Data From Somewhere"
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
-  distill::distill_article:
-    highlight: haddock
-    toc: yes
   tufte::tufte_handout:
     number_sections: yes
+    toc: yes
+  distill::distill_article:
+    highlight: haddock
     toc: yes
   tufte::tufte_html:
     css: myTufteCSS.css
@@ -159,6 +159,46 @@ library(haven) # library to read other file formats
 mydata <- read_sas("/project1/mydata.sas7bdat")
 
 ```
+
+## Hand Code Data Using `tribble`
+
+> This can be especially useful for hand coding *small amounts* of data that come from a published online or print data source. 
+
+```{r, eval=TRUE, echo=TRUE}
+
+library(tibble) # library for updated dataframes
+
+mydata <- tribble(
+  ~ID, ~age, ~gender, ~program,
+2941,32,"Male","Program A",
+2745,22,"Other Identity","Program B",
+1320,28,"Female","Program B",
+2293,20,"Female","Program D"
+)
+
+
+```
+
+When importing data using tribble, it is helpful to get a summary of your data.
+
+```{r, eval=TRUE, echo=TRUE}
+
+summary(mydata)
+
+```
+
+It may then be helpful to insure some variables are changed to `factor`s.
+
+```{r, eval=TRUE, echo=TRUE}
+
+mydata$gender <- factor(mydata$gender)
+
+mydata$program <- factor(mydata$program)
+
+summary(mydata)
+
+```
+
 
 # Save Your Data in R Format
 
