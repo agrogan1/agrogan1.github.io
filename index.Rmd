@@ -164,10 +164,19 @@ knitr::include_graphics("images/MichiganColorsStata.png")
      + [HTML Web Book](https://agrogan1.github.io/R/introduction-to-R/introduction-to-R.html) 
      + [PDF](https://agrogan1.github.io/R/introduction-to-R/introduction-to-R.pdf) 
      + [epub](https://agrogan1.github.io/R/introduction-to-R/introduction-to-R.epub)
+* *Two Page R*: 
+     + [PDF](https://agrogan1.github.io/R/two-page-R/two-page-R.pdf)     
 * *Introduction to ggplot2*: 
      + [HTML Web Book](https://agrogan1.github.io/R/introduction-to-ggplot2/introduction-to-ggplot2.html) 
      + [PDF](https://agrogan1.github.io/R/introduction-to-ggplot2/introduction-to-ggplot2.pdf)
      + [epub](https://agrogan1.github.io/R/introduction-to-ggplot2/introduction-to-ggplot2.epub)
+* *Two Page ggplot2*: 
+     + [PDF](https://agrogan1.github.io/R/two-page-ggplot2/two-page-ggplot2.pdf)
+* [*ggplot Flipbook*](https://agrogan1.github.io/R/ggplot-flipbook/ggplot-flipbook.html#1)
+* [*"Advanced" ggplot*](https://agrogan1.github.io/dataviz/advanced-ggplot/advanced-ggplot.html)
+* *Comparing Program Outcomes with ggplot2* 
+     + [HTML](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.html)
+     + [PDF](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.pdf)
 * University of Michigan colors for R Graphs: 
      + [web page](https://agrogan1.github.io/R/michigancolors-demo/michigancolors-demo.html) 
      + [R package](https://agrogan1.github.io/michigancolors/)
@@ -180,14 +189,6 @@ knitr::include_graphics("images/MichiganColorsR.png")
 ```
 </aside>
 
-* *Two Page R*: 
-     + [PDF](https://agrogan1.github.io/R/two-page-R/two-page-R.pdf)
-* *Two Page ggplot2*: 
-     + [PDF](https://agrogan1.github.io/R/two-page-ggplot2/two-page-ggplot2.pdf)
-* [*ggplot Flipbook*](https://agrogan1.github.io/R/ggplot-flipbook/ggplot-flipbook.html#1)
-* *Comparing Program Outcomes with ggplot2* 
-     + [HTML](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.html)
-     + [PDF](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.pdf)
 * *Multi-Page dplyr*:
      + [PDF](https://agrogan1.github.io/R/multi-page-dplyr/multi-page-dplyr.pdf)
      + [HTML](https://agrogan1.github.io/R/multi-page-dplyr/multi-page-dplyr.html)
@@ -212,6 +213,7 @@ knitr::include_graphics("images/BayesianWaffle.png")
 
 # Statistical Tutorials and Visualizations
 
+* [What Is Data?](https://agrogan1.github.io/teaching/what-is-data/what-is-data.html)
 * [Causality](https://agrogan.shinyapps.io/causality/)
 * [t-Test](https://agrogan.shinyapps.io/shiny-t-test/)
 * [Correlation](https://agrogan.shinyapps.io/correlation_demo/)
