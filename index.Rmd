@@ -177,9 +177,11 @@ knitr::include_graphics("images/MichiganColorsStata.png")
 * *Comparing Program Outcomes with ggplot2* 
      + [HTML](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.html)
      + [PDF](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.pdf)
-* University of Michigan colors for R Graphs: 
-     + [web page](https://agrogan1.github.io/R/michigancolors-demo/michigancolors-demo.html) 
-     + [R package](https://agrogan1.github.io/michigancolors/)
+* Colors in R
+     + [Colors in R](https://agrogan1.github.io/R/colors/colors.html)
+     + [Viridis Colors](https://agrogan1.github.io/R/viridis/viridis.html)
+     + University of Michigan colors for R Graphs [[web page](https://agrogan1.github.io/R/michigancolors-demo/michigancolors-demo.html)] [[R package](https://agrogan1.github.io/michigancolors/)]
+     
      
 <aside>
 ```{r, fig.cap="Michigan Color Scheme For R Graphs"}
