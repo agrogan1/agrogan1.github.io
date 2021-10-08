@@ -6,9 +6,9 @@ output:
   distill::distill_article:
     highlight: haddock
     toc: yes
-  tufte::tufte_handout:
-    number_sections: yes
+  pdf_document:
     toc: yes
+    number_sections: yes
   tufte::tufte_html:
     css: myTufteCSS.css
     highlight: haddock
@@ -16,9 +16,9 @@ output:
     toc: yes
   tint::tintPdf:
     toc: yes
-  pdf_document:
-    toc: yes
+  tufte::tufte_handout:
     number_sections: yes
+    toc: yes
   word_document:
     toc: yes
     highlight: haddock
@@ -196,6 +196,24 @@ mydata$gender <- factor(mydata$gender)
 mydata$program <- factor(mydata$program)
 
 summary(mydata)
+
+```
+
+## Data in R Package
+
+Sometimes data is obtained by calling an R package, or the data is directly built into R.
+
+```{r, eval=FALSE, echo=TRUE}
+
+library(palmerpenguins) # call Palmer Penguins library
+
+data("penguins") # call the penguins data
+
+```
+
+```{r, eval=FALSE, echo=TRUE}
+
+data(iris) # call the iris flower data built into R
 
 ```
 
