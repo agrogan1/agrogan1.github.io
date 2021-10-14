@@ -229,7 +229,7 @@ knitr::include_graphics("images/BayesianWaffle.png")
 
 * How To Choose A Chart
     + [How to Choose a Chart: A Visual Guide](https://agrogan1.github.io/dataviz/how-to-choose-a-chart/how-to-choose-a-chart-a-visual-guide.pdf). 
-    + [How to Choose a Chart: An Intuitive Guide](https://agrogan1.github.io/newstuff/how-to-choose-a-chart-intuitive/how-to-choose-a-chart-intuitive.html)
+    + [How to Choose a Chart: An Intuitive Guide](https://agrogan1.github.io/dataviz/how-to-choose-a-chart-intuitive/how-to-choose-a-chart-intuitive.html)
     + [Extended Version](https://agrogan1.github.io/dataviz/how-to-choose-a-chart/how-to-choose-a-chart-v3.html)
 * [Should Everything Be A Bar Graph?](https://agrogan1.github.io/dataviz/should-everything-be-a-bar-graph/#1)
 * [Data Driven Report Demo](https://agrogan1.github.io/dataviz/data-driven-report-demo/)
