@@ -59,7 +59,13 @@ Note that while learning the correct syntax is *very helpful*, RStudio can gener
 
 # RMarkdown
 
-> When you are working with RMarkdown, each RMarkdown document creates its own separate **working environment**. Therefore each RMarkdown document needs to have a line, or lines, of code that import the data file for that individual RMarkdown document.
+> When you are working with RMarkdown, each RMarkdown document creates its own separate **working environment**. Therefore each RMarkdown document needs to have a line, or lines, of code that import the data file for that individual RMarkdown document. e.g.
+
+```{r, eval=FALSE, echo=TRUE}
+
+mydata <- load("/project1/mydata.RData") # load R format data
+
+```
 
 # Basic Idea
 
