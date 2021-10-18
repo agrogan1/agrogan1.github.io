@@ -38,6 +38,11 @@ library(xaringanExtra)
 
 xaringanExtra::use_panelset()
 
+
+```
+
+```{r}
+
 # get info about my HTML files
 
 myHTMLfiles = file.info(list.files(pattern="*html"))
