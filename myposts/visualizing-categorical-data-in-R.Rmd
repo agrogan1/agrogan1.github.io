@@ -1,0 +1,177 @@
+---
+title: "Visualizing Categorical Data in R"
+description: |
+  Bar Graphs and Beyond
+author:
+  - name: Andy Grogan-Kaylor 
+    url: https://agrogan1.github.io/
+    affiliation: University of Michigan
+    affiliation_url: https://www.umich.edu
+date: "`r Sys.Date()`"
+output: 
+  distill::distill_article:
+    highlight: haddock
+    toc: yes
+    code_folding: true
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE)
+
+library(pander) # nice tables
+
+```
+
+# Introduction 
+
+Visualizing categorical data presents unique challenges. A common solution is a bar graph, which may often be the best data visualization solution. 
+
+However there are also some alternatives to bar graphs.
+
+Below we present some options for bar graphs, and some possible alternative strategies.
+
+# Some Data
+
+```{r}
+
+library(tibble) # rowise data frame (tibble) creation
+
+library(tidyr) # data wrangling
+
+mydata <- tribble(
+  ~group, ~outcome, ~count,
+  "Group A",   "beneficial outcome", 55,
+  "Group A",   "undesirable outcome", 40,
+  "Group B",   "beneficial outcome", 50,
+  "Group B",   "undesirable outcome", 75
+)
+
+mydata$group <- factor(mydata$group) # data wrangling
+
+mydata$outcome <- factor(mydata$outcome) # data wrangling
+
+# duplicate the observations by count
+
+mydata <- mydata %>% uncount(count) 
+
+pander(table(mydata)) # nice table of data
+
+```
+
+# Call The Graphing Library
+
+```{r}
+
+library(ggplot2)
+
+```
+
+# Stacked Bar Graph
+
+```{r}
+
+ggplot(mydata, aes(x = group, # x is group
+                   fill = outcome)) + # color fill is outcome
+  geom_bar() + # bars
+  scale_fill_viridis_d(option = "cividis") + # beautiful colors
+  theme_minimal() # nice theme
+
+```
+
+# Unstacked Bar Graph
+
+```{r}
+
+ggplot(mydata, aes(x = group, # x is group
+                   fill = outcome)) + # color fill is outcome
+  geom_bar(position = position_dodge()) + # "dodged" bars
+  scale_fill_viridis_d(option = "cividis") + # beautiful colors
+  theme_minimal() # nice theme
+
+```
+# Faceted Bar Graph
+
+```{r}
+
+ggplot(mydata, aes(x = outcome, # x is outcome
+                   fill = outcome)) + # color fill is outcome
+  geom_bar() + # bars
+  scale_fill_viridis_d(option = "cividis") + # beautiful colors
+  theme_minimal() + # nice theme
+  facet_wrap(~group) # facet on group
+
+```
+
+# Pie Chart
+
+```{r}
+
+ggplot(mydata, aes(x = 1, # x is always 1
+                   fill = outcome)) + # color fill is outcome
+  geom_bar(position = "fill") + # bars
+  scale_fill_viridis_d(option = "cividis") + # beautiful colors
+  theme_void() + # void theme for pie charts
+  coord_polar(theta = "y") + # polar coordinates
+  facet_wrap(~group) # facet on group
+
+```
+
+# Mosaic Plot
+
+```{r}
+
+library(ggmosaic) # mosaic plots
+
+ggplot(mydata) + 
+  geom_mosaic(aes(x = product(group), # "mosaic" geometry
+                  fill = outcome)) +
+  scale_fill_viridis_d(option = "cividis") + # beautiful colors
+  theme_minimal()  # nice theme
+
+```
+
+
+# Waffle Plot
+
+```{r}
+
+library(waffle) # waffle geometry
+
+library(dplyr) # data wrangling
+
+```
+
+```{r}
+
+# make a data set of counts
+
+mycounts <- mydata %>%
+  group_by(group, outcome) %>% # group by group & outcome
+  tally() # count up observations
+
+pander(mycounts) # replay this data
+
+```
+
+```{r}
+
+# use geom_waffle with this data set of counts
+
+ggplot(mycounts, # use this new data
+       aes(fill = outcome, # color fill is outcome
+           values = n)) + # values are n
+  geom_waffle(color = "grey") + # waffle geometry w/ grey separator
+  facet_wrap(~group) + # facet on group
+  coord_equal() + # squares!
+  scale_fill_viridis_d(option = "cividis") + # beautiful colors
+  theme_void()  # nice theme
+
+```
+
+
+
+
+
+
+
