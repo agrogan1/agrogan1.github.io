@@ -18,21 +18,21 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
-My interests are in developing more knowledge about people, social problems, and potential interventions, in order to reduce violence against children and to improve family and child well-being. I am strongly motivated by concerns for social justice.  Right after undergraduate studies, I was a community organizer for a year, and then a Peace Corps Volunteer living for two years in the at-the-time remote Upper East Region of Ghana, and doing community development work, both in English, and in the local language Kusaal.  These early experiences have been the source of commitments to social justice, and to developing an evidence base for practice, that continue in my work today.
+My interests are in developing more knowledge about people, social problems, and potential interventions, in order to reduce violence against children and to improve family and child well-being. I am strongly motivated by concerns for social justice. Right after undergraduate studies, I was a community organizer for a year, and then a Peace Corps Volunteer living for two years in the at-the-time remote Upper East Region of Ghana, and doing community development work, both in English, and in the local language Kusaal. These early experiences have been the source of commitments to social justice, and to developing an evidence base for practice, that continue in my work today.
 
-My core intellectual interest is the way in which parenting behaviors, like the [use of corporal punishment](https://agrogan1.github.io/research/cp/), or parental expressions of emotional warmth, have an effect on child outcomes like aggression, antisocial behavior, anxiety and depression.  I am interested in how these dynamics play out [across contexts, neighborhoods, and cultures](https://agrogan1.github.io/multilevel/).
+My core intellectual interest is the way in which [parenting behaviors have an effect on child outcomes](https://agrogan1.github.io/#research-on-parenting-and-child-development). For example, parenting behaviors like the use of corporal punishment, or parental expressions of emotional warmth, are likely to have an effect on child outcomes like aggression, antisocial behavior, anxiety and depression. I am interested in how these dynamics play out [across contexts, neighborhoods, and cultures](https://agrogan1.github.io/multilevel/).
 
-In my work I use advanced statistical models, like [multilevel models](https://agrogan1.github.io/multilevel/) and some econometric models, and software like [Stata](https://agrogan1.github.io/#stata-materials), [R](https://agrogan1.github.io/#r-materials) and ArcGIS, to examine things like [growth and change over time](https://agrogan1.github.io/multilevel/), or [community, school or parent effects on children and families](https://agrogan1.github.io/multilevel/).  I’m also very interested in [data visualization](https://agrogan1.github.io/#data-visualization).
+In my work I use advanced statistical models, like [multilevel models](https://agrogan1.github.io/multilevel/) and some econometric models, and software like [Stata](https://agrogan1.github.io/#stata-materials), [R](https://agrogan1.github.io/#r-materials) and ArcGIS, to examine things like [growth and change over time](https://agrogan1.github.io/multilevel/), or [community, school or parent effects on children and families](https://agrogan1.github.io/multilevel/). I’m also very interested in [data visualization](https://agrogan1.github.io/#data-visualization).
 
-I have also worked on developing and evaluating interventions for under-served populations, particularly among people who speak Spanish as their primary language.  
+I have also worked on developing and evaluating interventions for under-served populations, particularly among people who speak Spanish as their primary language. 
 
 A lot of my work is done with international samples. The globe on this webpage indicates the countries where some of the data that I’ve used has come from, or where I have done some work.
 
 ```{r}
 
-library(ggmap)
+# library(ggmap)
 
-library(leaflet)
+# library(leaflet)
 
 library(plotly)
 
@@ -102,13 +102,13 @@ plot_geo(y) %>%
 
 ```
 
-Please click here for my [faculty page](https://ssw.umich.edu/faculty/profiles/tenure-track/agrogan) on the School of Social Work website.  The School of Social Work tends to keep a more up to date record of my recent publications than I do on this website.
+Please click here for my [faculty page](https://ssw.umich.edu/faculty/profiles/tenure-track/agrogan) on the School of Social Work website.
 
 For copies of any of my published research papers, please e-mail me at [agrogan@umich.edu](agrogan@umich.edu).
 
-I have many course materials on the web that are not directly linked to from this website.  If you are one of my students and can’t find a particular resource that you need for class, please let me know at [agrogan@umich.edu](agrogan@umich.edu).
+I have many course materials on the web that are not directly linked to from this website. If you are one of my students and can’t find a particular resource that you need for class, please let me know at [agrogan@umich.edu](agrogan@umich.edu).
 
-My blog on statistics, data visualization, data analysis, and my research activities is at: [https://agrogan1.github.io/myposts/](https://agrogan1.github.io/myposts/) .  
+My blog on statistics, data visualization, data analysis, and my research activities is at: [https://agrogan1.github.io/myposts/](https://agrogan1.github.io/myposts/). 
 
 This webpage is mostly up to date, but always under construction to some degree. If you think something should be here, but it isn’t, please let me know.
 
