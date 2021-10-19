@@ -112,7 +112,7 @@ myHTMLfiles %>%
 <aside>
 ```{r, fig.cap="Countries in MICS Data", eval=TRUE}
 
-knitr::include_graphics("images/NewMICSglobe.png")
+knitr::include_graphics("images/MICSCountries.png")
 
 ```
 
