@@ -33,6 +33,8 @@ Below we present some options for bar graphs, and some possible alternative stra
 
 # Some Data
 
+We create some simulated data with the `tribble` function. The data are created so that the two groups experience the outcomes unequally.
+
 ```{r}
 
 library(tibble) # rowise data frame (tibble) creation
@@ -67,7 +69,13 @@ library(ggplot2)
 
 ```
 
-# Stacked Bar Graph
+# Bar Graphs
+
+Bar graphs are often the simplest and best option for displaying categorical data. When used with an aesthetically pleasing color scheme, bar graphs can be an effective way of displaying data. 
+
+There are several different types of bar graph.
+
+## Stacked Bar Graph
 
 ```{r}
 
@@ -79,7 +87,7 @@ ggplot(mydata, aes(x = group, # x is group
 
 ```
 
-# Unstacked Bar Graph
+## Unstacked Bar Graph
 
 ```{r}
 
@@ -90,7 +98,7 @@ ggplot(mydata, aes(x = group, # x is group
   theme_minimal() # nice theme
 
 ```
-# Faceted Bar Graph
+## Faceted Bar Graph
 
 ```{r}
 
@@ -105,6 +113,8 @@ ggplot(mydata, aes(x = outcome, # x is outcome
 
 # Pie Chart
 
+In `ggplot` terms, pie charts are bar graphs displayed with *polar coordinates*.
+
 ```{r}
 
 ggplot(mydata, aes(x = 1, # x is always 1
@@ -118,6 +128,8 @@ ggplot(mydata, aes(x = 1, # x is always 1
 ```
 
 # Mosaic Plot
+
+Mosaic plots are another way to display data. They are especially effective for being clear about the relative membership in different groups, and about the proportion of each group experiencing each outcome.
 
 ```{r}
 
@@ -134,6 +146,12 @@ ggplot(mydata) +
 
 # Waffle Plot
 
+Lastly, waffle plots may be a useful way to display information. They work best when the sample size is several hundred or fewer. 
+
+Waffle plots require some data wrangling.
+
+## Call The Libraries
+
 ```{r}
 
 library(waffle) # waffle geometry
@@ -141,6 +159,9 @@ library(waffle) # waffle geometry
 library(dplyr) # data wrangling
 
 ```
+
+
+## Make A Data Set Of Counts
 
 ```{r}
 
@@ -153,6 +174,7 @@ mycounts <- mydata %>%
 pander(mycounts) # replay this data
 
 ```
+## Make The Waffle Plot
 
 ```{r}
 
