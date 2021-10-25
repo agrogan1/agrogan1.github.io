@@ -79,7 +79,7 @@ mydata <- load("/project1/mydata.RData") # load R format data
 
 [^3]: Where is your data located? The *directory path* to your data.
 
-[^tilde]: Sometimes, especially on a Mac, it is necessary to refer to your directory with a `~`, e.g. `~/downloads/project1.RData` or `~/project1/project1.RData`.
+[^tilde]: Sometimes, especially on a Mac, it is necessary to refer to your directory with a `~`, e.g. `~/downloads/project1.RData` or `~/Desktop/project1.RData` or `~/project1/project1.RData`.
 
 [^4]: What is the *filename* of the file containing your data? Note that the extension often tells you *what kind* of data this is.
 
