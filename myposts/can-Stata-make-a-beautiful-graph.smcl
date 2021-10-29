@@ -1,0 +1,49 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/can-Stata-make-a-beautiful-graph.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}29 Oct 2021, 16:44:58
+{txt}
+{com}. //_1
+. display c(current_date)
+{res}29 Oct 2021
+{txt}
+{com}. //_2
+. display c(current_time)
+{res}16:44:58
+{txt}
+{com}. //_3
+. use "https://github.com/agrogan1/multilevel/raw/master/mlm-R2-gutten/gutten.dta", clear
+{txt}
+{com}. //_4
+. twoway /// two way graph
+> (scatter height age_base, /// scatterplot
+> mcolor(dkgreen%25) msymbol(circle)) /// dark green transparent markers
+> (lowess height age_base, lcolor(gold) lwidth(thick)), /// smoother; gold line
+> scheme(lean2) /// better base scheme
+> title("Tree Height by Tree Age") /// title
+> xtitle("Tree Age") /// title for x axis
+> ytitle("Tree Height") /// title for y axis
+> caption("Gutten Tree Data") /// caption
+> legend(order(1 "trees" 2 "linear fit")) // better labels for legend
+{res}{txt}
+{com}. //_5
+. graph export gutten.png, width(1000) replace
+{txt}{p 0 4 2}
+file {bf}
+/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/gutten.png{rm}
+saved as
+PNG
+format
+{p_end}
+
+{com}. //_^
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/can-Stata-make-a-beautiful-graph.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}29 Oct 2021, 16:45:00
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
