@@ -1,0 +1,268 @@
+---
+title: "Andrew Grogan-Kaylor"
+description: |
+  Professor of Social Work
+author:
+  - name: Andy Grogan-Kaylor 
+    url: https://agrogan1.github.io/
+    affiliation: University of Michigan
+    affiliation_url: https://umich.edu/
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    highlight: haddock
+    toc: true
+    toc_float: false
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE,
+                      fig.margin = TRUE)
+
+library(ggplot2)
+
+library(dplyr) # data wrangling
+
+library(DT) # nice data table
+
+library(tibble) # tibbles
+
+```
+
+
+```{r, layout="l-screen"}
+
+knitr::include_graphics("images/forest.png")
+
+```
+
+# About Me
+
+My interests are in developing more knowledge to reduce violence against children and Adverse Childhood Experiences (ACES), with the aim of improving child and family wellbeing. In this research I try to understand the family and community origins of aggression, antisocial behavior, anxiety and depression. My current research focuses on parenting and child development in international context. I try to understand these issues within the context of current conversations about children’s rights.
+
+I teach courses mostly in the area of statistics, quantitative methods and data visualization.
+
+* A little bit about [my background](./background.html)
+* My [CV](https://ssw.umich.edu/sites/default/files/documents/faculty/cvs/agrogan_cv.pdf)
+
+# "Blog-ish" Posts 
+
+* [posts](https://agrogan1.github.io/myposts/)
+
+```{r}
+
+load("./myposts/myHTMLfiles.RData") # get data on blog-ish posts
+
+myHTMLfiles %>% 
+  rownames_to_column(var = "filename") %>% # rownames to column
+  filter(filename != "blogtest.html") %>%
+  filter(filename != "blogtest-tint.html") %>%
+  mutate(modified = mtime) %>% # copy mtime to modified
+  mutate(url = paste0("<a href='", # paste together URL
+                      "../myposts/", # URL is in another repo
+                      filename,
+                      "'>",
+                      filename, 
+                      "</a>")) %>% 
+  select(modified, url) %>% # select columns
+  datatable(rownames = FALSE, # no row names
+            escape = 1, # escape URL column
+            caption = "My Most Recent Blog-ish Posts",
+            # sort by descending date
+            options = list(pageLength = 5, 
+                           order = list(list(0, 
+                                             'desc')))) %>% 
+  formatDate(1, 'toDateString') # format column 1 as dates
+
+```
+
+
+# Selected Courses
+
+* [Data Visualization](https://agrogan1.github.io/dataviz/dataviz-course)
+
+* [Multilevel and Longitudinal Modeling](https://agrogan1.github.io/multilevel/)
+
+* [Categorical Data Analysis](https://agrogan1.github.io/newstuff/categorical/)
+
+<aside>
+![Data Visualization](images/banner.png)
+
+![Cross Sectional Multilevel Models](images/cross-sectional.png)
+
+![Longitudinal Multilevel Models](images/longitudinal.png)
+
+![Categorical Data Analysis](images/logit.png)
+
+</aside>
+
+# Research on Parenting and Child Development
+
+* ["Multilevel ecological analysis of the predictors of spanking across 65 countries"](https://bmjopen.bmj.com/content/11/8/e046075)
+* ["Global Perspectives on Positive and Negative Parenting: A Bayesian Multilevel Analysis"](https://agrogan1.github.io/research/Bayes3MICS/).
+* "Spanking and young children's socioemotional development in low- and middle-income countries"
+    + [Open Access](https://doi.org/10.1016/j.chiabu.2018.11.003)
+    + [Data Visualization](https://agrogan1.github.io/research/MICS1/)
+    + *Child Trends News Service* has released a well done [video summarizing this research](https://youtu.be/8LYZ-UpR5wE).
+* [Meta-Analysis](https://agrogan1.github.io/research/cp/CP-meta.html) of Research on Corporal Punishment [[PubMed Full Text](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7992110/)]
+* [Earlier Research On Corporal Punishment](https://agrogan1.github.io/research/cp/)
+* Data Visualization of [Country Level Bans on Corporal Punishment](https://agrogan1.github.io/research/cpbans/)
+
+<aside>
+```{r, fig.cap="Countries in MICS Data", eval=TRUE}
+
+knitr::include_graphics("images/MICSCountries.png")
+
+```
+
+```{r, fig.cap="Spanking and young children's socioemotional development in low- and middle-income countries", eval=FALSE}
+
+knitr::include_graphics("images/MICSglobe.png")
+
+```
+
+```{r, fig.cap="Country Level Bans on Corporal Punishment"}
+
+knitr::include_graphics("images/cpbansglobe.png")
+
+```
+</aside>
+
+# Selected Collaborations
+
+* Work with [Performance Measurement Initiative](https://agrogan1.github.io/research/performance-measurement-initiative) at William Davidson Institute
+
+# Stata Materials
+
+* *Two Page Stata*: 
+     + [HTML](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.html) 
+     + [PDF](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.pdf)
+     + [epub](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.epub)
+* ["Michigan Graph Scheme" for Stata](https://agrogan1.github.io/Stata/)
+
+<aside>
+```{r, fig.cap="Michigan Color Scheme For Stata Graphs"}
+
+knitr::include_graphics("images/MichiganColorsStata.png")
+
+```
+</aside>
+
+* Data Visualization With Stata 
+    + [HTML](https://agrogan1.github.io/Stata/data-visualization-with-Stata/data-visualization-with-Stata.html)
+    + [HTML Slides](https://agrogan1.github.io/Stata/data-visualization-with-Stata/data-visualization-with-Stata-slidy.html)
+    + [PDF](https://agrogan1.github.io/Stata/data-visualization-with-Stata/data-visualization-with-Stata.pdf)
+* Stata Data Visualization **Basics**
+    + [HTML](https://agrogan1.github.io/Stata/data-visualization-with-Stata-the-basics/data-visualization-with-Stata-the-basics.html)
+    + [PDF](https://agrogan1.github.io/Stata/data-visualization-with-Stata-the-basics/data-visualization-with-Stata-the-basics.pdf)
+* [Miscellaneous Stata Programs](https://agrogan1.github.io/Stata/)
+
+# R Materials
+
+* *Introduction to R*: 
+     + [HTML Web Book](https://agrogan1.github.io/R/introduction-to-R/introduction-to-R.html) 
+     + [PDF](https://agrogan1.github.io/R/introduction-to-R/introduction-to-R.pdf) 
+     + [epub](https://agrogan1.github.io/R/introduction-to-R/introduction-to-R.epub)
+* *Two Page R*: 
+     + [PDF](https://agrogan1.github.io/R/two-page-R/two-page-R.pdf)     
+* *Introduction to ggplot2*: 
+     + [HTML Web Book](https://agrogan1.github.io/R/introduction-to-ggplot2/introduction-to-ggplot2.html) 
+     + [PDF](https://agrogan1.github.io/R/introduction-to-ggplot2/introduction-to-ggplot2.pdf)
+     + [epub](https://agrogan1.github.io/R/introduction-to-ggplot2/introduction-to-ggplot2.epub)
+* *Two Page ggplot2*: 
+     + [PDF](https://agrogan1.github.io/R/two-page-ggplot2/two-page-ggplot2.pdf)
+* [*What Geometry Do I Use?*](https://agrogan1.github.io/R/what-geom-do-I-use/how-to-choose-a-chart-a-visual-guide-GEOMs.pdf)
+* [*ggplot Flipbook*](https://agrogan1.github.io/R/ggplot-flipbook/ggplot-flipbook.html#1)
+* [*"Advanced" ggplot*](https://agrogan1.github.io/dataviz/advanced-ggplot/advanced-ggplot.html)
+* *Comparing Program Outcomes with ggplot2* 
+     + [HTML](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.html)
+     + [PDF](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.pdf)
+* Colors in R
+     + [Colors in R](https://agrogan1.github.io/R/colors/colors.html)
+     + [Viridis Colors](https://agrogan1.github.io/R/viridis/viridis.html)
+     + University of Michigan colors for R Graphs [[web page](https://agrogan1.github.io/R/michigancolors-demo/michigancolors-demo.html)] [[R package](https://agrogan1.github.io/michigancolors/)]
+     
+     
+<aside>
+```{r, fig.cap="Michigan Color Scheme For R Graphs"}
+
+knitr::include_graphics("images/MichiganColorsR.png")
+
+```
+</aside>
+
+* *Multi-Page dplyr*:
+     + [PDF](https://agrogan1.github.io/R/multi-page-dplyr/multi-page-dplyr.pdf)
+     + [HTML](https://agrogan1.github.io/R/multi-page-dplyr/multi-page-dplyr.html)
+* [*Themes for the Xaringan Slide Show System*](https://agrogan1.github.io/R/xaringan-themes/)
+* *Working With Data From the World Bank Indicators*
+     + [HTML](https://agrogan1.github.io/R/wbdemo/)
+     
+
+# Bayesian Statistics
+
+* [Thinking Through Bayesian Ideas](https://agrogan.shinyapps.io/Thinking-Through-Bayes/)
+* [Bayes Theorem Applied To Data Analysis](https://agrogan1.github.io/newstuff/Bayes-theorem/Bayes-theorem.html)
+* Notes on [Accepting the Null ($H_0$) Hypothesis](https://agrogan1.github.io/Bayes/accepting-H0/accepting-H0.html)
+
+<aside>
+```{r, fig.cap="Thinking Through Bayesian Ideas"}
+
+knitr::include_graphics("images/BayesianWaffle.png")
+
+```
+</aside>
+
+# Statistical Tutorials and Visualizations
+
+* [What Is Data?](https://agrogan1.github.io/teaching/what-is-data/what-is-data.html)
+* [Causality](https://agrogan.shinyapps.io/causality/)
+* [t-Test](https://agrogan.shinyapps.io/shiny-t-test/)
+* [Correlation](https://agrogan.shinyapps.io/correlation_demo/)
+* Regression
+     - [Tutorial](https://agrogan1.github.io/teaching/new-regression-tutorial/)
+     - [Demo](https://agrogan.shinyapps.io/regression_demo/)
+* [Logistic Regression](https://agrogan.shinyapps.io/exploring_logistic_regression/)
+* [Cohen's d Calculator](https://agrogan.shinyapps.io/effect_size_calculator/)
+
+# Data Visualization
+
+* How To Choose A Chart
+    + [How to Choose a Chart: A Visual Guide](https://agrogan1.github.io/dataviz/how-to-choose-a-chart/how-to-choose-a-chart-a-visual-guide.pdf). 
+    + [How to Choose a Chart: An Intuitive Guide](https://agrogan1.github.io/dataviz/how-to-choose-a-chart-intuitive/how-to-choose-a-chart-intuitive.html)
+    + [Extended Version](https://agrogan1.github.io/dataviz/how-to-choose-a-chart/how-to-choose-a-chart-v3.html)
+* [Should Everything Be A Bar Graph?](https://agrogan1.github.io/dataviz/should-everything-be-a-bar-graph/#1)
+* [Data Driven Report Demo](https://agrogan1.github.io/dataviz/data-driven-report-demo/)
+* [Variables and Visualization](https://agrogan1.github.io/dataviz/variables-and-visualization/variables-and-visualization.html#/)
+* Slides for a Lecture on [Data Visualization for Political Social Work](https://agrogan1.github.io/dataviz/political-social-work/)
+
+<aside>
+```{r, fig.cap="How To Choose A Chart"}
+
+knitr::include_graphics("images/chartgrid.png")
+
+```
+</aside>
+
+## Telling Stories With Data
+
+* [Visualizing Disparities in a Continuous Risk Factor](https://agrogan1.github.io/myposts/visualizing-disparities.html) [[PDF](https://agrogan1.github.io/myposts/visualizing-disparities.pdf)]
+* [Comparing Program Outcomes With ggplot](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.html) [[PDF](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.pdf)]
+* [Graphing Change Over Time](https://agrogan1.github.io/dataviz/graphing-change-over-time/index.html) [[PDF](https://agrogan1.github.io/dataviz/graphing-change-over-time/index.pdf)]
+
+# Created By 
+
+Andrew Grogan-Kaylor
+
+* **Web:** [https://www.umich.edu/~agrogan](https://www.umich.edu/~agrogan)
+* **Email:** [agrogan@umich.edu](agrogan@umich.edu)
+* **Deep Blue** [https://deepblue.lib.umich.edu/browse?type=author&value=Grogan-Kaylor%2C+Andrew](https://deepblue.lib.umich.edu/browse?type=author&value=Grogan-Kaylor%2C+Andrew)
+* **GitHub**: [https://agrogan1.github.io/](https://agrogan1.github.io/)
+* **ResearchGate**:  [https://www.researchgate.net/profile/Andrew_Grogan-Kaylor](https://www.researchgate.net/profile/Andrew_Grogan-Kaylor)
+* **Google Scholar**:  [https://scholar.google.com/citations?user=iLvsGzgAAAAJ&hl=en](https://scholar.google.com/citations?user=iLvsGzgAAAAJ&hl=en)
+* **ORCID** <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">[https://orcid.org/0000-0003-0065-9991](https://orcid.org/0000-0003-0065-9991)
+
+
+
+
