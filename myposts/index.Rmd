@@ -34,9 +34,9 @@ library(tibble) # tibbles
 
 library(xaringan)
 
-library(xaringanExtra)
+# library(xaringanExtra)
 
-xaringanExtra::use_panelset()
+# xaringanExtra::use_panelset()
 
 
 ```
