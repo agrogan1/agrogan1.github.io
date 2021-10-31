@@ -190,11 +190,12 @@ table tbody:last-child tr:last-child td {border-bottom:1px solid black;}
 <header id="title-block-header">
 <h1 class="title">Can Stata Make A Beautiful Graph?</h1>
 <p class="author">Andy Grogan-Kaylor</p>
-<p class="date">30 Oct 2021 16:26:38</p>
+<p class="date">31 Oct 2021 18:39:01</p>
 </header>
 <style>body {max-width: 90%} h1 {color: #00274C;} h2 {color: #2F65A7;} p{font-size: 115%} blockquote {border-left: 5px solid #ffcb05; margin: 1.5em 10px; padding: 0.5em 10px;} code {color: red;}</style>
 <h1 id="introduction">Introduction 🌲</h1>
 <p>There is sometimes a <em>debate</em>–shall we say–about whether Stata can make beautiful graphs, particularly in comparison to using <code>ggplot</code> in R. Below, I try to use as many of Stata’s options as I can to make a beautiful graph. I’ll admit at the outset that it is perhaps not as beautiful as the same graph would be in <code>ggplot</code>, but believe that it comes close.</p>
+<p>I use green and gold since they are common colors for forestry and park signage.</p>
 <h1 id="data-source">Data Source 🌲</h1>
 <p>The data used in this example are derived from the R package <em>Functions and Datasets for “Forest Analytics with R”</em>.</p>
 <p>According to the documentation, the source of these data are: “von Guttenberg’s Norway spruce (Picea abies [L.] Karst) tree measurement data.”</p>
@@ -214,7 +215,8 @@ table tbody:last-child tr:last-child td {border-bottom:1px solid black;}
 <pre class='stata'>. twoway /// two way graph
 > (scatter height age_base, /// scatterplot
 > mcolor(dkgreen%25) msymbol(circle)) /// dark green transparent markers
-> (lowess height age_base, lcolor(gold) lwidth(thick)), /// smoother; gold line
+> (lowess height age_base, lcolor(gold) lwidth(thick) lpattern(solid)), /// smoother; 
+> gold line
 > scheme(lean2) /// better base scheme
 > title("Tree Height by Tree Age") /// title
 > xtitle("Tree Age") /// title for x axis

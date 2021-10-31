@@ -3,15 +3,15 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/can-Stata-make-a-beautiful-graph.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}30 Oct 2021, 16:26:38
+ {txt}opened on:  {res}31 Oct 2021, 18:39:01
 {txt}
 {com}. //_1
 . display c(current_date)
-{res}30 Oct 2021
+{res}31 Oct 2021
 {txt}
 {com}. //_2
 . display c(current_time)
-{res}16:26:38
+{res}18:39:01
 {txt}
 {com}. //_3
 . use "https://github.com/agrogan1/multilevel/raw/master/mlm-R2-gutten/gutten.dta", clear
@@ -20,7 +20,7 @@
 . twoway /// two way graph
 > (scatter height age_base, /// scatterplot
 > mcolor(dkgreen%25) msymbol(circle)) /// dark green transparent markers
-> (lowess height age_base, lcolor(gold) lwidth(thick)), /// smoother; gold line
+> (lowess height age_base, lcolor(gold) lwidth(thick) lpattern(solid)), /// smoother; gold line
 > scheme(lean2) /// better base scheme
 > title("Tree Height by Tree Age") /// title
 > xtitle("Tree Age") /// title for x axis
@@ -43,7 +43,7 @@ format
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/can-Stata-make-a-beautiful-graph.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}30 Oct 2021, 16:26:42
+ {txt}closed on:  {res}31 Oct 2021, 18:39:03
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
