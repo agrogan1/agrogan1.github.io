@@ -3,6 +3,13 @@ title: 'Telling Stories With Data: Visualizing Disparities in a Continuous Risk 
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
+  pdf_document: 
+    fig_height: 3
+    highlight: haddock
+    latex_engine: xelatex
+    number_sections: yes
+    toc: yes
+    extra_dependencies: ["float"]
   html_document:
     code_folding: hide
     css: UM.css
@@ -13,18 +20,11 @@ output:
     toc_float:
       collapsed: yes
       smooth_scroll: yes
-  pdf_document: 
-    fig_height: 3
-    highlight: haddock
-    latex_engine: xelatex
-    number_sections: yes
-    toc: yes
-    extra_dependencies: ["float"]
   distill::distill_article:
     highlight: haddock
     toc: yes
 geometry: margin=1.0in
-mainfont: Tw Cen MT
+mainfont: Futura
 fontsize: 12pt
 ---
 
