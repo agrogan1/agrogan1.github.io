@@ -1,7 +1,7 @@
 ---
-title: "Visualizing Categorical Data in R"
+title: "Telling Stories With Data: Visualizing Categorical Data in R"
 description: |
-  Bar Graphs and Beyond
+  Bar Graphs And Beyond To Visualize Disparities In Outcomes
 author:
   - name: Andy Grogan-Kaylor 
     url: https://agrogan1.github.io/
@@ -9,21 +9,22 @@ author:
     affiliation_url: https://www.umich.edu
 date: "`r Sys.Date()`"
 output: 
-  pdf_document: 
-    toc: yes
-    number_sections: yes
-    latex_engine: xelatex
-    fig_height: 3
   distill::distill_article:
     highlight: haddock
     toc: yes
     code_folding: true
-mainfont: Arial
+  pdf_document: 
+    toc: yes
+    number_sections: yes
+    highlight: haddock
+    latex_engine: xelatex
+    fig_height: 3
+mainfont: Futura
 ---
 
 ```{r setup, include=FALSE}
 
-knitr::opts_chunk$set(echo = FALSE,
+knitr::opts_chunk$set(echo = TRUE,
                       warning = FALSE,
                       message = FALSE)
 
@@ -38,6 +39,8 @@ Visualizing categorical data presents unique challenges. A common solution is a 
 However there are also some alternatives to bar graphs.
 
 Below we present some options for bar graphs, and some possible alternative strategies.
+
+> Note that the outcomes--which you could think of as a *good* outcome, or a *bad* outcome, are unevenly distributed by group.
 
 # Some Data
 
@@ -106,6 +109,7 @@ ggplot(mydata, aes(x = group, # x is group
   theme_minimal() # nice theme
 
 ```
+
 ## Faceted Bar Graph
 
 ```{r}
