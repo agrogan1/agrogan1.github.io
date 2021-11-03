@@ -9,16 +9,16 @@ author:
     affiliation_url: https://www.umich.edu
 date: "`r Sys.Date()`"
 output: 
-  distill::distill_article:
-    highlight: haddock
-    toc: yes
-    code_folding: true
   pdf_document: 
     toc: yes
     number_sections: yes
     highlight: haddock
     latex_engine: xelatex
     fig_height: 3
+  distill::distill_article:
+    highlight: haddock
+    toc: yes
+    code_folding: true
 mainfont: Futura
 ---
 
@@ -32,6 +32,16 @@ library(pander) # nice tables
 
 ```
 
+```{css, echo=FALSE}
+
+d-article blockquote {
+  color: black;
+  border-left: 2px solid #FFCB05; 
+  padding: 0.5em 10px;
+}
+  
+```
+
 # Introduction 
 
 Visualizing categorical data presents unique challenges. A common solution is a bar graph, which may often be the best data visualization solution. 
@@ -40,7 +50,7 @@ However there are also some alternatives to bar graphs.
 
 Below we present some options for bar graphs, and some possible alternative strategies.
 
-> Note that the outcomes--which you could think of as a *good* outcome, or a *bad* outcome, are unevenly distributed by group.
+> Note that the outcomes--which you could think of as a *good* outcome, or a *bad* outcome, are unevenly distributed by group. Therefore, these data represent *inequities* or *disparities.*
 
 # Some Data
 
@@ -119,6 +129,7 @@ ggplot(mydata, aes(x = outcome, # x is outcome
   geom_bar() + # bars
   scale_fill_viridis_d(option = "cividis") + # beautiful colors
   theme_minimal() + # nice theme
+  theme(axis.text.x = element_text(size = rel(.75))) + # smaller x axis text
   facet_wrap(~group) # facet on group
 
 ```
