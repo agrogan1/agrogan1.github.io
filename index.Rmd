@@ -203,8 +203,8 @@ knitr::include_graphics("images/MichiganColorsR.png")
 # Bayesian Statistics
 
 * [Thinking Through Bayesian Ideas](https://agrogan.shinyapps.io/Thinking-Through-Bayes/)
-* [Bayes Theorem Applied To Data Analysis](https://agrogan1.github.io/newstuff/Bayes-theorem/Bayes-theorem.html)
 * Notes on [Accepting the Null ($H_0$) Hypothesis](https://agrogan1.github.io/Bayes/accepting-H0/accepting-H0.html)
+* [Bayesian Longitudinal MLM With the Gutten Tree Data](https://agrogan1.github.io/multilevel/Bayesian-longitudinal-mlm/Bayesian-longitudinal-mlm.html) 
 
 <aside>
 ```{r, fig.cap="Thinking Through Bayesian Ideas"}
@@ -218,6 +218,7 @@ knitr::include_graphics("images/BayesianWaffle.png")
 
 * [What Is Data?](https://agrogan1.github.io/teaching/what-is-data/what-is-data.html)
 * [Causality](https://agrogan.shinyapps.io/causality/)
+* Basics of [Quantitative Data Analysis](https://agrogan1.github.io/teaching/quantitative-data-analysis/quantitative-data-analysis.html)
 * [t-Test](https://agrogan.shinyapps.io/shiny-t-test/)
 * [Correlation](https://agrogan.shinyapps.io/correlation_demo/)
 * Regression
