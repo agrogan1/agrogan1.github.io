@@ -6,22 +6,12 @@ output:
   distill::distill_article:
     highlight: haddock
     toc: yes
-  pdf_document:
-    toc: yes
-    number_sections: yes
-  tufte::tufte_html:
-    css: myTufteCSS.css
-    highlight: haddock
-    number_sections: yes
-    toc: yes
-  tint::tintPdf:
-    toc: yes
-  tufte::tufte_handout:
-    number_sections: yes
-    toc: yes
   word_document:
     toc: yes
     highlight: haddock
+    number_sections: yes
+  pdf_document:
+    toc: yes
     number_sections: yes
 header-includes: \usepackage{xcolor}
 ---
@@ -228,14 +218,13 @@ data(iris) # call the iris flower data built into R
 
 Once your data has been imported into R, you may wish to save it to R format for future use.
 
-Alternatively, one of the advantages of R is that it can read data from so many formats. It may be that your data is consistently being updated by other members of your team. For example, members of your team may be constantly updating an Excel file with your data. In such cases, you may wish to keep a line in your script to always import the most recent version of your data from that other format.
-
 ```{r, eval=FALSE, echo=TRUE}
 
 save(mydata, file = "mydata.RData")
 
 ```
 
+Alternatively, one of the advantages of R is that it can read data from so many formats. It may be that your data is consistently being updated by other members of your team. For example, members of your team may be constantly updating an Excel file with your data. In such cases, you may wish to keep a line in your script to always import the most recent version of your data from that other format.
 
 # Working Directory
 
