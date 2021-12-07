@@ -45,9 +45,11 @@ I make extensive use of the `///` notation which allows me to spread the graph a
     caption("Gutten Tree Data") /// caption
     legend(order(1 "trees" 2 "smoother") position(6) rows(1)) // better labels and format for legend
 
-    graph export gutten.png, width(1500) replace
+    graph export gutten.png, width(2000) replace
+	
+	graph export gutten.svg, width(2000) replace
 
-![A Beautiful? Graph of the Gutten Trees](gutten.png){width=75%}
+![A Beautiful? Graph of the Gutten Trees](gutten.svg){width=75%}
 
 	
 	
