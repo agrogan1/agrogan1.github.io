@@ -1,15 +1,11 @@
 ---
-title: 'Telling Stories With Data: Visualizing Disparities in a Continuous Risk Factor'
+title: 'Telling Stories With Data: Visualizing Disparities in a Continuous Risk Factor or Outcome'
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
-  pdf_document: 
-    fig_height: 3
+  distill::distill_article:
     highlight: haddock
-    latex_engine: xelatex
-    number_sections: yes
     toc: yes
-    extra_dependencies: ["float"]
   html_document:
     code_folding: hide
     css: UM.css
@@ -20,9 +16,13 @@ output:
     toc_float:
       collapsed: yes
       smooth_scroll: yes
-  distill::distill_article:
+  pdf_document: 
+    fig_height: 3
     highlight: haddock
+    latex_engine: xelatex
+    number_sections: yes
     toc: yes
+    extra_dependencies: ["float"]
 geometry: margin=1.0in
 mainfont: Futura
 fontsize: 12pt
@@ -39,7 +39,7 @@ knitr::opts_chunk$set(echo = TRUE,
 
 # Background
 
-In this document, I am trying to think through some best practices in showing disparities in a *continuous risk factor*, like *levels of depression* or *levels of poverty*.
+In this document, I am trying to think through some best practices in showing disparities in a *continuous risk factor* or *continuous outcome*, like *levels of depression* or *levels of poverty*.
 
 > I am using the graphing library `ggplot`. As I often do, I am going to show the code. The code can be useful, especially if you are trying to replicate some of these graphs.  
 
