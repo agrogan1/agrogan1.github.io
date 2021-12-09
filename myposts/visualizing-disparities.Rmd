@@ -6,6 +6,7 @@ output:
   distill::distill_article:
     highlight: haddock
     toc: yes
+    code_folding: true
   html_document:
     code_folding: hide
     css: UM.css
@@ -37,13 +38,23 @@ knitr::opts_chunk$set(echo = TRUE,
 
 ```
 
+```{css, echo=FALSE}
+
+d-article blockquote {
+  color: black;
+  border-left: 2px solid #FFCB05; 
+  padding: 0.5em 10px;
+}
+  
+```
+
 # Background
 
 In this document, I am trying to think through some best practices in showing disparities in a *continuous risk factor* or *continuous outcome*, like *levels of depression* or *levels of poverty*.
 
 > I am using the graphing library `ggplot`. As I often do, I am going to show the code. The code can be useful, especially if you are trying to replicate some of these graphs.  
 
-> <span style="background-color: cyan">However, the discussion is intended to be more conceptual, and you do not need to understand the code to follow the discussion. Indeed, the discussion is intended to be applicable to a wide variety of data visualization tools, including those that do not rely on coding. </span>
+> However, the discussion is intended to be more conceptual, and you do not need to understand the code to follow the discussion. Indeed, the discussion is intended to be applicable to a wide variety of data visualization tools, including those that do not rely on coding.
 
 I'm going to start by imagining that we have different groups of people.
 
