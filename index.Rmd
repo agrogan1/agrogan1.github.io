@@ -256,7 +256,7 @@ knitr::include_graphics("images/chartgrid.png")
 
 Andrew Grogan-Kaylor
 
-* **Web:** [https://www.umich.edu/~agrogan](https://www.umich.edu/~agrogan)
+* **Web:** [https://agrogan1.github.io/](https://agrogan1.github.io/)
 * **Email:** [agrogan@umich.edu](agrogan@umich.edu)
 * **Deep Blue** [https://deepblue.lib.umich.edu/browse?type=author&value=Grogan-Kaylor%2C+Andrew](https://deepblue.lib.umich.edu/browse?type=author&value=Grogan-Kaylor%2C+Andrew)
 * **GitHub**: [https://agrogan1.github.io/](https://agrogan1.github.io/)
