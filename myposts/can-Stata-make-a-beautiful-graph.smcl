@@ -1,9 +1,9 @@
 {smcl}
 {com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
-       {txt}log:  {res}C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\myposts\can-Stata-make-a-beautiful-graph.smcl
+       {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/can-Stata-make-a-beautiful-graph.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}15 Dec 2021, 16:22:02
+ {txt}opened on:  {res}15 Dec 2021, 16:27:25
 {txt}
 {com}. //_1
 . display c(current_date)
@@ -11,7 +11,7 @@
 {txt}
 {com}. //_2
 . display c(current_time)
-{res}16:22:02
+{res}16:27:25
 {txt}
 {com}. //_3
 . use "https://github.com/agrogan1/multilevel/raw/master/mlm-R2-gutten/gutten.dta", clear
@@ -32,7 +32,7 @@
 . graph export gutten.png, width(2000) replace
 {txt}{p 0 4 2}
 file {bf}
-gutten.png{rm}
+/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/gutten.png{rm}
 saved as
 PNG
 format
@@ -51,9 +51,9 @@ format
 {com}. //_^
 . log close
       {txt}name:  {res}<unnamed>
-       {txt}log:  {res}C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\myposts\can-Stata-make-a-beautiful-graph.smcl
+       {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/can-Stata-make-a-beautiful-graph.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}15 Dec 2021, 16:22:04
+ {txt}closed on:  {res}15 Dec 2021, 16:27:30
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
