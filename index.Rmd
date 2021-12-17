@@ -258,11 +258,11 @@ Andrew Grogan-Kaylor
 
 * **Web:** [https://agrogan1.github.io/](https://agrogan1.github.io/)
 * **Email:** [agrogan@umich.edu](agrogan@umich.edu)
-* **Deep Blue** [https://deepblue.lib.umich.edu/browse?type=author&value=Grogan-Kaylor%2C+Andrew](https://deepblue.lib.umich.edu/browse?type=author&value=Grogan-Kaylor%2C+Andrew)
-* **GitHub**: [https://github.com/agrogan1](https://github.com/agrogan1)
-* **ResearchGate**:  [https://www.researchgate.net/profile/Andrew_Grogan-Kaylor](https://www.researchgate.net/profile/Andrew_Grogan-Kaylor)
-* **Google Scholar**:  [https://scholar.google.com/citations?user=iLvsGzgAAAAJ&hl=en](https://scholar.google.com/citations?user=iLvsGzgAAAAJ&hl=en)
-* **ORCID** <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">[https://orcid.org/0000-0003-0065-9991](https://orcid.org/0000-0003-0065-9991)
+* **Deep Blue:** [https://deepblue.lib.umich.edu/browse?type=author&value=Grogan-Kaylor%2C+Andrew](https://deepblue.lib.umich.edu/browse?type=author&value=Grogan-Kaylor%2C+Andrew)
+* **GitHub:** [https://github.com/agrogan1](https://github.com/agrogan1)
+* **ResearchGate:**  [https://www.researchgate.net/profile/Andrew_Grogan-Kaylor](https://www.researchgate.net/profile/Andrew_Grogan-Kaylor)
+* **Google Scholar:**  [https://scholar.google.com/citations?user=iLvsGzgAAAAJ&hl=en](https://scholar.google.com/citations?user=iLvsGzgAAAAJ&hl=en)
+* **ORCID:** <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">[https://orcid.org/0000-0003-0065-9991](https://orcid.org/0000-0003-0065-9991)
 
 
 
