@@ -225,7 +225,7 @@ knitr::include_graphics("images/BayesianWaffle.png")
      - [Tutorial](https://agrogan1.github.io/teaching/new-regression-tutorial/)
      - [Demo](https://agrogan.shinyapps.io/regression_demo/)
 * [Logistic Regression](https://agrogan.shinyapps.io/exploring_logistic_regression/)
-* [Cohen's d Calculator](https://agrogan.shinyapps.io/effect_size_calculator/)
+* [Cohen's d Calculator](https://agrogan.shinyapps.io/es_calculator/)
 
 # Data Visualization
 
