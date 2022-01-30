@@ -1,0 +1,16 @@
+---
+title: "Doctoral Student Organization Faculty Award"
+author:
+  - name: Andy Grogan-Kaylor 
+    url: https://agrogan1.github.io/
+    affiliation: University of Michigan
+    affiliation_url: https://umich.edu/
+date: "5-28-2021"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+I'm pleased to be the [2021 Recipient of the Doctoral Student Organization Faculty Award](https://ssw.umich.edu/news/articles/2021/05/28/62933-andy-grogan-kaylor-2021-recipient-of-the-doctoral-student-organization-faculty-award).
