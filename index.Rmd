@@ -89,9 +89,9 @@ myHTMLfiles %>%
 <aside>
 ![Data Visualization](images/banner.png)
 
-![Cross Sectional Multilevel Models](images/cross-sectional.png)
+![Cross Sectional Multilevel Models](images/neighborhood.png)
 
-![Longitudinal Multilevel Models](images/longitudinal.png)
+![Longitudinal Multilevel Models](images/plant.png)
 
 ![Categorical Data Analysis](images/logit.png)
 
