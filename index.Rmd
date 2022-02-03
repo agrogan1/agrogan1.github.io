@@ -135,11 +135,12 @@ knitr::include_graphics("images/cpbansglobe.png")
 
 # Stata Materials
 
+* [All Stata Materials](https://agrogan1.github.io/Stata/)
 * *Two Page Stata*: 
      + [HTML](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.html) 
      + [PDF](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.pdf)
      + [epub](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.epub)
-* ["Michigan Graph Scheme" for Stata](https://agrogan1.github.io/Stata/)
+* ["Michigan Graph Scheme" for Stata](https://agrogan1.github.io/Stata/michigan-graph-scheme/)
 
 <aside>
 ```{r, fig.cap="Michigan Color Scheme For Stata Graphs"}
