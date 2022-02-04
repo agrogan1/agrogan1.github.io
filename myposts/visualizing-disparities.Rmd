@@ -1,5 +1,7 @@
 ---
-title: 'Telling Stories With Data: Visualizing Disparities in a Continuous Risk Factor or Outcome'
+title: 'Visualizing Disparities in a Continuous Risk Factor or Outcome'
+description: |
+  Telling Stories With Data
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
@@ -7,16 +9,6 @@ output:
     highlight: haddock
     toc: yes
     code_folding: true
-  html_document:
-    code_folding: hide
-    css: UM.css
-    fig_height: 3
-    highlight: haddock
-    number_sections: yes
-    toc: yes
-    toc_float:
-      collapsed: yes
-      smooth_scroll: yes
   pdf_document: 
     fig_height: 3
     highlight: haddock
@@ -25,7 +17,7 @@ output:
     toc: yes
     extra_dependencies: ["float"]
 geometry: margin=1.0in
-mainfont: Futura
+mainfont: Tw Cen MT
 fontsize: 12pt
 ---
 
@@ -121,8 +113,6 @@ And then I'm going to think about how I draw the information, which `ggplot` the
 
 ```{r, echo = FALSE, eval=TRUE, fig.cap="Two Philosophies"}
 
-# library(cowplot) # arrange plots
-
 library(patchwork) # arrange plots
 
 myplot0 <- ggplot(data = mydata,
@@ -148,8 +138,6 @@ myplot1 <- ggplot(data = mydata,
   theme_minimal() +
   theme(legend.position = "none")
 
-# plot_grid(myplot0, myplot1)
-
 myplot0 + myplot1
 
 ```
@@ -170,15 +158,15 @@ These decisions are echoed in the (admittedly complicated) `ggplot` code below w
 
 ```{r}
 
-myplot <- ggplot(data = mydata,
+myplot <- ggplot(data = mydata, # the data I am using
        aes(x = group, # x is the group
            fill = group, # fill is the group
            color = group, # color is the group
            y = risk)) + # y is risk
   labs(title = "Risk by Group") + # labels
-  scale_fill_viridis_d() +
-  scale_color_viridis_d() + 
-  theme_minimal()
+  scale_fill_viridis_d() + # fill color scale
+  scale_color_viridis_d() + # (outline) color scale
+  theme_minimal() # minimal theme
 
 ```
 
@@ -203,9 +191,11 @@ myplot +
 
 ## Points at Mean Values
 
+### Vertical
+
 Instead of bars indicating mean risk, we could use points at the mean risk value for each group. 
 
-```{r}
+```{r, fig.cap="Points at Mean Values"}
 
 myplot + 
   stat_summary(fun.y = mean, geom = "point", size = 10) +
@@ -214,12 +204,23 @@ myplot +
 
 ```
 
+### Horizontal
+
+```{r, fig.cap="Horizontal Points at Mean Values"}
+
+myplot + 
+  stat_summary(fun.y = mean, geom = "point", size = 10) +
+  ylim(0,150) + 
+  coord_flip() +
+  labs(title = "Mean Risk By Group")
+
+```
 
 ## Points at Mean Values Connected by Line
 
 Perhaps we connect the points with a line. Connecting the points with a line in this way may be confusing, as it may imply some kind of trend that we do not wish to imply.
 
-```{r, fig.cap="Points at Mean Values"}
+```{r, fig.cap="Points at Mean Values Connected by Line"}
 
 myplot + 
   stat_summary(fun.y = mean, geom = "line", 
@@ -233,6 +234,8 @@ myplot +
 
 ## "Lollipop" Chart
 
+### Vertical
+
 ```{r, fig.cap="Lollipop Chart"}
 
 # In order to draw the segments of the lollipops,
@@ -241,7 +244,7 @@ myplot +
 
 library(dplyr) # data wrangling
 
-mydata %>% 
+mylollipop <- mydata %>% 
   group_by(group) %>% # group by group
   summarise(mean_risk = mean(risk)) %>% # summarize by group
   ggplot(aes(x = group,
@@ -260,7 +263,18 @@ mydata %>%
   scale_color_viridis_d() + 
   theme_minimal()
 
+mylollipop # replay
+
 ```
+
+### Horizontal
+
+```{r, fig.cap="Horizontal Lollipop Chart"}
+
+mylollipop + coord_flip()
+
+```
+
 
 ## Points
 
