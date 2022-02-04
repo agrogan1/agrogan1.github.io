@@ -157,7 +157,6 @@ knitr::include_graphics("images/MichiganColorsStata.png")
 * Stata Data Visualization **Basics**
     + [HTML](https://agrogan1.github.io/Stata/data-visualization-with-Stata-the-basics/data-visualization-with-Stata-the-basics.html)
     + [PDF](https://agrogan1.github.io/Stata/data-visualization-with-Stata-the-basics/data-visualization-with-Stata-the-basics.pdf)
-* [Miscellaneous Stata Programs](https://agrogan1.github.io/Stata/)
 
 # R Materials
 
