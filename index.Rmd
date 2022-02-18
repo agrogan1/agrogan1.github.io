@@ -99,6 +99,8 @@ myHTMLfiles %>%
 
 # Research on Parenting and Child Development
 
+* ["Anxiety and Depression During COVID-19: Are Adults in Households with Children Faring Worse?"](https://link.springer.com/article/10.1007/s11606-021-07256-9)
+    + [News Release](https://news.umich.edu/having-kids-at-home-may-reduce-pandemic-depression/)
 * ["Multilevel ecological analysis of the predictors of spanking across 65 countries"](https://bmjopen.bmj.com/content/11/8/e046075)
 * ["Global Perspectives on Positive and Negative Parenting: A Bayesian Multilevel Analysis"](https://agrogan1.github.io/research/Bayes3MICS/).
 * "Spanking and young children's socioemotional development in low- and middle-income countries"
