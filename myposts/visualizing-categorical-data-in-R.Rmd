@@ -9,17 +9,17 @@ author:
     affiliation_url: https://www.umich.edu
 date: "`r Sys.Date()`"
 output: 
+  distill::distill_article:
+    highlight: haddock
+    toc: yes
+    code_folding: true
   pdf_document: 
     toc: yes
     number_sections: yes
     highlight: haddock
     latex_engine: xelatex
     fig_height: 3
-  distill::distill_article:
-    highlight: haddock
-    toc: yes
-    code_folding: true
-mainfont: Futura
+mainfont: Tw Cen MT
 ---
 
 ```{r setup, include=FALSE}
@@ -84,9 +84,13 @@ pander(table(mydata)) # nice table of data
 
 # Call The Graphing Library
 
+I use University of Michigan colors in these graphs, which is completely optional. You can find installation instructions for the Michigan graph scheme [here](https://agrogan1.github.io/R/michigancolors-demo/michigancolors-demo.html).
+
 ```{r}
 
 library(ggplot2)
+
+library(michigancolors) 
 
 ```
 
@@ -103,7 +107,7 @@ There are several different types of bar graph.
 ggplot(mydata, aes(x = group, # x is group
                    fill = outcome)) + # color fill is outcome
   geom_bar() + # bars
-  scale_fill_viridis_d(option = "cividis") + # beautiful colors
+  scale_fill_manual(values = michigancolors()) + # Michigan colors
   theme_minimal() # nice theme
 
 ```
@@ -115,7 +119,7 @@ ggplot(mydata, aes(x = group, # x is group
 ggplot(mydata, aes(x = group, # x is group
                    fill = outcome)) + # color fill is outcome
   geom_bar(position = position_dodge()) + # "dodged" bars
-  scale_fill_viridis_d(option = "cividis") + # beautiful colors
+  scale_fill_manual(values = michigancolors()) + # Michigan colors
   theme_minimal() # nice theme
 
 ```
@@ -127,7 +131,7 @@ ggplot(mydata, aes(x = group, # x is group
 ggplot(mydata, aes(x = outcome, # x is outcome
                    fill = outcome)) + # color fill is outcome
   geom_bar() + # bars
-  scale_fill_viridis_d(option = "cividis") + # beautiful colors
+  scale_fill_manual(values = michigancolors()) + # Michigan colors
   theme_minimal() + # nice theme
   theme(axis.text.x = element_text(size = rel(.75))) + # smaller x axis text
   facet_wrap(~group) # facet on group
@@ -143,7 +147,7 @@ In `ggplot` terms, pie charts are bar graphs displayed with *polar coordinates*.
 ggplot(mydata, aes(x = 1, # x is always 1
                    fill = outcome)) + # color fill is outcome
   geom_bar(position = "fill") + # bars
-  scale_fill_viridis_d(option = "cividis") + # beautiful colors
+  scale_fill_manual(values = michigancolors()) + # Michigan colors
   theme_void() + # void theme for pie charts
   coord_polar(theta = "y") + # polar coordinates
   facet_wrap(~group) # facet on group
@@ -164,7 +168,7 @@ ggplot(mydata, aes(x = group, # x is group
   geom_jitter(size = 3, # jittered points
               pch = 21, # Point Character 21; filled points
               color = "grey") + # outline color
-  scale_fill_viridis_d(option = "cividis") + # beautiful colors
+  scale_fill_manual(values = michigancolors()) + # Michigan colors
   theme_minimal() # nice theme
 
 ```
@@ -180,7 +184,7 @@ library(ggmosaic) # mosaic plots
 ggplot(mydata) + 
   geom_mosaic(aes(x = product(group), # "mosaic" geometry
                   fill = outcome)) +
-  scale_fill_viridis_d(option = "cividis") + # beautiful colors
+  scale_fill_manual(values = michigancolors()) + # Michigan colors
   theme_minimal()  # nice theme
 
 ```
@@ -228,7 +232,7 @@ ggplot(mycounts, # use this new data
   geom_waffle(color = "grey") + # waffle geometry w/ grey separator
   facet_wrap(~group) + # facet on group
   coord_equal() + # squares!
-  scale_fill_viridis_d(option = "cividis") + # beautiful colors
+  scale_fill_manual(values = michigancolors()) + # Michigan colors
   theme_void()  # nice theme
 
 ```
@@ -255,7 +259,7 @@ ggplot(mycounts,
                color = "grey") +
   geom_label(stat = "stratum", # textual labels
              aes(label = after_stat(stratum))) +
-  scale_fill_viridis_d(option = "cividis") + # beautiful colors
+  scale_fill_manual(values = michigancolors()) + # Michigan colors
   theme_void()  # nice theme
 
 ```
