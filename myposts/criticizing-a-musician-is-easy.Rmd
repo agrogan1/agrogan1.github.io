@@ -1,15 +1,37 @@
 ---
 title: "'Criticizing a musican is easy...'"
 author:
-  - name: César Hidalgo 
-    affiliation: L'Université Fédérale Toulouse Midi-Pyrénées
-date: "`r Sys.Date()`"
+- name: Andy Grogan-Kaylor
+  url: https://agrogan1.github.io/
+  affiliation: University of Michigan
+  affiliation_url: https://umich.edu/
+date: '`r Sys.Date()`'
 output:
   distill::distill_article:
     highlight: haddock
     toc: yes
-    code_folding: true
 ---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE,
+                      fig.margin=TRUE)
+
+```
+
+```{css, echo=FALSE}
+
+d-article blockquote {
+  color: black;
+  border-left: 2px solid gold; 
+  padding: 0.5em 10px;
+  }
+  
+```
+
+I have always thought this proverb shared by Professor César Hidalgo was both valuable and profound.
   
 > We have a saying in Chile: 'Criticizing a musican is easy, but it is more difficult when you have a guitar in your hand.'
 
