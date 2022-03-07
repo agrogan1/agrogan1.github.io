@@ -6,14 +6,11 @@ output:
   distill::distill_article:
     highlight: haddock
     toc: yes
-  tint::tintPdf:
+  pdf_document: 
     highlight: haddock
-    number_sections: yes
-    toc: yes
-  tufte::tufte_handout:
-    toc: yes
-    number_sections: yes
     latex_engine: xelatex
+    toc: yes
+    number_sections: yes
 ---
 
 ```{r setup, include=FALSE}
