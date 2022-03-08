@@ -3,6 +3,13 @@ title: 'Telling Stories With Data: Comparing Program Outcomes with ggplot2'
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
+  pdf_document: 
+    fig_caption: yes
+    fig_height: 2
+    highlight: haddock
+    latex_engine: xelatex
+    number_sections: yes
+    toc: yes
   html_document:
     fig_height: 2
     highlight: haddock
@@ -14,23 +21,6 @@ output:
     toc_float:
       collapsed: yes
       smooth_scroll: yes
-  pdf_document: 
-    fig_caption: yes
-    fig_height: 2
-    highlight: haddock
-    latex_engine: xelatex
-    number_sections: yes
-    toc: yes
-  tufte::tufte_handout:
-    toc: yes
-    number_sections: yes
-    highlight: haddock
-    latex_engine: xelatex
-  tint::tintPdf:
-    highlight: haddock
-    number_sections: yes
-    toc: yes
-    latex_engine: xelatex
 mainfont: Arial
 ---
 
@@ -119,7 +109,7 @@ myplot1 <- ggplot(clients, # the data I am using
   scale_color_viridis_d() + # beautiful colors
   scale_fill_viridis_d() + # beautiful fills
   theme_minimal() + # minimal theme
-  theme(axis.text.x = element_text(size = rel(.5))) # smaller labels
+  theme(axis.text.x = element_text(size = rel(.75))) # smaller labels
 
 ```
 
@@ -169,7 +159,8 @@ p2 <- last_plot()
 myplot1 + 
   stat_summary(fun = "mean", # summarize at mean
                geom = "point", size = 5) + # point geometry
-  labs(title = "Point Chart")
+  labs(title = "Point Chart") +
+  ylim(90, 105) # manually adjust y limits
 
 ```
 
@@ -193,7 +184,8 @@ myplot1 +
                    xend = program, # x ends at
                    y = 0, # y starts at
                    yend = mean(mental_health_T2))) + # y ends at
-  labs(title = "Lollipop Chart")
+  labs(title = "Lollipop Chart") +
+  ylim(0, 105) # manually adjust y limits
 
 ```
 
