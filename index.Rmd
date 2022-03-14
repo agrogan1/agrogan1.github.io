@@ -110,8 +110,8 @@ myHTMLfiles %>%
     + *Child Trends News Service* has released a well done [video summarizing this research](https://youtu.be/8LYZ-UpR5wE). 
 * ["Civil conflict, domestic violence, and poverty as predictors of corporal punishment in Colombia"](https://pubmed.ncbi.nlm.nih.gov/30772750/)
 * [Meta-Analysis](https://agrogan1.github.io/research/cp/CP-meta.html) of Research on Corporal Punishment [[PubMed Full Text](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7992110/)]
-* [Earlier Research On Corporal Punishment](https://agrogan1.github.io/research/cp/)
 * Data Visualization of [Country Level Bans on Corporal Punishment](https://agrogan1.github.io/research/cpbans/)
+* [Earlier Research On Corporal Punishment](https://agrogan1.github.io/research/cp/)
 
 <aside>
 ```{r, fig.cap="Countries in MICS Data", eval=TRUE}
