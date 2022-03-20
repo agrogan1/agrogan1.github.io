@@ -224,7 +224,9 @@ knitr::include_graphics("images/BayesianWaffle.png")
 * [Causality](https://agrogan.shinyapps.io/causality/)
 * Basics of [Quantitative Data Analysis](https://agrogan1.github.io/teaching/quantitative-data-analysis/quantitative-data-analysis.html)
 * [t-Test](https://agrogan.shinyapps.io/shiny-t-test/)
-* [Correlation](https://agrogan.shinyapps.io/correlation_demo/)
+* Correlation
+    + [The Basics](https://agrogan.shinyapps.io/correlation_demo/)
+    + [Thinking about Correlations](https://agrogan.shinyapps.io/thinking_about_correlations/)
 * Regression
      - [Tutorial](https://agrogan1.github.io/teaching/new-regression-tutorial/)
      - [Demo](https://agrogan.shinyapps.io/regression_demo/)
