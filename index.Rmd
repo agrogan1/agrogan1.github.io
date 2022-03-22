@@ -99,6 +99,8 @@ myHTMLfiles %>%
 
 # Research on Parenting and Child Development
 
+* Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach
+    + [ArcGIS Storymap](https://arcg.is/1S5XPK)
 * ["Anxiety and Depression During COVID-19: Are Adults in Households with Children Faring Worse?"](https://link.springer.com/article/10.1007/s11606-021-07256-9)
     + [News Release](https://news.umich.edu/having-kids-at-home-may-reduce-pandemic-depression/)
 * ["Multilevel ecological analysis of the predictors of spanking across 65 countries"](https://bmjopen.bmj.com/content/11/8/e046075)
@@ -114,6 +116,13 @@ myHTMLfiles %>%
 * [Earlier Research On Corporal Punishment](https://agrogan1.github.io/research/cp/)
 
 <aside>
+
+```{r, eval=FALSE}
+
+knitr::include_graphics("./images/MICS-LCA.png")
+
+```
+
 ```{r, fig.cap="Countries in MICS Data", eval=TRUE}
 
 knitr::include_graphics("images/MICSCountries.png")
