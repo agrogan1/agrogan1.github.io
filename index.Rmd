@@ -107,7 +107,7 @@ knitr::include_graphics("images/logit.png")
 
 # Research on Parenting and Child Development
 
-## Multiple Indicator Cluster Survey (MICS) (UNICEF Data)
+## Multiple Indicator Cluster Surveys (MICS) (UNICEF Data)
 
 * Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach
     + [ArcGIS Storymap](https://arcg.is/1S5XPK)
@@ -136,7 +136,7 @@ knitr::include_graphics("images/MICSCountries.png")
 * ["Physical Punishment as a Predictor of Early Cognitive Development: Evidence From Econometric Approaches"](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7983059/)
 * ["Civil conflict, domestic violence, and poverty as predictors of corporal punishment in Colombia"](https://pubmed.ncbi.nlm.nih.gov/30772750/)
 
-## Meta-Analysis
+## Meta-Analysis of Research on Corporal Punishment
 
 * [Meta-Analysis](https://agrogan1.github.io/research/cp/CP-meta.html) of Research on Corporal Punishment [[PubMed Full Text](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7992110/)]
 
