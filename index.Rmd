@@ -82,20 +82,28 @@ myHTMLfiles %>%
 
 * [Data Visualization](https://agrogan1.github.io/dataviz/dataviz-course)
 
+```{r, out.width="25%"}
+
+knitr::include_graphics("images/banner.png")
+
+```
+
 * [Multilevel and Longitudinal Modeling](https://agrogan1.github.io/multilevel/)
+
+```{r, out.width="25%"}
+
+knitr::include_graphics("images/plant.png")
+
+```
 
 * [Categorical Data Analysis](https://agrogan1.github.io/newstuff/categorical/)
 
-<aside>
-![Data Visualization](images/banner.png)
+```{r, out.width="25%"}
 
-![Cross Sectional Multilevel Models](images/neighborhood.png)
+knitr::include_graphics("images/logit.png")
 
-![Longitudinal Multilevel Models](images/plant.png)
+```
 
-![Categorical Data Analysis](images/logit.png)
-
-</aside>
 
 # Research on Parenting and Child Development
 
@@ -109,6 +117,14 @@ myHTMLfiles %>%
     + [Open Access](https://doi.org/10.1016/j.chiabu.2018.11.003)
     + [Data Visualization](https://agrogan1.github.io/research/MICS1/)
     + *Child Trends News Service* has released a well done [video summarizing this research](https://youtu.be/8LYZ-UpR5wE). 
+    
+<aside>
+```{r, fig.cap="Countries in MICS Data", eval=TRUE}
+
+knitr::include_graphics("images/MICSCountries.png")
+
+```
+</aside>
 
 ## COVID-19
 
@@ -128,36 +144,17 @@ myHTMLfiles %>%
 
 * Data Visualization of [Country Level Bans on Corporal Punishment](https://agrogan1.github.io/research/cpbans/)
 
-## Earlier Research on Corporal Punishment
-
-* [Earlier Research On Corporal Punishment](https://agrogan1.github.io/research/cp/)
-
 <aside>
-
-```{r, eval=FALSE}
-
-knitr::include_graphics("./images/MICS-LCA.png")
-
-```
-
-```{r, fig.cap="Countries in MICS Data", eval=TRUE}
-
-knitr::include_graphics("images/MICSCountries.png")
-
-```
-
-```{r, fig.cap="Spanking and young children's socioemotional development in low- and middle-income countries", eval=FALSE}
-
-knitr::include_graphics("images/MICSglobe.png")
-
-```
-
 ```{r, fig.cap="Country Level Bans on Corporal Punishment"}
 
 knitr::include_graphics("images/cpbansglobe.png")
 
 ```
 </aside>
+
+## Earlier Research on Corporal Punishment
+
+* [Earlier Research On Corporal Punishment](https://agrogan1.github.io/research/cp/)
 
 # Selected Collaborations
 
