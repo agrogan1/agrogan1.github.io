@@ -98,7 +98,10 @@ plot_geo(y) %>%
             showscale = FALSE) %>%
   layout(geo = list(showland = FALSE,
                     showcountries = TRUE,
-                    projection = list(type = 'orthographic'))) 
+                    projection = list(type = 'orthographic',
+                                      rotation = list(lon = -25,
+                                            lat = 0,
+                                            roll = 0)))) 
 
 ```
 
