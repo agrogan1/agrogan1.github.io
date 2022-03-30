@@ -1,0 +1,52 @@
+---
+title: "Making a 'Big Number' (And Circle)"
+subtitle: "With R"
+author: "Andy Grogan-Kaylor"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: [default]
+    nature:
+      ratio: 16:9
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+
+```{r, include = F}
+# This is the recommended set up for flipbooks
+# you might think about setting cache to TRUE as you gain practice --- building flipbooks from scratch can be time consuming
+knitr::opts_chunk$set(fig.width = 6, message = FALSE, warning = FALSE, comment = "", cache = F)
+library(flipbookr)
+library(tidyverse)
+```
+
+---
+
+```{r graph1, include = FALSE}
+
+library(ggplot2) # beautiful graphs
+
+ggplot(data = NULL, # NULL data set
+       aes(x = 3, # arbitrary x; 3 is good
+           y = 30)) + # y value
+  geom_col(fill = "#00274C") + # column
+  coord_polar(theta = "y") + # polar coordinates
+  xlim(0, 4) + # xlim creates a doughnut
+  ylim(0, 100) + # ylim governs the circumference
+  geom_text(aes(x = 0, # text in center
+                y = 0,
+                label = "30"), # label for text
+            size = 30,
+            col = "#00274C") +
+  theme_void() # empty theme
+
+```
+
+---
+
+```{r, code = knitr::knit_code$get("graph1"), eval = FALSE, echo = FALSE}
+```
+
+`r chunk_reveal("graph1", break_type = "auto", widths = c(4,2))`
