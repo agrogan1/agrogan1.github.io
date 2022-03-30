@@ -37,7 +37,7 @@ ggplot(data = NULL, # NULL data set
   ylim(0, 100) + # ylim governs the circumference
   geom_text(aes(x = 0, # text in center
                 y = 0,
-                label = "30"), # label for text
+                label = "30%"), # label for text
             size = 30,
             col = "#00274C") +
   theme_void() # empty theme
