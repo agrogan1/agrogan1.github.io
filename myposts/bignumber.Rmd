@@ -15,12 +15,63 @@ output:
 
 
 ```{r, include = F}
+
 # This is the recommended set up for flipbooks
 # you might think about setting cache to TRUE as you gain practice --- building flipbooks from scratch can be time consuming
+
 knitr::opts_chunk$set(fig.width = 6, message = FALSE, warning = FALSE, comment = "", cache = F)
+
 library(flipbookr)
+
 library(tidyverse)
+
+library(xaringanExtra)
+
+xaringanExtra::use_tile_view()
+
+# xaringanExtra::use_slide_tone()
+
+xaringanExtra::use_share_again()
+
 ```
+
+```{css, echo = FALSE}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+body { 
+    font-family: 'Montserrat', sans-serif;
+}
+.author, .date {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.title-slide { 
+  color: #ffcb05;
+  background-color: #00274C; 
+}
+.title-slide h1 {
+    color: #ffcb05;
+}
+pre {
+  white-space: pre-wrap;
+}
+blockquote {
+  background: #FFFFFF;
+  color: #000;
+  border-left: 5px solid #ffcb05;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+
+```
+
+# How To Navigate This Presentation
+
+* Use the <span style="font-size:100px">&#8678;</span> and <span style="font-size:100px">&#8680;</span> keys to move through the presentation.
+* Press *o* for *panel overview*.
 
 ---
 
@@ -33,8 +84,8 @@ ggplot(data = NULL, # NULL data set
            y = 30)) + # y value
   geom_col(fill = "#00274C") + # column
   coord_polar(theta = "y") + # polar coordinates
-  xlim(0, 4) + # xlim creates a doughnut
-  ylim(0, 100) + # ylim governs the circumference
+  xlim(0, 4) + # xlimits create a doughnut
+  ylim(0, 100) + # ylimits govern the circumference
   geom_text(aes(x = 0, # text in center
                 y = 0,
                 label = "30%"), # label for text
@@ -50,3 +101,33 @@ ggplot(data = NULL, # NULL data set
 ```
 
 `r chunk_reveal("graph1", break_type = "auto", widths = c(4,2))`
+
+---
+
+```{r graph2, include = FALSE}
+
+library(ggplot2) # beautiful graphs
+
+ggplot(data = NULL, # NULL data set
+       aes(x = 3, # arbitrary x; 3 is good
+           y = 81)) + # y value
+  geom_col(fill = "#ffcb05") + # column
+  coord_polar(theta = "y") + # polar coordinates
+  xlim(0, 4) + # xlimits create a doughnut
+  ylim(0, 100) + # ylimits govern the circumference
+  geom_text(aes(x = 0, # text in center
+                y = 0,
+                label = "81%"), # label for text
+            size = 30,
+            col = "#ffcb05") +
+  theme_void() # empty theme
+
+```
+
+---
+
+```{r, code = knitr::knit_code$get("graph2"), eval = FALSE, echo = FALSE}
+```
+
+`r chunk_reveal("graph2", break_type = "auto", widths = c(4,2))`
+

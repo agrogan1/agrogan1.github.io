@@ -6,6 +6,13 @@
     <meta name="author" content="Andy Grogan-Kaylor" />
     <script src="libs/header-attrs-2.13/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view-0.2.6/tile-view.js"></script>
+    <script src="libs/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="libs/shareon-1.4.1/shareon.min.css" rel="stylesheet" />
+    <script src="libs/shareon-1.4.1/shareon.min.js"></script>
+    <link href="libs/xaringanExtra-shareagain-0.2.6/shareagain.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
   </head>
   <body>
     <textarea id="source">
@@ -20,6 +27,44 @@ class: center, middle, inverse, title-slide
 
 
 
+
+&lt;style type="text/css"&gt;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&amp;display=swap');
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+body { 
+    font-family: 'Montserrat', sans-serif;
+}
+.author, .date {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.title-slide { 
+  color: #ffcb05;
+  background-color: #00274C; 
+}
+.title-slide h1 {
+    color: #ffcb05;
+}
+pre {
+  white-space: pre-wrap;
+}
+blockquote {
+  background: #FFFFFF;
+  color: #000;
+  border-left: 5px solid #ffcb05;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+
+&lt;/style&gt;
+
+# How To Navigate This Presentation
+
+* Use the &lt;span style="font-size:100px"&gt;&amp;#8678;&lt;/span&gt; and &lt;span style="font-size:100px"&gt;&amp;#8680;&lt;/span&gt; keys to move through the presentation.
+* Press *o* for *panel overview*.
 
 ---
 
@@ -117,7 +162,7 @@ ggplot(data = NULL,  # NULL data set
            y = 30)) +  # y value
   geom_col(fill = "#00274C") +  # column
   coord_polar(theta = "y") +  # polar coordinates
-* xlim(0, 4)   # xlim creates a doughnut
+* xlim(0, 4)   # xlimits create a doughnut
 ```
 ]
  
@@ -139,8 +184,8 @@ ggplot(data = NULL,  # NULL data set
            y = 30)) +  # y value
   geom_col(fill = "#00274C") +  # column
   coord_polar(theta = "y") +  # polar coordinates
-  xlim(0, 4) +  # xlim creates a doughnut
-* ylim(0, 100)   # ylim governs the circumference
+  xlim(0, 4) +  # xlimits create a doughnut
+* ylim(0, 100)   # ylimits govern the circumference
 ```
 ]
  
@@ -162,8 +207,8 @@ ggplot(data = NULL,  # NULL data set
            y = 30)) +  # y value
   geom_col(fill = "#00274C") +  # column
   coord_polar(theta = "y") +  # polar coordinates
-  xlim(0, 4) +  # xlim creates a doughnut
-  ylim(0, 100) +  # ylim governs the circumference
+  xlim(0, 4) +  # xlimits create a doughnut
+  ylim(0, 100) +  # ylimits govern the circumference
 * geom_text(aes(x = 0,  # text in center
 *               y = 0,
 *               label = "30%"),  # label for text
@@ -190,8 +235,8 @@ ggplot(data = NULL,  # NULL data set
            y = 30)) +  # y value
   geom_col(fill = "#00274C") +  # column
   coord_polar(theta = "y") +  # polar coordinates
-  xlim(0, 4) +  # xlim creates a doughnut
-  ylim(0, 100) +  # ylim governs the circumference
+  xlim(0, 4) +  # xlimits create a doughnut
+  ylim(0, 100) +  # ylimits govern the circumference
   geom_text(aes(x = 0,  # text in center
                 y = 0,
                 label = "30%"),  # label for text
@@ -219,8 +264,8 @@ ggplot(data = NULL,  # NULL data set
            y = 30)) +  # y value
   geom_col(fill = "#00274C") +  # column
   coord_polar(theta = "y") +  # polar coordinates
-  xlim(0, 4) +  # xlim creates a doughnut
-  ylim(0, 100) +  # ylim governs the circumference
+  xlim(0, 4) +  # xlimits create a doughnut
+  ylim(0, 100) +  # ylimits govern the circumference
   geom_text(aes(x = 0,  # text in center
                 y = 0,
                 label = "30%"),  # label for text
@@ -260,6 +305,249 @@ ggplot(data = NULL,  # NULL data set
   font-size: 80%
 }
 &lt;/style&gt;
+
+
+
+---
+
+
+
+---
+
+
+
+count: false
+ 
+
+.panel1-graph2-auto[
+
+```r
+*library(ggplot2)  # beautiful graphs
+```
+]
+ 
+.panel2-graph2-auto[
+
+]
+
+---
+count: false
+ 
+
+.panel1-graph2-auto[
+
+```r
+library(ggplot2)  # beautiful graphs
+
+*ggplot(data = NULL,  # NULL data set
+*      aes(x = 3,  # arbitrary x; 3 is good
+*          y = 81))   # y value
+```
+]
+ 
+.panel2-graph2-auto[
+![](bignumber_files/figure-html/graph2_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-graph2-auto[
+
+```r
+library(ggplot2)  # beautiful graphs
+
+ggplot(data = NULL,  # NULL data set
+       aes(x = 3,  # arbitrary x; 3 is good
+           y = 81)) +  # y value
+* geom_col(fill = "#ffcb05")   # column
+```
+]
+ 
+.panel2-graph2-auto[
+![](bignumber_files/figure-html/graph2_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-graph2-auto[
+
+```r
+library(ggplot2)  # beautiful graphs
+
+ggplot(data = NULL,  # NULL data set
+       aes(x = 3,  # arbitrary x; 3 is good
+           y = 81)) +  # y value
+  geom_col(fill = "#ffcb05") +  # column
+* coord_polar(theta = "y")   # polar coordinates
+```
+]
+ 
+.panel2-graph2-auto[
+![](bignumber_files/figure-html/graph2_auto_04_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-graph2-auto[
+
+```r
+library(ggplot2)  # beautiful graphs
+
+ggplot(data = NULL,  # NULL data set
+       aes(x = 3,  # arbitrary x; 3 is good
+           y = 81)) +  # y value
+  geom_col(fill = "#ffcb05") +  # column
+  coord_polar(theta = "y") +  # polar coordinates
+* xlim(0, 4)   # xlimits create a doughnut
+```
+]
+ 
+.panel2-graph2-auto[
+![](bignumber_files/figure-html/graph2_auto_05_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-graph2-auto[
+
+```r
+library(ggplot2)  # beautiful graphs
+
+ggplot(data = NULL,  # NULL data set
+       aes(x = 3,  # arbitrary x; 3 is good
+           y = 81)) +  # y value
+  geom_col(fill = "#ffcb05") +  # column
+  coord_polar(theta = "y") +  # polar coordinates
+  xlim(0, 4) +  # xlimits create a doughnut
+* ylim(0, 100)   # ylimits govern the circumference
+```
+]
+ 
+.panel2-graph2-auto[
+![](bignumber_files/figure-html/graph2_auto_06_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-graph2-auto[
+
+```r
+library(ggplot2)  # beautiful graphs
+
+ggplot(data = NULL,  # NULL data set
+       aes(x = 3,  # arbitrary x; 3 is good
+           y = 81)) +  # y value
+  geom_col(fill = "#ffcb05") +  # column
+  coord_polar(theta = "y") +  # polar coordinates
+  xlim(0, 4) +  # xlimits create a doughnut
+  ylim(0, 100) +  # ylimits govern the circumference
+* geom_text(aes(x = 0,  # text in center
+*               y = 0,
+*               label = "81%"),  # label for text
+*           size = 30,
+*           col = "#ffcb05")
+```
+]
+ 
+.panel2-graph2-auto[
+![](bignumber_files/figure-html/graph2_auto_07_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-graph2-auto[
+
+```r
+library(ggplot2)  # beautiful graphs
+
+ggplot(data = NULL,  # NULL data set
+       aes(x = 3,  # arbitrary x; 3 is good
+           y = 81)) +  # y value
+  geom_col(fill = "#ffcb05") +  # column
+  coord_polar(theta = "y") +  # polar coordinates
+  xlim(0, 4) +  # xlimits create a doughnut
+  ylim(0, 100) +  # ylimits govern the circumference
+  geom_text(aes(x = 0,  # text in center
+                y = 0,
+                label = "81%"),  # label for text
+            size = 30,
+            col = "#ffcb05") +
+* theme_void()  # empty theme
+```
+]
+ 
+.panel2-graph2-auto[
+![](bignumber_files/figure-html/graph2_auto_08_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-graph2-auto[
+
+```r
+library(ggplot2)  # beautiful graphs
+
+ggplot(data = NULL,  # NULL data set
+       aes(x = 3,  # arbitrary x; 3 is good
+           y = 81)) +  # y value
+  geom_col(fill = "#ffcb05") +  # column
+  coord_polar(theta = "y") +  # polar coordinates
+  xlim(0, 4) +  # xlimits create a doughnut
+  ylim(0, 100) +  # ylimits govern the circumference
+  geom_text(aes(x = 0,  # text in center
+                y = 0,
+                label = "81%"),  # label for text
+            size = 30,
+            col = "#ffcb05") +
+  theme_void()  # empty theme
+```
+]
+ 
+.panel2-graph2-auto[
+![](bignumber_files/figure-html/graph2_auto_09_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-graph2-auto {
+  color: black;
+  width: 65.3333333333333%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-graph2-auto {
+  color: black;
+  width: 32.6666666666667%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-graph2-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
 
 
     </textarea>
