@@ -48,17 +48,17 @@ data(gutten) # gutten tree data
 
 ```{r, out.width="80%"}
 
-ggplot(gutten,
-       aes(x = age.base, 
-           y = height)) +
-  geom_point(color = "darkgreen",
-             alpha = .5,
-             size = 2) +
-  geom_smooth(color = "gold") + 
-  labs(title = "Tree Height by Tree Age",
-       x = "Tree Age",
-       y = "Tree Height") +
-  theme_minimal() 
+ggplot(gutten, # the data I am using
+       aes(x = age.base, # x is tree age
+           y = height)) + # y is tree height
+  geom_point(color = "darkgreen", # dark green points
+             alpha = .5, # transparency
+             size = 2) + # point size
+  geom_smooth(color = "gold") + # gold smoother
+  labs(title = "Tree Height by Tree Age", # title
+       x = "Tree Age", # x axis label
+       y = "Tree Height") + # y axis label
+  theme_minimal() # minimal theme
 
 ```
 

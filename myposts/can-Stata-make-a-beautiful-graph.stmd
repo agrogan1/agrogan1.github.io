@@ -30,7 +30,7 @@ The documentation goes on to further note that:
 
 # Graph 🌲
 
-Below please find the *admittedly complicated* graph command. Note, however, that the graph builds upon basic ideas that we want a twoway graph, with a scatterplot and a lowess smoother. Everything else is just an option.
+Below please find the *admittedly complicated* graph command. Note, however, that the graph builds upon basic ideas that we want a `twoway` graph, with a `scatter`plot and a `lowess` smoother. Everything else is just an option to improve the appearance of the graph.
 
 I make extensive use of the `///` notation which allows me to spread the graph along multiple lines.
 
