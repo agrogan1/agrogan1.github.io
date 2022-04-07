@@ -37,7 +37,8 @@ I make extensive use of the `///` notation which allows me to spread the graph a
     twoway /// two way graph
     (scatter height age_base, /// scatterplot
 	mcolor(dkgreen%25) msymbol(circle)) /// dark green transparent markers
-    (lowess height age_base, lcolor(gold) lwidth(thick) lpattern(solid)), /// smoother; gold line
+    (lowess height age_base, /// smoother
+	lcolor(gold) lwidth(thick) lpattern(solid)), /// gold line
     scheme(lean2) /// better base scheme
     title("Tree Height by Tree Age") /// title
     xtitle("Tree Age") /// title for x axis
