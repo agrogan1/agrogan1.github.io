@@ -6,7 +6,7 @@
 geometry: margin=1 in
 ---
 
-<style>h1 {color: #00274C;} h2 {color: #2F65A7;} blockquote {border-left: 5px solid #ffcb05; margin: 1.5em 10px; padding: 0.5em 10px;} code {color: red;}</style>
+<style>body {max-width: 90%} h1 {color: #00274C;} h2 {color: #2F65A7;} blockquote {border-left: 5px solid #ffcb05; margin: 1.5em 10px; padding: 0.5em 10px;} code {color: red;}</style>
 
 Both R and Stata are programs with strong data visualization and analysis capabilities. However, Stata's capabilities as a data visualization program are sometimes under-rated. The intent of the post is to show that Stata can often perform the same graphing task as R, with much simpler, and much more intuitive, command syntax.
 
