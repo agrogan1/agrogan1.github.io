@@ -17,7 +17,7 @@ This post uses simulated social service agency data clients. In each program, I 
 ```s
     import delimited "clients.csv", encoding(ISO-8859-2) clear // import data
 	
-	graph bar mental_health_t2, over(program) scheme(michigan) asyvars // bar graph of mental health over program
+	graph bar mental_health_t2, over(program, gap(10)) scheme(michigan) asyvars // bar graph of mental health over program
 ```
 
 ```s/
@@ -43,15 +43,17 @@ This post uses simulated social service agency data clients. In each program, I 
           fill = program)) + 
       stat_summary(fun = mean, # summarizing y 
                    geom = "bar") + # with bars
-      scale_fill_manual(values = michigancolors()) +
-	  theme(axis.text.x = element_text(size = rel(.3)))
+      scale_fill_manual(values = michigancolors()) + # UM colors
+	  theme_minimal() # minimal theme
 ```
 
 ```r/
-    # ggsave("mybarR.png", width = 3, height = 3)
+    # ggsave("mybarR.png", width = 3, height = 2)
 ```
 
 ![Bar Graph in R](mybarR.png)
+
+
 
 
 
