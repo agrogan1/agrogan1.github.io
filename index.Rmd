@@ -126,6 +126,10 @@ knitr::include_graphics("images/MICSCountries.png")
 ```
 </aside>
 
+## Adverse Childhood Experiences (ACES)
+
+["Adverse Childhood Experiences and Spanking Have Similar Associations with Early Behavior Problems"](https://doi.org/10.1016/j.jpeds.2021.01.072)
+
 ## COVID-19
 
 * ["Anxiety and Depression During COVID-19: Are Adults in Households with Children Faring Worse?"](https://link.springer.com/article/10.1007/s11606-021-07256-9)
