@@ -27,6 +27,8 @@ library(tidyverse)
 
 library(xaringanExtra)
 
+library(emo) # emoji
+
 xaringanExtra::use_tile_view()
 
 # xaringanExtra::use_slide_tone()
@@ -70,7 +72,7 @@ blockquote {
 
 # How To Navigate This Presentation
 
-* Use the <span style="font-size:100px">&#8678;</span> and <span style="font-size:100px">&#8680;</span> keys to move through the presentation.
+* Use the `r emo::ji("left_arrow")` `r emo::ji("right_arrow")` keys to move through the presentation.
 * Press *o* for *panel overview*.
 
 --
