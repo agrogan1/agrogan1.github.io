@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/can-Stata-make-a-beautiful-graph2.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}14 Apr 2022, 12:36:59
+ {txt}opened on:  {res}14 Apr 2022, 13:20:57
 {txt}
 {com}. //_1
 . display c(current_date)
@@ -11,7 +11,7 @@
 {txt}
 {com}. //_2
 . display c(current_time)
-{res}12:36:59
+{res}13:20:57
 {txt}
 {com}. //_3
 . use "https://github.com/agrogan1/newstuff/raw/master/categorical/glm/penguins.dta", clear
@@ -48,7 +48,7 @@ format
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/can-Stata-make-a-beautiful-graph2.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}14 Apr 2022, 12:37:02
+ {txt}closed on:  {res}14 Apr 2022, 13:21:01
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
