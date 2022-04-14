@@ -1,0 +1,54 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/can-Stata-make-a-beautiful-graph2.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}14 Apr 2022, 12:36:59
+{txt}
+{com}. //_1
+. display c(current_date)
+{res}14 Apr 2022
+{txt}
+{com}. //_2
+. display c(current_time)
+{res}12:36:59
+{txt}
+{com}. //_3
+. use "https://github.com/agrogan1/newstuff/raw/master/categorical/glm/penguins.dta", clear
+{txt}
+{com}. //_4
+. twoway /// twoway graph
+> (scatter flipper_length body_mass_g, mcolor(%50)) /// scatter plot w/ transparency
+> (lowess flipper_length body_mass_g), /// lowess smoohter
+> by(species, title("Penguin Flipper Length by Body Mass")) /// by species and title
+> scheme(michigan) // Michigan graph scheme
+{res}{txt}
+{com}. //_5
+. graph export beautiful-penguins.png, width(2000) replace
+{txt}{p 0 4 2}
+file {bf}
+/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/beautiful-penguins.png{rm}
+saved as
+PNG
+format
+{p_end}
+
+{com}. //_6
+. graph export beautiful-penguins.svg, width(2000) replace
+{txt}{p 0 4 2}
+file {bf}
+beautiful-penguins.svg{rm}
+saved as
+SVG
+format
+{p_end}
+
+{com}. //_^
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/can-Stata-make-a-beautiful-graph2.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}14 Apr 2022, 12:37:02
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

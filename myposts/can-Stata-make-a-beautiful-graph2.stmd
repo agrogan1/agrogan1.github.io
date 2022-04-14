@@ -1,0 +1,33 @@
+% Can Stata Make A Beautiful Graph? (Attempt 2)
+% Andy Grogan-Kaylor 
+% `s c(current_date)` `s c(current_time)`
+
+---
+geometry: margin=1 in
+---
+
+<style>body {max-width: 90%} h1 {color: #00274C;} h2 {color: #2F65A7;} p{font-size: 115%} blockquote {border-left: 5px solid #ffcb05; margin: 1.5em 10px; padding: 0.5em 10px;} code {color: red;}</style>
+
+A second attempt [to make a beautiful graph with Stata](can-Stata-make-a-beautiful-graph.html).
+
+I make use of the `///` notation which allows me to spread the graph along multiple lines.
+
+# Get The Data
+
+    use "https://github.com/agrogan1/newstuff/raw/master/categorical/glm/penguins.dta", clear
+
+# Make The Graph
+
+    twoway /// twoway graph
+    (scatter flipper_length body_mass_g, mcolor(%50)) /// scatter plot w/ transparency
+    (lowess flipper_length body_mass_g), /// lowess smoohter
+    by(species, title("Penguin Flipper Length by Body Mass")) /// by species and title
+	scheme(michigan) // Michigan graph scheme
+
+    graph export beautiful-penguins.png, width(2000) replace
+	
+	graph export beautiful-penguins.svg, width(2000) replace
+
+![A Beautiful? Graph of the Palmer Penguin Data](beautiful-penguins.svg){width=75%}
+
+	
