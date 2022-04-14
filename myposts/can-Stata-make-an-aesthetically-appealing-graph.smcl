@@ -1,0 +1,59 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/can-Stata-make-an-aesthetically-appealing-graph.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}14 Apr 2022, 13:21:20
+{txt}
+{com}. //_1
+. display c(current_date)
+{res}14 Apr 2022
+{txt}
+{com}. //_2
+. display c(current_time)
+{res}13:21:20
+{txt}
+{com}. //_3
+. use "https://github.com/agrogan1/multilevel/raw/master/fixed-effects-example-World-Bank-data/WorldBankData.dta", clear
+{txt}
+{com}. //_4
+. drop if region == "Aggregates" // drop Aggregates
+{txt}(1,927 observations deleted)
+
+{com}. //_5
+. twoway (scatter GDP year, mcolor(%10)) /// scatterplot; transparent markers
+> (lowess GDP year, lwidth(thick)),  /// lowess smoother
+> xlabel(, angle(270) labsize(small)) /// x label tweaks
+> ylabel(, angle(0) labsize(small)) /// y label tweaks
+> scheme(michigan) /// Michigan graph scheme
+> by(region, ///
+> title("GDP by Year") ///
+> caption ("World Bank Data: Every Dot is a Country-Year") ///
+> legend(off) ///
+> style(compact)) /// by region; compact style
+> legend(off) // no legend
+{res}{txt}
+{com}. //_6
+. graph export aesthetically-appealing-World-Bank.svg, width(2000) replace
+{txt}{p 0 4 2}
+(file {bf}
+aesthetically-appealing-World-Bank.svg{rm}
+not found)
+{p_end}
+{p 0 4 2}
+file {bf}
+aesthetically-appealing-World-Bank.svg{rm}
+saved as
+SVG
+format
+{p_end}
+
+{com}. //_^
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/can-Stata-make-an-aesthetically-appealing-graph.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}14 Apr 2022, 13:21:28
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
