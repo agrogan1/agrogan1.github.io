@@ -12,6 +12,14 @@ markstat using "can-Stata-make-a-beautiful-graph.stmd"
 
 graph close _all
 
+* can Stata make a beautiful graph (2)?
+
+doedit "can-Stata-make-a-beautiful-graph2.stmd"
+
+markstat using "can-Stata-make-a-beautiful-graph2.stmd"
+
+graph close _all
+
 * working with dates in Stata
 
 doedit "working-with-dates-in-Stata.stmd"
