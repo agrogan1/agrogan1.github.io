@@ -128,7 +128,11 @@ knitr::include_graphics("images/MICSCountries.png")
 
 ## Adverse Childhood Experiences (ACES)
 
-["Adverse Childhood Experiences and Spanking Have Similar Associations with Early Behavior Problems"](https://doi.org/10.1016/j.jpeds.2021.01.072)
+* ["Adverse childhood experiences and spanking have similar associations with early behavior problems"](https://doi.org/10.1016/j.jpeds.2021.01.072)
+
+* ["Unpacking the impact of adverse childhood experiences on adult mental health"](http://dx.doi.org/10.1016/j.chiabu.2017.03.016) 
+
+* ["Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience"](https://doi.org/10.1016/j.chiabu.2017.01.014)  
 
 ## COVID-19
 
