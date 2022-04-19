@@ -29,13 +29,16 @@ library(pander)
 
 # Background
 
-Over the past few months, I have been experimenting a lot with different slide show formats. Some slide formats make beautiful slides, but every format seems to have its own limitations.
+Over the past few years, I have been experimenting a lot with different slide show formats. Some slide formats make beautiful slides, but every format seems to have its own limitations.
+
+Here are some key dimensions of slide formats:
 
 ```{r, fig.cap="Slidy with Custom CSS"}
 
 knitr::include_graphics("images/Slidy-better-CSS.png")
 
 ```
+
 
 ```{r, fig.cap="RevealJS with Sky Theme"}
 
@@ -54,8 +57,6 @@ knitr::include_graphics("images/Xaringan.png")
 knitr::include_graphics("images/Ioslides.png")
 
 ```
-
-Here are some key dimensions of slide formats:
 
 * *Basic Aesthetic*: Does the slide format look pleasing and well designed *out of the box*?
 
