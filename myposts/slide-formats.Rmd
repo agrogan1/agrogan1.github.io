@@ -107,7 +107,7 @@ basic_aesthetic <- c("nice clean design",
 
 overflow <- c("no",
               "yes",
-              "no",
+              "tricky, but improving, when used with Quarto",
               "no")
 
 themes <- c("no",
