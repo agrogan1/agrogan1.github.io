@@ -73,9 +73,11 @@ Here are some key dimensions of slide formats:
 
 * *Printing*: Is it easy to print, especially to PDF? Again, especially useful for classes.
 
-> In thinking about using RMarkdown slide formats, it is worth noting that most of these formats seem to behave best making use of Level 2 (`##`) Headings in RMarkdown. Various slide formats have various behaviors with Level 1 (`#`) Headings, or mixtures of Level 1 (`#`) and Level 2 (`##`) Headings, that you may be accustomed to using in other RMarkdown formats. Therefore, if you are developing one single RMarkdown document that you intend to write out to slides and to another format such as PDF, it is worth thinking about the fact that headings seem to behave uniquely in RMarkdown slide formats.
+In thinking about using RMarkdown slide formats, it is worth noting that most of these formats seem to behave best making use of Level 2 (`##`) Headings in RMarkdown. Various slide formats have various behaviors with Level 1 (`#`) Headings, or mixtures of Level 1 (`#`) and Level 2 (`##`) Headings, that you may be accustomed to using in other RMarkdown formats. Therefore, if you are developing one single RMarkdown document that you intend to write out to slides and to another format such as PDF, it is worth thinking about the fact that headings seem to behave uniquely in RMarkdown slide formats.
 
-> My favorite format is Slidy right now, because it allows slides to easily overflow, and because it can easily be modified with [custom CSS](https://agrogan1.github.io/R/YAML-test/slidy.css). My **workflow** right now is to use Slidy for presentation slides, and then render the RMarkdown document as PDF for PDF handouts.
+My favorite format is Slidy right now, because it allows slides to easily overflow, and because it can easily be modified with [custom CSS](UMslidy.css). My **workflow** right now is to use Slidy for presentation slides, and then render the RMarkdown document as PDF for PDF handouts.
+
+Reveal.js is available through traditional RMarkdown, but is also the slide system available through the new [https://quarto.org/](https://quarto.org/) technology. This new version of Reveal.js has radically improved over the prior version and offers a number of customization options.  Scrollability of overflow content is still tricky with Reveal.js. Reveal.js slides are probably the best choice if the majority of your users are going to be accessing slides through a mobile browser.
 
 ```{r}
 
@@ -183,6 +185,10 @@ datatable(slideformats,
 
 * `xaringan` makes use of `remark.js` to format slides, while other Rmarkdown formats use `pandoc`. `remark.js` implements most of the basic Rmarkdown syntax, but not all. Some features, such as *footnotes*, may not work as expected with `xaringan`.
 * `xaringan` uses `---` to separate slides, while also using (`#`) to indicate headings. But `#` by itself does not indicate a new slide. Thus, `xaringan` may not work well in situations where you want to write the same RMarkdown file out to *multiple* formats, such as slides, HTML, PDF handouts, etc.  If you are going to also write your slides out to another format, such as PDF handouts, `slidy` may produce better results.
+* `xaringan` is a rapidly developing slide "ecosystem". In particular, `xaringan` provides a number of enhancements—especially easy sharing of slides on social media—through the `xaringanExtra` library. 
+
+
+
 
 
 
