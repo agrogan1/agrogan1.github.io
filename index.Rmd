@@ -110,9 +110,12 @@ knitr::include_graphics("images/logit.png")
 ## Multiple Indicator Cluster Surveys (MICS) (UNICEF Data)
 
 * Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach
+    + [Article](https://doi.org/10.1016/j.chiabu.2022.105606)
     + [ArcGIS Storymap](https://arcg.is/1S5XPK)
 * ["Multilevel ecological analysis of the predictors of spanking across 65 countries"](https://bmjopen.bmj.com/content/11/8/e046075)
-* ["Global Perspectives on Positive and Negative Parenting: A Bayesian Multilevel Analysis"](https://agrogan1.github.io/research/Bayes3MICS/)
+* "Global Perspectives on Positive and Negative Parenting: A Bayesian Multilevel Analysis"
+    + [Abstract](https://agrogan1.github.io/research/Bayes3MICS/)
+    + [Article](https://doi.org/10.1177%2F0165025420981642)
 * "Spanking and young children's socioemotional development in low- and middle-income countries"
     + [Open Access](https://doi.org/10.1016/j.chiabu.2018.11.003)
     + [Data Visualization](https://agrogan1.github.io/research/MICS1/)
