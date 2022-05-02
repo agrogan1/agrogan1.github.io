@@ -28,6 +28,10 @@ library(DT) # nice data table
 
 library(tibble) # tibbles
 
+library(countrycode) # manage country data
+
+library(plotly) # interactive graphs
+
 ```
 
 
