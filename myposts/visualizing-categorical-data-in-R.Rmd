@@ -19,7 +19,7 @@ output:
     highlight: haddock
     latex_engine: xelatex
     fig_height: 3
-mainfont: Tw Cen MT
+mainfont: Futura
 ---
 
 ```{r setup, include=FALSE}
