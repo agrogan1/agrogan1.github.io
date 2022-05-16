@@ -3,15 +3,9 @@ title: "Calculating and Graphing Correlations in R"
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
-  html_document:
-    toc: yes
-    toc_float:
-      collapsed: no
-      smooth_scroll: no
+  distill::distill_article:
     highlight: haddock
-    fig_height: 3
-    number_sections: yes
-    css: UM.css
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -22,9 +16,19 @@ knitr::opts_chunk$set(echo = TRUE,
 
 ```
 
+```{css, echo=FALSE}
+
+d-article blockquote {
+  color: black;
+  border-left: 2px solid gold; 
+  padding: 0.5em 10px;
+  }
+  
+```
+
 # Palmer Penguins
 
-This example uses the *Palmer Penguins* data set: [https://github.com/allisonhorst/palmerpenguins](https://github.com/allisonhorst/palmerpenguins/blob/master/README.md).
+This example uses the *Palmer Penguins* data set:   [https://github.com/allisonhorst/palmerpenguins](https://github.com/allisonhorst/palmerpenguins/blob/master/README.md).
 
 ![Palmer Penguins Illustration from @allison_horst](lter_penguins.png){width=50%}
 
