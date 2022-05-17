@@ -194,6 +194,7 @@ knitr::include_graphics("images/MichiganColorsStata.png")
 ```
 </aside>
 
+* [How To Choose A Chart - A Statistically Informed Visual Guide With Stata Commands](https://agrogan1.github.io/Stata/how-to-choose-a-chart-a-visual-guide-with-Stata/how-to-choose-a-chart-a-visual-guide-with-Stata.pdf)
 * Data Visualization With Stata 
     + [HTML](https://agrogan1.github.io/Stata/data-visualization-with-Stata/data-visualization-with-Stata.html)
     + [HTML Slides](https://agrogan1.github.io/Stata/data-visualization-with-Stata/data-visualization-with-Stata-slidy.html)
