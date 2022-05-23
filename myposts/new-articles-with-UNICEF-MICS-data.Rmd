@@ -1,0 +1,27 @@
+---
+title: "New Articles With UNICEF MICS Data"
+description: |
+  New articles on parenting and child development in global context.
+author:
+  - name: Andy Grogan-Kaylor 
+    url: https://agrogan1.github.io/
+    affiliation: University of Michigan
+    affiliation_url: https://umich.edu/
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    highlight: haddock
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+We have published some new articles with the UNICEF Multiple Indicator Cluster Survey (MICS) data: [https://agrogan1.github.io/#multiple-indicator-cluster-surveys-mics-unicef-data](https://agrogan1.github.io/#multiple-indicator-cluster-surveys-mics-unicef-data)
+
+
+
+
