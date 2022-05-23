@@ -82,7 +82,7 @@ MICS <- global_data %>%
   
 ```
 
-```{r, fig.cap="Locations of MICS Countries", fig.height=3}
+```{r, fig.cap="Locations of Countries in MICS", fig.height=3}
 
 library(leaflet)
 
