@@ -115,13 +115,15 @@ knitr::include_graphics("images/logit.png")
 
 ## Multiple Indicator Cluster Surveys (MICS) (UNICEF Data)
 
-* The Association between Spanking and Physical Abuse of Young Children in 56 Low- and Middle-Income Countries
+* "The Association between Spanking and Physical Abuse of Young Children in 56 Low- and Middle-Income Countries"
     + [Article](https://doi.org/10.1016/j.chiabu.2022.105662)
     + [HTML Slides of Abstract](https://websites.umich.edu/~parentingandchilddev/MICS-physical-abuse/MICS-physical-abuse.html)
-* Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach
+* "Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach"
     + [Article](https://doi.org/10.1016/j.chiabu.2022.105606)
     + [ArcGIS Storymap](https://arcg.is/1S5XPK)
-* ["Multilevel ecological analysis of the predictors of spanking across 65 countries"](https://bmjopen.bmj.com/content/11/8/e046075)
+* "Multilevel ecological analysis of the predictors of spanking across 65 countries"
+    + [Article](https://bmjopen.bmj.com/content/11/8/e046075)
+    + [ArcGIS Storymap](https://arcg.is/14CPKu)
 * "Global Perspectives on Positive and Negative Parenting: A Bayesian Multilevel Analysis"
     + [Abstract](https://agrogan1.github.io/research/Bayes3MICS/)
     + [Article](https://doi.org/10.1177%2F0165025420981642)
