@@ -38,3 +38,14 @@ xaringanExtra::embed_xaringan(url = "why-cant-numbers-be-beautiful-too.html",
 
 ```
 
+# It's Not Just What You're Born With
+
+```{r}
+
+xaringanExtra::embed_xaringan(url = "its-not-just-what-youre-born-with.html", 
+                              ratio = "4:3")
+
+```
+
+
+
