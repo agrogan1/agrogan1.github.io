@@ -115,9 +115,11 @@ knitr::include_graphics("images/logit.png")
 
 ## Multiple Indicator Cluster Surveys (MICS) (UNICEF Data)
 
+> This research is conducted in collaboration with colleagues [Shawna Lee](https://www.parentingincontext.org/), [Julie Ma](https://poverty.umich.edu/research/faculty-experts/julie-ma/), [Kaitlin Ward](https://www.kaitlinpward.com/), [Garrett Pace](https://www.garrettpace.com/), and [Jorge Cuartas](https://scholar.harvard.edu/jorgecuartas/home).
+
 * "The Association between Spanking and Physical Abuse of Young Children in 56 Low- and Middle-Income Countries"
     + [Article](https://doi.org/10.1016/j.chiabu.2022.105662)
-    + [HTML Slides of Abstract](https://websites.umich.edu/~parentingandchilddev/MICS-physical-abuse/MICS-physical-abuse.html)
+    + [HTML Slides](https://websites.umich.edu/~parentingandchilddev/MICS-physical-abuse/MICS-physical-abuse.html)
 * "Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach"
     + [Article](https://doi.org/10.1016/j.chiabu.2022.105606)
     + [ArcGIS Storymap](https://arcg.is/1S5XPK)
