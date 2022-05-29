@@ -101,6 +101,15 @@ leaflet() %>%
 
 We have published some new articles with the UNICEF Multiple Indicator Cluster Survey (MICS) data: [https://agrogan1.github.io/#multiple-indicator-cluster-surveys-mics-unicef-data](https://agrogan1.github.io/#multiple-indicator-cluster-surveys-mics-unicef-data)
 
+This research is conducted in collaboration with colleagues [Shawna Lee](https://www.parentingincontext.org/), [Julie Ma](https://poverty.umich.edu/research/faculty-experts/julie-ma/), [Kaitlin Ward](https://www.kaitlinpward.com/), [Garrett Pace](https://www.garrettpace.com/), and [Jorge Cuartas](https://scholar.harvard.edu/jorgecuartas/home).
+
+
+
+
+
+
+
+
 
 
 
