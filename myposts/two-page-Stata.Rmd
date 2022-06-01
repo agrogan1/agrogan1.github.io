@@ -1,0 +1,28 @@
+---
+title: "Two Page Stata"
+description: |
+  Major content updates and clarifications.
+author:
+  - name: Andy Grogan-Kaylor 
+    url: https://agrogan1.github.io/
+    affiliation: University of Michigan
+    affiliation_url: https://umich.edu/
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    highlight: haddock
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+I've made major updates to *Two Page Stata*: [https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.pdf](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.pdf).
+
+There are many content updates and clarifications, but I have also rebuilt this document using the new [Quarto](https://quarto.org/) system.
+
+*Two Page Stata* is intended to be an introduction to Stata in 2 pages. The treatment here is intended to be extremely brief, in order to create a kind of "cheat sheet" that can be presented in 2 pages.
+
