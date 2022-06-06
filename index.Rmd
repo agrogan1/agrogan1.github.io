@@ -113,6 +113,8 @@ knitr::include_graphics("images/logit.png")
 
 # Research on Parenting and Child Development
 
+Many of these publications are available from [Deep Blue](https://deepblue.lib.umich.edu/browse?type=author&value=Grogan-Kaylor%2C+Andrew). 
+
 ## Multiple Indicator Cluster Surveys (MICS) (UNICEF Data)
 
 > This research is conducted in collaboration with colleagues [Shawna Lee](https://www.parentingincontext.org/), [Julie Ma](https://poverty.umich.edu/research/faculty-experts/julie-ma/), [Kaitlin Ward](https://www.kaitlinpward.com/), [Garrett Pace](https://www.garrettpace.com/), and [Jorge Cuartas](https://scholar.harvard.edu/jorgecuartas/home).
