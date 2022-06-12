@@ -12,7 +12,7 @@ output:
   distill::distill_article:
     highlight: haddock
     toc: true
-    toc_float: false
+    toc_float: true
 ---
 
 ```{r setup, include=FALSE}
@@ -35,7 +35,7 @@ library(plotly) # interactive graphs
 ```
 
 
-```{r, layout="l-screen"}
+```{r, layout="l-screen-page"}
 
 knitr::include_graphics("images/forest.png")
 
@@ -161,6 +161,7 @@ knitr::include_graphics("images/MICSCountries.png")
 ## Colombia
 
 * ["Physical Punishment as a Predictor of Early Cognitive Development: Evidence From Econometric Approaches"](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7983059/)
+* ["Physical punishment and Colombian children and adolescents’ cognitive and behavioral outcomes"](https://doi.org/https://doi.org/10.1016/j.appdev.2020.101140)
 * ["Civil conflict, domestic violence, and poverty as predictors of corporal punishment in Colombia"](https://pubmed.ncbi.nlm.nih.gov/30772750/)
 
 ## Meta-Analysis of Research on Corporal Punishment
@@ -220,12 +221,32 @@ knitr::include_graphics("images/how-to-choose-a-chart-a-visual-guide-with-Stata.
 
 # R Materials
 
+## R
+
 * *Introduction to R*: 
      + [HTML Web Book](https://agrogan1.github.io/R/introduction-to-R/introduction-to-R.html) 
      + [PDF](https://agrogan1.github.io/R/introduction-to-R/introduction-to-R.pdf) 
      + [epub](https://agrogan1.github.io/R/introduction-to-R/introduction-to-R.epub)
 * *Two Page R*: 
-     + [PDF](https://agrogan1.github.io/R/two-page-R/two-page-R.pdf)     
+     + [PDF](https://agrogan1.github.io/R/two-page-R/two-page-R.pdf)
+* Colors in R
+     + [Colors in R](https://agrogan1.github.io/R/colors/colors.html)
+     + [Viridis Colors](https://agrogan1.github.io/R/viridis/viridis.html)
+     + University of Michigan colors for R Graphs [[web page](https://agrogan1.github.io/R/michigancolors-demo/michigancolors-demo.html)] [[R package](https://agrogan1.github.io/michigancolors/)]
+     
+<aside>
+```{r, fig.cap="Michigan Color Scheme For R Graphs"}
+
+knitr::include_graphics("images/MichiganColorsR.png")
+
+```
+</aside>  
+
+* *Working With Data From the World Bank Indicators*
+     + [HTML](https://agrogan1.github.io/R/wbdemo/)
+
+## ggplot
+
 * *Introduction to ggplot2*: 
      + [HTML Web Book](https://agrogan1.github.io/R/introduction-to-ggplot2/introduction-to-ggplot2.html) 
      + [PDF](https://agrogan1.github.io/R/introduction-to-ggplot2/introduction-to-ggplot2.pdf)
@@ -238,27 +259,16 @@ knitr::include_graphics("images/how-to-choose-a-chart-a-visual-guide-with-Stata.
 * *Comparing Program Outcomes with ggplot2* 
      + [HTML](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.html)
      + [PDF](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.pdf)
-* Colors in R
-     + [Colors in R](https://agrogan1.github.io/R/colors/colors.html)
-     + [Viridis Colors](https://agrogan1.github.io/R/viridis/viridis.html)
-     + University of Michigan colors for R Graphs [[web page](https://agrogan1.github.io/R/michigancolors-demo/michigancolors-demo.html)] [[R package](https://agrogan1.github.io/michigancolors/)]
-     
-     
-<aside>
-```{r, fig.cap="Michigan Color Scheme For R Graphs"}
 
-knitr::include_graphics("images/MichiganColorsR.png")
-
-```
-</aside>
+## dplyr
 
 * *Multi-Page dplyr*:
      + [PDF](https://agrogan1.github.io/R/multi-page-dplyr/multi-page-dplyr.pdf)
      + [HTML](https://agrogan1.github.io/R/multi-page-dplyr/multi-page-dplyr.html)
+
+## xaringan
+
 * [*Themes for the Xaringan Slide Show System*](https://agrogan1.github.io/R/xaringan-themes/)
-* *Working With Data From the World Bank Indicators*
-     + [HTML](https://agrogan1.github.io/R/wbdemo/)
-     
 
 # Bayesian Statistics
 
