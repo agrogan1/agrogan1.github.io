@@ -17,7 +17,7 @@ output:
     toc: yes
     extra_dependencies: ["float"]
 geometry: margin=1.0in
-mainfont: Futura
+mainfont: Tw Cen MT
 fontsize: 12pt
 ---
 

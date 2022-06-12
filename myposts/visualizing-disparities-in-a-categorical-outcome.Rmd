@@ -1,7 +1,7 @@
 ---
-title: "Telling Stories With Data: Visualizing Categorical Data in R"
+title: "Visualizing Disparities in a Categorical Risk Factor or Outcome"
 description: |
-  Bar Graphs And Beyond To Visualize Disparities In Outcomes
+  Telling Stories With Data
 author:
   - name: Andy Grogan-Kaylor 
     url: https://agrogan1.github.io/
@@ -19,7 +19,8 @@ output:
     highlight: haddock
     latex_engine: xelatex
     fig_height: 3
-mainfont: Futura
+mainfont: Tw Cen MT
+fontsize: 12pt
 ---
 
 ```{r setup, include=FALSE}
