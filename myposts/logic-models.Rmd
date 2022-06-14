@@ -1,0 +1,31 @@
+---
+title: "Logic Models"
+description: |
+  Proof of Concept for Creating a Logic Model in graphviz.
+author:
+  - name: Andy Grogan-Kaylor 
+    url: https://agrogan1.github.io/
+    affiliation: University of Michigan
+    affiliation_url: https://umich.edu/
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    highlight: haddock
+    toc: true
+    toc_float: false
+    code_folding: true
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+Logic models are used extensively in program development and program evaluation.
+
+I am working on an evolving proof of concept of creating a logic model in graphviz. [graphviz](https://graphviz.org/) is a programming language designed to represent graphs. 
+
+The proof of concept can be found [here](https://agrogan1.github.io/teaching/logic-models/logic-models.html)
+
+
