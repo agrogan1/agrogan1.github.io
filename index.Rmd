@@ -140,7 +140,7 @@ Many of these publications are available from [Deep Blue](https://deepblue.lib.u
 <aside>
 ```{r, fig.cap="Countries in MICS Data", eval=TRUE}
 
-knitr::include_graphics("images/MICSCountries.png")
+knitr::include_graphics("images/MICSCountriesRobinson.png")
 
 ```
 </aside>
