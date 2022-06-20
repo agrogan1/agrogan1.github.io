@@ -21,7 +21,9 @@ output:
 knitr::opts_chunk$set(echo = FALSE,
                       fig.margin = TRUE)
 
-library(ggplot2)
+library(readr) # get data
+
+library(ggplot2) # beautiful graphs
 
 library(dplyr) # data wrangling
 
@@ -238,15 +240,31 @@ leaflet() %>%
 
 ## Corporal Punishment Bans
 
-* Data Visualization of [Country Level Bans on Corporal Punishment](https://agrogan1.github.io/research/cpbans/)
+* Data Visualizations of [Country Level Bans on Corporal Punishment](https://agrogan1.github.io/research/cpbans/)
 
-<aside>
 ```{r, fig.cap="Country Level Bans on Corporal Punishment"}
 
-knitr::include_graphics("images/cpbansglobe.png")
+mydata <- read_csv("../research/cpbans/CPBans.csv") # read data
+
+plot_geo(mydata) %>% 
+  add_trace(locations = ~country_code, 
+            color = ~year.of.prohibition,
+            z = ~year.of.prohibition, 
+            text = ~paste(country, 
+                          "<br>year of prohibition:", 
+                          year.of.prohibition),
+            marker = list(size = 10)) %>%
+  layout(geo = list(showland = FALSE,
+                    showcountries = TRUE,
+                    projection = list(type = 'orthographic',
+                                      rotation = list(lon = -30,
+                                                      lat = 10,
+                                                      roll = 0)
+                                      ))) %>%
+  colorbar(title = 'year of prohibition') 
 
 ```
-</aside>
+
 
 ## Earlier Research on Corporal Punishment
 
