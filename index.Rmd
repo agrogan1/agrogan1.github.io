@@ -13,6 +13,7 @@ output:
     highlight: haddock
     toc: true
     toc_float: true
+    theme: agrogan.css
 ---
 
 ```{r setup, include=FALSE}
