@@ -202,7 +202,7 @@ leaflet() %>%
     + [HTML Slides](https://websites.umich.edu/~parentingandchilddev/MICS-physical-abuse/MICS-physical-abuse.html)
     + [ArcGIS Storymap](https://arcg.is/fq49)
     
-```{r, eval=FALSE}
+```{r, eval=TRUE}
 
 knitr::include_graphics("./images/pabuse.png")
 
