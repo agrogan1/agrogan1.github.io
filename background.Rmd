@@ -82,7 +82,7 @@ save(y, file="countries.Rdata")
 
 ```
 
-```{r}
+```{r, fig.cap = "Countries where some of the data that I’ve used has come from, or where I have done some work."}
 
 l <- list(color = toRGB("black"), width = 1)
 
