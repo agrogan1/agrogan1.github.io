@@ -316,7 +316,7 @@ knitr::include_graphics("images/MichiganColorsStata.png")
 <aside>
 ```{r, fig.cap="How To Choose A Chart"}
 
-knitr::include_graphics("images/how-to-choose-a-chart-a-visual-guide-with-Stata.png")
+knitr::include_graphics("https://agrogan1.github.io/Stata/how-to-choose-a-chart-a-visual-guide-with-Stata/how-to-choose-a-chart-a-visual-guide-with-Stata.png")
 
 ```
 </aside>
