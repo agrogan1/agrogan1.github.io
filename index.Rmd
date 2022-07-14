@@ -199,6 +199,7 @@ leaflet() %>%
 
 * "The Association between Spanking and Physical Abuse of Young Children in 56 Low- and Middle-Income Countries"
     + [Article](https://doi.org/10.1016/j.chiabu.2022.105662)
+    + [Press Release](https://news.umich.edu/physical-abuse-less-likely-when-spanking-is-eliminated/)
     + [HTML Slides](https://websites.umich.edu/~parentingandchilddev/MICS-physical-abuse/MICS-physical-abuse.html)
     + [ArcGIS Storymap](https://arcg.is/fq49)
     
