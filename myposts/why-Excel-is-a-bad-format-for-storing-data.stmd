@@ -6,13 +6,13 @@
 geometry: margin=1 in
 ---
 
-<style>h1 {color: #00274C;} h2 {color: #2F65A7;} blockquote {border-left: 5px solid #ffcb05; margin: 1.5em 10px; padding: 0.5em 10px;} code {color: red;}</style>
+<style>body {max-width: 90%;} h1 {color: #00274C;} h2 {color: #2F65A7;} blockquote {border-left: 5px solid #ffcb05; margin: 1.5em 10px; padding: 0.5em 10px;} code {color: red;}</style>
 
 # Setup
 
     clear all
 
-# Simulate Data
+# Simulate Data So That We Have Some Data To Work With
 
     set obs 100 // 100 observations
 	
@@ -28,23 +28,25 @@ geometry: margin=1 in
 	
     label values Q1 Likert1 // add value label to Q1
 
-# Describe The Data
+# Now Look At The Data We Have
+	
+## Describe The Data
 
     describe
 	
-# List Out A Sample Of The Data
+## List Out A Sample Of The Data
 
     list in 1/10
 	
-# Descriptive Statistics and Bar Graph
+## Descriptive Statistics and Bar Graph
 
-> Notice how the descriptive statistics and graph are informative in that they contain information on the *variable name* and *value label*. These help us to get an intuitive sense of the information in the data.
+> Notice how the descriptive statistics and graph are informative in that they contain information on the *variable label* and *value label*. These help us to get an intuitive sense of the information in the data.
 
-## Descriptive Statistics
+### Descriptive Statistics
 
 	tabulate Q1
 
-## Bar Graph
+### Bar Graph
 
     graph bar, over(Q1) scheme(michigan)
 	
@@ -58,20 +60,44 @@ geometry: margin=1 in
 	
 	label values Q1 // drop value label 
 	
-# Descriptive Statistics and Bar Graph
+## Descriptive Statistics and Bar Graph
 
-> Notice how the descriptive statistics and graph are much less informative. The information on variable label and value label will have to be added back into the data when preparing a report for dissemination.
+> Notice how the descriptive statistics and graph are much less informative. For example, it is now not immediately clear what `Q1` represents. It is also not clear whether higher values of `Q1` represent higher levels of *happiness*, or higher levels of *unhappiness*, a crucially important substantive distinction. The information on variable label and value label will have to be added back into the data when preparing a report for dissemination.
 
-## Descriptive Statistics
+### Descriptive Statistics
 
 	tabulate Q1
 
-## Bar Graph
+### Bar Graph
 	
     graph bar, over(Q1) scheme(michigan)
 	
     graph export mybar2.png, width(500) replace
 
 ![Bar Graph](mybar2.png)
+
+# A Few Final Issues
+
+Notice how Excel doesn't enforce the idea of whether variables are *numeric*, or *string*, and so would allow storage of different types of information in the same column. 
+
+Secondly, Excel would allow some of your columns to have the same name, which might make data difficult to work with in other software.
+
+| x           | y           | verylongvariablename | verylongvariablename |
+| ----------- | ----------- |--------------------- | -------------------- |
+| 100         | Title       | 10                   | 20                   |
+| 200         | Text        | 30                   | NA                   |
+| not applicable   | Text   | 50                   | 60                   |
+
+
+
+
+
+
+
+
+
+
+
+
 
 

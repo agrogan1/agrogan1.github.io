@@ -1,17 +1,17 @@
 {smcl}
 {com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
-       {txt}log:  {res}C:\Users\agrogan\Box Sync\Box Sync\GitHub\agrogan1.github.io\myposts\why-Excel-is-a-bad-format-for-storing-data.smcl
+       {txt}log:  {res}C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\myposts\why-Excel-is-a-bad-format-for-storing-data.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 6 Apr 2021, 16:56:18
+ {txt}opened on:  {res}20 Jul 2022, 09:05:37
 {txt}
 {com}. //_1
 . display c(current_date)
-{res} 6 Apr 2021
+{res}20 Jul 2022
 {txt}
 {com}. //_2
 . display c(current_time)
-{res}16:56:18
+{res}09:05:37
 {txt}
 {com}. //_3
 . clear all
@@ -19,8 +19,8 @@
 {com}. //_4
 . set obs 100 // 100 observations
 {txt}{p}
-number of observations (_N)  was 0,
-now 100
+Number of observations ({bf:_N}) was 0,
+now 100.
 {p_end}
 
 {com}. //_5
@@ -45,11 +45,11 @@ now 100
 . describe
 
 {txt}Contains data
-  obs:{res}           100                          
-{txt} vars:{res}             2                          
+ Observations:{res}           100                  
+{txt}    Variables:{res}             2                  
 {txt}{hline}
-              storage   display    value
-variable name   type    format     label      variable label
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
 {hline}
 {p 0 48}{res}{bind:id             }{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}id{p_end}
 {p 0 48}{bind:Q1             }{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:Likert1  }{bind:  }{res}{res}How often do you feel happy?{p_end}
@@ -64,16 +64,16 @@ Sorted by:
      {c |} {res}id          Q1 {txt}{c |}
      {c LT}{hline 4}{c -}{hline 11}{c RT}
   1. {c |} {res} 1      Rarely {txt}{c |}
-  2. {c |} {res} 2      Rarely {txt}{c |}
-  3. {c |} {res} 3       Never {txt}{c |}
-  4. {c |} {res} 4       Never {txt}{c |}
-  5. {c |} {res} 5       Often {txt}{c |}
+  2. {c |} {res} 2   Sometimes {txt}{c |}
+  3. {c |} {res} 3       Often {txt}{c |}
+  4. {c |} {res} 4       Often {txt}{c |}
+  5. {c |} {res} 5   Sometimes {txt}{c |}
      {c LT}{hline 4}{c -}{hline 11}{c RT}
   6. {c |} {res} 6      Rarely {txt}{c |}
-  7. {c |} {res} 7       Never {txt}{c |}
-  8. {c |} {res} 8      Rarely {txt}{c |}
-  9. {c |} {res} 9   Sometimes {txt}{c |}
- 10. {c |} {res}10       Often {txt}{c |}
+  7. {c |} {res} 7       Often {txt}{c |}
+  8. {c |} {res} 8   Sometimes {txt}{c |}
+  9. {c |} {res} 9       Often {txt}{c |}
+ 10. {c |} {res}10      Rarely {txt}{c |}
      {c BLC}{hline 4}{c -}{hline 11}{c BRC}
 
 {com}. //_13
@@ -83,10 +83,10 @@ Sorted by:
 do you feel {c |}
      happy? {c |}      Freq.     Percent        Cum.
 {hline 12}{c +}{hline 35}
-      Never {c |}{res}         27       27.00       27.00
-{txt}     Rarely {c |}{res}         26       26.00       53.00
-{txt}  Sometimes {c |}{res}         21       21.00       74.00
-{txt}      Often {c |}{res}         26       26.00      100.00
+      Never {c |}{res}         20       20.00       20.00
+{txt}     Rarely {c |}{res}         24       24.00       44.00
+{txt}  Sometimes {c |}{res}         23       23.00       67.00
+{txt}      Often {c |}{res}         33       33.00      100.00
 {txt}{hline 12}{c +}{hline 35}
       Total {c |}{res}        100      100.00
 {txt}
@@ -95,7 +95,13 @@ do you feel {c |}
 {res}{txt}
 {com}. //_15
 . graph export mybar1.png, width(500) replace
-{txt}(file mybar1.png written in PNG format)
+{txt}{p 0 4 2}
+file {bf}
+mybar1.png{rm}
+saved as
+PNG
+format
+{p_end}
 
 {com}. //_16
 . label variable Q1 // drop variable label
@@ -108,10 +114,10 @@ do you feel {c |}
 
          {txt}Q1 {c |}      Freq.     Percent        Cum.
 {hline 12}{c +}{hline 35}
-          1 {c |}{res}         27       27.00       27.00
-{txt}          2 {c |}{res}         26       26.00       53.00
-{txt}          3 {c |}{res}         21       21.00       74.00
-{txt}          4 {c |}{res}         26       26.00      100.00
+          1 {c |}{res}         20       20.00       20.00
+{txt}          2 {c |}{res}         24       24.00       44.00
+{txt}          3 {c |}{res}         23       23.00       67.00
+{txt}          4 {c |}{res}         33       33.00      100.00
 {txt}{hline 12}{c +}{hline 35}
       Total {c |}{res}        100      100.00
 {txt}
@@ -120,14 +126,20 @@ do you feel {c |}
 {res}{txt}
 {com}. //_20
 . graph export mybar2.png, width(500) replace
-{txt}(file mybar2.png written in PNG format)
+{txt}{p 0 4 2}
+file {bf}
+mybar2.png{rm}
+saved as
+PNG
+format
+{p_end}
 
 {com}. //_^
 . log close
       {txt}name:  {res}<unnamed>
-       {txt}log:  {res}C:\Users\agrogan\Box Sync\Box Sync\GitHub\agrogan1.github.io\myposts\why-Excel-is-a-bad-format-for-storing-data.smcl
+       {txt}log:  {res}C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\myposts\why-Excel-is-a-bad-format-for-storing-data.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 6 Apr 2021, 16:56:21
+ {txt}closed on:  {res}20 Jul 2022, 09:05:40
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
