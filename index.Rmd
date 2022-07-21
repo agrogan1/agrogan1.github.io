@@ -50,9 +50,9 @@ library(sf) # simple features
 ```
 
 
-```{r, out.width="50%"}
+```{r}
 
-knitr::include_graphics("images/earth-white-background.png")
+knitr::include_graphics("images/earth-wide.png")
 
 ```
 
