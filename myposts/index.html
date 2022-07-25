@@ -87,8 +87,8 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 
 
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2022-07-22" />
-  <meta property="article:created" itemprop="dateCreated" content="2022-07-22" />
+  <meta property="article:published" itemprop="datePublished" content="2022-07-25" />
+  <meta property="article:created" itemprop="dateCreated" content="2022-07-25" />
   <meta name="article:author" content="Andy Grogan-Kaylor" />
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -104,7 +104,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Index of Blog-ish Posts"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Andy Grogan-Kaylor"]},{"type":"character","attributes":{},"value":["https://agrogan1.github.io/"]},{"type":"character","attributes":{},"value":["University of Michigan"]},{"type":"character","attributes":{},"value":["https://umich.edu/"]}]}]},{"type":"character","attributes":{},"value":["2022-07-22"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["highlight","toc"]}},"value":[{"type":"character","attributes":{},"value":["haddock"]},{"type":"logical","attributes":{},"value":[true]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Index of Blog-ish Posts"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Andy Grogan-Kaylor"]},{"type":"character","attributes":{},"value":["https://agrogan1.github.io/"]},{"type":"character","attributes":{},"value":["University of Michigan"]},{"type":"character","attributes":{},"value":["https://umich.edu/"]}]}]},{"type":"character","attributes":{},"value":["2022-07-25"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["highlight","toc"]}},"value":[{"type":"character","attributes":{},"value":["haddock"]},{"type":"logical","attributes":{},"value":[true]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -421,10 +421,6 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
     position: relative;
     margin-bottom: 2.5em;
     margin-top: 1.5em;
-  }
-
-  .figure img {
-    width: 100%;
   }
 
   .figure .caption {
@@ -1256,6 +1252,12 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
+        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
+          var fn = $(this).children()[0]
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
           return "<p>" + $('#ref-' + ref).html() + "</p>";
@@ -1270,6 +1272,31 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1369,6 +1396,8 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1391,7 +1420,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -2431,12 +2460,20 @@ DTWidget.formatDate = function(data, method, params) {
 
 window.DTWidget = DTWidget;
 
-// A helper function to update the lims of the existing filters
-var set_filter_lims = function(td, new_vals) {
+// A helper function to update the properties of existing filters
+var setFilterProps = function(td, props) {
+  // Update enabled/disabled state
+  var $input = $(td).find('input').first();
+  var searchable = $input.data('searchable');
+  $input.prop('disabled', !searchable || props.disabled);
+
   // Based on the filter type, set its new values
-  if (['factor', 'logical'].includes(td.getAttribute('data-type'))) {
+  var type = td.getAttribute('data-type');
+  if (['factor', 'logical'].includes(type)) {
     // Reformat the new dropdown options for use with selectize
-    new_vals = new_vals.map(function(item) {return {text: item, value: item}});
+    var new_vals = props.params.options.map(function(item) {
+      return { text: item, value: item };
+    });
 
     // Find the selectize object
     var dropdown = $(td).find('.selectized').eq(0)[0].selectize;
@@ -2453,12 +2490,16 @@ var set_filter_lims = function(td, new_vals) {
     // Preserve the existing values
     dropdown.setValue(old_vals);
 
-  } else if (['number', 'integer', 'date', 'time'].includes(td.getAttribute('data-type'))) {
+  } else if (['number', 'integer', 'date', 'time'].includes(type)) {
+    // Apply internal scaling to new limits. Updating scale not yet implemented.
+    var slider = $(td).find('.noUi-target').eq(0);
+    var scale = Math.pow(10, Math.max(0, +slider.data('scale') || 0));
+    var new_vals = [props.params.min * scale, props.params.max * scale];
+
     // Note what the new limits will be just for this filter
-    var new_lims = [...new_vals];
+    var new_lims = new_vals.slice();
 
     // Determine the current values and limits
-    var slider = $(td).find('.noUi-target').eq(0);
     var old_vals = slider.val().map(Number);
     var old_lims = slider.noUiSlider('options').range;
     old_lims = [old_lims.min, old_lims.max];
@@ -2511,6 +2552,12 @@ HTMLWidgets.widget({
   type: "output",
   renderOnNullValue: true,
   initialize: function(el, width, height) {
+    // in order that the type=number inputs return a number
+    $.valHooks.number = {
+      get: function(el) {
+        return el.value * 1;
+      }
+    };
     $(el).html('&nbsp;');
     return {
       data: null,
@@ -2766,13 +2813,6 @@ HTMLWidgets.widget({
       return $.inArray(val, $.makeArray(array)) > -1;
     };
 
-    // encode + to %2B when searching in the table on server side, because
-    // shiny::parseQueryString() treats + as spaces, and DataTables does not
-    // encode + to %2B (or % to %25) when sending the request
-    var encode_plus = function(x) {
-      return server ? x.replace(/%/g, '%25').replace(/\+/g, '%2B') : x;
-    };
-
     // search the i-th column
     var searchColumn = function(i, value) {
       var regex = false, ci = true;
@@ -2780,7 +2820,7 @@ HTMLWidgets.widget({
         regex = options.search.regex,
         ci = options.search.caseInsensitive !== false;
       }
-      return table.column(i).search(encode_plus(value), regex, !regex, ci);
+      return table.column(i).search(value, regex, !regex, ci);
     };
 
     if (data.filter !== 'none') {
@@ -2789,7 +2829,10 @@ HTMLWidgets.widget({
 
         var $td = $(td), type = $td.data('type'), filter;
         var $input = $td.children('div').first().children('input');
-        $input.prop('disabled', !table.settings()[0].aoColumns[i].bSearchable || type === 'disabled');
+        var disabled = $input.prop('disabled');
+        var searchable = table.settings()[0].aoColumns[i].bSearchable;
+        $input.prop('disabled', !searchable || disabled);
+        $input.data('searchable', searchable); // for updating later
         $input.on('input blur', function() {
           $input.next('span').toggle(Boolean($input.val()));
         });
@@ -2854,7 +2897,7 @@ HTMLWidgets.widget({
               if (value.length) $input.trigger('input');
               $input.attr('title', $input.val());
               if (server) {
-                table.column(i).search(value.length ? encode_plus(JSON.stringify(value)) : '').draw();
+                table.column(i).search(value.length ? JSON.stringify(value) : '').draw();
                 return;
               }
               // turn off filter if nothing selected
@@ -3776,16 +3819,19 @@ HTMLWidgets.widget({
     }
 
     // update table filters (set new limits of sliders)
-    methods.updateFilters = function(newLims) {
+    methods.updateFilters = function(newProps) {
       // loop through each filter in the filter row
       filterRow.each(function(i, td) {
         var k = i;
-        if (filterRow.length > newLims.length) {
+        if (filterRow.length > newProps.length) {
           if (i === 0) return;  // first column is row names
           k = i - 1;
         }
-        // Update the filters to reflect the updated data
-        set_filter_lims(td, newLims[k]);
+        // Update the filters to reflect the updated data.
+        // Allow "falsy" (e.g. NULL) to signify a no-op.
+        if (newProps[k]) {
+          setFilterProps(td, newProps[k]);
+        }
       });
     };
 
@@ -5083,7 +5129,7 @@ distill-header .nav a {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Index of Blog-ish Posts","authors":[{"author":"Andy Grogan-Kaylor","authorURL":"https://agrogan1.github.io/","affiliation":"University of Michigan","affiliationURL":"https://umich.edu/","orcidID":""}],"publishedDate":"2022-07-22T00:00:00.000-04:00","citationText":"Grogan-Kaylor, 2022"}
+{"title":"Index of Blog-ish Posts","authors":[{"author":"Andy Grogan-Kaylor","authorURL":"https://agrogan1.github.io/","affiliation":"University of Michigan","affiliationURL":"https://umich.edu/","orcidID":""}],"publishedDate":"2022-07-25T00:00:00.000-04:00","citationText":"Grogan-Kaylor, 2022"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -5102,7 +5148,7 @@ distill-header .nav a {
 <div class="d-byline">
   Andy Grogan-Kaylor <a href="https://agrogan1.github.io/" class="uri">https://agrogan1.github.io/</a> (University of Michigan)<a href="https://umich.edu/" class="uri">https://umich.edu/</a>
   
-<br />2022-07-22
+<br />2022-07-25
 </div>
 
 <div class="d-article">
@@ -5110,12 +5156,12 @@ distill-header .nav a {
 <nav class="l-text toc figcaption" id="TOC">
 <h3>Contents</h3>
 <ul>
-<li><a href="#posts">Posts</a>
+<li><a href="#posts" id="toc-posts">Posts</a>
 <ul>
-<li><a href="#html-files">HTML Files</a></li>
-<li><a href="#pdf-files">PDF Files</a></li>
+<li><a href="#html-files" id="toc-html-files">HTML Files</a></li>
+<li><a href="#pdf-files" id="toc-pdf-files">PDF Files</a></li>
 </ul></li>
-<li><a href="#credits">Credits</a></li>
+<li><a href="#credits" id="toc-credits">Credits</a></li>
 </ul>
 </nav>
 </div>
@@ -5128,13 +5174,13 @@ distill-header .nav a {
 </div>
 <h2 id="html-files">HTML Files</h2>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-f3b976a8348bed31537d" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-f3b976a8348bed31537d">{"x":{"filter":"none","vertical":false,"caption":"<caption>Blog-ish Posts<\/caption>","data":[["2022-07-13T19:03:56Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-13T19:04:55Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-13T19:03:56Z","2022-07-06T20:18:59Z","2022-07-13T19:03:56Z","2022-07-06T20:18:58Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:58Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:58Z","2022-07-06T20:18:59Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-22T13:11:44Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-20T13:05:40Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:58Z","2022-07-06T20:18:59Z"],["<a href='ArcGIS-storymaps.html'>ArcGIS-storymaps.html<\/a>","<a href='bar-charts-and-pie-charts.html'>bar-charts-and-pie-charts.html<\/a>","<a href='bar-charts-in-ggplot-with-multiple-outcomes.html'>bar-charts-in-ggplot-with-multiple-outcomes.html<\/a>","<a href='bar-charts-in-ggplot2.html'>bar-charts-in-ggplot2.html<\/a>","<a href='bar-charts-to-pie-charts-another-look.html'>bar-charts-to-pie-charts-another-look.html<\/a>","<a href='bignumber.html'>bignumber.html<\/a>","<a href='calculating-and-graphing-correlations-in-R.html'>calculating-and-graphing-correlations-in-R.html<\/a>","<a href='can-R-make-a-beautiful-graph.html'>can-R-make-a-beautiful-graph.html<\/a>","<a href='can-Stata-make-a-beautiful-graph.html'>can-Stata-make-a-beautiful-graph.html<\/a>","<a href='can-Stata-make-a-beautiful-graph2.html'>can-Stata-make-a-beautiful-graph2.html<\/a>","<a href='can-Stata-make-an-aesthetically-appealing-graph.html'>can-Stata-make-an-aesthetically-appealing-graph.html<\/a>","<a href='Colombia-is-63.html'>Colombia-is-63.html<\/a>","<a href='comparing-program-outcomes-with-ggplot2.html'>comparing-program-outcomes-with-ggplot2.html<\/a>","<a href='creating-composite-scores-in-R.html'>creating-composite-scores-in-R.html<\/a>","<a href='criticizing-a-musician-is-easy.html'>criticizing-a-musician-is-easy.html<\/a>","<a href='data-visualization-for-political-social-work.html'>data-visualization-for-political-social-work.html<\/a>","<a href='data-visualization-with-Stata.html'>data-visualization-with-Stata.html<\/a>","<a href='DSO-award.html'>DSO-award.html<\/a>","<a href='Georgia-is-58.html'>Georgia-is-58.html<\/a>","<a href='Global-Perspectives-on-Positive-and-Negative-Parenting.html'>Global-Perspectives-on-Positive-and-Negative-Parenting.html<\/a>","<a href='how-to-choose-a-chart-a-visual-guide-with-Stata.html'>how-to-choose-a-chart-a-visual-guide-with-Stata.html<\/a>","<a href='images-in-Rmarkdown.html'>images-in-Rmarkdown.html<\/a>","<a href='index.html'>index.html<\/a>","<a href='Japan-is-59.html'>Japan-is-59.html<\/a>","<a href='logic-models.html'>logic-models.html<\/a>","<a href='multiple-principled-solutions.html'>multiple-principled-solutions.html<\/a>","<a href='new-articles-with-UNICEF-MICS-data.html'>new-articles-with-UNICEF-MICS-data.html<\/a>","<a href='order-of-operations-in-ggplot.html'>order-of-operations-in-ggplot.html<\/a>","<a href='Patterns-of-Discipline-in-LMICs.html'>Patterns-of-Discipline-in-LMICs.html<\/a>","<a href='protected-from-CP.html'>protected-from-CP.html<\/a>","<a href='quick-intro-to-CSS.html'>quick-intro-to-CSS.html<\/a>","<a href='quick-look-at-how-dates-work-in-R.html'>quick-look-at-how-dates-work-in-R.html<\/a>","<a href='raincloud-plots.html'>raincloud-plots.html<\/a>","<a href='remove-NA-from-ggplot.html'>remove-NA-from-ggplot.html<\/a>","<a href='reorder-factor-levels.html'>reorder-factor-levels.html<\/a>","<a href='reshaping-data-in-R-with-tidyr.html'>reshaping-data-in-R-with-tidyr.html<\/a>","<a href='should-everything-be-a-bar-graph.html'>should-everything-be-a-bar-graph.html<\/a>","<a href='simpsonsparadox-R.html'>simpsonsparadox-R.html<\/a>","<a href='Simpsonsparadox-Stata.html'>Simpsonsparadox-Stata.html<\/a>","<a href='slide-formats.html'>slide-formats.html<\/a>","<a href='South-Africa-is-57.html'>South-Africa-is-57.html<\/a>","<a href='South-Korea-is-62.html'>South-Korea-is-62.html<\/a>","<a href='table-demo.html'>table-demo.html<\/a>","<a href='theming-in-ggplot.html'>theming-in-ggplot.html<\/a>","<a href='tibble-demo.html'>tibble-demo.html<\/a>","<a href='two-page-Stata.html'>two-page-Stata.html<\/a>","<a href='updated-Michigan-Colors-for-R-Graphs.html'>updated-Michigan-Colors-for-R-Graphs.html<\/a>","<a href='Updated-Michigan-Colors-for-Stata-Graphs.html'>Updated-Michigan-Colors-for-Stata-Graphs.html<\/a>","<a href='visualizing-categorical-data.html'>visualizing-categorical-data.html<\/a>","<a href='visualizing-disparities-in-a-categorical-outcome.html'>visualizing-disparities-in-a-categorical-outcome.html<\/a>","<a href='visualizing-disparities-in-a-continuous-outcome.html'>visualizing-disparities-in-a-continuous-outcome.html<\/a>","<a href='why-does-intercept-only-model-give-us-average.html'>why-does-intercept-only-model-give-us-average.html<\/a>","<a href='why-Excel-is-a-bad-format-for-storing-data.html'>why-Excel-is-a-bad-format-for-storing-data.html<\/a>","<a href='why-Stata-is-better-at-graphing-than-R.html'>why-Stata-is-better-at-graphing-than-R.html<\/a>","<a href='working-with-dates-in-Stata.html'>working-with-dates-in-Stata.html<\/a>","<a href='Xaringan-themes.html'>Xaringan-themes.html<\/a>","<a href='you-have-to-get-your-data-from-somewhere.html'>you-have-to-get-your-data-from-somewhere.html<\/a>"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>modified<\/th>\n      <th>url<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[[0,"desc"]],"columnDefs":[{"targets":0,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatDate(data, \"toDateString\");\n  }"}],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render"],"jsHooks":[]}</script>
+<div id="htmlwidget-a3b2fb6e9706a89f38d0" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a3b2fb6e9706a89f38d0">{"x":{"filter":"none","vertical":false,"caption":"<caption>Blog-ish Posts<\/caption>","data":[["2022-07-25T17:56:38Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-13T19:04:55Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-13T19:03:56Z","2022-07-06T20:18:59Z","2022-07-22T13:12:51Z","2022-07-06T20:18:58Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-25T17:56:22Z","2022-07-06T20:18:59Z","2022-07-06T20:18:58Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:58Z","2022-07-06T20:18:59Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-22T13:11:44Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-20T13:05:40Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:58Z","2022-07-06T20:18:59Z"],["<a href='ArcGIS-storymaps.html'>ArcGIS-storymaps.html<\/a>","<a href='bar-charts-and-pie-charts.html'>bar-charts-and-pie-charts.html<\/a>","<a href='bar-charts-in-ggplot-with-multiple-outcomes.html'>bar-charts-in-ggplot-with-multiple-outcomes.html<\/a>","<a href='bar-charts-in-ggplot2.html'>bar-charts-in-ggplot2.html<\/a>","<a href='bar-charts-to-pie-charts-another-look.html'>bar-charts-to-pie-charts-another-look.html<\/a>","<a href='bignumber.html'>bignumber.html<\/a>","<a href='calculating-and-graphing-correlations-in-R.html'>calculating-and-graphing-correlations-in-R.html<\/a>","<a href='can-R-make-a-beautiful-graph.html'>can-R-make-a-beautiful-graph.html<\/a>","<a href='can-Stata-make-a-beautiful-graph.html'>can-Stata-make-a-beautiful-graph.html<\/a>","<a href='can-Stata-make-a-beautiful-graph2.html'>can-Stata-make-a-beautiful-graph2.html<\/a>","<a href='can-Stata-make-an-aesthetically-appealing-graph.html'>can-Stata-make-an-aesthetically-appealing-graph.html<\/a>","<a href='Colombia-is-63.html'>Colombia-is-63.html<\/a>","<a href='comparing-program-outcomes-with-ggplot2.html'>comparing-program-outcomes-with-ggplot2.html<\/a>","<a href='creating-composite-scores-in-R.html'>creating-composite-scores-in-R.html<\/a>","<a href='criticizing-a-musician-is-easy.html'>criticizing-a-musician-is-easy.html<\/a>","<a href='data-visualization-for-political-social-work.html'>data-visualization-for-political-social-work.html<\/a>","<a href='data-visualization-with-Stata.html'>data-visualization-with-Stata.html<\/a>","<a href='DSO-award.html'>DSO-award.html<\/a>","<a href='Georgia-is-58.html'>Georgia-is-58.html<\/a>","<a href='Global-Perspectives-on-Positive-and-Negative-Parenting.html'>Global-Perspectives-on-Positive-and-Negative-Parenting.html<\/a>","<a href='how-to-choose-a-chart-a-visual-guide-with-Stata.html'>how-to-choose-a-chart-a-visual-guide-with-Stata.html<\/a>","<a href='images-in-Rmarkdown.html'>images-in-Rmarkdown.html<\/a>","<a href='index.html'>index.html<\/a>","<a href='Japan-is-59.html'>Japan-is-59.html<\/a>","<a href='logic-models.html'>logic-models.html<\/a>","<a href='multiple-principled-solutions.html'>multiple-principled-solutions.html<\/a>","<a href='new-articles-with-UNICEF-MICS-data.html'>new-articles-with-UNICEF-MICS-data.html<\/a>","<a href='order-of-operations-in-ggplot.html'>order-of-operations-in-ggplot.html<\/a>","<a href='Patterns-of-Discipline-in-LMICs.html'>Patterns-of-Discipline-in-LMICs.html<\/a>","<a href='protected-from-CP.html'>protected-from-CP.html<\/a>","<a href='quick-intro-to-CSS.html'>quick-intro-to-CSS.html<\/a>","<a href='quick-look-at-how-dates-work-in-R.html'>quick-look-at-how-dates-work-in-R.html<\/a>","<a href='raincloud-plots.html'>raincloud-plots.html<\/a>","<a href='remove-NA-from-ggplot.html'>remove-NA-from-ggplot.html<\/a>","<a href='reorder-factor-levels.html'>reorder-factor-levels.html<\/a>","<a href='reshaping-data-in-R-with-tidyr.html'>reshaping-data-in-R-with-tidyr.html<\/a>","<a href='should-everything-be-a-bar-graph.html'>should-everything-be-a-bar-graph.html<\/a>","<a href='simpsonsparadox-R.html'>simpsonsparadox-R.html<\/a>","<a href='Simpsonsparadox-Stata.html'>Simpsonsparadox-Stata.html<\/a>","<a href='slide-formats.html'>slide-formats.html<\/a>","<a href='South-Africa-is-57.html'>South-Africa-is-57.html<\/a>","<a href='South-Korea-is-62.html'>South-Korea-is-62.html<\/a>","<a href='table-demo.html'>table-demo.html<\/a>","<a href='theming-in-ggplot.html'>theming-in-ggplot.html<\/a>","<a href='tibble-demo.html'>tibble-demo.html<\/a>","<a href='two-page-Stata.html'>two-page-Stata.html<\/a>","<a href='updated-Michigan-Colors-for-R-Graphs.html'>updated-Michigan-Colors-for-R-Graphs.html<\/a>","<a href='Updated-Michigan-Colors-for-Stata-Graphs.html'>Updated-Michigan-Colors-for-Stata-Graphs.html<\/a>","<a href='visualizing-categorical-data.html'>visualizing-categorical-data.html<\/a>","<a href='visualizing-disparities-in-a-categorical-outcome.html'>visualizing-disparities-in-a-categorical-outcome.html<\/a>","<a href='visualizing-disparities-in-a-continuous-outcome.html'>visualizing-disparities-in-a-continuous-outcome.html<\/a>","<a href='why-does-intercept-only-model-give-us-average.html'>why-does-intercept-only-model-give-us-average.html<\/a>","<a href='why-Excel-is-a-bad-format-for-storing-data.html'>why-Excel-is-a-bad-format-for-storing-data.html<\/a>","<a href='why-Stata-is-better-at-graphing-than-R.html'>why-Stata-is-better-at-graphing-than-R.html<\/a>","<a href='working-with-dates-in-Stata.html'>working-with-dates-in-Stata.html<\/a>","<a href='Xaringan-themes.html'>Xaringan-themes.html<\/a>","<a href='you-have-to-get-your-data-from-somewhere.html'>you-have-to-get-your-data-from-somewhere.html<\/a>"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>modified<\/th>\n      <th>url<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[[0,"desc"]],"columnDefs":[{"targets":0,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatDate(data, \"toDateString\");\n  }"}],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render"],"jsHooks":[]}</script>
 </div>
 <h2 id="pdf-files">PDF Files</h2>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-a2cd48307e8807f54be7" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a2cd48307e8807f54be7">{"x":{"filter":"none","vertical":false,"caption":"<caption>Blog-ish Posts<\/caption>","data":[["2022-07-13T19:05:56Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:59Z","2022-07-06T20:18:58Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z"],["<a href='bar-charts-in-ggplot2.pdf'>bar-charts-in-ggplot2.pdf<\/a>","<a href='bar-charts-to-pie-charts-another-look.pdf'>bar-charts-to-pie-charts-another-look.pdf<\/a>","<a href='comparing-program-outcomes-with-ggplot2.pdf'>comparing-program-outcomes-with-ggplot2.pdf<\/a>","<a href='creating-composite-scores-in-R.pdf'>creating-composite-scores-in-R.pdf<\/a>","<a href='simpsonsparadox-R.pdf'>simpsonsparadox-R.pdf<\/a>","<a href='Simpsonsparadox-Stata.pdf'>Simpsonsparadox-Stata.pdf<\/a>","<a href='table-demo.pdf'>table-demo.pdf<\/a>","<a href='theming-in-ggplot.pdf'>theming-in-ggplot.pdf<\/a>","<a href='visualizing-disparities-in-a-categorical-outcome.pdf'>visualizing-disparities-in-a-categorical-outcome.pdf<\/a>","<a href='visualizing-disparities-in-a-continuous-outcome.pdf'>visualizing-disparities-in-a-continuous-outcome.pdf<\/a>","<a href='why-Stata-is-better-at-graphing-than-R.pdf'>why-Stata-is-better-at-graphing-than-R.pdf<\/a>","<a href='working-with-dates-in-Stata.pdf'>working-with-dates-in-Stata.pdf<\/a>","<a href='you-have-to-get-your-data-from-somewhere.pdf'>you-have-to-get-your-data-from-somewhere.pdf<\/a>"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>modified<\/th>\n      <th>url<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[[0,"desc"]],"columnDefs":[{"targets":0,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatDate(data, \"toDateString\");\n  }"}],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render"],"jsHooks":[]}</script>
+<div id="htmlwidget-7207eff6a6196d4b8821" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7207eff6a6196d4b8821">{"x":{"filter":"none","vertical":false,"caption":"<caption>Blog-ish Posts<\/caption>","data":[["2022-07-13T19:05:56Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:58Z","2022-07-06T20:18:59Z","2022-07-06T20:18:58Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z","2022-07-06T20:18:59Z"],["<a href='bar-charts-in-ggplot2.pdf'>bar-charts-in-ggplot2.pdf<\/a>","<a href='bar-charts-to-pie-charts-another-look.pdf'>bar-charts-to-pie-charts-another-look.pdf<\/a>","<a href='comparing-program-outcomes-with-ggplot2.pdf'>comparing-program-outcomes-with-ggplot2.pdf<\/a>","<a href='creating-composite-scores-in-R.pdf'>creating-composite-scores-in-R.pdf<\/a>","<a href='simpsonsparadox-R.pdf'>simpsonsparadox-R.pdf<\/a>","<a href='Simpsonsparadox-Stata.pdf'>Simpsonsparadox-Stata.pdf<\/a>","<a href='table-demo.pdf'>table-demo.pdf<\/a>","<a href='theming-in-ggplot.pdf'>theming-in-ggplot.pdf<\/a>","<a href='visualizing-disparities-in-a-categorical-outcome.pdf'>visualizing-disparities-in-a-categorical-outcome.pdf<\/a>","<a href='visualizing-disparities-in-a-continuous-outcome.pdf'>visualizing-disparities-in-a-continuous-outcome.pdf<\/a>","<a href='why-Stata-is-better-at-graphing-than-R.pdf'>why-Stata-is-better-at-graphing-than-R.pdf<\/a>","<a href='working-with-dates-in-Stata.pdf'>working-with-dates-in-Stata.pdf<\/a>","<a href='you-have-to-get-your-data-from-somewhere.pdf'>you-have-to-get-your-data-from-somewhere.pdf<\/a>"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>modified<\/th>\n      <th>url<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[[0,"desc"]],"columnDefs":[{"targets":0,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatDate(data, \"toDateString\");\n  }"}],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render"],"jsHooks":[]}</script>
 </div>
 <h1 id="credits">Credits</h1>
 <p><a href="https://agrogan1.github.io/">https://agrogan1.github.io/</a></p>
