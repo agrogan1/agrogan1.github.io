@@ -8,75 +8,101 @@ geometry: margin=1 in
 
 <style>body {max-width: 90%;} h1 {color: #00274C;} h2 {color: #2F65A7;} blockquote {border-left: 5px solid #ffcb05; margin: 1.5em 10px; padding: 0.5em 10px;} code {color: red;}</style>
 
-# Setup
+```{s/}
+    * setup
 
     clear all
 	
 	set seed 3846 // random seed for data
 
-# Simulate Data So That We Have Some Data To Work With
+    * simulate data so that we have some data to work with
 
-    set obs 100 // 100 observations
+    quietly set obs 100 // 100 observations
 	
 	generate id = _n // id variable
 	
 	label variable id "id"
 
-    generate happy = runiformint(1,4) // randomly simulated Question 1
+    generate Q1 = runiformint(1,4) // randomly simulated Question 1
 
-    label variable happy "How often do you feel happy?" // add variable label
+    label variable Q1 "How often do you feel happy?" // add variable label
 
     label define Likert1 1 "Never" 2 "Rarely" 3 "Sometimes" 4 "Often" // define value label
 	
-    label values happy Likert1 // add value label to happy
-
-# Now Look At The Data We Have
+    label values Q1 Likert1 // add value label to Q1
 	
-## Describe The Data
+	quietly save "simulated-happiness-data.dta", replace
+```
 
+# Get The Data
+
+```{s}
+    use "simulated-happiness-data.dta", clear
+```
+	
+# Describe The Data
+
+```{s}
     describe
+```
 	
-## List Out A Sample Of The Data
+# Descriptive Statistics and Bar Graph
 
-    list in 1/10
-	
-## Descriptive Statistics and Bar Graph
+> Notice how the descriptive statistics and graph are informative in that they contain information on the *variable label* and *value label*. These help us to get an intuitive sense of the information in the data. We see this information when we list out the data as well.
 
-> Notice how the descriptive statistics and graph are informative in that they contain information on the *variable label* and *value label*. These help us to get an intuitive sense of the information in the data.
+## Descriptive Statistics
 
-### Descriptive Statistics
+```{s}
+	tabulate Q1
+```
 
-	tabulate happy
+## Bar Graph
 
-### Bar Graph
-
-    graph bar, over(happy) scheme(michigan2) asyvars
+```{s}
+    graph bar, over(Q1) scheme(michigan2) asyvars
 	
     graph export mybar1.png, width(500) replace
+```
 
 ![Bar Graph](mybar1.png)
 
-# Now Simulate Removing The Information That Is Lost When Saving to Excel
+## List Out A Sample Of The Data
 
-    label variable happy // drop variable label
+```{s}
+    list in 1/10
+```
+
+# Now Save The Data In Excel Format
+
+We've saved this simulated data in Excel format, and now import the Excel data file. We use the first row of data as variable names.
+
+```{s/}
+    quietly export excel using "simulated-happiness-data.xls", firstrow(variables) nolabel replace
+```
+
+```{s}
+    import excel "simulated-happiness-data.xls", sheet("Sheet1") firstrow clear
+```
 	
-	label values happy // drop value label 
-	
-## Descriptive Statistics and Bar Graph
+# Descriptive Statistics and Bar Graph
 
-> Notice how the descriptive statistics and graph are much less informative. For example, it is now not immediately clear what `happy` represents, although we certainly have some idea from the variable name. 
+> Notice how the descriptive statistics and graph are much less informative. For example, it is now not immediately clear what `Q1` represents. 
 
-> It is also not clear whether higher values of `happy` represent higher levels of *happiness*, or higher levels of *unhappiness*, a crucially important substantive distinction. The information on variable label and value label will have to be added back into the data when preparing a report for dissemination.
+> It is also not clear whether higher values of `Q1` represent higher levels of *happiness*, or higher levels of *unhappiness*, a crucially important substantive distinction. The information on variable label and value label will have to be added back into the data when preparing a report for dissemination.
 
-### Descriptive Statistics
+## Descriptive Statistics
 
-	tabulate happy
+```{s}
+	tabulate Q1
+```
 
 ### Bar Graph
-	
-    graph bar, over(happy) scheme(michigan2) asyvars
+
+```{s}
+    graph bar, over(Q1) scheme(michigan2) asyvars
 	
     graph export mybar2.png, width(500) replace
+```
 
 ![Bar Graph](mybar2.png)
 
@@ -88,9 +114,9 @@ Secondly, Excel would allow some of your columns to have the same name, which mi
 
 | x           | y           | verylongvariablename | verylongvariablename |
 | ----------- | ----------- |--------------------- | -------------------- |
-| 100         | Title       | 10                   | 20                   |
-| 200         | Text        | 30                   | NA                   |
-| not applicable   | Text   | 50                   | 60                   |
+| 100         | 1           | Smith                | 20                   |
+| 200         | 2           | 30                   | NA                   |
+| not applicable   | x      | yes                  | 60                   |
 
 
 

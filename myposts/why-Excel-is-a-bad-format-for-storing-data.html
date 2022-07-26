@@ -51,52 +51,62 @@ table:not([class]) tbody:last-child tr:last-child td {border-bottom:1px solid bl
 <div id="header">
 <h1 class="title">Why Excel Is A Bad Format For Storing Data</h1>
 <h2 class="author">Andy Grogan-Kaylor</h2>
-<h3 class="date">26 Jul 2022 09:48:18</h3>
+<h3 class="date">26 Jul 2022 11:40:42</h3>
 </div>
 <style>body {max-width: 90%;} h1 {color: #00274C;} h2 {color: #2F65A7;} blockquote {border-left: 5px solid #ffcb05; margin: 1.5em 10px; padding: 0.5em 10px;} code {color: red;}</style>
-<h1 id="setup">Setup</h1>
-<pre class='stata'>. clear all
+
+<h1 id="get-the-data">Get The Data</h1>
+<pre class='stata'>. use "simulated-happiness-data.dta", clear
 </pre>
-<pre class='stata'>. set seed 3846 // random seed for data
-</pre>
-<h1 id="simulate-data-so-that-we-have-some-data-to-work-with">Simulate Data So That We Have Some Data To Work With</h1>
-<pre class='stata'>. set obs 100 // 100 observations
-Number of observations (_N) was 0, now 100.
-</pre>
-<pre class='stata'>. generate id = _n // id variable
-</pre>
-<pre class='stata'>. label variable id "id"
-</pre>
-<pre class='stata'>. generate happy = runiformint(1,4) // randomly simulated Question 1
-</pre>
-<pre class='stata'>. label variable happy "How often do you feel happy?" // add variable label
-</pre>
-<pre class='stata'>. label define Likert1 1 "Never" 2 "Rarely" 3 "Sometimes" 4 "Often" // define value label
-</pre>
-<pre class='stata'>. label values happy Likert1 // add value label to happy
-</pre>
-<h1 id="now-look-at-the-data-we-have">Now Look At The Data We Have</h1>
-<h2 id="describe-the-data">Describe The Data</h2>
+<h1 id="describe-the-data">Describe The Data</h1>
 <pre class='stata'>. describe
 
-Contains data
+Contains data from simulated-happiness-data.dta
  Observations:           100                  
-    Variables:             2                  
+    Variables:             2                  26 Jul 2022 11:40
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 id              float   %9.0g                 id
-happy           float   %9.0g      Likert1    How often do you feel happy?
+Q1              float   %9.0g      Likert1    How often do you feel happy?
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 Sorted by: 
-     Note: Dataset has changed since last saved.
 </pre>
+<h1 id="descriptive-statistics-and-bar-graph">Descriptive Statistics and Bar Graph</h1>
+<blockquote>
+<p>Notice how the descriptive statistics and graph are informative in that they contain information on the <em>variable label</em> and <em>value label</em>. These help us to get an intuitive sense of the information in the data. We see this information when we list out the data as well.</p>
+</blockquote>
+<h2 id="descriptive-statistics">Descriptive Statistics</h2>
+<pre class='stata'>. tabulate Q1
+
+  How often │
+do you feel │
+     happy? │      Freq.     Percent        Cum.
+────────────┼───────────────────────────────────
+      Never │         21       21.00       21.00
+     Rarely │         29       29.00       50.00
+  Sometimes │         28       28.00       78.00
+      Often │         22       22.00      100.00
+────────────┼───────────────────────────────────
+      Total │        100      100.00
+</pre>
+<h2 id="bar-graph">Bar Graph</h2>
+<pre class='stata'>. graph bar, over(Q1) scheme(michigan2) asyvars
+
+.     
+. graph export mybar1.png, width(500) replace
+file mybar1.png saved as PNG format
+</pre>
+<div class="figure">
+<img src="mybar1.png" alt="Bar Graph" />
+<p class="caption">Bar Graph</p>
+</div>
 <h2 id="list-out-a-sample-of-the-data">List Out A Sample Of The Data</h2>
 <pre class='stata'>. list in 1/10
 
      ┌────────────────┐
-     │ id       happy │
+     │ id          Q1 │
      ├────────────────┤
   1. │  1       Never │
   2. │  2   Sometimes │
@@ -111,50 +121,23 @@ Sorted by:
  10. │ 10      Rarely │
      └────────────────┘
 </pre>
-<h2 id="descriptive-statistics-and-bar-graph">Descriptive Statistics and Bar Graph</h2>
-<blockquote>
-<p>Notice how the descriptive statistics and graph are informative in that they contain information on the <em>variable label</em> and <em>value label</em>. These help us to get an intuitive sense of the information in the data.</p>
-</blockquote>
-<h3 id="descriptive-statistics">Descriptive Statistics</h3>
-<pre class='stata'>. tabulate happy
+<h1 id="now-save-the-data-in-excel-format">Now Save The Data In Excel Format</h1>
+<p>We've saved this simulated data in Excel format, and now import the Excel data file. We use the first row of data as variable names.</p>
 
-  How often │
-do you feel │
-     happy? │      Freq.     Percent        Cum.
-────────────┼───────────────────────────────────
-      Never │         21       21.00       21.00
-     Rarely │         29       29.00       50.00
-  Sometimes │         28       28.00       78.00
-      Often │         22       22.00      100.00
-────────────┼───────────────────────────────────
-      Total │        100      100.00
+<pre class='stata'>. import excel "simulated-happiness-data.xls", sheet("Sheet1") firstrow clear
+(2 vars, 100 obs)
 </pre>
-<h3 id="bar-graph">Bar Graph</h3>
-<pre class='stata'>. graph bar, over(happy) scheme(michigan2) asyvars
-</pre>
-<pre class='stata'>. graph export mybar1.png, width(500) replace
-file mybar1.png saved as PNG format
-</pre>
-<div class="figure">
-<img src="mybar1.png" alt="Bar Graph" />
-<p class="caption">Bar Graph</p>
-</div>
-<h1 id="now-simulate-removing-the-information-that-is-lost-when-saving-to-excel">Now Simulate Removing The Information That Is Lost When Saving to Excel</h1>
-<pre class='stata'>. label variable happy // drop variable label
-</pre>
-<pre class='stata'>. label values happy // drop value label 
-</pre>
-<h2 id="descriptive-statistics-and-bar-graph-1">Descriptive Statistics and Bar Graph</h2>
+<h1 id="descriptive-statistics-and-bar-graph-1">Descriptive Statistics and Bar Graph</h1>
 <blockquote>
-<p>Notice how the descriptive statistics and graph are much less informative. For example, it is now not immediately clear what <code>happy</code> represents, although we certainly have some idea from the variable name.</p>
+<p>Notice how the descriptive statistics and graph are much less informative. For example, it is now not immediately clear what <code>Q1</code> represents.</p>
 </blockquote>
 <blockquote>
-<p>It is also not clear whether higher values of <code>happy</code> represent higher levels of <em>happiness</em>, or higher levels of <em>unhappiness</em>, a crucially important substantive distinction. The information on variable label and value label will have to be added back into the data when preparing a report for dissemination.</p>
+<p>It is also not clear whether higher values of <code>Q1</code> represent higher levels of <em>happiness</em>, or higher levels of <em>unhappiness</em>, a crucially important substantive distinction. The information on variable label and value label will have to be added back into the data when preparing a report for dissemination.</p>
 </blockquote>
-<h3 id="descriptive-statistics-1">Descriptive Statistics</h3>
-<pre class='stata'>. tabulate happy
+<h2 id="descriptive-statistics-1">Descriptive Statistics</h2>
+<pre class='stata'>. tabulate Q1
 
-      happy │      Freq.     Percent        Cum.
+         Q1 │      Freq.     Percent        Cum.
 ────────────┼───────────────────────────────────
           1 │         21       21.00       21.00
           2 │         29       29.00       50.00
@@ -164,9 +147,10 @@ file mybar1.png saved as PNG format
       Total │        100      100.00
 </pre>
 <h3 id="bar-graph-1">Bar Graph</h3>
-<pre class='stata'>. graph bar, over(happy) scheme(michigan2) asyvars
-</pre>
-<pre class='stata'>. graph export mybar2.png, width(500) replace
+<pre class='stata'>. graph bar, over(Q1) scheme(michigan2) asyvars
+
+.     
+. graph export mybar2.png, width(500) replace
 file mybar2.png saved as PNG format
 </pre>
 <div class="figure">
@@ -188,20 +172,20 @@ file mybar2.png saved as PNG format
 <tbody>
 <tr class="odd">
 <td align="left">100</td>
-<td align="left">Title</td>
-<td align="left">10</td>
+<td align="left">1</td>
+<td align="left">Smith</td>
 <td align="left">20</td>
 </tr>
 <tr class="even">
 <td align="left">200</td>
-<td align="left">Text</td>
+<td align="left">2</td>
 <td align="left">30</td>
 <td align="left">NA</td>
 </tr>
 <tr class="odd">
 <td align="left">not applicable</td>
-<td align="left">Text</td>
-<td align="left">50</td>
+<td align="left">x</td>
+<td align="left">yes</td>
 <td align="left">60</td>
 </tr>
 </tbody>
