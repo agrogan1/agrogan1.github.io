@@ -51,7 +51,7 @@ table:not([class]) tbody:last-child tr:last-child td {border-bottom:1px solid bl
 <div id="header">
 <h1 class="title">Why Excel Is A Bad Format For Storing Data</h1>
 <h2 class="author">Andy Grogan-Kaylor</h2>
-<h3 class="date">26 Jul 2022 11:40:42</h3>
+<h3 class="date">26 Jul 2022 12:40:33</h3>
 </div>
 <style>body {max-width: 90%;} h1 {color: #00274C;} h2 {color: #2F65A7;} blockquote {border-left: 5px solid #ffcb05; margin: 1.5em 10px; padding: 0.5em 10px;} code {color: red;}</style>
 
@@ -63,7 +63,7 @@ table:not([class]) tbody:last-child tr:last-child td {border-bottom:1px solid bl
 
 Contains data from simulated-happiness-data.dta
  Observations:           100                  
-    Variables:             2                  26 Jul 2022 11:40
+    Variables:             2                  26 Jul 2022 12:40
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
@@ -121,11 +121,32 @@ file mybar1.png saved as PNG format
  10. │ 10      Rarely │
      └────────────────┘
 </pre>
-<h1 id="now-save-the-data-in-excel-format">Now Save The Data In Excel Format</h1>
-<p>We've saved this simulated data in Excel format, and now import the Excel data file. We use the first row of data as variable names.</p>
+<h1 id="now-use-the-data-in-excel-format">Now Use The Data In Excel Format</h1>
 
+<p>We've saved this simulated data in Excel format, and now import the Excel data file. We use the first row of data as variable names.</p>
 <pre class='stata'>. import excel "simulated-happiness-data.xls", sheet("Sheet1") firstrow clear
 (2 vars, 100 obs)
+</pre>
+<blockquote>
+<p>We see right away--when we list some of the data--that the data are less informative.</p>
+</blockquote>
+<pre class='stata'>. list in 1/10
+
+     ┌─────────┐
+     │ id   Q1 │
+     ├─────────┤
+  1. │  1    1 │
+  2. │  2    3 │
+  3. │  3    1 │
+  4. │  4    3 │
+  5. │  5    3 │
+     ├─────────┤
+  6. │  6    4 │
+  7. │  7    2 │
+  8. │  8    3 │
+  9. │  9    1 │
+ 10. │ 10    2 │
+     └─────────┘
 </pre>
 <h1 id="descriptive-statistics-and-bar-graph-1">Descriptive Statistics and Bar Graph</h1>
 <blockquote>

@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\myposts\why-Excel-is-a-bad-format-for-storing-data.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}26 Jul 2022, 11:40:42
+ {txt}opened on:  {res}26 Jul 2022, 12:40:33
 {txt}
 {com}. //_1
 . display c(current_date)
@@ -11,7 +11,7 @@
 {txt}
 {com}. //_2
 . display c(current_time)
-{res}11:40:42
+{res}12:40:33
 {txt}
 {com}. //_3q
 . * setup
@@ -55,7 +55,7 @@
 
 {txt}Contains data from {res}simulated-happiness-data.dta
 {txt} Observations:{res}           100                  
-{txt}    Variables:{res}             2                  26 Jul 2022 11:40
+{txt}    Variables:{res}             2                  26 Jul 2022 12:40
 {txt}{hline}
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
@@ -112,13 +112,33 @@ format
      {c BLC}{hline 4}{c -}{hline 11}{c BRC}
 
 {com}. //_9q
-. quietly export excel using "simulated-happiness-data.xls", firstrow(variables) nolabel replace
+. quietly export excel using "simulated-happiness-data.xls", ///
+> firstrow(variables) nolabel replace
 {txt}
 {com}. //_10
 . import excel "simulated-happiness-data.xls", sheet("Sheet1") firstrow clear
 {res}{text}(2 vars, 100 obs)
 
 {com}. //_11
+. list in 1/10
+{txt}
+     {c TLC}{hline 4}{c -}{hline 4}{c TRC}
+     {c |} {res}id   Q1 {txt}{c |}
+     {c LT}{hline 4}{c -}{hline 4}{c RT}
+  1. {c |} {res} 1    1 {txt}{c |}
+  2. {c |} {res} 2    3 {txt}{c |}
+  3. {c |} {res} 3    1 {txt}{c |}
+  4. {c |} {res} 4    3 {txt}{c |}
+  5. {c |} {res} 5    3 {txt}{c |}
+     {c LT}{hline 4}{c -}{hline 4}{c RT}
+  6. {c |} {res} 6    4 {txt}{c |}
+  7. {c |} {res} 7    2 {txt}{c |}
+  8. {c |} {res} 8    3 {txt}{c |}
+  9. {c |} {res} 9    1 {txt}{c |}
+ 10. {c |} {res}10    2 {txt}{c |}
+     {c BLC}{hline 4}{c -}{hline 4}{c BRC}
+
+{com}. //_12
 . tabulate Q1
 
          {txt}Q1 {c |}      Freq.     Percent        Cum.
@@ -130,7 +150,7 @@ format
 {txt}{hline 12}{c +}{hline 35}
       Total {c |}{res}        100      100.00
 {txt}
-{com}. //_12
+{com}. //_13
 . graph bar, over(Q1) scheme(michigan2) asyvars
 {res}{txt}
 {com}.     
@@ -148,7 +168,7 @@ format
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\myposts\why-Excel-is-a-bad-format-for-storing-data.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}26 Jul 2022, 11:40:45
+ {txt}closed on:  {res}26 Jul 2022, 12:40:36
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

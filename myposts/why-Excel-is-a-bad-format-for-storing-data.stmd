@@ -72,16 +72,23 @@ geometry: margin=1 in
     list in 1/10
 ```
 
-# Now Save The Data In Excel Format
+# Now Use The Data In Excel Format
+
+```{s/}
+    quietly export excel using "simulated-happiness-data.xls", ///
+	firstrow(variables) nolabel replace
+```
 
 We've saved this simulated data in Excel format, and now import the Excel data file. We use the first row of data as variable names.
 
-```{s/}
-    quietly export excel using "simulated-happiness-data.xls", firstrow(variables) nolabel replace
-```
-
 ```{s}
     import excel "simulated-happiness-data.xls", sheet("Sheet1") firstrow clear
+```
+
+> We see right away--when we list some of the data--that the data are less informative. 
+
+```{s}
+    list in 1/10
 ```
 	
 # Descriptive Statistics and Bar Graph
