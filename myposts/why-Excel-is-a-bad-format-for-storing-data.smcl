@@ -3,45 +3,48 @@
       name:  {res}<unnamed>
        {txt}log:  {res}C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\myposts\why-Excel-is-a-bad-format-for-storing-data.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}20 Jul 2022, 09:05:37
+ {txt}opened on:  {res}26 Jul 2022, 09:48:18
 {txt}
 {com}. //_1
 . display c(current_date)
-{res}20 Jul 2022
+{res}26 Jul 2022
 {txt}
 {com}. //_2
 . display c(current_time)
-{res}09:05:37
+{res}09:48:18
 {txt}
 {com}. //_3
 . clear all
 {res}{txt}
 {com}. //_4
+. set seed 3846 // random seed for data
+{txt}
+{com}. //_5
 . set obs 100 // 100 observations
 {txt}{p}
 Number of observations ({bf:_N}) was 0,
 now 100.
 {p_end}
 
-{com}. //_5
+{com}. //_6
 . generate id = _n // id variable
 {txt}
-{com}. //_6
+{com}. //_7
 . label variable id "id"
 {txt}
-{com}. //_7
-. generate Q1 = runiformint(1,4) // randomly simulated Question 1
-{txt}
 {com}. //_8
-. label variable Q1 "How often do you feel happy?" // add variable label
+. generate happy = runiformint(1,4) // randomly simulated Question 1
 {txt}
 {com}. //_9
-. label define Likert1 1 "Never" 2 "Rarely" 3 "Sometimes" 4 "Often" // define value label
+. label variable happy "How often do you feel happy?" // add variable label
 {txt}
 {com}. //_10
-. label values Q1 Likert1 // add value label to Q1
+. label define Likert1 1 "Never" 2 "Rarely" 3 "Sometimes" 4 "Often" // define value label
 {txt}
 {com}. //_11
+. label values happy Likert1 // add value label to happy
+{txt}
+{com}. //_12
 . describe
 
 {txt}Contains data
@@ -52,48 +55,48 @@ Variable      Storage   Display    Value
     name         type    format    label      Variable label
 {hline}
 {p 0 48}{res}{bind:id             }{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}id{p_end}
-{p 0 48}{bind:Q1             }{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:Likert1  }{bind:  }{res}{res}How often do you feel happy?{p_end}
+{p 0 48}{bind:happy          }{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:Likert1  }{bind:  }{res}{res}How often do you feel happy?{p_end}
 {txt}{hline}
 Sorted by: 
 {res}     Note: Dataset has changed since last saved.
 {txt}
-{com}. //_12
+{com}. //_13
 . list in 1/10
 {txt}
      {c TLC}{hline 4}{c -}{hline 11}{c TRC}
-     {c |} {res}id          Q1 {txt}{c |}
+     {c |} {res}id       happy {txt}{c |}
      {c LT}{hline 4}{c -}{hline 11}{c RT}
-  1. {c |} {res} 1      Rarely {txt}{c |}
+  1. {c |} {res} 1       Never {txt}{c |}
   2. {c |} {res} 2   Sometimes {txt}{c |}
-  3. {c |} {res} 3       Often {txt}{c |}
-  4. {c |} {res} 4       Often {txt}{c |}
+  3. {c |} {res} 3       Never {txt}{c |}
+  4. {c |} {res} 4   Sometimes {txt}{c |}
   5. {c |} {res} 5   Sometimes {txt}{c |}
      {c LT}{hline 4}{c -}{hline 11}{c RT}
-  6. {c |} {res} 6      Rarely {txt}{c |}
-  7. {c |} {res} 7       Often {txt}{c |}
+  6. {c |} {res} 6       Often {txt}{c |}
+  7. {c |} {res} 7      Rarely {txt}{c |}
   8. {c |} {res} 8   Sometimes {txt}{c |}
-  9. {c |} {res} 9       Often {txt}{c |}
+  9. {c |} {res} 9       Never {txt}{c |}
  10. {c |} {res}10      Rarely {txt}{c |}
      {c BLC}{hline 4}{c -}{hline 11}{c BRC}
 
-{com}. //_13
-. tabulate Q1
+{com}. //_14
+. tabulate happy
 
   {txt}How often {c |}
 do you feel {c |}
      happy? {c |}      Freq.     Percent        Cum.
 {hline 12}{c +}{hline 35}
-      Never {c |}{res}         20       20.00       20.00
-{txt}     Rarely {c |}{res}         24       24.00       44.00
-{txt}  Sometimes {c |}{res}         23       23.00       67.00
-{txt}      Often {c |}{res}         33       33.00      100.00
+      Never {c |}{res}         21       21.00       21.00
+{txt}     Rarely {c |}{res}         29       29.00       50.00
+{txt}  Sometimes {c |}{res}         28       28.00       78.00
+{txt}      Often {c |}{res}         22       22.00      100.00
 {txt}{hline 12}{c +}{hline 35}
       Total {c |}{res}        100      100.00
 {txt}
-{com}. //_14
-. graph bar, over(Q1) scheme(michigan)
-{res}{txt}
 {com}. //_15
+. graph bar, over(happy) scheme(michigan2) asyvars
+{res}{txt}
+{com}. //_16
 . graph export mybar1.png, width(500) replace
 {txt}{p 0 4 2}
 file {bf}
@@ -103,28 +106,28 @@ PNG
 format
 {p_end}
 
-{com}. //_16
-. label variable Q1 // drop variable label
-{txt}
 {com}. //_17
-. label values Q1 // drop value label 
+. label variable happy // drop variable label
 {txt}
 {com}. //_18
-. tabulate Q1
+. label values happy // drop value label 
+{txt}
+{com}. //_19
+. tabulate happy
 
-         {txt}Q1 {c |}      Freq.     Percent        Cum.
+      {txt}happy {c |}      Freq.     Percent        Cum.
 {hline 12}{c +}{hline 35}
-          1 {c |}{res}         20       20.00       20.00
-{txt}          2 {c |}{res}         24       24.00       44.00
-{txt}          3 {c |}{res}         23       23.00       67.00
-{txt}          4 {c |}{res}         33       33.00      100.00
+          1 {c |}{res}         21       21.00       21.00
+{txt}          2 {c |}{res}         29       29.00       50.00
+{txt}          3 {c |}{res}         28       28.00       78.00
+{txt}          4 {c |}{res}         22       22.00      100.00
 {txt}{hline 12}{c +}{hline 35}
       Total {c |}{res}        100      100.00
 {txt}
-{com}. //_19
-. graph bar, over(Q1) scheme(michigan)
-{res}{txt}
 {com}. //_20
+. graph bar, over(happy) scheme(michigan2) asyvars
+{res}{txt}
+{com}. //_21
 . graph export mybar2.png, width(500) replace
 {txt}{p 0 4 2}
 file {bf}
@@ -139,7 +142,7 @@ format
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\myposts\why-Excel-is-a-bad-format-for-storing-data.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}20 Jul 2022, 09:05:40
+ {txt}closed on:  {res}26 Jul 2022, 09:48:20
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

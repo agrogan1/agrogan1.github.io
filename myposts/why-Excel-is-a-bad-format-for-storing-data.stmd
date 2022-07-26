@@ -11,6 +11,8 @@ geometry: margin=1 in
 # Setup
 
     clear all
+	
+	set seed 3846 // random seed for data
 
 # Simulate Data So That We Have Some Data To Work With
 
@@ -20,13 +22,13 @@ geometry: margin=1 in
 	
 	label variable id "id"
 
-    generate Q1 = runiformint(1,4) // randomly simulated Question 1
+    generate happy = runiformint(1,4) // randomly simulated Question 1
 
-    label variable Q1 "How often do you feel happy?" // add variable label
+    label variable happy "How often do you feel happy?" // add variable label
 
     label define Likert1 1 "Never" 2 "Rarely" 3 "Sometimes" 4 "Often" // define value label
 	
-    label values Q1 Likert1 // add value label to Q1
+    label values happy Likert1 // add value label to happy
 
 # Now Look At The Data We Have
 	
@@ -44,11 +46,11 @@ geometry: margin=1 in
 
 ### Descriptive Statistics
 
-	tabulate Q1
+	tabulate happy
 
 ### Bar Graph
 
-    graph bar, over(Q1) scheme(michigan)
+    graph bar, over(happy) scheme(michigan2) asyvars
 	
     graph export mybar1.png, width(500) replace
 
@@ -56,21 +58,23 @@ geometry: margin=1 in
 
 # Now Simulate Removing The Information That Is Lost When Saving to Excel
 
-    label variable Q1 // drop variable label
+    label variable happy // drop variable label
 	
-	label values Q1 // drop value label 
+	label values happy // drop value label 
 	
 ## Descriptive Statistics and Bar Graph
 
-> Notice how the descriptive statistics and graph are much less informative. For example, it is now not immediately clear what `Q1` represents. It is also not clear whether higher values of `Q1` represent higher levels of *happiness*, or higher levels of *unhappiness*, a crucially important substantive distinction. The information on variable label and value label will have to be added back into the data when preparing a report for dissemination.
+> Notice how the descriptive statistics and graph are much less informative. For example, it is now not immediately clear what `happy` represents, although we certainly have some idea from the variable name. 
+
+> It is also not clear whether higher values of `happy` represent higher levels of *happiness*, or higher levels of *unhappiness*, a crucially important substantive distinction. The information on variable label and value label will have to be added back into the data when preparing a report for dissemination.
 
 ### Descriptive Statistics
 
-	tabulate Q1
+	tabulate happy
 
 ### Bar Graph
 	
-    graph bar, over(Q1) scheme(michigan)
+    graph bar, over(happy) scheme(michigan2) asyvars
 	
     graph export mybar2.png, width(500) replace
 
