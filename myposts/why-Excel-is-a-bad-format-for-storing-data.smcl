@@ -3,15 +3,15 @@
       name:  {res}<unnamed>
        {txt}log:  {res}C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\myposts\why-Excel-is-a-bad-format-for-storing-data.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}26 Jul 2022, 12:40:33
+ {txt}opened on:  {res}27 Jul 2022, 09:26:35
 {txt}
 {com}. //_1
 . display c(current_date)
-{res}26 Jul 2022
+{res}27 Jul 2022
 {txt}
 {com}. //_2
 . display c(current_time)
-{res}12:40:33
+{res}09:26:35
 {txt}
 {com}. //_3q
 . * setup
@@ -55,7 +55,7 @@
 
 {txt}Contains data from {res}simulated-happiness-data.dta
 {txt} Observations:{res}           100                  
-{txt}    Variables:{res}             2                  26 Jul 2022 12:40
+{txt}    Variables:{res}             2                  27 Jul 2022 09:26
 {txt}{hline}
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
@@ -168,7 +168,7 @@ format
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\myposts\why-Excel-is-a-bad-format-for-storing-data.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}26 Jul 2022, 12:40:36
+ {txt}closed on:  {res}27 Jul 2022, 09:26:38
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

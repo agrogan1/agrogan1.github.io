@@ -51,9 +51,13 @@ table:not([class]) tbody:last-child tr:last-child td {border-bottom:1px solid bl
 <div id="header">
 <h1 class="title">Why Excel Is A Bad Format For Storing Data</h1>
 <h2 class="author">Andy Grogan-Kaylor</h2>
-<h3 class="date">26 Jul 2022 12:40:33</h3>
+<h3 class="date">27 Jul 2022 09:26:35</h3>
 </div>
-<style>body {max-width: 90%;} h1 {color: #00274C;} h2 {color: #2F65A7;} blockquote {border-left: 5px solid #ffcb05; margin: 1.5em 10px; padding: 0.5em 10px;} code {color: red;}</style>
+<style>body {max-width: 90%;} h1 {color: #00274C;} h2 {color: #2F65A7;} blockquote {border-left: 5px solid #ffcb05; margin: 1.5em 10px; padding: 0.5em 10px;} a:link {color: #00274C;} a:visited {color: #2F65A7;} code {color: red;}</style>
+<h1 id="background">Background</h1>
+<p>Excel is sometimes used as a program to collect and store data. However, Excel may be problematic as a data storage solution for a number of reasons detialed below. Notably, statistical programs like <a href="https://www.stata.com/">Stata</a>, <a href="https://www.sas.com/en_us/home.html">SAS</a>, or SPSS all store additional information with each variable such as: a <em>variable label</em>, describing the contents of the variable, or the survey question that resulted in the variable; and a <em>value label</em>, which attaches qualitative information to each possible value of the response.</p>
+<p>Excel does not generally contain this extra information about each variable, or column of data, which may lead to errors in working with quantitative information.</p>
+<p>The data below are stored in Stata format, but could as easily be stored in SAS or SPSS format.</p>
 
 <h1 id="get-the-data">Get The Data</h1>
 <pre class='stata'>. use "simulated-happiness-data.dta", clear
@@ -63,7 +67,7 @@ table:not([class]) tbody:last-child tr:last-child td {border-bottom:1px solid bl
 
 Contains data from simulated-happiness-data.dta
  Observations:           100                  
-    Variables:             2                  26 Jul 2022 12:40
+    Variables:             2                  27 Jul 2022 09:26
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
