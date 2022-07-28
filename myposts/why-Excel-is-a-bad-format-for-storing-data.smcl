@@ -1,17 +1,17 @@
 {smcl}
 {com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
-       {txt}log:  {res}C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\myposts\why-Excel-is-a-bad-format-for-storing-data.smcl
+       {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/why-Excel-is-a-bad-format-for-storing-data.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}27 Jul 2022, 09:26:35
+ {txt}opened on:  {res}28 Jul 2022, 12:26:19
 {txt}
 {com}. //_1
 . display c(current_date)
-{res}27 Jul 2022
+{res}28 Jul 2022
 {txt}
 {com}. //_2
 . display c(current_time)
-{res}09:26:35
+{res}12:26:19
 {txt}
 {com}. //_3q
 . * setup
@@ -55,7 +55,7 @@
 
 {txt}Contains data from {res}simulated-happiness-data.dta
 {txt} Observations:{res}           100                  
-{txt}    Variables:{res}             2                  27 Jul 2022 09:26
+{txt}    Variables:{res}             2                  28 Jul 2022 12:26
 {txt}{hline}
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
@@ -86,7 +86,7 @@ do you feel {c |}
 . graph export mybar1.png, width(500) replace
 {txt}{p 0 4 2}
 file {bf}
-mybar1.png{rm}
+/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/mybar1.png{rm}
 saved as
 PNG
 format
@@ -157,7 +157,7 @@ format
 . graph export mybar2.png, width(500) replace
 {txt}{p 0 4 2}
 file {bf}
-mybar2.png{rm}
+/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/mybar2.png{rm}
 saved as
 PNG
 format
@@ -166,9 +166,9 @@ format
 {com}. //_^
 . log close
       {txt}name:  {res}<unnamed>
-       {txt}log:  {res}C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\myposts\why-Excel-is-a-bad-format-for-storing-data.smcl
+       {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/why-Excel-is-a-bad-format-for-storing-data.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}27 Jul 2022, 09:26:38
+ {txt}closed on:  {res}28 Jul 2022, 12:26:24
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

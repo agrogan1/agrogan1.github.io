@@ -47,6 +47,8 @@ The data below are stored in Stata format, but could as easily be stored in SAS 
 ```{s}
     use "simulated-happiness-data.dta", clear
 ```
+
+![Screenshot of Stata](./why-Excel-is-a-bad-format-for-storing-data/screenshot-Stata.png){ width=50% } 
 	
 # Describe The Data
 
@@ -87,7 +89,11 @@ The data below are stored in Stata format, but could as easily be stored in SAS 
 	firstrow(variables) nolabel replace
 ```
 
-We've saved this simulated data in Excel format, and now import the Excel data file. We use the first row of data as variable names.
+We've saved this simulated data in Excel format.
+
+![Screenshot of Excel](./why-Excel-is-a-bad-format-for-storing-data/screenshot-Excel.png){ width=50% } 
+
+We now import the Excel data file. We use the first row of data as variable names.
 
 ```{s}
     import excel "simulated-happiness-data.xls", sheet("Sheet1") firstrow clear
