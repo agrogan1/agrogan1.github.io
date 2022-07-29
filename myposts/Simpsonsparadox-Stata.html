@@ -59,7 +59,7 @@ table tbody:last-child tr:last-child td {border-bottom:1px solid black;}
       padding-top: 50px;
       padding-bottom: 50px;
       hyphens: auto;
-      word-wrap: break-word;
+      overflow-wrap: break-word;
       text-rendering: optimizeLegibility;
       font-kerning: normal;
     }
@@ -67,6 +67,9 @@ table tbody:last-child tr:last-child td {border-bottom:1px solid black;}
       body {
         font-size: 0.9em;
         padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
       }
     }
     @media print {
@@ -130,6 +133,7 @@ table tbody:last-child tr:last-child td {border-bottom:1px solid black;}
     pre code {
       padding: 0;
       overflow: visible;
+      overflow-wrap: normal;
     }
     .sourceCode {
      background-color: transparent;
@@ -171,6 +175,12 @@ table tbody:last-child tr:last-child td {border-bottom:1px solid black;}
     #TOC li {
       list-style: none;
     }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
     #TOC a:not(:hover) {
       text-decoration: none;
     }
@@ -189,18 +199,28 @@ table tbody:last-child tr:last-child td {border-bottom:1px solid black;}
 <header id="title-block-header">
 <h1 class="title">Simpson’s Paradox</h1>
 <p class="author">Andy Grogan-Kaylor</p>
-<p class="date">17 Aug 2021 10:16:22</p>
+<p class="date">29 Jul 2022 13:16:47</p>
 </header>
 <style>body {max-width: 90%} h1 {color: #00274C;} h2 {color: #2F65A7;} blockquote {border-left: 5px solid #ffcb05; margin: 1.5em 10px; padding: 0.5em 10px;} code {color: red;}</style>
 <h1 id="introduction">Introduction</h1>
-<p><em>Simpson’s Paradox</em> is the idea that associations between variables that are found between two variables in the sample as a whole, can be <em>very different</em> (or even <em>reversed</em>) when a third variable is introduced.</p>
-<p>There are specific mathematical conditions under which Simpson’s Paradox applies. However, thinking through these mathematical conditions may not be helpful to develop intuitions about Simpson’s Paradox.</p>
-<p>Careful inspection of visualizations can help us to develop some understanding of Simpson’s Paradox.</p>
+<p><em>Simpson’s Paradox</em> is the idea that associations between
+variables that are found between two variables in the sample as a whole,
+can be <em>very different</em> (or even <em>reversed</em>) when a third
+variable is introduced.</p>
+<p>There are specific mathematical conditions under which Simpson’s
+Paradox applies. However, thinking through these mathematical conditions
+may not be helpful to develop intuitions about Simpson’s Paradox.</p>
+<p>Careful inspection of visualizations can help us to develop some
+understanding of Simpson’s Paradox.</p>
 <blockquote>
-<p>The key substantive conclusion is that models of the data that only account for two variables may provide <em>very different</em>–or even <em>opposite</em>–conclusions from models of the world that account for many variables.</p>
+<p>The key substantive conclusion is that models of the data that only
+account for two variables may provide <em>very different</em>–or even
+<em>opposite</em>–conclusions from models of the world that account for
+many variables.</p>
 </blockquote>
 <h1 id="some-hypothetical-data">Some Hypothetical Data</h1>
-<p>These data are based on the hypothetical data provided by Simpson (1951).</p>
+<p>These data are based on the hypothetical data provided by Simpson
+(1951).</p>
 <pre class='stata'>. use simpsonsparadox.dta, clear
 </pre>
 <pre class='stata'>. list // list out the data
@@ -220,15 +240,20 @@ table tbody:last-child tr:last-child td {border-bottom:1px solid black;}
      └────────────────────────────────────┘
 </pre>
 <blockquote>
-<p>Because these are weighted data–where every row of data represents more than one individual–we will need to use the <code>[fweight=count]</code> syntax.</p>
+<p>Because these are weighted data–where every row of data represents
+more than one individual–we will need to use the
+<code>[fweight=count]</code> syntax.</p>
 </blockquote>
 <h1 id="graph-scheme">Graph Scheme</h1>
-<p>I am not a particular fan of Stata’s default graphing scheme, so I am going to use the <code>michigan</code> graph scheme here. (To install, type <code>net from https://agrogan1.github.io/Stata</code>)</p>
+<p>I am not a particular fan of Stata’s default graphing scheme, so I am
+going to use the <code>michigan</code> graph scheme here. (To install,
+type <code>net from https://agrogan1.github.io/Stata</code>)</p>
 <pre class='stata'>. set scheme michigan // use Michigan graph scheme
 </pre>
 <h1 id="sample-as-a-whole">Sample As A Whole</h1>
 <blockquote>
-<p>The treatment appears to have NO effect. An equal percentage of those receiving and not receiving treatment are alive.</p>
+<p>The treatment appears to have NO effect. An equal percentage of those
+receiving and not receiving treatment are alive.</p>
 </blockquote>
 <h2 id="cross-tabulation">Cross Tabulation</h2>
 <pre class='stata'>. tabulate status treatment [fweight=count], row col
@@ -258,7 +283,11 @@ table tbody:last-child tr:last-child td {border-bottom:1px solid black;}
 </pre>
 <h2 id="mosaic-plot">Mosaic Plot</h2>
 <blockquote>
-<p>Mosaic Plots are a little bit counterintuive at first. However, I believe that–after a little bit of study–Mosaic Plots provide the best visual representation of these relationships. The command for a Mosaic Plot in Stata is <code>spineplot</code>, installed by typing <code>ssc install spineplot</code>.</p>
+<p>Mosaic Plots are a little bit counterintuive at first. However, I
+believe that–after a little bit of study–Mosaic Plots provide the best
+visual representation of these relationships. The command for a Mosaic
+Plot in Stata is <code>spineplot</code>, installed by typing
+<code>ssc install spineplot</code>.</p>
 </blockquote>
 <pre class='stata'>. spineplot status treatment [fweight=count], ///
 > bar1(color(gold) fintensity(%100)) bar2(color(navy %100) fintensity(%100)) ///
@@ -273,11 +302,15 @@ file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/my_Simpsons_spinep
     saved as PNG format
 </pre>
 <figure>
-<img src="my_Simpsons_spineplot.png" style="width:75.0%" alt="Spineplot or Mosaic Plot" /><figcaption aria-hidden="true">Spineplot or Mosaic Plot</figcaption>
+<img src="my_Simpsons_spineplot.png" style="width:50.0%"
+alt="Spineplot or Mosaic Plot" />
+<figcaption aria-hidden="true">Spineplot or Mosaic Plot</figcaption>
 </figure>
 <h2 id="bar-chart">Bar Chart</h2>
 <blockquote>
-<p>It is sometimes said that every data visualization should, or could, be a bar chart, so I present one here. Bar charts are a common and useful type of data visualization.</p>
+<p>It is sometimes said that every data visualization should, or could,
+be a bar chart, so I present one here. Bar charts are a common and
+useful type of data visualization.</p>
 </blockquote>
 <pre class='stata'>. graph bar [fweight=count], over(status) over(treatment) asyvars ///
 > title("The Treatment Appears To Have NO Effect") ///
@@ -285,15 +318,18 @@ file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/my_Simpsons_spinep
 > note("An Equal % Of Those Receiving And Not Receiving Treatment Are Alive")
 </pre>
 <pre class='stata'>. graph export my_Simpsons_barchart.png, width(1000) replace
-file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/my_Simpsons_barchart.png saved
-    as PNG format
+file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/my_Simpsons_barchart.png
+    saved as PNG format
 </pre>
 <figure>
-<img src="my_Simpsons_barchart.png" style="width:75.0%" alt="Bar Chart" /><figcaption aria-hidden="true">Bar Chart</figcaption>
+<img src="my_Simpsons_barchart.png" style="width:50.0%"
+alt="Bar Chart" />
+<figcaption aria-hidden="true">Bar Chart</figcaption>
 </figure>
 <h2 id="pie-chart">Pie Chart</h2>
 <blockquote>
-<p>A Pie Chart sometimes is more intuitive at first, but actually has less information than a Mosaic Chart.</p>
+<p>A Pie Chart sometimes is more intuitive at first, but actually has
+less information than a Mosaic Chart.</p>
 </blockquote>
 <pre class='stata'>. graph pie, over(status) by(treatment, ///
 > title("The Treatment Appears To Have NO Effect") ///
@@ -301,20 +337,23 @@ file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/my_Simpsons_barcha
 > note("An Equal % Of Those Receiving And Not Receiving Treatment Are Alive"))
 </pre>
 <pre class='stata'>. graph export my_Simpsons_piechart.png, width(1000) replace
-file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/my_Simpsons_piechart.png saved
-    as PNG format
+file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/my_Simpsons_piechart.png
+    saved as PNG format
 </pre>
 <figure>
-<img src="my_Simpsons_piechart.png" style="width:75.0%" alt="Pie Chart" /><figcaption aria-hidden="true">Pie Chart</figcaption>
+<img src="my_Simpsons_piechart.png" style="width:50.0%"
+alt="Pie Chart" />
+<figcaption aria-hidden="true">Pie Chart</figcaption>
 </figure>
 <h1 id="sample-divided-by-groups">Sample Divided By Groups</h1>
 <blockquote>
-<p>The treatment appears to have an effect. A greater percentage of those recieving treatment are alive.</p>
+<p>The treatment appears to have an effect. A greater percentage of
+those recieving treatment are alive.</p>
 </blockquote>
 <h2 id="cross-tabulation-1">Cross Tabulation</h2>
 <pre class='stata'>. bysort group: tabulate status treatment [fweight=count], row col
 
-──────────────────────────────────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────────────────────────────────
 -> group = A
 
 ┌───────────────────┐
@@ -340,7 +379,7 @@ file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/my_Simpsons_piecha
            │     35.00      65.00 │    100.00 
            │    100.00     100.00 │    100.00 
 
-──────────────────────────────────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────────────────────────────────
 -> group = B
 
 ┌───────────────────┐
@@ -395,7 +434,9 @@ file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/my_Simpsons_spinep
     saved as PNG format
 </pre>
 <figure>
-<img src="my_Simpsons_spineplot2.png" style="width:75.0%" alt="Spineplot or Mosaic Plot" /><figcaption aria-hidden="true">Spineplot or Mosaic Plot</figcaption>
+<img src="my_Simpsons_spineplot2.png" style="width:50.0%"
+alt="Spineplot or Mosaic Plot" />
+<figcaption aria-hidden="true">Spineplot or Mosaic Plot</figcaption>
 </figure>
 <h2 id="bar-chart-1">Bar Chart</h2>
 <pre class='stata'>. graph bar [fweight=count], over(status) over(treatment) asyvars ///
@@ -409,7 +450,9 @@ file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/my_Simpsons_barcha
     saved as PNG format
 </pre>
 <figure>
-<img src="my_Simpsons_barchart2.png" style="width:75.0%" alt="Bar Chart" /><figcaption aria-hidden="true">Bar Chart</figcaption>
+<img src="my_Simpsons_barchart2.png" style="width:50.0%"
+alt="Bar Chart" />
+<figcaption aria-hidden="true">Bar Chart</figcaption>
 </figure>
 <h2 id="pie-chart-1">Pie Chart</h2>
 <pre class='stata'>. graph pie if group == 1 [fweight=count], over(status) by(treatment, ///
@@ -430,9 +473,15 @@ file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/my_Simpsons_piecha
     saved as PNG format
 </pre>
 <figure>
-<img src="my_Simpsons_piechart2.png" style="width:75.0%" alt="Pie Chart" /><figcaption aria-hidden="true">Pie Chart</figcaption>
+<img src="my_Simpsons_piechart2.png" style="width:50.0%"
+alt="Pie Chart" />
+<figcaption aria-hidden="true">Pie Chart</figcaption>
 </figure>
 <h1 id="reference">Reference</h1>
-<p>Simpson, E. (1951). The Interpretation of Interaction in Contingency Tables. <em>Journal of the Royal Statistical Society. Series B (Methodological)</em>, 13(2), 238-241. Retrieved February 2, 2021, from <a href="http://www.jstor.org/stable/2984065">http://www.jstor.org/stable/2984065</a></p>
+<p>Simpson, E. (1951). The Interpretation of Interaction in Contingency
+Tables. <em>Journal of the Royal Statistical Society. Series B
+(Methodological)</em>, 13(2), 238-241. Retrieved February 2, 2021, from
+<a
+href="http://www.jstor.org/stable/2984065">http://www.jstor.org/stable/2984065</a></p>
 </body>
 </html>

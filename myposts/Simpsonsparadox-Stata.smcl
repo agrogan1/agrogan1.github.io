@@ -3,15 +3,15 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/Simpsonsparadox-Stata.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}17 Aug 2021, 10:16:48
+ {txt}opened on:  {res}29 Jul 2022, 13:16:47
 {txt}
 {com}. //_1
 . display c(current_date)
-{res}17 Aug 2021
+{res}29 Jul 2022
 {txt}
 {com}. //_2
 . display c(current_time)
-{res}10:16:48
+{res}13:16:47
 {txt}
 {com}. //_3
 . use simpsonsparadox.dta, clear
@@ -293,7 +293,7 @@ format
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/Simpsonsparadox-Stata.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}17 Aug 2021, 10:17:10
+ {txt}closed on:  {res}29 Jul 2022, 13:17:12
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

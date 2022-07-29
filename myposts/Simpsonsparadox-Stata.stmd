@@ -54,7 +54,7 @@ I am not a particular fan of Stata's default graphing scheme, so I am going to u
 	
 	graph export my_Simpsons_spineplot.png, width(1000) replace
 
-![Spineplot or Mosaic Plot](my_Simpsons_spineplot.png){width=75%}
+![Spineplot or Mosaic Plot](my_Simpsons_spineplot.png){width=50%}
 	
 ## Bar Chart
 
@@ -67,7 +67,7 @@ I am not a particular fan of Stata's default graphing scheme, so I am going to u
 	
 	graph export my_Simpsons_barchart.png, width(1000) replace
 
-![Bar Chart](my_Simpsons_barchart.png){width=75%}
+![Bar Chart](my_Simpsons_barchart.png){width=50%}
 
 ## Pie Chart
 
@@ -80,7 +80,7 @@ I am not a particular fan of Stata's default graphing scheme, so I am going to u
 	
 	graph export my_Simpsons_piechart.png, width(1000) replace
 
-![Pie Chart](my_Simpsons_piechart.png){width=75%}
+![Pie Chart](my_Simpsons_piechart.png){width=50%}
 
 # Sample Divided By Groups
 
@@ -109,7 +109,7 @@ I am not a particular fan of Stata's default graphing scheme, so I am going to u
 	
 	graph export my_Simpsons_spineplot2.png, width(1000) replace
 	
-![Spineplot or Mosaic Plot](my_Simpsons_spineplot2.png){width=75%}
+![Spineplot or Mosaic Plot](my_Simpsons_spineplot2.png){width=50%}
 
 ## Bar Chart
 
@@ -121,7 +121,7 @@ I am not a particular fan of Stata's default graphing scheme, so I am going to u
 
 	graph export my_Simpsons_barchart2.png, width(1000) replace
 
-![Bar Chart](my_Simpsons_barchart2.png){width=75%}
+![Bar Chart](my_Simpsons_barchart2.png){width=50%}
 
 ## Pie Chart
 
@@ -140,7 +140,7 @@ I am not a particular fan of Stata's default graphing scheme, so I am going to u
 	
 	graph export my_Simpsons_piechart2.png, width(1000) replace
 
-![Pie Chart](my_Simpsons_piechart2.png){width=75%}
+![Pie Chart](my_Simpsons_piechart2.png){width=50%}
 
 # Reference
 
