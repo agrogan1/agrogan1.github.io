@@ -1,7 +1,7 @@
 ---
 title: "A Simple Visual Explanation of Simpsons Paradox"
 description: |
-  Structure of the data may be different at different levels.
+  Results of an analysis or visualization may be <span style="color:red">***very***</span> different depending on the number of factors accounted for.
 author:
 - name: Andy Grogan-Kaylor
   url: https://agrogan1.github.io/
@@ -9,17 +9,17 @@ author:
   affiliation_url: https://umich.edu/
 date: '`r Sys.Date()`'
 output:
+  distill::distill_article:
+    highlight: haddock
+    toc: yes
+    toc_float: yes
+    code_folding: false
   pdf_document: 
     highlight: haddock
     latex_engine: xelatex
     toc: yes
     fig_height: 3
     number_sections: yes
-  distill::distill_article:
-    highlight: haddock
-    toc: yes
-    toc_float: yes
-    code_folding: false
 citation_url: https://agrogan1.github.io
 mainfont: Arial
 ---
