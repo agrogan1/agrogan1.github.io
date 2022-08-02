@@ -92,7 +92,7 @@ This research is conducted in collaboration with colleagues [Shawna Lee](https:/
 library(leaflet)
 
 leaflet() %>%
-  setView(0, 0, zoom = 1.5) %>%
+  setView(0, 25, zoom = 1.5) %>%
   addProviderTiles(providers$Stamen.Terrain) %>%
   addPolygons(data = MICS, 
               fillOpacity = .75, 
