@@ -285,6 +285,10 @@ plot_geo(mydata) %>%
 
 * [Earlier Research On Corporal Punishment](https://agrogan1.github.io/research/cp/)
 
+# Community Based Research in Alaska
+
+* Allen, J., Charles, B., Fok, C., Lee, K., Grogan-Kaylor, A., Qungasvik Team, & Rasmus, S. (In Press). Culturally Grounded Strategies for Suicide and Alcohol Risk Prevention Delivered by Rural Alaska Native Communities: A Dynamic Wait‐listed Design Evaluation of the Qungasvik Intervention. *American Journal of Community Psychology*.
+
 # Selected Collaborations
 
 * Work with [Performance Measurement Initiative](https://agrogan1.github.io/research/performance-measurement-initiative) at William Davidson Institute
