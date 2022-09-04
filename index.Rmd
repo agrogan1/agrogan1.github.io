@@ -101,7 +101,9 @@ myHTMLfiles %>%
 
 # Selected Courses
 
-* [Data Visualization](https://agrogan1.github.io/dataviz/dataviz-course)
+## Data Visualization
+
+* [Course Page](https://agrogan1.github.io/dataviz/dataviz-course)
 
 ```{r, out.width="25%"}
 
@@ -109,7 +111,9 @@ knitr::include_graphics("images/banner.png")
 
 ```
 
-* [Multilevel and Longitudinal Modeling](https://agrogan1.github.io/multilevel/)
+## Multilevel and Longitudinal Modeling
+
+* [Course Page](https://agrogan1.github.io/multilevel/)
 
 ```{r, out.width="25%"}
 
@@ -117,7 +121,9 @@ knitr::include_graphics("images/plant.png")
 
 ```
 
-* [Categorical Data Analysis](https://agrogan1.github.io/newstuff/categorical/)
+## Categorical Data Analysis
+
+* [Course Page](https://agrogan1.github.io/newstuff/categorical/)
 
 ```{r, out.width="25%"}
 
