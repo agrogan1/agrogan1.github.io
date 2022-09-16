@@ -89,16 +89,16 @@ library(ggplot2) # beautiful graphs
 
 ggplot(data = NULL, # NULL data set
        aes(x = 3, # arbitrary x; 3 is good
-           y = 30)) + # y value
-  geom_col(fill = "#00274C") + # column
+           y = 30)) + # y value to be graphed
+  geom_col(fill = "#00274C") + # column & column color
   coord_polar(theta = "y") + # polar coordinates
   xlim(0, 4) + # xlimits create a doughnut
   ylim(0, 100) + # ylimits govern the circumference
   geom_text(aes(x = 0, # text in center
                 y = 0,
                 label = "30%"), # label for text
-            size = 30,
-            col = "#00274C") +
+            size = 30, # text size
+            col = "#00274C") + # text color
   theme_void() # empty theme
 
 ```
@@ -118,16 +118,16 @@ library(ggplot2) # beautiful graphs
 
 ggplot(data = NULL, # NULL data set
        aes(x = 3, # arbitrary x; 3 is good
-           y = 81)) + # y value
-  geom_col(fill = "#ffcb05") + # column
+           y = 81)) + # y value to be graphed
+  geom_col(fill = "#ffcb05") + # column & column color
   coord_polar(theta = "y") + # polar coordinates
   xlim(0, 4) + # xlimits create a doughnut
   ylim(0, 100) + # ylimits govern the circumference
   geom_text(aes(x = 0, # text in center
                 y = 0,
                 label = "81%"), # label for text
-            size = 30,
-            col = "#ffcb05") +
+            size = 30, # text size
+            col = "#ffcb05") + # text color
   theme_void() # empty theme
 
 ```

@@ -101,6 +101,11 @@ leaflet(options = leafletOptions(attributionControl=TRUE)) %>%
 
 For [our work with the UNICEF Multiple Indicator Cluster Survey (MICS) data](https://agrogan1.github.io/#multiple-indicator-cluster-surveys-mics-unicef-data) on parenting and child development in Low and Middle Income Countries around the world, I have been experimenting with the ArcGIS "storymaps" format:
 
+* Gender Inequality in Low- and Middle-Income Countries: Associations
+with Parental Physical Abuse and Moderation by Child Gender
+    + Article
+    + [ArcGIS Storymap](https://arcg.is/1WzHHP)
+
 * "The Association between Spanking and Physical Abuse of Young Children in 56 Low- and Middle-Income Countries"
    + [Article](https://doi.org/10.1016/j.chiabu.2022.105662)
     + [Press Release](https://news.umich.edu/physical-abuse-less-likely-when-spanking-is-eliminated/)
