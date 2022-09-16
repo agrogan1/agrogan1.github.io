@@ -203,6 +203,17 @@ leaflet() %>%
 
 ```
 
+* Gender Inequality in Low- and Middle-Income Countries: Associations
+with Parental Physical Abuse and Moderation by Child Gender
+    + Article
+    + [ArcGIS Storymap](https://arcg.is/1WzHHP)
+    
+```{r, eval=TRUE, out.width="50%", fig.align = 'center'}
+
+knitr::include_graphics("./images/GII0.png")
+
+```
+    
 * "The Association between Spanking and Physical Abuse of Young Children in 56 Low- and Middle-Income Countries"
     + [Article](https://doi.org/10.1016/j.chiabu.2022.105662)
     + [Press Release](https://news.umich.edu/physical-abuse-less-likely-when-spanking-is-eliminated/)
