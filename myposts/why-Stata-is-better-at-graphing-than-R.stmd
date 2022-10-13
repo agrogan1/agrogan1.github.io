@@ -17,7 +17,10 @@ This post uses simulated social service agency data clients. In each program, I 
 ```s
     import delimited "clients.csv", encoding(ISO-8859-2) clear // import data
 	
-	graph bar mental_health_t2, over(program, gap(10)) scheme(michigan) asyvars // bar graph of mental health over program
+	graph bar mental_health_t2, /// bar graph of outcome
+	over(program, gap(10)) /// over program
+	scheme(michigan) /// michigan graph scheme
+	asyvars // bars that have color
 ```
 
 ```s/

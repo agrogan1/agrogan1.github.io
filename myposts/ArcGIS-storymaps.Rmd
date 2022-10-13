@@ -103,11 +103,12 @@ For [our work with the UNICEF Multiple Indicator Cluster Survey (MICS) data](htt
 
 * Gender Inequality in Low- and Middle-Income Countries: Associations
 with Parental Physical Abuse and Moderation by Child Gender
-    + Article
+    + [Article](https://www.mdpi.com/1841422)
     + [ArcGIS Storymap](https://arcg.is/1WzHHP)
-
+    + [Press Release](https://news.umich.edu/gender-inequality-can-predict-high-rates-of-child-physical-abuse/)
+    
 * "The Association between Spanking and Physical Abuse of Young Children in 56 Low- and Middle-Income Countries"
-   + [Article](https://doi.org/10.1016/j.chiabu.2022.105662)
+    + [Article](https://doi.org/10.1016/j.chiabu.2022.105662)
     + [Press Release](https://news.umich.edu/physical-abuse-less-likely-when-spanking-is-eliminated/)
     + [HTML Slides](https://websites.umich.edu/~parentingandchilddev/MICS-physical-abuse/MICS-physical-abuse.html)
     + [ArcGIS Storymap](https://arcg.is/fq49)

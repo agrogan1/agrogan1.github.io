@@ -3,22 +3,25 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/why-Stata-is-better-at-graphing-than-R.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}29 Jul 2022, 13:14:21
+ {txt}opened on:  {res}13 Oct 2022, 12:08:48
 {txt}
 {com}. //_1
 . display c(current_date)
-{res}29 Jul 2022
+{res}13 Oct 2022
 {txt}
 {com}. //_2
 . display c(current_time)
-{res}13:14:21
+{res}12:08:48
 {txt}
 {com}. //_3
 . import delimited "clients.csv", encoding(ISO-8859-2) clear // import data
 {res}{text}(8 vars, 491 obs)
 
 {com}.     
-. graph bar mental_health_t2, over(program, gap(10)) scheme(michigan) asyvars // bar graph of mental health over program
+. graph bar mental_health_t2, /// bar graph of outcome
+> over(program, gap(10)) /// over program
+> scheme(michigan) /// michigan graph scheme
+> asyvars // bars that have color
 {res}{txt}
 {com}. //_4q
 . quietly graph export mybarStata.png, width(500) replace
@@ -28,7 +31,7 @@
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/why-Stata-is-better-at-graphing-than-R.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}29 Jul 2022, 13:14:29
+ {txt}closed on:  {res}13 Oct 2022, 12:08:52
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
