@@ -209,7 +209,7 @@ with Parental Physical Abuse and Moderation by Child Gender
     + [ArcGIS Storymap](https://arcg.is/1WzHHP)
     + [Press Release](https://news.umich.edu/gender-inequality-can-predict-high-rates-of-child-physical-abuse/)
     
-```{r, eval=TRUE, out.width="50%", fig.align = 'center'}
+```{r, eval=TRUE, out.width="75%", fig.align = 'center'}
 
 knitr::include_graphics("./images/GII0.png")
 
