@@ -3,16 +3,19 @@ title: "You Have To Get Your Data From Somewhere"
 author: "Andy Grogan-Kaylor"
 date: "`r Sys.Date()`"
 output:
+  distill::distill_article:
+    highlight: haddock
+    toc: yes
+  html_document:
+    toc: yes
+    df_print: paged
+  pdf_document:
+    toc: yes
+    number_sections: yes
   word_document:
     toc: yes
     highlight: haddock
     number_sections: yes
-  pdf_document:
-    toc: yes
-    number_sections: yes
-  distill::distill_article:
-    highlight: haddock
-    toc: yes
 header-includes: \usepackage{xcolor}
 ---
 
@@ -87,13 +90,19 @@ mydata <- read_excel("/project1/mydata.xlsx") # load data from Excel
 
 # Setting Up Your Data Before Importing
 
-Your data may already be set up in this way, but remember that any statistical or data visualization software is going to be happier with **shorter column names** like *happy*, rather than longer column names like *"Generally speaking, how happy would you say that you are on most days?"*. 
+Your data may already be set up in this way, but ...
+
+Your data, whether in a text file, a statistical file, or an Excel file, should be in *rectangular* format organized by rows and columns, as seen in the example below.
+
+Remember that any statistical or data visualization software is going to be happier with **shorter column names** like *happy*, rather than longer column names like *"Generally speaking, how happy would you say that you are on most days?"*. 
 
 id          happy  income       neighborhood
 -------     ------ ----------   -------------
      12     12        12        12
     123     123       123       123
       1     1          1        1
+
+Datasets can be much larger than the example above, but should most often follow this *rectangular* format.
 
 # Examples
 
