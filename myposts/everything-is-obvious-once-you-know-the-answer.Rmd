@@ -1,0 +1,30 @@
+---
+title: "Everything is Obvious Once You Know The Answer"
+description: |
+  Are the results of social science so "obvious"?
+author:
+  - name: Andy Grogan-Kaylor 
+    url: https://agrogan1.github.io/
+    affiliation: University of Michigan
+    affiliation_url: https://www.umich.edu
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+I have been thinking a lot about the idea that *Everything Is Obvious, Once You Know The Answer*, as detailed in the book with this title by Duncan Watts.
+
+This seems to me especially true in Social Research. 
+
+For example, in our [work with the international MICS data](https://agrogan1.github.io/#multiple-indicator-cluster-surveys-mics-unicef-data), we conducted a [study of the link between gender inequality and physical child abuse](https://www.mdpi.com/1841422). We expected to find that higher levels of gender inequality led to higher levels of physical abuse for female children, but not for male children. Instead, we found that higher levels of gender inequality were associated with higher levels of physical abuse for both male and female children. Equally interesting was that we found that gender inequality was predictive of levels of child abuse, while country level GDP was not.
+
+Similarly, in a [study of parenting during Covid-19](https://agrogan1.github.io/#covid-19), we expected to find that households with children would experience higher levels of anxiety and depression than households without children. Instead, we found the opposite. Being in a household with children was generally protective for anxiety and depression. 
+
+In his book, Watts uses the example from over 50 years ago, of a large study conducted by Lazarsfeld of veterans returning from World War II. The results are surprising. I've prepared a slide deck on these ideas here: [https://agrogan1.github.io/teaching/everything-is-obvious/everything-is-obvious.html#/title-slide](https://agrogan1.github.io/teaching/everything-is-obvious/everything-is-obvious.html#/title-slide)
+
+
