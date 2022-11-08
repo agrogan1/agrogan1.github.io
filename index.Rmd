@@ -456,7 +456,8 @@ knitr::include_graphics("images/chartgrid.png")
 
 ## Telling Stories With Data
 
-* [Visualizing Disparities in a Continuous Risk Factor](https://agrogan1.github.io/myposts/visualizing-disparities.html) [[PDF](https://agrogan1.github.io/myposts/visualizing-disparities.pdf)]
+* [Visualizing Disparities in a Continuous Risk Factor or Outcome](https://agrogan1.github.io/myposts/visualizing-disparities-in-a-continuous-outcome.html) [[PDF](https://agrogan1.github.io/myposts/visualizing-disparities-in-a-continuous-outcome.pdf)]
+* [Visualizing Disparities in a Categorical Risk Factor or Outcome](https://agrogan1.github.io/myposts/visualizing-disparities-in-a-categorical-outcome.html)
 * [Comparing Program Outcomes With ggplot](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.html) [[PDF](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.pdf)]
 * [Graphing Change Over Time](https://agrogan1.github.io/dataviz/graphing-change-over-time/index.html) [[PDF](https://agrogan1.github.io/dataviz/graphing-change-over-time/index.pdf)]
 
