@@ -9,3 +9,6 @@ render("./myposts/index.Rmd")
 # then render home page
 
 render("index.Rmd")
+
+
+
