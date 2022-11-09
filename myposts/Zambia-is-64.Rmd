@@ -18,6 +18,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 Zambia is the 64th country to ban corporal punishment: [https://agrogan1.github.io/research/cpbans/](https://agrogan1.github.io/research/cpbans/)
 
+```{r}
+
+knitr::include_graphics("./images/Zambia-is-64.png")
+
+```
 
 
 
