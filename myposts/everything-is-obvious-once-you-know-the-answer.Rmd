@@ -27,4 +27,11 @@ Similarly, in a [study of parenting during Covid-19](https://agrogan1.github.io/
 
 In his book, Watts uses the example from over 50 years ago, of a large study conducted by Lazarsfeld of veterans returning from World War II. The results are surprising. I've prepared a slide deck on these ideas here: [https://agrogan1.github.io/teaching/everything-is-obvious/everything-is-obvious.html#/title-slide](https://agrogan1.github.io/teaching/everything-is-obvious/everything-is-obvious.html#/title-slide)
 
+```{r}
+
+knitr::include_url("https://agrogan1.github.io/teaching/everything-is-obvious/everything-is-obvious.html")
+
+```
+
+
 
