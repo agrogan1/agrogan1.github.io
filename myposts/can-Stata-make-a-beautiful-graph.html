@@ -200,7 +200,7 @@ table tbody:last-child tr:last-child td {border-bottom:1px solid black;}
 <header id="title-block-header">
 <h1 class="title">Can Stata Make A Beautiful Graph?</h1>
 <p class="author">Andy Grogan-Kaylor</p>
-<p class="date">29 Jul 2022 13:19:25</p>
+<p class="date">30 Nov 2022 08:02:40</p>
 </header>
 <style>body {max-width: 90%} h1 {color: #00274C;} h2 {color: #2F65A7;} p{font-size: 115%} blockquote {border-left: 5px solid #ffcb05; margin: 1.5em 10px; padding: 0.5em 10px;} code {color: red;}</style>
 <h1 id="introduction">Introduction 🌲</h1>
@@ -232,8 +232,21 @@ Alps.”</p>
 </blockquote>
 <pre class='stata'>. use "https://github.com/agrogan1/multilevel/raw/master/mlm-R2-gutten/gutten.dta", clear
 </pre>
-<h1 id="graph">Graph 🌲</h1>
-<p>Below please find the <em>admittedly complicated</em> graph command.
+<h1 id="a-simple-graph">A Simple Graph 🌲</h1>
+<pre class='stata'>. twoway (scatter height age_base)(lowess height age_base)
+</pre>
+<pre class='stata'>. graph export gutten0.svg, width(2000) replace
+(file gutten0.svg not found)
+file gutten0.svg saved as SVG format
+</pre>
+<figure>
+<img src="gutten0.svg" style="width:75.0%"
+alt="A Simple Graph of the Gutten Trees" />
+<figcaption aria-hidden="true">A Simple Graph of the Gutten
+Trees</figcaption>
+</figure>
+<h1 id="a-beautiful-graph">A Beautiful Graph 🌲</h1>
+<p>Below please find an <em>admittedly complicated</em> graph command.
 Note, however, that the graph builds upon basic ideas that we want a
 <code>twoway</code> graph, with a <code>scatter</code>plot and a
 <code>lowess</code> smoother. Everything else is just an option to
@@ -243,7 +256,7 @@ to spread the graph along multiple lines.</p>
 <pre class='stata'>. twoway /// two way graph
 > (scatter height age_base, /// scatterplot
 > mcolor(dkgreen%25) msymbol(circle)) /// dark green transparent markers
-> (lowess height age_base, /// smoother
+> (lowess height age_base, /// smoother 
 > lcolor(gold) lwidth(thick) lpattern(solid)), /// gold line
 > scheme(lean2) /// better base scheme
 > title("Tree Height by Tree Age") /// title

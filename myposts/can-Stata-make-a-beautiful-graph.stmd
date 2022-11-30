@@ -28,16 +28,24 @@ The documentation goes on to further note that:
 
     use "https://github.com/agrogan1/multilevel/raw/master/mlm-R2-gutten/gutten.dta", clear
 
-# Graph 🌲
+# A Simple Graph 🌲
 
-Below please find the *admittedly complicated* graph command. Note, however, that the graph builds upon basic ideas that we want a `twoway` graph, with a `scatter`plot and a `lowess` smoother. Everything else is just an option to improve the appearance of the graph.
+    twoway (scatter height age_base)(lowess height age_base)
+	
+	graph export gutten0.svg, width(2000) replace
+
+![A Simple Graph of the Gutten Trees](gutten0.svg){width=75%}
+
+# A Beautiful Graph 🌲
+
+Below please find an *admittedly complicated* graph command. Note, however, that the graph builds upon basic ideas that we want a `twoway` graph, with a `scatter`plot and a `lowess` smoother. Everything else is just an option to improve the appearance of the graph.
 
 I make extensive use of the `///` notation which allows me to spread the graph along multiple lines.
 
     twoway /// two way graph
     (scatter height age_base, /// scatterplot
 	mcolor(dkgreen%25) msymbol(circle)) /// dark green transparent markers
-    (lowess height age_base, /// smoother
+    (lowess height age_base, /// smoother 
 	lcolor(gold) lwidth(thick) lpattern(solid)), /// gold line
     scheme(lean2) /// better base scheme
     title("Tree Height by Tree Age") /// title
@@ -51,6 +59,11 @@ I make extensive use of the `///` notation which allows me to spread the graph a
 	graph export gutten.svg, width(2000) replace
 
 ![A Beautiful? Graph of the Gutten Trees](gutten.svg){width=75%}
+
+	
+	
+	
+	
 
 	
 	
