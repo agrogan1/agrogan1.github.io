@@ -34,7 +34,7 @@ The documentation goes on to further note that:
 	
 	graph export gutten0.svg, width(2000) replace
 
-![A Simple Graph of the Gutten Trees](gutten0.svg){width=75%}
+![A Simple Graph of the Gutten Trees](gutten0.svg){width=50%}
 
 # A Beautiful Graph 🌲
 
@@ -46,8 +46,8 @@ I make extensive use of the `///` notation which allows me to spread the graph a
     (scatter height age_base, /// scatterplot
 	mcolor(dkgreen%25) msymbol(circle)) /// dark green transparent markers
     (lowess height age_base, /// smoother 
-	lcolor(gold) lwidth(thick) lpattern(solid)), /// gold line
-    scheme(lean2) /// better base scheme
+	lcolor(gold) lwidth(thick)), /// gold line
+    scheme(michigan) /// better base scheme
     title("Tree Height by Tree Age") /// title
     xtitle("Tree Age") /// title for x axis
     ytitle("Tree Height") /// title for y axis
@@ -58,7 +58,7 @@ I make extensive use of the `///` notation which allows me to spread the graph a
 	
 	graph export gutten.svg, width(2000) replace
 
-![A Beautiful? Graph of the Gutten Trees](gutten.svg){width=75%}
+![A Beautiful? Graph of the Gutten Trees](gutten.svg){width=50%}
 
 	
 	

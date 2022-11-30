@@ -200,7 +200,7 @@ table tbody:last-child tr:last-child td {border-bottom:1px solid black;}
 <header id="title-block-header">
 <h1 class="title">Can Stata Make A Beautiful Graph?</h1>
 <p class="author">Andy Grogan-Kaylor</p>
-<p class="date">30 Nov 2022 08:02:40</p>
+<p class="date">30 Nov 2022 11:54:51</p>
 </header>
 <style>body {max-width: 90%} h1 {color: #00274C;} h2 {color: #2F65A7;} p{font-size: 115%} blockquote {border-left: 5px solid #ffcb05; margin: 1.5em 10px; padding: 0.5em 10px;} code {color: red;}</style>
 <h1 id="introduction">Introduction 🌲</h1>
@@ -236,11 +236,10 @@ Alps.”</p>
 <pre class='stata'>. twoway (scatter height age_base)(lowess height age_base)
 </pre>
 <pre class='stata'>. graph export gutten0.svg, width(2000) replace
-(file gutten0.svg not found)
 file gutten0.svg saved as SVG format
 </pre>
 <figure>
-<img src="gutten0.svg" style="width:75.0%"
+<img src="gutten0.svg" style="width:50.0%"
 alt="A Simple Graph of the Gutten Trees" />
 <figcaption aria-hidden="true">A Simple Graph of the Gutten
 Trees</figcaption>
@@ -257,8 +256,8 @@ to spread the graph along multiple lines.</p>
 > (scatter height age_base, /// scatterplot
 > mcolor(dkgreen%25) msymbol(circle)) /// dark green transparent markers
 > (lowess height age_base, /// smoother 
-> lcolor(gold) lwidth(thick) lpattern(solid)), /// gold line
-> scheme(lean2) /// better base scheme
+> lcolor(gold) lwidth(thick)), /// gold line
+> scheme(michigan) /// better base scheme
 > title("Tree Height by Tree Age") /// title
 > xtitle("Tree Age") /// title for x axis
 > ytitle("Tree Height") /// title for y axis
@@ -274,7 +273,7 @@ file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/gutten.png saved a
 file gutten.svg saved as SVG format
 </pre>
 <figure>
-<img src="gutten.svg" style="width:75.0%"
+<img src="gutten.svg" style="width:50.0%"
 alt="A Beautiful? Graph of the Gutten Trees" />
 <figcaption aria-hidden="true">A Beautiful? Graph of the Gutten
 Trees</figcaption>
