@@ -34,7 +34,7 @@ The documentation goes on to further note that:
 	
 	graph export gutten0.svg, width(2000) replace
 
-![A Simple Graph of the Gutten Trees](gutten0.svg){width=50%}
+![A Simple Graph of the Gutten Trees](gutten0.svg){width=25%}
 
 # A Beautiful Graph 🌲
 
@@ -52,7 +52,8 @@ I make extensive use of the `///` notation which allows me to spread the graph a
     xtitle("Tree Age") /// title for x axis
     ytitle("Tree Height") /// title for y axis
     caption("Gutten Tree Data") /// caption
-    legend(order(1 "trees" 2 "smoother") position(6) rows(1)) // better labels and format for legend
+    legend(order(1 "trees" 2 "smoother") position(6) rows(1)) /// better labels and format for legend
+	aspectratio(.75) // better aspect ratio
 
     graph export gutten.png, width(2000) replace
 	
