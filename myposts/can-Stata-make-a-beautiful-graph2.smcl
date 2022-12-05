@@ -3,15 +3,15 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/can-Stata-make-a-beautiful-graph2.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}30 Nov 2022, 11:56:14
+ {txt}opened on:  {res} 5 Dec 2022, 13:52:24
 {txt}
 {com}. //_1
 . display c(current_date)
-{res}30 Nov 2022
+{res} 5 Dec 2022
 {txt}
 {com}. //_2
 . display c(current_time)
-{res}11:56:14
+{res}13:52:24
 {txt}
 {com}. //_3
 . use "https://github.com/agrogan1/newstuff/raw/master/categorical/glm/penguins.dta", clear
@@ -19,9 +19,13 @@
 {com}. //_4
 . twoway /// twoway graph
 > (scatter flipper_length body_mass_g, mcolor(%50)) /// scatter plot w/ transparency
-> (lowess flipper_length body_mass_g), /// lowess smoohter
-> by(species, title("Penguin Flipper Length by Body Mass")) /// by species and title
-> scheme(michigan) // Michigan graph scheme
+> (lowess flipper_length body_mass_g), /// lowess smoother
+> by(species, /// by species
+> title("Penguin Flipper Length by Body Mass")) /// title
+> xtitle("body mass") ytitle("flipper length") /// x and y titles
+> legend(order(1 "penguins" 2 "smoother")) /// legend keys
+> scheme(michigan) /// Michigan graph scheme
+> aspectratio(.25) // aspect ratio
 {res}{txt}
 {com}. //_5
 . graph export beautiful-penguins.png, width(2000) replace
@@ -48,7 +52,7 @@ format
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/can-Stata-make-a-beautiful-graph2.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}30 Nov 2022, 11:56:19
+ {txt}closed on:  {res} 5 Dec 2022, 13:52:30
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

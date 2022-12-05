@@ -59,7 +59,7 @@ I make extensive use of the `///` notation which allows me to spread the graph a
 	
 	graph export gutten.svg, width(2000) replace
 
-![A Beautiful? Graph of the Gutten Trees](gutten.svg){width=50%}
+![A Beautiful? Graph of the Gutten Trees](gutten.svg){width=75%}
 
 	
 	

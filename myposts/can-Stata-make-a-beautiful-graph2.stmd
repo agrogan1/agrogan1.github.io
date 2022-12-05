@@ -22,9 +22,13 @@ I make use of the `///` notation which allows me to spread the graph along multi
 
     twoway /// twoway graph
     (scatter flipper_length body_mass_g, mcolor(%50)) /// scatter plot w/ transparency
-    (lowess flipper_length body_mass_g), /// lowess smoohter
-    by(species, title("Penguin Flipper Length by Body Mass")) /// by species and title
-	scheme(michigan) // Michigan graph scheme
+    (lowess flipper_length body_mass_g), /// lowess smoother
+    by(species, /// by species
+	title("Penguin Flipper Length by Body Mass")) /// title
+	xtitle("body mass") ytitle("flipper length") /// x and y titles
+	legend(order(1 "penguins" 2 "smoother")) /// legend keys
+	scheme(michigan) /// Michigan graph scheme
+	aspectratio(.25) // aspect ratio
 
     graph export beautiful-penguins.png, width(2000) replace
 	
