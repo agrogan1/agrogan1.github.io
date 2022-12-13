@@ -23,6 +23,8 @@ knitr::opts_chunk$set(echo = FALSE,
 
 library(readr) # get data
 
+library(haven) # Stata data
+
 library(ggplot2) # beautiful graphs
 
 library(dplyr) # data wrangling
