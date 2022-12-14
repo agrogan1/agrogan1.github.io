@@ -1,0 +1,49 @@
+---
+title: "GIS and Mapping"
+description: |
+  Notes for a GIS Course Under Development.
+author: "Andy Grogan-Kaylor"
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    highlight: haddock
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+I've been working on [some ideas](https://agrogan1.github.io/mapping/) for a *GIS and Mapping Course* that may happen some day. 
+
+```{r}
+
+library(sf) # simple (spatial) features
+
+library(leaflet) # beautiful maps
+
+```
+
+
+```{r}
+#| label: fig-world
+#| fig-cap: "Countries of the World"
+#| fig-height: 3
+
+global_data <- read_sf("../../mapping/shapefiles/wrld_simpl/wrld_simpl.shp")
+
+  leaflet() %>%
+    setView(0, 0, zoom = 1.5) %>%
+    addProviderTiles(providers$Esri.WorldImagery) %>%
+    addPolygons(data = global_data, 
+                fillOpacity = .0, 
+                weight = 2,
+                color = "#009edb", 
+                label = global_data$NAME,
+                highlightOptions = highlightOptions(color = "red", 
+                                                    weight = 2,
+                                                    bringToFront = TRUE)) 
+
+```
