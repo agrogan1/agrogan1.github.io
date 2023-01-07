@@ -1,7 +1,7 @@
 ---
 title: "Multilevel Thinking"
 description: |
-  An introduction to multilevel modeling in applied research.
+  A book draft.
 author:
   - name: Andy Grogan-Kaylor 
     url: https://agrogan1.github.io/
@@ -20,37 +20,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
-```{css, echo=FALSE}
-
-d-article blockquote {
-  color: black;
-  border-left: 2px solid #FFCB05; 
-  padding: 0.5em 10px;
-}
-  
-```
-
-
-I have been working on a project entitled [*Multilevel Thinking*](https://agrogan1.github.io/multilevel-thinking/). In this document, I try to provide clear explanations of ideas that may be well known in the statistical literature, but not that often used in the applied research literature. I use cross-cultural research as an example, but the ideas are equally applicable whether applied to studying *children in schools*, *residents in neighborhoods*, or *individuals or families in countries*: 
-
-> [https://agrogan1.github.io/multilevel-thinking/](https://agrogan1.github.io/multilevel-thinking/)
-
-
-```{r, fig.height=3}
-
-knitr::include_graphics("./images/bookcover.png")
-
-```
-
-
-
-
-
-
-
-
-
-
+This post has moved: [https://agrogan1.github.io/myposts/multilevel-thinking-a-book-draft.html](https://agrogan1.github.io/myposts/multilevel-thinking-a-book-draft.html)
 
 
 
