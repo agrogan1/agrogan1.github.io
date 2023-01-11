@@ -1,0 +1,46 @@
+---
+title: "Simpson's Paradox and The Aggregation Paradox"
+description: |
+  An evolving blog post
+author:
+  - name: Andy Grogan-Kaylor 
+    url: https://agrogan1.github.io/
+    affiliation: University of Michigan
+    affiliation_url: https://umich.edu/
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    highlight: haddock
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+```{css, echo=FALSE}
+
+d-article blockquote {
+  color: black;
+  border-left: 2px solid #FFCB05; 
+  padding: 0.5em 10px;
+}
+  
+```
+
+> This is an evolving blog post.
+
+I am starting to think that Simpson's Paradox and the Aggregation Paradox, are variations of the same phenomenon.
+
+Consider a simple regression equation.
+
+$$y_{ij} = \beta_0 + \beta_1 x_{ij} + \beta_2 z_{ij} + u_{0j} + e_{ij}$$
+
+* Simpson's Paradox could possibly occur if we omit $z_{ij}$ from the regression equation.
+* The Aggregation Paradox could possibly occur if we omit $u_{0j}$ from the regression equation.
+
+
+
+
