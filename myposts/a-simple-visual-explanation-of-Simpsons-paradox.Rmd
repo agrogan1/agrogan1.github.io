@@ -114,9 +114,9 @@ Even when presented visually, it is difficult to think through Simpson's Paradox
 
 What do we see? 
 
-1. For the *sample as a whole*, the regression line slopes *downward*: more treatment appears to be associated with *less* of the *desirable outcome*.
+1. For the *sample overall*, the regression line slopes *downward*: more treatment appears to be associated with *less* of the *desirable outcome*.
 2. When we control for group--when we start to think in multivariate terms--the individual group regression lines slope *upward*: more treatment appears to be associated with *more* of the *desirable outcome*.
-3. Thus, a more complex analysis gives very different results: graphing outcomes only against treatment or intervention suggests that the treatment or intervention is *harmful*; graphing outcomes against treatment or intervention, but accounting for group membership, suggests that the treatment is *helpful*.
+3. Thus, a more complex multivariate analysis gives very different results: graphing outcomes only against treatment or intervention suggests that the treatment or intervention is *harmful*; graphing outcomes against treatment or intervention, but accounting for group membership, suggests that the treatment is *helpful*.
 4. The crucial understanding is points (1)-(3) above, but *why* might this be? The discrepancy results from the fact that treatment provision is correlated with the outcome. Those with lower levels of the desirable outcome are getting higher levels of the treatment or intervention, a common enough situation if we think about it. This leads to the seeming *paradox* of finding quite different results depending upon what factors we account for.
 
 

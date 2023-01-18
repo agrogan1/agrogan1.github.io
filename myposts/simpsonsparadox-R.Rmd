@@ -10,9 +10,6 @@ output:
     highlight: haddock
     latex_engine: xelatex
     fig_height: 4
-  tufte::tufte_handout:
-    number_sections: yes
-    toc: yes
 mainfont: Arial
 ---
 
