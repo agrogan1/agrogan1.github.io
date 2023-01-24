@@ -3,15 +3,15 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/can-Stata-make-a-beautiful-graph.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 5 Dec 2022, 13:52:05
+ {txt}opened on:  {res}24 Jan 2023, 18:18:03
 {txt}
 {com}. //_1
 . display c(current_date)
-{res} 5 Dec 2022
+{res}24 Jan 2023
 {txt}
 {com}. //_2
 . display c(current_time)
-{res}13:52:05
+{res}18:18:03
 {txt}
 {com}. //_3
 . use "https://github.com/agrogan1/multilevel/raw/master/mlm-R2-gutten/gutten.dta", clear
@@ -68,7 +68,7 @@ format
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/can-Stata-make-a-beautiful-graph.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 5 Dec 2022, 13:52:12
+ {txt}closed on:  {res}24 Jan 2023, 18:18:09
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

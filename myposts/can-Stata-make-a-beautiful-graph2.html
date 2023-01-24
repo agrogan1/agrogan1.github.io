@@ -186,10 +186,15 @@ table tbody:last-child tr:last-child td {border-bottom:1px solid black;}
     }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <!--[if lt IE 9]>
@@ -200,12 +205,14 @@ table tbody:last-child tr:last-child td {border-bottom:1px solid black;}
 <header id="title-block-header">
 <h1 class="title">Can Stata Make A Beautiful Graph? (Attempt 2)</h1>
 <p class="author">Andy Grogan-Kaylor</p>
-<p class="date">5 Dec 2022 13:52:24</p>
+<p class="date">24 Jan 2023 18:18:19</p>
 </header>
 <style>body {max-width: 90%} h1 {color: #00274C;} h2 {color: #2F65A7;} p{font-size: 115%} blockquote {border-left: 5px solid #ffcb05; margin: 1.5em 10px; padding: 0.5em 10px;} code {color: red;}</style>
 <h1 id="background">Background</h1>
 <p>A second attempt <a href="can-Stata-make-a-beautiful-graph.html">to
-make a beautiful graph with Stata</a>.</p>
+make a beautiful graph with Stata</a>. There is sometimes a
+<em>debate</em> about whether Stata has good graphing capabilities.
+Answer: It does!!!</p>
 <p>I make use of the <code>///</code> notation which allows me to spread
 the graph along multiple lines.</p>
 <h1 id="get-the-data">Get The Data</h1>
@@ -214,14 +221,18 @@ the graph along multiple lines.</p>
 </pre>
 <h1 id="make-the-graph">Make The Graph</h1>
 <pre class='stata'>. twoway /// twoway graph
-> (scatter flipper_length body_mass_g, mcolor(%50)) /// scatter plot w/ transparency
+> (scatter flipper_length body_mass_g if species == 1, mcolor("%25")) /// scatter plot w/ 
+> transparency
+> (scatter flipper_length body_mass_g if species == 2, mcolor("%25")) /// scatter plot w/ 
+> transparency
+> (scatter flipper_length body_mass_g if species == 3, mcolor("%25")) /// scatter plot w/ 
+> transparency
 > (lowess flipper_length body_mass_g), /// lowess smoother
-> by(species, /// by species
-> title("Penguin Flipper Length by Body Mass")) /// title
+> title("Penguin Flipper Length by Body Mass") /// title
 > xtitle("body mass") ytitle("flipper length") /// x and y titles
-> legend(order(1 "penguins" 2 "smoother")) /// legend keys
+> legend(order(1 "Adelie" 2 "Chinstrap" 3 "Gentoo" 4 "smoother")) /// legend keys
 > scheme(michigan) /// Michigan graph scheme
-> aspectratio(.25) // aspect ratio
+> aspectratio(.75) // aspect ratio
 </pre>
 <pre class='stata'>. graph export beautiful-penguins.png, width(2000) replace
 file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/beautiful-penguins.png

@@ -1,17 +1,17 @@
 {smcl}
-{txt}{sf}{ul off}{.-}
+{com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/can-Stata-make-an-aesthetically-appealing-graph.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}14 Apr 2022, 13:21:20
+ {txt}opened on:  {res}24 Jan 2023, 18:18:38
 {txt}
 {com}. //_1
 . display c(current_date)
-{res}14 Apr 2022
+{res}24 Jan 2023
 {txt}
 {com}. //_2
 . display c(current_time)
-{res}13:21:20
+{res}18:18:38
 {txt}
 {com}. //_3
 . use "https://github.com/agrogan1/multilevel/raw/master/fixed-effects-example-World-Bank-data/WorldBankData.dta", clear
@@ -36,11 +36,6 @@
 {com}. //_6
 . graph export aesthetically-appealing-World-Bank.svg, width(2000) replace
 {txt}{p 0 4 2}
-(file {bf}
-aesthetically-appealing-World-Bank.svg{rm}
-not found)
-{p_end}
-{p 0 4 2}
 file {bf}
 aesthetically-appealing-World-Bank.svg{rm}
 saved as
@@ -53,7 +48,7 @@ format
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/can-Stata-make-an-aesthetically-appealing-graph.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}14 Apr 2022, 13:21:28
+ {txt}closed on:  {res}24 Jan 2023, 18:18:49
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

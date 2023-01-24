@@ -3,29 +3,30 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/can-Stata-make-a-beautiful-graph2.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 5 Dec 2022, 13:52:24
+ {txt}opened on:  {res}24 Jan 2023, 18:18:19
 {txt}
 {com}. //_1
 . display c(current_date)
-{res} 5 Dec 2022
+{res}24 Jan 2023
 {txt}
 {com}. //_2
 . display c(current_time)
-{res}13:52:24
+{res}18:18:19
 {txt}
 {com}. //_3
 . use "https://github.com/agrogan1/newstuff/raw/master/categorical/glm/penguins.dta", clear
 {txt}
 {com}. //_4
 . twoway /// twoway graph
-> (scatter flipper_length body_mass_g, mcolor(%50)) /// scatter plot w/ transparency
+> (scatter flipper_length body_mass_g if species == 1, mcolor("%25")) /// scatter plot w/ transparency
+> (scatter flipper_length body_mass_g if species == 2, mcolor("%25")) /// scatter plot w/ transparency
+> (scatter flipper_length body_mass_g if species == 3, mcolor("%25")) /// scatter plot w/ transparency
 > (lowess flipper_length body_mass_g), /// lowess smoother
-> by(species, /// by species
-> title("Penguin Flipper Length by Body Mass")) /// title
+> title("Penguin Flipper Length by Body Mass") /// title
 > xtitle("body mass") ytitle("flipper length") /// x and y titles
-> legend(order(1 "penguins" 2 "smoother")) /// legend keys
+> legend(order(1 "Adelie" 2 "Chinstrap" 3 "Gentoo" 4 "smoother")) /// legend keys
 > scheme(michigan) /// Michigan graph scheme
-> aspectratio(.25) // aspect ratio
+> aspectratio(.75) // aspect ratio
 {res}{txt}
 {com}. //_5
 . graph export beautiful-penguins.png, width(2000) replace
@@ -52,7 +53,7 @@ format
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/can-Stata-make-a-beautiful-graph2.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 5 Dec 2022, 13:52:30
+ {txt}closed on:  {res}24 Jan 2023, 18:18:23
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
