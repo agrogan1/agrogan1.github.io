@@ -116,11 +116,18 @@ knitr::include_graphics("images/banner.png")
 ## Multilevel and Longitudinal Modeling
 
 * [Course Page](https://agrogan1.github.io/multilevel/)
-* [Multilevel Thinking](https://agrogan1.github.io/multilevel-thinking/), an *in development* introduction to multilevel modeling.
 
 ```{r, out.width="25%"}
 
 knitr::include_graphics("images/plant.png")
+
+```
+
+* [Multilevel Thinking](https://agrogan1.github.io/multilevel-thinking/), an *in development* introduction to multilevel modeling.
+
+```{r, out.width="15%"}
+
+knitr::include_graphics("images/bookcover.png")
 
 ```
 
