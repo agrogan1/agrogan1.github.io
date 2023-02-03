@@ -54,7 +54,7 @@ library(sf) # simple features
 
 ```{r}
 
-knitr::include_graphics("images/earth-wide.png")
+knitr::include_graphics("images/forest.png")
 
 ```
 
@@ -415,8 +415,13 @@ knitr::include_graphics("images/MichiganColorsR.png")
 
 # Bayesian Statistics
 
+## Introductory Materials
+
 * [Thinking Through Bayesian Ideas](https://agrogan.shinyapps.io/Thinking-Through-Bayes/)
 * Notes on [Accepting the Null ($H_0$) Hypothesis](https://agrogan1.github.io/Bayes/accepting-H0/accepting-H0.html)
+
+## Multilevel Modeling
+
 * [Bayesian and Frequentist Multilevel Modeling](https://agrogan1.github.io/multilevel/Bayesian-and-frequentist-MLM/Bayesian-and-frequentist-MLM.html)
 * [Bayesian Longitudinal MLM With the Gutten Tree Data](https://agrogan1.github.io/multilevel/Bayesian-longitudinal-mlm/Bayesian-longitudinal-mlm.html) 
 
@@ -455,6 +460,10 @@ knitr::include_graphics("images/BayesianWaffle.png")
     + [Demo](https://agrogan.shinyapps.io/regression_demo/)
 * [Interactions](https://agrogan1.github.io/teaching/interactions/interactions.html)
 * [Logistic Regression](https://agrogan.shinyapps.io/exploring_logistic_regression/)
+
+# Mapping and GIS
+
+[Notes for a course in development](https://agrogan1.github.io/mapping/) on GIS and Mapping
 
 # Data Visualization
 
