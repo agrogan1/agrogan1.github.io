@@ -98,7 +98,13 @@ The example below is in Stata, due to Stata's ease of readability, but could as 
 
 ```{stata, eval = FALSE, echo = TRUE}
 
-* Open Data
+* Learning About Penguins
+
+* Ask A Question
+
+* What can I learn about penguins?
+  
+* Open The Raw Data
 
 use "https://github.com/agrogan1/Stata/raw/master/do-files/penguins.dta", clear 
 
@@ -106,7 +112,15 @@ use "https://github.com/agrogan1/Stata/raw/master/do-files/penguins.dta", clear
 
 generate big_penguin = body_mass_g > 4000 // create a big penguin variable
 
-* Visualize
+* Descriptive Statistics
+
+summarize culmen_length_mm culmen_depth_mm flipper_length_mm body_mass_g
+
+tabulate big_penguin
+
+tabulate species
+
+* Visualize The Data
 
 graph bar body_mass_g, over(species) scheme(s1color) // bar graph
 
@@ -116,8 +130,33 @@ twoway scatter culmen_length_mm body_mass_g, scheme(s1color) // scatterplot
 
 regress culmen_length_mm body_mass_g // regress culmen length on body mass
 
+```
+
+<aside>
+```{r, fig.cap="Bar Graph of Penguin Species"}
+
+knitr::include_graphics("workflow/mybargraph.png")
 
 ```
+
+```{r, fig.cap="Scatterplot of Penguin Culmen Length by Body Mass"}
+
+knitr::include_graphics("workflow/myscatterplot.png")
+
+```
+
+```{r, fig.cap="Descriptive Statistics"}
+
+knitr::include_graphics("workflow/mydescriptives.png")
+
+```
+
+```{r, fig.cap="Regression Results"}
+
+knitr::include_graphics("workflow/myregression.png")
+
+```
+</aside>
 
 
 
