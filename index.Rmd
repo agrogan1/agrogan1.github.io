@@ -131,6 +131,15 @@ knitr::include_graphics("images/bookcover.png")
 
 ```
 
+* [Multilevel Workshop](https://agrogan1.github.io/multilevel-workshop/), an *in development* workshop on multilevel modeling.
+
+```{r, out.width="25%"}
+
+knitr::include_graphics("images/multilevel-workshop.png")
+
+```
+
+
 ## Categorical Data Analysis
 
 * [Course Page](https://agrogan1.github.io/newstuff/categorical/)
