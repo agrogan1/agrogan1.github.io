@@ -474,6 +474,37 @@ knitr::include_graphics("images/BayesianWaffle.png")
 
 [Notes for a course in development](https://agrogan1.github.io/mapping/) on GIS and Mapping
 
+<aside>
+```{r, fig.cap="Orthographic (Globe) Projection", fig.height=2, warning=FALSE, eval=FALSE}
+
+m <- list(
+  l = 5,
+  r = 5,
+  b = 5,
+  t = 5,
+  pad = 4
+)
+
+plot_geo() %>%
+  layout(title = "", 
+         autosize = F, 
+         width = 100, 
+         height = 100,
+         margin = m,
+         geo = list(projection = list(type = 'orthographic'),
+                    showland = TRUE,  
+                    landcolor = toRGB("grey"),
+                    showcountries = TRUE,
+                    showocean = FALSE, 
+                    oceancolor = "LightBlue",
+                    lataxis = list(showgrid = TRUE,
+                                   gridcolor = toRGB("black")),
+                    lonaxis = list(showgrid = TRUE,
+                                   gridcolor = toRGB("black"))))
+
+```
+</aside>
+
 # Data Visualization
 
 * How To Choose A Chart
