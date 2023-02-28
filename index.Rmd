@@ -448,6 +448,7 @@ knitr::include_graphics("images/BayesianWaffle.png")
 
 * [What Is Data?](https://agrogan1.github.io/teaching/what-is-data/what-is-data.html)
 * [Everything is Obvious Once You Know The Answer](https://agrogan1.github.io/teaching/everything-is-obvious/everything-is-obvious.html)
+* [Notes on Quantitative Workflow](https://agrogan1.github.io/teaching/workflow/workflow.html)
 * Basics of [Quantitative Data Analysis](https://agrogan1.github.io/teaching/quantitative-data-analysis/quantitative-data-analysis.html)
 
 ## Causality
