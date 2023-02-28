@@ -20,6 +20,12 @@ I have developed a book draft on multilevel modeling, entitled [*Multilevel Thin
 
 The book draft is written from the perspective of using Stata. I am thinking about how to analyze multilevel models using multiple statistical languages: Stata, R, and Julia. This developing tutorial can be found at: [https://agrogan1.github.io/multilevel-multilingual/multilevel-multilingual.html](https://agrogan1.github.io/multilevel-multilingual/multilevel-multilingual.html)
 
+```{r, fig.height=3}
+
+knitr::include_graphics("./images/bookcover.png")
+
+```
+
 
 
 
