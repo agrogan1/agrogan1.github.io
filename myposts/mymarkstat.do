@@ -69,3 +69,8 @@ doedit "why-Excel-is-a-bad-format-for-storing-data.stmd"
 markstat using "why-Excel-is-a-bad-format-for-storing-data.stmd"
 
 graph close _all
+
+markstat using "why-Excel-is-a-bad-format-for-storing-data.stmd", pdf
+
+graph close _all
+
