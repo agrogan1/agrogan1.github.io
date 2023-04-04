@@ -207,9 +207,9 @@ table:not([class]) tbody:last-child tr:last-child td {border-bottom:1px solid bl
 <header id="title-block-header">
 <h1 class="title">Why Excel Is A Bad Format For Storing Data</h1>
 <p class="author">Andy Grogan-Kaylor</p>
-<p class="date">31 Mar 2023 11:17:17</p>
+<p class="date">4 Apr 2023 12:43:23</p>
 </header>
-<style>body {max-width: 90%;} h1 {color: #00274C;} h2 {color: #2F65A7;} blockquote {border-left: 5px solid #ffcb05; margin: 1.5em 10px; padding: 0.5em 10px;} a:link {color: #00274C;} a:visited {color: #2F65A7;} code {color: red;}</style>
+<style>body {max-width: 90%;} h1 {color: #00274C;} h2 {color: #2F65A7;} p {font-size: 110%;} pre.stata {font-size: 110%;} blockquote {border-left: 5px solid #ffcb05; margin: 1.5em 10px; padding: 0.5em 10px;} a:link {color: #00274C;} a:visited {color: #2F65A7;} code {color: red;}</style>
 <h1 id="background">Background</h1>
 <p>Excel is sometimes used as a program to collect and store data.
 However, Excel may be problematic as a data storage solution for a
@@ -241,7 +241,7 @@ style="width:50.0%" alt="Screenshot of Stata" />
 
 Contains data from simulated-happiness-data.dta
  Observations:           100                  
-    Variables:             2                  31 Mar 2023 11:17
+    Variables:             2                  4 Apr 2023 12:43
 ──────────────────────────────────────────────────────────────────────────────────────────
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
@@ -278,12 +278,12 @@ do you feel │
 <pre class='stata'>. graph bar, over(Q1) scheme(michigan2) asyvars
 
 .     
-. graph export mybar1.png, width(500) replace
+. graph export mybar1.png, width(1500) replace
 file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/mybar1.png saved as PNG
     format
 </pre>
 <figure>
-<img src="mybar1.png" alt="Bar Graph" />
+<img src="mybar1.png" style="width:50.0%" alt="Bar Graph" />
 <figcaption aria-hidden="true">Bar Graph</figcaption>
 </figure>
 <h2 id="list-out-a-sample-of-the-data">List Out A Sample Of The
@@ -377,12 +377,12 @@ into the data when preparing a report for dissemination.</p>
 <pre class='stata'>. graph bar, over(Q1) scheme(michigan2) asyvars
 
 .     
-. graph export mybar2.png, width(500) replace
+. graph export mybar2.png, width(1500) replace
 file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/mybar2.png saved as PNG
     format
 </pre>
 <figure>
-<img src="mybar2.png" alt="Bar Graph" />
+<img src="mybar2.png" style="width:50.0%" alt="Bar Graph" />
 <figcaption aria-hidden="true">Bar Graph</figcaption>
 </figure>
 <h1 id="a-few-final-issues">A Few Final Issues</h1>
