@@ -3,15 +3,15 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/why-Excel-is-a-bad-format-for-storing-data.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 4 Apr 2023, 12:43:30
+ {txt}opened on:  {res}13 Apr 2023, 13:44:50
 {txt}
 {com}. //_1
 . display c(current_date)
-{res} 4 Apr 2023
+{res}13 Apr 2023
 {txt}
 {com}. //_2
 . display c(current_time)
-{res}12:43:30
+{res}13:44:50
 {txt}
 {com}. //_3q
 . * setup
@@ -55,7 +55,7 @@
 
 {txt}Contains data from {res}simulated-happiness-data.dta
 {txt} Observations:{res}           100                  
-{txt}    Variables:{res}             2                  4 Apr 2023 12:43
+{txt}    Variables:{res}             2                  13 Apr 2023 13:44
 {txt}{hline}
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
@@ -80,7 +80,7 @@ do you feel {c |}
       Total {c |}{res}        100      100.00
 {txt}
 {com}. //_7
-. graph bar, over(Q1) scheme(michigan2) asyvars
+. graph bar, over(Q1) title("How often do you feel happy?") scheme(michigan2) asyvars
 {res}{txt}
 {com}.     
 . graph export mybar1.png, width(1500) replace
@@ -151,7 +151,7 @@ format
       Total {c |}{res}        100      100.00
 {txt}
 {com}. //_13
-. graph bar, over(Q1) scheme(michigan2) asyvars
+. graph bar, over(Q1) title("How often do you feel happy?") scheme(michigan2) asyvars
 {res}{txt}
 {com}.     
 . graph export mybar2.png, width(1500) replace
@@ -168,7 +168,7 @@ format
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/why-Excel-is-a-bad-format-for-storing-data.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 4 Apr 2023, 12:43:36
+ {txt}closed on:  {res}13 Apr 2023, 13:44:57
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

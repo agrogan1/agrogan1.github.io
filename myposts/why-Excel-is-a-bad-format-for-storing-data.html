@@ -207,7 +207,7 @@ table:not([class]) tbody:last-child tr:last-child td {border-bottom:1px solid bl
 <header id="title-block-header">
 <h1 class="title">Why Excel Is A Bad Format For Storing Data</h1>
 <p class="author">Andy Grogan-Kaylor</p>
-<p class="date">4 Apr 2023 12:43:23</p>
+<p class="date">13 Apr 2023 13:44:44</p>
 </header>
 <style>body {max-width: 90%;} h1 {color: #00274C;} h2 {color: #2F65A7;} p {font-size: 110%;} pre.stata {font-size: 110%;} blockquote {border-left: 5px solid #ffcb05; margin: 1.5em 10px; padding: 0.5em 10px;} a:link {color: #00274C;} a:visited {color: #2F65A7;} code {color: red;}</style>
 <h1 id="background">Background</h1>
@@ -241,7 +241,7 @@ style="width:50.0%" alt="Screenshot of Stata" />
 
 Contains data from simulated-happiness-data.dta
  Observations:           100                  
-    Variables:             2                  4 Apr 2023 12:43
+    Variables:             2                  13 Apr 2023 13:44
 ──────────────────────────────────────────────────────────────────────────────────────────
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
@@ -275,7 +275,7 @@ do you feel │
       Total │        100      100.00
 </pre>
 <h2 id="bar-graph">Bar Graph</h2>
-<pre class='stata'>. graph bar, over(Q1) scheme(michigan2) asyvars
+<pre class='stata'>. graph bar, over(Q1) title("How often do you feel happy?") scheme(michigan2) asyvars
 
 .     
 . graph export mybar1.png, width(1500) replace
@@ -374,7 +374,7 @@ into the data when preparing a report for dissemination.</p>
       Total │        100      100.00
 </pre>
 <h3 id="bar-graph-1">Bar Graph</h3>
-<pre class='stata'>. graph bar, over(Q1) scheme(michigan2) asyvars
+<pre class='stata'>. graph bar, over(Q1) title("How often do you feel happy?") scheme(michigan2) asyvars
 
 .     
 . graph export mybar2.png, width(1500) replace
@@ -388,7 +388,10 @@ file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/myposts/mybar2.png saved a
 <h1 id="a-few-final-issues">A Few Final Issues</h1>
 <p>Notice how Excel doesn’t enforce the idea of whether variables are
 <em>numeric</em>, or <em>string</em>, and so would allow storage of
-different types of information in the same column.</p>
+different types of information in the same column. Relatedly,
+<em>numeric</em> variables may be improperly stored as <em>strings</em>,
+often necessitating recoding before graphical or statistical procedures
+can be employed.</p>
 <p>Secondly, Excel would allow some of your columns to have the same
 name, which might make data difficult to work with in other
 software.</p>
