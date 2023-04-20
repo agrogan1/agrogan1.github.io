@@ -352,6 +352,7 @@ plot_geo(mydata) %>%
 
 * [A *Very* Short Introduction to Stata](https://agrogan1.github.io/Stata/very-short-introduction/very-short-introduction.html)
 * [*Two Page Stata*](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.pdf)
+* [Example do File](https://github.com/agrogan1/Stata/blob/master/do-files/my_penguins.do) using the [Palmer Penguin Data](https://allisonhorst.github.io/palmerpenguins/)
 
 ## Data Visualization
 
