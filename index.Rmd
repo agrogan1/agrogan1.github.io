@@ -155,9 +155,9 @@ knitr::include_graphics("images/mysmallmultiples.png")
 
 * [Course Page](https://agrogan1.github.io/newstuff/categorical/)
 
-```{r, out.width="25%"}
+```{r, out.width="15%"}
 
-knitr::include_graphics("images/logit.png")
+knitr::include_graphics("images/nautilus-new.png")
 
 ```
 
