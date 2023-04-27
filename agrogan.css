@@ -80,4 +80,9 @@ d-appendix {
 d-article h2 {
   font-size: 1.25em;
 }
+d-article blockquote {
+  color: black;
+  border-left: 2px solid #FFCB05; 
+  padding: 0.5em 10px;
+}
 
