@@ -149,7 +149,7 @@ knitr::include_graphics("images/multilevel-workshop.png")
 
 ```
 
-* [Visualizing Multilevel Models](https://agrogan1.github.io/multilevel/visualizing-MLM/visualizing-MLM-slidy.html)
+* [Visualizing Multilevel Models](https://agrogan1.github.io/multilevel/visualizing-MLM/visualizing-MLM.html)
 
 ```{r, out.width="25%"}
 
