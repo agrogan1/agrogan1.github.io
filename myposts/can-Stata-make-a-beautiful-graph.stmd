@@ -10,7 +10,7 @@ geometry: margin=1 in
 
 # Introduction 🌲
 
-There is sometimes a *debate*--shall we say--about whether Stata can make beautiful graphs, particularly in comparison to using `ggplot` in R. Below, I try to use as many of Stata's options as I can to make a beautiful graph. I'll admit at the outset that it is perhaps not as beautiful as the same graph would be in `ggplot`, but believe that it comes close.
+There is sometimes a *debate*--shall we say--about whether Stata can make beautiful graphs, particularly in comparison to using `ggplot` in R. Below, I try to use as many of Stata's options as I can to make a beautiful graph. I believe that this Stata comes close to being as beautiful of a graph as would be made by `ggplot`.
 
 I use green and gold since they are common colors for forestry and park signage.
 
@@ -29,6 +29,8 @@ The documentation goes on to further note that:
     use "https://github.com/agrogan1/multilevel/raw/master/mlm-R2-gutten/gutten.dta", clear
 
 # A Simple Graph 🌲
+
+The default graphing scheme in Stata 18 is much improved over previous versions, and the below graph may be very good for many purposes.
 
     twoway (scatter height age_base)(lowess height age_base)
 	
