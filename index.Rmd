@@ -399,8 +399,9 @@ knitr::include_graphics("./images/how-to-choose-a-chart-a-visual-guide-with-Stat
      + [HTML Web Book](https://agrogan1.github.io/R/introduction-to-R/introduction-to-R.html) 
      + [PDF](https://agrogan1.github.io/R/introduction-to-R/introduction-to-R.pdf) 
      + [epub](https://agrogan1.github.io/R/introduction-to-R/introduction-to-R.epub)
-* *Two Page R*: 
-     + [PDF](https://agrogan1.github.io/R/two-page-R/two-page-R.pdf)
+* *Quick Introduction To R*: 
+     + [PDF](https://agrogan1.github.io/R/quick-intro-R/quick-intro-R.pdf)
+     + [HTML](https://agrogan1.github.io/R/quick-intro-R/quick-intro-R.html)
 * Colors in R
      + [Colors in R](https://agrogan1.github.io/R/colors/colors.html)
      + [Viridis Colors](https://agrogan1.github.io/R/viridis/viridis.html)
