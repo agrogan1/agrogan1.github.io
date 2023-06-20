@@ -447,6 +447,7 @@ knitr::include_graphics("images/MichiganColorsR.png")
 
 ## Introductory Materials
 
+* [Basic Bayes](https://agrogan1.github.io/Bayes/basic-Bayes/basic-Bayes.html)
 * [Thinking Through Bayesian Ideas](https://agrogan.shinyapps.io/Thinking-Through-Bayes/)
 * Notes on [Accepting the Null ($H_0$) Hypothesis](https://agrogan1.github.io/Bayes/accepting-H0/accepting-H0.html)
 
