@@ -156,8 +156,13 @@ knitr::include_graphics("images/multilevel-workshop.png")
 knitr::include_graphics("images/mysmallmultiples.png")
 
 ```
+* [Multilevel Multilingual](https://agrogan1.github.io/multilevel-multilingual/), multilevel models in multiple statistical languages.
 
+```{r, out.width="15%"}
 
+knitr::include_graphics("images/multilevel-multilingual.png")
+
+```
 
 ## Categorical Data Analysis
 
@@ -240,6 +245,16 @@ leaflet() %>%
                                                   bringToFront = TRUE)) 
 
 ```
+
+### [Global Families Project](https://globalfamilies.quarto.pub/global-families-project/)
+
+```{r, fig.height=3}
+
+knitr::include_graphics("./images/positiveparenting-banner.png")
+
+```
+
+### Publications
 
 * Gender Inequality in Low- and Middle-Income Countries: Associations
 with Parental Physical Abuse and Moderation by Child Gender
