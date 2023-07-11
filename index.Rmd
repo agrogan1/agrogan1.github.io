@@ -246,9 +246,11 @@ leaflet() %>%
 
 ```
 
-### [Global Families Project](https://globalfamilies.quarto.pub/global-families-project/)
+### Global Families Project
 
-```{r, fig.height=3}
+* [Project website](https://globalfamilies.quarto.pub/global-families-project/)
+
+```{r}
 
 knitr::include_graphics("./images/positiveparenting-banner.png")
 
