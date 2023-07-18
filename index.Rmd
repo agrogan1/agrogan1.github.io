@@ -15,6 +15,7 @@ output:
     toc_float: true
     theme: agrogan.css
 bibliography: agrogan.bib
+csl: apa.csl
 ---
 
 ```{r setup, include=FALSE}
@@ -65,10 +66,9 @@ My interests are in developing more knowledge to reduce violence against childre
 
 A particular focus of my work has been to examine the outcomes of physical punishment. 
 
-> "Corporal punishment is the most common form of violence against children worldwide, leading to the
-injury and death of thousands of children each year. Its very widespread social acceptance means that a
-level of violence in childrearing is normalised, entrenching children’s low status and paving the way for
-other forms of violence and mistreatment." [@CP10KeyMessages2022]
+> "Corporal punishment is the most common form of violence against children worldwide, leading to the injury and death of thousands of children each year. Its very widespread social acceptance means that a level of violence in childrearing is normalised, entrenching children’s low status and paving the way for other forms of violence and mistreatment." [@CP10KeyMessages2022]
+
+> "The magnitude of violence against children is staggering. Globally, the most pervasive form of violence against children is corporal punishment. Because it often occurs in the confines of homes and other settings where children live, study and play, it is largely hidden and challenging to detect. Worldwide, it is estimated that nearly one billion children are hit, slapped, spanked, pinched, or otherwise physically punished regularly by their parents, caregivers, teachers, or other trusted adults, the same individuals responsible for nurturing, protecting, and educating them (UNICEF, 2017; World Health Organization, 2020)." [@StewartTufescu2023]
 
 Working closely with many colleagues, we have shown that physical punishment is associated with a wide variety of negative outcomes. Additional quantitative work has demonstrated that this finding remains true even in contexts when physical punishment is used minimally, or when used in ostensibly "normative" ways. In a number of papers, we have investigated these associations across diverse communities and countries. Lastly, in additional papers, we have worked to demonstrate more "causally robust" associations between physical punishment and undesirable child outcomes using a variety of quantitative methods.
 
