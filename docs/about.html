@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Andrew Grogan-Kaylor - About</title>
+<title>Andrew Grogan-Kaylor - About Me</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -93,6 +93,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.10.2/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
+<link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
+<script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+<script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -121,7 +129,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./about.html" rel="" target="" aria-current="page">
- <span class="menu-text">About</span></a>
+ <span class="menu-text">About Me</span></a>
   </li>  
 </ul>
             <div class="quarto-navbar-tools ms-auto">
@@ -142,7 +150,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">About Me</h1>
 </div>
 
 
@@ -157,13 +165,133 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>About this site</p>
+<p>My interests are in developing more knowledge about people, social problems, and potential interventions, in order to reduce violence against children and to improve family and child well-being. I am strongly motivated by concerns for social justice. Right after undergraduate studies, I was a community organizer for a year, and then a Peace Corps Volunteer living for two years in the at-the-time remote Upper East Region of Ghana, and doing community development work, both in English, and in the local language Kusaal. These early experiences have been the source of commitments to social justice, and to developing an evidence base for practice, that continue in my work today.</p>
+<p>My core intellectual interest is the way in which <a href="https://agrogan1.github.io/#research-on-parenting-and-child-development">parenting behaviors have an effect on child outcomes</a>. For example, parenting behaviors like the use of corporal punishment, or parental expressions of emotional warmth, are likely to have an effect on child outcomes like aggression, antisocial behavior, anxiety and depression. I am interested in how these dynamics play out <a href="https://agrogan1.github.io/multilevel-thinking/">across contexts, neighborhoods, and cultures</a>.</p>
+<p>In my work I use advanced statistical models, like <a href="https://agrogan1.github.io/multilevel/">multilevel models</a> and some econometric models, and software like <a href="https://agrogan1.github.io/#stata-materials">Stata</a>, <a href="https://agrogan1.github.io/#r-materials">R</a> and <a href="https://agrogan1.github.io/mapping">GIS</a>, to examine things like <a href="https://agrogan1.github.io/multilevel/">growth and change over time</a>, or <a href="https://agrogan1.github.io/multilevel/">community, school or parent effects on children and families</a>. I’m also very interested in <a href="https://agrogan1.github.io/#data-visualization">data visualization</a>.</p>
+<p>I have also worked on developing and evaluating interventions for under-served populations, particularly among people who speak Spanish as their primary language.</p>
+<p>A lot of my work is done with international samples. The globe on this webpage indicates the countries where some of the data that I’ve used has come from, or where I have done some work.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'ggplot2' was built under R version 4.2.3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'plotly' was built under R version 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'plotly'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:ggplot2':
+
+    last_plot</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:stats':
+
+    filter</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:graphics':
+
+    layout</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(countrycode)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>countries <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"United States"</span>, </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Canada"</span>, </span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Colombia"</span>, </span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Chile"</span>, </span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>               <span class="st">"South Korea"</span>, </span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>               <span class="st">"India"</span>, </span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Mexico"</span>, </span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Italy"</span>, </span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Thailand"</span>, </span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Kenya"</span>, </span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>               <span class="st">"China"</span>, </span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Phillipines"</span>, </span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Ukraine"</span>, </span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>               <span class="st">"South Africa"</span>)</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>iso3 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"USA"</span>,</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>          <span class="st">"CAN"</span>,</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>          <span class="st">"COL"</span>,</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>          <span class="st">"CHL"</span>,</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>          <span class="st">"KOR"</span>,</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>          <span class="st">"IND"</span>,</span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>          <span class="st">"MEX"</span>,</span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>          <span class="st">"ITA"</span>,</span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>          <span class="st">"THA"</span>,</span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>          <span class="st">"KEN"</span>,</span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>          <span class="st">"CHN"</span>,</span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>          <span class="st">"PHL"</span>,</span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>          <span class="st">"UKR"</span>,</span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>          <span class="st">"ZAF"</span>)</span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>country_code <span class="ot">&lt;-</span> <span class="fu">as.character</span>(iso3)</span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(countries, country_code)</span>
+<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(y, <span class="at">file=</span><span class="st">"countries.Rdata"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>l <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="fu">toRGB</span>(<span class="st">"black"</span>), <span class="at">width =</span> <span class="dv">1</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>y<span class="sc">$</span>id <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">row.names</span>(y))</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>y<span class="sc">$</span>x <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_geo</span>(y) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_trace</span>(<span class="at">locations =</span> <span class="sc">~</span>country_code, </span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">color =</span> <span class="sc">~</span>id,</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>            <span class="at">z =</span> <span class="sc">~</span>id,</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>            <span class="at">hoverinfo =</span> <span class="st">'text'</span>,</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">text =</span> <span class="sc">~</span>countries,</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>            <span class="at">marker =</span> <span class="fu">list</span>(<span class="at">size =</span> <span class="dv">10</span>), </span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>            <span class="at">showscale =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">layout</span>(<span class="at">geo =</span> <span class="fu">list</span>(<span class="at">showland =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>                    <span class="at">showcountries =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>                    <span class="at">projection =</span> <span class="fu">list</span>(<span class="at">type =</span> <span class="st">'orthographic'</span>,</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>                                      <span class="at">rotation =</span> <span class="fu">list</span>(<span class="at">lon =</span> <span class="sc">-</span><span class="dv">25</span>,</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>                                            <span class="at">lat =</span> <span class="dv">0</span>,</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>                                            <span class="at">roll =</span> <span class="dv">0</span>)))) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="htmlwidget-4abbd02569b294e002bb" style="width:100%;height:464px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4abbd02569b294e002bb">{"x":{"visdat":{"1eefc79e0da5":["function () ","plotlyVisDat"]},"cur_data":"1eefc79e0da5","attrs":{"1eefc79e0da5":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"locations":{},"color":{},"z":{},"hoverinfo":"text","text":{},"marker":{"size":10},"showscale":false,"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"mapType":"geo","geo":{"domain":{"x":[0,1],"y":[0,1]},"showland":false,"showcountries":true,"projection":{"type":"orthographic","rotation":{"lon":-25,"lat":0,"roll":0}}},"scene":{"zaxis":{"title":"id"}},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"colorbar":{"title":"id","ticklen":2},"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":false,"locations":["USA","CAN","COL","CHL","KOR","IND","MEX","ITA","THA","KEN","CHN","PHL","UKR","ZAF"],"z":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"text":["United States","Canada","Colombia","Chile","South Korea","India","Mexico","Italy","Thailand","Kenya","China","Phillipines","Ukraine","South Africa"],"marker":{"size":10,"line":{"colorbar":{"title":"","ticklen":2},"cmin":1,"cmax":14,"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":false,"color":[1,2,3,4,5,6,7,8,9,10,11,12,13,14]}},"type":"choropleth","geo":"geo","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p>Countries where some of the data that I’ve used has come from, or where I have done some work.</p>
 </div>
 </div>
+<p>More recently, my collaborators and I have been doing quite a bit of work with the MICS data collected by UNICEF. Below, please find a map of the countries in which the MICS surveys were conducted.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="htmlwidget-7ba1915f04e687c44ebd" style="width:100%;height:464px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7ba1915f04e687c44ebd">{"x":{"visdat":{"1eefc7186e10":["function () ","plotlyVisDat"]},"cur_data":"1eefc7186e10","attrs":{"1eefc7186e10":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"z":1,"text":{},"colors":"#009edb","hoverinfo":"text","locations":{},"showscale":false,"marker":{"size":10,"line":{"color":"rgba(0,0,0,1)","width":0.5}},"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"mapType":"geo","geo":{"domain":{"x":[0,1],"y":[0,1]},"showframe":true,"showcoastlines":true,"showcountries":true,"showland":true,"countrycolor":"rgba(190,190,190,1)","showocean":true,"oceancolor":"white","projection":{"type":"orthographic","rotation":{"lon":0,"lat":0,"roll":0}},"landcolor":"rgba(211,211,211,1)","bgcolor":"transparent"},"plot_bgcolor":"transparent","paper_bgcolor":"transparent","scene":{"zaxis":{"title":[]}},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"colorbar":{"title":"","ticklen":2},"colorscale":[["0","rgba(0,158,219,1)"],["1","rgba(0,158,219,1)"]],"showscale":false,"z":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"text":["Algeria","Argentina","Bangladesh","Barbados","Belarus","Belize","Benin","Bosnia and Herzegovina","Cameroon","Central African Republic","Chad","Democratic Republic of the Congo","Republic of the Congo","Costa Rica","Cote d'Ivoire","Dominican Republic","El Salvador","Eswatini","Ghana","Guinea","Guinea Bissau","Guyana","Iraq","Jamaica","Kazakhstan","Kenya","Kosovo","Kyrgyzstan","Laos","Macedonia","Madagascar","Malawi","Mali","Mauritania","Mexico","Moldova","Mongolia","Montenegro","Nepal","Nigeria","Pakistan","Panama","Paraguay","Sao Tome and Principe","Senegal","Serbia","Sierra Leone","Somalia","St. Lucia","State of Palestine","Suriname","Thailand","The Gambia","Togo","Trinidad and Tobago","Tunisia","Turkmenistan","Ukraine","Uruguay","Vietnam","Zimbabwe"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"locations":["DZA","ARG","BGD","BRB","BLR","BLZ","BEN","BIH","CMR","CAF","TCD","COD","COG","CRI","CIV","DOM","SLV","SWZ","GHA","GIN","GNB","GUY","IRQ","JAM","KAZ","KEN",null,"KGZ","LAO","MKD","MDG","MWI","MLI","MRT","MEX","MDA","MNG","MNE","NPL","NGA","PAK","PAN","PRY","STP","SEN","SRB","SLE","SOM","LCA","PSE","SUR","THA","GMB","TGO","TTO","TUN","TKM","UKR","URY","VNM","ZWE"],"marker":{"size":10,"line":{"color":"rgba(0,0,0,1)","width":0.5}},"type":"choropleth","geo":"geo","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p>Countries in MICS</p>
+</div>
+</div>
+<p>Please click here for my <a href="https://ssw.umich.edu/faculty/profiles/tenure-track/agrogan">faculty page</a> on the School of Social Work website.</p>
+<p>For copies of any of my published research papers, please e-mail me at <a href="agrogan@umich.edu">agrogan@umich.edu</a>.</p>
+<p>I have many course materials on the web that are not directly linked to from this website. If you are one of my students and can’t find a particular resource that you need for class, please let me know at <a href="agrogan@umich.edu">agrogan@umich.edu</a>.</p>
+<p>My blog on statistics, data visualization, data analysis, and my research activities is at: <a href="https://agrogan1.github.io/myposts/">https://agrogan1.github.io/myposts/</a>.</p>
+<p>This webpage is mostly up to date, but always under construction to some degree. If you think something should be here, but it isn’t, please let me know.</p>
 
 
 

@@ -1,9 +1,160 @@
 ---
-title: "About"
+title: "About Me"
 ---
 
-About this site
+My interests are in developing more knowledge about people, social problems, and potential interventions, in order to reduce violence against children and to improve family and child well-being. I am strongly motivated by concerns for social justice. Right after undergraduate studies, I was a community organizer for a year, and then a Peace Corps Volunteer living for two years in the at-the-time remote Upper East Region of Ghana, and doing community development work, both in English, and in the local language Kusaal. These early experiences have been the source of commitments to social justice, and to developing an evidence base for practice, that continue in my work today.
+
+My core intellectual interest is the way in which [parenting behaviors have an effect on child outcomes](https://agrogan1.github.io/#research-on-parenting-and-child-development). For example, parenting behaviors like the use of corporal punishment, or parental expressions of emotional warmth, are likely to have an effect on child outcomes like aggression, antisocial behavior, anxiety and depression. I am interested in how these dynamics play out [across contexts, neighborhoods, and cultures](https://agrogan1.github.io/multilevel-thinking/).
+
+In my work I use advanced statistical models, like [multilevel models](https://agrogan1.github.io/multilevel/) and some econometric models, and software like [Stata](https://agrogan1.github.io/#stata-materials), [R](https://agrogan1.github.io/#r-materials) and [GIS](https://agrogan1.github.io/mapping), to examine things like [growth and change over time](https://agrogan1.github.io/multilevel/), or [community, school or parent effects on children and families](https://agrogan1.github.io/multilevel/). I’m also very interested in [data visualization](https://agrogan1.github.io/#data-visualization).
+
+I have also worked on developing and evaluating interventions for under-served populations, particularly among people who speak Spanish as their primary language. 
+
+A lot of my work is done with international samples. The globe on this webpage indicates the countries where some of the data that I’ve used has come from, or where I have done some work.
 
 ```{r}
-1 + 1
+
+library(ggplot2)
+
+library(plotly)
+
+library(dplyr)
+
+library(countrycode)
+
 ```
+
+```{r}
+
+countries <- c("United States", 
+               "Canada", 
+               "Colombia", 
+               "Chile", 
+               "South Korea", 
+               "India", 
+               "Mexico", 
+               "Italy", 
+               "Thailand", 
+               "Kenya", 
+               "China", 
+               "Phillipines", 
+               "Ukraine", 
+               "South Africa")
+
+iso3 <- c("USA",
+          "CAN",
+          "COL",
+          "CHL",
+          "KOR",
+          "IND",
+          "MEX",
+          "ITA",
+          "THA",
+          "KEN",
+          "CHN",
+          "PHL",
+          "UKR",
+          "ZAF")
+
+country_code <- as.character(iso3)
+
+y <- data.frame(countries, country_code)
+
+save(y, file="countries.Rdata")
+
+```
+
+```{r, fig.cap = "Countries where some of the data that I’ve used has come from, or where I have done some work."}
+
+l <- list(color = toRGB("black"), width = 1)
+
+y$id <- as.numeric(row.names(y))
+
+y$x <- 1
+
+plot_geo(y) %>% 
+  add_trace(locations = ~country_code, 
+            color = ~id,
+            z = ~id,
+            hoverinfo = 'text',
+            text = ~countries,
+            marker = list(size = 10), 
+            showscale = FALSE) %>%
+  layout(geo = list(showland = FALSE,
+                    showcountries = TRUE,
+                    projection = list(type = 'orthographic',
+                                      rotation = list(lon = -25,
+                                            lat = 0,
+                                            roll = 0)))) 
+
+```
+
+More recently, my collaborators and I have been doing quite a bit of work with the MICS data collected by UNICEF. Below, please find a map of the countries in which the MICS surveys were conducted.
+
+```{r, echo=FALSE, warning=FALSE}
+
+country <- c("Algeria",  "Argentina",  "Bangladesh",  "Barbados",  "Belarus",  "Belize",  "Benin",  "Bosnia and Herzegovina",  "Cameroon",  "Central African Republic",  "Chad",  "Democratic Republic of the Congo",  "Republic of the Congo",  "Costa Rica",  "Cote d'Ivoire",  "Dominican Republic",  "El Salvador",  "Eswatini",  "Ghana",  "Guinea",  "Guinea Bissau",  "Guyana",  "Iraq",  "Jamaica",  "Kazakhstan",  "Kenya",  "Kosovo",  "Kyrgyzstan",  "Laos", "Macedonia",  "Madagascar",  "Malawi",  "Mali",  "Mauritania",  "Mexico",  "Moldova",  "Mongolia",  "Montenegro",  "Nepal",  "Nigeria",  "Pakistan",  "Panama",  "Paraguay",  "Sao Tome and Principe",  "Senegal",  "Serbia",  "Sierra Leone",  "Somalia",  "St. Lucia",  "State of Palestine",  "Suriname",  "Thailand",  "The Gambia",  "Togo",  "Trinidad and Tobago",  "Tunisia",  "Turkmenistan",  "Ukraine",  "Uruguay",  "Vietnam",  "Zimbabwe")
+
+MICScountries <- data.frame(country)
+
+MICScountries$country_iso <- countrycode(MICScountries$country, 
+                                 'country.name', 
+                                 'iso3c')
+
+```
+
+```{r, echo=FALSE, fig.cap="Countries in MICS"}
+
+g <- list(showframe = TRUE, 
+          showcoastlines = TRUE, 
+          showcountries = TRUE,
+          showland = TRUE,
+          countrycolor = toRGB("grey"),
+          showocean = TRUE,
+          oceancolor = "white",
+          projection = list(type = 'orthographic',
+                            rotation = list(lon = 0,
+                                            lat = 0,
+                                            roll = 0)),
+          showland = TRUE,
+          landcolor = toRGB("lightgrey"),
+          bgcolor = "transparent")
+
+t <- list(family = "sans serif", 
+          size = 8, 
+          color = toRGB("black"))
+
+l <- list(color = toRGB("black"), 
+          width = 0.5)
+
+p0 <- MICScountries %>% 
+  plot_geo() %>% 
+  add_trace(z = 1,
+    text = ~country, 
+    colors = "#009edb",
+    hoverinfo = 'text',
+    locations = ~country_iso, 
+    showscale = FALSE,
+    marker = list(size=10, line = l)) %>%
+  layout(geo = g,
+         plot_bgcolor='transparent',
+         paper_bgcolor='transparent')
+
+p0
+
+```
+
+Please click here for my [faculty page](https://ssw.umich.edu/faculty/profiles/tenure-track/agrogan) on the School of Social Work website.
+
+For copies of any of my published research papers, please e-mail me at [agrogan@umich.edu](agrogan@umich.edu).
+
+I have many course materials on the web that are not directly linked to from this website. If you are one of my students and can’t find a particular resource that you need for class, please let me know at [agrogan@umich.edu](agrogan@umich.edu).
+
+My blog on statistics, data visualization, data analysis, and my research activities is at: [https://agrogan1.github.io/myposts/](https://agrogan1.github.io/myposts/). 
+
+This webpage is mostly up to date, but always under construction to some degree. If you think something should be here, but it isn’t, please let me know.
+
+
+
+
+
