@@ -3,8 +3,9 @@ project:
   output-dir: docs
 
 website:
-  title: "mysite"
+  title: "Andrew Grogan-Kaylor"
   navbar:
+    background: secondary
     left:
       - href: index.qmd
         text: Home
