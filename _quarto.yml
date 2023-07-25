@@ -24,7 +24,7 @@ google-scholar: true
 format:
   html:
     theme: 
-      light: zephyr
+      light: sandstone
       dark: vapor
     css: styles.css
     toc: true
