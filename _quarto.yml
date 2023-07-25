@@ -13,6 +13,10 @@ website:
         text: CV
       - teaching.qmd  
       - research.qmd
+      - href: https://agrogan1.github.io/multilevel-thinking/
+        text: Multilevel Thinking
+      - href: https://globalfamilies.quarto.pub/global-families-project/
+        text: Global Families
       - about.qmd
 
 bibliography: agrogan.bib
