@@ -23,7 +23,9 @@ google-scholar: true
 
 format:
   html:
-    theme: cosmo
+    theme: 
+      light: cosmo
+      dark: vapor
     css: styles.css
     toc: true
     execute:
