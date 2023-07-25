@@ -1,9 +1,0 @@
-cff-version: 1.2.0
-message: "If you use materials, please cite it as below."
-authors:
-- family-names: "Grogan-Kaylor"
-  given-names: "Andrew"
-  orcid: "https://orcid.org/0000-0003-0065-9991"
-title: "My Web Page"
-version: 1.0.0
-url: "https://agrogan1.github.io/"
