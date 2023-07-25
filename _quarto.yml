@@ -5,7 +5,7 @@ project:
 website:
   title: "Andrew Grogan-Kaylor"
   navbar:
-    background: secondary
+    background: primary
     left:
       - href: index.qmd
         text: Home
