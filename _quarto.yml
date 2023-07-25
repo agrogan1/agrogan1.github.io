@@ -9,13 +9,26 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: https://ssw.umich.edu/sites/default/files/documents/faculty/cvs/agrogan_cv.pdf
+        text: CV
+      - teaching.qmd  
+      - research.qmd
       - about.qmd
+
+bibliography: agrogan.bib
+
+csl: apa.csl
+
+google-scholar: true
 
 format:
   html:
     theme: cosmo
     css: styles.css
     toc: true
+    execute:
+      echo: false
+      warning: false
 
 
 
