@@ -1,0 +1,135 @@
+---
+title: "Stats Stuff"
+---
+
+## Stata Materials
+
+### All Stata Materials
+
+* [All Stata Materials](https://agrogan1.github.io/Stata/)
+
+### Introductory Materials
+
+* [A *Very* Short Introduction to Stata](https://agrogan1.github.io/Stata/very-short-introduction/very-short-introduction.html)
+* [*Two Page Stata*](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.pdf)   [[HTML](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.html)]
+* [Example do File](https://github.com/agrogan1/Stata/blob/master/do-files/my_penguins.do) using the [Palmer Penguin Data](https://allisonhorst.github.io/palmerpenguins/)
+
+## Data Visualization
+
+* ["Michigan Graph Scheme" for Stata](https://agrogan1.github.io/Stata/michigan-graph-scheme/)
+* Data Visualization With Stata 
+    + [HTML](https://agrogan1.github.io/Stata/data-visualization-with-Stata/data-visualization-with-Stata.html)
+    + [HTML Slides](https://agrogan1.github.io/Stata/data-visualization-with-Stata/data-visualization-with-Stata-slidy.html)
+    + [PDF](https://agrogan1.github.io/Stata/data-visualization-with-Stata/data-visualization-with-Stata.pdf)
+* Stata Data Visualization **Basics**
+    + [HTML](https://agrogan1.github.io/Stata/data-visualization-with-Stata-the-basics/data-visualization-with-Stata-the-basics.html)
+    + [PDF](https://agrogan1.github.io/Stata/data-visualization-with-Stata-the-basics/data-visualization-with-Stata-the-basics.pdf)
+* [How To Choose A Chart - A Statistically Informed Visual Guide With Stata Commands](https://agrogan1.github.io/Stata/how-to-choose-a-chart-a-visual-guide-with-Stata/how-to-choose-a-chart-a-visual-guide-with-Stata.pdf)
+
+## R Materials
+
+### R
+
+* *Introduction to R*: 
+     + [HTML Web Book](https://agrogan1.github.io/R/introduction-to-R/introduction-to-R.html) 
+     + [PDF](https://agrogan1.github.io/R/introduction-to-R/introduction-to-R.pdf) 
+     + [epub](https://agrogan1.github.io/R/introduction-to-R/introduction-to-R.epub)
+* *Quick Introduction To R*: 
+     + [PDF](https://agrogan1.github.io/R/quick-intro-R/quick-intro-R.pdf)
+     + [HTML](https://agrogan1.github.io/R/quick-intro-R/quick-intro-R.html)
+* Colors in R
+     + [Colors in R](https://agrogan1.github.io/R/colors/colors.html)
+     + [Viridis Colors](https://agrogan1.github.io/R/viridis/viridis.html)
+     + University of Michigan colors for R Graphs [[web page](https://agrogan1.github.io/R/michigancolors-demo/michigancolors-demo.html)] [[R package](https://agrogan1.github.io/michigancolors/)]
+* *Working With Data From the World Bank Indicators*
+     + [HTML](https://agrogan1.github.io/R/wbdemo/)
+
+### ggplot
+
+* *Introduction to ggplot2*: 
+     + [HTML Web Book](https://agrogan1.github.io/R/introduction-to-ggplot2/introduction-to-ggplot2.html) 
+     + [PDF](https://agrogan1.github.io/R/introduction-to-ggplot2/introduction-to-ggplot2.pdf)
+     + [epub](https://agrogan1.github.io/R/introduction-to-ggplot2/introduction-to-ggplot2.epub)
+* *Two Page ggplot2*: 
+     + [PDF](https://agrogan1.github.io/R/two-page-ggplot2/two-page-ggplot2.pdf)
+* [*What Geometry Do I Use?*](https://agrogan1.github.io/R/what-geom-do-I-use/how-to-choose-a-chart-a-visual-guide-GEOMs.pdf)
+* [*ggplot Flipbook*](https://agrogan1.github.io/R/ggplot-flipbook/ggplot-flipbook.html#1)
+* [*"Advanced" ggplot*](https://agrogan1.github.io/dataviz/advanced-ggplot/advanced-ggplot.html)
+* *Comparing Program Outcomes with ggplot2* 
+     + [HTML](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.html)
+     + [PDF](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.pdf)
+
+### dplyr
+
+* *Multi-Page dplyr*:
+     + [PDF](https://agrogan1.github.io/R/multi-page-dplyr/multi-page-dplyr.pdf)
+     + [HTML](https://agrogan1.github.io/R/multi-page-dplyr/multi-page-dplyr.html)
+
+### xaringan
+
+* [*Themes for the Xaringan Slide Show System*](https://agrogan1.github.io/R/xaringan-themes/)
+
+## Bayesian Statistics
+
+### Introductory Materials
+
+* [Basic Bayes](https://agrogan1.github.io/Bayes/basic-Bayes/basic-Bayes.html)
+* [Thinking Through Bayesian Ideas](https://agrogan.shinyapps.io/Thinking-Through-Bayes/)
+* Notes on [Accepting the Null ($H_0$) Hypothesis](https://agrogan1.github.io/Bayes/accepting-H0/accepting-H0.html)
+
+### Multilevel Modeling
+
+* [Bayesian and Frequentist Multilevel Modeling](https://agrogan1.github.io/multilevel/Bayesian-and-frequentist-MLM/Bayesian-and-frequentist-MLM.html)
+* [Bayesian Longitudinal MLM With the Gutten Tree Data](https://agrogan1.github.io/multilevel/Bayesian-longitudinal-mlm/Bayesian-longitudinal-mlm.html) 
+
+## Statistical Tutorials and Visualizations
+
+### Introductory Materials
+
+* [What Is Data?](https://agrogan1.github.io/teaching/what-is-data/what-is-data.html)
+* [Everything is Obvious Once You Know The Answer](https://agrogan1.github.io/teaching/everything-is-obvious/everything-is-obvious.html)
+* [Notes on Quantitative Workflow](https://agrogan1.github.io/teaching/workflow/workflow.html)
+* Basics of [Quantitative Data Analysis](https://agrogan1.github.io/teaching/quantitative-data-analysis/quantitative-data-analysis.html)
+
+### Causality
+
+* [Causality](https://agrogan.shinyapps.io/causality/)
+
+### Bivariate Statistics
+
+* [t-Test](https://agrogan.shinyapps.io/shiny-t-test/)
+* Correlation
+    + [The Basics](https://agrogan.shinyapps.io/correlation_demo/)
+    + [Thinking about Correlations](https://agrogan.shinyapps.io/thinking_about_correlations/)
+* [Cohen's d Calculator](https://agrogan.shinyapps.io/es_calculator/)
+    
+### Multivariate Statistics
+
+* Regression
+    + [Tutorial](https://agrogan1.github.io/teaching/new-regression-tutorial/)
+    + [Demo](https://agrogan.shinyapps.io/regression_demo/)
+* [Interactions](https://agrogan1.github.io/teaching/interactions/interactions.html)
+* [Logistic Regression](https://agrogan.shinyapps.io/exploring_logistic_regression/)
+
+## Mapping and GIS
+
+[Notes for a course in development](https://agrogan1.github.io/mapping/) on GIS and Mapping
+
+## Data Visualization
+
+* How To Choose A Chart
+    + [How to Choose a Chart: A Visual Guide](https://agrogan1.github.io/dataviz/how-to-choose-a-chart/how-to-choose-a-chart-a-visual-guide.pdf). 
+    + [How to Choose a Chart: An Intuitive Guide](https://agrogan1.github.io/dataviz/how-to-choose-a-chart-intuitive/how-to-choose-a-chart-intuitive.html)
+    + [Extended Version](https://agrogan1.github.io/dataviz/how-to-choose-a-chart/how-to-choose-a-chart-v3.html)
+* [Should Everything Be A Bar Graph?](https://agrogan1.github.io/dataviz/should-everything-be-a-bar-graph/#1)
+* [Data Driven Report Demo](https://agrogan1.github.io/dataviz/data-driven-report-demo/)
+* [Variables and Visualization](https://agrogan1.github.io/dataviz/variables-and-visualization/variables-and-visualization.html#/)
+* Slides for a Lecture on [Data Visualization for Political Social Work](https://agrogan1.github.io/dataviz/political-social-work/)
+
+### Telling Stories With Data
+
+* [Visualizing Disparities in a Continuous Risk Factor or Outcome](https://agrogan1.github.io/myposts/visualizing-disparities-in-a-continuous-outcome.html) [[PDF](https://agrogan1.github.io/myposts/visualizing-disparities-in-a-continuous-outcome.pdf)]
+* [Visualizing Disparities in a Categorical Risk Factor or Outcome](https://agrogan1.github.io/myposts/visualizing-disparities-in-a-categorical-outcome.html)
+* [Comparing Program Outcomes With ggplot](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.html) [[PDF](https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.pdf)]
+* [Graphing Change Over Time](https://agrogan1.github.io/dataviz/graphing-change-over-time/index.html) [[PDF](https://agrogan1.github.io/dataviz/graphing-change-over-time/index.pdf)]
+

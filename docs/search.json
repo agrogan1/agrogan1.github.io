@@ -35,6 +35,55 @@
     "text": "Community Based Research in Alaska\n\nCulturally Grounded Strategies for Suicide and Alcohol Risk Prevention Delivered by Rural Alaska Native Communities: A Dynamic Wait‐listed Design Evaluation of the Qungasvik Intervention.\n\nOpen Access Article"
   },
   {
+    "objectID": "stats_stuff.html",
+    "href": "stats_stuff.html",
+    "title": "Stats Stuff",
+    "section": "",
+    "text": "All Stata Materials\n\n\n\n\n\nA Very Short Introduction to Stata\nTwo Page Stata [HTML]\nExample do File using the Palmer Penguin Data"
+  },
+  {
+    "objectID": "stats_stuff.html#data-visualization",
+    "href": "stats_stuff.html#data-visualization",
+    "title": "Stats Stuff",
+    "section": "Data Visualization",
+    "text": "Data Visualization\n\n“Michigan Graph Scheme” for Stata\nData Visualization With Stata\n\nHTML\nHTML Slides\nPDF\n\nStata Data Visualization Basics\n\nHTML\nPDF\n\nHow To Choose A Chart - A Statistically Informed Visual Guide With Stata Commands"
+  },
+  {
+    "objectID": "stats_stuff.html#r-materials",
+    "href": "stats_stuff.html#r-materials",
+    "title": "Stats Stuff",
+    "section": "R Materials",
+    "text": "R Materials\n\nR\n\nIntroduction to R:\n\nHTML Web Book\nPDF\nepub\n\nQuick Introduction To R:\n\nPDF\nHTML\n\nColors in R\n\nColors in R\nViridis Colors\nUniversity of Michigan colors for R Graphs [web page] [R package]\n\nWorking With Data From the World Bank Indicators\n\nHTML\n\n\n\n\nggplot\n\nIntroduction to ggplot2:\n\nHTML Web Book\nPDF\nepub\n\nTwo Page ggplot2:\n\nPDF\n\nWhat Geometry Do I Use?\nggplot Flipbook\n“Advanced” ggplot\nComparing Program Outcomes with ggplot2\n\nHTML\nPDF\n\n\n\n\ndplyr\n\nMulti-Page dplyr:\n\nPDF\nHTML\n\n\n\n\nxaringan\n\nThemes for the Xaringan Slide Show System"
+  },
+  {
+    "objectID": "stats_stuff.html#bayesian-statistics",
+    "href": "stats_stuff.html#bayesian-statistics",
+    "title": "Stats Stuff",
+    "section": "Bayesian Statistics",
+    "text": "Bayesian Statistics\n\nIntroductory Materials\n\nBasic Bayes\nThinking Through Bayesian Ideas\nNotes on Accepting the Null (\\(H_0\\)) Hypothesis\n\n\n\nMultilevel Modeling\n\nBayesian and Frequentist Multilevel Modeling\nBayesian Longitudinal MLM With the Gutten Tree Data"
+  },
+  {
+    "objectID": "stats_stuff.html#statistical-tutorials-and-visualizations",
+    "href": "stats_stuff.html#statistical-tutorials-and-visualizations",
+    "title": "Stats Stuff",
+    "section": "Statistical Tutorials and Visualizations",
+    "text": "Statistical Tutorials and Visualizations\n\nIntroductory Materials\n\nWhat Is Data?\nEverything is Obvious Once You Know The Answer\nNotes on Quantitative Workflow\nBasics of Quantitative Data Analysis\n\n\n\nCausality\n\nCausality\n\n\n\nBivariate Statistics\n\nt-Test\nCorrelation\n\nThe Basics\nThinking about Correlations\n\nCohen’s d Calculator\n\n\n\nMultivariate Statistics\n\nRegression\n\nTutorial\nDemo\n\nInteractions\nLogistic Regression"
+  },
+  {
+    "objectID": "stats_stuff.html#mapping-and-gis",
+    "href": "stats_stuff.html#mapping-and-gis",
+    "title": "Stats Stuff",
+    "section": "Mapping and GIS",
+    "text": "Mapping and GIS\nNotes for a course in development on GIS and Mapping"
+  },
+  {
+    "objectID": "stats_stuff.html#data-visualization-1",
+    "href": "stats_stuff.html#data-visualization-1",
+    "title": "Stats Stuff",
+    "section": "Data Visualization",
+    "text": "Data Visualization\n\nHow To Choose A Chart\n\nHow to Choose a Chart: A Visual Guide.\nHow to Choose a Chart: An Intuitive Guide\nExtended Version\n\nShould Everything Be A Bar Graph?\nData Driven Report Demo\nVariables and Visualization\nSlides for a Lecture on Data Visualization for Political Social Work\n\n\nTelling Stories With Data\n\nVisualizing Disparities in a Continuous Risk Factor or Outcome [PDF]\nVisualizing Disparities in a Categorical Risk Factor or Outcome\nComparing Program Outcomes With ggplot [PDF]\nGraphing Change Over Time [PDF]"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Home",

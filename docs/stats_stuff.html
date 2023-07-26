@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Andrew Grogan-Kaylor - Teaching</title>
+<title>Andrew Grogan-Kaylor - Stats Stuff</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -61,9 +61,10 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
-<meta name="citation_title" content="Teaching">
+<meta name="citation_title" content="Stats Stuff">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Corporal punishment – 10 key messages;,citation_author=End Violence Against Children and End Corporal Punishment;,citation_publication_date=2022;,citation_cover_date=2022;,citation_year=2022;,citation_fulltext_html_url=https://www.end-violence.org/;">
 <meta name="citation_reference" content="citation_title=Corporal punishment: The global picture;,citation_abstract=Globally, corporal punishment is the most common form of violence against children. A large body of evidence demonstrates that it has no positive long-term outcomes and predicts a wide range of adverse effects in childhood and adulthood. The United Nations has declared that corporal punishment violates children’s fundamental rights to protection and has called on all countries to repeal laws that allow or justify it. As of June 2023, 65 countries have prohibited corporal punishment of children in all settings. These laws were implemented to make it clear that no level of violence against children is allowed and to uphold children’s rights to protection. This article aims to: (1) summarize the research and human rights rationales for the prohibition of corporal punishment; (2) provide a global update on its legal status; and (3) present research findings from Sweden, Germany, and New Zealand, three countries that have banned corporal punishment.;,citation_author=Ashley Stewart-Tufescu;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_doi=10.22215/cjcr.v10i1;,citation_volume=10;,citation_journal_title=The Canadian Journal of Children’s Rights / Revue Canadienne des Droits des Enfants;">
@@ -96,7 +97,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./teaching.html" aria-current="page">
+    <a class="nav-link" href="./teaching.html">
  <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
@@ -112,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Global Families</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./stats_stuff.html">
+    <a class="nav-link active" href="./stats_stuff.html" aria-current="page">
  <span class="menu-text">Stats Stuff</span></a>
   </li>  
   <li class="nav-item">
@@ -137,9 +138,36 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link active" data-scroll-target="#data-visualization">Data Visualization</a></li>
-  <li><a href="#multilevel-and-longitudinal-modeling" id="toc-multilevel-and-longitudinal-modeling" class="nav-link" data-scroll-target="#multilevel-and-longitudinal-modeling">Multilevel and Longitudinal Modeling</a></li>
-  <li><a href="#categorical-data-analysis" id="toc-categorical-data-analysis" class="nav-link" data-scroll-target="#categorical-data-analysis">Categorical Data Analysis</a></li>
+  <li><a href="#stata-materials" id="toc-stata-materials" class="nav-link active" data-scroll-target="#stata-materials">Stata Materials</a>
+  <ul class="collapse">
+  <li><a href="#all-stata-materials" id="toc-all-stata-materials" class="nav-link" data-scroll-target="#all-stata-materials">All Stata Materials</a></li>
+  <li><a href="#introductory-materials" id="toc-introductory-materials" class="nav-link" data-scroll-target="#introductory-materials">Introductory Materials</a></li>
+  </ul></li>
+  <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization">Data Visualization</a></li>
+  <li><a href="#r-materials" id="toc-r-materials" class="nav-link" data-scroll-target="#r-materials">R Materials</a>
+  <ul class="collapse">
+  <li><a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r">R</a></li>
+  <li><a href="#ggplot" id="toc-ggplot" class="nav-link" data-scroll-target="#ggplot">ggplot</a></li>
+  <li><a href="#dplyr" id="toc-dplyr" class="nav-link" data-scroll-target="#dplyr">dplyr</a></li>
+  <li><a href="#xaringan" id="toc-xaringan" class="nav-link" data-scroll-target="#xaringan">xaringan</a></li>
+  </ul></li>
+  <li><a href="#bayesian-statistics" id="toc-bayesian-statistics" class="nav-link" data-scroll-target="#bayesian-statistics">Bayesian Statistics</a>
+  <ul class="collapse">
+  <li><a href="#introductory-materials-1" id="toc-introductory-materials-1" class="nav-link" data-scroll-target="#introductory-materials-1">Introductory Materials</a></li>
+  <li><a href="#multilevel-modeling" id="toc-multilevel-modeling" class="nav-link" data-scroll-target="#multilevel-modeling">Multilevel Modeling</a></li>
+  </ul></li>
+  <li><a href="#statistical-tutorials-and-visualizations" id="toc-statistical-tutorials-and-visualizations" class="nav-link" data-scroll-target="#statistical-tutorials-and-visualizations">Statistical Tutorials and Visualizations</a>
+  <ul class="collapse">
+  <li><a href="#introductory-materials-2" id="toc-introductory-materials-2" class="nav-link" data-scroll-target="#introductory-materials-2">Introductory Materials</a></li>
+  <li><a href="#causality" id="toc-causality" class="nav-link" data-scroll-target="#causality">Causality</a></li>
+  <li><a href="#bivariate-statistics" id="toc-bivariate-statistics" class="nav-link" data-scroll-target="#bivariate-statistics">Bivariate Statistics</a></li>
+  <li><a href="#multivariate-statistics" id="toc-multivariate-statistics" class="nav-link" data-scroll-target="#multivariate-statistics">Multivariate Statistics</a></li>
+  </ul></li>
+  <li><a href="#mapping-and-gis" id="toc-mapping-and-gis" class="nav-link" data-scroll-target="#mapping-and-gis">Mapping and GIS</a></li>
+  <li><a href="#data-visualization-1" id="toc-data-visualization-1" class="nav-link" data-scroll-target="#data-visualization-1">Data Visualization</a>
+  <ul class="collapse">
+  <li><a href="#telling-stories-with-data" id="toc-telling-stories-with-data" class="nav-link" data-scroll-target="#telling-stories-with-data">Telling Stories With Data</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -148,7 +176,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Teaching</h1>
+<h1 class="title">Stats Stuff</h1>
 </div>
 
 
@@ -163,72 +191,198 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="stata-materials" class="level2">
+<h2 class="anchored" data-anchor-id="stata-materials">Stata Materials</h2>
+<section id="all-stata-materials" class="level3">
+<h3 class="anchored" data-anchor-id="all-stata-materials">All Stata Materials</h3>
+<ul>
+<li><a href="https://agrogan1.github.io/Stata/">All Stata Materials</a></li>
+</ul>
+</section>
+<section id="introductory-materials" class="level3">
+<h3 class="anchored" data-anchor-id="introductory-materials">Introductory Materials</h3>
+<ul>
+<li><a href="https://agrogan1.github.io/Stata/very-short-introduction/very-short-introduction.html">A <em>Very</em> Short Introduction to Stata</a></li>
+<li><a href="https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.pdf"><em>Two Page Stata</em></a> [<a href="https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.html">HTML</a>]</li>
+<li><a href="https://github.com/agrogan1/Stata/blob/master/do-files/my_penguins.do">Example do File</a> using the <a href="https://allisonhorst.github.io/palmerpenguins/">Palmer Penguin Data</a></li>
+</ul>
+</section>
+</section>
 <section id="data-visualization" class="level2">
 <h2 class="anchored" data-anchor-id="data-visualization">Data Visualization</h2>
 <ul>
-<li><a href="https://agrogan1.github.io/dataviz/dataviz-course">Course Page</a></li>
+<li><a href="https://agrogan1.github.io/Stata/michigan-graph-scheme/">“Michigan Graph Scheme” for Stata</a></li>
+<li>Data Visualization With Stata
+<ul>
+<li><a href="https://agrogan1.github.io/Stata/data-visualization-with-Stata/data-visualization-with-Stata.html">HTML</a></li>
+<li><a href="https://agrogan1.github.io/Stata/data-visualization-with-Stata/data-visualization-with-Stata-slidy.html">HTML Slides</a></li>
+<li><a href="https://agrogan1.github.io/Stata/data-visualization-with-Stata/data-visualization-with-Stata.pdf">PDF</a></li>
+</ul></li>
+<li>Stata Data Visualization <strong>Basics</strong>
+<ul>
+<li><a href="https://agrogan1.github.io/Stata/data-visualization-with-Stata-the-basics/data-visualization-with-Stata-the-basics.html">HTML</a></li>
+<li><a href="https://agrogan1.github.io/Stata/data-visualization-with-Stata-the-basics/data-visualization-with-Stata-the-basics.pdf">PDF</a></li>
+</ul></li>
+<li><a href="https://agrogan1.github.io/Stata/how-to-choose-a-chart-a-visual-guide-with-Stata/how-to-choose-a-chart-a-visual-guide-with-Stata.pdf">How To Choose A Chart - A Statistically Informed Visual Guide With Stata Commands</a></li>
 </ul>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="banner.png" class="img-fluid" style="width:25.0%"></p>
-</div>
-</div>
 </section>
-<section id="multilevel-and-longitudinal-modeling" class="level2">
-<h2 class="anchored" data-anchor-id="multilevel-and-longitudinal-modeling">Multilevel and Longitudinal Modeling</h2>
+<section id="r-materials" class="level2">
+<h2 class="anchored" data-anchor-id="r-materials">R Materials</h2>
+<section id="r" class="level3">
+<h3 class="anchored" data-anchor-id="r">R</h3>
 <ul>
-<li><a href="https://agrogan1.github.io/multilevel/">Course Page</a></li>
-</ul>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="plant.png" class="img-fluid" style="width:25.0%"></p>
-</div>
-</div>
+<li><em>Introduction to R</em>:
 <ul>
-<li><a href="https://agrogan1.github.io/multilevel-thinking/">Multilevel Thinking</a>, an <em>in development</em> introduction to multilevel modeling.</li>
-</ul>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="bookcover.png" class="img-fluid" style="width:15.0%"></p>
-</div>
-</div>
+<li><a href="https://agrogan1.github.io/R/introduction-to-R/introduction-to-R.html">HTML Web Book</a></li>
+<li><a href="https://agrogan1.github.io/R/introduction-to-R/introduction-to-R.pdf">PDF</a></li>
+<li><a href="https://agrogan1.github.io/R/introduction-to-R/introduction-to-R.epub">epub</a></li>
+</ul></li>
+<li><em>Quick Introduction To R</em>:
 <ul>
-<li><a href="https://agrogan1.github.io/multilevel-workshop/">Multilevel Workshop</a>, an <em>in development</em> workshop on multilevel modeling.</li>
-</ul>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="multilevel-workshop.png" class="img-fluid" style="width:25.0%"></p>
-</div>
-</div>
+<li><a href="https://agrogan1.github.io/R/quick-intro-R/quick-intro-R.pdf">PDF</a></li>
+<li><a href="https://agrogan1.github.io/R/quick-intro-R/quick-intro-R.html">HTML</a></li>
+</ul></li>
+<li>Colors in R
 <ul>
-<li><a href="https://agrogan1.github.io/multilevel/visualizing-MLM/visualizing-MLM.html">Visualizing Multilevel Models</a></li>
-</ul>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="mysmallmultiples.png" class="img-fluid" style="width:25.0%"></p>
-</div>
-</div>
+<li><a href="https://agrogan1.github.io/R/colors/colors.html">Colors in R</a></li>
+<li><a href="https://agrogan1.github.io/R/viridis/viridis.html">Viridis Colors</a></li>
+<li>University of Michigan colors for R Graphs [<a href="https://agrogan1.github.io/R/michigancolors-demo/michigancolors-demo.html">web page</a>] [<a href="https://agrogan1.github.io/michigancolors/">R package</a>]</li>
+</ul></li>
+<li><em>Working With Data From the World Bank Indicators</em>
 <ul>
-<li><a href="https://agrogan1.github.io/multilevel-multilingual/">Multilevel Multilingual</a>, multilevel models in multiple statistical languages.</li>
+<li><a href="https://agrogan1.github.io/R/wbdemo/">HTML</a></li>
+</ul></li>
 </ul>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="multilevel-multilingual.png" class="img-fluid" style="width:15.0%"></p>
-</div>
-</div>
 </section>
-<section id="categorical-data-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="categorical-data-analysis">Categorical Data Analysis</h2>
+<section id="ggplot" class="level3">
+<h3 class="anchored" data-anchor-id="ggplot">ggplot</h3>
 <ul>
-<li><a href="https://agrogan1.github.io/newstuff/categorical/">Course Page</a></li>
+<li><em>Introduction to ggplot2</em>:
+<ul>
+<li><a href="https://agrogan1.github.io/R/introduction-to-ggplot2/introduction-to-ggplot2.html">HTML Web Book</a></li>
+<li><a href="https://agrogan1.github.io/R/introduction-to-ggplot2/introduction-to-ggplot2.pdf">PDF</a></li>
+<li><a href="https://agrogan1.github.io/R/introduction-to-ggplot2/introduction-to-ggplot2.epub">epub</a></li>
+</ul></li>
+<li><em>Two Page ggplot2</em>:
+<ul>
+<li><a href="https://agrogan1.github.io/R/two-page-ggplot2/two-page-ggplot2.pdf">PDF</a></li>
+</ul></li>
+<li><a href="https://agrogan1.github.io/R/what-geom-do-I-use/how-to-choose-a-chart-a-visual-guide-GEOMs.pdf"><em>What Geometry Do I Use?</em></a></li>
+<li><a href="https://agrogan1.github.io/R/ggplot-flipbook/ggplot-flipbook.html#1"><em>ggplot Flipbook</em></a></li>
+<li><a href="https://agrogan1.github.io/dataviz/advanced-ggplot/advanced-ggplot.html"><em>“Advanced” ggplot</em></a></li>
+<li><em>Comparing Program Outcomes with ggplot2</em>
+<ul>
+<li><a href="https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.html">HTML</a></li>
+<li><a href="https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.pdf">PDF</a></li>
+</ul></li>
 </ul>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="nautilus-new.png" class="img-fluid" style="width:15.0%"></p>
-</div>
-</div>
+</section>
+<section id="dplyr" class="level3">
+<h3 class="anchored" data-anchor-id="dplyr">dplyr</h3>
+<ul>
+<li><em>Multi-Page dplyr</em>:
+<ul>
+<li><a href="https://agrogan1.github.io/R/multi-page-dplyr/multi-page-dplyr.pdf">PDF</a></li>
+<li><a href="https://agrogan1.github.io/R/multi-page-dplyr/multi-page-dplyr.html">HTML</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="xaringan" class="level3">
+<h3 class="anchored" data-anchor-id="xaringan">xaringan</h3>
+<ul>
+<li><a href="https://agrogan1.github.io/R/xaringan-themes/"><em>Themes for the Xaringan Slide Show System</em></a></li>
+</ul>
+</section>
+</section>
+<section id="bayesian-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="bayesian-statistics">Bayesian Statistics</h2>
+<section id="introductory-materials-1" class="level3">
+<h3 class="anchored" data-anchor-id="introductory-materials-1">Introductory Materials</h3>
+<ul>
+<li><a href="https://agrogan1.github.io/Bayes/basic-Bayes/basic-Bayes.html">Basic Bayes</a></li>
+<li><a href="https://agrogan.shinyapps.io/Thinking-Through-Bayes/">Thinking Through Bayesian Ideas</a></li>
+<li>Notes on <a href="https://agrogan1.github.io/Bayes/accepting-H0/accepting-H0.html">Accepting the Null (<span class="math inline">\(H_0\)</span>) Hypothesis</a></li>
+</ul>
+</section>
+<section id="multilevel-modeling" class="level3">
+<h3 class="anchored" data-anchor-id="multilevel-modeling">Multilevel Modeling</h3>
+<ul>
+<li><a href="https://agrogan1.github.io/multilevel/Bayesian-and-frequentist-MLM/Bayesian-and-frequentist-MLM.html">Bayesian and Frequentist Multilevel Modeling</a></li>
+<li><a href="https://agrogan1.github.io/multilevel/Bayesian-longitudinal-mlm/Bayesian-longitudinal-mlm.html">Bayesian Longitudinal MLM With the Gutten Tree Data</a></li>
+</ul>
+</section>
+</section>
+<section id="statistical-tutorials-and-visualizations" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-tutorials-and-visualizations">Statistical Tutorials and Visualizations</h2>
+<section id="introductory-materials-2" class="level3">
+<h3 class="anchored" data-anchor-id="introductory-materials-2">Introductory Materials</h3>
+<ul>
+<li><a href="https://agrogan1.github.io/teaching/what-is-data/what-is-data.html">What Is Data?</a></li>
+<li><a href="https://agrogan1.github.io/teaching/everything-is-obvious/everything-is-obvious.html">Everything is Obvious Once You Know The Answer</a></li>
+<li><a href="https://agrogan1.github.io/teaching/workflow/workflow.html">Notes on Quantitative Workflow</a></li>
+<li>Basics of <a href="https://agrogan1.github.io/teaching/quantitative-data-analysis/quantitative-data-analysis.html">Quantitative Data Analysis</a></li>
+</ul>
+</section>
+<section id="causality" class="level3">
+<h3 class="anchored" data-anchor-id="causality">Causality</h3>
+<ul>
+<li><a href="https://agrogan.shinyapps.io/causality/">Causality</a></li>
+</ul>
+</section>
+<section id="bivariate-statistics" class="level3">
+<h3 class="anchored" data-anchor-id="bivariate-statistics">Bivariate Statistics</h3>
+<ul>
+<li><a href="https://agrogan.shinyapps.io/shiny-t-test/">t-Test</a></li>
+<li>Correlation
+<ul>
+<li><a href="https://agrogan.shinyapps.io/correlation_demo/">The Basics</a></li>
+<li><a href="https://agrogan.shinyapps.io/thinking_about_correlations/">Thinking about Correlations</a></li>
+</ul></li>
+<li><a href="https://agrogan.shinyapps.io/es_calculator/">Cohen’s d Calculator</a></li>
+</ul>
+</section>
+<section id="multivariate-statistics" class="level3">
+<h3 class="anchored" data-anchor-id="multivariate-statistics">Multivariate Statistics</h3>
+<ul>
+<li>Regression
+<ul>
+<li><a href="https://agrogan1.github.io/teaching/new-regression-tutorial/">Tutorial</a></li>
+<li><a href="https://agrogan.shinyapps.io/regression_demo/">Demo</a></li>
+</ul></li>
+<li><a href="https://agrogan1.github.io/teaching/interactions/interactions.html">Interactions</a></li>
+<li><a href="https://agrogan.shinyapps.io/exploring_logistic_regression/">Logistic Regression</a></li>
+</ul>
+</section>
+</section>
+<section id="mapping-and-gis" class="level2">
+<h2 class="anchored" data-anchor-id="mapping-and-gis">Mapping and GIS</h2>
+<p><a href="https://agrogan1.github.io/mapping/">Notes for a course in development</a> on GIS and Mapping</p>
+</section>
+<section id="data-visualization-1" class="level2">
+<h2 class="anchored" data-anchor-id="data-visualization-1">Data Visualization</h2>
+<ul>
+<li>How To Choose A Chart
+<ul>
+<li><a href="https://agrogan1.github.io/dataviz/how-to-choose-a-chart/how-to-choose-a-chart-a-visual-guide.pdf">How to Choose a Chart: A Visual Guide</a>.</li>
+<li><a href="https://agrogan1.github.io/dataviz/how-to-choose-a-chart-intuitive/how-to-choose-a-chart-intuitive.html">How to Choose a Chart: An Intuitive Guide</a></li>
+<li><a href="https://agrogan1.github.io/dataviz/how-to-choose-a-chart/how-to-choose-a-chart-v3.html">Extended Version</a></li>
+</ul></li>
+<li><a href="https://agrogan1.github.io/dataviz/should-everything-be-a-bar-graph/#1">Should Everything Be A Bar Graph?</a></li>
+<li><a href="https://agrogan1.github.io/dataviz/data-driven-report-demo/">Data Driven Report Demo</a></li>
+<li><a href="https://agrogan1.github.io/dataviz/variables-and-visualization/variables-and-visualization.html#/">Variables and Visualization</a></li>
+<li>Slides for a Lecture on <a href="https://agrogan1.github.io/dataviz/political-social-work/">Data Visualization for Political Social Work</a></li>
+</ul>
+<section id="telling-stories-with-data" class="level3">
+<h3 class="anchored" data-anchor-id="telling-stories-with-data">Telling Stories With Data</h3>
+<ul>
+<li><a href="https://agrogan1.github.io/myposts/visualizing-disparities-in-a-continuous-outcome.html">Visualizing Disparities in a Continuous Risk Factor or Outcome</a> [<a href="https://agrogan1.github.io/myposts/visualizing-disparities-in-a-continuous-outcome.pdf">PDF</a>]</li>
+<li><a href="https://agrogan1.github.io/myposts/visualizing-disparities-in-a-categorical-outcome.html">Visualizing Disparities in a Categorical Risk Factor or Outcome</a></li>
+<li><a href="https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.html">Comparing Program Outcomes With ggplot</a> [<a href="https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.pdf">PDF</a>]</li>
+<li><a href="https://agrogan1.github.io/dataviz/graphing-change-over-time/index.html">Graphing Change Over Time</a> [<a href="https://agrogan1.github.io/dataviz/graphing-change-over-time/index.pdf">PDF</a>]</li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

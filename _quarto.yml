@@ -17,6 +17,7 @@ website:
         text: Multilevel Thinking
       - href: https://globalfamilies.quarto.pub/global-families-project/
         text: Global Families
+      - stats_stuff.qmd
       - about.qmd
 
 bibliography: agrogan.bib
