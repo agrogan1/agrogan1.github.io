@@ -19,6 +19,7 @@ website:
         text: Global Families
       - stats_stuff.qmd
       - about.qmd
+      - contact.qmd
 
 bibliography: agrogan.bib
 
