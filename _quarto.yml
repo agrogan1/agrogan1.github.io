@@ -4,8 +4,10 @@ project:
 
 website:
   title: "Andrew Grogan-Kaylor"
+  twitter-card: true
+  open-graph: true
   navbar:
-    background: primary
+    background: "#3e3f3a"
     left:
       - href: index.qmd
         text: Home
@@ -13,11 +15,11 @@ website:
         text: CV
       - teaching.qmd  
       - research.qmd
+      - stats_stuff.qmd
       - href: https://agrogan1.github.io/multilevel-thinking/
         text: Multilevel Thinking
       - href: https://globalfamilies.quarto.pub/global-families-project/
         text: Global Families
-      - stats_stuff.qmd
       - about.qmd
       - contact.qmd
 
@@ -30,7 +32,7 @@ google-scholar: true
 format:
   html:
     theme: 
-      light: sandstone
+      light: [sandstone, theme-light.scss]
       dark: vapor
     css: styles.css
     toc: true
