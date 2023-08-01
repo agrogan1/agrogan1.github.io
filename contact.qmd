@@ -1,5 +1,6 @@
 ---
-title: "Contact"
+title: "Andrew Grogan-Kaylor"
+subtitle: "Sandra K. Danziger Collegiate Professor of Social Work"
 listing:
   contents:
     - name: Web

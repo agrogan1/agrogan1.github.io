@@ -21,7 +21,8 @@ website:
       - href: https://globalfamilies.quarto.pub/global-families-project/
         text: Global Families
       - about.qmd
-      - contact.qmd
+      - href: contact.qmd
+        text: Contact
 
 bibliography: agrogan.bib
 
