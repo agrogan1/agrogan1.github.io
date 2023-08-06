@@ -7,7 +7,6 @@ website:
   twitter-card: true
   open-graph: true
   navbar:
-    background: "#3e3f3a"
     left:
       - href: index.qmd
         text: Home
