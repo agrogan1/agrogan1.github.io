@@ -24,8 +24,6 @@ library(plotly) # interactive graphs
 
 library(maps) # maps
 
-library(maptools) # maptools
-
 library(leaflet) # web maps
 
 library(sp) # spatial data
@@ -44,10 +42,7 @@ Many of these publications are available from [Deep Blue](https://deepblue.lib.u
 
 ```{r}
 
-data(wrld_simpl) # world map data
-
-global_data <- st_as_sf(wrld_simpl) %>% # make an sf dataset
-  select(-POP2005) # remove POP2005
+global_data <- read_sf("../mapping/shapefiles/wrld_simpl/wrld_simpl.shp") 
 
 # get MICS countries
 
