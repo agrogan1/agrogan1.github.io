@@ -19,6 +19,7 @@ website:
         text: Multilevel Thinking
       - href: https://globalfamilies.quarto.pub/global-families-project/
         text: Global Families
+      - blog.qmd  
       - about.qmd
       - href: contact.qmd
         text: Contact
