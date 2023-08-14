@@ -4,7 +4,7 @@ description: "Analyzing Multilevel Data in Multiple Statistical Languages."
 author: "Andy Grogan-Kaylor"
 date: "2023-8-14"
 categories: [multilevel]
-image: "bookcover.png"
+image: "bookcover-landscape.png"
 ---
 
 I have developed a book draft on multilevel modeling, entitled [*Multilevel Thinking*](https://agrogan1.github.io/multilevel-thinking/). The book draft discusses multilevel modeling in the context of cross cultural, or international, research. 
