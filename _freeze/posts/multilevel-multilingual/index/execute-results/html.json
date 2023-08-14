@@ -1,0 +1,14 @@
+{
+  "hash": "95474f724dc42c250d91a6bbf6a01328",
+  "result": {
+    "markdown": "---\ntitle: \"Multilevel Multilingual\"\ndescription: \"Analyzing Multilevel Data in Multiple Statistical Languages.\"\nauthor: \"Andy Grogan-Kaylor\"\ndate: \"2023-8-14\"\ncategories: [multilevel]\nimage: \"bookcover.png\"\n---\n\n\nI have developed a book draft on multilevel modeling, entitled [*Multilevel Thinking*](https://agrogan1.github.io/multilevel-thinking/). The book draft discusses multilevel modeling in the context of cross cultural, or international, research. \n\nThe book draft is written from the perspective of using Stata. I am thinking about how to analyze multilevel models using multiple statistical languages: Stata, R, and Julia. This developing tutorial can be found at: [https://agrogan1.github.io/multilevel-multilingual/](https://agrogan1.github.io/multilevel-multilingual/)\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](bookcover.png){width=360}\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

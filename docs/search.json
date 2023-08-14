@@ -88,7 +88,7 @@
     "href": "blog.html",
     "title": "Blog-ish Posts",
     "section": "",
-    "text": "Transcendental Etude\n\n\nExcerpts\n\n\n\n\npoetry\n\n\n\n\n\n\n\n\n\n\n\nAug 14, 2023\n\n\nAdrienne Rich\n\n\n\n\n\n\n  \n\n\n\n\nWhy can’t numbers be beautiful too?\n\n\n\n\n\n\n\npoetry\n\n\n\n\n\n\n\n\n\n\n\nAug 14, 2023\n\n\nEveline Pye\n\n\n\n\n\n\n  \n\n\n\n\nYou Have To Get Your Data From Somewhere\n\n\n\n\n\n\n\ndata\n\n\n\n\n\n\n\n\n\n\n\nAug 14, 2023\n\n\nAndy Grogan-Kaylor\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nAug 12, 2023\n\n\nAndy Grogan-Kaylor\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nAug 9, 2023\n\n\nAndy Grogan-Kaylor\n\n\n\n\n\n\n  \n\n\n\n\nDSO Faculty Award\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nMay 27, 2021\n\n\nAndy Grogan-Kaylor\n\n\n\n\n\n\nNo matching items"
+    "text": "Multilevel Multilingual\n\n\n\n\n\n\n\nmultilevel\n\n\n\n\nAnalyzing Multilevel Data in Multiple Statistical Languages.\n\n\n\n\n\n\nAug 14, 2023\n\n\nAndy Grogan-Kaylor\n\n\n\n\n\n\n  \n\n\n\n\nMultilevel Thinking (A Book Draft)\n\n\nDiscovering Diversity, Universals, and Particulars in Cross-Cultural Research.\n\n\n\n\nmultilevel\n\n\n\n\n\n\n\n\n\n\n\nAug 14, 2023\n\n\nAndy Grogan-Kaylor\n\n\n\n\n\n\n  \n\n\n\n\nTranscendental Etude\n\n\nExcerpts\n\n\n\n\npoetry\n\n\n\n\n\n\n\n\n\n\n\nAug 14, 2023\n\n\nAdrienne Rich\n\n\n\n\n\n\n  \n\n\n\n\nWhy can’t numbers be beautiful too?\n\n\n\n\n\n\n\npoetry\n\n\n\n\n\n\n\n\n\n\n\nAug 14, 2023\n\n\nEveline Pye\n\n\n\n\n\n\n  \n\n\n\n\nYou Have To Get Your Data From Somewhere\n\n\n\n\n\n\n\ndata\n\n\n\n\n\n\n\n\n\n\n\nAug 14, 2023\n\n\nAndy Grogan-Kaylor\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nAug 12, 2023\n\n\nAndy Grogan-Kaylor\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nAug 9, 2023\n\n\nAndy Grogan-Kaylor\n\n\n\n\n\n\n  \n\n\n\n\nDSO Faculty Award\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nMay 27, 2021\n\n\nAndy Grogan-Kaylor\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -236,5 +236,19 @@
     "title": "Stats Stuff",
     "section": "Data Visualization",
     "text": "Data Visualization\n\nHow To Choose A Chart\n\nHow to Choose a Chart: A Visual Guide.\nHow to Choose a Chart: An Intuitive Guide\nExtended Version\n\nShould Everything Be A Bar Graph?\nData Driven Report Demo\nVariables and Visualization\nSlides for a Lecture on Data Visualization for Political Social Work\n\n\nTelling Stories With Data\n\nVisualizing Disparities in a Continuous Risk Factor or Outcome [PDF]\nVisualizing Disparities in a Categorical Risk Factor or Outcome\nComparing Program Outcomes With ggplot [PDF]\nGraphing Change Over Time [PDF]"
+  },
+  {
+    "objectID": "posts/multilevel-thinking-a-book-draft/index.html",
+    "href": "posts/multilevel-thinking-a-book-draft/index.html",
+    "title": "Multilevel Thinking (A Book Draft)",
+    "section": "",
+    "text": "I have been working on a project entitled Multilevel Thinking. In this document, I try to provide clear explanations of ideas that may be well known in the statistical literature, but not that often used in the applied, or advocacy based, research literature. I use cross-cultural research as an example, but the ideas are equally applicable whether applied to studying children in schools, residents in neighborhoods, or individuals or families in countries.\n\n\n\nMultilevel Thinking\n\n\nThe document started out as a set of notes on things I only get to discuss during breaks, or after class, or during office hours in my class on Multilevel and Longitudinal Modeling, and has grown from that set of notes into a draft introduction to multilevel modeling:\n\nhttps://agrogan1.github.io/multilevel-thinking/\n\nI am hoping to find a publisher this year."
+  },
+  {
+    "objectID": "posts/multilevel-multilingual/index.html",
+    "href": "posts/multilevel-multilingual/index.html",
+    "title": "Multilevel Multilingual",
+    "section": "",
+    "text": "I have developed a book draft on multilevel modeling, entitled Multilevel Thinking. The book draft discusses multilevel modeling in the context of cross cultural, or international, research.\n\n\n\nMultilevel Thinking\n\n\nThe book draft is written from the perspective of using Stata. I am thinking about how to analyze multilevel models using multiple statistical languages: Stata, R, and Julia. This developing tutorial can be found at: https://agrogan1.github.io/multilevel-multilingual/"
   }
 ]
