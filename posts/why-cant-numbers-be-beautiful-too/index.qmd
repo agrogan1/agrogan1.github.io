@@ -6,7 +6,7 @@ categories: [poetry]
 image: "math.png"
 ---
 
-Why can’t numbers be beautiful too? 
+"Why can’t numbers be beautiful too? 
 
 We all talk of beautiful words, art, buildings
  and they’re not part of the natural world, either. 
@@ -32,7 +32,7 @@ the letters that make the words and sounds we love.
 Why the scorn, the doubt in your face? Do you think 
 I am brittle and dusty as old paper? 
 
-Look again. See the numbers shine in my eyes
+Look again. See the numbers shine in my eyes"
 
 -- @Pye2011
 
