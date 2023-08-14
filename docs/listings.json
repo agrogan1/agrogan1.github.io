@@ -1,5 +1,9 @@
 [
   {
+    "listing": "/contact.html",
+    "items": []
+  },
+  {
     "listing": "/blog.html",
     "items": [
       "/posts/transcendental-etude/index.html",
@@ -9,9 +13,5 @@
       "/posts/welcome/index.html",
       "/posts/DSO-faculty-award/index.html"
     ]
-  },
-  {
-    "listing": "/contact.html",
-    "items": []
   }
 ]
