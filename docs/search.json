@@ -63,6 +63,13 @@
     "text": "“… a lifetime is too narrow\nto understand it all, beginning with the huge\nrockshelves that underlie all that life.\n…\nNo one ever told us we had to study our lives,\nmake of our lives a study, as if learning natural history\nor music, that we should begin\nwith the simple exercises first\nand slowly go on trying\nthe hard ones, practicing till strength\nand accuracy became one with the daring\nto leap into transcendence…\n…\nBut there come times—perhaps this is one of them—\nwhen we have to take ourselves more seriously or die,\nwhen we have to pull back from the incantations,\nrhythms we’ve moved to thoughtlessly,\nand disenthrall ourselves, bestow\nourselves to silence, or a severer listening…”\n– Rich (1984)\n\n\n\n\nReferences\n\nRich, A. (1984). Transcendental etude. In The fact of a doorframe: Poems selected and new 1950-1984. Norton."
   },
   {
+    "objectID": "posts/multilevel-thinking-a-book-draft/index.html",
+    "href": "posts/multilevel-thinking-a-book-draft/index.html",
+    "title": "Multilevel Thinking (A Book Draft)",
+    "section": "",
+    "text": "I have been working on a project entitled Multilevel Thinking. In this document, I try to provide clear explanations of ideas that may be well known in the statistical literature, but not that often used in the applied, or advocacy based, research literature. I use cross-cultural research as an example, but the ideas are equally applicable whether applied to studying children in schools, residents in neighborhoods, or individuals or families in countries.\nThe document started out as a set of notes on things I only get to discuss during breaks, or after class, or during office hours in my class on Multilevel and Longitudinal Modeling, and has grown from that set of notes into a draft introduction to multilevel modeling:\n\nhttps://agrogan1.github.io/multilevel-thinking/\n\nI am hoping to find a publisher this year.\n\n\n\nMultilevel Thinking"
+  },
+  {
     "objectID": "posts/DSO-faculty-award/index.html",
     "href": "posts/DSO-faculty-award/index.html",
     "title": "DSO Faculty Award",
@@ -96,6 +103,13 @@
     "title": "Home",
     "section": "",
     "text": "My interests are in developing more knowledge to reduce violence against children and Adverse Childhood Experiences (ACEs), with the aim of improving child and family well-being. It is my hope that a better understanding of how to reduce violence against children, and how to reduce ACEs, will contribute to a better understanding of how to improve mental health and well-being across the lifespan. In this research I try to understand the family and community origins of aggression, antisocial behavior, anxiety and depression across diverse communities and contexts. My current research focuses on parenting and child development using international data. I try to understand these issues within the context of current conversations about children’s rights.\nA particular focus of my work has been to examine the outcomes of physical punishment.\n\n“Corporal punishment is the most common form of violence against children worldwide, leading to the injury and death of thousands of children each year. Its very widespread social acceptance means that a level of violence in childrearing is normalised, entrenching children’s low status and paving the way for other forms of violence and mistreatment.” (Children & nd Corporal Punishment, 2022)\n\n\n“The magnitude of violence against children is staggering. Globally, the most pervasive form of violence against children is corporal punishment. Because it often occurs in the confines of homes and other settings where children live, study and play, it is largely hidden and challenging to detect. Worldwide, it is estimated that nearly one billion children are hit, slapped, spanked, pinched, or otherwise physically punished regularly by their parents, caregivers, teachers, or other trusted adults, the same individuals responsible for nurturing, protecting, and educating them (UNICEF, 2017; World Health Organization, 2020).” (Stewart-Tufescu, 2023)\n\nWorking closely with many colleagues, we have shown that physical punishment is associated with a wide variety of negative outcomes. Additional quantitative work has demonstrated that this finding remains true even in contexts when physical punishment is used minimally, or when used in ostensibly “normative” ways. In a number of papers, we have investigated these associations across diverse communities and countries. Lastly, in additional papers, we have worked to demonstrate more “causally robust” associations between physical punishment and undesirable child outcomes using a variety of quantitative methods.\nA more recent stream of research examines a broader range of parenting behaviors, with particular emphasis on “positive parenting” strategies.\nI teach courses mostly in the area of statistics, quantitative methods and data visualization.\n\n\n\n\nReferences\n\nChildren, E. V. A., & nd Corporal Punishment. (2022). Corporal punishment – 10 key messages [Report]. End Corporal Punishment. https://www.end-violence.org/\n\n\nStewart-Tufescu, A. (2023). Corporal punishment: The global picture. The Canadian Journal of Children’s Rights / Revue Canadienne Des Droits Des Enfants, 10. https://doi.org/10.22215/cjcr.v10i1\n\n\nUNICEF. (2017). A familiar face: Violence in the lives of children and adolescents [Report]. UNICEF.\n\n\nWorld Health Organization. (2020). Global status report on preventing violence against children 2020 [Report]. World Health Organization. https://www.unicef.org/sites/default/files/2020-06/Global-status-report-on-preventing-violence-against-children-2020.pdf"
+  },
+  {
+    "objectID": "posts/multilevel-multilingual/index.html",
+    "href": "posts/multilevel-multilingual/index.html",
+    "title": "Multilevel Multilingual",
+    "section": "",
+    "text": "I have developed a book draft on multilevel modeling, entitled Multilevel Thinking. The book draft discusses multilevel modeling in the context of cross cultural, or international, research.\nThe book draft is written from the perspective of using Stata. I am thinking about how to analyze multilevel models using multiple statistical languages: Stata, R, and Julia. This developing tutorial can be found at: https://agrogan1.github.io/multilevel-multilingual/\n\n\n\nMultilevel Thinking"
   },
   {
     "objectID": "posts/post-with-code/index.html",
@@ -236,19 +250,5 @@
     "title": "Stats Stuff",
     "section": "Data Visualization",
     "text": "Data Visualization\n\nHow To Choose A Chart\n\nHow to Choose a Chart: A Visual Guide.\nHow to Choose a Chart: An Intuitive Guide\nExtended Version\n\nShould Everything Be A Bar Graph?\nData Driven Report Demo\nVariables and Visualization\nSlides for a Lecture on Data Visualization for Political Social Work\n\n\nTelling Stories With Data\n\nVisualizing Disparities in a Continuous Risk Factor or Outcome [PDF]\nVisualizing Disparities in a Categorical Risk Factor or Outcome\nComparing Program Outcomes With ggplot [PDF]\nGraphing Change Over Time [PDF]"
-  },
-  {
-    "objectID": "posts/multilevel-thinking-a-book-draft/index.html",
-    "href": "posts/multilevel-thinking-a-book-draft/index.html",
-    "title": "Multilevel Thinking (A Book Draft)",
-    "section": "",
-    "text": "I have been working on a project entitled Multilevel Thinking. In this document, I try to provide clear explanations of ideas that may be well known in the statistical literature, but not that often used in the applied, or advocacy based, research literature. I use cross-cultural research as an example, but the ideas are equally applicable whether applied to studying children in schools, residents in neighborhoods, or individuals or families in countries.\n\n\n\nMultilevel Thinking\n\n\nThe document started out as a set of notes on things I only get to discuss during breaks, or after class, or during office hours in my class on Multilevel and Longitudinal Modeling, and has grown from that set of notes into a draft introduction to multilevel modeling:\n\nhttps://agrogan1.github.io/multilevel-thinking/\n\nI am hoping to find a publisher this year."
-  },
-  {
-    "objectID": "posts/multilevel-multilingual/index.html",
-    "href": "posts/multilevel-multilingual/index.html",
-    "title": "Multilevel Multilingual",
-    "section": "",
-    "text": "I have developed a book draft on multilevel modeling, entitled Multilevel Thinking. The book draft discusses multilevel modeling in the context of cross cultural, or international, research.\n\n\n\nMultilevel Thinking\n\n\nThe book draft is written from the perspective of using Stata. I am thinking about how to analyze multilevel models using multiple statistical languages: Stata, R, and Julia. This developing tutorial can be found at: https://agrogan1.github.io/multilevel-multilingual/"
   }
 ]
