@@ -3,6 +3,7 @@ title: "DSO Faculty Award"
 author: "Andy Grogan-Kaylor"
 date: "2021-05-27"
 categories: [news]
+image: "forest.png"
 ---
 
 ```{r setup, include=FALSE}

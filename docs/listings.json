@@ -6,11 +6,11 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/multilevel-multilingual/index.html",
       "/posts/multilevel-thinking-a-book-draft/index.html",
-      "/posts/transcendental-etude/index.html",
+      "/posts/multilevel-multilingual/index.html",
       "/posts/why-cant-numbers-be-beautiful-too/index.html",
       "/posts/you-have-to-get-your-data-from-somewhere/index.html",
+      "/posts/transcendental-etude/index.html",
       "/posts/post-with-code/index.html",
       "/posts/welcome/index.html",
       "/posts/DSO-faculty-award/index.html"
