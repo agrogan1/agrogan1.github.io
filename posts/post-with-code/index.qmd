@@ -2,7 +2,7 @@
 title: "Post With Code"
 author: "Andy Grogan-Kaylor"
 date: "2023-08-12"
-categories: [news, code, analysis]
+categories: [news, code]
 image: "image.jpg"
 ---
 
