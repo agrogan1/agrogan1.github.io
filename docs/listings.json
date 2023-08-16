@@ -2,8 +2,10 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/ArcGIS-storymaps/index.html",
       "/posts/multilevel-thinking-a-book-draft/index.html",
+      "/posts/a-simple-visual-explanation-of-Simpsons-paradox/index.html",
+      "/posts/workflow/index.html",
+      "/posts/ArcGIS-storymaps/index.html",
       "/posts/its-not-just-what-youre-born-with/index.html",
       "/posts/multilevel-multilingual/index.html",
       "/posts/why-cant-numbers-be-beautiful-too/index.html",
