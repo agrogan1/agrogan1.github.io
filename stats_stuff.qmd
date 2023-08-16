@@ -14,7 +14,7 @@ title: "Stats Stuff"
 * [*Two Page Stata*](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.pdf)   [[HTML](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.html)]
 * [Example do File](https://github.com/agrogan1/Stata/blob/master/do-files/my_penguins.do) using the [Palmer Penguin Data](https://allisonhorst.github.io/palmerpenguins/)
 
-## Data Visualization
+### Data Visualization
 
 * ["Michigan Graph Scheme" for Stata](https://agrogan1.github.io/Stata/michigan-graph-scheme/)
 * Data Visualization With Stata 
