@@ -1,0 +1,14 @@
+{
+  "hash": "0a00c0db0d718d43130553bd5ca598c3",
+  "result": {
+    "markdown": "---\ntitle: \"Workflow\"\nsubtitle: \"Thoughts about data science / data analysis workflow.\"\nauthor: \"Andy Grogan-Kaylor\"\ndate: \"2023-8-16\"\ncategories: [workflow]\nimage: \"thumbnail.jpg\"\n---\n\n\n\n\nI have been thinking a lot recently about workflow, particularly in data science and data analysis projects. My thoughts are here:  [https://agrogan1.github.io/teaching/workflow/workflow.html](https://agrogan1.github.io/teaching/workflow/workflow.html) [[Word Version](https://agrogan1.github.io/teaching/workflow/workflow.docx)]\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
