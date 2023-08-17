@@ -1,0 +1,14 @@
+{
+  "hash": "dc4a64aa6fe50196c3568647ba2ddc39",
+  "result": {
+    "markdown": "---\ntitle: \"Everything is Obvious Once You Know The Answer\"\nsubtitle: \"Are the results of social science so 'obvious'?\"\nauthor:  Andy Grogan-Kaylor \ndate: \"2023-8-17\"\ncategories: [stats]\nimage: \"everything-is-obvious-once-you-know-the-answer.png\"\n---\n\n\nI have been thinking a lot about the idea that *Everything Is Obvious, Once You Know The Answer*, as detailed in the book with this title by Duncan Watts.\n\nThis seems to me especially true in Social Research. \n\nFor example, in our [work with the international MICS data](https://agrogan1.github.io/research.html#multiple-indicator-cluster-surveys-mics-unicef-data), we conducted a [study of the link between gender inequality and physical child abuse](https://www.mdpi.com/1841422). We expected to find that higher levels of gender inequality led to higher levels of physical abuse for female children, but not for male children. Instead, we found that higher levels of gender inequality were associated with higher levels of physical abuse for both male and female children. Equally interesting was that we found that gender inequality was predictive of levels of child abuse, while country level GDP was not.\n\nSimilarly, in a [study of parenting during Covid-19](https://agrogan1.github.io/research.html#covid-19), we expected to find that households with children would experience higher levels of anxiety and depression than households without children. Instead, we found the opposite. Being in a household with children was generally protective for anxiety and depression. \n\nIn his book, Watts uses the example from over 50 years ago, of a large study conducted by Lazarsfeld of veterans returning from World War II. The results are surprising. I've prepared a slide deck on these ideas here: [https://agrogan1.github.io/teaching/everything-is-obvious/everything-is-obvious.html#/title-slide](https://agrogan1.github.io/teaching/everything-is-obvious/everything-is-obvious.html#/title-slide)\n\n\n::: {.cell}\n<iframe src=\"https://agrogan1.github.io/teaching/everything-is-obvious/everything-is-obvious.html\" width=\"672\" height=\"400px\" data-external=\"1\"></iframe>\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
