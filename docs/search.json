@@ -14,6 +14,13 @@
     "text": "My interests are in developing more knowledge to reduce violence against children and Adverse Childhood Experiences (ACEs), with the aim of improving child and family well-being. It is my hope that a better understanding of how to reduce violence against children, and how to reduce ACEs, will contribute to a better understanding of how to improve mental health and well-being across the lifespan. In this research I try to understand the family and community origins of aggression, antisocial behavior, anxiety and depression across diverse communities and contexts. My current research focuses on parenting and child development using international data. I try to understand these issues within the context of current conversations about children’s rights.\nA particular focus of my work has been to examine the outcomes of physical punishment.\n\n“Corporal punishment is the most common form of violence against children worldwide, leading to the injury and death of thousands of children each year. Its very widespread social acceptance means that a level of violence in childrearing is normalised, entrenching children’s low status and paving the way for other forms of violence and mistreatment.” (End Violence Against Children & End Corporal Punishment, 2022)\n\n\n“The magnitude of violence against children is staggering. Globally, the most pervasive form of violence against children is corporal punishment. Because it often occurs in the confines of homes and other settings where children live, study and play, it is largely hidden and challenging to detect. Worldwide, it is estimated that nearly one billion children are hit, slapped, spanked, pinched, or otherwise physically punished regularly by their parents, caregivers, teachers, or other trusted adults, the same individuals responsible for nurturing, protecting, and educating them (UNICEF, 2017; World Health Organization, 2020).” (Stewart-Tufescu, 2023)\n\nWorking closely with many colleagues, we have shown that physical punishment is associated with a wide variety of negative outcomes. Additional quantitative work has demonstrated that this finding remains true even in contexts when physical punishment is used minimally, or when used in ostensibly “normative” ways. In a number of papers, we have investigated these associations across diverse communities and countries. Lastly, in additional papers, we have worked to demonstrate more “causally robust” associations between physical punishment and undesirable child outcomes using a variety of quantitative methods.\nA more recent stream of research examines a broader range of parenting behaviors, with particular emphasis on “positive parenting” strategies.\nI teach courses mostly in the area of statistics, quantitative methods and data visualization.\n\n\n\n\nReferences\n\nEnd Violence Against Children, & End Corporal Punishment. (2022). Corporal punishment – 10 key messages [Report]. End Corporal Punishment. https://www.end-violence.org/\n\n\nStewart-Tufescu, A. (2023). Corporal punishment: The global picture. The Canadian Journal of Children’s Rights / Revue Canadienne Des Droits Des Enfants, 10. https://doi.org/10.22215/cjcr.v10i1\n\n\nUNICEF. (2017). A familiar face: Violence in the lives of children and adolescents [Report]. UNICEF.\n\n\nWorld Health Organization. (2020). Global status report on preventing violence against children 2020 [Report]. World Health Organization. https://www.unicef.org/sites/default/files/2020-06/Global-status-report-on-preventing-violence-against-children-2020.pdf"
   },
   {
+    "objectID": "posts/Mauritius-is-65/index.html",
+    "href": "posts/Mauritius-is-65/index.html",
+    "title": "Mauritius is #65",
+    "section": "",
+    "text": "Mauritius is the 65th country to ban corporal punishment: https://agrogan1.github.io/research/cpbans/"
+  },
+  {
     "objectID": "posts/its-not-just-what-youre-born-with/index.html",
     "href": "posts/its-not-just-what-youre-born-with/index.html",
     "title": "It’s not just what you’re born with",
@@ -119,11 +126,32 @@
     "text": "I have developed a book draft on multilevel modeling, entitled Multilevel Thinking. The book draft discusses multilevel modeling in the context of cross cultural, or international, research.\nThe book draft is written from the perspective of using Stata. I am thinking about how to analyze multilevel models using multiple statistical languages: Stata, R, and Julia. This developing tutorial can be found at: https://agrogan1.github.io/multilevel-multilingual/\n\n\n\nMultilevel Thinking"
   },
   {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Andrew Grogan-Kaylor",
+    "objectID": "posts/everything-is-obvious-once-you-know-the-answer/index.html",
+    "href": "posts/everything-is-obvious-once-you-know-the-answer/index.html",
+    "title": "Everything is Obvious Once You Know The Answer",
     "section": "",
-    "text": "Web\n\n\nEmail\n\n\nDeep Blue\n\n\nGitHub\n\n\nResearchGate\n\n\nGoogle Scholar\n\n\nOrcid\n\n\n\nNo matching items"
+    "text": "I have been thinking a lot about the idea that Everything Is Obvious, Once You Know The Answer, as detailed in the book with this title by Duncan Watts.\nThis seems to me especially true in Social Research.\nFor example, in our work with the international MICS data, we conducted a study of the link between gender inequality and physical child abuse. We expected to find that higher levels of gender inequality led to higher levels of physical abuse for female children, but not for male children. Instead, we found that higher levels of gender inequality were associated with higher levels of physical abuse for both male and female children. Equally interesting was that we found that gender inequality was predictive of levels of child abuse, while country level GDP was not.\nSimilarly, in a study of parenting during Covid-19, we expected to find that households with children would experience higher levels of anxiety and depression than households without children. Instead, we found the opposite. Being in a household with children was generally protective for anxiety and depression.\nIn his book, Watts uses the example from over 50 years ago, of a large study conducted by Lazarsfeld of veterans returning from World War II. The results are surprising. I’ve prepared a slide deck on these ideas here: https://agrogan1.github.io/teaching/everything-is-obvious/everything-is-obvious.html#/title-slide"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "Many of these publications are available from Deep Blue.\n\n\n\nThis research is conducted in collaboration with colleagues Shawna Lee, Julie Ma, Kaitlin Ward, Garrett Pace, and Jorge Cuartas.\n\n\n\n\n\nLocations of Countries in MICS\n\n\n\n\n\nProject website\n\n\n\n\n\nGender Inequality in Low- and Middle-Income Countries: Associations with Parental Physical Abuse and Moderation by Child Gender\n\nArticle\nArcGIS Storymap\nPress Release\n\n“The Association between Spanking and Physical Abuse of Young Children in 56 Low- and Middle-Income Countries”\n\nArticle\nPress Release\nHTML Slides\nArcGIS Storymap\n\n“Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach”\n\nArticle\nArcGIS Storymap\n\n“Multilevel ecological analysis of the predictors of spanking across 65 countries”\n\nArticle\nArcGIS Storymap\n\n“Global Perspectives on Positive and Negative Parenting: A Bayesian Multilevel Analysis”\n\nAbstract\nArticle\n\n“Spanking and young children’s socioemotional development in low- and middle-income countries”\n\nOpen Access\nChild Trends News Service has released a well done video summarizing this research.\n\n\n\n\n\n\n\n“Adverse childhood experiences and spanking have similar associations with early behavior problems”\n“Unpacking the impact of adverse childhood experiences on adult mental health”\n“Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience”\n\n\n\n\n\n“Anxiety and Depression During COVID-19: Are Adults in Households with Children Faring Worse?”\n\nNews Release\n\n\n\n\n\n\n“Physical Punishment as a Predictor of Early Cognitive Development: Evidence From Econometric Approaches”\n“Physical punishment and Colombian children and adolescents’ cognitive and behavioral outcomes”\n“Civil conflict, domestic violence, and poverty as predictors of corporal punishment in Colombia”\n\n\n\n\n\nMeta-Analysis of Research on Corporal Punishment [PubMed Full Text]\n\n\n\n\n\nData Visualizations of Country Level Bans on Corporal Punishment\n\n\n\n\n\nCountry Level Bans on Corporal Punishment\n\n\n\n\n\n\nEarlier Research On Corporal Punishment"
+  },
+  {
+    "objectID": "research.html#research-on-parenting-and-child-development",
+    "href": "research.html#research-on-parenting-and-child-development",
+    "title": "Research",
+    "section": "",
+    "text": "Many of these publications are available from Deep Blue.\n\n\n\nThis research is conducted in collaboration with colleagues Shawna Lee, Julie Ma, Kaitlin Ward, Garrett Pace, and Jorge Cuartas.\n\n\n\n\n\nLocations of Countries in MICS\n\n\n\n\n\nProject website\n\n\n\n\n\nGender Inequality in Low- and Middle-Income Countries: Associations with Parental Physical Abuse and Moderation by Child Gender\n\nArticle\nArcGIS Storymap\nPress Release\n\n“The Association between Spanking and Physical Abuse of Young Children in 56 Low- and Middle-Income Countries”\n\nArticle\nPress Release\nHTML Slides\nArcGIS Storymap\n\n“Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach”\n\nArticle\nArcGIS Storymap\n\n“Multilevel ecological analysis of the predictors of spanking across 65 countries”\n\nArticle\nArcGIS Storymap\n\n“Global Perspectives on Positive and Negative Parenting: A Bayesian Multilevel Analysis”\n\nAbstract\nArticle\n\n“Spanking and young children’s socioemotional development in low- and middle-income countries”\n\nOpen Access\nChild Trends News Service has released a well done video summarizing this research.\n\n\n\n\n\n\n\n“Adverse childhood experiences and spanking have similar associations with early behavior problems”\n“Unpacking the impact of adverse childhood experiences on adult mental health”\n“Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience”\n\n\n\n\n\n“Anxiety and Depression During COVID-19: Are Adults in Households with Children Faring Worse?”\n\nNews Release\n\n\n\n\n\n\n“Physical Punishment as a Predictor of Early Cognitive Development: Evidence From Econometric Approaches”\n“Physical punishment and Colombian children and adolescents’ cognitive and behavioral outcomes”\n“Civil conflict, domestic violence, and poverty as predictors of corporal punishment in Colombia”\n\n\n\n\n\nMeta-Analysis of Research on Corporal Punishment [PubMed Full Text]\n\n\n\n\n\nData Visualizations of Country Level Bans on Corporal Punishment\n\n\n\n\n\nCountry Level Bans on Corporal Punishment\n\n\n\n\n\n\nEarlier Research On Corporal Punishment"
+  },
+  {
+    "objectID": "research.html#community-based-research-in-alaska",
+    "href": "research.html#community-based-research-in-alaska",
+    "title": "Research",
+    "section": "Community Based Research in Alaska",
+    "text": "Community Based Research in Alaska\n\nCulturally Grounded Strategies for Suicide and Alcohol Risk Prevention Delivered by Rural Alaska Native Communities: A Dynamic Wait‐listed Design Evaluation of the Qungasvik Intervention.\n\nOpen Access Article"
   },
   {
     "objectID": "teaching.html",
@@ -154,25 +182,11 @@
     "text": "Categorical Data Analysis\n\nCourse Page"
   },
   {
-    "objectID": "research.html",
-    "href": "research.html",
-    "title": "Research",
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Andrew Grogan-Kaylor",
     "section": "",
-    "text": "Many of these publications are available from Deep Blue.\n\n\n\nThis research is conducted in collaboration with colleagues Shawna Lee, Julie Ma, Kaitlin Ward, Garrett Pace, and Jorge Cuartas.\n\n\n\n\n\nLocations of Countries in MICS\n\n\n\n\n\nProject website\n\n\n\n\n\nGender Inequality in Low- and Middle-Income Countries: Associations with Parental Physical Abuse and Moderation by Child Gender\n\nArticle\nArcGIS Storymap\nPress Release\n\n“The Association between Spanking and Physical Abuse of Young Children in 56 Low- and Middle-Income Countries”\n\nArticle\nPress Release\nHTML Slides\nArcGIS Storymap\n\n“Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach”\n\nArticle\nArcGIS Storymap\n\n“Multilevel ecological analysis of the predictors of spanking across 65 countries”\n\nArticle\nArcGIS Storymap\n\n“Global Perspectives on Positive and Negative Parenting: A Bayesian Multilevel Analysis”\n\nAbstract\nArticle\n\n“Spanking and young children’s socioemotional development in low- and middle-income countries”\n\nOpen Access\nChild Trends News Service has released a well done video summarizing this research.\n\n\n\n\n\n\n\n“Adverse childhood experiences and spanking have similar associations with early behavior problems”\n“Unpacking the impact of adverse childhood experiences on adult mental health”\n“Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience”\n\n\n\n\n\n“Anxiety and Depression During COVID-19: Are Adults in Households with Children Faring Worse?”\n\nNews Release\n\n\n\n\n\n\n“Physical Punishment as a Predictor of Early Cognitive Development: Evidence From Econometric Approaches”\n“Physical punishment and Colombian children and adolescents’ cognitive and behavioral outcomes”\n“Civil conflict, domestic violence, and poverty as predictors of corporal punishment in Colombia”\n\n\n\n\n\nMeta-Analysis of Research on Corporal Punishment [PubMed Full Text]\n\n\n\n\n\nData Visualizations of Country Level Bans on Corporal Punishment\n\n\n\n\n\nCountry Level Bans on Corporal Punishment\n\n\n\n\n\n\nEarlier Research On Corporal Punishment"
-  },
-  {
-    "objectID": "research.html#research-on-parenting-and-child-development",
-    "href": "research.html#research-on-parenting-and-child-development",
-    "title": "Research",
-    "section": "",
-    "text": "Many of these publications are available from Deep Blue.\n\n\n\nThis research is conducted in collaboration with colleagues Shawna Lee, Julie Ma, Kaitlin Ward, Garrett Pace, and Jorge Cuartas.\n\n\n\n\n\nLocations of Countries in MICS\n\n\n\n\n\nProject website\n\n\n\n\n\nGender Inequality in Low- and Middle-Income Countries: Associations with Parental Physical Abuse and Moderation by Child Gender\n\nArticle\nArcGIS Storymap\nPress Release\n\n“The Association between Spanking and Physical Abuse of Young Children in 56 Low- and Middle-Income Countries”\n\nArticle\nPress Release\nHTML Slides\nArcGIS Storymap\n\n“Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach”\n\nArticle\nArcGIS Storymap\n\n“Multilevel ecological analysis of the predictors of spanking across 65 countries”\n\nArticle\nArcGIS Storymap\n\n“Global Perspectives on Positive and Negative Parenting: A Bayesian Multilevel Analysis”\n\nAbstract\nArticle\n\n“Spanking and young children’s socioemotional development in low- and middle-income countries”\n\nOpen Access\nChild Trends News Service has released a well done video summarizing this research.\n\n\n\n\n\n\n\n“Adverse childhood experiences and spanking have similar associations with early behavior problems”\n“Unpacking the impact of adverse childhood experiences on adult mental health”\n“Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience”\n\n\n\n\n\n“Anxiety and Depression During COVID-19: Are Adults in Households with Children Faring Worse?”\n\nNews Release\n\n\n\n\n\n\n“Physical Punishment as a Predictor of Early Cognitive Development: Evidence From Econometric Approaches”\n“Physical punishment and Colombian children and adolescents’ cognitive and behavioral outcomes”\n“Civil conflict, domestic violence, and poverty as predictors of corporal punishment in Colombia”\n\n\n\n\n\nMeta-Analysis of Research on Corporal Punishment [PubMed Full Text]\n\n\n\n\n\nData Visualizations of Country Level Bans on Corporal Punishment\n\n\n\n\n\nCountry Level Bans on Corporal Punishment\n\n\n\n\n\n\nEarlier Research On Corporal Punishment"
-  },
-  {
-    "objectID": "research.html#community-based-research-in-alaska",
-    "href": "research.html#community-based-research-in-alaska",
-    "title": "Research",
-    "section": "Community Based Research in Alaska",
-    "text": "Community Based Research in Alaska\n\nCulturally Grounded Strategies for Suicide and Alcohol Risk Prevention Delivered by Rural Alaska Native Communities: A Dynamic Wait‐listed Design Evaluation of the Qungasvik Intervention.\n\nOpen Access Article"
+    "text": "Web\n\n\nEmail\n\n\nDeep Blue\n\n\nGitHub\n\n\nResearchGate\n\n\nGoogle Scholar\n\n\nOrcid\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/post-with-code/index.html",
@@ -215,6 +229,13 @@
     "title": "Workflow",
     "section": "",
     "text": "I have been thinking a lot recently about workflow, particularly in data science and data analysis projects. My thoughts are here: https://agrogan1.github.io/teaching/workflow/workflow.html [Word Version]"
+  },
+  {
+    "objectID": "posts/multiple-principled-solutions/index.html",
+    "href": "posts/multiple-principled-solutions/index.html",
+    "title": "Multiple Principled Solutions",
+    "section": "",
+    "text": "One of my most recent ideas about statistical workflows is that there are certainly wrong decisions that one can make with data.\nFor example, I would not want to write the paper that says that smoking prevents lung cancer, nor would I want to write a paper saying spanking is good for children.\nThat being said, I think there are often multiple principled ways forward.\nOften the key is not so much to make the 100% correct decision, but to make one of several possible principled decisions.\nThen after making a principled decision, one is transparent and thorough about describing the decision that one made."
   },
   {
     "objectID": "stats_stuff.html",
@@ -271,40 +292,5 @@
     "title": "About Me",
     "section": "",
     "text": "I am the Sandra K. Danziger Collegiate Professor of Social Work.\nI am strongly motivated by concerns for social justice. Right after undergraduate studies, I was a community organizer for a year, and then a Peace Corps Volunteer living for two years in the at-the-time remote Upper East Region of Ghana, and doing community development work, both in English, and in the local language Kusaal. These early experiences have been the source of commitments to social justice, and to developing an evidence base for practice, that continue in my work today.\nMy core intellectual interest is the way in which parenting behaviors have an effect on child outcomes. For example, parenting behaviors like the use of corporal punishment, or parental expressions of emotional warmth, are likely to have an effect on child outcomes like aggression, antisocial behavior, anxiety and depression. I am interested in how these dynamics play out across contexts, neighborhoods, and cultures.\nIn my work I use advanced statistical models, like multilevel models and some econometric models, and software like Stata, R and GIS, to examine things like growth and change over time, or community, school or parent effects on children and families. I’m also very interested in data visualization.\nI have also worked on developing and evaluating interventions for under-served populations, particularly among people who speak Spanish as their primary language.\nA lot of my work is done with international samples. The globe on this webpage indicates the countries where some of the data that I’ve used has come from, or where I have done some work.\n\n\n\n\nCountries where some of the data that I’ve used has come from, or where I have done some work.\n\n\nMore recently, my collaborators and I have been doing quite a bit of work with the MICS data collected by UNICEF. Below, please find a map of the countries in which the MICS surveys were conducted.\n\n\n\n\nCountries in MICS\n\n\nPlease click here for my faculty page on the School of Social Work website.\nFor copies of any of my published research papers, please e-mail me at agrogan@umich.edu.\nI have many course materials on the web that are not directly linked to from this website. If you are one of my students and can’t find a particular resource that you need for class, please let me know at agrogan@umich.edu.\nMy blog on statistics, data visualization, data analysis, and my research activities is at: https://agrogan1.github.io/myposts/.\nThis webpage is mostly up to date, but always under construction to some degree. If you think something should be here, but it isn’t, please let me know."
-  },
-  {
-    "objectID": "posts/everything-is-obvious-once-you-know-the-answer/index.html",
-    "href": "posts/everything-is-obvious-once-you-know-the-answer/index.html",
-    "title": "Everything is Obvious Once You Know The Answer",
-    "section": "",
-    "text": "I have been thinking a lot about the idea that Everything Is Obvious, Once You Know The Answer, as detailed in the book with this title by Duncan Watts.\nThis seems to me especially true in Social Research.\nFor example, in our work with the international MICS data, we conducted a study of the link between gender inequality and physical child abuse. We expected to find that higher levels of gender inequality led to higher levels of physical abuse for female children, but not for male children. Instead, we found that higher levels of gender inequality were associated with higher levels of physical abuse for both male and female children. Equally interesting was that we found that gender inequality was predictive of levels of child abuse, while country level GDP was not.\nSimilarly, in a study of parenting during Covid-19, we expected to find that households with children would experience higher levels of anxiety and depression than households without children. Instead, we found the opposite. Being in a household with children was generally protective for anxiety and depression.\nIn his book, Watts uses the example from over 50 years ago, of a large study conducted by Lazarsfeld of veterans returning from World War II. The results are surprising. I’ve prepared a slide deck on these ideas here: https://agrogan1.github.io/teaching/everything-is-obvious/everything-is-obvious.html#/title-slide"
-  },
-  {
-    "objectID": "posts/multiple-principled-solutions/multiple-principled-solutions.html",
-    "href": "posts/multiple-principled-solutions/multiple-principled-solutions.html",
-    "title": "Multiple Principled Solutions",
-    "section": "",
-    "text": "One of my most recent ideas about statistical workflows is that there are certainly wrong decisions that one can make with data.\nFor example, I would not want to write the paper that says that smoking prevents lung cancer, nor would I want to write a paper saying spanking is good for children.\nThat being said, I think there are often multiple principled ways forward.\nOften the key is not so much to make the 100% correct decision, but to make one of several possible principled decisions.\nThen after making a principled decision, one is transparent and thorough about describing the decision that one made."
-  },
-  {
-    "objectID": "posts/Mauritius-is-65/Mauritius-is-65.html",
-    "href": "posts/Mauritius-is-65/Mauritius-is-65.html",
-    "title": "Mauritius is #65",
-    "section": "",
-    "text": "Mauritius is the 65th country to ban corporal punishment: https://agrogan1.github.io/research/cpbans/"
-  },
-  {
-    "objectID": "posts/multiple-principled-solutions/index.html",
-    "href": "posts/multiple-principled-solutions/index.html",
-    "title": "Multiple Principled Solutions",
-    "section": "",
-    "text": "One of my most recent ideas about statistical workflows is that there are certainly wrong decisions that one can make with data.\nFor example, I would not want to write the paper that says that smoking prevents lung cancer, nor would I want to write a paper saying spanking is good for children.\nThat being said, I think there are often multiple principled ways forward.\nOften the key is not so much to make the 100% correct decision, but to make one of several possible principled decisions.\nThen after making a principled decision, one is transparent and thorough about describing the decision that one made."
-  },
-  {
-    "objectID": "posts/Mauritius-is-65/index.html",
-    "href": "posts/Mauritius-is-65/index.html",
-    "title": "Mauritius is #65",
-    "section": "",
-    "text": "Mauritius is the 65th country to ban corporal punishment: https://agrogan1.github.io/research/cpbans/"
   }
 ]
