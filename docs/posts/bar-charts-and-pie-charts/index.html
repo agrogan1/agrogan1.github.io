@@ -9,7 +9,7 @@
 <meta name="author" content="Andy Grogan-Kaylor">
 <meta name="dcterms.date" content="2023-08-20">
 
-<title>Andrew Grogan-Kaylor - Multilevel Thinking (A Book Draft)</title>
+<title>Andrew Grogan-Kaylor - Telling Stories With Data: Bar Charts and Pie Charts</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -63,18 +63,24 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../../site_libs/htmlwidgets-1.6.1/htmlwidgets.js"></script>
+<script src="../../site_libs/viz-1.8.2/viz.js"></script>
+<link href="../../site_libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
+<script src="../../site_libs/grViz-binding-1.0.9/grViz.js"></script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Andrew Grogan-Kaylor - Multilevel Thinking (A Book Draft)">
-<meta property="og:description" content="Discovering Diversity, Universals, and Particulars in Cross-Cultural Research.">
-<meta property="og:image" content="bookcover-landscape.png">
+<meta property="og:title" content="Andrew Grogan-Kaylor - Telling Stories With Data: Bar Charts and Pie Charts">
+<meta property="og:description" content="Conceptual Relationships Among Graphs, and the Grammar of Graphics">
+<meta property="og:image" content="index_files/figure-html/unnamed-chunk-4-1.png">
 <meta property="og:site-name" content="Andrew Grogan-Kaylor">
-<meta name="twitter:title" content="Andrew Grogan-Kaylor - Multilevel Thinking (A Book Draft)">
-<meta name="twitter:description" content="Discovering Diversity, Universals, and Particulars in Cross-Cultural Research.">
-<meta name="twitter:image" content="bookcover-landscape.png">
+<meta name="twitter:title" content="Andrew Grogan-Kaylor - Telling Stories With Data: Bar Charts and Pie Charts">
+<meta name="twitter:description" content="Conceptual Relationships Among Graphs, and the Grammar of Graphics">
+<meta name="twitter:image" content="index_files/figure-html/unnamed-chunk-4-1.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="citation_title" content="Multilevel Thinking (A Book Draft)">
+<meta name="citation_title" content="Telling Stories With Data: Bar Charts and Pie Charts">
 <meta name="citation_author" content="Andy Grogan-Kaylor">
 <meta name="citation_publication_date" content="2023-08-20">
 <meta name="citation_cover_date" content="2023-08-20">
@@ -158,10 +164,11 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Multilevel Thinking (A Book Draft)</h1>
-            <p class="subtitle lead">Discovering Diversity, Universals, and Particulars in Cross-Cultural Research.</p>
+      <h1 class="title">Telling Stories With Data: Bar Charts and Pie Charts</h1>
+            <p class="subtitle lead">Conceptual Relationships Among Graphs, and the Grammar of Graphics</p>
                                 <div class="quarto-categories">
-                <div class="quarto-category">multilevel</div>
+                <div class="quarto-category">stats</div>
+                <div class="quarto-category">dataviz</div>
               </div>
                   </div>
   </div>
@@ -191,7 +198,29 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
+  <li><a href="#some-data" id="toc-some-data" class="nav-link" data-scroll-target="#some-data">Some Data</a></li>
+  <li><a href="#a-simple-bar-chart" id="toc-a-simple-bar-chart" class="nav-link" data-scroll-target="#a-simple-bar-chart">A Simple Bar Chart</a>
+  <ul class="collapse">
+  <li><a href="#grammar-of-graphics" id="toc-grammar-of-graphics" class="nav-link" data-scroll-target="#grammar-of-graphics">Grammar of Graphics</a></li>
+  <li><a href="#advantages-and-disadvantages" id="toc-advantages-and-disadvantages" class="nav-link" data-scroll-target="#advantages-and-disadvantages">Advantages and Disadvantages</a></li>
+  </ul></li>
+  <li><a href="#stacked-bar-chart" id="toc-stacked-bar-chart" class="nav-link" data-scroll-target="#stacked-bar-chart">Stacked Bar Chart</a>
+  <ul class="collapse">
+  <li><a href="#grammar-of-graphics-1" id="toc-grammar-of-graphics-1" class="nav-link" data-scroll-target="#grammar-of-graphics-1">Grammar of Graphics</a></li>
+  <li><a href="#advantages-and-disadvantages-1" id="toc-advantages-and-disadvantages-1" class="nav-link" data-scroll-target="#advantages-and-disadvantages-1">Advantages and Disadvantages</a></li>
+  </ul></li>
+  <li><a href="#pie-chart" id="toc-pie-chart" class="nav-link" data-scroll-target="#pie-chart">Pie Chart</a>
+  <ul class="collapse">
+  <li><a href="#grammar-of-graphics-2" id="toc-grammar-of-graphics-2" class="nav-link" data-scroll-target="#grammar-of-graphics-2">Grammar of Graphics</a></li>
+  <li><a href="#advantages-and-disadvantages-2" id="toc-advantages-and-disadvantages-2" class="nav-link" data-scroll-target="#advantages-and-disadvantages-2">Advantages and Disadvantages</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -199,20 +228,142 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>I have been working on a project entitled <a href="https://agrogan1.github.io/multilevel-thinking/"><em>Multilevel Thinking</em></a>. In this document, I try to provide clear explanations of ideas that may be well known in the statistical literature, but not that often used in the applied, or advocacy based, research literature. I use cross-cultural research as an example, but the ideas are equally applicable whether applied to studying <em>children in schools</em>, <em>residents in neighborhoods</em>, or <em>individuals or families in countries</em>.</p>
-<p>The document started out as a set of notes on <em>things I only get to discuss during breaks, or after class, or during office hours</em> in my class on <em>Multilevel and Longitudinal Modeling</em>, and has grown from that set of notes into a draft introduction to multilevel modeling:</p>
+<section id="background" class="level1">
+<h1>Background</h1>
+<p>In this document, I talk about <strong>bar charts</strong>, <strong>stacked bar charts</strong>, and <strong>pie charts</strong>. I want to focus on the <em>conceptual relationships</em> between these kinds of graphs, using the idea of <em>grammar of graphics</em>.</p>
 <blockquote class="blockquote">
-<p><a href="https://agrogan1.github.io/multilevel-thinking/">https://agrogan1.github.io/multilevel-thinking/</a></p>
+<p>These graphs were made in <code>ggplot2</code>. The code for each graph is provided, as it may be useful for some audiences, but the focus here is really on the relationships between these graphs, and the advantages and disadvantages of different graphing strategies in terms of <em>telling a story with the data</em>. Those not interested in the intricacies of <code>ggplot</code> may feel free to ignore the code.</p>
 </blockquote>
-<p>I am hoping to find a publisher this year.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="bookcover.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Multilevel Thinking</figcaption>
-</figure>
+</section>
+<section id="some-data" class="level1">
+<h1>Some Data</h1>
+<p>Here is what the beginning of the data looks like.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">group</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Group A</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Group A</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Group A</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Group A</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Group B</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Group C</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Group A</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Group A</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Group A</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Group B</td>
+</tr>
+</tbody>
+</table>
 </div>
+</div>
+</section>
+<section id="a-simple-bar-chart" class="level1">
+<h1>A Simple Bar Chart</h1>
+<p>We start with a simple bar chart.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<section id="grammar-of-graphics" class="level2">
+<h2 class="anchored" data-anchor-id="grammar-of-graphics">Grammar of Graphics</h2>
+<p>I’m going to rely on Wilkinson’s idea of a <em>Grammar of Graphics</em>. Wilkinson talks about such a grammar being characterized by <em>has a</em> relationships which I have indicated here with <span class="math inline">\(\leftarrow\)</span> symbols.</p>
+<p>So, for example, this graph has an <em>x axis</em>, and a <em>y axis</em>, and <em>color</em>.</p>
+<p>The <em>x axis</em> in this graph denotes <em>group</em>, as does the <em>color</em> of the graph.</p>
+<p>The <em>y axis</em> represents the <em>count</em> of <em>group</em>.</p>
+<p>So the grammar of this graph might look something like the following:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-4dedfdb8349695d4b106" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-4dedfdb8349695d4b106">{"x":{"diagram":"\n\ndigraph {\n\ngraph [layout = dot,\n       rankdir = RL]\n\n# node definitions with substituted label text\nnode [fontname = Helvetica]\n\ng [label = \"graph\"]\nx [label = \"x axis\"]\ny [label = \"y axis\"]\n\n# edge definitions with the node IDs\n\nx -> g\ny -> g\ncolor -> g\ncount -> y\ngroup -> x\ngroup -> color\n\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<section id="advantages-and-disadvantages" class="level2">
+<h2 class="anchored" data-anchor-id="advantages-and-disadvantages">Advantages and Disadvantages</h2>
+<p><strong>Advantages:</strong> Simplicity. Straightforwardness. Easy to compare the height of the different bars.</p>
+<p><strong>Disadvantages:</strong> Not the most exciting graph in the world.</p>
+</section>
+</section>
+<section id="stacked-bar-chart" class="level1">
+<h1>Stacked Bar Chart</h1>
+<p>We make a simple change to the bar chart to produce a stacked bar chart.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<section id="grammar-of-graphics-1" class="level2">
+<h2 class="anchored" data-anchor-id="grammar-of-graphics-1">Grammar of Graphics</h2>
+<p>Now the bars are not distributed along the <em>x axis</em>, but stacked on top of each other.</p>
+<p>The <em>y axis</em> still represents the <em>count</em> of <em>group</em>.</p>
+<p>But now the <em>x axis</em> in this graph does not really provide much information, and only <em>color</em> of the graph tells us about the group</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-257e06c85869c817b6dc" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-257e06c85869c817b6dc">{"x":{"diagram":"\n\ndigraph {\n\ngraph [layout = dot,\n       rankdir = RL]\n\n# node definitions with substituted label text\nnode [fontname = Helvetica]\n\ng [label = \"graph\"]\nx [label = \"x axis\"]\ny [label = \"y axis\"]\n\n# edge definitions with the node IDs\n\nx -> g\ny -> g\ncolor -> g\ncount -> y\ngroup -> color\n\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<section id="advantages-and-disadvantages-1" class="level2">
+<h2 class="anchored" data-anchor-id="advantages-and-disadvantages-1">Advantages and Disadvantages</h2>
+<p><strong>Advantages:</strong> Looks different than a traditional bar chart. The stacking of the bars may give us a sense of the <em>relative</em> contribution of each group to the <em>overall total</em>.</p>
+<p><strong>Disadvantages:</strong> We can no longer <em>directly</em> compare the height of the bars. This chart may therefore be difficult to interpret in some cases.</p>
+</section>
+</section>
+<section id="pie-chart" class="level1">
+<h1>Pie Chart</h1>
+<p>A pie chart is just this <em>stacked</em> bar chart transformed (or <em>wrapped</em> into a circle) by using <em>polar coordinates</em>:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<section id="grammar-of-graphics-2" class="level2">
+<h2 class="anchored" data-anchor-id="grammar-of-graphics-2">Grammar of Graphics</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-df144829dab1d41810f4" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-df144829dab1d41810f4">{"x":{"diagram":"\n\ndigraph {\n\ngraph [layout = dot,\n       rankdir = RL]\n\n# node definitions with substituted label text\nnode [fontname = Helvetica]\n\ng [label = \"graph\"]\nx [label = \"x axis\"]\ny [label = \"y axis\"]\np [label = \"polar coordinates\"]\n\n# edge definitions with the node IDs\n\nx -> g\ny -> g\ncolor -> g\ncount -> y\ngroup -> color\np -> y\np -> x\n\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<section id="advantages-and-disadvantages-2" class="level2">
+<h2 class="anchored" data-anchor-id="advantages-and-disadvantages-2">Advantages and Disadvantages</h2>
+<p><strong>Advantages:</strong> Despite the invective directed at pie charts, pie charts may also have the advantage of looking different than a traditional bar chart. The circular arrangement of the pie slices may give us a sense of the <em>relative</em> contribution of each group to the <em>overall total</em>.</p>
+<p><strong>Disadvantages:</strong> We can no longer <em>directly</em> compare the height of the bars. Angles of pie slices may be more difficult to interpret than heights of bars, particularly when there are many slices. <em>Labels</em> may be difficult to add to pie charts, particularly in <code>ggplot</code>.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
