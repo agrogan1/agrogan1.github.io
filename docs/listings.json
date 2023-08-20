@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/bignumber/index.html",
       "/posts/multilevel-thinking-a-book-draft/index.html",
       "/posts/bar-charts-and-pie-charts/index.html",
       "/posts/everything-is-obvious-once-you-know-the-answer/index.html",
