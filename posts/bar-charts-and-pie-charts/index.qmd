@@ -12,7 +12,10 @@ In this document, I talk about **bar charts**, **stacked bar charts**, and **pie
 
 > These graphs were made in `ggplot2`. The code for each graph is provided, as it may be useful for some audiences, but the focus here is really on the relationships between these graphs, and the advantages and disadvantages of different graphing strategies in terms of *telling a story with the data*. Those not interested in the intricacies of `ggplot` may feel free to ignore the code. 
 
-```{r, echo=FALSE}
+```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 # call necessary libraries
 
@@ -31,6 +34,9 @@ library(DiagrammeR) # digrams
 Here is what the beginning of the data looks like.
 
 ```{r, echo=FALSE}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 N <- 100
 
@@ -53,27 +59,18 @@ pander(head(mydata, 10))
 
 We start with a simple bar chart.
 
-```{r, eval=FALSE}
+::: {.callout-tip collapse="true"}
+If you are following the `ggplot` code, you will note that `ggplot` rapidly becomes very verbose. 
+ 
+The *essential detail* to focus on is the *aesthetic*, `aes`, which tells ggplot what *dimensions* of the data are being mapped on to what specific elements of the graph. The data we are using only has 1 *dimension*: of what group is each individual a member?
 
-# If you are following the `ggplot` code, 
-# you will note that `ggplot` rapidly 
-# becomes very verbose. 
-# 
-# The *essential detail* to focus on is 
-# the *aesthetic*, `aes`, which tells ggplot 
-# what *dimensions* of the data are being 
-# mapped on to what specific elements of the graph.  
-# 
-# The data we are using only has 1 *dimension*: 
-# of what group is each individual a member?
-# 
-# Much of the verbosity of `ggplot` comes 
-# from telling `ggplot` about the *labels*, 
-# *fill colors*, and *theme*.
-
-```
+Much of the verbosity of `ggplot` comes from telling `ggplot` about the *labels*, *fill colors*, and *theme*.
+:::
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 ggplot(data = mydata,
        aes(x = group, # x is the group
@@ -143,6 +140,9 @@ We make a simple change to the bar chart to produce a stacked bar chart.
 
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 ggplot(data = mydata,
        aes(x = 1, # x is 1 for everyone
@@ -208,6 +208,9 @@ group -> color
 A pie chart is just this *stacked* bar chart transformed (or *wrapped* into a circle) by using *polar coordinates*:
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 ggplot(data = mydata,
        aes(x = 1, # x is 1 for everyone
