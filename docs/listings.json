@@ -2,8 +2,8 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/bignumber/index.html",
       "/posts/multilevel-thinking-a-book-draft/index.html",
+      "/posts/bignumber/index.html",
       "/posts/bar-charts-and-pie-charts/index.html",
       "/posts/everything-is-obvious-once-you-know-the-answer/index.html",
       "/posts/multiple-principled-solutions/index.html",
@@ -18,6 +18,7 @@
       "/posts/post-with-code/index.html",
       "/posts/welcome/index.html",
       "/posts/Mauritius-is-65/index.html",
+      "/posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html",
       "/posts/DSO-faculty-award/index.html"
     ]
   },

@@ -1,0 +1,119 @@
+---
+title: "Bar Charts in ggplot With Multiple Outcomes"
+author: "Andy Grogan-Kaylor"
+date: "2022-8-1"
+categories: [stats]
+---
+
+# Setup
+
+```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
+
+library(ggplot2) # beautiful graphs
+
+library(tidyr) # tidy data
+
+```
+
+# Simulated Data
+
+```{r}
+
+x <- c(1, 2, 3) # independent variable
+
+y <- c(4, 5, 6) # first outcome
+
+z <- c(7, 8, 3) # second outcome
+
+mydata <- tibble(x, y, z)
+
+mydata # replay mydata
+
+```
+
+# Reshape Data With `pivot_longer`
+
+```{r}
+
+myReshapedData <- mydata %>% 
+  pivot_longer(c(y, z), # values to pivot or reshape
+               names_to = "newnames", # names will be
+               values_to = "newvalues") # values will be
+
+myReshapedData # replay myReshapedData
+
+```
+
+# Graphs
+
+## Bar Chart With Stacked Bars
+
+### `geom_bar()`
+
+```{r}
+
+ggplot(myReshapedData, # data I am using
+       aes(x = x, # x is newnames
+           y = newvalues, # y is newvalues
+           fill = newnames)) + # fill is newnames
+  geom_bar(stat = "identity") # y is actual bar height
+
+```
+
+### `geom_col()`
+
+By default, `geom_col()` assumes `stat = 'identity'` i.e. `y` is the height of the bar.
+
+```{r}
+
+ggplot(myReshapedData, # data I am using
+       aes(x = x, # x is newnames
+           y = newvalues, # y is newvalues
+           fill = newnames)) + # fill is newnames
+  geom_col() # y is actual bar height
+
+```
+
+
+## Bar Chart With Unstacked Bars
+
+```{r}
+
+ggplot(myReshapedData, # data I am using
+       aes(x = x, # x is newnames
+           y = newvalues, # y is newvalues
+           fill = newnames)) + # fill is newnames
+  geom_bar(stat = "identity", # y is actual bar height
+           position = position_dodge()) # unstack bars
+
+```
+
+## Line Chart
+
+```{r}
+
+ggplot(myReshapedData, # data I am using
+       aes(x = x, # x is x
+           y = newvalues, # y is value
+           color = newnames, # color is key
+           group = newnames)) + # line needs a group aesthetic
+  geom_line()
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
