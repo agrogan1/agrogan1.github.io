@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -74,11 +108,11 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Andrew Grogan-Kaylor - Telling Stories With Data: Bar Charts and Pie Charts">
 <meta property="og:description" content="Conceptual Relationships Among Graphs, and the Grammar of Graphics">
-<meta property="og:image" content="index_files/figure-html/unnamed-chunk-4-1.png">
+<meta property="og:image" content="index_files/figure-html/unnamed-chunk-3-1.png">
 <meta property="og:site-name" content="Andrew Grogan-Kaylor">
 <meta name="twitter:title" content="Andrew Grogan-Kaylor - Telling Stories With Data: Bar Charts and Pie Charts">
 <meta name="twitter:description" content="Conceptual Relationships Among Graphs, and the Grammar of Graphics">
-<meta name="twitter:image" content="index_files/figure-html/unnamed-chunk-4-1.png">
+<meta name="twitter:image" content="index_files/figure-html/unnamed-chunk-3-1.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="citation_title" content="Telling Stories With Data: Bar Charts and Pie Charts">
 <meta name="citation_author" content="Andy Grogan-Kaylor">
@@ -234,11 +268,42 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p>These graphs were made in <code>ggplot2</code>. The code for each graph is provided, as it may be useful for some audiences, but the focus here is really on the relationships between these graphs, and the advantages and disadvantages of different graphing strategies in terms of <em>telling a story with the data</em>. Those not interested in the intricacies of <code>ggplot</code> may feel free to ignore the code.</p>
 </blockquote>
+<div class="cell">
+<details>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># call necessary libraries</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co"># beautiful graphs</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pander) <span class="co"># nice tables</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tibble) <span class="co"># new data frames</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DiagrammeR) <span class="co"># digrams</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 <section id="some-data" class="level1">
 <h1>Some Data</h1>
 <p>Here is what the beginning of the data looks like.</p>
 <div class="cell">
+<details>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>group <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">2</span>), </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>            N, </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">replace=</span><span class="cn">TRUE</span>, </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">prob=</span><span class="fu">c</span>(<span class="fl">0.4</span>, <span class="fl">0.4</span>, <span class="fl">0.2</span>)) </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>group <span class="ot">&lt;-</span> <span class="fu">factor</span>(group,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>                <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>),</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>                <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Group A"</span>, <span class="st">"Group B"</span>, <span class="st">"Group C"</span>))</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>mydata <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(group)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">pander</span>(<span class="fu">head</span>(mydata, <span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <table class="table table-sm table-striped small">
 <colgroup>
@@ -251,13 +316,7 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">Group A</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Group A</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">Group A</td>
+<td style="text-align: center;">Group B</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">Group A</td>
@@ -266,10 +325,16 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: center;">Group B</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">Group C</td>
+<td style="text-align: center;">Group B</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">Group A</td>
+<td style="text-align: center;">Group B</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Group B</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Group C</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">Group A</td>
@@ -288,9 +353,37 @@ ul.task-list li input[type="checkbox"] {
 <section id="a-simple-bar-chart" class="level1">
 <h1>A Simple Bar Chart</h1>
 <p>We start with a simple bar chart.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>If you are following the <code>ggplot</code> code, you will note that <code>ggplot</code> rapidly becomes very verbose.</p>
+<p>The <em>essential detail</em> to focus on is the <em>aesthetic</em>, <code>aes</code>, which tells ggplot what <em>dimensions</em> of the data are being mapped on to what specific elements of the graph. The data we are using only has 1 <em>dimension</em>: of what group is each individual a member?</p>
+<p>Much of the verbosity of <code>ggplot</code> comes from telling <code>ggplot</code> about the <em>labels</em>, <em>fill colors</em>, and <em>theme</em>.</p>
+</div>
+</div>
+</div>
 <div class="cell">
+<details>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mydata,</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> group, <span class="co"># x is the group</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">fill =</span> group)) <span class="sc">+</span> <span class="co"># fill is also the group</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> <span class="co"># draw with bars</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"A Bar Chart"</span>) <span class="sc">+</span> <span class="co"># labels</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_d</span>() <span class="sc">+</span> <span class="co"># pretty colors</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="co"># minimal theme</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <section id="grammar-of-graphics" class="level2">
@@ -302,8 +395,8 @@ ul.task-list li input[type="checkbox"] {
 <p>So the grammar of this graph might look something like the following:</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-4dedfdb8349695d4b106" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-4dedfdb8349695d4b106">{"x":{"diagram":"\n\ndigraph {\n\ngraph [layout = dot,\n       rankdir = RL]\n\n# node definitions with substituted label text\nnode [fontname = Helvetica]\n\ng [label = \"graph\"]\nx [label = \"x axis\"]\ny [label = \"y axis\"]\n\n# edge definitions with the node IDs\n\nx -> g\ny -> g\ncolor -> g\ncount -> y\ngroup -> x\ngroup -> color\n\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-38d7098c83a8a84aa3b7" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-38d7098c83a8a84aa3b7">{"x":{"diagram":"\n\ndigraph {\n\ngraph [layout = dot,\n       rankdir = RL]\n\n# node definitions with substituted label text\nnode [fontname = Helvetica]\n\ng [label = \"graph\"]\nx [label = \"x axis\"]\ny [label = \"y axis\"]\n\n# edge definitions with the node IDs\n\nx -> g\ny -> g\ncolor -> g\ncount -> y\ngroup -> x\ngroup -> color\n\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
@@ -317,8 +410,18 @@ ul.task-list li input[type="checkbox"] {
 <h1>Stacked Bar Chart</h1>
 <p>We make a simple change to the bar chart to produce a stacked bar chart.</p>
 <div class="cell">
+<details>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mydata,</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">1</span>, <span class="co"># x is 1 for everyone</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">fill =</span> group)) <span class="sc">+</span> <span class="co"># fill is the group</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> <span class="co"># draw with bars</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"A Stacked Bar Chart"</span>) <span class="sc">+</span> <span class="co"># labels</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_d</span>() <span class="sc">+</span> <span class="co"># pretty colors</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="co"># minimal theme</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <section id="grammar-of-graphics-1" class="level2">
@@ -328,8 +431,8 @@ ul.task-list li input[type="checkbox"] {
 <p>But now the <em>x axis</em> in this graph does not really provide much information, and only <em>color</em> of the graph tells us about the group</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-257e06c85869c817b6dc" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-257e06c85869c817b6dc">{"x":{"diagram":"\n\ndigraph {\n\ngraph [layout = dot,\n       rankdir = RL]\n\n# node definitions with substituted label text\nnode [fontname = Helvetica]\n\ng [label = \"graph\"]\nx [label = \"x axis\"]\ny [label = \"y axis\"]\n\n# edge definitions with the node IDs\n\nx -> g\ny -> g\ncolor -> g\ncount -> y\ngroup -> color\n\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-ca6209f1238639298e3c" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-ca6209f1238639298e3c">{"x":{"diagram":"\n\ndigraph {\n\ngraph [layout = dot,\n       rankdir = RL]\n\n# node definitions with substituted label text\nnode [fontname = Helvetica]\n\ng [label = \"graph\"]\nx [label = \"x axis\"]\ny [label = \"y axis\"]\n\n# edge definitions with the node IDs\n\nx -> g\ny -> g\ncolor -> g\ncount -> y\ngroup -> color\n\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
@@ -343,16 +446,27 @@ ul.task-list li input[type="checkbox"] {
 <h1>Pie Chart</h1>
 <p>A pie chart is just this <em>stacked</em> bar chart transformed (or <em>wrapped</em> into a circle) by using <em>polar coordinates</em>:</p>
 <div class="cell">
+<details>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mydata,</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">1</span>, <span class="co"># x is 1 for everyone</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">fill =</span> group)) <span class="sc">+</span> <span class="co"># fill is also the group</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> <span class="co"># draw with bars</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"A Pie Chart"</span>) <span class="sc">+</span> <span class="co"># labels</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_polar</span>(<span class="at">theta =</span> <span class="st">"y"</span>)  <span class="sc">+</span> <span class="co"># polar coordinates</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_d</span>() <span class="sc">+</span> <span class="co"># pretty colors</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() <span class="co"># void theme</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <section id="grammar-of-graphics-2" class="level2">
 <h2 class="anchored" data-anchor-id="grammar-of-graphics-2">Grammar of Graphics</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-df144829dab1d41810f4" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-df144829dab1d41810f4">{"x":{"diagram":"\n\ndigraph {\n\ngraph [layout = dot,\n       rankdir = RL]\n\n# node definitions with substituted label text\nnode [fontname = Helvetica]\n\ng [label = \"graph\"]\nx [label = \"x axis\"]\ny [label = \"y axis\"]\np [label = \"polar coordinates\"]\n\n# edge definitions with the node IDs\n\nx -> g\ny -> g\ncolor -> g\ncount -> y\ngroup -> color\np -> y\np -> x\n\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-0cc1deec7ac180e13c6f" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-0cc1deec7ac180e13c6f">{"x":{"diagram":"\n\ndigraph {\n\ngraph [layout = dot,\n       rankdir = RL]\n\n# node definitions with substituted label text\nnode [fontname = Helvetica]\n\ng [label = \"graph\"]\nx [label = \"x axis\"]\ny [label = \"y axis\"]\np [label = \"polar coordinates\"]\n\n# edge definitions with the node IDs\n\nx -> g\ny -> g\ncolor -> g\ncount -> y\ngroup -> color\np -> y\np -> x\n\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
