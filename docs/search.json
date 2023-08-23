@@ -354,21 +354,21 @@
     "href": "posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html#bar-chart-with-stacked-bars",
     "title": "Bar Charts in ggplot With Multiple Outcomes",
     "section": "Bar Chart With Stacked Bars",
-    "text": "Bar Chart With Stacked Bars\n\ngeom_bar()\n\n\n\n\n\n\n\ngeom_col()\nBy default, geom_col() assumes stat = 'identity' i.e. y is the height of the bar."
+    "text": "Bar Chart With Stacked Bars\n\ngeom_bar()\n\n\nShow the code\nggplot(myReshapedData, # data I am using\n       aes(x = x, # x is newnames\n           y = newvalues, # y is newvalues\n           fill = newnames)) + # fill is newnames\n  geom_bar(stat = \"identity\") # y is actual bar height\n\n\n\n\n\n\n\ngeom_col()\nBy default, geom_col() assumes stat = 'identity' i.e. y is the height of the bar.\n\n\nShow the code\nggplot(myReshapedData, # data I am using\n       aes(x = x, # x is newnames\n           y = newvalues, # y is newvalues\n           fill = newnames)) + # fill is newnames\n  geom_col() # y is actual bar height"
   },
   {
     "objectID": "posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html#bar-chart-with-unstacked-bars",
     "href": "posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html#bar-chart-with-unstacked-bars",
     "title": "Bar Charts in ggplot With Multiple Outcomes",
     "section": "Bar Chart With Unstacked Bars",
-    "text": "Bar Chart With Unstacked Bars"
+    "text": "Bar Chart With Unstacked Bars\n\n\nShow the code\nggplot(myReshapedData, # data I am using\n       aes(x = x, # x is newnames\n           y = newvalues, # y is newvalues\n           fill = newnames)) + # fill is newnames\n  geom_bar(stat = \"identity\", # y is actual bar height\n           position = position_dodge()) # unstack bars"
   },
   {
     "objectID": "posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html#line-chart",
     "href": "posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html#line-chart",
     "title": "Bar Charts in ggplot With Multiple Outcomes",
     "section": "Line Chart",
-    "text": "Line Chart"
+    "text": "Line Chart\n\n\nShow the code\nggplot(myReshapedData, # data I am using\n       aes(x = x, # x is x\n           y = newvalues, # y is value\n           color = newnames, # color is key\n           group = newnames)) + # line needs a group aesthetic\n  geom_line()"
   },
   {
     "objectID": "posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html",

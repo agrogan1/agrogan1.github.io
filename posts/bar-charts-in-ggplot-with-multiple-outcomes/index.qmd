@@ -21,6 +21,9 @@ library(tidyr) # tidy data
 # Simulated Data
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 x <- c(1, 2, 3) # independent variable
 
@@ -37,6 +40,9 @@ mydata # replay mydata
 # Reshape Data With `pivot_longer`
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 myReshapedData <- mydata %>% 
   pivot_longer(c(y, z), # values to pivot or reshape
@@ -54,6 +60,9 @@ myReshapedData # replay myReshapedData
 ### `geom_bar()`
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 ggplot(myReshapedData, # data I am using
        aes(x = x, # x is newnames
@@ -68,6 +77,9 @@ ggplot(myReshapedData, # data I am using
 By default, `geom_col()` assumes `stat = 'identity'` i.e. `y` is the height of the bar.
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 ggplot(myReshapedData, # data I am using
        aes(x = x, # x is newnames
@@ -81,6 +93,9 @@ ggplot(myReshapedData, # data I am using
 ## Bar Chart With Unstacked Bars
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 ggplot(myReshapedData, # data I am using
        aes(x = x, # x is newnames
@@ -94,6 +109,9 @@ ggplot(myReshapedData, # data I am using
 ## Line Chart
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 ggplot(myReshapedData, # data I am using
        aes(x = x, # x is x
