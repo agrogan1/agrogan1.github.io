@@ -1,0 +1,16 @@
+{
+  "hash": "7beeaa6b1474a02202a07d84f93d7ca1",
+  "result": {
+    "markdown": "---\ntitle: \"Bar Charts in ggplot With Multiple Outcomes\"\nauthor: \"Andy Grogan-Kaylor\"\ndate: \"2022-8-1\"\ncategories: [stats]\n---\n\n\n# Setup\n\n\n::: {.cell}\n\n```{.r .cell-code  code-fold=\"true\" code-summary=\"Show the code\"}\nlibrary(ggplot2) # beautiful graphs\n\nlibrary(tidyr) # tidy data\n```\n:::\n\n\n# Simulated Data\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n```\n# A tibble: 3 × 3\n      x     y     z\n  <dbl> <dbl> <dbl>\n1     1     4     7\n2     2     5     8\n3     3     6     3\n```\n:::\n:::\n\n\n# Reshape Data With `pivot_longer`\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n```\n# A tibble: 6 × 3\n      x newnames newvalues\n  <dbl> <chr>        <dbl>\n1     1 y                4\n2     1 z                7\n3     2 y                5\n4     2 z                8\n5     3 y                6\n6     3 z                3\n```\n:::\n:::\n\n\n# Graphs\n\n## Bar Chart With Stacked Bars\n\n### `geom_bar()`\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-4-1.png){width=672}\n:::\n:::\n\n\n### `geom_col()`\n\nBy default, `geom_col()` assumes `stat = 'identity'` i.e. `y` is the height of the bar.\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-5-1.png){width=672}\n:::\n:::\n\n\n\n## Bar Chart With Unstacked Bars\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-6-1.png){width=672}\n:::\n:::\n\n\n## Line Chart\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-7-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
