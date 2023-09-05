@@ -161,102 +161,11 @@
     "text": "Line Chart\n\n\nShow the code\nggplot(myReshapedData, # data I am using\n       aes(x = x, # x is x\n           y = newvalues, # y is value\n           color = newnames, # color is key\n           group = newnames)) + # line needs a group aesthetic\n  geom_line()"
   },
   {
-    "objectID": "posts/transcendental-etude/index.html",
-    "href": "posts/transcendental-etude/index.html",
-    "title": "Transcendental Etude",
+    "objectID": "posts/ArcGIS-storymaps/index.html",
+    "href": "posts/ArcGIS-storymaps/index.html",
+    "title": "ArcGIS Storymaps",
     "section": "",
-    "text": "“… a lifetime is too narrow\nto understand it all, beginning with the huge\nrockshelves that underlie all that life.\n…\nNo one ever told us we had to study our lives,\nmake of our lives a study, as if learning natural history\nor music, that we should begin\nwith the simple exercises first\nand slowly go on trying\nthe hard ones, practicing till strength\nand accuracy became one with the daring\nto leap into transcendence…\n…\nBut there come times—perhaps this is one of them—\nwhen we have to take ourselves more seriously or die,\nwhen we have to pull back from the incantations,\nrhythms we’ve moved to thoughtlessly,\nand disenthrall ourselves, bestow\nourselves to silence, or a severer listening…”\n– Rich (1984)\n\n\n\n\nReferences\n\nRich, A. (1984). Transcendental etude. In The fact of a doorframe: Poems selected and new 1950-1984. Norton."
-  },
-  {
-    "objectID": "posts/why-cant-numbers-be-beautiful-too/index.html",
-    "href": "posts/why-cant-numbers-be-beautiful-too/index.html",
-    "title": "Why can’t numbers be beautiful too?",
-    "section": "",
-    "text": "“Why can’t numbers be beautiful too?\nWe all talk of beautiful words, art, buildings and they’re not part of the natural world, either. An x in Algebra is no more abstract than an idea in philosophy, just more useful.\nBut it can’t be use that makes the difference. Keats found beauty in a Grecian urn, surely practical at some time and no one is blind to the beauty of symmetry.\nWe all get Blake’s awe of the tiger’s stripes. Why not awe at Gaussian curves? Of course, I know there is no great beauty in a single number, in a four or a seven or an eight, but it is the same\nwith the alphabet. Where is the wonder in a b or a k or a t? It is only the combinations, the meanings, the relationships between the letters that make the words and sounds we love.\n– And so, why can’t my numbers be beautiful to me? Why the scorn, the doubt in your face? Do you think I am brittle and dusty as old paper?\nLook again. See the numbers shine in my eyes”\n– Pye (2011)\n\n\n\n\nReferences\n\nPye, E. (2011). Eveline Pye: Poetry in numbers, by Julian Champkin. Significance, 8(3), 127–130. https://doi.org/10.1111/j.1740-9713.2011.00510.x"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code.\n\n\n[1] 2"
-  },
-  {
-    "objectID": "posts/everything-is-obvious-once-you-know-the-answer/index.html",
-    "href": "posts/everything-is-obvious-once-you-know-the-answer/index.html",
-    "title": "Everything is Obvious Once You Know The Answer",
-    "section": "",
-    "text": "I have been thinking a lot about the idea that Everything Is Obvious, Once You Know The Answer, as detailed in the book with this title by Duncan Watts.\nThis seems to me especially true in Social Research.\nFor example, in our work with the international MICS data, we conducted a study of the link between gender inequality and physical child abuse. We expected to find that higher levels of gender inequality led to higher levels of physical abuse for female children, but not for male children. Instead, we found that higher levels of gender inequality were associated with higher levels of physical abuse for both male and female children. Equally interesting was that we found that gender inequality was predictive of levels of child abuse, while country level GDP was not.\nSimilarly, in a study of parenting during Covid-19, we expected to find that households with children would experience higher levels of anxiety and depression than households without children. Instead, we found the opposite. Being in a household with children was generally protective for anxiety and depression.\nIn his book, Watts uses the example from over 50 years ago, of a large study conducted by Lazarsfeld of veterans returning from World War II. The results are surprising. I’ve prepared a slide deck on these ideas here: https://agrogan1.github.io/teaching/everything-is-obvious/everything-is-obvious.html#/title-slide"
-  },
-  {
-    "objectID": "research.html",
-    "href": "research.html",
-    "title": "Research",
-    "section": "",
-    "text": "Many of these publications are available from Deep Blue.\n\n\n\nThis research is conducted in collaboration with colleagues Shawna Lee, Julie Ma, Kaitlin Ward, Garrett Pace, and Jorge Cuartas.\n\n\n\n\n\nLocations of Countries in MICS\n\n\n\n\n\nProject website\n\n\n\n\n\nGender Inequality in Low- and Middle-Income Countries: Associations with Parental Physical Abuse and Moderation by Child Gender\n\nArticle\nArcGIS Storymap\nPress Release\n\n“The Association between Spanking and Physical Abuse of Young Children in 56 Low- and Middle-Income Countries”\n\nArticle\nPress Release\nHTML Slides\nArcGIS Storymap\n\n“Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach”\n\nArticle\nArcGIS Storymap\n\n“Multilevel ecological analysis of the predictors of spanking across 65 countries”\n\nArticle\nArcGIS Storymap\n\n“Global Perspectives on Positive and Negative Parenting: A Bayesian Multilevel Analysis”\n\nAbstract\nArticle\n\n“Spanking and young children’s socioemotional development in low- and middle-income countries”\n\nOpen Access\nChild Trends News Service has released a well done video summarizing this research.\n\n\n\n\n\n\n\n“Adverse childhood experiences and spanking have similar associations with early behavior problems”\n“Unpacking the impact of adverse childhood experiences on adult mental health”\n“Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience”\n\n\n\n\n\n“Anxiety and Depression During COVID-19: Are Adults in Households with Children Faring Worse?”\n\nNews Release\n\n\n\n\n\n\n“Physical Punishment as a Predictor of Early Cognitive Development: Evidence From Econometric Approaches”\n“Physical punishment and Colombian children and adolescents’ cognitive and behavioral outcomes”\n“Civil conflict, domestic violence, and poverty as predictors of corporal punishment in Colombia”\n\n\n\n\n\nMeta-Analysis of Research on Corporal Punishment [PubMed Full Text]\n\n\n\n\n\nData Visualizations of Country Level Bans on Corporal Punishment\n\n\n\n\n\nCountry Level Bans on Corporal Punishment\n\n\n\n\n\n\nEarlier Research On Corporal Punishment"
-  },
-  {
-    "objectID": "research.html#research-on-parenting-and-child-development",
-    "href": "research.html#research-on-parenting-and-child-development",
-    "title": "Research",
-    "section": "",
-    "text": "Many of these publications are available from Deep Blue.\n\n\n\nThis research is conducted in collaboration with colleagues Shawna Lee, Julie Ma, Kaitlin Ward, Garrett Pace, and Jorge Cuartas.\n\n\n\n\n\nLocations of Countries in MICS\n\n\n\n\n\nProject website\n\n\n\n\n\nGender Inequality in Low- and Middle-Income Countries: Associations with Parental Physical Abuse and Moderation by Child Gender\n\nArticle\nArcGIS Storymap\nPress Release\n\n“The Association between Spanking and Physical Abuse of Young Children in 56 Low- and Middle-Income Countries”\n\nArticle\nPress Release\nHTML Slides\nArcGIS Storymap\n\n“Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach”\n\nArticle\nArcGIS Storymap\n\n“Multilevel ecological analysis of the predictors of spanking across 65 countries”\n\nArticle\nArcGIS Storymap\n\n“Global Perspectives on Positive and Negative Parenting: A Bayesian Multilevel Analysis”\n\nAbstract\nArticle\n\n“Spanking and young children’s socioemotional development in low- and middle-income countries”\n\nOpen Access\nChild Trends News Service has released a well done video summarizing this research.\n\n\n\n\n\n\n\n“Adverse childhood experiences and spanking have similar associations with early behavior problems”\n“Unpacking the impact of adverse childhood experiences on adult mental health”\n“Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience”\n\n\n\n\n\n“Anxiety and Depression During COVID-19: Are Adults in Households with Children Faring Worse?”\n\nNews Release\n\n\n\n\n\n\n“Physical Punishment as a Predictor of Early Cognitive Development: Evidence From Econometric Approaches”\n“Physical punishment and Colombian children and adolescents’ cognitive and behavioral outcomes”\n“Civil conflict, domestic violence, and poverty as predictors of corporal punishment in Colombia”\n\n\n\n\n\nMeta-Analysis of Research on Corporal Punishment [PubMed Full Text]\n\n\n\n\n\nData Visualizations of Country Level Bans on Corporal Punishment\n\n\n\n\n\nCountry Level Bans on Corporal Punishment\n\n\n\n\n\n\nEarlier Research On Corporal Punishment"
-  },
-  {
-    "objectID": "research.html#community-based-research-in-alaska",
-    "href": "research.html#community-based-research-in-alaska",
-    "title": "Research",
-    "section": "Community Based Research in Alaska",
-    "text": "Community Based Research in Alaska\n\nCulturally Grounded Strategies for Suicide and Alcohol Risk Prevention Delivered by Rural Alaska Native Communities: A Dynamic Wait‐listed Design Evaluation of the Qungasvik Intervention.\n\nOpen Access Article"
-  },
-  {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "Course Page"
-  },
-  {
-    "objectID": "teaching.html#data-visualization",
-    "href": "teaching.html#data-visualization",
-    "title": "Teaching",
-    "section": "",
-    "text": "Course Page"
-  },
-  {
-    "objectID": "teaching.html#multilevel-and-longitudinal-modeling",
-    "href": "teaching.html#multilevel-and-longitudinal-modeling",
-    "title": "Teaching",
-    "section": "Multilevel and Longitudinal Modeling",
-    "text": "Multilevel and Longitudinal Modeling\n\nCourse Page\n\n\n\n\n\n\n\nMultilevel Thinking, an in development introduction to multilevel modeling.\n\n\n\n\n\n\n\nMultilevel Workshop, an in development workshop on multilevel modeling.\n\n\n\n\n\n\n\nVisualizing Multilevel Models\n\n\n\n\n\n\n\nMultilevel Multilingual, multilevel models in multiple statistical languages."
-  },
-  {
-    "objectID": "teaching.html#categorical-data-analysis",
-    "href": "teaching.html#categorical-data-analysis",
-    "title": "Teaching",
-    "section": "Categorical Data Analysis",
-    "text": "Categorical Data Analysis\n\nCourse Page"
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Andrew Grogan-Kaylor",
-    "section": "",
-    "text": "Web\n\n\nEmail\n\n\nDeep Blue\n\n\nGitHub\n\n\nResearchGate\n\n\nGoogle Scholar\n\n\nOrcid\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/bignumber/index.html",
-    "href": "posts/bignumber/index.html",
-    "title": "Making a ‘Big Number’ (And Circle) With R",
-    "section": "",
-    "text": "Sometimes a large number (and accompanying circle) can represent a compelling visualization. This flipbook explains how to make such visualizations in R: https://agrogan1.github.io/R/bignumber/bignumber.html"
-  },
-  {
-    "objectID": "posts/multilevel-multilingual/index.html",
-    "href": "posts/multilevel-multilingual/index.html",
-    "title": "Multilevel Multilingual",
-    "section": "",
-    "text": "I have developed a book draft on multilevel modeling, entitled Multilevel Thinking. The book draft discusses multilevel modeling in the context of cross cultural, or international, research.\nThe book draft is written from the perspective of using Stata. I am thinking about how to analyze multilevel models using multiple statistical languages: Stata, R, and Julia. This developing tutorial can be found at: https://agrogan1.github.io/multilevel-multilingual/\n\n\n\nMultilevel Thinking"
+    "text": "Locations of Countries in MICS\n\n\nFor our work with the UNICEF Multiple Indicator Cluster Survey (MICS) data on parenting and child development in Low and Middle Income Countries around the world, I have been experimenting with the ArcGIS “storymaps” format:\n\nGender Inequality in Low- and Middle-Income Countries: Associations with Parental Physical Abuse and Moderation by Child Gender\n\nArticle\nArcGIS Storymap\nPress Release\n\n“The Association between Spanking and Physical Abuse of Young Children in 56 Low- and Middle-Income Countries”\n\nArticle\nPress Release\nHTML Slides\nArcGIS Storymap\n\n“Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach”\n\nArticle\nArcGIS Storymap\n\n“Multilevel ecological analysis of the predictors of spanking across 65 countries”\n\nArticle\nArcGIS Storymap"
   },
   {
     "objectID": "posts/you-have-to-get-your-data-from-somewhere/index.html",
@@ -329,11 +238,144 @@
     "text": "Footnotes\n\n\nHow R will refer to your data. R’s nickname for your data.↩︎\nThe correct function for the type of data you are reading in, e.g. RData, CSV, Excel.↩︎\nWhere is your data located? The directory path to your data.↩︎\nWhat is the filename of the file containing your data? Note that the extension often tells you what kind of data this is.↩︎\nSometimes, especially on a Mac, it is necessary to refer to your directory with a ~, e.g. ~/downloads/project1.RData or ~/Desktop/project1.RData or ~/project1/project1.RData.↩︎"
   },
   {
-    "objectID": "posts/ArcGIS-storymaps/index.html",
-    "href": "posts/ArcGIS-storymaps/index.html",
-    "title": "ArcGIS Storymaps",
+    "objectID": "posts/multilevel-multilingual/index.html",
+    "href": "posts/multilevel-multilingual/index.html",
+    "title": "Multilevel Multilingual",
     "section": "",
-    "text": "Locations of Countries in MICS\n\n\nFor our work with the UNICEF Multiple Indicator Cluster Survey (MICS) data on parenting and child development in Low and Middle Income Countries around the world, I have been experimenting with the ArcGIS “storymaps” format:\n\nGender Inequality in Low- and Middle-Income Countries: Associations with Parental Physical Abuse and Moderation by Child Gender\n\nArticle\nArcGIS Storymap\nPress Release\n\n“The Association between Spanking and Physical Abuse of Young Children in 56 Low- and Middle-Income Countries”\n\nArticle\nPress Release\nHTML Slides\nArcGIS Storymap\n\n“Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach”\n\nArticle\nArcGIS Storymap\n\n“Multilevel ecological analysis of the predictors of spanking across 65 countries”\n\nArticle\nArcGIS Storymap"
+    "text": "I have developed a book draft on multilevel modeling, entitled Multilevel Thinking. The book draft discusses multilevel modeling in the context of cross cultural, or international, research.\nThe book draft is written from the perspective of using Stata. I am thinking about how to analyze multilevel models using multiple statistical languages: Stata, R, and Julia. This developing tutorial can be found at: https://agrogan1.github.io/multilevel-multilingual/\n\n\n\nMultilevel Thinking"
+  },
+  {
+    "objectID": "posts/bignumber/index.html",
+    "href": "posts/bignumber/index.html",
+    "title": "Making a ‘Big Number’ (And Circle) With R",
+    "section": "",
+    "text": "Sometimes a large number (and accompanying circle) can represent a compelling visualization. This flipbook explains how to make such visualizations in R: https://agrogan1.github.io/R/bignumber/bignumber.html"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Andrew Grogan-Kaylor",
+    "section": "",
+    "text": "Web\n\n\nEmail\n\n\nDeep Blue\n\n\nGitHub\n\n\nResearchGate\n\n\nGoogle Scholar\n\n\nOrcid\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Course Page"
+  },
+  {
+    "objectID": "teaching.html#data-visualization",
+    "href": "teaching.html#data-visualization",
+    "title": "Teaching",
+    "section": "",
+    "text": "Course Page"
+  },
+  {
+    "objectID": "teaching.html#multilevel-and-longitudinal-modeling",
+    "href": "teaching.html#multilevel-and-longitudinal-modeling",
+    "title": "Teaching",
+    "section": "Multilevel and Longitudinal Modeling",
+    "text": "Multilevel and Longitudinal Modeling\n\nCourse Page\n\n\n\n\n\n\n\nMultilevel Thinking, an in development introduction to multilevel modeling.\n\n\n\n\n\n\n\nMultilevel Workshop, an in development workshop on multilevel modeling.\n\n\n\n\n\n\n\nVisualizing Multilevel Models\n\n\n\n\n\n\n\nMultilevel Multilingual, multilevel models in multiple statistical languages."
+  },
+  {
+    "objectID": "teaching.html#categorical-data-analysis",
+    "href": "teaching.html#categorical-data-analysis",
+    "title": "Teaching",
+    "section": "Categorical Data Analysis",
+    "text": "Categorical Data Analysis\n\nCourse Page"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "Many of these publications are available from Deep Blue.\n\n\n\nThis research is conducted in collaboration with colleagues Shawna Lee, Julie Ma, Kaitlin Ward, Garrett Pace, and Jorge Cuartas.\n\n\n\n\n\nLocations of Countries in MICS\n\n\n\n\n\nProject website\n\n\n\n\n\nGender Inequality in Low- and Middle-Income Countries: Associations with Parental Physical Abuse and Moderation by Child Gender\n\nArticle\nArcGIS Storymap\nPress Release\n\n“The Association between Spanking and Physical Abuse of Young Children in 56 Low- and Middle-Income Countries”\n\nArticle\nPress Release\nHTML Slides\nArcGIS Storymap\n\n“Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach”\n\nArticle\nArcGIS Storymap\n\n“Multilevel ecological analysis of the predictors of spanking across 65 countries”\n\nArticle\nArcGIS Storymap\n\n“Global Perspectives on Positive and Negative Parenting: A Bayesian Multilevel Analysis”\n\nAbstract\nArticle\n\n“Spanking and young children’s socioemotional development in low- and middle-income countries”\n\nOpen Access\nChild Trends News Service has released a well done video summarizing this research.\n\n\n\n\n\n\n\n“Adverse childhood experiences and spanking have similar associations with early behavior problems”\n“Unpacking the impact of adverse childhood experiences on adult mental health”\n“Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience”\n\n\n\n\n\n“Anxiety and Depression During COVID-19: Are Adults in Households with Children Faring Worse?”\n\nNews Release\n\n\n\n\n\n\n“Physical Punishment as a Predictor of Early Cognitive Development: Evidence From Econometric Approaches”\n“Physical punishment and Colombian children and adolescents’ cognitive and behavioral outcomes”\n“Civil conflict, domestic violence, and poverty as predictors of corporal punishment in Colombia”\n\n\n\n\n\nMeta-Analysis of Research on Corporal Punishment [PubMed Full Text]\n\n\n\n\n\nData Visualizations of Country Level Bans on Corporal Punishment\n\n\n\n\n\nCountry Level Bans on Corporal Punishment\n\n\n\n\n\n\nEarlier Research On Corporal Punishment"
+  },
+  {
+    "objectID": "research.html#research-on-parenting-and-child-development",
+    "href": "research.html#research-on-parenting-and-child-development",
+    "title": "Research",
+    "section": "",
+    "text": "Many of these publications are available from Deep Blue.\n\n\n\nThis research is conducted in collaboration with colleagues Shawna Lee, Julie Ma, Kaitlin Ward, Garrett Pace, and Jorge Cuartas.\n\n\n\n\n\nLocations of Countries in MICS\n\n\n\n\n\nProject website\n\n\n\n\n\nGender Inequality in Low- and Middle-Income Countries: Associations with Parental Physical Abuse and Moderation by Child Gender\n\nArticle\nArcGIS Storymap\nPress Release\n\n“The Association between Spanking and Physical Abuse of Young Children in 56 Low- and Middle-Income Countries”\n\nArticle\nPress Release\nHTML Slides\nArcGIS Storymap\n\n“Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach”\n\nArticle\nArcGIS Storymap\n\n“Multilevel ecological analysis of the predictors of spanking across 65 countries”\n\nArticle\nArcGIS Storymap\n\n“Global Perspectives on Positive and Negative Parenting: A Bayesian Multilevel Analysis”\n\nAbstract\nArticle\n\n“Spanking and young children’s socioemotional development in low- and middle-income countries”\n\nOpen Access\nChild Trends News Service has released a well done video summarizing this research.\n\n\n\n\n\n\n\n“Adverse childhood experiences and spanking have similar associations with early behavior problems”\n“Unpacking the impact of adverse childhood experiences on adult mental health”\n“Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience”\n\n\n\n\n\n“Anxiety and Depression During COVID-19: Are Adults in Households with Children Faring Worse?”\n\nNews Release\n\n\n\n\n\n\n“Physical Punishment as a Predictor of Early Cognitive Development: Evidence From Econometric Approaches”\n“Physical punishment and Colombian children and adolescents’ cognitive and behavioral outcomes”\n“Civil conflict, domestic violence, and poverty as predictors of corporal punishment in Colombia”\n\n\n\n\n\nMeta-Analysis of Research on Corporal Punishment [PubMed Full Text]\n\n\n\n\n\nData Visualizations of Country Level Bans on Corporal Punishment\n\n\n\n\n\nCountry Level Bans on Corporal Punishment\n\n\n\n\n\n\nEarlier Research On Corporal Punishment"
+  },
+  {
+    "objectID": "research.html#community-based-research-in-alaska",
+    "href": "research.html#community-based-research-in-alaska",
+    "title": "Research",
+    "section": "Community Based Research in Alaska",
+    "text": "Community Based Research in Alaska\n\nCulturally Grounded Strategies for Suicide and Alcohol Risk Prevention Delivered by Rural Alaska Native Communities: A Dynamic Wait‐listed Design Evaluation of the Qungasvik Intervention.\n\nOpen Access Article"
+  },
+  {
+    "objectID": "posts/everything-is-obvious-once-you-know-the-answer/index.html",
+    "href": "posts/everything-is-obvious-once-you-know-the-answer/index.html",
+    "title": "Everything is Obvious Once You Know The Answer",
+    "section": "",
+    "text": "I have been thinking a lot about the idea that Everything Is Obvious, Once You Know The Answer, as detailed in the book with this title by Duncan Watts.\nThis seems to me especially true in Social Research.\nFor example, in our work with the international MICS data, we conducted a study of the link between gender inequality and physical child abuse. We expected to find that higher levels of gender inequality led to higher levels of physical abuse for female children, but not for male children. Instead, we found that higher levels of gender inequality were associated with higher levels of physical abuse for both male and female children. Equally interesting was that we found that gender inequality was predictive of levels of child abuse, while country level GDP was not.\nSimilarly, in a study of parenting during Covid-19, we expected to find that households with children would experience higher levels of anxiety and depression than households without children. Instead, we found the opposite. Being in a household with children was generally protective for anxiety and depression.\nIn his book, Watts uses the example from over 50 years ago, of a large study conducted by Lazarsfeld of veterans returning from World War II. The results are surprising. I’ve prepared a slide deck on these ideas here: https://agrogan1.github.io/teaching/everything-is-obvious/everything-is-obvious.html#/title-slide"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code.\n\n\n[1] 2"
+  },
+  {
+    "objectID": "posts/why-cant-numbers-be-beautiful-too/index.html",
+    "href": "posts/why-cant-numbers-be-beautiful-too/index.html",
+    "title": "Why can’t numbers be beautiful too?",
+    "section": "",
+    "text": "“Why can’t numbers be beautiful too?\nWe all talk of beautiful words, art, buildings and they’re not part of the natural world, either. An x in Algebra is no more abstract than an idea in philosophy, just more useful.\nBut it can’t be use that makes the difference. Keats found beauty in a Grecian urn, surely practical at some time and no one is blind to the beauty of symmetry.\nWe all get Blake’s awe of the tiger’s stripes. Why not awe at Gaussian curves? Of course, I know there is no great beauty in a single number, in a four or a seven or an eight, but it is the same\nwith the alphabet. Where is the wonder in a b or a k or a t? It is only the combinations, the meanings, the relationships between the letters that make the words and sounds we love.\n– And so, why can’t my numbers be beautiful to me? Why the scorn, the doubt in your face? Do you think I am brittle and dusty as old paper?\nLook again. See the numbers shine in my eyes”\n– Pye (2011)\n\n\n\n\nReferences\n\nPye, E. (2011). Eveline Pye: Poetry in numbers, by Julian Champkin. Significance, 8(3), 127–130. https://doi.org/10.1111/j.1740-9713.2011.00510.x"
+  },
+  {
+    "objectID": "posts/transcendental-etude/index.html",
+    "href": "posts/transcendental-etude/index.html",
+    "title": "Transcendental Etude",
+    "section": "",
+    "text": "“… a lifetime is too narrow\nto understand it all, beginning with the huge\nrockshelves that underlie all that life.\n…\nNo one ever told us we had to study our lives,\nmake of our lives a study, as if learning natural history\nor music, that we should begin\nwith the simple exercises first\nand slowly go on trying\nthe hard ones, practicing till strength\nand accuracy became one with the daring\nto leap into transcendence…\n…\nBut there come times—perhaps this is one of them—\nwhen we have to take ourselves more seriously or die,\nwhen we have to pull back from the incantations,\nrhythms we’ve moved to thoughtlessly,\nand disenthrall ourselves, bestow\nourselves to silence, or a severer listening…”\n– Rich (1984)\n\n\n\n\nReferences\n\nRich, A. (1984). Transcendental etude. In The fact of a doorframe: Poems selected and new 1950-1984. Norton."
+  },
+  {
+    "objectID": "posts/Simpsons-paradox-R/index.html#cross-tabulation",
+    "href": "posts/Simpsons-paradox-R/index.html#cross-tabulation",
+    "title": "Simpson’s Paradox",
+    "section": "Cross Tabulation",
+    "text": "Cross Tabulation\n\n\n\n\n\n\n\n\n\n\n \ndead\nalive\n\n\n\n\nuntreated\n6\n6\n\n\ntreated\n20\n20"
+  },
+  {
+    "objectID": "posts/Simpsons-paradox-R/index.html#mosaic-plot",
+    "href": "posts/Simpsons-paradox-R/index.html#mosaic-plot",
+    "title": "Simpson’s Paradox",
+    "section": "Mosaic Plot",
+    "text": "Mosaic Plot\n\nMosaic Plots are a little bit counterintuive at first. However, I believe that–after a little bit of study–Mosaic Plots provide the best visual representation of these relationships."
+  },
+  {
+    "objectID": "posts/Simpsons-paradox-R/index.html#pie-chart",
+    "href": "posts/Simpsons-paradox-R/index.html#pie-chart",
+    "title": "Simpson’s Paradox",
+    "section": "Pie Chart",
+    "text": "Pie Chart\n\nA Pie Chart sometimes is more intuitive at first, but actually has less information than a Mosaic Chart."
+  },
+  {
+    "objectID": "posts/Simpsons-paradox-R/index.html#cross-tabulation-1",
+    "href": "posts/Simpsons-paradox-R/index.html#cross-tabulation-1",
+    "title": "Simpson’s Paradox",
+    "section": "Cross Tabulation",
+    "text": "Cross Tabulation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA\nB\n\n\nuntreated\ndead\n\n3\n3\n\n\n\nalive\n\n4\n2\n\n\ntreated\ndead\n\n5\n15\n\n\n\nalive\n\n8\n12"
+  },
+  {
+    "objectID": "posts/Simpsons-paradox-R/index.html#mosaic-plot-1",
+    "href": "posts/Simpsons-paradox-R/index.html#mosaic-plot-1",
+    "title": "Simpson’s Paradox",
+    "section": "Mosaic Plot",
+    "text": "Mosaic Plot"
+  },
+  {
+    "objectID": "posts/Simpsons-paradox-R/index.html#pie-chart-1",
+    "href": "posts/Simpsons-paradox-R/index.html#pie-chart-1",
+    "title": "Simpson’s Paradox",
+    "section": "Pie Chart",
+    "text": "Pie Chart"
   },
   {
     "objectID": "posts/multilevel-thinking-a-book-draft/index.html",
@@ -425,47 +467,5 @@
     "title": "About Me",
     "section": "",
     "text": "I am the Sandra K. Danziger Collegiate Professor of Social Work.\nI am strongly motivated by concerns for social justice. Right after undergraduate studies, I was a community organizer for a year, and then a Peace Corps Volunteer living for two years in the at-the-time remote Upper East Region of Ghana, and doing community development work, both in English, and in the local language Kusaal. These early experiences have been the source of commitments to social justice, and to developing an evidence base for practice, that continue in my work today.\nMy core intellectual interest is the way in which parenting behaviors have an effect on child outcomes. For example, parenting behaviors like the use of corporal punishment, or parental expressions of emotional warmth, are likely to have an effect on child outcomes like aggression, antisocial behavior, anxiety and depression. I am interested in how these dynamics play out across contexts, neighborhoods, and cultures.\nIn my work I use advanced statistical models, like multilevel models and some econometric models, and software like Stata, R and GIS, to examine things like growth and change over time, or community, school or parent effects on children and families. I’m also very interested in data visualization.\nI have also worked on developing and evaluating interventions for under-served populations, particularly among people who speak Spanish as their primary language.\nA lot of my work is done with international samples. The globe on this webpage indicates the countries where some of the data that I’ve used has come from, or where I have done some work.\n\n\n\n\nCountries where some of the data that I’ve used has come from, or where I have done some work.\n\n\nMore recently, my collaborators and I have been doing quite a bit of work with the MICS data collected by UNICEF. Below, please find a map of the countries in which the MICS surveys were conducted.\n\n\n\n\nCountries in MICS\n\n\nPlease click here for my faculty page on the School of Social Work website.\nFor copies of any of my published research papers, please e-mail me at agrogan@umich.edu.\nI have many course materials on the web that are not directly linked to from this website. If you are one of my students and can’t find a particular resource that you need for class, please let me know at agrogan@umich.edu.\nMy blog on statistics, data visualization, data analysis, and my research activities is at: https://agrogan1.github.io/myposts/.\nThis webpage is mostly up to date, but always under construction to some degree. If you think something should be here, but it isn’t, please let me know."
-  },
-  {
-    "objectID": "posts/Simpsons-paradox-R/index.html#cross-tabulation",
-    "href": "posts/Simpsons-paradox-R/index.html#cross-tabulation",
-    "title": "Simpson’s Paradox",
-    "section": "Cross Tabulation",
-    "text": "Cross Tabulation\n\n\n\n\n\n\n\n\n\n\n \ndead\nalive\n\n\n\n\nuntreated\n6\n6\n\n\ntreated\n20\n20"
-  },
-  {
-    "objectID": "posts/Simpsons-paradox-R/index.html#mosaic-plot",
-    "href": "posts/Simpsons-paradox-R/index.html#mosaic-plot",
-    "title": "Simpson’s Paradox",
-    "section": "Mosaic Plot",
-    "text": "Mosaic Plot\n\nMosaic Plots are a little bit counterintuive at first. However, I believe that–after a little bit of study–Mosaic Plots provide the best visual representation of these relationships."
-  },
-  {
-    "objectID": "posts/Simpsons-paradox-R/index.html#pie-chart",
-    "href": "posts/Simpsons-paradox-R/index.html#pie-chart",
-    "title": "Simpson’s Paradox",
-    "section": "Pie Chart",
-    "text": "Pie Chart\n\nA Pie Chart sometimes is more intuitive at first, but actually has less information than a Mosaic Chart."
-  },
-  {
-    "objectID": "posts/Simpsons-paradox-R/index.html#cross-tabulation-1",
-    "href": "posts/Simpsons-paradox-R/index.html#cross-tabulation-1",
-    "title": "Simpson’s Paradox",
-    "section": "Cross Tabulation",
-    "text": "Cross Tabulation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA\nB\n\n\nuntreated\ndead\n\n3\n3\n\n\n\nalive\n\n4\n2\n\n\ntreated\ndead\n\n5\n15\n\n\n\nalive\n\n8\n12"
-  },
-  {
-    "objectID": "posts/Simpsons-paradox-R/index.html#mosaic-plot-1",
-    "href": "posts/Simpsons-paradox-R/index.html#mosaic-plot-1",
-    "title": "Simpson’s Paradox",
-    "section": "Mosaic Plot",
-    "text": "Mosaic Plot"
-  },
-  {
-    "objectID": "posts/Simpsons-paradox-R/index.html#pie-chart-1",
-    "href": "posts/Simpsons-paradox-R/index.html#pie-chart-1",
-    "title": "Simpson’s Paradox",
-    "section": "Pie Chart",
-    "text": "Pie Chart"
   }
 ]
