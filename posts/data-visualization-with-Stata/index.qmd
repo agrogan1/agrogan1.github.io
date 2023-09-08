@@ -1,0 +1,45 @@
+---
+title: "Data Visualization With Stata"
+subtitle: "Visualizing Data With Stata"
+author: "Andy Grogan-Kaylor"
+date: "2023-9-8"
+categories: [stats, dataviz]
+---
+
+```{r}
+
+library(Statamarkdown)
+
+```
+
+```{stata}
+#| echo: true
+#| execute: false
+#| code-fold: true
+#| code-summary: "Show the code"
+
+use gutten.dta
+
+twoway (scatter height age_base, mcolor(green%50)) ///
+(lfit height age_base, lcolor(gold) lwidth(thick)), ///
+title("Tree Height by Tree Age") ///
+caption("Gutten Tree Data") ///
+xtitle("Tree Age") ///
+ytitle("Tree Height")
+
+graph export "gutten.png", width(2000) replace
+
+```
+
+
+![Graph of Gutten Tree Data](gutten.png)
+
+
+Stata is a powerful and intuitive data analysis program. However, Stata is often under-appreciated as data visualization software. Learning how to graph in Stata is an important part of learning how to use Stata. In older versions of Stata, the default graphs in Stata could sometimes be less than optimal. In newer versions of Stata, the default graphs have been very much improved and are professional looking and aesthetically appealing *out of the box*. With a few tweaks, graphs in Stata can be even further customized.
+
+I posted a few materials on using Stata for data visualization:
+
+* [Data Visualization With Stata](https://agrogan1.github.io/Stata/data-visualization-with-Stata/data-visualization-with-Stata-slidy.html) [[PDF](https://agrogan1.github.io/Stata/data-visualization-with-Stata/data-visualization-with-Stata.pdf)] 
+* [The Basics of Data Visualization With Stata](https://agrogan1.github.io/Stata/data-visualization-with-Stata-the-basics/data-visualization-with-Stata-the-basics.html) ([PDF](https://agrogan1.github.io/Stata/data-visualization-with-Stata-the-basics/data-visualization-with-Stata-the-basics.pdf))
+
+

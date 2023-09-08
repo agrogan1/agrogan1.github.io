@@ -1,0 +1,14 @@
+{
+  "hash": "e67b1273e64596c2364ffb4ad7b7a76f",
+  "result": {
+    "markdown": "---\ntitle: \"Data Visualization With Stata\"\nsubtitle: \"Visualizing Data With Stata\"\nauthor: \"Andy Grogan-Kaylor\"\ndate: \"2023-9-8\"\ncategories: [stats, dataviz]\n---\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n```{.stata .cell-code  code-fold=\"true\" code-summary=\"Show the code\"}\nuse gutten.dta\n\ntwoway (scatter height age_base, mcolor(green%50)) ///\n(lfit height age_base, lcolor(gold) lwidth(thick)), ///\ntitle(\"Tree Height by Tree Age\") ///\ncaption(\"Gutten Tree Data\") ///\nxtitle(\"Tree Age\") ///\nytitle(\"Tree Height\")\n\ngraph export \"gutten.png\", width(2000) replace\n\n```\n:::\n\n\n\n![Graph of Gutten Tree Data](gutten.png)\n\n\nStata is a powerful and intuitive data analysis program. However, Stata is often under-appreciated as data visualization software. Learning how to graph in Stata is an important part of learning how to use Stata. In older versions of Stata, the default graphs in Stata could sometimes be less than optimal. In newer versions of Stata, the default graphs have been very much improved and are professional looking and aesthetically appealing *out of the box*. With a few tweaks, graphs in Stata can be even further customized.\n\nI posted a few materials on using Stata for data visualization:\n\n* [Data Visualization With Stata](https://agrogan1.github.io/Stata/data-visualization-with-Stata/data-visualization-with-Stata-slidy.html) [[PDF](https://agrogan1.github.io/Stata/data-visualization-with-Stata/data-visualization-with-Stata.pdf)] \n* [The Basics of Data Visualization With Stata](https://agrogan1.github.io/Stata/data-visualization-with-Stata-the-basics/data-visualization-with-Stata-the-basics.html) ([PDF](https://agrogan1.github.io/Stata/data-visualization-with-Stata-the-basics/data-visualization-with-Stata-the-basics.pdf))\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

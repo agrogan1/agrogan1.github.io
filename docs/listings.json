@@ -2,8 +2,10 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/criticizing-a-musician-is-easy/index.html",
+      "/posts/data-visualization-with-Stata/index.html",
+      "/posts/GIS-and-mapping/index.html",
       "/posts/multilevel-thinking-a-book-draft/index.html",
+      "/posts/criticizing-a-musician-is-easy/index.html",
       "/posts/multilevel-workshop/index.html",
       "/posts/Simpsons-paradox-and-aggregation-paradox/index.html",
       "/posts/Simpsons-paradox-R/index.html",
