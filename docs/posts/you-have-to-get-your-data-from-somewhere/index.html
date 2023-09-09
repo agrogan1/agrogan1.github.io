@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Andy Grogan-Kaylor">
+<meta name="dcterms.date" content="2023-08-14">
+
+<title>Andrew Grogan-Kaylor - You Have To Get Your Data From Somewhere</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Andrew Grogan-Kaylor - You Have To Get Your Data From Somewhere">
+<meta property="og:description" content="">
+<meta property="og:image" content="data.png">
+<meta property="og:site-name" content="Andrew Grogan-Kaylor">
+<meta name="twitter:title" content="Andrew Grogan-Kaylor - You Have To Get Your Data From Somewhere">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="data.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="citation_title" content="You Have To Get Your Data From Somewhere">
+<meta name="citation_author" content="Andy Grogan-Kaylor">
+<meta name="citation_publication_date" content="2023-08-14">
+<meta name="citation_cover_date" content="2023-08-14">
+<meta name="citation_year" content="2023">
+<meta name="citation_online_date" content="2023-08-14">
+<meta name="citation_language" content="en">
+<meta name="citation_reference" content="citation_title=Corporal punishment – 10 key messages;,citation_author=End Violence Against Children;,citation_author=End Corporal Punishment;,citation_publication_date=2022;,citation_cover_date=2022;,citation_year=2022;,citation_fulltext_html_url=https://www.end-violence.org/;,citation_technical_report_institution=End Corporal Punishment;">
+<meta name="citation_reference" content="citation_title=Eveline Pye: Poetry in numbers, by Julian Champkin;,citation_abstract=Statistics is dry, practical, unimaginative? Unpoetical? Too many people think so. Is there poetry in numbers? Julian Champkin talks to Eveline Pye, statistician and poet of statistics, to disprove it.;,citation_author=Eveline Pye;,citation_publication_date=2011;,citation_cover_date=2011;,citation_year=2011;,citation_fulltext_html_url=https://rss.onlinelibrary.wiley.com/doi/abs/10.1111/j.1740-9713.2011.00510.x;,citation_issue=3;,citation_doi=10.1111/j.1740-9713.2011.00510.x;,citation_volume=8;,citation_journal_title=Significance;">
+<meta name="citation_reference" content="citation_title=Transcendental etude;,citation_abstract=The Fact of a Doorframe: Poems Selected and New 1950-1984 (New York: Norton, 1984);,citation_author=Adrienne Rich;,citation_publication_date=1984;,citation_cover_date=1984;,citation_year=1984;,citation_inbook_title=The fact of a doorframe: Poems selected and new 1950-1984;">
+<meta name="citation_reference" content="citation_title=Corporal punishment: The global picture;,citation_abstract=Globally, corporal punishment is the most common form of violence against children. A large body of evidence demonstrates that it has no positive long-term outcomes and predicts a wide range of adverse effects in childhood and adulthood. The United Nations has declared that corporal punishment violates children’s fundamental rights to protection and has called on all countries to repeal laws that allow or justify it. As of June 2023, 65 countries have prohibited corporal punishment of children in all settings. These laws were implemented to make it clear that no level of violence against children is allowed and to uphold children’s rights to protection. This article aims to: (1) summarize the research and human rights rationales for the prohibition of corporal punishment; (2) provide a global update on its legal status; and (3) present research findings from Sweden, Germany, and New Zealand, three countries that have banned corporal punishment.;,citation_author=Ashley Stewart-Tufescu;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_doi=10.22215/cjcr.v10i1;,citation_volume=10;,citation_journal_title=The Canadian Journal of Children’s Rights / Revue Canadienne des Droits des Enfants;">
+<meta name="citation_reference" content="citation_title=A familiar face: Violence in the lives of children and adolescents;,citation_author=UNICEF;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_technical_report_institution=UNICEF;">
+<meta name="citation_reference" content="citation_title=Global status report on preventing violence against children 2020;,citation_author=World Health Organization;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_fulltext_html_url=https://www.unicef.org/sites/default/files/2020-06/Global-status-report-on-preventing-violence-against-children-2020.pdf;,citation_technical_report_institution=World Health Organization;">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Andrew Grogan-Kaylor</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://ssw.umich.edu/sites/default/files/documents/faculty/cvs/agrogan_cv.pdf" rel="" target="">
+ <span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../teaching.html" rel="" target="">
+ <span class="menu-text">Teaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../research.html" rel="" target="">
+ <span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../stats_stuff.html" rel="" target="">
+ <span class="menu-text">Stats Stuff</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://agrogan1.github.io/multilevel-thinking/" rel="" target="">
+ <span class="menu-text">Multilevel Thinking</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://globalfamilies.quarto.pub/global-families-project/" rel="" target="">
+ <span class="menu-text">Global Families</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html" rel="" target="">
+ <span class="menu-text">Blog-ish Posts</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">About Me</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../contact.html" rel="" target="">
+ <span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">You Have To Get Your Data From Somewhere</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">stats</div>
+                <div class="quarto-category">dataviz</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Andy Grogan-Kaylor </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 14, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#you-have-to-get-your-data-from-somewhere" id="toc-you-have-to-get-your-data-from-somewhere" class="nav-link active" data-scroll-target="#you-have-to-get-your-data-from-somewhere">You Have To Get Your Data From Somewhere</a></li>
+  <li><a href="#rmarkdown" id="toc-rmarkdown" class="nav-link" data-scroll-target="#rmarkdown">RMarkdown</a></li>
+  <li><a href="#basic-idea" id="toc-basic-idea" class="nav-link" data-scroll-target="#basic-idea">Basic Idea</a></li>
+  <li><a href="#setting-up-your-data-before-importing" id="toc-setting-up-your-data-before-importing" class="nav-link" data-scroll-target="#setting-up-your-data-before-importing">Setting Up Your Data Before Importing</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a>
+  <ul class="collapse">
+  <li><a href="#data-already-in-r-format" id="toc-data-already-in-r-format" class="nav-link" data-scroll-target="#data-already-in-r-format">Data Already in R Format</a></li>
+  <li><a href="#data-in-csv-format" id="toc-data-in-csv-format" class="nav-link" data-scroll-target="#data-in-csv-format">Data in CSV Format</a></li>
+  <li><a href="#data-in-excel-format" id="toc-data-in-excel-format" class="nav-link" data-scroll-target="#data-in-excel-format">Data in Excel Format</a></li>
+  <li><a href="#data-in-stata" id="toc-data-in-stata" class="nav-link" data-scroll-target="#data-in-stata">Data in Stata</a></li>
+  <li><a href="#data-in-spss-format" id="toc-data-in-spss-format" class="nav-link" data-scroll-target="#data-in-spss-format">Data in SPSS Format</a></li>
+  <li><a href="#data-in-sas-format" id="toc-data-in-sas-format" class="nav-link" data-scroll-target="#data-in-sas-format">Data in SAS Format</a></li>
+  <li><a href="#hand-code-data-using-tribble" id="toc-hand-code-data-using-tribble" class="nav-link" data-scroll-target="#hand-code-data-using-tribble">Hand Code Data Using <code>tribble</code></a></li>
+  <li><a href="#data-in-r-package" id="toc-data-in-r-package" class="nav-link" data-scroll-target="#data-in-r-package">Data in R Package</a></li>
+  </ul></li>
+  <li><a href="#save-your-data-in-r-format" id="toc-save-your-data-in-r-format" class="nav-link" data-scroll-target="#save-your-data-in-r-format">Save Your Data in R Format</a></li>
+  <li><a href="#working-directory" id="toc-working-directory" class="nav-link" data-scroll-target="#working-directory">Working Directory</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="you-have-to-get-your-data-from-somewhere" class="level1">
+<h1>You Have To Get Your Data From Somewhere</h1>
+<p>In learning R, as well as RMarkdown, one of the most difficult tasks seems to be understanding how to import data.</p>
+<p>Read your data into a dataset using the <em>right function</em> for the <em>right format</em> from the <em>correct location</em>.</p>
+<p>Note that while learning the correct syntax is <em>very helpful</em>, RStudio can generate much of this syntax for you using the <strong>File | Import Dataset | …</strong> menu.</p>
+</section>
+<section id="rmarkdown" class="level1">
+<h1>RMarkdown</h1>
+<blockquote class="blockquote">
+<p>When you are working with RMarkdown, each RMarkdown document creates its own separate <strong>working environment</strong>. Therefore each RMarkdown document needs to have a line, or lines, of code that import the data file for that individual RMarkdown document. e.g.</p>
+</blockquote>
+<p>If data are in R format …</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>mydata <span class="ot">&lt;-</span> <span class="fu">load</span>(<span class="st">"/project1/mydata.RData"</span>) <span class="co"># load R format data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If data are in Excel format …</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl) <span class="co"># library to read Excel</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>mydata <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"/project1/mydata.xlsx"</span>) <span class="co"># load data from Excel</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="basic-idea" class="level1">
+<h1>Basic Idea</h1>
+<blockquote class="blockquote">
+<p>In web versions of this document, hover over the footnotes to see what different parts of this syntax do.</p>
+</blockquote>
+<p><code>mydata</code><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> <code>&lt;- function</code><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a><code>("path/to/</code><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a><code>file.extension</code><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a><code>")</code><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+</section>
+<section id="setting-up-your-data-before-importing" class="level1">
+<h1>Setting Up Your Data Before Importing</h1>
+<p>Your data may already be set up in this way, but …</p>
+<p>Your data, whether in a text file, a statistical file, or an Excel file, should be in <em>rectangular</em> format organized by rows and columns, as seen in the example below.</p>
+<p>Remember that any statistical or data visualization software is going to be happier with <strong>shorter column names</strong> like <em>happy</em>, rather than longer column names like <em>“Generally speaking, how happy would you say that you are on most days?”</em>.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">id</th>
+<th style="text-align: left;">happy</th>
+<th style="text-align: left;">income</th>
+<th style="text-align: left;">neighborhood</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">12</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">123</td>
+<td style="text-align: left;">123</td>
+<td style="text-align: left;">123</td>
+<td style="text-align: left;">123</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
+<p>Datasets can be much larger than the example above, but should most often follow this <em>rectangular</em> format.</p>
+</section>
+<section id="examples" class="level1">
+<h1>Examples</h1>
+<section id="data-already-in-r-format" class="level2">
+<h2 class="anchored" data-anchor-id="data-already-in-r-format">Data Already in R Format</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>mydata <span class="ot">&lt;-</span> <span class="fu">load</span>(<span class="st">"/project1/mydata.RData"</span>) <span class="co"># load R format data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="data-in-csv-format" class="level2">
+<h2 class="anchored" data-anchor-id="data-in-csv-format">Data in CSV Format</h2>
+<p>CSV stands for <em>comma separated values</em>, and is essentially a raw text format for storing data. CSV is often an excellent format for exchanging data between programs. A few lines of <em>simulated data on clients</em> in CSV format are reproduced below.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="st">"ID"</span>,<span class="st">"age"</span>,<span class="st">"gender"</span>,<span class="st">"program"</span>,<span class="st">"mental_health_T1"</span>,<span class="st">"mental_health_T2"</span>,<span class="st">"latitude"</span>,<span class="st">"longitude"</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dv">2941</span>,<span class="dv">32</span>,<span class="st">"Male"</span>,<span class="st">"Program A"</span>,<span class="fl">98.81</span>,<span class="fl">95.49</span>,<span class="fl">42.1108308238603</span>,<span class="sc">-</span><span class="fl">83.6103627437424</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="dv">2745</span>,<span class="dv">22</span>,<span class="st">"Other Identity"</span>,<span class="st">"Program B"</span>,<span class="fl">86.28</span>,<span class="fl">104.84</span>,<span class="fl">42.0016810856589</span>,<span class="sc">-</span><span class="fl">83.8064503632259</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="dv">1320</span>,<span class="dv">28</span>,<span class="st">"Female"</span>,<span class="st">"Program B"</span>,<span class="fl">89.17</span>,<span class="fl">107.48</span>,<span class="fl">42.0398163096771</span>,<span class="sc">-</span><span class="fl">83.6793088312261</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="dv">1211</span>,<span class="dv">20</span>,<span class="st">"Male"</span>,<span class="st">"Program D"</span>,<span class="fl">94.15</span>,<span class="fl">95.71</span>,<span class="fl">42.2673004816002</span>,<span class="sc">-</span><span class="fl">83.8247411126595</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="dv">2293</span>,<span class="dv">20</span>,<span class="st">"Female"</span>,<span class="st">"Program D"</span>,<span class="fl">85.38</span>,<span class="fl">105.09</span>,<span class="fl">42.300730845518</span>,<span class="sc">-</span><span class="fl">83.7526918820329</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr) <span class="co"># library to read CSV</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>mydata <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"/project1/mydata.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="data-in-excel-format" class="level2">
+<h2 class="anchored" data-anchor-id="data-in-excel-format">Data in Excel Format</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl) <span class="co"># library to read Excel</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>mydata <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"/project1/mydata.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="data-in-stata" class="level2">
+<h2 class="anchored" data-anchor-id="data-in-stata">Data in Stata</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven) <span class="co"># library to read other file formats</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>mydata <span class="ot">&lt;-</span> <span class="fu">read_stata</span>(<span class="st">"/project1/mydata.dta"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="data-in-spss-format" class="level2">
+<h2 class="anchored" data-anchor-id="data-in-spss-format">Data in SPSS Format</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven) <span class="co"># library to read other file formats</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>mydata <span class="ot">&lt;-</span> <span class="fu">read_sav</span>(<span class="st">"/project1/mydata.sav"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="data-in-sas-format" class="level2">
+<h2 class="anchored" data-anchor-id="data-in-sas-format">Data in SAS Format</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven) <span class="co"># library to read other file formats</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>mydata <span class="ot">&lt;-</span> <span class="fu">read_sas</span>(<span class="st">"/project1/mydata.sas7bdat"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="hand-code-data-using-tribble" class="level2">
+<h2 class="anchored" data-anchor-id="hand-code-data-using-tribble">Hand Code Data Using <code>tribble</code></h2>
+<blockquote class="blockquote">
+<p>This can be especially useful for hand coding <em>small amounts</em> of data that come from a published online or print data source.</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tibble) <span class="co"># library for updated dataframes</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>mydata <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>ID, <span class="sc">~</span>age, <span class="sc">~</span>gender, <span class="sc">~</span>program,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="dv">2941</span>,<span class="dv">32</span>,<span class="st">"Male"</span>,<span class="st">"Program A"</span>,</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="dv">2745</span>,<span class="dv">22</span>,<span class="st">"Other Identity"</span>,<span class="st">"Program B"</span>,</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="dv">1320</span>,<span class="dv">28</span>,<span class="st">"Female"</span>,<span class="st">"Program B"</span>,</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="dv">2293</span>,<span class="dv">20</span>,<span class="st">"Female"</span>,<span class="st">"Program D"</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>When importing data using tribble, it is helpful to get a summary of your data.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mydata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       ID            age          gender            program         
+ Min.   :1320   Min.   :20.0   Length:4           Length:4          
+ 1st Qu.:2050   1st Qu.:21.5   Class :character   Class :character  
+ Median :2519   Median :25.0   Mode  :character   Mode  :character  
+ Mean   :2325   Mean   :25.5                                        
+ 3rd Qu.:2794   3rd Qu.:29.0                                        
+ Max.   :2941   Max.   :32.0                                        </code></pre>
+</div>
+</div>
+<p>It may then be helpful to insure some variables are changed to <code>factor</code>s.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>mydata<span class="sc">$</span>gender <span class="ot">&lt;-</span> <span class="fu">factor</span>(mydata<span class="sc">$</span>gender)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>mydata<span class="sc">$</span>program <span class="ot">&lt;-</span> <span class="fu">factor</span>(mydata<span class="sc">$</span>program)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mydata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       ID            age                  gender       program 
+ Min.   :1320   Min.   :20.0   Female        :2   Program A:1  
+ 1st Qu.:2050   1st Qu.:21.5   Male          :1   Program B:2  
+ Median :2519   Median :25.0   Other Identity:1   Program D:1  
+ Mean   :2325   Mean   :25.5                                   
+ 3rd Qu.:2794   3rd Qu.:29.0                                   
+ Max.   :2941   Max.   :32.0                                   </code></pre>
+</div>
+</div>
+</section>
+<section id="data-in-r-package" class="level2">
+<h2 class="anchored" data-anchor-id="data-in-r-package">Data in R Package</h2>
+<p>Sometimes data is obtained by calling an R package, or the data is directly built into R.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins) <span class="co"># call Palmer Penguins library</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"penguins"</span>) <span class="co"># call the penguins data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(iris) <span class="co"># call the iris flower data built into R</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="save-your-data-in-r-format" class="level1">
+<h1>Save Your Data in R Format</h1>
+<p>Once your data has been imported into R, you may wish to save it to R format for future use.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(mydata, <span class="at">file =</span> <span class="st">"mydata.RData"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Alternatively, one of the advantages of R is that it can read data from so many formats. It may be that your data is consistently being updated by other members of your team. For example, members of your team may be constantly updating an Excel file with your data. In such cases, you may wish to keep a line in your script to always import the most recent version of your data from that other format.</p>
+</section>
+<section id="working-directory" class="level1">
+<h1>Working Directory</h1>
+<p>R uses the concept of a <em>working directory</em> to know where to find files, and where to save files.</p>
+<p>If you do not specify a particular path to the data file that you are trying to import, R will assume that it is in your working directory.</p>
+<p>It is often helpful to simply set your working directory to a particular location and by default, files will be accessed from, and saved to, that directory e.g.:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>() <span class="co"># "get", or find out, your working directory</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"/project1"</span>) <span class="co"># set your working directory</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Note that R uses a forward slash <code>/</code> to specify directory paths. R does not understand the use of a backward slash <code>\</code> to specify directories. R uses <code>~</code> to refer to the user’s (usually your) home directory.</li>
+<li>If you are working in RStudio, you can use the menu option <em>Session | Set Working Directory | Choose Directory</em> to choose a particular working directory.</li>
+<li><span style="background-color: #FFFF00">If you double click on a <code>*.Rmd</code> file to start RStudio, R will assume that your working directory is the directory in which that <code>*.Rmd</code> file is located.</span> <span style="background-color: #00FFFF">Thus, it is often a good idea to have your data and RMarkdown document saved in the same directory.</span></li>
+</ul>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>How R will refer to your data. R’s <em>nickname</em> for your data.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>The correct function for the type of data you are reading in, e.g.&nbsp;RData, CSV, Excel.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Where is your data located? The <em>directory path</em> to your data.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>What is the <em>filename</em> of the file containing your data? Note that the extension often tells you <em>what kind</em> of data this is.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Sometimes, especially on a Mac, it is necessary to refer to your directory with a <code>~</code>, e.g.&nbsp;<code>~/downloads/project1.RData</code> or <code>~/Desktop/project1.RData</code> or <code>~/project1/project1.RData</code>.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
