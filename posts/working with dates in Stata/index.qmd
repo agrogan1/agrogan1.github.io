@@ -47,9 +47,9 @@ describe
 
 ```{stata, collectcode=TRUE, echo=TRUE}
 
-generate startdate2 = date(startdate, "YMD") // create a date specifying order of elements
+generate startdate2 = date(startdate, "YMD") // create a date, specifying order of elements
 
-generate enddate2 = date(enddate, "YMD") // create a date specifying order of elements
+generate enddate2 = date(enddate, "YMD") // create a date, specifying order of elements
 
 ```
 
@@ -64,6 +64,8 @@ list
 ```
 
 # Format As Dates
+
+We format these *numeric* variables as *dates*. While the variables remain as the number of days since January 1, 1960, since they are formatted as dates, they now appear as human readable dates.
 
 ```{stata, collectcode=TRUE, echo=TRUE}
 
