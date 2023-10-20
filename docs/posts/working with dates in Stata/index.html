@@ -266,8 +266,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">describe</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/working with dates in Stata/profi
-&gt; le.do . 
+<pre><code>Running C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\posts\working with d
+&gt; ates in Stata\profile.do . 
 
      +------------------------+
      |  startdate     enddate |
@@ -281,13 +281,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 Contains data from simulated-date.dta
  Observations:             3                  
     Variables:             2                  6 Apr 2021 16:46
-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 startdate       str10   %10s                  startdate
 enddate         str9    %9s                   enddate
-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 Sorted by: </code></pre>
 </div>
 </div>
@@ -299,12 +299,12 @@ Sorted by: </code></pre>
 </blockquote>
 <div class="cell" data-collectcode="true">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">generate</span> startdate2 = <span class="fu">date</span>(startdate, <span class="st">"YMD"</span>) <span class="co">// create a date specifying order of elements</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">generate</span> startdate2 = <span class="fu">date</span>(startdate, <span class="st">"YMD"</span>) <span class="co">// create a date, specifying order of elements</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">generate</span> enddate2 = <span class="fu">date</span>(enddate, <span class="st">"YMD"</span>) <span class="co">// create a date specifying order of elements</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">generate</span> enddate2 = <span class="fu">date</span>(enddate, <span class="st">"YMD"</span>) <span class="co">// create a date, specifying order of elements</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/working with dates in Stata/profi
-&gt; le.do . </code></pre>
+<pre><code>Running C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\posts\working with d
+&gt; ates in Stata\profile.do . </code></pre>
 </div>
 </div>
 <blockquote class="blockquote">
@@ -316,21 +316,21 @@ Sorted by: </code></pre>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/working with dates in Stata/profi
-&gt; le.do . 
+<pre><code>Running C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\posts\working with d
+&gt; ates in Stata\profile.do . 
 
 Contains data from simulated-date.dta
  Observations:             3                  
     Variables:             4                  6 Apr 2021 16:46
-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 startdate       str10   %10s                  startdate
 enddate         str9    %9s                   enddate
 startdate2      float   %9.0g                 
 enddate2        float   %9.0g                 
-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 Sorted by: 
      Note: Dataset has changed since last saved.
 
@@ -346,6 +346,7 @@ Sorted by:
 </section>
 <section id="format-as-dates" class="level1">
 <h1>Format As Dates</h1>
+<p>We format these <em>numeric</em> variables as <em>dates</em>. While the variables remain as the number of days since January 1, 1960, since they are formatted as dates, they now appear as human readable dates.</p>
 <div class="cell" data-collectcode="true">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">format</span> %<span class="kw">d</span> startdate2 enddate2</span>
@@ -354,22 +355,22 @@ Sorted by:
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/working with dates in Stata/profi
-&gt; le.do . 
+<pre><code>Running C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\posts\working with d
+&gt; ates in Stata\profile.do . 
 
 
 Contains data from simulated-date.dta
  Observations:             3                  
     Variables:             4                  6 Apr 2021 16:46
-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 startdate       str10   %10s                  startdate
 enddate         str9    %9s                   enddate
 startdate2      float   %d                    
 enddate2        float   %d                    
-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 Sorted by: 
      Note: Dataset has changed since last saved.
 
@@ -394,16 +395,32 @@ Sorted by:
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span>, abbreviate(15) <span class="co">// list out the data with new variables</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/working with dates in Stata/profi
-&gt; le.do . 
+<pre><code>Running C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\posts\working with d
+&gt; ates in Stata\profile.do . 
 
-     +------------------------------------------------------------------------------+
-     |  startdate     enddate   startdate2    enddate2   elapseddays   elapsedyears |
-     |------------------------------------------------------------------------------|
-  1. | 2019-01-01   2019-1-30    01jan2019   30jan2019            29       .0794521 |
-  2. | 2019-02-15   2019-5-30    15feb2019   30may2019           104       .2849315 |
-  3. | 2019-03-01   2019-4-30    01mar2019   30apr2019            60       .1643836 |
-     +------------------------------------------------------------------------------+</code></pre>
+     +---------------------------------------------------------------+
+  1. |  startdate |   enddate | startdate2 |  enddate2 | elapseddays |
+     | 2019-01-01 | 2019-1-30 |  01jan2019 | 30jan2019 |          29 |
+     |---------------------------------------------------------------|
+     |                         elapsedyears                          |
+     |                             .0794521                          |
+     +---------------------------------------------------------------+
+
+     +---------------------------------------------------------------+
+  2. |  startdate |   enddate | startdate2 |  enddate2 | elapseddays |
+     | 2019-02-15 | 2019-5-30 |  15feb2019 | 30may2019 |         104 |
+     |---------------------------------------------------------------|
+     |                         elapsedyears                          |
+     |                             .2849315                          |
+     +---------------------------------------------------------------+
+
+     +---------------------------------------------------------------+
+  3. |  startdate |   enddate | startdate2 |  enddate2 | elapseddays |
+     | 2019-03-01 | 2019-4-30 |  01mar2019 | 30apr2019 |          60 |
+     |---------------------------------------------------------------|
+     |                         elapsedyears                          |
+     |                             .1643836                          |
+     +---------------------------------------------------------------+</code></pre>
 </div>
 </div>
 
