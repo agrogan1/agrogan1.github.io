@@ -89,7 +89,8 @@ library(leaflet)
 
 leaflet() %>%
   setView(0, 25, zoom = 1.5) %>%
-  addProviderTiles(providers$Stamen.Terrain) %>%
+  # addTiles() %>%
+  addProviderTiles(providers$OpenTopoMap) %>%
   addPolygons(data = MICS, 
               fillOpacity = .75, 
               color = "#5b92e5", 
