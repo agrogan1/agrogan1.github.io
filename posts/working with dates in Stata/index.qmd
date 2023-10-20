@@ -1,0 +1,69 @@
+% Working With Dates in Stata
+% Andy Grogan-Kaylor 
+% `s c(current_date)` `s c(current_time)`
+
+---
+geometry: margin=1 in
+---
+
+<style>body {max-width: 90%} h1 {color: #00274C;} h2 {color: #2F65A7;} p {font-size: 110%;} pre.stata {font-size: 110%;} blockquote {border-left: 5px solid #ffcb05; margin: 1.5em 10px; padding: 0.5em 10px;} code {color: red;}</style>
+
+# Introduction
+
+Dates in any statistical software (Stata, R) are complicated. 
+
+For example, a particular date could be coded as "4-5-2021", or "5-4-2021" or "April 5, 2021" or "5APR2021". 
+
+In addition to the multiplicity of possible formats it is also difficult to do calculations on these kinds of quantities e.g. "How many days have elapsed from Day A to Day B?" 
+
+To address these issues, Stata wants these dates to be encoded as a *number*, specifically the number of days since January 1, 1960. We then make sure to format these numbers as dates.
+
+# Get The Data
+
+    use "simulated-date.dta", clear
+	
+# List And Describe The Data
+
+We see that both date variables are formatted as strings
+
+    list
+
+    describe
+
+# Create Date Variables
+
+    generate startdate2 = date(startdate, "YMD") // create a date specifying order of elements
+	
+	generate enddate2 = date(enddate, "YMD") // create a date specifying order of elements
+	
+> The command has created 2 dates in numeric form, but they display as numbers.
+
+    describe
+
+    list
+
+# Format As Dates
+
+    format %d startdate2 enddate2
+	
+	describe
+	
+	list
+	
+# Calculations
+
+We can now use dates in calculations. For example, "How much time has elapsed between `startdate2` and `enddate2`?"	
+
+    generate elapseddays = enddate2 - startdate2
+	
+	generate elapsedyears = (enddate2 - startdate2)/365
+	
+	list, abbreviate(15) // list out the data with new variables
+	
+	
+	
+
+
+
+
+	
