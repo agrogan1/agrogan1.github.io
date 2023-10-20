@@ -23,9 +23,9 @@ To address these issues, Stata wants these dates to be encoded as a *number*, sp
 
 # Get The Data
 
-```{stata, collectcode=TRUE}
+```{stata, collectcode=TRUE, echo=TRUE}
 
-use "simulated-date.dta", clear
+use simulated-date.dta, clear
 
 ```
 
@@ -33,7 +33,7 @@ use "simulated-date.dta", clear
 
 We see that both date variables are formatted as strings
 
-```{stata}
+```{stata, echo=TRUE}
 
 list
 
@@ -45,7 +45,7 @@ describe
 
 > There are *many* date functions in Stata, to work with different kinds of data in different formats. `help date` should direct you to the documentation for *Date and time functions*.
 
-```{stata, collectcode=TRUE}
+```{stata, collectcode=TRUE, echo=TRUE}
 
 generate startdate2 = date(startdate, "YMD") // create a date specifying order of elements
 
@@ -55,7 +55,7 @@ generate enddate2 = date(enddate, "YMD") // create a date specifying order of el
 
 > The command has created 2 dates in numeric form, but they display as numbers.
 
-```{stata}
+```{stata, echo=TRUE}
 
 describe
 
@@ -65,7 +65,7 @@ list
 
 # Format As Dates
 
-```{stata, collectcode=TRUE}
+```{stata, collectcode=TRUE, echo=TRUE}
 
 format %d startdate2 enddate2
 	
@@ -79,7 +79,7 @@ list
 
 We can now use dates in calculations. For example, "How much time has elapsed between `startdate2` and `enddate2`?"	
 
-```{stata}
+```{stata, echo=TRUE}
 
 generate elapseddays = enddate2 - startdate2
 	

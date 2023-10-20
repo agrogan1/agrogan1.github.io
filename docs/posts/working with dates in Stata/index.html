@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -217,20 +251,42 @@ ul.task-list li input[type="checkbox"] {
 <section id="get-the-data" class="level1">
 <h1>Get The Data</h1>
 <div class="cell" data-collectcode="true">
-<div class="cell-output cell-output-stdout">
-<pre><code>file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/working.do not for(601);</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> simulated-<span class="fu">date</span>.dta, <span class="kw">clear</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="list-and-describe-the-data" class="level1">
 <h1>List And Describe The Data</h1>
 <p>We see that both date variables are formatted as strings</p>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">describe</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/working with dates in Stata/pr&gt; le.do ...
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/working with dates in Stata/profi
+&gt; le.do . 
 
-file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/working.do not found
-r(601);</code></pre>
+     +------------------------+
+     |  startdate     enddate |
+     |------------------------|
+  1. | 2019-01-01   2019-1-30 |
+  2. | 2019-02-15   2019-5-30 |
+  3. | 2019-03-01   2019-4-30 |
+     +------------------------+
+
+
+Contains data from simulated-date.dta
+ Observations:             3                  
+    Variables:             2                  6 Apr 2021 16:46
+------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+------------------------------------------------------------------------------------------------
+startdate       str10   %10s                  startdate
+enddate         str9    %9s                   enddate
+------------------------------------------------------------------------------------------------
+Sorted by: </code></pre>
 </div>
 </div>
 </section>
@@ -240,33 +296,88 @@ r(601);</code></pre>
 <p>There are <em>many</em> date functions in Stata, to work with different kinds of data in different formats. <code>help date</code> should direct you to the documentation for <em>Date and time functions</em>.</p>
 </blockquote>
 <div class="cell" data-collectcode="true">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">generate</span> startdate2 = <span class="fu">date</span>(startdate, <span class="st">"YMD"</span>) <span class="co">// create a date specifying order of elements</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">generate</span> enddate2 = <span class="fu">date</span>(enddate, <span class="st">"YMD"</span>) <span class="co">// create a date specifying order of elements</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/working with dates in Stata/pr&gt; le.do ...
-
-file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/working.do not found
-r(601);</code></pre>
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/working with dates in Stata/profi
+&gt; le.do . </code></pre>
 </div>
 </div>
 <blockquote class="blockquote">
 <p>The command has created 2 dates in numeric form, but they display as numbers.</p>
 </blockquote>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">describe</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/working with dates in Stata/pr&gt; le.do ...
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/working with dates in Stata/profi
+&gt; le.do . 
 
-file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/working.do not found
-r(601);</code></pre>
+Contains data from simulated-date.dta
+ Observations:             3                  
+    Variables:             4                  6 Apr 2021 16:46
+------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+------------------------------------------------------------------------------------------------
+startdate       str10   %10s                  startdate
+enddate         str9    %9s                   enddate
+startdate2      float   %9.0g                 
+enddate2        float   %9.0g                 
+------------------------------------------------------------------------------------------------
+Sorted by: 
+     Note: Dataset has changed since last saved.
+
+     +----------------------------------------------+
+     |  startdate     enddate   startd~2   enddate2 |
+     |----------------------------------------------|
+  1. | 2019-01-01   2019-1-30      21550      21579 |
+  2. | 2019-02-15   2019-5-30      21595      21699 |
+  3. | 2019-03-01   2019-4-30      21609      21669 |
+     +----------------------------------------------+</code></pre>
 </div>
 </div>
 </section>
 <section id="format-as-dates" class="level1">
 <h1>Format As Dates</h1>
 <div class="cell" data-collectcode="true">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">format</span> %<span class="kw">d</span> startdate2 enddate2</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="kw">describe</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/working with dates in Stata/pr&gt; le.do ...
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/working with dates in Stata/profi
+&gt; le.do . 
 
-file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/working.do not found
-r(601);</code></pre>
+
+Contains data from simulated-date.dta
+ Observations:             3                  
+    Variables:             4                  6 Apr 2021 16:46
+------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+------------------------------------------------------------------------------------------------
+startdate       str10   %10s                  startdate
+enddate         str9    %9s                   enddate
+startdate2      float   %d                    
+enddate2        float   %d                    
+------------------------------------------------------------------------------------------------
+Sorted by: 
+     Note: Dataset has changed since last saved.
+
+     +------------------------------------------------+
+     |  startdate     enddate   startda~2    enddate2 |
+     |------------------------------------------------|
+  1. | 2019-01-01   2019-1-30   01jan2019   30jan2019 |
+  2. | 2019-02-15   2019-5-30   15feb2019   30may2019 |
+  3. | 2019-03-01   2019-4-30   01mar2019   30apr2019 |
+     +------------------------------------------------+</code></pre>
 </div>
 </div>
 </section>
@@ -274,11 +385,23 @@ r(601);</code></pre>
 <h1>Calculations</h1>
 <p>We can now use dates in calculations. For example, “How much time has elapsed between <code>startdate2</code> and <code>enddate2</code>?”</p>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">generate</span> elapseddays = enddate2 - startdate2</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="kw">generate</span> elapsedyears = (enddate2 - startdate2)/365</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span>, abbreviate(15) <span class="co">// list out the data with new variables</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/working with dates in Stata/pr&gt; le.do ...
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/working with dates in Stata/profi
+&gt; le.do . 
 
-file /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/working.do not found
-r(601);</code></pre>
+     +------------------------------------------------------------------------------+
+     |  startdate     enddate   startdate2    enddate2   elapseddays   elapsedyears |
+     |------------------------------------------------------------------------------|
+  1. | 2019-01-01   2019-1-30    01jan2019   30jan2019            29       .0794521 |
+  2. | 2019-02-15   2019-5-30    15feb2019   30may2019           104       .2849315 |
+  3. | 2019-03-01   2019-4-30    01mar2019   30apr2019            60       .1643836 |
+     +------------------------------------------------------------------------------+</code></pre>
 </div>
 </div>
 
