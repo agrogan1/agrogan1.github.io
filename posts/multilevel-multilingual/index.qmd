@@ -1,0 +1,17 @@
+---
+title: "Multilevel Multilingual"
+description: "Analyzing Multilevel Data in Multiple Statistical Languages."
+author: "Andy Grogan-Kaylor"
+date: "2023-8-14"
+categories: [multilevel]
+image: "bookcover-landscape.png"
+---
+
+I have developed a book draft on multilevel modeling, entitled [*Multilevel Thinking*](https://agrogan1.github.io/multilevel-thinking/). The book draft discusses multilevel modeling in the context of cross cultural, or international, research. 
+
+The book draft is written from the perspective of using Stata. I am thinking about how to analyze multilevel models using multiple statistical languages: Stata, R, and Julia. This developing tutorial can be found at: [https://agrogan1.github.io/multilevel-multilingual/](https://agrogan1.github.io/multilevel-multilingual/)
+
+![Multilevel Thinking](bookcover.png)
+
+
+

@@ -1,0 +1,235 @@
+---
+title: "You Have To Get Your Data From Somewhere"
+author: "Andy Grogan-Kaylor"
+date: "2023-8-14"
+categories: [stats, dataviz]
+image: "data.png"
+---
+
+# You Have To Get Your Data From Somewhere
+
+In learning R, as well as RMarkdown, one of the most difficult tasks seems to be understanding how to import data.
+
+Read your data into a dataset using the *right function* for the *right format* from the *correct location*.
+
+Note that while learning the correct syntax is *very helpful*, RStudio can generate much of this syntax for you using the **File | Import Dataset | ...** menu.
+
+# RMarkdown
+
+> When you are working with RMarkdown, each RMarkdown document creates its own separate **working environment**. Therefore each RMarkdown document needs to have a line, or lines, of code that import the data file for that individual RMarkdown document. e.g.
+
+If data are in R format ...
+
+```{r, eval=FALSE, echo=TRUE}
+
+mydata <- load("/project1/mydata.RData") # load R format data
+
+```
+
+If data are in Excel format ...
+
+```{r, eval=FALSE, echo=TRUE}
+
+library(readxl) # library to read Excel
+
+mydata <- read_excel("/project1/mydata.xlsx") # load data from Excel
+
+```
+
+# Basic Idea
+
+> In web versions of this document, hover over the footnotes to see what different parts of this syntax do.
+
+`mydata`[^1] `<- function`[^2]`("path/to/`[^3]`file.extension`[^4]`")`[^tilde]
+
+[^1]: How R will refer to your data. R's *nickname* for your data.
+
+[^2]: The correct function for the type of data you are reading in, e.g. RData, CSV, Excel.
+
+[^3]: Where is your data located? The *directory path* to your data.
+
+[^tilde]: Sometimes, especially on a Mac, it is necessary to refer to your directory with a `~`, e.g. `~/downloads/project1.RData` or `~/Desktop/project1.RData` or `~/project1/project1.RData`.
+
+[^4]: What is the *filename* of the file containing your data? Note that the extension often tells you *what kind* of data this is.
+
+# Setting Up Your Data Before Importing
+
+Your data may already be set up in this way, but ...
+
+Your data, whether in a text file, a statistical file, or an Excel file, should be in *rectangular* format organized by rows and columns, as seen in the example below.
+
+Remember that any statistical or data visualization software is going to be happier with **shorter column names** like *happy*, rather than longer column names like *"Generally speaking, how happy would you say that you are on most days?"*. 
+
+id          happy  income       neighborhood
+-------     ------ ----------   -------------
+     12     12        12        12
+    123     123       123       123
+      1     1          1        1
+
+Datasets can be much larger than the example above, but should most often follow this *rectangular* format.
+
+# Examples
+
+## Data Already in R Format
+
+```{r, eval=FALSE, echo=TRUE}
+
+mydata <- load("/project1/mydata.RData") # load R format data
+
+```
+
+## Data in CSV Format
+
+CSV stands for *comma separated values*, and is essentially a raw text format for storing data. CSV is often an excellent format for exchanging data between programs. A few lines of *simulated data on clients* in CSV format are reproduced below.
+
+```{r, eval=FALSE, echo=TRUE}
+
+"ID","age","gender","program","mental_health_T1","mental_health_T2","latitude","longitude"
+2941,32,"Male","Program A",98.81,95.49,42.1108308238603,-83.6103627437424
+2745,22,"Other Identity","Program B",86.28,104.84,42.0016810856589,-83.8064503632259
+1320,28,"Female","Program B",89.17,107.48,42.0398163096771,-83.6793088312261
+1211,20,"Male","Program D",94.15,95.71,42.2673004816002,-83.8247411126595
+2293,20,"Female","Program D",85.38,105.09,42.300730845518,-83.7526918820329
+
+```
+
+```{r, eval=FALSE, echo=TRUE}
+
+library(readr) # library to read CSV
+
+mydata <- read_csv("/project1/mydata.csv")
+
+```
+
+## Data in Excel Format
+
+```{r, eval=FALSE, echo=TRUE}
+
+library(readxl) # library to read Excel
+
+mydata <- read_excel("/project1/mydata.xlsx")
+
+```
+
+## Data in Stata
+
+```{r, eval=FALSE, echo=TRUE}
+
+library(haven) # library to read other file formats
+
+mydata <- read_stata("/project1/mydata.dta")
+
+```
+
+## Data in SPSS Format
+
+```{r, eval=FALSE, echo=TRUE}
+
+library(haven) # library to read other file formats
+
+mydata <- read_sav("/project1/mydata.sav")
+
+```
+
+## Data in SAS Format
+
+```{r, eval=FALSE, echo=TRUE}
+
+library(haven) # library to read other file formats
+
+mydata <- read_sas("/project1/mydata.sas7bdat")
+
+```
+
+## Hand Code Data Using `tribble`
+
+> This can be especially useful for hand coding *small amounts* of data that come from a published online or print data source. 
+
+```{r, eval=TRUE, echo=TRUE}
+
+library(tibble) # library for updated dataframes
+
+mydata <- tribble(
+  ~ID, ~age, ~gender, ~program,
+2941,32,"Male","Program A",
+2745,22,"Other Identity","Program B",
+1320,28,"Female","Program B",
+2293,20,"Female","Program D"
+)
+
+
+```
+
+When importing data using tribble, it is helpful to get a summary of your data.
+
+```{r, eval=TRUE, echo=TRUE}
+
+summary(mydata)
+
+```
+
+It may then be helpful to insure some variables are changed to `factor`s.
+
+```{r, eval=TRUE, echo=TRUE}
+
+mydata$gender <- factor(mydata$gender)
+
+mydata$program <- factor(mydata$program)
+
+summary(mydata)
+
+```
+
+## Data in R Package
+
+Sometimes data is obtained by calling an R package, or the data is directly built into R.
+
+```{r, eval=FALSE, echo=TRUE}
+
+library(palmerpenguins) # call Palmer Penguins library
+
+data("penguins") # call the penguins data
+
+```
+
+```{r, eval=FALSE, echo=TRUE}
+
+data(iris) # call the iris flower data built into R
+
+```
+
+
+# Save Your Data in R Format
+
+Once your data has been imported into R, you may wish to save it to R format for future use.
+
+```{r, eval=FALSE, echo=TRUE}
+
+save(mydata, file = "mydata.RData")
+
+```
+
+Alternatively, one of the advantages of R is that it can read data from so many formats. It may be that your data is consistently being updated by other members of your team. For example, members of your team may be constantly updating an Excel file with your data. In such cases, you may wish to keep a line in your script to always import the most recent version of your data from that other format.
+
+# Working Directory
+
+R uses the concept of a *working directory* to know where to find files, and where to save files.
+
+If you do not specify a particular path to the data file that you are trying to import, R will assume that it is in your working directory.
+
+It is often helpful to simply set your working directory to a particular location and by default, files will be accessed from, and saved to, that directory e.g.:  
+
+```{r, eval=FALSE, echo = TRUE}
+
+getwd() # "get", or find out, your working directory
+
+setwd("/project1") # set your working directory
+
+```
+
+* Note that R uses a forward slash `/` to specify directory paths. R does not understand the use of a backward slash `\` to specify directories. R uses `~` to refer to the user's (usually your) home directory. 
+* If you are working in RStudio, you can use the menu option *Session | Set Working Directory | Choose Directory* to choose a particular working directory.
+*  <span style="background-color: #FFFF00">If you double click on a `*.Rmd` file to start RStudio, R will assume that your working directory is the directory in which that `*.Rmd` file is located.</span> <span style="background-color: #00FFFF">Thus, it is often a good idea to have your data and RMarkdown document saved in the same directory.</span>
+
+ 
+
