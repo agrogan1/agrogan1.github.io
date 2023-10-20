@@ -1,0 +1,16 @@
+{
+  "hash": "de82a23bd38c4881389c309da9c424bc",
+  "result": {
+    "markdown": "---\ntitle: \"A Simple Visual Explanation of Simpsons Paradox\"\nsubtitle: \"Results of an analysis or visualization may be ***very*** different depending on the number of factors accounted for.\"\nauthor: \"Andy Grogan-Kaylor\"\ndate: \"2023-8-16\"\ncategories: [stats]\nimage: \"Simpsons-paradox.png\"\n---\n\n\n# Introduction\n\nSimpson’s Paradox is the idea that associations that are found between two variables in the sample as a whole, can be very different (or even reversed) when we analyze the data by subgroups.\n\nThere are specific mathematical conditions under which Simpson’s Paradox applies. However, thinking through these mathematical conditions may not be helpful to develop intuitions about Simpson’s Paradox.\n\nLooking at a simple visualization may help us to develop some understanding of Simpson’s Paradox.\n\n# Visualization\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-3-1.png){width=672}\n:::\n:::\n\n\n# What Do We See?\n\nEven when presented visually, it is difficult to think through Simpson's Paradox. \n\nWhat do we see? \n\n1. For the *sample overall*, the regression line slopes *downward*: more treatment appears to be associated with *less* of the *desirable outcome*.\n2. When we control for group--when we start to think in multivariate terms--the individual group regression lines slope *upward*: more treatment appears to be associated with *more* of the *desirable outcome*.\n3. Thus, a more complex *multivariate* analysis gives very different results: graphing outcomes only against treatment or intervention suggests that the treatment or intervention is *harmful*; graphing outcomes against treatment or intervention, but accounting for group membership, suggests that the treatment is *helpful*.\n4. The crucial understanding is points (1)-(3) above, but *why* might this be? The discrepancy results from the fact that treatment provision is correlated with the outcome. Those with lower levels of the desirable outcome are getting higher levels of the treatment or intervention, a common enough situation if we think about it. This leads to the seeming *paradox* of finding quite different results depending upon what factors we account for.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
