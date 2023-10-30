@@ -19,6 +19,8 @@ website:
         text: Multilevel Thinking
       - href: https://globalfamilies.quarto.pub/global-families-project/
         text: Global Families
+      - href: https://agrogan1.github.io/mapping/
+        text: Mapping/GIS
       - blog.qmd  
       - about.qmd
       - href: contact.qmd
