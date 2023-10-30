@@ -107,8 +107,14 @@ leaflet() %>%
 
 #### Publications
 
-* Gender Inequality in Low- and Middle-Income Countries: Associations
-with Parental Physical Abuse and Moderation by Child Gender
+* "Associations between 11 parental discipline behaviours and child outcomes across 60 countries"
+    + [Article](https://bmjopen.bmj.com/content/13/10/e058439)
+    + [ArcGIS Storymap](https://arcg.is/1OSzvG0)
+    + [HTML Slides](https://websites.umich.edu/~parentingandchilddev/MICS-discipline-11-forms/v1/MICS-discipline-11-forms.html)
+    + [HTML Page](https://websites.umich.edu/~parentingandchilddev/MICS-discipline-11-forms/v2/MICS-discipline-11-forms.html)
+
+* "Gender Inequality in Low- and Middle-Income Countries: Associations
+with Parental Physical Abuse and Moderation by Child Gender"
     + [Article](https://www.mdpi.com/1841422)
     + [ArcGIS Storymap](https://arcg.is/1WzHHP)
     + [Press Release](https://news.umich.edu/gender-inequality-can-predict-high-rates-of-child-physical-abuse/)
