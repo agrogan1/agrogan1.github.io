@@ -1,0 +1,16 @@
+---
+title: "How To Choose A Chart"
+subtitle: "A Statistically Informed Visual Guide With Stata Commands"
+author: "Andy Grogan-Kaylor" 
+date: "2023-11-3"
+categories: [stats]
+---
+
+I've developed a new graphing tutorial for Stata:  [How To Choose A Chart - A Statistically Informed Visual Guide With Stata Commands](https://agrogan1.github.io/Stata/how-to-choose-a-chart-a-visual-guide-with-Stata/how-to-choose-a-chart-a-visual-guide-with-Stata.pdf)
+
+```{r}
+
+knitr::include_graphics("https://agrogan1.github.io/Stata/how-to-choose-a-chart-a-visual-guide-with-Stata/how-to-choose-a-chart-a-visual-guide-with-Stata.png")
+
+```
+

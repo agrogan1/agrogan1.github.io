@@ -1,0 +1,14 @@
+{
+  "hash": "0f1f479bf7673ebdcdd8ed6c86ec93f8",
+  "result": {
+    "markdown": "---\ntitle: \"Interviewed in *The Lancet Child & Adolescent Health* \"\nsubtitle: \"I was quoted in this interview in *The Lancet Child & Adolescent Health* on corporal punishment\"\ndate: \"2023-1-30\"\ncategories: [corporal punishment]\nimage: \"geometrics.png\"\n---\n\n\n\n\nI was quoted in this interview in *The Lancet Child & Adolescent Health* on corporal punishment:  [The Strange Endurance of Corporal Punishment](https://www.thelancet.com/journals/lanchi/article/PIIS2352-4642(23)00019-6/fulltext)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

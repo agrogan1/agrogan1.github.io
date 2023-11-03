@@ -1,0 +1,29 @@
+---
+title: "Interviewed in *The Lancet Child & Adolescent Health* "
+subtitle: "I was quoted in this interview in *The Lancet Child & Adolescent Health* on corporal punishment"
+date: "2023-1-30"
+categories: [corporal punishment]
+image: "geometrics.png"
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+I was quoted in this interview in *The Lancet Child & Adolescent Health* on corporal punishment:  [The Strange Endurance of Corporal Punishment](https://www.thelancet.com/journals/lanchi/article/PIIS2352-4642(23)00019-6/fulltext)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
