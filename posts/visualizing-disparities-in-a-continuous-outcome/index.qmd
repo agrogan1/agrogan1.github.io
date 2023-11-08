@@ -62,6 +62,9 @@ mypie
 We're going to set up our graphing commands, which requires using some code.
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 library(ggplot2) # beautiful graphs
 
@@ -123,6 +126,9 @@ In the graphs below, *group* will go on the x axis.  *Risk* will go on the y axi
 These decisions are echoed in the (admittedly complicated) `ggplot` code below which sets up the graphs to follow.  Again, however, it's not necessary to follow the code to follow the discussion.
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 myplot <- ggplot(data = mydata, # the data I am using
        aes(x = group, # x is the group
@@ -147,6 +153,9 @@ Now that I've thought through the grammar of graphics, I can try different geome
 As noted above, a bar graph might be the most intuitive, or at least the most common approach. Note that because the bars are the *mean* of risk scores for different groups, that we have to make this clear in the code.
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 myplot + 
   stat_summary(fun.y = mean, geom = "bar") +
@@ -162,6 +171,9 @@ myplot +
 Instead of bars indicating mean risk, we could use points at the mean risk value for each group. 
 
 ```{r, fig.cap="Points at Mean Values"}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 myplot + 
   stat_summary(fun.y = mean, geom = "point", size = 10) +
@@ -173,6 +185,9 @@ myplot +
 ### Horizontal
 
 ```{r, fig.cap="Horizontal Points at Mean Values"}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 myplot + 
   stat_summary(fun.y = mean, geom = "point", size = 10) +
@@ -187,6 +202,9 @@ myplot +
 Perhaps we connect the points with a line. Connecting the points with a line in this way may be confusing, as it may imply some kind of trend that we do not wish to imply.
 
 ```{r, fig.cap="Points at Mean Values Connected by Line"}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 myplot + 
   stat_summary(fun.y = mean, geom = "line", 
@@ -203,6 +221,9 @@ myplot +
 ### Vertical
 
 ```{r, fig.cap="Lollipop Chart"}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 # In order to draw the segments of the lollipops,
 # we have to summarize the data with dplyr,
@@ -236,6 +257,9 @@ mylollipop # replay
 ### Horizontal
 
 ```{r, fig.cap="Horizontal Lollipop Chart"}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 mylollipop + coord_flip()
 
@@ -253,6 +277,9 @@ Additionally, points give us a better idea of the exact nature of how risk *is d
 ### Simple Points
 
 ```{r, fig.cap="Points"}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 myplot + geom_point(size = 3) # simple points
 
@@ -261,6 +288,9 @@ myplot + geom_point(size = 3) # simple points
 ### Jittered Points
 
 ```{r, fig.cap="Jittered Points"}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 myplot +  geom_jitter(size = 3) # jittered points
 
@@ -269,6 +299,9 @@ myplot +  geom_jitter(size = 3) # jittered points
 ### Beeswarm
 
 ```{r, fig.cap="Beeswarm"}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 myplot + geom_beeswarm(size = 3) # beeswarm geometry
 
@@ -283,6 +316,9 @@ There are some alternative, less commonly employed geometries. I've seen boxplot
 ## Boxplot
 
 ```{r, fig.cap="Boxplot"}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 myplot + geom_boxplot(color = "black") # boxplot
 
@@ -293,6 +329,9 @@ myplot + geom_boxplot(color = "black") # boxplot
 An even more rarely used geometry is the *violin plot*. It has the advantage of being visually striking, but seems to be less intuitively interpretable.
 
 ```{r, fig.cap="Violin Plot", fig.pos = "!H"}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 myplot + geom_violin(color = "black") # violin plot
 
@@ -305,6 +344,9 @@ Above, we added color to the graph simply to add visual interest. We may wish to
 This of course requires slightly different code to tweak the colors.
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 myplot + 
   stat_summary(fun.y = mean, geom = "bar") +
@@ -322,6 +364,9 @@ In addition to thinking about manually specifying colors to tell a story that is
 We may wish to modify the title to be less studiously neutral, and to encapsulate the *key takeway* that we wish our audience to get.
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 myplot + 
   stat_summary(fun.y = mean, geom = "bar") +
@@ -338,6 +383,9 @@ myplot +
 We can add a big number as a data label and for emphasis. This requires more complicated code so that we can generate the labels.
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 library(dplyr) # data wrangling
 
@@ -368,6 +416,9 @@ mydata %>%
 Lastly, we can think about rotating the bar chart, increasing the size of the labels, and removing the legend, to improve readability.
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 library(dplyr) # data wrangling
 

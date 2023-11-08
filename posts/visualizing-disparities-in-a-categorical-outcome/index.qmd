@@ -27,6 +27,9 @@ Below I present some options for bar graphs, and some possible alternative strat
 I create some simulated data with the `tribble` function. The data are created so that the two groups experience the outcomes unequally.
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 library(tibble) # rowise data frame (tibble) creation
 
@@ -57,6 +60,9 @@ pander(table(mydata)) # nice table of data
 I use University of Michigan colors in these graphs, which is completely optional. You can find installation instructions for the Michigan graph scheme [here](https://agrogan1.github.io/R/michigancolors-demo/michigancolors-demo.html).
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 library(ggplot2)
 
@@ -73,6 +79,9 @@ There are several different types of bar graph.
 ## Stacked Bar Graph
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 ggplot(mydata, aes(x = group, # x is group
                    fill = outcome)) + # color fill is outcome
@@ -85,6 +94,9 @@ ggplot(mydata, aes(x = group, # x is group
 ## Unstacked Bar Graph
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 ggplot(mydata, aes(x = group, # x is group
                    fill = outcome)) + # color fill is outcome
@@ -97,6 +109,9 @@ ggplot(mydata, aes(x = group, # x is group
 ## Faceted Bar Graph
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 ggplot(mydata, aes(x = outcome, # x is outcome
                    fill = outcome)) + # color fill is outcome
@@ -113,6 +128,9 @@ ggplot(mydata, aes(x = outcome, # x is outcome
 In `ggplot` terms, pie charts are bar graphs displayed with *polar coordinates*.
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 ggplot(mydata, aes(x = 1, # x is always 1
                    fill = outcome)) + # color fill is outcome
@@ -131,6 +149,9 @@ ggplot(mydata, aes(x = 1, # x is always 1
 Jittered points *may* (or may not) benefit from having an outline in a different color to make them more distinct.
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 ggplot(mydata, aes(x = group, # x is group
                    fill = outcome,
@@ -148,6 +169,9 @@ ggplot(mydata, aes(x = group, # x is group
 Mosaic plots are another way to display data. They are especially effective for being clear about the relative membership in different groups, and about the proportion of each group experiencing each outcome.
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 library(ggmosaic) # mosaic plots
 
@@ -169,6 +193,9 @@ Waffle plots require some data wrangling.
 ## Call The Libraries
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 library(waffle) # waffle geometry
 
@@ -180,6 +207,9 @@ library(dplyr) # data wrangling
 ## Make A Data Set Of Counts
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 # make a data set of counts
 
@@ -193,6 +223,9 @@ pander(mycounts) # replay this data
 ## Make The Waffle Plot
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 # use geom_waffle with this data set of counts
 
@@ -214,6 +247,9 @@ Lastly, an alluvial diagram may be useful to illustrate a *flow* from one status
 We will use the data set of `mycounts` that we generated above.
 
 ```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
 
 library(ggalluvial)
 

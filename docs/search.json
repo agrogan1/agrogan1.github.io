@@ -592,56 +592,56 @@
     "href": "posts/visualizing-disparities-in-a-continuous-outcome/index.html",
     "title": "Visualizing Disparities in a Continuous Risk Factor or Outcome",
     "section": "",
-    "text": "In this post, I am trying to think through some best practices in showing disparities in a continuous risk factor or continuous outcome, like levels of depression or levels of poverty.\n\nI am using the graphing library ggplot. As I often do, I am going to show the code. The code can be useful, especially if you are trying to replicate some of these graphs.\n\n\nHowever, the discussion is intended to be more conceptual, and you do not need to understand the code to follow the discussion. Indeed, the discussion is intended to be applicable to a wide variety of data visualization tools, including those that do not rely on coding.\n\nI’m going to start by imagining that we have different groups of people.\n\n\n\n\n\n\n\n\n\n\nGroup A\nGroup B\nGroup C\n\n\n\n\n30\n44\n26\n\n\n\n\n\n\n\n\n\n\nWe’re going to set up our graphing commands, which requires using some code."
+    "text": "In this post, I am trying to think through some best practices in showing disparities in a continuous risk factor or continuous outcome, like levels of depression or levels of poverty.\n\nI am using the graphing library ggplot. As I often do, I am going to show the code. The code can be useful, especially if you are trying to replicate some of these graphs.\n\n\nHowever, the discussion is intended to be more conceptual, and you do not need to understand the code to follow the discussion. Indeed, the discussion is intended to be applicable to a wide variety of data visualization tools, including those that do not rely on coding.\n\nI’m going to start by imagining that we have different groups of people.\n\n\n\n\n\n\n\n\n\n\nGroup A\nGroup B\nGroup C\n\n\n\n\n36\n47\n17\n\n\n\n\n\n\n\n\n\n\nWe’re going to set up our graphing commands, which requires using some code.\n\n\nShow the code\nlibrary(ggplot2) # beautiful graphs\n\nlibrary(ggbeeswarm) # \"beeswarm\" geometry"
   },
   {
     "objectID": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#bar-graph-of-mean-values",
     "href": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#bar-graph-of-mean-values",
     "title": "Visualizing Disparities in a Continuous Risk Factor or Outcome",
     "section": "Bar Graph of Mean Values",
-    "text": "Bar Graph of Mean Values\nAs noted above, a bar graph might be the most intuitive, or at least the most common approach. Note that because the bars are the mean of risk scores for different groups, that we have to make this clear in the code."
+    "text": "Bar Graph of Mean Values\nAs noted above, a bar graph might be the most intuitive, or at least the most common approach. Note that because the bars are the mean of risk scores for different groups, that we have to make this clear in the code.\n\n\nShow the code\nmyplot + \n  stat_summary(fun.y = mean, geom = \"bar\") +\n  labs(title = \"Mean Risk By Group\")"
   },
   {
     "objectID": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#points-at-mean-values",
     "href": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#points-at-mean-values",
     "title": "Visualizing Disparities in a Continuous Risk Factor or Outcome",
     "section": "Points at Mean Values",
-    "text": "Points at Mean Values\n\nVertical\nInstead of bars indicating mean risk, we could use points at the mean risk value for each group.\n\n\n\n\n\nPoints at Mean Values\n\n\n\n\n\n\nHorizontal\n\n\n\n\n\nHorizontal Points at Mean Values"
+    "text": "Points at Mean Values\n\nVertical\nInstead of bars indicating mean risk, we could use points at the mean risk value for each group.\n\n\nShow the code\nmyplot + \n  stat_summary(fun.y = mean, geom = \"point\", size = 10) +\n  ylim(0,150) + \n  labs(title = \"Mean Risk By Group\")\n\n\n\n\n\nPoints at Mean Values\n\n\n\n\n\n\nHorizontal\n\n\nShow the code\nmyplot + \n  stat_summary(fun.y = mean, geom = \"point\", size = 10) +\n  ylim(0,150) + \n  coord_flip() +\n  labs(title = \"Mean Risk By Group\")\n\n\n\n\n\nHorizontal Points at Mean Values"
   },
   {
     "objectID": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#points-at-mean-values-connected-by-line",
     "href": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#points-at-mean-values-connected-by-line",
     "title": "Visualizing Disparities in a Continuous Risk Factor or Outcome",
     "section": "Points at Mean Values Connected by Line",
-    "text": "Points at Mean Values Connected by Line\nPerhaps we connect the points with a line. Connecting the points with a line in this way may be confusing, as it may imply some kind of trend that we do not wish to imply.\n\n\n\n\n\nPoints at Mean Values Connected by Line"
+    "text": "Points at Mean Values Connected by Line\nPerhaps we connect the points with a line. Connecting the points with a line in this way may be confusing, as it may imply some kind of trend that we do not wish to imply.\n\n\nShow the code\nmyplot + \n  stat_summary(fun.y = mean, geom = \"line\", \n               group = 1, \n               color = \"black\", size = 2) +\n  stat_summary(fun.y = mean, geom = \"point\", size = 10) + \n  ylim(0,150) + \n  labs(title = \"Mean Risk By Group\")\n\n\n\n\n\nPoints at Mean Values Connected by Line"
   },
   {
     "objectID": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#lollipop-chart",
     "href": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#lollipop-chart",
     "title": "Visualizing Disparities in a Continuous Risk Factor or Outcome",
     "section": "“Lollipop” Chart",
-    "text": "“Lollipop” Chart\n\nVertical\n\n\n\n\n\nLollipop Chart\n\n\n\n\n\n\nHorizontal\n\n\n\n\n\nHorizontal Lollipop Chart"
+    "text": "“Lollipop” Chart\n\nVertical\n\n\nShow the code\n# In order to draw the segments of the lollipops,\n# we have to summarize the data with dplyr,\n# and 'pipe' into ggplot\n\nlibrary(dplyr) # data wrangling\n\nmylollipop &lt;- mydata %&gt;% \n  group_by(group) %&gt;% # group by group\n  summarise(mean_risk = mean(risk)) %&gt;% # summarize by group\n  ggplot(aes(x = group,\n             y = mean_risk,\n             color = group)) +\n  geom_point(size = 10) +\n  geom_segment(aes(x = group,\n                   xend = group,\n                   y = 0,\n                   yend = mean_risk),\n               size = 2) +\n  ylim(0,160) + \n  labs(title = \"Mean Risk By Group\",\n       y = \"mean risk\") +\n  scale_fill_viridis_d() +\n  scale_color_viridis_d() + \n  theme_minimal()\n\nmylollipop # replay\n\n\n\n\n\nLollipop Chart\n\n\n\n\n\n\nHorizontal\n\n\nShow the code\nmylollipop + coord_flip()\n\n\n\n\n\nHorizontal Lollipop Chart"
   },
   {
     "objectID": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#points",
     "href": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#points",
     "title": "Visualizing Disparities in a Continuous Risk Factor or Outcome",
     "section": "Points",
-    "text": "Points\nThere are various geometries that make use of points to show the full range of the data.\nI think that bars may be the best if we wish to focus on differences in group averages. However, there is something very intuitive about graphs where each individual person is represented by an individual point.\nAdditionally, points give us a better idea of the exact nature of how risk is distributed, and the highest and lowest values of risk for each group.\n\nSimple Points\n\n\n\n\n\nPoints\n\n\n\n\n\n\nJittered Points\n\n\n\n\n\nJittered Points\n\n\n\n\n\n\nBeeswarm\n\n\n\n\n\nBeeswarm\n\n\n\n\nPersonally, I like the jittered points geometry, because I believe that it gives a clearer illustration of each individual score, but that may be a matter of personal preference."
+    "text": "Points\nThere are various geometries that make use of points to show the full range of the data.\nI think that bars may be the best if we wish to focus on differences in group averages. However, there is something very intuitive about graphs where each individual person is represented by an individual point.\nAdditionally, points give us a better idea of the exact nature of how risk is distributed, and the highest and lowest values of risk for each group.\n\nSimple Points\n\n\nShow the code\nmyplot + geom_point(size = 3) # simple points\n\n\n\n\n\nPoints\n\n\n\n\n\n\nJittered Points\n\n\nShow the code\nmyplot +  geom_jitter(size = 3) # jittered points\n\n\n\n\n\nJittered Points\n\n\n\n\n\n\nBeeswarm\n\n\nShow the code\nmyplot + geom_beeswarm(size = 3) # beeswarm geometry\n\n\n\n\n\nBeeswarm\n\n\n\n\nPersonally, I like the jittered points geometry, because I believe that it gives a clearer illustration of each individual score, but that may be a matter of personal preference."
   },
   {
     "objectID": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#boxplot",
     "href": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#boxplot",
     "title": "Visualizing Disparities in a Continuous Risk Factor or Outcome",
     "section": "Boxplot",
-    "text": "Boxplot\n\n\n\n\n\nBoxplot"
+    "text": "Boxplot\n\n\nShow the code\nmyplot + geom_boxplot(color = \"black\") # boxplot\n\n\n\n\n\nBoxplot"
   },
   {
     "objectID": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#violin-plot",
     "href": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#violin-plot",
     "title": "Visualizing Disparities in a Continuous Risk Factor or Outcome",
     "section": "Violin Plot",
-    "text": "Violin Plot\nAn even more rarely used geometry is the violin plot. It has the advantage of being visually striking, but seems to be less intuitively interpretable.\n\n\n\n\n\nViolin Plot"
+    "text": "Violin Plot\nAn even more rarely used geometry is the violin plot. It has the advantage of being visually striking, but seems to be less intuitively interpretable.\n\n\nShow the code\nmyplot + geom_violin(color = \"black\") # violin plot\n\n\n\n\n\nViolin Plot"
   },
   {
     "objectID": "posts/visualizing-disparities-in-a-categorical-outcome/index.html",
@@ -655,42 +655,42 @@
     "href": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#stacked-bar-graph",
     "title": "Visualizing Disparities in a Categorical Risk Factor or Outcome",
     "section": "Stacked Bar Graph",
-    "text": "Stacked Bar Graph"
+    "text": "Stacked Bar Graph\n\n\nShow the code\nggplot(mydata, aes(x = group, # x is group\n                   fill = outcome)) + # color fill is outcome\n  geom_bar() + # bars\n  scale_fill_manual(values = michigancolors()) + # Michigan colors\n  theme_minimal() # nice theme"
   },
   {
     "objectID": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#unstacked-bar-graph",
     "href": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#unstacked-bar-graph",
     "title": "Visualizing Disparities in a Categorical Risk Factor or Outcome",
     "section": "Unstacked Bar Graph",
-    "text": "Unstacked Bar Graph"
+    "text": "Unstacked Bar Graph\n\n\nShow the code\nggplot(mydata, aes(x = group, # x is group\n                   fill = outcome)) + # color fill is outcome\n  geom_bar(position = position_dodge()) + # \"dodged\" bars\n  scale_fill_manual(values = michigancolors()) + # Michigan colors\n  theme_minimal() # nice theme"
   },
   {
     "objectID": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#faceted-bar-graph",
     "href": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#faceted-bar-graph",
     "title": "Visualizing Disparities in a Categorical Risk Factor or Outcome",
     "section": "Faceted Bar Graph",
-    "text": "Faceted Bar Graph"
+    "text": "Faceted Bar Graph\n\n\nShow the code\nggplot(mydata, aes(x = outcome, # x is outcome\n                   fill = outcome)) + # color fill is outcome\n  geom_bar() + # bars\n  scale_fill_manual(values = michigancolors()) + # Michigan colors\n  theme_minimal() + # nice theme\n  theme(axis.text.x = element_text(size = rel(.75))) + # smaller x axis text\n  facet_wrap(~group) # facet on group"
   },
   {
     "objectID": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#call-the-libraries",
     "href": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#call-the-libraries",
     "title": "Visualizing Disparities in a Categorical Risk Factor or Outcome",
     "section": "Call The Libraries",
-    "text": "Call The Libraries"
+    "text": "Call The Libraries\n\n\nShow the code\nlibrary(waffle) # waffle geometry\n\nlibrary(dplyr) # data wrangling"
   },
   {
     "objectID": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#make-a-data-set-of-counts",
     "href": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#make-a-data-set-of-counts",
     "title": "Visualizing Disparities in a Categorical Risk Factor or Outcome",
     "section": "Make A Data Set Of Counts",
-    "text": "Make A Data Set Of Counts\n\n\n\n\n\n\n\n\n\n\ngroup\noutcome\nn\n\n\n\n\nGroup A\nbeneficial outcome\n55\n\n\nGroup A\nundesirable outcome\n40\n\n\nGroup B\nbeneficial outcome\n50\n\n\nGroup B\nundesirable outcome\n75"
+    "text": "Make A Data Set Of Counts\n\n\nShow the code\n# make a data set of counts\n\nmycounts &lt;- mydata %&gt;%\n  group_by(group, outcome) %&gt;% # group by group & outcome\n  tally() # count up observations\n\npander(mycounts) # replay this data\n\n\n\n\n\n\n\n\n\n\ngroup\noutcome\nn\n\n\n\n\nGroup A\nbeneficial outcome\n55\n\n\nGroup A\nundesirable outcome\n40\n\n\nGroup B\nbeneficial outcome\n50\n\n\nGroup B\nundesirable outcome\n75"
   },
   {
     "objectID": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#make-the-waffle-plot",
     "href": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#make-the-waffle-plot",
     "title": "Visualizing Disparities in a Categorical Risk Factor or Outcome",
     "section": "Make The Waffle Plot",
-    "text": "Make The Waffle Plot"
+    "text": "Make The Waffle Plot\n\n\nShow the code\n# use geom_waffle with this data set of counts\n\nggplot(mycounts, # use this new data\n       aes(fill = outcome, # color fill is outcome\n           values = n)) + # values are n\n  geom_waffle(color = \"grey\") + # waffle geometry w/ grey separator\n  facet_wrap(~group) + # facet on group\n  coord_equal() + # squares!\n  scale_fill_manual(values = michigancolors()) + # Michigan colors\n  theme_void()  # nice theme"
   },
   {
     "objectID": "posts/visualizing MLM/index.html",
