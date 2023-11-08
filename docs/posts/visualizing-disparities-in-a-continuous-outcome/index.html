@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Andy Grogan-Kaylor">
+<meta name="dcterms.date" content="2023-11-08">
+
+<title>Andrew Grogan-Kaylor - Visualizing Disparities in a Continuous Risk Factor or Outcome</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Andrew Grogan-Kaylor - Visualizing Disparities in a Continuous Risk Factor or Outcome">
+<meta property="og:description" content="Telling Stories With Data">
+<meta property="og:image" content="index_files/figure-html/unnamed-chunk-2-1.png">
+<meta property="og:site-name" content="Andrew Grogan-Kaylor">
+<meta name="twitter:title" content="Andrew Grogan-Kaylor - Visualizing Disparities in a Continuous Risk Factor or Outcome">
+<meta name="twitter:description" content="Telling Stories With Data">
+<meta name="twitter:image" content="index_files/figure-html/unnamed-chunk-2-1.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="citation_title" content="Visualizing Disparities in a Continuous Risk Factor or Outcome">
+<meta name="citation_author" content="Andy Grogan-Kaylor">
+<meta name="citation_publication_date" content="2023-11-08">
+<meta name="citation_cover_date" content="2023-11-08">
+<meta name="citation_year" content="2023">
+<meta name="citation_online_date" content="2023-11-08">
+<meta name="citation_language" content="en">
+<meta name="citation_reference" content="citation_title=Corporal punishment – 10 key messages;,citation_author=End Violence Against Children;,citation_author=End Corporal Punishment;,citation_publication_date=2022;,citation_cover_date=2022;,citation_year=2022;,citation_fulltext_html_url=https://www.end-violence.org/;,citation_technical_report_institution=End Corporal Punishment;">
+<meta name="citation_reference" content="citation_title=Eveline Pye: Poetry in numbers, by Julian Champkin;,citation_abstract=Statistics is dry, practical, unimaginative? Unpoetical? Too many people think so. Is there poetry in numbers? Julian Champkin talks to Eveline Pye, statistician and poet of statistics, to disprove it.;,citation_author=Eveline Pye;,citation_publication_date=2011;,citation_cover_date=2011;,citation_year=2011;,citation_fulltext_html_url=https://rss.onlinelibrary.wiley.com/doi/abs/10.1111/j.1740-9713.2011.00510.x;,citation_issue=3;,citation_doi=10.1111/j.1740-9713.2011.00510.x;,citation_volume=8;,citation_journal_title=Significance;">
+<meta name="citation_reference" content="citation_title=Transcendental etude;,citation_abstract=The Fact of a Doorframe: Poems Selected and New 1950-1984 (New York: Norton, 1984);,citation_author=Adrienne Rich;,citation_publication_date=1984;,citation_cover_date=1984;,citation_year=1984;,citation_inbook_title=The fact of a doorframe: Poems selected and new 1950-1984;">
+<meta name="citation_reference" content="citation_title=Corporal punishment: The global picture;,citation_abstract=Globally, corporal punishment is the most common form of violence against children. A large body of evidence demonstrates that it has no positive long-term outcomes and predicts a wide range of adverse effects in childhood and adulthood. The United Nations has declared that corporal punishment violates children’s fundamental rights to protection and has called on all countries to repeal laws that allow or justify it. As of June 2023, 65 countries have prohibited corporal punishment of children in all settings. These laws were implemented to make it clear that no level of violence against children is allowed and to uphold children’s rights to protection. This article aims to: (1) summarize the research and human rights rationales for the prohibition of corporal punishment; (2) provide a global update on its legal status; and (3) present research findings from Sweden, Germany, and New Zealand, three countries that have banned corporal punishment.;,citation_author=Ashley Stewart-Tufescu;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_doi=10.22215/cjcr.v10i1;,citation_volume=10;,citation_journal_title=The Canadian Journal of Children’s Rights / Revue Canadienne des Droits des Enfants;">
+<meta name="citation_reference" content="citation_title=A familiar face: Violence in the lives of children and adolescents;,citation_author=UNICEF;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_technical_report_institution=UNICEF;">
+<meta name="citation_reference" content="citation_title=Global status report on preventing violence against children 2020;,citation_author=World Health Organization;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_fulltext_html_url=https://www.unicef.org/sites/default/files/2020-06/Global-status-report-on-preventing-violence-against-children-2020.pdf;,citation_technical_report_institution=World Health Organization;">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Andrew Grogan-Kaylor</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://ssw.umich.edu/sites/default/files/documents/faculty/cvs/agrogan_cv.pdf" rel="" target="">
+ <span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../teaching.html" rel="" target="">
+ <span class="menu-text">Teaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../research.html" rel="" target="">
+ <span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../stats_stuff.html" rel="" target="">
+ <span class="menu-text">Stats Stuff</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://agrogan1.github.io/multilevel-thinking/" rel="" target="">
+ <span class="menu-text">Multilevel Thinking</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://globalfamilies.quarto.pub/global-families-project/" rel="" target="">
+ <span class="menu-text">Global Families</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://agrogan1.github.io/mapping/" rel="" target="">
+ <span class="menu-text">Mapping/GIS</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html" rel="" target="">
+ <span class="menu-text">Blog-ish Posts</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">About Me</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../contact.html" rel="" target="">
+ <span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Visualizing Disparities in a Continuous Risk Factor or Outcome</h1>
+            <p class="subtitle lead">Telling Stories With Data</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">stats</div>
+                <div class="quarto-category">dataviz</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Andy Grogan-Kaylor </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 8, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
+  <li><a href="#grammar-of-graphics" id="toc-grammar-of-graphics" class="nav-link" data-scroll-target="#grammar-of-graphics">Grammar of Graphics</a></li>
+  <li><a href="#a-grammatical-statement" id="toc-a-grammatical-statement" class="nav-link" data-scroll-target="#a-grammatical-statement">A Grammatical Statement</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a>
+  <ul class="collapse">
+  <li><a href="#bar-graph-of-mean-values" id="toc-bar-graph-of-mean-values" class="nav-link" data-scroll-target="#bar-graph-of-mean-values">Bar Graph of Mean Values</a></li>
+  <li><a href="#points-at-mean-values" id="toc-points-at-mean-values" class="nav-link" data-scroll-target="#points-at-mean-values">Points at Mean Values</a>
+  <ul class="collapse">
+  <li><a href="#vertical" id="toc-vertical" class="nav-link" data-scroll-target="#vertical">Vertical</a></li>
+  <li><a href="#horizontal" id="toc-horizontal" class="nav-link" data-scroll-target="#horizontal">Horizontal</a></li>
+  </ul></li>
+  <li><a href="#points-at-mean-values-connected-by-line" id="toc-points-at-mean-values-connected-by-line" class="nav-link" data-scroll-target="#points-at-mean-values-connected-by-line">Points at Mean Values Connected by Line</a></li>
+  <li><a href="#lollipop-chart" id="toc-lollipop-chart" class="nav-link" data-scroll-target="#lollipop-chart">“Lollipop” Chart</a>
+  <ul class="collapse">
+  <li><a href="#vertical-1" id="toc-vertical-1" class="nav-link" data-scroll-target="#vertical-1">Vertical</a></li>
+  <li><a href="#horizontal-1" id="toc-horizontal-1" class="nav-link" data-scroll-target="#horizontal-1">Horizontal</a></li>
+  </ul></li>
+  <li><a href="#points" id="toc-points" class="nav-link" data-scroll-target="#points">Points</a>
+  <ul class="collapse">
+  <li><a href="#simple-points" id="toc-simple-points" class="nav-link" data-scroll-target="#simple-points">Simple Points</a></li>
+  <li><a href="#jittered-points" id="toc-jittered-points" class="nav-link" data-scroll-target="#jittered-points">Jittered Points</a></li>
+  <li><a href="#beeswarm" id="toc-beeswarm" class="nav-link" data-scroll-target="#beeswarm">Beeswarm</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#alternative-geometries" id="toc-alternative-geometries" class="nav-link" data-scroll-target="#alternative-geometries">Alternative Geometries</a>
+  <ul class="collapse">
+  <li><a href="#boxplot" id="toc-boxplot" class="nav-link" data-scroll-target="#boxplot">Boxplot</a></li>
+  <li><a href="#violin-plot" id="toc-violin-plot" class="nav-link" data-scroll-target="#violin-plot">Violin Plot</a></li>
+  </ul></li>
+  <li><a href="#thinking-more-about-color" id="toc-thinking-more-about-color" class="nav-link" data-scroll-target="#thinking-more-about-color">Thinking More About Color</a></li>
+  <li><a href="#thinking-more-about-titles-and-labels" id="toc-thinking-more-about-titles-and-labels" class="nav-link" data-scroll-target="#thinking-more-about-titles-and-labels">Thinking More About Titles and Labels</a></li>
+  <li><a href="#add-a-big-number" id="toc-add-a-big-number" class="nav-link" data-scroll-target="#add-a-big-number">Add A Big Number</a></li>
+  <li><a href="#rotate-the-bar-chart" id="toc-rotate-the-bar-chart" class="nav-link" data-scroll-target="#rotate-the-bar-chart">Rotate The Bar Chart</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="background" class="level1">
+<h1>Background</h1>
+<p>In this post, I am trying to think through some best practices in showing disparities in a <em>continuous risk factor</em> or <em>continuous outcome</em>, like <em>levels of depression</em> or <em>levels of poverty</em>.</p>
+<blockquote class="blockquote">
+<p>I am using the graphing library <code>ggplot</code>. As I often do, I am going to show the code. The code can be useful, especially if you are trying to replicate some of these graphs.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>However, the discussion is intended to be more conceptual, and you do not need to understand the code to follow the discussion. Indeed, the discussion is intended to be applicable to a wide variety of data visualization tools, including those that do not rely on coding.</p>
+</blockquote>
+<p>I’m going to start by imagining that we have different groups of people.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Group A</th>
+<th style="text-align: center;">Group B</th>
+<th style="text-align: center;">Group C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">44</td>
+<td style="text-align: center;">26</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>We’re going to set up our graphing commands, which requires using some code.</p>
+</section>
+<section id="grammar-of-graphics" class="level1">
+<h1>Grammar of Graphics</h1>
+<p>Let’s think a little bit about a <em>grammar of graphics</em>: What are we going to graph, and how might we wish to represent those quantities on the graph?</p>
+<p>In this example, we are graphing <em>group</em> and <em>risk</em>. In this example, I am going to use the <em>x axis</em> for the groups, and the <em>y axis</em> for risk.</p>
+<p>And then I’m going to think about how I draw the information, which <code>ggplot</code> the graphing library that I am using, calls <em>geometries.</em> To start with, I’m going to use perhaps the most intuitive, or at least the most common, geometry of <em>bars.</em></p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Two Philosophies</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Here, right away, we are presented with two competing philosophies of the <em>grammar of graphics</em>. A <em>minimalist</em> philosophy, represented on the left hand side, would say that we shouldn’t add extra detail to the graph unless it adds extra information.</p>
+<p>So, this philosophy would say that, as we outlined above, <em>group</em> goes on the x axis and <em>risk</em> goes on the y axis. We wouldn’t add extra detail, like <em>color</em> to the graph because we’ve already encoded both <em>group</em> and <em>risk</em>.</p>
+<p>An alternative philosophy, represented on the right hand side, might say that for <em>visual interest</em> we can add extra detail, like <em>color</em> even if it doesn’t necessarily add extra information to the graph.</p>
+<blockquote class="blockquote">
+<p>In this document, I’m going err on the side of making my graphs more visually interesting, and hopefully more informative, although I certainly understand the <em>minimalist</em> philosophy.</p>
+</blockquote>
+</section>
+<section id="a-grammatical-statement" class="level1">
+<h1>A Grammatical Statement</h1>
+<p>In the graphs below, <em>group</em> will go on the x axis. <em>Risk</em> will go on the y axis. In drawing this information in various ways–employing various geometries–I am going use colors (the <em>Viridis</em> color palette) for fill and color.</p>
+<p>These decisions are echoed in the (admittedly complicated) <code>ggplot</code> code below which sets up the graphs to follow. Again, however, it’s not necessary to follow the code to follow the discussion.</p>
+</section>
+<section id="examples" class="level1">
+<h1>Examples</h1>
+<p>Now that I’ve thought through the grammar of graphics, I can try different geometries, and think about how well they tell the story that I want to tell.</p>
+<blockquote class="blockquote">
+<p>While <code>ggplot</code> code is provided, you can ignore the code if you like.</p>
+</blockquote>
+<section id="bar-graph-of-mean-values" class="level2">
+<h2 class="anchored" data-anchor-id="bar-graph-of-mean-values">Bar Graph of Mean Values</h2>
+<p>As noted above, a bar graph might be the most intuitive, or at least the most common approach. Note that because the bars are the <em>mean</em> of risk scores for different groups, that we have to make this clear in the code.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="points-at-mean-values" class="level2">
+<h2 class="anchored" data-anchor-id="points-at-mean-values">Points at Mean Values</h2>
+<section id="vertical" class="level3">
+<h3 class="anchored" data-anchor-id="vertical">Vertical</h3>
+<p>Instead of bars indicating mean risk, we could use points at the mean risk value for each group.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Points at Mean Values</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="horizontal" class="level3">
+<h3 class="anchored" data-anchor-id="horizontal">Horizontal</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Horizontal Points at Mean Values</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="points-at-mean-values-connected-by-line" class="level2">
+<h2 class="anchored" data-anchor-id="points-at-mean-values-connected-by-line">Points at Mean Values Connected by Line</h2>
+<p>Perhaps we connect the points with a line. Connecting the points with a line in this way may be confusing, as it may imply some kind of trend that we do not wish to imply.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Points at Mean Values Connected by Line</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="lollipop-chart" class="level2">
+<h2 class="anchored" data-anchor-id="lollipop-chart">“Lollipop” Chart</h2>
+<section id="vertical-1" class="level3">
+<h3 class="anchored" data-anchor-id="vertical-1">Vertical</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Lollipop Chart</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="horizontal-1" class="level3">
+<h3 class="anchored" data-anchor-id="horizontal-1">Horizontal</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Horizontal Lollipop Chart</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="points" class="level2">
+<h2 class="anchored" data-anchor-id="points">Points</h2>
+<p>There are various geometries that make use of points to show the full range of the data.</p>
+<p>I think that bars may be the best if we wish to focus on differences in group <em>averages</em>. However, there is something very intuitive about graphs where each individual person is represented by an individual point.</p>
+<p>Additionally, points give us a better idea of the exact nature of how risk <em>is distributed</em>, and the highest and lowest values of risk for each group.</p>
+<section id="simple-points" class="level3">
+<h3 class="anchored" data-anchor-id="simple-points">Simple Points</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Points</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="jittered-points" class="level3">
+<h3 class="anchored" data-anchor-id="jittered-points">Jittered Points</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Jittered Points</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="beeswarm" class="level3">
+<h3 class="anchored" data-anchor-id="beeswarm">Beeswarm</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Beeswarm</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Personally, I like the <em>jittered points</em> geometry, because I believe that it gives a clearer illustration of each individual score, but that may be a matter of personal preference.</p>
+</section>
+</section>
+</section>
+<section id="alternative-geometries" class="level1">
+<h1>Alternative Geometries</h1>
+<p>There are some alternative, less commonly employed geometries. I’ve seen boxplots a lot in statistics textbooks, but not so much elswhere. Personally, I find boxplots to be less intuitive.</p>
+<section id="boxplot" class="level2">
+<h2 class="anchored" data-anchor-id="boxplot">Boxplot</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Boxplot</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="violin-plot" class="level2">
+<h2 class="anchored" data-anchor-id="violin-plot">Violin Plot</h2>
+<p>An even more rarely used geometry is the <em>violin plot</em>. It has the advantage of being visually striking, but seems to be less intuitively interpretable.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Violin Plot</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="thinking-more-about-color" class="level1">
+<h1>Thinking More About Color</h1>
+<p>Above, we added color to the graph simply to add visual interest. We may wish to manually tweak the colors in a different way, to emphasize the level of risk faced by a <em>particular group</em> or <em>groups</em>.</p>
+<p>This of course requires slightly different code to tweak the colors.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="thinking-more-about-titles-and-labels" class="level1">
+<h1>Thinking More About Titles and Labels</h1>
+<p>In addition to thinking about manually specifying colors to tell a story that is more clear, we may also wish to think about the titles.</p>
+<p>We may wish to modify the title to be less studiously neutral, and to encapsulate the <em>key takeway</em> that we wish our audience to get.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="add-a-big-number" class="level1">
+<h1>Add A Big Number</h1>
+<p>We can add a big number as a data label and for emphasis. This requires more complicated code so that we can generate the labels.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="rotate-the-bar-chart" class="level1">
+<h1>Rotate The Bar Chart</h1>
+<p>Lastly, we can think about rotating the bar chart, increasing the size of the labels, and removing the legend, to improve readability.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>Graphing disparities in risk, whether using a code based graphing program like <code>ggplot</code> or a more <em>drag and drop</em> program requires careful decision making.</p>
+<p>We need to think initially about a <em>grammar of graphics</em> and how we are going to encode our data. We need to think about whether we have a <em>minimalist</em> philosophy of <em>grammar of graphics</em> or one that focuses more on <em>visual interest</em>.</p>
+<p>We then need to try out various <em>geometries</em> to see which geometries make our stories the most clear.</p>
+<p>We should consider devoting some attention to manual manipulation of choice of color. Making our titles and labels more clear may also help us to better tell our story.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

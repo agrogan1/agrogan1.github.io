@@ -1,0 +1,241 @@
+---
+title: "Visualizing Disparities in a Categorical Risk Factor or Outcome"
+subtitle: "Telling Stories With Data"
+author: "Andy Grogan-Kaylor"
+date: "2023-11-8"
+categories: [stats, dataviz]
+---
+
+```{r setup, include=FALSE}
+
+library(pander) # nice tables
+
+```
+
+# Introduction 
+
+Visualizing categorical data presents unique challenges. A common solution is a bar graph, which may often be the best data visualization solution. 
+
+However there are also some alternatives to bar graphs.
+
+Below I present some options for bar graphs, and some possible alternative strategies.
+
+> Note that the outcomes--which you could think of as a *good* outcome, or a *bad* outcome, are unevenly distributed by group. Therefore, these data represent *inequities* or *disparities.*
+
+# Some Data
+
+I create some simulated data with the `tribble` function. The data are created so that the two groups experience the outcomes unequally.
+
+```{r}
+
+library(tibble) # rowise data frame (tibble) creation
+
+library(tidyr) # data wrangling
+
+mydata <- tribble(
+  ~group, ~outcome, ~count,
+  "Group A",   "beneficial outcome", 55,
+  "Group A",   "undesirable outcome", 40,
+  "Group B",   "beneficial outcome", 50,
+  "Group B",   "undesirable outcome", 75
+)
+
+mydata$group <- factor(mydata$group) # data wrangling
+
+mydata$outcome <- factor(mydata$outcome) # data wrangling
+
+# duplicate the observations by count
+
+mydata <- mydata %>% uncount(count) 
+
+pander(table(mydata)) # nice table of data
+
+```
+
+# Call The Graphing Library
+
+I use University of Michigan colors in these graphs, which is completely optional. You can find installation instructions for the Michigan graph scheme [here](https://agrogan1.github.io/R/michigancolors-demo/michigancolors-demo.html).
+
+```{r}
+
+library(ggplot2)
+
+library(michigancolors) 
+
+```
+
+# Bar Graphs
+
+Bar graphs are often the simplest and best option for displaying categorical data. When used with an aesthetically pleasing color scheme, bar graphs can be an effective way of displaying data. 
+
+There are several different types of bar graph.
+
+## Stacked Bar Graph
+
+```{r}
+
+ggplot(mydata, aes(x = group, # x is group
+                   fill = outcome)) + # color fill is outcome
+  geom_bar() + # bars
+  scale_fill_manual(values = michigancolors()) + # Michigan colors
+  theme_minimal() # nice theme
+
+```
+
+## Unstacked Bar Graph
+
+```{r}
+
+ggplot(mydata, aes(x = group, # x is group
+                   fill = outcome)) + # color fill is outcome
+  geom_bar(position = position_dodge()) + # "dodged" bars
+  scale_fill_manual(values = michigancolors()) + # Michigan colors
+  theme_minimal() # nice theme
+
+```
+
+## Faceted Bar Graph
+
+```{r}
+
+ggplot(mydata, aes(x = outcome, # x is outcome
+                   fill = outcome)) + # color fill is outcome
+  geom_bar() + # bars
+  scale_fill_manual(values = michigancolors()) + # Michigan colors
+  theme_minimal() + # nice theme
+  theme(axis.text.x = element_text(size = rel(.75))) + # smaller x axis text
+  facet_wrap(~group) # facet on group
+
+```
+
+# Pie Chart
+
+In `ggplot` terms, pie charts are bar graphs displayed with *polar coordinates*.
+
+```{r}
+
+ggplot(mydata, aes(x = 1, # x is always 1
+                   fill = outcome)) + # color fill is outcome
+  geom_bar(position = "fill") + # bars
+  scale_fill_manual(values = michigancolors()) + # Michigan colors
+  theme_void() + # void theme for pie charts
+  coord_polar(theta = "y") + # polar coordinates
+  facet_wrap(~group) # facet on group
+
+```
+
+# Jittered Points
+
+*Jittered points* may be a good choice because every point represents an individual in the data set. However, it may be difficult to draw exact conclusions from jittered points.
+
+Jittered points *may* (or may not) benefit from having an outline in a different color to make them more distinct.
+
+```{r}
+
+ggplot(mydata, aes(x = group, # x is group
+                   fill = outcome,
+                   y = outcome)) + # color fill is outcome
+  geom_jitter(size = 3, # jittered points
+              pch = 21, # Point Character 21; filled points
+              color = "grey") + # outline color
+  scale_fill_manual(values = michigancolors()) + # Michigan colors
+  theme_minimal() # nice theme
+
+```
+
+# Mosaic Plot
+
+Mosaic plots are another way to display data. They are especially effective for being clear about the relative membership in different groups, and about the proportion of each group experiencing each outcome.
+
+```{r}
+
+library(ggmosaic) # mosaic plots
+
+ggplot(mydata) + 
+  geom_mosaic(aes(x = product(group), # "mosaic" geometry
+                  fill = outcome)) +
+  scale_fill_manual(values = michigancolors()) + # Michigan colors
+  theme_minimal()  # nice theme
+
+```
+
+
+# Waffle Plot
+
+Lastly, waffle plots may be a useful way to display information. Waffle plots are aesthetically appealing. The aesthetic appeal of a waffle plot may, however, obscure the fact that they may not provide the clearest presentation of quantitative information. Waffle plots work best when the sample size is several hundred or fewer. 
+
+Waffle plots require some data wrangling.
+
+## Call The Libraries
+
+```{r}
+
+library(waffle) # waffle geometry
+
+library(dplyr) # data wrangling
+
+```
+
+
+## Make A Data Set Of Counts
+
+```{r}
+
+# make a data set of counts
+
+mycounts <- mydata %>%
+  group_by(group, outcome) %>% # group by group & outcome
+  tally() # count up observations
+
+pander(mycounts) # replay this data
+
+```
+## Make The Waffle Plot
+
+```{r}
+
+# use geom_waffle with this data set of counts
+
+ggplot(mycounts, # use this new data
+       aes(fill = outcome, # color fill is outcome
+           values = n)) + # values are n
+  geom_waffle(color = "grey") + # waffle geometry w/ grey separator
+  facet_wrap(~group) + # facet on group
+  coord_equal() + # squares!
+  scale_fill_manual(values = michigancolors()) + # Michigan colors
+  theme_void()  # nice theme
+
+```
+
+# Alluvial Diagram
+
+Lastly, an alluvial diagram may be useful to illustrate a *flow* from one status to another.
+
+We will use the data set of `mycounts` that we generated above.
+
+```{r}
+
+library(ggalluvial)
+
+ggplot(mycounts, 
+       aes(y = n, 
+           axis1 = group, 
+           axis2 = outcome)) +
+  geom_alluvium(aes(fill = outcome), # alluvia; flows
+                alpha = .75) +
+  geom_stratum(width = 1/3, # end "strata"
+               color = "black", # outline color
+               fill = "grey",
+               color = "grey") +
+  geom_label(stat = "stratum", # textual labels
+             aes(label = after_stat(stratum))) +
+  scale_fill_manual(values = michigancolors()) + # Michigan colors
+  theme_void()  # nice theme
+
+```
+
+
+
+
+
+

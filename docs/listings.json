@@ -2,9 +2,12 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/visualizing-disparities-in-a-categorical-outcome/index.html",
+      "/posts/visualizing-disparities-in-a-continuous-outcome/index.html",
+      "/posts/multilevel-thinking-a-book-draft/index.html",
+      "/posts/visualizing MLM/index.html",
       "/posts/everything-is-obvious-once-you-know-the-answer/index.html",
       "/posts/how-to-choose-a-chart-a-visual-guide-with-Stata/index.html",
-      "/posts/multilevel-thinking-a-book-draft/index.html",
       "/posts/working with dates in Stata/index.html",
       "/posts/bar-charts-to-pie-charts-another-look/index.html",
       "/posts/data-visualization-with-Stata/index.html",
