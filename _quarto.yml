@@ -16,7 +16,7 @@ website:
       - research.qmd
       - stats_stuff.qmd
       - href: https://agrogan1.github.io/multilevel-thinking/
-        text: Multilevel Thinking
+        text: "Multilevel Thinking"
       - href: https://globalfamilies.quarto.pub/global-families-project/
         text: Global Families
       - href: https://agrogan1.github.io/mapping/
