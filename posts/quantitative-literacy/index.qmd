@@ -1,0 +1,13 @@
+---
+title: "Quantitative Literacy"
+author: "Andy Grogan-Kaylor"
+date: "2023-1-17"
+categories: [stats, workflow, social justice]
+image: "lightbulb-and-clover.png"
+---
+
+I have been thinking a lot about this idea.
+
+> "It is hard to imagine that anyone with a humanitarian worldview would argue against the need for a more quantitatively literate citizenry. Informed political decision-making, retirement planning, active parenting, and the vast majority of choices we make in our personal, occupational, and civic lives can be better served by improved quantitative understanding and reasoning, as well as accompanying action-oriented dispositions." [@Wiest2007]
+
+
