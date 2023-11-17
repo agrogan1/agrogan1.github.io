@@ -2,6 +2,8 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/quantitative-literacy/index.html",
+      "/posts/theory/index.html",
       "/posts/multilevel-thinking-a-book-draft/index.html",
       "/posts/visualizing MLM/index.html",
       "/posts/visualizing-disparities-in-a-categorical-outcome/index.html",
@@ -30,8 +32,6 @@
       "/posts/post-with-code/index.html",
       "/posts/welcome/index.html",
       "/posts/interviewed-in-the-Lancet/index.html",
-      "/posts/quantitative-literacy/index.html",
-      "/posts/theory/index.html",
       "/posts/Mauritius-is-65/index.html",
       "/posts/bar-charts-in-ggplot2/index.html",
       "/posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html",
