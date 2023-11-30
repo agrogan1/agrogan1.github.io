@@ -1,0 +1,46 @@
+---
+title: "Updated Michigan Colors for Stata Graphs"
+author: "Andy Grogan-Kaylor"
+date: "2023-11-30"
+categories: [stats, dataviz]
+---
+
+I've updated my *Michigan Colors for Stata Graphs* at:  [https://agrogan1.github.io/Stata/michigan-graph-scheme/](https://agrogan1.github.io/Stata/michigan-graph-scheme/).
+
+The updated graph scheme includes the original `michigan` scheme with University of Michigan colors, but also a remixed version, `michigan2`, where blue and maize are followed by most of the cooler colors of the palette, the warmer colors of the palette, and finally *Taubman Teal*. 
+
+```{r}
+
+library(Statamarkdown)
+
+```
+
+
+```{stata}
+
+clear all
+
+quietly set obs 9
+
+generate x = _n
+	
+quietly save "graphdemo.dta", replace
+
+graph bar (count), ///
+over(x, axis(off)) asyvars ///
+ytitle(" ") ylabel(none) ///
+yscale(lcolor(none)) ///
+title(Michigan Graph Scheme Colors) ///
+scheme(michigan) ///
+ysize(1.5) scale(2) ///
+name(michigan, replace)
+	
+quietly graph export michigan.png, name("michigan") width(2000) replace
+
+```
+
+![Colors in Michigan Graph Scheme](michigan.png)
+
+
+
+
