@@ -1,0 +1,16 @@
+{
+  "hash": "d6563c38154c402afa00fe005a2e6b97",
+  "result": {
+    "markdown": "---\ntitle: \"Updated Michigan Colors for R Graphs\"\nauthor: \"Andy Grogan-Kaylor\"\ndate: \"2023-11-30\"\ncategories: [stats, dataviz]\n---\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\nI've updated my R package for *Michigan colors for R Graphs* at:  [https://agrogan1.github.io/michigancolors/](https://agrogan1.github.io/michigancolors/)\n\n\n\n\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

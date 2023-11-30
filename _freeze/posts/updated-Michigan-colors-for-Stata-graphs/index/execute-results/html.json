@@ -1,0 +1,14 @@
+{
+  "hash": "d4376c0e2e811fa1457611544cde99f8",
+  "result": {
+    "markdown": "---\ntitle: \"Updated Michigan Colors for Stata Graphs\"\nauthor: \"Andy Grogan-Kaylor\"\ndate: \"2023-11-30\"\ncategories: [stats, dataviz]\n---\n\n\nI've updated my *Michigan Colors for Stata Graphs* at:  [https://agrogan1.github.io/Stata/michigan-graph-scheme/](https://agrogan1.github.io/Stata/michigan-graph-scheme/).\n\nThe updated graph scheme includes the original `michigan` scheme with University of Michigan colors, but also a remixed version, `michigan2`, where blue and maize are followed by most of the cooler colors of the palette, the warmer colors of the palette, and finally *Taubman Teal*. \n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n\n![Colors in Michigan Graph Scheme](michigan.png)\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
