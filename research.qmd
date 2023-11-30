@@ -90,7 +90,7 @@ library(leaflet)
 leaflet() %>%
   setView(0, 25, zoom = 1.5) %>%
   # addTiles() %>%
-  addProviderTiles(providers$OpenTopoMap) %>%
+  addProviderTiles(providers$Esri.WorldImagery) %>%
   addPolygons(data = MICS, 
               fillOpacity = .75, 
               color = "#5b92e5", 
