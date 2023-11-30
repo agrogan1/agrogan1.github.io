@@ -1,14 +1,18 @@
 [
   {
+    "listing": "/contact.html",
+    "items": []
+  },
+  {
     "listing": "/blog.html",
     "items": [
       "/posts/multilevel-thinking-a-book-draft/index.html",
       "/posts/updated-Michigan-colors-for-R-graphs/index.html",
       "/posts/updated-Michigan-colors-for-Stata-graphs/index.html",
+      "/posts/visualizing MLM/index.html",
       "/posts/how-to-choose-a-chart-a-visual-guide-with-Stata/index.html",
       "/posts/quantitative-literacy/index.html",
       "/posts/theory/index.html",
-      "/posts/visualizing MLM/index.html",
       "/posts/visualizing-disparities-in-a-categorical-outcome/index.html",
       "/posts/visualizing-disparities-in-a-continuous-outcome/index.html",
       "/posts/everything-is-obvious-once-you-know-the-answer/index.html",
@@ -40,9 +44,5 @@
       "/posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html",
       "/posts/DSO-faculty-award/index.html"
     ]
-  },
-  {
-    "listing": "/contact.html",
-    "items": []
   }
 ]
