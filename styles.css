@@ -4,3 +4,7 @@ blockquote {
   border-left: 3px solid #FFCB05; 
   padding: 0.5em 10px;
 }
+.navbar-nav {
+      font-size: 75%;
+      text-transform: uppercase;
+}
