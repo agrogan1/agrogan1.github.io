@@ -1,9 +1,5 @@
 [
   {
-    "listing": "/contact.html",
-    "items": []
-  },
-  {
     "listing": "/blog.html",
     "items": [
       "/posts/multilevel-thinking-a-book-draft/index.html",
@@ -44,5 +40,9 @@
       "/posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html",
       "/posts/DSO-faculty-award/index.html"
     ]
+  },
+  {
+    "listing": "/contact.html",
+    "items": []
   }
 ]
