@@ -1,9 +1,5 @@
 [
   {
-    "listing": "/contact.html",
-    "items": []
-  },
-  {
     "listing": "/blog.html",
     "items": [
       "/posts/multilevel-thinking-a-book-draft/index.html",
@@ -46,5 +42,9 @@
       "/posts/DSO-faculty-award/index.html",
       "/posts/two-page-Stata/index.html"
     ]
+  },
+  {
+    "listing": "/contact.html",
+    "items": []
   }
 ]
