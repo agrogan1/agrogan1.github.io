@@ -7,6 +7,7 @@
     "listing": "/blog.html",
     "items": [
       "/posts/multilevel-thinking-a-book-draft/index.html",
+      "/posts/visualizing-categorical-data/index.html",
       "/posts/updated-Michigan-colors-for-R-graphs/index.html",
       "/posts/updated-Michigan-colors-for-Stata-graphs/index.html",
       "/posts/visualizing MLM/index.html",
@@ -21,9 +22,9 @@
       "/posts/data-visualization-with-Stata/index.html",
       "/posts/GIS-and-mapping/index.html",
       "/posts/criticizing-a-musician-is-easy/index.html",
-      "/posts/multilevel-workshop/index.html",
-      "/posts/Simpsons-paradox-and-aggregation-paradox/index.html",
       "/posts/Simpsons-paradox-R/index.html",
+      "/posts/Simpsons-paradox-and-aggregation-paradox/index.html",
+      "/posts/multilevel-workshop/index.html",
       "/posts/bar-charts-and-pie-charts/index.html",
       "/posts/bignumber/index.html",
       "/posts/multiple-principled-solutions/index.html",
@@ -32,9 +33,9 @@
       "/posts/ArcGIS-storymaps/index.html",
       "/posts/its-not-just-what-youre-born-with/index.html",
       "/posts/multilevel-multilingual/index.html",
-      "/posts/transcendental-etude/index.html",
       "/posts/why-cant-numbers-be-beautiful-too/index.html",
       "/posts/you-have-to-get-your-data-from-somewhere/index.html",
+      "/posts/transcendental-etude/index.html",
       "/posts/post-with-code/index.html",
       "/posts/welcome/index.html",
       "/posts/interviewed-in-the-Lancet/index.html",
@@ -42,7 +43,8 @@
       "/posts/Mauritius-is-65/index.html",
       "/posts/bar-charts-in-ggplot2/index.html",
       "/posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html",
-      "/posts/DSO-faculty-award/index.html"
+      "/posts/DSO-faculty-award/index.html",
+      "/posts/two-page-Stata/index.html"
     ]
   }
 ]

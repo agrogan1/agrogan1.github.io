@@ -1,0 +1,13 @@
+---
+title: "Two Page Stata"
+subtitle: "Content updates and clarifications"
+author: "Andy Grogan-Kaylor" 
+date: "2013-12-5"
+categories: [stats]
+image: "thumbnail.jpg"
+---
+
+I've made updates to *Two Page Stata*: [https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.pdf](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.pdf) [[HTML](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.html)].
+
+*Two Page Stata* is intended to be an introduction to Stata in 2 pages. The treatment here is intended to be extremely brief, in order to create a kind of "cheat sheet" that can be presented in 2 pages.
+

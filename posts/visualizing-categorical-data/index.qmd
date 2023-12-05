@@ -1,0 +1,23 @@
+---
+title: "Visualizing Categorical Data"
+subtitle: "Alternative approaches to visualizing categorical data"
+author: "Andy Grogan-Kaylor"
+date: "2023-12-5"
+---
+
+Visualizing categorical data--that that come in the form `1/0` or *yes vs. no*--can be a challenging task. I have put together some thoughts on visualizing categorical data, as part of my course on analyzing categorical data. The notes can be found [here](https://agrogan1.github.io/newstuff/categorical/visualizing-categorical-data/visualizing-categorical-data.html) [[PDF](https://agrogan1.github.io/newstuff/categorical/visualizing-categorical-data/visualizing-categorical-data.pdf)].
+
+```{r}
+
+knitr::include_graphics("mybargraph1.png")
+
+```
+
+
+```{r}
+
+knitr::include_graphics("myspineplot2.png")
+
+```
+
+

@@ -1,0 +1,14 @@
+{
+  "hash": "0f9f327bdb1d3bd861d7406c81843563",
+  "result": {
+    "markdown": "---\ntitle: \"Visualizing Categorical Data\"\nsubtitle: \"Alternative approaches to visualizing categorical data\"\nauthor: \"Andy Grogan-Kaylor\"\ndate: \"2023-12-5\"\n---\n\n\nVisualizing categorical data--that that come in the form `1/0` or *yes vs. no*--can be a challenging task. I have put together some thoughts on visualizing categorical data, as part of my course on analyzing categorical data. The notes can be found [here](https://agrogan1.github.io/newstuff/categorical/visualizing-categorical-data/visualizing-categorical-data.html) [[PDF](https://agrogan1.github.io/newstuff/categorical/visualizing-categorical-data/visualizing-categorical-data.pdf)].\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](mybargraph1.png){width=750}\n:::\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](myspineplot2.png){width=750}\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
