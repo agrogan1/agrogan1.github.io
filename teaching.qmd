@@ -56,6 +56,7 @@ knitr::include_graphics("multilevel-multilingual.png")
 ## Categorical Data Analysis
 
 * [Course Page](https://agrogan1.github.io/newstuff/categorical/)
+* [Lecture Slides and Handouts](https://agrogan1.github.io/newstuff/categorical/README.html)
 
 ```{r, out.width="15%"}
 
