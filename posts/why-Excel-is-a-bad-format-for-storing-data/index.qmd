@@ -1,13 +1,15 @@
 ---
 title: "Why Excel Is A Bad Format For Storing Data"
 author: "Andy Grogan-Kaylor"
-date: "2023-1-26"
+date: "2023-12-06"
 categories: [stats, workflow]
 ---
 
 # Background
 
-Excel is sometimes used as a program to collect and store data. However, Excel may be problematic as a data storage solution for a number of reasons detailed below. Notably, statistical programs like [Stata](https://www.stata.com/), [SAS](https://www.sas.com/en_us/home.html), or SPSS all store additional information with each variable such as: a *variable label*, describing the contents of the variable, or the survey question that resulted in the variable; and a *value label*, which attaches qualitative information to each possible value of the response. 
+Excel is sometimes used as a program to collect and store data. Excel may sometimes be used because sometimes it is the only program that individuals or agencies have for storing data. Excel and other spreadsheet programs may also be used because spreadsheets can be very intuitive and easy ways of managing small amounts of data. 
+
+However, Excel may be problematic as a data storage solution for a number of reasons detailed below. Notably, statistical programs like [Stata](https://www.stata.com/), [SAS](https://www.sas.com/en_us/home.html), or SPSS all store additional information with each variable such as: a *variable label*, describing the contents of the variable, or the survey question that resulted in the variable; and a *value label*, which attaches qualitative information to each possible value of the response. 
 
 Excel does not generally contain this extra information about each variable, or column of data, which may lead to errors in working with quantitative information.
 

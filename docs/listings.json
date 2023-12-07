@@ -7,6 +7,7 @@
     "listing": "/blog.html",
     "items": [
       "/posts/multilevel-thinking-a-book-draft/index.html",
+      "/posts/why-Excel-is-a-bad-format-for-storing-data/index.html",
       "/posts/visualizing-categorical-data/index.html",
       "/posts/updated-Michigan-colors-for-R-graphs/index.html",
       "/posts/updated-Michigan-colors-for-Stata-graphs/index.html",
@@ -39,7 +40,6 @@
       "/posts/post-with-code/index.html",
       "/posts/welcome/index.html",
       "/posts/interviewed-in-the-Lancet/index.html",
-      "/posts/why-Excel-is-a-bad-format-for-storing-data/why-Excel-is-a-bad-format-for-storing-data.html",
       "/posts/Mauritius-is-65/index.html",
       "/posts/bar-charts-in-ggplot2/index.html",
       "/posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html",
