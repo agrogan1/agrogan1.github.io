@@ -4,63 +4,39 @@ title: "Teaching"
 
 ## Data Visualization
 
-* [Course Page](https://agrogan1.github.io/dataviz/dataviz-course)
+[Course Page](https://agrogan1.github.io/dataviz/dataviz-course)
 
-```{r, out.width="25%"}
-
-knitr::include_graphics("banner.png")
-
-```
+![](banner.png){width=25%}
 
 ## Multilevel and Longitudinal Modeling
 
 * [Course Page](https://agrogan1.github.io/multilevel/)
 
-```{r, out.width="25%"}
-
-knitr::include_graphics("plant.png")
-
-```
+![](plant.png){width=25%}
 
 * [Multilevel Thinking](https://agrogan1.github.io/multilevel-thinking/), an *in development* introduction to multilevel modeling.
 
-```{r, out.width="15%"}
-
-knitr::include_graphics("bookcover.png")
-
-```
+![](bookcover.png){width=15%}
 
 * [Multilevel Workshop](https://agrogan1.github.io/multilevel-workshop/), an *in development* workshop on multilevel modeling.
 
-```{r, out.width="25%"}
-
-knitr::include_graphics("multilevel-workshop.png")
-
-```
+![](multilevel-workshop.png){width=25%}
 
 * [Visualizing Multilevel Models](https://agrogan1.github.io/multilevel/visualizing-MLM/visualizing-MLM.html)
 
-```{r, out.width="25%"}
+![](mysmallmultiples.png){width=25%}
 
-knitr::include_graphics("mysmallmultiples.png")
 
-```
 * [Multilevel Multilingual](https://agrogan1.github.io/multilevel-multilingual/), multilevel models in multiple statistical languages.
 
-```{r, out.width="15%"}
-
-knitr::include_graphics("multilevel-multilingual.png")
-
-```
+![](multilevel-multilingual){width=15%}
 
 ## Categorical Data Analysis
 
 * [Course Page](https://agrogan1.github.io/newstuff/categorical/)
 * [Lecture Slides and Handouts](https://agrogan1.github.io/newstuff/categorical/README.html)
 
-```{r, out.width="15%"}
+![](nautilus-new.png){width=15%}
 
-knitr::include_graphics("nautilus-new.png")
 
-```
 
