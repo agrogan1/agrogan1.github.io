@@ -2,7 +2,7 @@
 title: "GIS and Mapping"
 subtitle: "Notes for a GIS Course Under Development."
 author: "Andy Grogan-Kaylor"
-date: "2023-9-8"
+date: "2023-12-9"
 categories: [GIS]
 image: leaflet-capture.png
 ---
