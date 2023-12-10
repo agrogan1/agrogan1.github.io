@@ -53,6 +53,8 @@ twoway (scatter height age_base) (lowess height age_base)
 	
 graph export gutten0.svg, width(2000) replace
 
+graph export gutten0.png, width(2000) replace
+
 ```
 
 ![A Simple Graph of the Gutten Trees](gutten0.svg){width=75%}
