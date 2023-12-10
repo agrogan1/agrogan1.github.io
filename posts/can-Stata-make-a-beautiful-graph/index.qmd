@@ -16,7 +16,7 @@ library(Statamarkdown)
 ```
 
 
-There is sometimes a *debate*--shall we say--about whether Stata can make beautiful graphs, particularly in comparison to using `ggplot` in R. Below, I try to use as many of Stata's options as I can to make a beautiful graph. I believe that this Stata comes close to being as beautiful of a graph as would be made by `ggplot`.
+There is sometimes a *debate*--shall we say--about whether Stata can make beautiful graphs, particularly in comparison to using `ggplot` in R. Below, I try to use as many of Stata's options as I can to make a beautiful graph. I believe that this Stata graph comes close to being as beautiful of a graph as would be made by `ggplot`.
 
 I use green and gold since they are common colors for forestry and park signage.
 
