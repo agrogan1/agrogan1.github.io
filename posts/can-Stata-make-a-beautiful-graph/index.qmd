@@ -1,7 +1,7 @@
 ---
 title: "Can Stata Make A Beautiful Graph?"
 author: "Andy Grogan-Kaylor" 
-date: 2023-12-10
+date: 2023-12-13
 categories: [stats, dataviz]
 ---
 
@@ -76,7 +76,6 @@ twoway /// two way graph
 mcolor(dkgreen%25) msymbol(circle)) /// dark green transparent markers
 (lowess height age_base, /// smoother 
 lcolor(gold) lwidth(thick)), /// gold line
-scheme(michigan) /// better base scheme
 title("Tree Height by Tree Age") /// title
 xtitle("Tree Age") /// title for x axis
 ytitle("Tree Height") /// title for y axis
