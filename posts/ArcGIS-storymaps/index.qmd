@@ -3,7 +3,7 @@ title: "ArcGIS Storymaps"
 subtitle: "Experimenting with a new format for sharing research."
 author:  Andy Grogan-Kaylor 
 date: "2023-8-15"
-categories: [maps, GIS, MICS]
+categories: [GIS, MICS]
 image: "worldmap.png"
 ---
 
