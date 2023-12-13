@@ -224,43 +224,33 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Author
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="multilevel" data-listing-date-sort="1702443600000" data-listing-file-modified-sort="1692043143459" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/multilevel-thinking-a-book-draft/index.html"> <img src="./posts/multilevel-thinking-a-book-draft/bookcover-landscape.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/multilevel-thinking-a-book-draft/index.html">
-<h3 class="no-anchor listing-title">
-Multilevel Thinking (A Book Draft)
-</h3>
-<div class="listing-subtitle">
-Discovering Diversity, Universals, and Particulars in Cross-Cultural Research.
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('multilevel'); return false;">
-multilevel
-</div>
-</div>
-<a href="./posts/multilevel-thinking-a-book-draft/index.html">
-<div class="listing-description">
-I have been working on a project entitled <em>Multilevel Thinking</em>. In this document, I try to provide clear explanations of ideas that may be well known in the statistical literature, but not that often used in the applied, or advocacy…<em></em><em></em><em></em>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/multilevel-thinking-a-book-draft/index.html">
-<div class="listing-date">
-Dec 13, 2023
-</div>
-<div class="listing-author">
-Andy Grogan-Kaylor
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="stats,dataviz" data-listing-date-sort="1702184400000" data-listing-file-modified-sort="1702479495724" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="0" data-categories="stats,dataviz" data-listing-date-sort="1702443600000" data-listing-file-modified-sort="1702480972183" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
 <div class="thumbnail">
 <p><a href="./posts/can-Stata-make-a-beautiful-graph/index.html"> <p class="card-img-top"><img src="posts\can-Stata-make-a-beautiful-graph\Old-Tjikko-Small.jpg"  class="thumbnail-image card-img"/></p> </a></p>
 </div>
@@ -290,7 +280,42 @@ There is sometimes a <em>debate</em>–shall we say–about whether Stata can ma
 <div class="metadata">
 <a href="./posts/can-Stata-make-a-beautiful-graph/index.html">
 <div class="listing-date">
-Dec 10, 2023
+Dec 13, 2023
+</div>
+<div class="listing-author">
+Andy Grogan-Kaylor
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="multilevel" data-listing-date-sort="1702443600000" data-listing-file-modified-sort="1692043143459" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./posts/multilevel-thinking-a-book-draft/index.html"> <img src="./posts/multilevel-thinking-a-book-draft/bookcover-landscape.png" class="thumbnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/multilevel-thinking-a-book-draft/index.html">
+<h3 class="no-anchor listing-title">
+Multilevel Thinking (A Book Draft)
+</h3>
+<div class="listing-subtitle">
+Discovering Diversity, Universals, and Particulars in Cross-Cultural Research.
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('multilevel'); return false;">
+multilevel
+</div>
+</div>
+<a href="./posts/multilevel-thinking-a-book-draft/index.html">
+<div class="listing-description">
+I have been working on a project entitled <em>Multilevel Thinking</em>. In this document, I try to provide clear explanations of ideas that may be well known in the statistical literature, but not that often used in the applied, or advocacy…<em></em><em></em><em></em>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/multilevel-thinking-a-book-draft/index.html">
+<div class="listing-date">
+Dec 13, 2023
 </div>
 <div class="listing-author">
 Andy Grogan-Kaylor
