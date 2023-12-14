@@ -1,0 +1,18 @@
+{
+  "hash": "4a4fbc3c14b3014491265d9e4b8ca74d",
+  "result": {
+    "markdown": "---\ntitle: \"Cleaning Data\"\nsubtitle: \"Resources for Stata and R\"\nauthor:  Andy Grogan-Kaylor \ndate: \"2023-12-14\"\ncategories: [stats, workflow]\nimage: \"data.png\"\n---\n\n\nI have developed a few resources for cleaning data and decided to list them all in one place. \n\n\n::: {.cell}\n::: {.cell-output-display}\n```{=html}\n<div class=\"datatables html-widget html-fill-item-overflow-hidden html-fill-item\" id=\"htmlwidget-007018ec3adfea86ec07\" style=\"width:100%;height:auto;\"></div>\n<script type=\"application/json\" data-for=\"htmlwidget-007018ec3adfea86ec07\">{\"x\":{\"filter\":\"none\",\"vertical\":false,\"data\":[[\"1\",\"2\",\"3\"],[\"<a href =https://agrogan1.github.io/Stata/cleaning-data-with-stata/cleaning-data-with-stata.html>Cleaning Data With Stata<\\/a>\",\"<a href =https://agrogan1.github.io/teaching/quantitative-data-analysis/quantitative-data-analysis.html#cleaning-data>Cleaning Data Section in 'Quantitative Data Analysis'<\\/a>\",\"<a href =https://globalfamilies.quarto.pub/global-families-project/quantitative-data-analysis.html#cleaning-data>Global Families Project on Cleaning Data<\\/a>\"],[\"yes\",\"yes\",\"no\"],[\"no\",\"yes\",\"yes\"]],\"container\":\"<table class=\\\"display\\\">\\n  <thead>\\n    <tr>\\n      <th> <\\/th>\\n      <th>resource<\\/th>\\n      <th>Stata<\\/th>\\n      <th>R<\\/th>\\n    <\\/tr>\\n  <\\/thead>\\n<\\/table>\",\"options\":{\"columnDefs\":[{\"orderable\":false,\"targets\":0}],\"order\":[],\"autoWidth\":false,\"orderClasses\":false}},\"evals\":[],\"jsHooks\":[]}</script>\n```\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<script src=\"../../site_libs/htmlwidgets-1.6.2/htmlwidgets.js\"></script>\r\n<link href=\"../../site_libs/datatables-css-0.0.0/datatables-crosstalk.css\" rel=\"stylesheet\" />\r\n<script src=\"../../site_libs/datatables-binding-0.30/datatables.js\"></script>\r\n<script src=\"../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js\"></script>\r\n<link href=\"../../site_libs/dt-core-1.13.4/css/jquery.dataTables.min.css\" rel=\"stylesheet\" />\r\n<link href=\"../../site_libs/dt-core-1.13.4/css/jquery.dataTables.extra.css\" rel=\"stylesheet\" />\r\n<script src=\"../../site_libs/dt-core-1.13.4/js/jquery.dataTables.min.js\"></script>\r\n<link href=\"../../site_libs/crosstalk-1.2.0/css/crosstalk.min.css\" rel=\"stylesheet\" />\r\n<script src=\"../../site_libs/crosstalk-1.2.0/js/crosstalk.min.js\"></script>\r\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

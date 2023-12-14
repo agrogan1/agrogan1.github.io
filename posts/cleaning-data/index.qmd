@@ -1,0 +1,37 @@
+---
+title: "Cleaning Data"
+subtitle: "Resources for Stata and R"
+author:  Andy Grogan-Kaylor 
+date: "2023-12-14"
+categories: [stats, workflow]
+image: "data.png"
+---
+
+I have developed a few resources for cleaning data and decided to list them all in one place. 
+
+```{r}
+
+name <- c("Cleaning Data With Stata",
+          "Cleaning Data Section in 'Quantitative Data Analysis'",
+          "Global Families Project on Cleaning Data")
+
+URL <- c("https://agrogan1.github.io/Stata/cleaning-data-with-stata/cleaning-data-with-stata.html",
+         "https://agrogan1.github.io/teaching/quantitative-data-analysis/quantitative-data-analysis.html#cleaning-data",
+         "https://globalfamilies.quarto.pub/global-families-project/quantitative-data-analysis.html#cleaning-data")
+
+R <- c("no", "yes", "yes")
+
+Stata <- c("yes", "yes", "no")
+  
+resource =  paste0("<a href =",
+               URL,
+               ">",
+               name,
+               "</a>")
+
+mydata <- data.frame(resource, Stata, R)
+
+DT::datatable(mydata, escape = F)
+
+
+```
