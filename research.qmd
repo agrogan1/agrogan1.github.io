@@ -162,7 +162,7 @@ with Parental Physical Abuse and Moderation by Child Gender"
 
 ### Meta-Analysis of Research on Corporal Punishment
 
-* [Meta-Analysis](https://agrogan1.github.io/research/cp/CP-meta.html) of Research on Corporal Punishment [[PubMed Full Text](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7992110/)]
+* [Meta-Analysis](https://agrogan1.github.io/research/cp/CP-meta.html) of Research on Corporal Punishment [[PubMed Full Text](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7992110/)] [[Slides](https://agrogan1.github.io/research/cpmeta-slides/cpmeta-slides.html)]
 
 ### Corporal Punishment Bans
 
