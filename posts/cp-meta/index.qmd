@@ -1,0 +1,11 @@
+---
+title: "New Presentation on Meta-Analysis of Corporal Punishment"
+author: "Andy Grogan-Kaylor"
+date: "2023-12-20"
+image: "cpmeta-results.png"
+categories: [corporal punishment]
+---
+
+I have created a new set of HTML slides presenting the results of
+  our meta-analysis of 50 years of research on corporal punishment:
+  [https://agrogan1.github.io/research/cpmeta-slides/cpmeta-slides.html](https://agrogan1.github.io/research/cpmeta-slides/cpmeta-slides.html)
