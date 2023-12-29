@@ -37,6 +37,8 @@ format:
     theme: 
       light: [yeti, theme-light.scss]
       dark: vapor
+    mermaid: 
+      theme: default
     css: styles.css
     toc: true
     execute:
