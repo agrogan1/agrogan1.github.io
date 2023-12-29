@@ -1,0 +1,16 @@
+---
+title: "Logic Models"
+subtitle: "Proof of Concept for Creating a Logic Model in `graphviz`."
+author: "Andy Grogan-Kaylor"
+date: "2023-12-29"
+categories: [workflow]
+image: "logic-model-graphviz.png"
+---
+
+Logic models are used extensively in program development and program evaluation.
+
+I am working on an evolving proof of concept of creating a logic model in graphviz. [graphviz](https://graphviz.org/) is a programming language designed to represent graphs. 
+
+The proof of concept can be found [here](https://agrogan1.github.io/teaching/logic-models/logic-models.html)
+
+
