@@ -133,165 +133,109 @@
     "text": "Show the code\nuse gutten.dta\n\ntwoway (scatter height age_base, mcolor(green%50)) ///\n(lfit height age_base, lcolor(gold) lwidth(thick)), ///\ntitle(\"Tree Height by Tree Age\") ///\ncaption(\"Gutten Tree Data\") ///\nxtitle(\"Tree Age\") ///\nytitle(\"Tree Height\")\n\ngraph export \"gutten.png\", width(2000) replace\n\n\nfile\n    /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/data-visualization-with-Stata/gutte\n    &gt; n.png saved as PNG format\n\n\n\n\n\nGraph of Gutten Tree Data\n\n\nStata is a powerful and intuitive data analysis program. However, Stata is often under-appreciated as data visualization software. Learning how to graph in Stata is an important part of learning how to use Stata. In older versions of Stata, the default graphs in Stata could sometimes be less than optimal. In newer versions of Stata, the default graphs have been very much improved and are professional looking and aesthetically appealing out of the box. With a few tweaks, graphs in Stata can be even further customized.\nI posted a few materials on using Stata for data visualization:\n\nData Visualization With Stata [PDF]\nThe Basics of Data Visualization With Stata (PDF)"
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "posts/logic-models/index.html",
+    "href": "posts/logic-models/index.html",
+    "title": "Logic Models",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "Logic models are used extensively in program development and program evaluation.\nI am working on an evolving proof of concept of creating a logic model in graphviz. graphviz is a programming language designed to represent graphs.\nThe proof of concept can be found here"
   },
   {
-    "objectID": "posts/multilevel-thinking-a-book-draft/index.html",
-    "href": "posts/multilevel-thinking-a-book-draft/index.html",
-    "title": "Multilevel Thinking (A Book Draft)",
+    "objectID": "posts/bar-charts-in-ggplot2/index.html",
+    "href": "posts/bar-charts-in-ggplot2/index.html",
+    "title": "Bar Charts in ggplot2",
     "section": "",
-    "text": "I have been working on a project entitled Multilevel Thinking. In this document, I try to provide clear explanations of ideas that may be well known in the statistical literature, but not that often used in the applied, or advocacy based, research literature. I use cross-cultural research as an example, but the ideas are equally applicable whether applied to studying children in schools, residents in neighborhoods, or individuals or families in countries.\nThe document started out as a set of notes on things I only get to discuss during breaks, or after class, or during office hours in my class on Multilevel and Longitudinal Modeling, and has grown from that set of notes into a draft introduction to multilevel modeling:\n\nhttps://agrogan1.github.io/multilevel-thinking/\n\nI am hoping to find a publisher this year.\n\n\n\nMultilevel Thinking"
+    "text": "While ggplot2, and the ideas of an underlying “grammar of graphics”, make some kinds of graphing easier, ggplot2 can make other types of graphing more difficult.\nOne often tricky type of graph is the bar chart. I have come to think that part of the difficulty with thinking about bar charts in ggplot2 is that sometimes three very different types of bar charts look similar."
   },
   {
-    "objectID": "posts/Simpsons-paradox-R/index.html#cross-tabulation",
-    "href": "posts/Simpsons-paradox-R/index.html#cross-tabulation",
-    "title": "Simpson’s Paradox",
-    "section": "Cross Tabulation",
-    "text": "Cross Tabulation\n\n\n\n\n\n\n\n\n\n\n \ndead\nalive\n\n\n\n\nuntreated\n6\n6\n\n\ntreated\n20\n20"
-  },
-  {
-    "objectID": "posts/Simpsons-paradox-R/index.html#mosaic-plot",
-    "href": "posts/Simpsons-paradox-R/index.html#mosaic-plot",
-    "title": "Simpson’s Paradox",
-    "section": "Mosaic Plot",
-    "text": "Mosaic Plot\n\nMosaic Plots are a little bit counterintuive at first. However, I believe that–after a little bit of study–Mosaic Plots provide the best visual representation of these relationships."
-  },
-  {
-    "objectID": "posts/Simpsons-paradox-R/index.html#pie-chart",
-    "href": "posts/Simpsons-paradox-R/index.html#pie-chart",
-    "title": "Simpson’s Paradox",
-    "section": "Pie Chart",
-    "text": "Pie Chart\n\nA Pie Chart sometimes is more intuitive at first, but actually has less information than a Mosaic Chart."
-  },
-  {
-    "objectID": "posts/Simpsons-paradox-R/index.html#cross-tabulation-1",
-    "href": "posts/Simpsons-paradox-R/index.html#cross-tabulation-1",
-    "title": "Simpson’s Paradox",
-    "section": "Cross Tabulation",
-    "text": "Cross Tabulation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA\nB\n\n\nuntreated\ndead\n\n3\n3\n\n\n\nalive\n\n4\n2\n\n\ntreated\ndead\n\n5\n15\n\n\n\nalive\n\n8\n12"
-  },
-  {
-    "objectID": "posts/Simpsons-paradox-R/index.html#mosaic-plot-1",
-    "href": "posts/Simpsons-paradox-R/index.html#mosaic-plot-1",
-    "title": "Simpson’s Paradox",
-    "section": "Mosaic Plot",
-    "text": "Mosaic Plot"
-  },
-  {
-    "objectID": "posts/Simpsons-paradox-R/index.html#pie-chart-1",
-    "href": "posts/Simpsons-paradox-R/index.html#pie-chart-1",
-    "title": "Simpson’s Paradox",
-    "section": "Pie Chart",
-    "text": "Pie Chart"
-  },
-  {
-    "objectID": "posts/bar-charts-to-pie-charts-another-look/index.html",
-    "href": "posts/bar-charts-to-pie-charts-another-look/index.html",
-    "title": "Bar Charts to Pie Charts: Another Look",
-    "section": "",
-    "text": "A quick look at moving from bar charts to pie charts.\nA longer explanation of some issues is here: https://agrogan1.github.io/posts/bar-charts-in-ggplot2/"
-  },
-  {
-    "objectID": "posts/bar-charts-to-pie-charts-another-look/index.html#bar-chart",
-    "href": "posts/bar-charts-to-pie-charts-another-look/index.html#bar-chart",
-    "title": "Bar Charts to Pie Charts: Another Look",
-    "section": "Bar Chart",
-    "text": "Bar Chart\n\n\nCode\nggplot(clients, # data I am using\n       aes(x = program, # x is program\n           fill = program)) + # fill is also program\n  geom_bar() # use bars"
-  },
-  {
-    "objectID": "posts/bar-charts-to-pie-charts-another-look/index.html#stacked-bar-chart",
-    "href": "posts/bar-charts-to-pie-charts-another-look/index.html#stacked-bar-chart",
-    "title": "Bar Charts to Pie Charts: Another Look",
+    "objectID": "posts/bar-charts-in-ggplot2/index.html#stacked-bar-chart",
+    "href": "posts/bar-charts-in-ggplot2/index.html#stacked-bar-chart",
+    "title": "Bar Charts in ggplot2",
     "section": "Stacked Bar Chart",
-    "text": "Stacked Bar Chart\n\n\nCode\nggplot(clients, # data I am using\n       aes(x = 1, # x is now 1 for everyone\n           fill = program)) + # fill is program\n  geom_bar() # use bars"
+    "text": "Stacked Bar Chart\nA simple change to the above aesthetic yields a stacked bar chart.\nNote that fill now becomes part of the aesthetic so that color fill differentiates the parts of the bar.\n\n\nCode\nggplot(mydata, # the data that I am using\n       aes(x = 1, # x is 1 \n           fill = factor(x))) + # fill is x as a factor\n  geom_bar() + # using bars to graph\n  scale_fill_discrete(name = \"x\") # modify name of legend\n\n\n\n\n\n\nWe then return to an unstacked bar chart to consider the syntax for adding labels."
   },
   {
-    "objectID": "posts/bar-charts-to-pie-charts-another-look/index.html#pie-chart",
-    "href": "posts/bar-charts-to-pie-charts-another-look/index.html#pie-chart",
-    "title": "Bar Charts to Pie Charts: Another Look",
-    "section": "Pie Chart",
-    "text": "Pie Chart\n\n\nCode\nggplot(clients, # data I am using\n       aes(x = 1, # x is now 1 for everyone\n           fill = program)) + # fill is program\n  geom_bar() + # use bars\n  coord_polar(theta = \"y\") + # use polar coordinates\n  theme_void() # blank theme for pie charts"
+    "objectID": "posts/bar-charts-in-ggplot2/index.html#add-labels",
+    "href": "posts/bar-charts-in-ggplot2/index.html#add-labels",
+    "title": "Bar Charts in ggplot2",
+    "section": "Add Labels",
+    "text": "Add Labels\nAdding labels requires adding an extra geom, geom_text. We have to add a new, non-intuitive aesthetic to geom_text to tell it where the labels are located, and that they represent the count of observations in each category. This aesthetic uses the special variable ..count.. to tell us how many observations are in each category.\n\n\nCode\nggplot(mydata, # the data that I am using\n       aes(x = x)) + # 'aesthetic' only includes x\n  geom_bar(fill = \"deepskyblue\") + # using bars to graph\n  geom_text(stat = \"count\", \n            aes(label = ..count.., # text of the label\n                y = ..count.. + .5), # location of the label\n            size = 5) # size of the label\n\n\n\n\n\nAlternatively, we could use ..prop.. to calculate and display proportions.\n\n\nCode\nggplot(mydata, # the data that I am using\n       aes(x = x)) + \n  geom_bar(aes(y = ..prop..), # using bars to graph\n           stat = \"count\",\n           fill = \"deepskyblue\") + \n  geom_text(aes(label = round(..prop.., digits = 2), # text of the label \n                y = ..prop.. ), # location of the label\n            stat = \"count\", \n            size = 5, # size of the label\n            vjust = -1) + # vertical justification\n  ylim(0, .7)"
   },
   {
-    "objectID": "posts/bar-charts-to-pie-charts-another-look/index.html#stacked-bar-chart-1",
-    "href": "posts/bar-charts-to-pie-charts-another-look/index.html#stacked-bar-chart-1",
-    "title": "Bar Charts to Pie Charts: Another Look",
-    "section": "Stacked Bar Chart",
-    "text": "Stacked Bar Chart\n\n\nCode\nggplot(clients, # data I am using\n       aes(x = program, # x is back to program\n           fill = gender)) + # fill is gender\n  geom_bar() # use bars"
+    "objectID": "posts/bar-charts-in-ggplot2/index.html#what-about-a-line-chart",
+    "href": "posts/bar-charts-in-ggplot2/index.html#what-about-a-line-chart",
+    "title": "Bar Charts in ggplot2",
+    "section": "What About a Line Chart?",
+    "text": "What About a Line Chart?\nA line chart requires the addition of group to the aesthetic, and the use of a different geometry.\n\n\nCode\nggplot(mydata, # the data that I am using\n       aes(x = x,\n           y = y,\n           group = 1)) + # add 'group'\n   stat_summary(geom = \"line\", # with line\n                fun = mean,\n                color = \"deepskyblue\")"
   },
   {
-    "objectID": "posts/bar-charts-to-pie-charts-another-look/index.html#unstack-the-bars",
-    "href": "posts/bar-charts-to-pie-charts-another-look/index.html#unstack-the-bars",
-    "title": "Bar Charts to Pie Charts: Another Look",
-    "section": "Unstack the Bars",
-    "text": "Unstack the Bars\n\n\nCode\nggplot(clients, # data I am using\n       aes(x = program, # x is back to program\n           fill = gender)) + # fill is gender\n  geom_bar(position = \"dodge2\") # unstack ('dodge') the bars"
+    "objectID": "posts/bar-charts-in-ggplot2/index.html#and-then-a-bar-chart-is-easy",
+    "href": "posts/bar-charts-in-ggplot2/index.html#and-then-a-bar-chart-is-easy",
+    "title": "Bar Charts in ggplot2",
+    "section": "And Then A Bar Chart Is Easy",
+    "text": "And Then A Bar Chart Is Easy\n\n\nCode\nlibrary(ggplot2)\n\nggplot(mydataREVISED, # the data that I am using\n       aes(x = xREVISED, # 'aesthetic' includes x\n           y = yREVISED)) + # and y\n  geom_bar(stat = \"identity\", # use ACTUAL y for bar height\n           fill = \"deepskyblue\")"
   },
   {
-    "objectID": "posts/bar-charts-to-pie-charts-another-look/index.html#pie-chart-1",
-    "href": "posts/bar-charts-to-pie-charts-another-look/index.html#pie-chart-1",
-    "title": "Bar Charts to Pie Charts: Another Look",
-    "section": "Pie Chart",
-    "text": "Pie Chart\nOne approach …\n\n\nCode\n# position = position_fill() makes the slices\n# fill the pie in each facet\n\nggplot(clients, # data I am using\n       aes(x = 1, # x is back to 1\n           fill = gender)) + # fill is gender\n  geom_bar(position = position_fill()) + # use bars\n  coord_polar(theta = \"y\") + # polar coordinates\n  facet_wrap(~program) + # facet wrap on program\n  theme_void() # blank theme for pie charts"
+    "objectID": "posts/bar-charts-in-ggplot2/index.html#a-line-chart-is-easy-too",
+    "href": "posts/bar-charts-in-ggplot2/index.html#a-line-chart-is-easy-too",
+    "title": "Bar Charts in ggplot2",
+    "section": "A Line Chart Is Easy Too",
+    "text": "A Line Chart Is Easy Too\n\n\nCode\nlibrary(ggplot2)\n\nggplot(mydataREVISED, # the data that I am using\n       aes(x = xREVISED, # 'aesthetic' includes x\n           y = yREVISED)) + # and y\n  geom_line(stat = \"identity\", # use ACTUAL y for bar height\n           color = \"deepskyblue\")"
   },
   {
-    "objectID": "posts/visualizing-disparities-in-a-continuous-outcome/index.html",
-    "href": "posts/visualizing-disparities-in-a-continuous-outcome/index.html",
-    "title": "Visualizing Disparities in a Continuous Risk Factor or Outcome",
+    "objectID": "posts/bar-charts-in-ggplot2/index.html#pie-chart-with-better-colors",
+    "href": "posts/bar-charts-in-ggplot2/index.html#pie-chart-with-better-colors",
+    "title": "Bar Charts in ggplot2",
+    "section": "Pie Chart With Better Colors",
+    "text": "Pie Chart With Better Colors\n\n\nCode\nlibrary(ggplot2)\n\nggplot(mydata, # the data that I am using\n       aes(x = 1, \n           fill = factor(x))) + \n  geom_bar() + # using bars to graph \n  coord_polar(theta = \"y\") + # polar coordinates \n  scale_fill_viridis_d(name = \"x\") + # beautiful colors; named legend\n  theme_void() # get rid of distracting numbers"
+  },
+  {
+    "objectID": "posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html",
+    "href": "posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html",
+    "title": "Bar Charts in ggplot With Multiple Outcomes",
     "section": "",
-    "text": "In this post, I am trying to think through some best practices in showing disparities in a continuous risk factor or continuous outcome, like levels of depression or levels of poverty.\n\nI am using the graphing library ggplot. As I often do, I am going to show the code. The code can be useful, especially if you are trying to replicate some of these graphs.\n\n\nHowever, the discussion is intended to be more conceptual, and you do not need to understand the code to follow the discussion. Indeed, the discussion is intended to be applicable to a wide variety of data visualization tools, including those that do not rely on coding.\n\nI’m going to start by imagining that we have different groups of people.\n\n\n\n\n\n\n\n\n\n\nGroup A\nGroup B\nGroup C\n\n\n\n\n36\n47\n17\n\n\n\n\n\n\n\n\n\n\nWe’re going to set up our graphing commands, which requires using some code.\n\n\nShow the code\nlibrary(ggplot2) # beautiful graphs\n\nlibrary(ggbeeswarm) # \"beeswarm\" geometry"
+    "text": "Show the code\nlibrary(ggplot2) # beautiful graphs\n\nlibrary(tidyr) # tidy data"
   },
   {
-    "objectID": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#bar-graph-of-mean-values",
-    "href": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#bar-graph-of-mean-values",
-    "title": "Visualizing Disparities in a Continuous Risk Factor or Outcome",
-    "section": "Bar Graph of Mean Values",
-    "text": "Bar Graph of Mean Values\nAs noted above, a bar graph might be the most intuitive, or at least the most common approach. Note that because the bars are the mean of risk scores for different groups, that we have to make this clear in the code.\n\n\nShow the code\nmyplot + \n  stat_summary(fun.y = mean, geom = \"bar\") +\n  labs(title = \"Mean Risk By Group\")"
+    "objectID": "posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html#bar-chart-with-stacked-bars",
+    "href": "posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html#bar-chart-with-stacked-bars",
+    "title": "Bar Charts in ggplot With Multiple Outcomes",
+    "section": "Bar Chart With Stacked Bars",
+    "text": "Bar Chart With Stacked Bars\n\ngeom_bar()\n\n\nShow the code\nggplot(myReshapedData, # data I am using\n       aes(x = x, # x is newnames\n           y = newvalues, # y is newvalues\n           fill = newnames)) + # fill is newnames\n  geom_bar(stat = \"identity\") # y is actual bar height\n\n\n\n\n\n\n\ngeom_col()\nBy default, geom_col() assumes stat = 'identity' i.e. y is the height of the bar.\n\n\nShow the code\nggplot(myReshapedData, # data I am using\n       aes(x = x, # x is newnames\n           y = newvalues, # y is newvalues\n           fill = newnames)) + # fill is newnames\n  geom_col() # y is actual bar height"
   },
   {
-    "objectID": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#points-at-mean-values",
-    "href": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#points-at-mean-values",
-    "title": "Visualizing Disparities in a Continuous Risk Factor or Outcome",
-    "section": "Points at Mean Values",
-    "text": "Points at Mean Values\n\nVertical\nInstead of bars indicating mean risk, we could use points at the mean risk value for each group.\n\n\nShow the code\nmyplot + \n  stat_summary(fun.y = mean, geom = \"point\", size = 10) +\n  ylim(0,150) + \n  labs(title = \"Mean Risk By Group\")\n\n\n\n\n\nPoints at Mean Values\n\n\n\n\n\n\nHorizontal\n\n\nShow the code\nmyplot + \n  stat_summary(fun.y = mean, geom = \"point\", size = 10) +\n  ylim(0,150) + \n  coord_flip() +\n  labs(title = \"Mean Risk By Group\")\n\n\n\n\n\nHorizontal Points at Mean Values"
+    "objectID": "posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html#bar-chart-with-unstacked-bars",
+    "href": "posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html#bar-chart-with-unstacked-bars",
+    "title": "Bar Charts in ggplot With Multiple Outcomes",
+    "section": "Bar Chart With Unstacked Bars",
+    "text": "Bar Chart With Unstacked Bars\n\n\nShow the code\nggplot(myReshapedData, # data I am using\n       aes(x = x, # x is newnames\n           y = newvalues, # y is newvalues\n           fill = newnames)) + # fill is newnames\n  geom_bar(stat = \"identity\", # y is actual bar height\n           position = position_dodge()) # unstack bars"
   },
   {
-    "objectID": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#points-at-mean-values-connected-by-line",
-    "href": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#points-at-mean-values-connected-by-line",
-    "title": "Visualizing Disparities in a Continuous Risk Factor or Outcome",
-    "section": "Points at Mean Values Connected by Line",
-    "text": "Points at Mean Values Connected by Line\nPerhaps we connect the points with a line. Connecting the points with a line in this way may be confusing, as it may imply some kind of trend that we do not wish to imply.\n\n\nShow the code\nmyplot + \n  stat_summary(fun.y = mean, geom = \"line\", \n               group = 1, \n               color = \"black\", size = 2) +\n  stat_summary(fun.y = mean, geom = \"point\", size = 10) + \n  ylim(0,150) + \n  labs(title = \"Mean Risk By Group\")\n\n\n\n\n\nPoints at Mean Values Connected by Line"
+    "objectID": "posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html#line-chart",
+    "href": "posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html#line-chart",
+    "title": "Bar Charts in ggplot With Multiple Outcomes",
+    "section": "Line Chart",
+    "text": "Line Chart\n\n\nShow the code\nggplot(myReshapedData, # data I am using\n       aes(x = x, # x is x\n           y = newvalues, # y is value\n           color = newnames, # color is key\n           group = newnames)) + # line needs a group aesthetic\n  geom_line()"
   },
   {
-    "objectID": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#lollipop-chart",
-    "href": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#lollipop-chart",
-    "title": "Visualizing Disparities in a Continuous Risk Factor or Outcome",
-    "section": "“Lollipop” Chart",
-    "text": "“Lollipop” Chart\n\nVertical\n\n\nShow the code\n# In order to draw the segments of the lollipops,\n# we have to summarize the data with dplyr,\n# and 'pipe' into ggplot\n\nlibrary(dplyr) # data wrangling\n\nmylollipop &lt;- mydata %&gt;% \n  group_by(group) %&gt;% # group by group\n  summarise(mean_risk = mean(risk)) %&gt;% # summarize by group\n  ggplot(aes(x = group,\n             y = mean_risk,\n             color = group)) +\n  geom_point(size = 10) +\n  geom_segment(aes(x = group,\n                   xend = group,\n                   y = 0,\n                   yend = mean_risk),\n               size = 2) +\n  ylim(0,160) + \n  labs(title = \"Mean Risk By Group\",\n       y = \"mean risk\") +\n  scale_fill_viridis_d() +\n  scale_color_viridis_d() + \n  theme_minimal()\n\nmylollipop # replay\n\n\n\n\n\nLollipop Chart\n\n\n\n\n\n\nHorizontal\n\n\nShow the code\nmylollipop + coord_flip()\n\n\n\n\n\nHorizontal Lollipop Chart"
+    "objectID": "posts/ArcGIS-storymaps/index.html",
+    "href": "posts/ArcGIS-storymaps/index.html",
+    "title": "ArcGIS Storymaps",
+    "section": "",
+    "text": "Locations of Countries in MICS\n\n\nFor our work with the UNICEF Multiple Indicator Cluster Survey (MICS) data on parenting and child development in Low and Middle Income Countries around the world, I have been experimenting with the ArcGIS “storymaps” format:\n\nGender Inequality in Low- and Middle-Income Countries: Associations with Parental Physical Abuse and Moderation by Child Gender\n\nArticle\nArcGIS Storymap\nPress Release\n\n“The Association between Spanking and Physical Abuse of Young Children in 56 Low- and Middle-Income Countries”\n\nArticle\nPress Release\nHTML Slides\nArcGIS Storymap\n\n“Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach”\n\nArticle\nArcGIS Storymap\n\n“Multilevel ecological analysis of the predictors of spanking across 65 countries”\n\nArticle\nArcGIS Storymap"
   },
   {
-    "objectID": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#points",
-    "href": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#points",
-    "title": "Visualizing Disparities in a Continuous Risk Factor or Outcome",
-    "section": "Points",
-    "text": "Points\nThere are various geometries that make use of points to show the full range of the data.\nI think that bars may be the best if we wish to focus on differences in group averages. However, there is something very intuitive about graphs where each individual person is represented by an individual point.\nAdditionally, points give us a better idea of the exact nature of how risk is distributed, and the highest and lowest values of risk for each group.\n\nSimple Points\n\n\nShow the code\nmyplot + geom_point(size = 3) # simple points\n\n\n\n\n\nPoints\n\n\n\n\n\n\nJittered Points\n\n\nShow the code\nmyplot +  geom_jitter(size = 3) # jittered points\n\n\n\n\n\nJittered Points\n\n\n\n\n\n\nBeeswarm\n\n\nShow the code\nmyplot + geom_beeswarm(size = 3) # beeswarm geometry\n\n\n\n\n\nBeeswarm\n\n\n\n\nPersonally, I like the jittered points geometry, because I believe that it gives a clearer illustration of each individual score, but that may be a matter of personal preference."
+    "objectID": "posts/transcendental-etude/index.html",
+    "href": "posts/transcendental-etude/index.html",
+    "title": "Transcendental Etude",
+    "section": "",
+    "text": "“… a lifetime is too narrow\nto understand it all, beginning with the huge\nrockshelves that underlie all that life.\n…\nNo one ever told us we had to study our lives,\nmake of our lives a study, as if learning natural history\nor music, that we should begin\nwith the simple exercises first\nand slowly go on trying\nthe hard ones, practicing till strength\nand accuracy became one with the daring\nto leap into transcendence…\n…\nBut there come times—perhaps this is one of them—\nwhen we have to take ourselves more seriously or die,\nwhen we have to pull back from the incantations,\nrhythms we’ve moved to thoughtlessly,\nand disenthrall ourselves, bestow\nourselves to silence, or a severer listening…”\n– Rich (1984)\n\n\n\n\nReferences\n\nRich, A. (1984). Transcendental etude. In The fact of a doorframe: Poems selected and new 1950-1984. Norton."
   },
   {
-    "objectID": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#boxplot",
-    "href": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#boxplot",
-    "title": "Visualizing Disparities in a Continuous Risk Factor or Outcome",
-    "section": "Boxplot",
-    "text": "Boxplot\n\n\nShow the code\nmyplot + geom_boxplot(color = \"black\") # boxplot\n\n\n\n\n\nBoxplot"
-  },
-  {
-    "objectID": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#violin-plot",
-    "href": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#violin-plot",
-    "title": "Visualizing Disparities in a Continuous Risk Factor or Outcome",
-    "section": "Violin Plot",
-    "text": "Violin Plot\nAn even more rarely used geometry is the violin plot. It has the advantage of being visually striking, but seems to be less intuitively interpretable.\n\n\nShow the code\nmyplot + geom_violin(color = \"black\") # violin plot\n\n\n\n\n\nViolin Plot"
+    "objectID": "posts/theory/index.html",
+    "href": "posts/theory/index.html",
+    "title": "Theory",
+    "section": "",
+    "text": "A few ideas relevant to theory that have been on my mind.\n\n“It shouldn’t be theories that define the problems of our situation, but rather the problems that demand, and so to speak, select, their own theorisation.” (Martin-Baro (1998) in Burton & Kagan (2005)).\n\n\n“What we see and how we see is of course determined by our perspective, by the place from which we begin our examination of history; but it is determined also by reality itself.” (Martin-Baro, 1994)\n\n\n“The present reality in Latin America leads us to the hypothesis that philosophy can only carry out its critical and creative function in favor of an effective praxis of liberation if it is adequately situated within that liberating praxis, which is independent of philosophy.” Ellacuria (2013)\n\n\n\n\n\nReferences\n\nBurton, M., & Kagan, C. (2005). Liberation Social Psychology: Learning From Latin America Psychology of liberation: Learning from Latin America. Journal of Community & Applied Social Psychology, 15. https://doi.org/10.1002/casp.786\n\n\nEllacuria, I. (2013). Ignacio ellacuria: Essays on history, liberation, and salvation (M. L. Lee, Ed.). Orbis Books.\n\n\nMartin-Baro, I. (1994). Toward a liberation psychology. In A. Aron & S. Corne (Eds.), Writings for a liberation psychology. Harvard University Press.\n\n\nMartin-Baro, I. (1998). Retos y perspectivas de la psicología latinoamericana. In A. Blanco (Ed.), Psicología de la liberación. Trotta."
   },
   {
     "objectID": "posts/you-have-to-get-your-data-from-somewhere/index.html",
@@ -532,102 +476,172 @@
     "text": "I’ve developed a new graphing tutorial for Stata: How To Choose A Chart - A Statistically Informed Visual Guide With Stata Commands"
   },
   {
-    "objectID": "posts/theory/index.html",
-    "href": "posts/theory/index.html",
-    "title": "Theory",
+    "objectID": "posts/logic-models-Mermaid/index.html",
+    "href": "posts/logic-models-Mermaid/index.html",
+    "title": "A Logic Model Using the mermaid Diagram Language",
     "section": "",
-    "text": "A few ideas relevant to theory that have been on my mind.\n\n“It shouldn’t be theories that define the problems of our situation, but rather the problems that demand, and so to speak, select, their own theorisation.” (Martin-Baro (1998) in Burton & Kagan (2005)).\n\n\n“What we see and how we see is of course determined by our perspective, by the place from which we begin our examination of history; but it is determined also by reality itself.” (Martin-Baro, 1994)\n\n\n“The present reality in Latin America leads us to the hypothesis that philosophy can only carry out its critical and creative function in favor of an effective praxis of liberation if it is adequately situated within that liberating praxis, which is independent of philosophy.” Ellacuria (2013)\n\n\n\n\n\nReferences\n\nBurton, M., & Kagan, C. (2005). Liberation Social Psychology: Learning From Latin America Psychology of liberation: Learning from Latin America. Journal of Community & Applied Social Psychology, 15. https://doi.org/10.1002/casp.786\n\n\nEllacuria, I. (2013). Ignacio ellacuria: Essays on history, liberation, and salvation (M. L. Lee, Ed.). Orbis Books.\n\n\nMartin-Baro, I. (1994). Toward a liberation psychology. In A. Aron & S. Corne (Eds.), Writings for a liberation psychology. Harvard University Press.\n\n\nMartin-Baro, I. (1998). Retos y perspectivas de la psicología latinoamericana. In A. Blanco (Ed.), Psicología de la liberación. Trotta."
+    "text": "Logic models are used extensively in program development and program evaluation. I have worked on a logic model in graphviz. Here is an implementation using the mermaid graphing language.\n\n\nCode\nflowchart LR\n    subgraph Domains\n    direction TB\n    D1(Workshops)\n    D2(Publications)\n    end\n    subgraph Activities\n    direction TB\n    A1(Meetings)\n    A2(Social Media Posts)\n    A3(Information Cards)\n    end\n    subgraph Outcomes\n    direction TB\n    O1(Better Parenting)\n    end\n    D1--&gt;A1\n    D2--&gt;A2\n    D2--&gt;A3\n    A1--&gt;O1\n    A2--&gt;O1\n    A3--&gt;O1\n\n\n\n\nflowchart LR\n    subgraph Domains\n    direction TB\n    D1(Workshops)\n    D2(Publications)\n    end\n    subgraph Activities\n    direction TB\n    A1(Meetings)\n    A2(Social Media Posts)\n    A3(Information Cards)\n    end\n    subgraph Outcomes\n    direction TB\n    O1(Better Parenting)\n    end\n    D1--&gt;A1\n    D2--&gt;A2\n    D2--&gt;A3\n    A1--&gt;O1\n    A2--&gt;O1\n    A3--&gt;O1"
   },
   {
-    "objectID": "posts/transcendental-etude/index.html",
-    "href": "posts/transcendental-etude/index.html",
-    "title": "Transcendental Etude",
+    "objectID": "posts/visualizing-disparities-in-a-continuous-outcome/index.html",
+    "href": "posts/visualizing-disparities-in-a-continuous-outcome/index.html",
+    "title": "Visualizing Disparities in a Continuous Risk Factor or Outcome",
     "section": "",
-    "text": "“… a lifetime is too narrow\nto understand it all, beginning with the huge\nrockshelves that underlie all that life.\n…\nNo one ever told us we had to study our lives,\nmake of our lives a study, as if learning natural history\nor music, that we should begin\nwith the simple exercises first\nand slowly go on trying\nthe hard ones, practicing till strength\nand accuracy became one with the daring\nto leap into transcendence…\n…\nBut there come times—perhaps this is one of them—\nwhen we have to take ourselves more seriously or die,\nwhen we have to pull back from the incantations,\nrhythms we’ve moved to thoughtlessly,\nand disenthrall ourselves, bestow\nourselves to silence, or a severer listening…”\n– Rich (1984)\n\n\n\n\nReferences\n\nRich, A. (1984). Transcendental etude. In The fact of a doorframe: Poems selected and new 1950-1984. Norton."
+    "text": "In this post, I am trying to think through some best practices in showing disparities in a continuous risk factor or continuous outcome, like levels of depression or levels of poverty.\n\nI am using the graphing library ggplot. As I often do, I am going to show the code. The code can be useful, especially if you are trying to replicate some of these graphs.\n\n\nHowever, the discussion is intended to be more conceptual, and you do not need to understand the code to follow the discussion. Indeed, the discussion is intended to be applicable to a wide variety of data visualization tools, including those that do not rely on coding.\n\nI’m going to start by imagining that we have different groups of people.\n\n\n\n\n\n\n\n\n\n\nGroup A\nGroup B\nGroup C\n\n\n\n\n36\n47\n17\n\n\n\n\n\n\n\n\n\n\nWe’re going to set up our graphing commands, which requires using some code.\n\n\nShow the code\nlibrary(ggplot2) # beautiful graphs\n\nlibrary(ggbeeswarm) # \"beeswarm\" geometry"
   },
   {
-    "objectID": "posts/ArcGIS-storymaps/index.html",
-    "href": "posts/ArcGIS-storymaps/index.html",
-    "title": "ArcGIS Storymaps",
+    "objectID": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#bar-graph-of-mean-values",
+    "href": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#bar-graph-of-mean-values",
+    "title": "Visualizing Disparities in a Continuous Risk Factor or Outcome",
+    "section": "Bar Graph of Mean Values",
+    "text": "Bar Graph of Mean Values\nAs noted above, a bar graph might be the most intuitive, or at least the most common approach. Note that because the bars are the mean of risk scores for different groups, that we have to make this clear in the code.\n\n\nShow the code\nmyplot + \n  stat_summary(fun.y = mean, geom = \"bar\") +\n  labs(title = \"Mean Risk By Group\")"
+  },
+  {
+    "objectID": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#points-at-mean-values",
+    "href": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#points-at-mean-values",
+    "title": "Visualizing Disparities in a Continuous Risk Factor or Outcome",
+    "section": "Points at Mean Values",
+    "text": "Points at Mean Values\n\nVertical\nInstead of bars indicating mean risk, we could use points at the mean risk value for each group.\n\n\nShow the code\nmyplot + \n  stat_summary(fun.y = mean, geom = \"point\", size = 10) +\n  ylim(0,150) + \n  labs(title = \"Mean Risk By Group\")\n\n\n\n\n\nPoints at Mean Values\n\n\n\n\n\n\nHorizontal\n\n\nShow the code\nmyplot + \n  stat_summary(fun.y = mean, geom = \"point\", size = 10) +\n  ylim(0,150) + \n  coord_flip() +\n  labs(title = \"Mean Risk By Group\")\n\n\n\n\n\nHorizontal Points at Mean Values"
+  },
+  {
+    "objectID": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#points-at-mean-values-connected-by-line",
+    "href": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#points-at-mean-values-connected-by-line",
+    "title": "Visualizing Disparities in a Continuous Risk Factor or Outcome",
+    "section": "Points at Mean Values Connected by Line",
+    "text": "Points at Mean Values Connected by Line\nPerhaps we connect the points with a line. Connecting the points with a line in this way may be confusing, as it may imply some kind of trend that we do not wish to imply.\n\n\nShow the code\nmyplot + \n  stat_summary(fun.y = mean, geom = \"line\", \n               group = 1, \n               color = \"black\", size = 2) +\n  stat_summary(fun.y = mean, geom = \"point\", size = 10) + \n  ylim(0,150) + \n  labs(title = \"Mean Risk By Group\")\n\n\n\n\n\nPoints at Mean Values Connected by Line"
+  },
+  {
+    "objectID": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#lollipop-chart",
+    "href": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#lollipop-chart",
+    "title": "Visualizing Disparities in a Continuous Risk Factor or Outcome",
+    "section": "“Lollipop” Chart",
+    "text": "“Lollipop” Chart\n\nVertical\n\n\nShow the code\n# In order to draw the segments of the lollipops,\n# we have to summarize the data with dplyr,\n# and 'pipe' into ggplot\n\nlibrary(dplyr) # data wrangling\n\nmylollipop &lt;- mydata %&gt;% \n  group_by(group) %&gt;% # group by group\n  summarise(mean_risk = mean(risk)) %&gt;% # summarize by group\n  ggplot(aes(x = group,\n             y = mean_risk,\n             color = group)) +\n  geom_point(size = 10) +\n  geom_segment(aes(x = group,\n                   xend = group,\n                   y = 0,\n                   yend = mean_risk),\n               size = 2) +\n  ylim(0,160) + \n  labs(title = \"Mean Risk By Group\",\n       y = \"mean risk\") +\n  scale_fill_viridis_d() +\n  scale_color_viridis_d() + \n  theme_minimal()\n\nmylollipop # replay\n\n\n\n\n\nLollipop Chart\n\n\n\n\n\n\nHorizontal\n\n\nShow the code\nmylollipop + coord_flip()\n\n\n\n\n\nHorizontal Lollipop Chart"
+  },
+  {
+    "objectID": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#points",
+    "href": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#points",
+    "title": "Visualizing Disparities in a Continuous Risk Factor or Outcome",
+    "section": "Points",
+    "text": "Points\nThere are various geometries that make use of points to show the full range of the data.\nI think that bars may be the best if we wish to focus on differences in group averages. However, there is something very intuitive about graphs where each individual person is represented by an individual point.\nAdditionally, points give us a better idea of the exact nature of how risk is distributed, and the highest and lowest values of risk for each group.\n\nSimple Points\n\n\nShow the code\nmyplot + geom_point(size = 3) # simple points\n\n\n\n\n\nPoints\n\n\n\n\n\n\nJittered Points\n\n\nShow the code\nmyplot +  geom_jitter(size = 3) # jittered points\n\n\n\n\n\nJittered Points\n\n\n\n\n\n\nBeeswarm\n\n\nShow the code\nmyplot + geom_beeswarm(size = 3) # beeswarm geometry\n\n\n\n\n\nBeeswarm\n\n\n\n\nPersonally, I like the jittered points geometry, because I believe that it gives a clearer illustration of each individual score, but that may be a matter of personal preference."
+  },
+  {
+    "objectID": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#boxplot",
+    "href": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#boxplot",
+    "title": "Visualizing Disparities in a Continuous Risk Factor or Outcome",
+    "section": "Boxplot",
+    "text": "Boxplot\n\n\nShow the code\nmyplot + geom_boxplot(color = \"black\") # boxplot\n\n\n\n\n\nBoxplot"
+  },
+  {
+    "objectID": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#violin-plot",
+    "href": "posts/visualizing-disparities-in-a-continuous-outcome/index.html#violin-plot",
+    "title": "Visualizing Disparities in a Continuous Risk Factor or Outcome",
+    "section": "Violin Plot",
+    "text": "Violin Plot\nAn even more rarely used geometry is the violin plot. It has the advantage of being visually striking, but seems to be less intuitively interpretable.\n\n\nShow the code\nmyplot + geom_violin(color = \"black\") # violin plot\n\n\n\n\n\nViolin Plot"
+  },
+  {
+    "objectID": "posts/bar-charts-to-pie-charts-another-look/index.html",
+    "href": "posts/bar-charts-to-pie-charts-another-look/index.html",
+    "title": "Bar Charts to Pie Charts: Another Look",
     "section": "",
-    "text": "Locations of Countries in MICS\n\n\nFor our work with the UNICEF Multiple Indicator Cluster Survey (MICS) data on parenting and child development in Low and Middle Income Countries around the world, I have been experimenting with the ArcGIS “storymaps” format:\n\nGender Inequality in Low- and Middle-Income Countries: Associations with Parental Physical Abuse and Moderation by Child Gender\n\nArticle\nArcGIS Storymap\nPress Release\n\n“The Association between Spanking and Physical Abuse of Young Children in 56 Low- and Middle-Income Countries”\n\nArticle\nPress Release\nHTML Slides\nArcGIS Storymap\n\n“Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach”\n\nArticle\nArcGIS Storymap\n\n“Multilevel ecological analysis of the predictors of spanking across 65 countries”\n\nArticle\nArcGIS Storymap"
+    "text": "A quick look at moving from bar charts to pie charts.\nA longer explanation of some issues is here: https://agrogan1.github.io/posts/bar-charts-in-ggplot2/"
   },
   {
-    "objectID": "posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html",
-    "href": "posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html",
-    "title": "Bar Charts in ggplot With Multiple Outcomes",
-    "section": "",
-    "text": "Show the code\nlibrary(ggplot2) # beautiful graphs\n\nlibrary(tidyr) # tidy data"
+    "objectID": "posts/bar-charts-to-pie-charts-another-look/index.html#bar-chart",
+    "href": "posts/bar-charts-to-pie-charts-another-look/index.html#bar-chart",
+    "title": "Bar Charts to Pie Charts: Another Look",
+    "section": "Bar Chart",
+    "text": "Bar Chart\n\n\nCode\nggplot(clients, # data I am using\n       aes(x = program, # x is program\n           fill = program)) + # fill is also program\n  geom_bar() # use bars"
   },
   {
-    "objectID": "posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html#bar-chart-with-stacked-bars",
-    "href": "posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html#bar-chart-with-stacked-bars",
-    "title": "Bar Charts in ggplot With Multiple Outcomes",
-    "section": "Bar Chart With Stacked Bars",
-    "text": "Bar Chart With Stacked Bars\n\ngeom_bar()\n\n\nShow the code\nggplot(myReshapedData, # data I am using\n       aes(x = x, # x is newnames\n           y = newvalues, # y is newvalues\n           fill = newnames)) + # fill is newnames\n  geom_bar(stat = \"identity\") # y is actual bar height\n\n\n\n\n\n\n\ngeom_col()\nBy default, geom_col() assumes stat = 'identity' i.e. y is the height of the bar.\n\n\nShow the code\nggplot(myReshapedData, # data I am using\n       aes(x = x, # x is newnames\n           y = newvalues, # y is newvalues\n           fill = newnames)) + # fill is newnames\n  geom_col() # y is actual bar height"
-  },
-  {
-    "objectID": "posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html#bar-chart-with-unstacked-bars",
-    "href": "posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html#bar-chart-with-unstacked-bars",
-    "title": "Bar Charts in ggplot With Multiple Outcomes",
-    "section": "Bar Chart With Unstacked Bars",
-    "text": "Bar Chart With Unstacked Bars\n\n\nShow the code\nggplot(myReshapedData, # data I am using\n       aes(x = x, # x is newnames\n           y = newvalues, # y is newvalues\n           fill = newnames)) + # fill is newnames\n  geom_bar(stat = \"identity\", # y is actual bar height\n           position = position_dodge()) # unstack bars"
-  },
-  {
-    "objectID": "posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html#line-chart",
-    "href": "posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html#line-chart",
-    "title": "Bar Charts in ggplot With Multiple Outcomes",
-    "section": "Line Chart",
-    "text": "Line Chart\n\n\nShow the code\nggplot(myReshapedData, # data I am using\n       aes(x = x, # x is x\n           y = newvalues, # y is value\n           color = newnames, # color is key\n           group = newnames)) + # line needs a group aesthetic\n  geom_line()"
-  },
-  {
-    "objectID": "posts/bar-charts-in-ggplot2/index.html",
-    "href": "posts/bar-charts-in-ggplot2/index.html",
-    "title": "Bar Charts in ggplot2",
-    "section": "",
-    "text": "While ggplot2, and the ideas of an underlying “grammar of graphics”, make some kinds of graphing easier, ggplot2 can make other types of graphing more difficult.\nOne often tricky type of graph is the bar chart. I have come to think that part of the difficulty with thinking about bar charts in ggplot2 is that sometimes three very different types of bar charts look similar."
-  },
-  {
-    "objectID": "posts/bar-charts-in-ggplot2/index.html#stacked-bar-chart",
-    "href": "posts/bar-charts-in-ggplot2/index.html#stacked-bar-chart",
-    "title": "Bar Charts in ggplot2",
+    "objectID": "posts/bar-charts-to-pie-charts-another-look/index.html#stacked-bar-chart",
+    "href": "posts/bar-charts-to-pie-charts-another-look/index.html#stacked-bar-chart",
+    "title": "Bar Charts to Pie Charts: Another Look",
     "section": "Stacked Bar Chart",
-    "text": "Stacked Bar Chart\nA simple change to the above aesthetic yields a stacked bar chart.\nNote that fill now becomes part of the aesthetic so that color fill differentiates the parts of the bar.\n\n\nCode\nggplot(mydata, # the data that I am using\n       aes(x = 1, # x is 1 \n           fill = factor(x))) + # fill is x as a factor\n  geom_bar() + # using bars to graph\n  scale_fill_discrete(name = \"x\") # modify name of legend\n\n\n\n\n\n\nWe then return to an unstacked bar chart to consider the syntax for adding labels."
+    "text": "Stacked Bar Chart\n\n\nCode\nggplot(clients, # data I am using\n       aes(x = 1, # x is now 1 for everyone\n           fill = program)) + # fill is program\n  geom_bar() # use bars"
   },
   {
-    "objectID": "posts/bar-charts-in-ggplot2/index.html#add-labels",
-    "href": "posts/bar-charts-in-ggplot2/index.html#add-labels",
-    "title": "Bar Charts in ggplot2",
-    "section": "Add Labels",
-    "text": "Add Labels\nAdding labels requires adding an extra geom, geom_text. We have to add a new, non-intuitive aesthetic to geom_text to tell it where the labels are located, and that they represent the count of observations in each category. This aesthetic uses the special variable ..count.. to tell us how many observations are in each category.\n\n\nCode\nggplot(mydata, # the data that I am using\n       aes(x = x)) + # 'aesthetic' only includes x\n  geom_bar(fill = \"deepskyblue\") + # using bars to graph\n  geom_text(stat = \"count\", \n            aes(label = ..count.., # text of the label\n                y = ..count.. + .5), # location of the label\n            size = 5) # size of the label\n\n\n\n\n\nAlternatively, we could use ..prop.. to calculate and display proportions.\n\n\nCode\nggplot(mydata, # the data that I am using\n       aes(x = x)) + \n  geom_bar(aes(y = ..prop..), # using bars to graph\n           stat = \"count\",\n           fill = \"deepskyblue\") + \n  geom_text(aes(label = round(..prop.., digits = 2), # text of the label \n                y = ..prop.. ), # location of the label\n            stat = \"count\", \n            size = 5, # size of the label\n            vjust = -1) + # vertical justification\n  ylim(0, .7)"
+    "objectID": "posts/bar-charts-to-pie-charts-another-look/index.html#pie-chart",
+    "href": "posts/bar-charts-to-pie-charts-another-look/index.html#pie-chart",
+    "title": "Bar Charts to Pie Charts: Another Look",
+    "section": "Pie Chart",
+    "text": "Pie Chart\n\n\nCode\nggplot(clients, # data I am using\n       aes(x = 1, # x is now 1 for everyone\n           fill = program)) + # fill is program\n  geom_bar() + # use bars\n  coord_polar(theta = \"y\") + # use polar coordinates\n  theme_void() # blank theme for pie charts"
   },
   {
-    "objectID": "posts/bar-charts-in-ggplot2/index.html#what-about-a-line-chart",
-    "href": "posts/bar-charts-in-ggplot2/index.html#what-about-a-line-chart",
-    "title": "Bar Charts in ggplot2",
-    "section": "What About a Line Chart?",
-    "text": "What About a Line Chart?\nA line chart requires the addition of group to the aesthetic, and the use of a different geometry.\n\n\nCode\nggplot(mydata, # the data that I am using\n       aes(x = x,\n           y = y,\n           group = 1)) + # add 'group'\n   stat_summary(geom = \"line\", # with line\n                fun = mean,\n                color = \"deepskyblue\")"
+    "objectID": "posts/bar-charts-to-pie-charts-another-look/index.html#stacked-bar-chart-1",
+    "href": "posts/bar-charts-to-pie-charts-another-look/index.html#stacked-bar-chart-1",
+    "title": "Bar Charts to Pie Charts: Another Look",
+    "section": "Stacked Bar Chart",
+    "text": "Stacked Bar Chart\n\n\nCode\nggplot(clients, # data I am using\n       aes(x = program, # x is back to program\n           fill = gender)) + # fill is gender\n  geom_bar() # use bars"
   },
   {
-    "objectID": "posts/bar-charts-in-ggplot2/index.html#and-then-a-bar-chart-is-easy",
-    "href": "posts/bar-charts-in-ggplot2/index.html#and-then-a-bar-chart-is-easy",
-    "title": "Bar Charts in ggplot2",
-    "section": "And Then A Bar Chart Is Easy",
-    "text": "And Then A Bar Chart Is Easy\n\n\nCode\nlibrary(ggplot2)\n\nggplot(mydataREVISED, # the data that I am using\n       aes(x = xREVISED, # 'aesthetic' includes x\n           y = yREVISED)) + # and y\n  geom_bar(stat = \"identity\", # use ACTUAL y for bar height\n           fill = \"deepskyblue\")"
+    "objectID": "posts/bar-charts-to-pie-charts-another-look/index.html#unstack-the-bars",
+    "href": "posts/bar-charts-to-pie-charts-another-look/index.html#unstack-the-bars",
+    "title": "Bar Charts to Pie Charts: Another Look",
+    "section": "Unstack the Bars",
+    "text": "Unstack the Bars\n\n\nCode\nggplot(clients, # data I am using\n       aes(x = program, # x is back to program\n           fill = gender)) + # fill is gender\n  geom_bar(position = \"dodge2\") # unstack ('dodge') the bars"
   },
   {
-    "objectID": "posts/bar-charts-in-ggplot2/index.html#a-line-chart-is-easy-too",
-    "href": "posts/bar-charts-in-ggplot2/index.html#a-line-chart-is-easy-too",
-    "title": "Bar Charts in ggplot2",
-    "section": "A Line Chart Is Easy Too",
-    "text": "A Line Chart Is Easy Too\n\n\nCode\nlibrary(ggplot2)\n\nggplot(mydataREVISED, # the data that I am using\n       aes(x = xREVISED, # 'aesthetic' includes x\n           y = yREVISED)) + # and y\n  geom_line(stat = \"identity\", # use ACTUAL y for bar height\n           color = \"deepskyblue\")"
+    "objectID": "posts/bar-charts-to-pie-charts-another-look/index.html#pie-chart-1",
+    "href": "posts/bar-charts-to-pie-charts-another-look/index.html#pie-chart-1",
+    "title": "Bar Charts to Pie Charts: Another Look",
+    "section": "Pie Chart",
+    "text": "Pie Chart\nOne approach …\n\n\nCode\n# position = position_fill() makes the slices\n# fill the pie in each facet\n\nggplot(clients, # data I am using\n       aes(x = 1, # x is back to 1\n           fill = gender)) + # fill is gender\n  geom_bar(position = position_fill()) + # use bars\n  coord_polar(theta = \"y\") + # polar coordinates\n  facet_wrap(~program) + # facet wrap on program\n  theme_void() # blank theme for pie charts"
   },
   {
-    "objectID": "posts/bar-charts-in-ggplot2/index.html#pie-chart-with-better-colors",
-    "href": "posts/bar-charts-in-ggplot2/index.html#pie-chart-with-better-colors",
-    "title": "Bar Charts in ggplot2",
-    "section": "Pie Chart With Better Colors",
-    "text": "Pie Chart With Better Colors\n\n\nCode\nlibrary(ggplot2)\n\nggplot(mydata, # the data that I am using\n       aes(x = 1, \n           fill = factor(x))) + \n  geom_bar() + # using bars to graph \n  coord_polar(theta = \"y\") + # polar coordinates \n  scale_fill_viridis_d(name = \"x\") + # beautiful colors; named legend\n  theme_void() # get rid of distracting numbers"
+    "objectID": "posts/Simpsons-paradox-R/index.html#cross-tabulation",
+    "href": "posts/Simpsons-paradox-R/index.html#cross-tabulation",
+    "title": "Simpson’s Paradox",
+    "section": "Cross Tabulation",
+    "text": "Cross Tabulation\n\n\n\n\n\n\n\n\n\n\n \ndead\nalive\n\n\n\n\nuntreated\n6\n6\n\n\ntreated\n20\n20"
+  },
+  {
+    "objectID": "posts/Simpsons-paradox-R/index.html#mosaic-plot",
+    "href": "posts/Simpsons-paradox-R/index.html#mosaic-plot",
+    "title": "Simpson’s Paradox",
+    "section": "Mosaic Plot",
+    "text": "Mosaic Plot\n\nMosaic Plots are a little bit counterintuive at first. However, I believe that–after a little bit of study–Mosaic Plots provide the best visual representation of these relationships."
+  },
+  {
+    "objectID": "posts/Simpsons-paradox-R/index.html#pie-chart",
+    "href": "posts/Simpsons-paradox-R/index.html#pie-chart",
+    "title": "Simpson’s Paradox",
+    "section": "Pie Chart",
+    "text": "Pie Chart\n\nA Pie Chart sometimes is more intuitive at first, but actually has less information than a Mosaic Chart."
+  },
+  {
+    "objectID": "posts/Simpsons-paradox-R/index.html#cross-tabulation-1",
+    "href": "posts/Simpsons-paradox-R/index.html#cross-tabulation-1",
+    "title": "Simpson’s Paradox",
+    "section": "Cross Tabulation",
+    "text": "Cross Tabulation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA\nB\n\n\nuntreated\ndead\n\n3\n3\n\n\n\nalive\n\n4\n2\n\n\ntreated\ndead\n\n5\n15\n\n\n\nalive\n\n8\n12"
+  },
+  {
+    "objectID": "posts/Simpsons-paradox-R/index.html#mosaic-plot-1",
+    "href": "posts/Simpsons-paradox-R/index.html#mosaic-plot-1",
+    "title": "Simpson’s Paradox",
+    "section": "Mosaic Plot",
+    "text": "Mosaic Plot"
+  },
+  {
+    "objectID": "posts/Simpsons-paradox-R/index.html#pie-chart-1",
+    "href": "posts/Simpsons-paradox-R/index.html#pie-chart-1",
+    "title": "Simpson’s Paradox",
+    "section": "Pie Chart",
+    "text": "Pie Chart"
+  },
+  {
+    "objectID": "posts/multilevel-thinking-a-book-draft/index.html",
+    "href": "posts/multilevel-thinking-a-book-draft/index.html",
+    "title": "Multilevel Thinking (A Book Draft)",
+    "section": "",
+    "text": "I have been working on a project entitled Multilevel Thinking. In this document, I try to provide clear explanations of ideas that may be well known in the statistical literature, but not that often used in the applied, or advocacy based, research literature. I use cross-cultural research as an example, but the ideas are equally applicable whether applied to studying children in schools, residents in neighborhoods, or individuals or families in countries.\nThe document started out as a set of notes on things I only get to discuss during breaks, or after class, or during office hours in my class on Multilevel and Longitudinal Modeling, and has grown from that set of notes into a draft introduction to multilevel modeling:\n\nhttps://agrogan1.github.io/multilevel-thinking/\n\nI am hoping to find a publisher this year.\n\n\n\nMultilevel Thinking"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   },
   {
     "objectID": "posts/DSO-faculty-award/index.html",
@@ -774,7 +788,7 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "My interests are in developing more knowledge to reduce violence against children and Adverse Childhood Experiences (ACEs), with the aim of improving child and family well-being. It is my hope that a better understanding of how to reduce violence against children, and how to reduce ACEs, will contribute to a better understanding of how to improve mental health and well-being across the lifespan. In this research I try to understand the family and community origins of aggression, antisocial behavior, anxiety and depression across diverse communities and contexts. My current research focuses on parenting and child development using international data. I try to understand these issues within the context of current conversations about children’s rights.\nA particular focus of my work has been to examine the outcomes of physical punishment.\n\n“Corporal punishment is the most common form of violence against children worldwide, leading to the injury and death of thousands of children each year. Its very widespread social acceptance means that a level of violence in childrearing is normalised, entrenching children’s low status and paving the way for other forms of violence and mistreatment.” (End Violence Against Children & End Corporal Punishment, 2022)\n\n\n“The magnitude of violence against children is staggering. Globally, the most pervasive form of violence against children is corporal punishment. Because it often occurs in the confines of homes and other settings where children live, study and play, it is largely hidden and challenging to detect. Worldwide, it is estimated that nearly one billion children are hit, slapped, spanked, pinched, or otherwise physically punished regularly by their parents, caregivers, teachers, or other trusted adults, the same individuals responsible for nurturing, protecting, and educating them (UNICEF, 2017; World Health Organization, 2020).” (Stewart-Tufescu, 2023)\n\nWorking closely with many colleagues, we have shown that physical punishment is associated with a wide variety of negative outcomes (e.g. Gershoff & Grogan-Kaylor (2016)). Additional quantitative work has demonstrated that this finding remains true even in contexts when physical punishment is used minimally, or when used in ostensibly “normative” ways. In a number of papers, we have investigated these associations across diverse communities and countries. Lastly, in additional papers, we have worked to demonstrate more “causally robust” associations between physical punishment and undesirable child outcomes using a variety of quantitative methods.\nA more recent stream of research–again, across diverse countries–examines a broader range of parenting behaviors, with particular emphasis on “positive parenting” strategies. From this research, the only positive discipline behavior that is associated with better child outcomes is “explain[ing] why (child)’s behaviour was wrong.” (Ward et al., 2023)\nI teach courses mostly in the area of statistics, quantitative methods and data visualization.\n\n\n\n\nReferences\n\nEnd Violence Against Children, & End Corporal Punishment. (2022). Corporal punishment – 10 key messages [Report]. End Corporal Punishment. https://www.end-violence.org/\n\n\nGershoff, E. T., & Grogan-Kaylor, A. (2016). Spanking and child outcomes: Old controversies and new meta-analyses. Journal of Family Psychology, 30, 453–469. https://doi.org/10.1037/fam0000191\n\n\nStewart-Tufescu, A. (2023). Corporal punishment: The global picture. The Canadian Journal of Children’s Rights / Revue Canadienne Des Droits Des Enfants, 10. https://doi.org/10.22215/cjcr.v10i1\n\n\nUNICEF. (2017). A familiar face: Violence in the lives of children and adolescents [Report]. UNICEF.\n\n\nWard, K. P., Grogan-Kaylor, A. C., Ma, J., Pace, G., & Lee, S. J. (2023). Associations between 11 parental discipline behaviors and child outcomes across 60 countries. BMJ Open. https://doi.org/10.1136/bmjopen-2021-058439\n\n\nWorld Health Organization. (2020). Global status report on preventing violence against children 2020 [Report]. World Health Organization. https://www.unicef.org/sites/default/files/2020-06/Global-status-report-on-preventing-violence-against-children-2020.pdf"
+    "text": "My interests are in developing more knowledge to reduce violence against children and Adverse Childhood Experiences (ACEs), with the aim of improving child and family well-being. It is my hope that a better understanding of how to reduce violence against children, and how to reduce ACEs, will contribute to a better understanding of how to improve mental health and well-being across the lifespan. In this research I try to understand the family and community origins of aggression, antisocial behavior, anxiety and depression across diverse communities and contexts. My current research focuses on parenting and child development using international data. I try to understand these issues within the context of current conversations about children’s rights.\nA particular focus of my work has been to examine the outcomes of physical punishment.\n\n“Corporal punishment is the most common form of violence against children worldwide, leading to the injury and death of thousands of children each year. Its very widespread social acceptance means that a level of violence in childrearing is normalised, entrenching children’s low status and paving the way for other forms of violence and mistreatment.” (End Violence Against Children & End Corporal Punishment, 2022)\n\n\n“The magnitude of violence against children is staggering. Globally, the most pervasive form of violence against children is corporal punishment. Because it often occurs in the confines of homes and other settings where children live, study and play, it is largely hidden and challenging to detect. Worldwide, it is estimated that nearly one billion children are hit, slapped, spanked, pinched, or otherwise physically punished regularly by their parents, caregivers, teachers, or other trusted adults, the same individuals responsible for nurturing, protecting, and educating them (UNICEF, 2017; World Health Organization, 2020).” (Stewart-Tufescu, 2023)\n\nWorking closely with many colleagues, we have shown that physical punishment is associated with a wide variety of negative outcomes (e.g. Gershoff & Grogan-Kaylor (2016), learn more). Additional quantitative work has demonstrated that this finding remains true even in contexts when physical punishment is used minimally, or when used in ostensibly “normative” ways. In a number of papers, we have investigated these associations across diverse communities and countries. Lastly, in additional papers, we have worked to demonstrate more “causally robust” associations between physical punishment and undesirable child outcomes using a variety of quantitative methods.\nA more recent stream of research–again, across diverse countries–examines a broader range of parenting behaviors, with particular emphasis on “positive parenting” strategies. From this research, the only positive discipline behavior that is associated with better child outcomes is “explain[ing] why (child)’s behaviour was wrong.” (Ward et al., 2023)\nI teach courses mostly in the area of statistics, quantitative methods and data visualization.\n\n\n\n\nReferences\n\nEnd Violence Against Children, & End Corporal Punishment. (2022). Corporal punishment – 10 key messages [Report]. End Corporal Punishment. https://www.end-violence.org/\n\n\nGershoff, E. T., & Grogan-Kaylor, A. (2016). Spanking and child outcomes: Old controversies and new meta-analyses. Journal of Family Psychology, 30, 453–469. https://doi.org/10.1037/fam0000191\n\n\nStewart-Tufescu, A. (2023). Corporal punishment: The global picture. The Canadian Journal of Children’s Rights / Revue Canadienne Des Droits Des Enfants, 10. https://doi.org/10.22215/cjcr.v10i1\n\n\nUNICEF. (2017). A familiar face: Violence in the lives of children and adolescents [Report]. UNICEF.\n\n\nWard, K. P., Grogan-Kaylor, A. C., Ma, J., Pace, G., & Lee, S. J. (2023). Associations between 11 parental discipline behaviors and child outcomes across 60 countries. BMJ Open. https://doi.org/10.1136/bmjopen-2021-058439\n\n\nWorld Health Organization. (2020). Global status report on preventing violence against children 2020 [Report]. World Health Organization. https://www.unicef.org/sites/default/files/2020-06/Global-status-report-on-preventing-violence-against-children-2020.pdf"
   },
   {
     "objectID": "SECURITY.html",
@@ -789,26 +803,5 @@
     "title": "Security Policy",
     "section": "",
     "text": "Please report any security issues directly to agrogan@umich.edu."
-  },
-  {
-    "objectID": "posts/logic-model-Mermaid/index.html",
-    "href": "posts/logic-model-Mermaid/index.html",
-    "title": "A Logic Model Using the Mermaid Diagram Language",
-    "section": "",
-    "text": "flowchart LR\n    subgraph Domains\n    direction TB\n    D1(Workshops)\n    D2(Publications)\n    end\n    subgraph Activities\n    direction TB\n    A1(Meetings)\n    A2(Social Media Posts)\n    A3(Information Cards)\n    end\n    subgraph Outcomes\n    direction TB\n    O1(Better Parenting)\n    end\n    D1--&gt;A1\n    D2--&gt;A2\n    D2--&gt;A3\n    A1--&gt;O1\n    A2--&gt;O1\n    A3--&gt;O1"
-  },
-  {
-    "objectID": "posts/logic-models/index.html",
-    "href": "posts/logic-models/index.html",
-    "title": "Logic Models",
-    "section": "",
-    "text": "Logic models are used extensively in program development and program evaluation.\nI am working on an evolving proof of concept of creating a logic model in graphviz. graphviz is a programming language designed to represent graphs.\nThe proof of concept can be found here"
-  },
-  {
-    "objectID": "posts/logic-models-Mermaid/index.html",
-    "href": "posts/logic-models-Mermaid/index.html",
-    "title": "A Logic Model Using the mermaid Diagram Language",
-    "section": "",
-    "text": "Logic models are used extensively in program development and program evaluation. I have worked on a logic model in graphviz. Here is an implementation using the mermaid graphing language.\n\n\nCode\nflowchart LR\n    subgraph Domains\n    direction TB\n    D1(Workshops)\n    D2(Publications)\n    end\n    subgraph Activities\n    direction TB\n    A1(Meetings)\n    A2(Social Media Posts)\n    A3(Information Cards)\n    end\n    subgraph Outcomes\n    direction TB\n    O1(Better Parenting)\n    end\n    D1--&gt;A1\n    D2--&gt;A2\n    D2--&gt;A3\n    A1--&gt;O1\n    A2--&gt;O1\n    A3--&gt;O1\n\n\n\n\nflowchart LR\n    subgraph Domains\n    direction TB\n    D1(Workshops)\n    D2(Publications)\n    end\n    subgraph Activities\n    direction TB\n    A1(Meetings)\n    A2(Social Media Posts)\n    A3(Information Cards)\n    end\n    subgraph Outcomes\n    direction TB\n    O1(Better Parenting)\n    end\n    D1--&gt;A1\n    D2--&gt;A2\n    D2--&gt;A3\n    A1--&gt;O1\n    A2--&gt;O1\n    A3--&gt;O1"
   }
 ]
