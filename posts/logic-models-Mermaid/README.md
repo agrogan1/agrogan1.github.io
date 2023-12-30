@@ -1,0 +1,26 @@
+```{mermaid}
+
+flowchart LR
+    subgraph Domains
+    direction TB
+    D1(Workshops)
+    D2(Publications)
+    end
+    subgraph Activities
+    direction TB
+    A1(Meetings)
+    A2(Social Media Posts)
+    A3(Information Cards)
+    end
+    subgraph Outcomes
+    direction TB
+    O1(Better Parenting)
+    end
+    D1-->A1
+    D2-->A2
+    D2-->A3
+    A1-->O1
+    A2-->O1
+    A3-->O1
+    
+```
