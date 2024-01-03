@@ -29,7 +29,7 @@ title: "Teaching"
 
 * [Multilevel Multilingual](https://agrogan1.github.io/multilevel-multilingual/), multilevel models in multiple statistical languages.
 
-![](multilevel-multilingual){width=15%}
+![](multilevel-multilingual.png){width=15%}
 
 ## Categorical Data Analysis
 
