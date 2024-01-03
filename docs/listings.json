@@ -50,5 +50,9 @@
   {
     "listing": "/contact.html",
     "items": []
+  },
+  {
+    "listing": "/teaching-listing.html",
+    "items": []
   }
 ]
