@@ -1,5 +1,29 @@
 ---
 title: "About Me"
+about:
+  template: solana
+  links:
+    - icon: mailbox
+      text: E-mail
+      href: mailto:agrogan@umich.edu
+    - icon: house
+      text: Web
+      href: https://agrogan1.github.io/    
+    - icon: github
+      text: Github
+      href: https://github.com/agrogan1
+    - icon: file-earmark-text
+      text: Deep Blue (Paper Repository)
+      href: https://deepblue.lib.umich.edu/browse?type=author&value=Grogan-Kaylor%2C+Andrew
+    - icon: file-earmark-text
+      text: ResearchGate 
+      href: https://www.researchgate.net/profile/Andrew_Grogan-Kaylor
+    - icon: google
+      text: Google Scholar
+      href: https://scholar.google.com/citations?user=iLvsGzgAAAAJ&hl=en
+    - icon: flower1
+      text: Orcid
+      href: https://orcid.org/0000-0003-0065-9991
 ---
 
 I am the *Sandra K. Danziger Collegiate Professor of Social Work*. 
