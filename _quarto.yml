@@ -12,7 +12,7 @@ website:
         text: Home
       - href: https://ssw.umich.edu/sites/default/files/documents/faculty/cvs/agrogan_cv.pdf
         text: CV
-      - teaching.qmd  
+      - teaching-listing.qmd  
       - research.qmd
       - stats_stuff.qmd
       - href: https://agrogan1.github.io/multilevel-thinking/
@@ -23,8 +23,6 @@ website:
         text: Mapping/GIS
       - blog.qmd  
       - about.qmd
-      - href: contact.qmd
-        text: Contact
 
 bibliography: agrogan.bib
 
