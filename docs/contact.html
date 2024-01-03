@@ -73,9 +73,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-name','listing-href',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-title','listing-path',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-name","listing-href"],
+      searchColumns: ["listing-title","listing-path"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -224,30 +224,98 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-listing quarto-listing-container-custom" id="listing-listing">
-<ul>
-<li>
-<a href="https://agrogan1.github.io/">Web</a><br>
-</li>
-<li>
-<a href="agrogan@umich.edu">Email</a><br>
-</li>
-<li>
-<a href="https://deepblue.lib.umich.edu/browse?type=author&amp;value=Grogan-Kaylor%2C+Andrew">Deep Blue</a><br>
-</li>
-<li>
-<a href="https://github.com/agrogan1">GitHub</a><br>
-</li>
-<li>
-<a href="https://www.researchgate.net/profile/Andrew_Grogan-Kaylor">ResearchGate</a><br>
-</li>
-<li>
-<a href="https://scholar.google.com/citations?user=iLvsGzgAAAAJ&amp;hl=en">Google Scholar</a><br>
-</li>
-<li>
-<a href="https://orcid.org/0000-0003-0065-9991">Orcid</a><br>
-</li>
-</ul>
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title-sort" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-path" data-direction="asc">
+          path
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-path" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">path</a>
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-listing-title-sort="Web">
+<td>
+<a href="https://agrogan1.github.io/" class="title listing-title">Web</a>
+</td>
+<td>
+<span class="listing-path">https://agrogan1.github.io/</span>
+</td>
+</tr>
+<tr data-index="1" data-listing-title-sort="Email">
+<td>
+<a href="agrogan@umich.edu" class="title listing-title">Email</a>
+</td>
+<td>
+<span class="listing-path">agrogan@umich.edu</span>
+</td>
+</tr>
+<tr data-index="2" data-listing-title-sort="Deep Blue">
+<td>
+<a href="https://deepblue.lib.umich.edu/browse?type=author&amp;value=Grogan-Kaylor%2C+Andrew" class="title listing-title">Deep Blue</a>
+</td>
+<td>
+<span class="listing-path">https://deepblue.lib.umich.edu/browse?type=author&amp;value=Grogan-Kaylor%2C+Andrew</span>
+</td>
+</tr>
+<tr data-index="3" data-listing-title-sort="GitHub">
+<td>
+<a href="https://github.com/agrogan1" class="title listing-title">GitHub</a>
+</td>
+<td>
+<span class="listing-path">https://github.com/agrogan1</span>
+</td>
+</tr>
+<tr data-index="4" data-listing-title-sort="ResearchGate">
+<td>
+<a href="https://www.researchgate.net/profile/Andrew_Grogan-Kaylor" class="title listing-title">ResearchGate</a>
+</td>
+<td>
+<span class="listing-path">https://www.researchgate.net/profile/Andrew_Grogan-Kaylor</span>
+</td>
+</tr>
+<tr data-index="5" data-listing-title-sort="Google Scholar">
+<td>
+<a href="https://scholar.google.com/citations?user=iLvsGzgAAAAJ&amp;hl=en" class="title listing-title">Google Scholar</a>
+</td>
+<td>
+<span class="listing-path">https://scholar.google.com/citations?user=iLvsGzgAAAAJ&amp;hl=en</span>
+</td>
+</tr>
+<tr data-index="6" data-listing-title-sort="Orcid">
+<td>
+<a href="https://orcid.org/0000-0003-0065-9991" class="title listing-title">Orcid</a>
+</td>
+<td>
+<span class="listing-path">https://orcid.org/0000-0003-0065-9991</span>
+</td>
+</tr>
+</tbody>
+
+</table>
 <div class="listing-no-matching d-none">
 No matching items
 </div>

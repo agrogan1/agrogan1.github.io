@@ -2,22 +2,22 @@
 title: "Andrew Grogan-Kaylor"
 subtitle: "Sandra K. Danziger Collegiate Professor of Social Work"
 listing:
+  type: table
   contents:
-    - name: Web
-      href: https://agrogan1.github.io/
-    - name: Email
-      href: agrogan@umich.edu
-    - name: Deep Blue
-      href: https://deepblue.lib.umich.edu/browse?type=author&value=Grogan-Kaylor%2C+Andrew
-    - name: GitHub
-      href: https://github.com/agrogan1
-    - name: ResearchGate
-      href: https://www.researchgate.net/profile/Andrew_Grogan-Kaylor
-    - name: Google Scholar
-      href: https://scholar.google.com/citations?user=iLvsGzgAAAAJ&hl=en
-    - name: Orcid
-      href: https://orcid.org/0000-0003-0065-9991
-  template: gallery.ejs
+    - title: Web
+      path: https://agrogan1.github.io/
+    - title: Email
+      path: agrogan@umich.edu
+    - title: Deep Blue
+      path: https://deepblue.lib.umich.edu/browse?type=author&value=Grogan-Kaylor%2C+Andrew
+    - title: GitHub
+      path: https://github.com/agrogan1
+    - title: ResearchGate
+      path: https://www.researchgate.net/profile/Andrew_Grogan-Kaylor
+    - title: Google Scholar
+      path: https://scholar.google.com/citations?user=iLvsGzgAAAAJ&hl=en
+    - title: Orcid
+      path: https://orcid.org/0000-0003-0065-9991
 ---
 
 
