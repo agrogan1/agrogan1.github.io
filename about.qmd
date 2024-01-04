@@ -30,9 +30,9 @@ I am the *Sandra K. Danziger Collegiate Professor of Social Work*.
 
 I am strongly motivated by concerns for social justice. Right after undergraduate studies, I was a community organizer for a year, and then a Peace Corps Volunteer living for two years in the at-the-time remote Upper East Region of Ghana, and doing community development work, both in English, and in the local language Kusaal. These early experiences have been the source of commitments to social justice, and to developing an evidence base for practice, that continue in my work today.
 
-My core intellectual interest is the way in which [parenting behaviors have an effect on child outcomes](https://agrogan1.github.io/#research-on-parenting-and-child-development). For example, parenting behaviors like the use of corporal punishment, or parental expressions of emotional warmth, are likely to have an effect on child outcomes like aggression, antisocial behavior, anxiety and depression. I am interested in how these dynamics play out [across contexts, neighborhoods, and cultures](https://agrogan1.github.io/multilevel-thinking/).
+My core intellectual interest is the way in which [parenting behaviors have an effect on child outcomes](https://agrogan1.github.io/research.html). For example, parenting behaviors like the use of corporal punishment, or parental expressions of emotional warmth, are likely to have an effect on child outcomes like aggression, antisocial behavior, anxiety and depression. I am interested in how these dynamics play out [across contexts, neighborhoods, and cultures](https://agrogan1.github.io/multilevel-thinking/).
 
-In my work I use advanced statistical models, like [multilevel models](https://agrogan1.github.io/multilevel/) and some econometric models, and software like [Stata](https://agrogan1.github.io/#stata-materials), [R](https://agrogan1.github.io/#r-materials) and [GIS](https://agrogan1.github.io/mapping), to examine things like [growth and change over time](https://agrogan1.github.io/multilevel/), or [community, school or parent effects on children and families](https://agrogan1.github.io/multilevel/). I’m also very interested in [data visualization](https://agrogan1.github.io/#data-visualization).
+In my work I use advanced statistical models, like [multilevel models](https://agrogan1.github.io/multilevel/) and some econometric models, and software like [Stata](https://agrogan1.github.io/stats_stuff.html#stata-materials), [R](https://agrogan1.github.io/stats_stuff.html#r-materials) and [GIS](https://agrogan1.github.io/mapping), to examine things like [growth and change over time](https://agrogan1.github.io/multilevel/), or [community, school or parent effects on children and families](https://agrogan1.github.io/multilevel/). I’m also very interested in [data visualization](https://agrogan1.github.io/stats_stuff.html#data-visualization-1).
 
 I have also worked on developing and evaluating interventions for under-served populations, particularly among people who speak Spanish as their primary language. 
 
@@ -176,7 +176,7 @@ For copies of any of my published research papers, please e-mail me at [agrogan@
 
 I have many course materials on the web that are not directly linked to from this website. If you are one of my students and can’t find a particular resource that you need for class, please let me know at [agrogan@umich.edu](agrogan@umich.edu).
 
-My blog on statistics, data visualization, data analysis, and my research activities is at: [https://agrogan1.github.io/myposts/](https://agrogan1.github.io/myposts/). 
+My blog on statistics, data visualization, data analysis, and my research activities is at: [https://agrogan1.github.io/blog.html](https://agrogan1.github.io/blog.html). 
 
 This webpage is mostly up to date, but always under construction to some degree. If you think something should be here, but it isn’t, please let me know.
 
