@@ -12,9 +12,9 @@ website:
         text: Home
       - href: https://ssw.umich.edu/sites/default/files/documents/faculty/cvs/agrogan_cv.pdf
         text: CV
-      - teaching-listing.qmd  
+      - teaching.qmd  
       - research.qmd
-      - stats_stuff.qmd
+      - stats-stuff.qmd
       - href: https://agrogan1.github.io/multilevel-thinking/
         text: "Multilevel Thinking"
       - href: https://globalfamilies.quarto.pub/global-families-project/
