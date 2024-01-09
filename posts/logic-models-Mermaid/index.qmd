@@ -26,21 +26,25 @@ Like all programming languages, `mermaid` may be finicky and hard to tweak. In t
 %%| code-fold: true
 
 flowchart LR
+    %% first block: Domains
     subgraph Domains
     direction TB
     D1(Workshops)
     D2(Publications)
     end
+    %% second block: Activities
     subgraph Activities
     direction TB
     A1(Meetings)
     A2(Social Media Posts)
     A3(Information Cards)
     end
+    %% third block: Outcomes
     subgraph Outcomes
     direction TB
     O1(Better Parenting)
     end
+    %% links
     D1-->A1
     D2-->A2
     D2-->A3
