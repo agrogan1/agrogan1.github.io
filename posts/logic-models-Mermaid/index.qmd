@@ -1,7 +1,7 @@
 ---
 title: "A Logic Model Using the `mermaid` Diagram Language"
 author: "Andy Grogan-Kaylor"
-date: "2023-12-30"
+date: "2024-1-10"
 categories: [workflow]
 image: "logic-model-mermaid.png"
 ---
@@ -10,7 +10,7 @@ Logic models are used extensively in program development and program evaluation.
 
 While still sometimes not completely intuitive, I think that the language of `mermaid` is more intuitive than [my `graphviz` example](https://agrogan1.github.io/teaching/logic-models/logic-models.html).
 
-`mermaid` is implemented in [RStudio](https://www.rstudio.com/) via the [DiagrammeR](https://rich-iannone.github.io/DiagrammeR/) package. This logic model was made with RStudio.
+`mermaid` is implemented in [RStudio](https://www.rstudio.com/) using [Quarto](https://quarto.org/). This logic model was made with RStudio.
 
 This proof of concept makes use of *subgraphs* to organize the components of a logic model.
 
