@@ -2,8 +2,8 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/logic-models-Mermaid/index.html",
       "/posts/multilevel-thinking-a-book-draft/index.html",
+      "/posts/logic-models-Mermaid/index.html",
       "/posts/logic-models/index.html",
       "/posts/how-to-choose-a-chart-a-visual-guide-with-Stata/index.html",
       "/posts/cp-meta/index.html",
@@ -40,6 +40,7 @@
       "/posts/transcendental-etude/index.html",
       "/posts/welcome/index.html",
       "/posts/interviewed-in-the-Lancet/index.html",
+      "/posts/comparing-program-outcomes-with-ggplot/index.html",
       "/posts/Mauritius-is-65/index.html",
       "/posts/bar-charts-in-ggplot2/index.html",
       "/posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html",
