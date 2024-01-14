@@ -2,6 +2,7 @@
 title: "Stats Stuff"
 listing:
   type: table
+  table-hover: true
   sort-ui: true
   filter-ui: true
   categories: true
