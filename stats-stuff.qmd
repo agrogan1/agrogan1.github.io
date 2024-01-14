@@ -165,7 +165,7 @@ listing:
       path: https://agrogan1.github.io/posts/visualizing-disparities-in-a-categorical-outcome/
       categories: [R, dataviz, social justice]  
     - title: "Comparing Program Outcomes With ggplot"
-      path: https://agrogan1.github.io/posts/comparing-program-outcomes-with-ggplot2.html
+      path: https://agrogan1.github.io/posts/comparing-program-outcomes-with-ggplot/index.html
       categories: [R, dataviz, social justice]  
     - title: "Graphing Change Over Time"
       path: https://agrogan1.github.io/dataviz/graphing-change-over-time/index.pdf
