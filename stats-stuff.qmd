@@ -1,11 +1,11 @@
 ---
 title: "Stats Stuff"
 listing:
-  type: table
+  type: grid
   table-hover: true
   sort-ui: true
   filter-ui: true
-  categories: true
+  categories: cloud
   fields: [title, categories]
   contents:
     - title: "All Stata Materials"
@@ -159,13 +159,13 @@ listing:
       path: https://agrogan1.github.io/dataviz/political-social-work/
       categories: [dataviz] 
     - title: "Visualizing Disparities in a Continuous Risk Factor or Outcome"
-      path: https://agrogan1.github.io/myposts/visualizing-disparities-in-a-continuous-outcome.html
+      path: https://agrogan1.github.io/posts/visualizing-disparities-in-a-continuous-outcome.html
       categories: [R, dataviz, social justice]
     - title: "Visualizing Disparities in a Categorical Risk Factor or Outcome"
-      path: https://agrogan1.github.io/myposts/visualizing-disparities-in-a-categorical-outcome.html
+      path: https://agrogan1.github.io/posts/visualizing-disparities-in-a-categorical-outcome/
       categories: [R, dataviz, social justice]  
     - title: "Comparing Program Outcomes With ggplot"
-      path: https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.html
+      path: https://agrogan1.github.io/posts/comparing-program-outcomes-with-ggplot2.html
       categories: [R, dataviz, social justice]  
     - title: "Graphing Change Over Time"
       path: https://agrogan1.github.io/dataviz/graphing-change-over-time/index.pdf
