@@ -51,9 +51,11 @@ listing:
       categories: [R, dataviz]
     - title: "University of Michigan colors for R Graphs"
       path: https://agrogan1.github.io/R/michigancolors-demo/michigancolors-demo.html)
+      image: https://agrogan1.github.io/R/michigancolors-demo/michigancolors.png
       categories: [R, dataviz]
     - title: "University of Michigan colors for R Graphs [package]"
       path: https://agrogan1.github.io/michigancolors/
+      image: https://agrogan1.github.io/R/michigancolors-demo/michigancolors.png
       categories: [R, dataviz]
     - title: "Working With Data From the World Bank Indicators"
       path: https://agrogan1.github.io/R/wbdemo/
