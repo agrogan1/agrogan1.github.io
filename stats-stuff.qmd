@@ -6,7 +6,7 @@ listing:
   sort-ui: true
   filter-ui: true
   categories: cloud
-  fields: [title, categories]
+  fields: [title, image, categories]
   contents:
     - title: "All Stata Materials"
       path: https://agrogan1.github.io/Stata/
@@ -25,6 +25,7 @@ listing:
       categories: [Stata]
     - title: "Michigan Graph Scheme for Stata"
       path: https://agrogan1.github.io/Stata/michigan-graph-scheme/
+      image: https://agrogan1.github.io/Stata/michigan-graph-scheme/MichiganColorsStata3.png
       categories: [Stata, dataviz]
     - title: "Data Visualization With Stata"
       path: https://agrogan1.github.io/Stata/data-visualization-with-Stata/data-visualization-with-Stata.html
@@ -34,6 +35,7 @@ listing:
       categories: [Stata, dataviz]
     - title: "How To Choose A Chart"
       path: https://agrogan1.github.io/Stata/how-to-choose-a-chart-a-visual-guide-with-Stata/how-to-choose-a-chart-a-visual-guide-with-Stata.pdf
+      image: https://agrogan1.github.io/Stata/how-to-choose-a-chart-a-visual-guide-with-Stata/how-to-choose-a-chart-a-visual-guide-with-Stata.png
       categories: [Stata, dataviz]
     - title: "Introduction to R"
       path: https://agrogan1.github.io/R/introduction-to-R/introduction-to-R.html
@@ -103,9 +105,11 @@ listing:
       categories: [workflow]
     - title: "Notes on Quantitative Workflow"
       path: https://agrogan1.github.io/teaching/workflow/workflow.html
+      image: math.png
       categories: [workflow, stats]
     - title: "Quantitative Data Analysis"
       path: https://agrogan1.github.io/teaching/quantitative-data-analysis/quantitative-data-analysis.html
+      image: math.png
       categories: [workflow, stats, Stata, R]
     - title: "Causality"
       path: https://agrogan.shinyapps.io/causality/
