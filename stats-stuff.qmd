@@ -48,6 +48,7 @@ listing:
       categories: [R, dataviz]
     - title: "Viridis Colors"
       path: https://agrogan1.github.io/R/viridis/viridis.html
+      image: https://agrogan1.github.io/R/viridis/viridis.png
       categories: [R, dataviz]
     - title: "University of Michigan colors for R Graphs"
       path: https://agrogan1.github.io/R/michigancolors-demo/michigancolors-demo.html)
