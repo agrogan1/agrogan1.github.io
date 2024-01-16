@@ -120,6 +120,7 @@ listing:
       categories: [workflow, stats, Stata, R]
     - title: "Causality"
       path: https://agrogan.shinyapps.io/causality/
+      image: causality.png
       categories: [stats, causality]
     - title: "t-test"
       path: https://agrogan.shinyapps.io/shiny-t-test/
