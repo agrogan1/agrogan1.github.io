@@ -29,9 +29,11 @@ listing:
       categories: [Stata, dataviz]
     - title: "Data Visualization With Stata"
       path: https://agrogan1.github.io/Stata/data-visualization-with-Stata/data-visualization-with-Stata.html
+      image: https://agrogan1.github.io/Stata/data-visualization-with-Stata/fotolia-small.jpg
       categories: [Stata, dataviz]
     - title: "Stata Data Visualization **Basics**"
       path: https://agrogan1.github.io/Stata/data-visualization-with-Stata-the-basics/data-visualization-with-Stata-the-basics.html
+      image: https://agrogan1.github.io/Stata/data-visualization-with-Stata-the-basics/mybar1.png
       categories: [Stata, dataviz]
     - title: "How To Choose A Chart"
       path: https://agrogan1.github.io/Stata/how-to-choose-a-chart-a-visual-guide-with-Stata/how-to-choose-a-chart-a-visual-guide-with-Stata.pdf
@@ -39,6 +41,7 @@ listing:
       categories: [Stata, dataviz]
     - title: "Introduction to R"
       path: https://agrogan1.github.io/R/introduction-to-R/introduction-to-R.html
+      image: https://agrogan1.github.io/R/introduction-to-R/rplot.png
       categories: [R]
     - title: "Quick Introduction To R"
       path: https://agrogan1.github.io/R/quick-intro-R/quick-intro-R.html
@@ -60,6 +63,7 @@ listing:
       categories: [R, dataviz]
     - title: "Working With Data From the World Bank Indicators"
       path: https://agrogan1.github.io/R/wbdemo/
+      image: https://agrogan1.github.io/R/wbdemo/globe.png
       categories: [R, dataviz]
     - title: "Introduction to ggplot2"
       path: https://agrogan1.github.io/R/introduction-to-ggplot2/introduction-to-ggplot2.html
