@@ -1,12 +1,15 @@
 ---
 title: 'Telling Stories With Data: Comparing Program Outcomes with ggplot2'
 author: "Andy Grogan-Kaylor"
-date: "2023-1-14"
+date: "2024-1-16"
+fig-height: 3
 categories: [dataviz, social justice]
 ---
 
+# Background
+
 ```{r}
-#| echo: true
+#| echo: false
 #| code-fold: true
 #| code-summary: "Show the code"
 
@@ -19,8 +22,6 @@ library(dplyr)
 library(patchwork)
 
 ```
-
-# Background
 
 `ggplot2` is a powerful graphing library that can make beautiful graphs. `ggplot2` can also help us to understand ideas of an underlying *"grammar of graphics"*.
 
