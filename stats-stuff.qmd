@@ -48,6 +48,7 @@ listing:
       categories: [R]
     - title: "Colors in R"
       path: https://agrogan1.github.io/R/colors/colors.html
+      image: https://agrogan1.github.io/R/colors/colors.png
       categories: [R, dataviz]
     - title: "Viridis Colors"
       path: https://agrogan1.github.io/R/viridis/viridis.html
