@@ -82,7 +82,7 @@ listing:
       path: https://agrogan1.github.io/dataviz/advanced-ggplot/advanced-ggplot.html
       categories: [R, dataviz]
     - title: "Comparing Program Outcomes with ggplot2"
-      path: https://agrogan1.github.io/myposts/comparing-program-outcomes-with-ggplot2.html
+      path: https://agrogan1.github.io/posts/comparing-program-outcomes-with-ggplot/
       categories: [R, dataviz]
     - title: "Multi-page dplyr"
       path: https://agrogan1.github.io/R/multi-page-dplyr/multi-page-dplyr.html
