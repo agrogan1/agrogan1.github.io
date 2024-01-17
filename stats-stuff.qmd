@@ -164,6 +164,7 @@ listing:
       categories: [dataviz]
     - title: "How to Choose a Chart: An Intuitive Guide"
       path: https://agrogan1.github.io/dataviz/how-to-choose-a-chart-intuitive/how-to-choose-a-chart-intuitive.html
+      image: https://agrogan1.github.io/dataviz/how-to-choose-a-chart-intuitive/intuitive-guide.png
       categories: [dataviz]
     - title: "How to Choose a Chart: Extended Version"
       path: https://agrogan1.github.io/dataviz/how-to-choose-a-chart/how-to-choose-a-chart-v3.html
