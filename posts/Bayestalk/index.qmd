@@ -1,0 +1,12 @@
+---
+title: "An Introduction to Bayesian Statistics"
+author: "Andy Grogan-Kaylor"
+date: "2024-1-17"
+categories: [stats, Bayes]
+image: "Bayestalk.png"
+---
+
+Last Fall, I gave a talk on Bayesian statistics to a group of PHD students at Michigan. I have posted the slides here:  [https://agrogan1.github.io/Bayes/Bayestalk/Bayestalk.html](https://agrogan1.github.io/Bayes/Bayestalk/Bayestalk.html).
+
+
+
