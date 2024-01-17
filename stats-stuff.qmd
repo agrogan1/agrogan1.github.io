@@ -109,11 +109,11 @@ listing:
     - title: "Bayesian and Frequentist Multilevel Modeling"
       path: https://agrogan1.github.io/multilevel/Bayesian-and-frequentist-MLM/Bayesian-and-frequentist-MLM.html
       image: https://agrogan1.github.io/Bayes/Bayestalk/Thomas_Bayes.png
-      categories: [Bayes, MLM]
+      categories: [Bayes, multilevel]
     - title: "Bayesian Longitudinal MLM With the Gutten Tree Data"
       path: https://agrogan1.github.io/multilevel/Bayesian-longitudinal-mlm/Bayesian-longitudinal-mlm.html
       image: https://agrogan1.github.io/multilevel/Bayesian-longitudinal-mlm/fotolia-small.jpg
-      categories: [Bayes, MLM]
+      categories: [Bayes, multilevel]
     - title: "What is Data?"
       path: https://agrogan1.github.io/teaching/what-is-data/what-is-data.html
       categories: [workflow]
