@@ -158,6 +158,7 @@ listing:
       categories: [stats]
     - title: "Mapping and GIS"
       path: https://agrogan1.github.io/mapping/
+      image: https://agrogan1.github.io/posts/GIS-and-mapping/leaflet-capture.png
       categories: [GIS]
     - title: "How to Choose a Chart: A Visual Guide"
       path: https://agrogan1.github.io/dataviz/how-to-choose-a-chart/how-to-choose-a-chart-a-visual-guide.pdf
