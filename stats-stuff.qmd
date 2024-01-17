@@ -92,18 +92,27 @@ listing:
       categories: [R, Xaringan]
     - title: "Basic Bayes"
       path: https://agrogan1.github.io/Bayes/basic-Bayes/basic-Bayes.html
+      image: https://agrogan1.github.io/Bayes/basic-Bayes/Thomas_Bayes.png
       categories: [Bayes]
     - title: "Thinking Through Bayesian Ideas"
       path: https://agrogan.shinyapps.io/Thinking-Through-Bayes/
+      image: https://agrogan1.github.io/Bayes/basic-Bayes/Thomas_Bayes.png
       categories: [Bayes]
     - title: "Notes on Accepting the Null ($H_0$) Hypothesis"
       path: https://agrogan1.github.io/Bayes/accepting-H0/accepting-H0.html
+      image: https://agrogan1.github.io/Bayes/basic-Bayes/Thomas_Bayes.png
+      categories: [Bayes]
+    - title: "An Introduction to Bayes"
+      path: https://agrogan1.github.io/Bayes/Bayestalk/Bayestalk.html#/title-slide
+      image: https://agrogan1.github.io/Bayes/Bayestalk/Thomas_Bayes.png
       categories: [Bayes]
     - title: "Bayesian and Frequentist Multilevel Modeling"
       path: https://agrogan1.github.io/multilevel/Bayesian-and-frequentist-MLM/Bayesian-and-frequentist-MLM.html
+      image: https://agrogan1.github.io/Bayes/Bayestalk/Thomas_Bayes.png
       categories: [Bayes, MLM]
     - title: "Bayesian Longitudinal MLM With the Gutten Tree Data"
       path: https://agrogan1.github.io/multilevel/Bayesian-longitudinal-mlm/Bayesian-longitudinal-mlm.html
+      image: https://agrogan1.github.io/multilevel/Bayesian-longitudinal-mlm/fotolia-small.jpg
       categories: [Bayes, MLM]
     - title: "What is Data?"
       path: https://agrogan1.github.io/teaching/what-is-data/what-is-data.html
