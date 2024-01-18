@@ -104,7 +104,7 @@ listing:
       categories: [Bayes]
     - title: "An Introduction to Bayes"
       path: https://agrogan1.github.io/Bayes/Bayestalk/Bayestalk.html#/title-slide
-      image: https://agrogan1.github.io/Bayes/Bayestalk/Thomas_Bayes.png
+      image: ./posts/Bayestalk/Bayestalk.png
       categories: [Bayes]
     - title: "Bayesian and Frequentist Multilevel Modeling"
       path: https://agrogan1.github.io/multilevel/Bayesian-and-frequentist-MLM/Bayesian-and-frequentist-MLM.html
