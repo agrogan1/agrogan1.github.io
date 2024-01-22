@@ -115,6 +115,10 @@ listing:
       path: https://agrogan1.github.io/multilevel/Bayesian-longitudinal-mlm/Bayesian-longitudinal-mlm.html
       image: https://agrogan1.github.io/multilevel/Bayesian-longitudinal-mlm/fotolia-small.jpg
       categories: [Bayes, multilevel]
+    - title: "Visualizing Multilevel Models"
+      path: https://agrogan1.github.io/multilevel/visualizing-MLM/visualizing-MLM.html
+      image: mysmallmultiples.png
+      categories: [multilevel, dataviz]
     - title: "What is Data?"
       path: https://agrogan1.github.io/teaching/what-is-data/what-is-data.html
       categories: [workflow]
