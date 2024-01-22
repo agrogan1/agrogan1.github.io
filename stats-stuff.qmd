@@ -97,7 +97,7 @@ listing:
     - title: "Thinking Through Bayesian Ideas"
       path: https://agrogan.shinyapps.io/Thinking-Through-Bayes/
       image: https://agrogan1.github.io/Bayes/basic-Bayes/Thomas_Bayes.png
-      categories: [Bayes]
+      categories: [Bayes, interactive]
     - title: "Notes on Accepting the Null ($H_0$) Hypothesis"
       path: https://agrogan1.github.io/Bayes/accepting-H0/accepting-H0.html
       image: https://agrogan1.github.io/Bayes/basic-Bayes/Thomas_Bayes.png
@@ -131,31 +131,31 @@ listing:
     - title: "Causality"
       path: https://agrogan.shinyapps.io/causality/
       image: causality.png
-      categories: [stats, causality]
+      categories: [stats, causality, interactive]
     - title: "t-test"
       path: https://agrogan.shinyapps.io/shiny-t-test/
-      categories: [stats]
+      categories: [stats, interactive]
     - title: "Correlation"
       path: https://agrogan.shinyapps.io/correlation_demo/
-      categories: [stats]
+      categories: [stats, interactive]
     - title: "Thinking about Correlations"
       path: https://agrogan.shinyapps.io/thinking_about_correlations/
-      categrories: [stats]
+      categrories: [stats, interactive]
     - title: "Cohen's d Calculator"
       path: https://agrogan.shinyapps.io/es_calculator/
-      categories: [stats]
+      categories: [stats, interactive]
     - title: "Regression Tutorial" 
       path: https://agrogan1.github.io/teaching/new-regression-tutorial/
       categories: [stats]
     - title: "Regression Demo"
       path: https://agrogan.shinyapps.io/regression_demo/
-      categories: [stats]
+      categories: [stats, interactive]
     - title: "Interactions"
       path: https://agrogan1.github.io/teaching/interactions/interactions.html
       categories: [stats]
     - title: "Logistic Regression"
       path: https://agrogan.shinyapps.io/exploring_logistic_regression/
-      categories: [stats]
+      categories: [stats, interactive]
     - title: "Mapping and GIS"
       path: https://agrogan1.github.io/mapping/
       image: https://agrogan1.github.io/posts/GIS-and-mapping/leaflet-capture.png
