@@ -45,6 +45,7 @@ listing:
       categories: [R]
     - title: "Quick Introduction To R"
       path: https://agrogan1.github.io/R/quick-intro-R/quick-intro-R.html
+      image: https://agrogan1.github.io/R/quick-intro-R/histogram.png
       categories: [R]
     - title: "Colors in R"
       path: https://agrogan1.github.io/R/colors/colors.html
