@@ -38,6 +38,7 @@ format:
     mermaid: 
       theme: default
     css: styles.css
+    lightbox: true
     toc: true
     execute:
       echo: false
