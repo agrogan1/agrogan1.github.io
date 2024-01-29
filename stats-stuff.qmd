@@ -19,6 +19,7 @@ listing:
       categories: [Stata]
     - title: "Example `do` File"
       path: https://github.com/agrogan1/Stata/blob/master/do-files/my_penguins.do
+      image: dofile.png
       categories: [Stata]
     - title: "Cleaning Data With Stata"
       path: https://agrogan1.github.io/Stata/cleaning-data-with-stata/cleaning-data-with-stata.html
