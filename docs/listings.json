@@ -1,7 +1,12 @@
 [
   {
+    "listing": "/teaching.html",
+    "items": []
+  },
+  {
     "listing": "/blog.html",
     "items": [
+      "/posts/articles-with-UNICEF-MICS-data/index.html",
       "/posts/multilevel-thinking-a-book-draft/index.html",
       "/posts/Bayestalk/index.html",
       "/posts/comparing-program-outcomes-with-ggplot/index.html",
@@ -42,7 +47,6 @@
       "/posts/you-have-to-get-your-data-from-somewhere/index.html",
       "/posts/welcome/index.html",
       "/posts/interviewed-in-the-Lancet/index.html",
-      "/posts/articles-with-UNICEF-MICS-data/index.html",
       "/posts/Mauritius-is-65/index.html",
       "/posts/bar-charts-in-ggplot2/index.html",
       "/posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html",
@@ -51,15 +55,11 @@
     ]
   },
   {
-    "listing": "/stats-stuff.html",
-    "items": []
-  },
-  {
-    "listing": "/teaching.html",
-    "items": []
-  },
-  {
     "listing": "/contact.html",
+    "items": []
+  },
+  {
+    "listing": "/stats-stuff.html",
     "items": []
   }
 ]

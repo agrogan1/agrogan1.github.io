@@ -2,7 +2,7 @@
 title: "Articles With UNICEF MICS Data"
 subtitle: "Articles on parenting and child development in global context."
 author: "Andy Grogan-Kaylor" 
-date: "2023-1-29"
+date: "2024-1-29"
 image: "MICS.png"
 categories: [multilevel, MICS]
 ---
