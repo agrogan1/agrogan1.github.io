@@ -17,8 +17,9 @@ I am hoping to find a publisher this year.
 
 ![Multilevel Thinking](bookcover.png)
 
-
-
+::: {.callout-note}
+The earlier version can be found here: [https://agrogan1.github.io/multilevel-thinking-v1.0/](https://agrogan1.github.io/multilevel-thinking-v1.0/)
+:::
 
 
 

@@ -19,6 +19,9 @@ listing:
       path: https://agrogan1.github.io/multilevel-thinking/
       image: bookcover.png
       categories: [multilevel, book]
+    - title: "Multilevel Thinking v1.0"
+      path: https://agrogan1.github.io/multilevel-thinking-v1.0/
+      categories: [multilevel, book]
     - title: "Multilevel Workshop"
       path: https://agrogan1.github.io/multilevel-workshop/
       image: multilevel-workshop.png
