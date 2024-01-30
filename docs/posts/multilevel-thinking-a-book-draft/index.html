@@ -229,7 +229,7 @@ ul.task-list li input[type="checkbox"] {
 <p>I am hoping to find a publisher this year.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="bookcover.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="Multilevel Thinking"><img src="bookcover.png" class="img-fluid figure-img" alt="Multilevel Thinking"></a></p>
+<p><a href="bookcover.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Multilevel Thinking"><img src="bookcover.png" class="img-fluid figure-img" alt="Multilevel Thinking"></a></p>
 <figcaption>Multilevel Thinking</figcaption>
 </figure>
 </div>
@@ -785,7 +785,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":false,"openEffect":"zoom","descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
