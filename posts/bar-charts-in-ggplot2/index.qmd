@@ -1,7 +1,7 @@
 ---
 title: "Bar Charts in ggplot2"
 author: "Andy Grogan-Kaylor"
-date: "2022-8-14"
+date: "2024-2-1"
 categories: [stats, dataviz]
 echo: true
 code-fold: true
