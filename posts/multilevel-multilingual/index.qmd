@@ -3,7 +3,7 @@ title: "Multilevel Multilingual"
 description: "Analyzing Multilevel Data in Multiple Statistical Languages."
 author: "Andy Grogan-Kaylor"
 date: "2023-12-18"
-categories: [multilevel]
+categories: [multilevel, stats]
 image: "bookcover-landscape.png"
 ---
 
