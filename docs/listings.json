@@ -1,9 +1,5 @@
 [
   {
-    "listing": "/teaching.html",
-    "items": []
-  },
-  {
     "listing": "/blog.html",
     "items": [
       "/posts/multilevel-thinking-a-book-draft/index.html",
@@ -55,11 +51,15 @@
     ]
   },
   {
+    "listing": "/stats-stuff.html",
+    "items": []
+  },
+  {
     "listing": "/contact.html",
     "items": []
   },
   {
-    "listing": "/stats-stuff.html",
+    "listing": "/teaching.html",
     "items": []
   }
 ]
