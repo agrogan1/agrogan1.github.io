@@ -8,6 +8,9 @@ listing:
   categories: cloud
   fields: [title, image, categories]
   contents:
+    - title: "Many Blog Entries Have Relevant Content"
+      path: https://agrogan1.github.io/blog.html
+      categories: [Stata, R, multilevel, Bayes, dataviz]
     - title: "All Stata Materials"
       path: https://agrogan1.github.io/Stata/
       categories: [Stata]
