@@ -184,6 +184,7 @@ listing:
       categories: [R, dataviz]
     - title: "Data Driven Report Demo"
       path: https://agrogan1.github.io/dataviz/data-driven-report-demo/
+      image: https://agrogan1.github.io/dataviz/data-driven-report-demo/scatterplot.png
       categories: [R, workflow]
     - title: "Variables and Visualization"
       path: https://agrogan1.github.io/dataviz/variables-and-visualization/variables-and-visualization.html
