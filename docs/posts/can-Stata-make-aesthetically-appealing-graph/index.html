@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Andy Grogan-Kaylor">
-<meta name="dcterms.date" content="2022-08-14">
+<meta name="dcterms.date" content="2024-02-05">
 
-<title>Andrew Grogan-Kaylor - Bar Charts in ggplot2</title>
+<title>Andrew Grogan-Kaylor - Can Stata Make An Aesthetically Appealing Graph?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,18 +110,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Andrew Grogan-Kaylor - Bar Charts in ggplot2">
+<meta property="og:title" content="Andrew Grogan-Kaylor - Can Stata Make An Aesthetically Appealing Graph?">
 <meta property="og:description" content="">
+<meta property="og:image" content="aesthetically-appealing-World-Bank.svg">
 <meta property="og:site_name" content="Andrew Grogan-Kaylor">
-<meta name="twitter:title" content="Andrew Grogan-Kaylor - Bar Charts in ggplot2">
+<meta name="twitter:title" content="Andrew Grogan-Kaylor - Can Stata Make An Aesthetically Appealing Graph?">
 <meta name="twitter:description" content="">
-<meta name="twitter:card" content="summary">
-<meta name="citation_title" content="Bar Charts in ggplot2">
+<meta name="twitter:image" content="aesthetically-appealing-World-Bank.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="citation_title" content="Can Stata Make An Aesthetically Appealing Graph?">
 <meta name="citation_author" content="Andy Grogan-Kaylor">
-<meta name="citation_publication_date" content="2022-08-14">
-<meta name="citation_cover_date" content="2022-08-14">
-<meta name="citation_year" content="2022">
-<meta name="citation_online_date" content="2022-08-14">
+<meta name="citation_publication_date" content="2024-02-05">
+<meta name="citation_cover_date" content="2024-02-05">
+<meta name="citation_year" content="2024">
+<meta name="citation_online_date" content="2024-02-05">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Publishing child development research from around the world: An unfair playing field resulting in most of the world’s child population under-represented in research;,citation_abstract=Abstract It has become increasingly apparent that publishing research on child development from certain countries is especially challenging. These countries have been referred to collectively as the Majority World, the Global South, non-WEIRD (Western, Educated, Industrial, Rich, and Democratic), or low- and middle-income countries. The aim of this paper is to draw attention to these persistent challenges, and provide constructive recommendations to contribute to better representation of children from these countries in child development research. In this paper, we outline the history of publication bias in developmental science, and issues of generalization of research from these countries and hence where it ?fits? in terms of publishing. The importance of explaining context is highlighted, including for research on measurement child development outcomes, and attention is drawn to the vicious publication-funding cycle that further exacerbates the challenges of publishing this research. Specific recommendations are made to assist child development journals achieve their stated goals of creating a more inclusive, equitable, diverse, and global field of child development.;,citation_author=Catherine E Draper;,citation_author=Lisa M Barnett;,citation_author=Caylee J Cook;,citation_author=Jorge A Cuartas;,citation_author=Steven J Howard;,citation_author=Dana C McCoy;,citation_author=Rebecca Merkley;,citation_author=Andres Molano;,citation_author=Carolina Maldonado-Carreño;,citation_author=Jelena Obradovic;,citation_author=Gaia Scerif;,citation_author=Nadia C Valentini;,citation_author=Fotini Venetsanou;,citation_author=Aisha K Yousafzai;,citation_publication_date=2022-10;,citation_cover_date=2022-10;,citation_year=2022;,citation_fulltext_html_url=https://doi.org/10.1002/icd.2375;,citation_doi=10.1002/icd.2375;,citation_issn=1522-7227;,citation_volume=n/a;,citation_journal_title=Infant and Child Development;,citation_publisher=John Wiley &amp;amp;amp; Sons, Ltd;">
 <meta name="citation_reference" content="citation_title=The weirdest people in the world?;,citation_abstract=Behavioral scientists routinely publish broad claims about human psychology and behavior in the world’s top journals based on samples drawn entirely from Western, Educated, Industrialized, Rich and Democratic (WEIRD) societies. Researchers - often implicitly - assume that either there is little variation across human populations, or that these “standard subjects” are as representative of the species as any other population. Are these assumptions justified? Here, our review of the comparative database from across the behavioral sciences suggests both that there is substantial variability in experimental results across populations and that WEIRD subjects are particularly unusual compared with the rest of the species - frequent outliers. The domains reviewed include visual perception, fairness, cooperation, spatial reasoning, categorization and inferential induction, moral reasoning, reasoning styles, self-concepts and related motivations, and the heritability of IQ. The findings suggest that members of WEIRD societies, including young children, are among the least representative populations one could find for generalizing about humans. Many of these findings involve domains that are associated with fundamental aspects of psychology, motivation, and behavior - hence, there are no obvious a priori grounds for claiming that a particular behavioral phenomenon is universal based on sampling from a single subpopulation. Overall, these empirical patterns suggests that we need to be less cavalier in addressing questions of human nature on the basis of data drawn from this particularly thin, and rather unusual, slice of humanity. We close by proposing ways to structurally re‐organize the behavioral sciences to best tackle these challenges.;,citation_author=Joseph Henrich;,citation_author=Steven J. Heine;,citation_author=Ara Norenzayan;,citation_publication_date=2010;,citation_cover_date=2010;,citation_year=2010;,citation_fulltext_html_url=https://arxiv.org/abs/arXiv:1011.1669v3;,citation_doi=10.1017/S0140525X0999152X;,citation_isbn=0140-525X;,citation_issn=14691825;,citation_pmid=20550733;,citation_journal_title=Behavioral and Brain Sciences;">
@@ -210,7 +212,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Bar Charts in ggplot2</h1>
+      <h1 class="title">Can Stata Make An Aesthetically Appealing Graph?</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">stats</div>
                 <div class="quarto-category">dataviz</div>
@@ -231,7 +233,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">August 14, 2022</p>
+        <p class="date">February 5, 2024</p>
       </div>
     </div>
     
@@ -248,30 +250,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#our-data" id="toc-our-data" class="nav-link" data-scroll-target="#our-data">Our Data</a></li>
-  <li><a href="#bar-charts-where-the-height-of-the-bars-is-the-number-of-observations-in-each-category." id="toc-bar-charts-where-the-height-of-the-bars-is-the-number-of-observations-in-each-category." class="nav-link" data-scroll-target="#bar-charts-where-the-height-of-the-bars-is-the-number-of-observations-in-each-category.">Bar charts where the <span style="background-color: #FFFF00">height of the bars is the <strong>number of observations</strong> in each category.</span></a>
-  <ul class="collapse">
-  <li><a href="#stacked-bar-chart" id="toc-stacked-bar-chart" class="nav-link" data-scroll-target="#stacked-bar-chart">Stacked Bar Chart</a></li>
-  <li><a href="#add-labels" id="toc-add-labels" class="nav-link" data-scroll-target="#add-labels">Add Labels</a></li>
-  </ul></li>
-  <li><a href="#bar-charts-where-the-height-of-the-bars-is-the-average-value-of-the-y-variable-for-that-category." id="toc-bar-charts-where-the-height-of-the-bars-is-the-average-value-of-the-y-variable-for-that-category." class="nav-link" data-scroll-target="#bar-charts-where-the-height-of-the-bars-is-the-average-value-of-the-y-variable-for-that-category.">Bar charts where the <span style="background-color: #FFFF00">height of the bars is the <strong>average value of the y variable</strong> for that category</span>.</a>
-  <ul class="collapse">
-  <li><a href="#what-about-a-line-chart" id="toc-what-about-a-line-chart" class="nav-link" data-scroll-target="#what-about-a-line-chart">What About a Line Chart?</a></li>
-  </ul></li>
-  <li><a href="#bar-charts-where-the-height-of-the-bars-is-the-actual-value-of-the-y-variable-for-that-category." id="toc-bar-charts-where-the-height-of-the-bars-is-the-actual-value-of-the-y-variable-for-that-category." class="nav-link" data-scroll-target="#bar-charts-where-the-height-of-the-bars-is-the-actual-value-of-the-y-variable-for-that-category.">Bar charts where the <span style="background-color: #FFFF00">height of the bars is the <strong>actual value of the y variable</strong> for that category</span>.</a></li>
-  <li><a href="#a-potential-problem" id="toc-a-potential-problem" class="nav-link" data-scroll-target="#a-potential-problem">A Potential Problem</a></li>
-  <li><a href="#thinking-through-the-issue" id="toc-thinking-through-the-issue" class="nav-link" data-scroll-target="#thinking-through-the-issue">Thinking Through The Issue</a></li>
-  <li><a href="#of-course-the-problem-wouldnt-come-up-if-we-had-different-data-without-those-duplicate-x-observations" id="toc-of-course-the-problem-wouldnt-come-up-if-we-had-different-data-without-those-duplicate-x-observations" class="nav-link" data-scroll-target="#of-course-the-problem-wouldnt-come-up-if-we-had-different-data-without-those-duplicate-x-observations">Of Course The Problem Wouldn’t Come Up If We Had Different Data, Without Those Duplicate <em>x</em> Observations</a>
-  <ul class="collapse">
-  <li><a href="#and-then-a-bar-chart-is-easy" id="toc-and-then-a-bar-chart-is-easy" class="nav-link" data-scroll-target="#and-then-a-bar-chart-is-easy">And Then A Bar Chart Is Easy</a></li>
-  <li><a href="#a-line-chart-is-easy-too" id="toc-a-line-chart-is-easy-too" class="nav-link" data-scroll-target="#a-line-chart-is-easy-too">A Line Chart Is Easy Too</a></li>
-  </ul></li>
-  <li><a href="#and-then-there-are-pie-charts" id="toc-and-then-there-are-pie-charts" class="nav-link" data-scroll-target="#and-then-there-are-pie-charts">And Then There Are Pie Charts</a>
-  <ul class="collapse">
-  <li><a href="#pie-chart-with-better-colors" id="toc-pie-chart-with-better-colors" class="nav-link" data-scroll-target="#pie-chart-with-better-colors">Pie Chart With Better Colors</a></li>
-  </ul></li>
-  <li><a href="#bar-chart-with-better-colors" id="toc-bar-chart-with-better-colors" class="nav-link" data-scroll-target="#bar-chart-with-better-colors">Bar Chart With Better Colors</a></li>
+  <li><a href="#get-the-data" id="toc-get-the-data" class="nav-link" data-scroll-target="#get-the-data">Get The Data</a></li>
+  <li><a href="#data-management" id="toc-data-management" class="nav-link" data-scroll-target="#data-management">Data Management</a></li>
+  <li><a href="#graph" id="toc-graph" class="nav-link" data-scroll-target="#graph">Graph</a></li>
   </ul>
 </nav>
     </div>
@@ -284,472 +265,64 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="background" class="level1">
 <h1>Background</h1>
-<p>While <code>ggplot2</code>, and the ideas of an underlying <em>“grammar of graphics”</em>, make some kinds of graphing easier, <code>ggplot2</code> can make other types of graphing more difficult.</p>
-<p>One often tricky type of graph is the bar chart. I have come to think that part of the difficulty with thinking about bar charts in <code>ggplot2</code> is that sometimes <span style="background-color: #FFFF00"><strong>three very different types of bar charts look similar</strong></span>.</p>
-</section>
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p><strong>Many</strong> bar charts look <strong>something like</strong> the bar chart below.</p>
 <div class="cell">
-<div class="cell-output-display">
-<div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Statamarkdown)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Another attempt <a href="can-Stata-make-a-beautiful-graph.html">to make an aesthetically appealing graph with Stata</a>.</p>
+<p>I make use of the <code>///</code> notation which allows me to spread the graph along multiple lines.</p>
+</section>
+<section id="get-the-data" class="level1">
+<h1>Get The Data</h1>
+<div class="cell" data-collectcode="true">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"https://github.com/agrogan1/multilevel/raw/master/fixed-effects-example-World-Bank-data/WorldBankData.dta"</span>, <span class="kw">clear</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="data-management" class="level1">
+<h1>Data Management</h1>
+<div class="cell" data-collectcode="true">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">drop</span> <span class="kw">if</span> region == <span class="st">"Aggregates"</span> <span class="co">// drop Aggregates</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="graph" class="level1">
+<h1>Graph</h1>
+<div class="cell" data-collectcode="true">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">twoway</span> (<span class="kw">scatter</span> GDP <span class="fu">year</span>, mcolor(%10)) <span class="co">/// scatterplot; transparent markers</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>(<span class="kw">lowess</span> GDP <span class="fu">year</span>, lwidth(thick)),  <span class="co">/// lowess smoother</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">xlabel</span>(, angle(270) <span class="bn">labsize</span>(vsmall)) <span class="co">/// x label tweaks</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">ylabel</span>(, angle(0) <span class="bn">labsize</span>(vsmall)) <span class="co">/// y label tweaks</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="kw">by</span>(region, <span class="bn">title</span>(<span class="st">"GDP by Year"</span>) <span class="co">///</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="kw">note</span> (<span class="st">"World Bank Data: Every Dot is a Country-Year"</span>) <span class="co">///</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="bn">legend</span>(<span class="kw">off</span>)) <span class="co">///</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="bn">subtitle</span>(, <span class="kw">size</span>(small)) <span class="co">///</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="bn">xsize</span>(5) <span class="bn">ysize</span>(5) <span class="co">/// x and y size</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="dv">scheme</span>(michigan) </span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> aesthetically-appealing-World-Bank.svg, <span class="kw">width</span>(2000) <span class="kw">replace</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p><a href="aesthetically-appealing-World-Bank.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="An Aesthetically Appealing Graph of World Bank Data"><img src="aesthetically-appealing-World-Bank.svg" class="img-fluid figure-img" style="width:75.0%" alt="An Aesthetically Appealing Graph of World Bank Data"></a></p>
+<figcaption>An Aesthetically Appealing Graph of World Bank Data</figcaption>
 </figure>
-</div>
-</div>
-</div>
-<p>However, there are actually three slightly separate underlying <em>“grammars of graphics”</em> that might underlie a bar chart:</p>
-<ol type="1">
-<li>Bar charts where the height of the bars is the <strong>number of observations</strong> in each category.</li>
-<li>Bar charts where the height of the bars is the <strong>average value of the y variable</strong> for that category.</li>
-<li>Bar charts where the height of the bars is the <strong>actual value of the y variable</strong> for that <strong>individual observation</strong>.</li>
-</ol>
-<p>Let’s look at each situation in turn, since each situation demands a slightly different syntax.</p>
-</section>
-<section id="our-data" class="level1">
-<h1>Our Data</h1>
-<div class="cell">
-<div class="cell-output-display">
-<table class="table table-sm table-striped small">
-<colgroup>
-<col style="width: 5%">
-<col style="width: 6%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">x</th>
-<th style="text-align: center;">y</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">10</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">5</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">9</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">8</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">9</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">10</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</section>
-<section id="bar-charts-where-the-height-of-the-bars-is-the-number-of-observations-in-each-category." class="level1">
-<h1>Bar charts where the <span style="background-color: #FFFF00">height of the bars is the <strong>number of observations</strong> in each category.</span></h1>
-<div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mydata, <span class="co"># the data that I am using</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> x)) <span class="sc">+</span> <span class="co"># 'aesthetic' only includes x</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"deepskyblue"</span>) <span class="co"># using bars to graph</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-4-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
-</div>
-</div>
-</div>
-<section id="stacked-bar-chart" class="level2">
-<h2 class="anchored" data-anchor-id="stacked-bar-chart">Stacked Bar Chart</h2>
-<p>A simple change to the above aesthetic yields a stacked bar chart.</p>
-<p>Note that <em>fill</em> now becomes part of the <em>aesthetic</em> so that color fill differentiates the parts of the bar.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mydata, <span class="co"># the data that I am using</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">1</span>, <span class="co"># x is 1 </span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">fill =</span> <span class="fu">factor</span>(x))) <span class="sc">+</span> <span class="co"># fill is x as a factor</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> <span class="co"># using bars to graph</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_discrete</span>(<span class="at">name =</span> <span class="st">"x"</span>) <span class="co"># modify name of legend</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-5-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
-</div>
-</div>
-</div>
-<blockquote class="blockquote">
-<p>We then return to an unstacked bar chart to consider the syntax for adding labels.</p>
-</blockquote>
-</section>
-<section id="add-labels" class="level2">
-<h2 class="anchored" data-anchor-id="add-labels">Add Labels</h2>
-<p>Adding labels requires adding an extra geom, <code>geom_text</code>. We have to add a new, non-intuitive aesthetic to <code>geom_text</code> to tell it where the labels are located, and that they represent the count of observations in each category. This aesthetic uses the special variable <code>..count..</code> to tell us how many observations are in each category.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mydata, <span class="co"># the data that I am using</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> x)) <span class="sc">+</span> <span class="co"># 'aesthetic' only includes x</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"deepskyblue"</span>) <span class="sc">+</span> <span class="co"># using bars to graph</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">stat =</span> <span class="st">"count"</span>, </span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>            <span class="fu">aes</span>(<span class="at">label =</span> ..count.., <span class="co"># text of the label</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">y =</span> ..count.. <span class="sc">+</span> .<span class="dv">5</span>), <span class="co"># location of the label</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>            <span class="at">size =</span> <span class="dv">5</span>) <span class="co"># size of the label</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-6-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Alternatively, we could use <code>..prop..</code> to calculate and display proportions.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mydata, <span class="co"># the data that I am using</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> x)) <span class="sc">+</span> </span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> ..prop..), <span class="co"># using bars to graph</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">stat =</span> <span class="st">"count"</span>,</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">fill =</span> <span class="st">"deepskyblue"</span>) <span class="sc">+</span> </span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">round</span>(..prop.., <span class="at">digits =</span> <span class="dv">2</span>), <span class="co"># text of the label </span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>                <span class="at">y =</span> ..prop.. ), <span class="co"># location of the label</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>            <span class="at">stat =</span> <span class="st">"count"</span>, </span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">size =</span> <span class="dv">5</span>, <span class="co"># size of the label</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>            <span class="at">vjust =</span> <span class="sc">-</span><span class="dv">1</span>) <span class="sc">+</span> <span class="co"># vertical justification</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, .<span class="dv">7</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-7-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="bar-charts-where-the-height-of-the-bars-is-the-average-value-of-the-y-variable-for-that-category." class="level1">
-<h1>Bar charts where the <span style="background-color: #FFFF00">height of the bars is the <strong>average value of the y variable</strong> for that category</span>.</h1>
-<blockquote class="blockquote">
-<p>For this kind of bar chart, we need ask R to summarize the value of <code>y</code> for different categories of <code>x</code>. The syntax is–shall we say–not very intuitive, but does make sense.</p>
-</blockquote>
-<div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mydata, <span class="co"># the data that I am using</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="co"># 'aesthetic' includes x</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> y)) <span class="sc">+</span> <span class="co"># and y</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun =</span> mean, <span class="co"># summarizing y </span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>               <span class="at">geom =</span> <span class="st">"bar"</span>, <span class="co"># with bars</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>               <span class="at">fill =</span> <span class="st">"deepskyblue"</span>) <span class="sc">+</span> </span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"average y"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-8-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
-</div>
-</div>
-</div>
-<section id="what-about-a-line-chart" class="level2">
-<h2 class="anchored" data-anchor-id="what-about-a-line-chart">What About a Line Chart?</h2>
-<p>A line chart requires the addition of <code>group</code> to the aesthetic, and the use of a different geometry.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mydata, <span class="co"># the data that I am using</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> x,</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> y,</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">group =</span> <span class="dv">1</span>)) <span class="sc">+</span> <span class="co"># add 'group'</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>   <span class="fu">stat_summary</span>(<span class="at">geom =</span> <span class="st">"line"</span>, <span class="co"># with line</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">fun =</span> mean,</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>                <span class="at">color =</span> <span class="st">"deepskyblue"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-9-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="bar-charts-where-the-height-of-the-bars-is-the-actual-value-of-the-y-variable-for-that-category." class="level1">
-<h1>Bar charts where the <span style="background-color: #FFFF00">height of the bars is the <strong>actual value of the y variable</strong> for that category</span>.</h1>
-<p>Here is where things get complicated. We try something we’ve tried before, but now adding <em>y</em> to the aesthetic.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mydata, <span class="co"># the data that I am using</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="co"># 'aesthetic' includes x</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> y)) <span class="sc">+</span> <span class="co"># and y</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p>This generates the following error message:</p>
-<blockquote class="blockquote">
-<p><code>Error: stat_count() must not be used with a y aesthetic.</code></p>
-</blockquote>
-<p>The reason that we are getting this error is that, by default, <code>geom_bar()</code> is trying to <strong>count up</strong> the number of <em>x</em> values, and in <strong>counting up</strong> the number of <em>x</em> values, <code>geom_bar()</code> does not know what to do with the <em>y</em> value.</p>
-<p>So we change this using a different <em>geometry</em>, <code>geom_col()</code>, whose default behavior is defined to fit this situation: y = height of bars.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mydata, <span class="co"># the data that I am using</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="co"># 'aesthetic' includes x</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> y)) <span class="sc">+</span> <span class="co"># and y</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"deepskyblue"</span>) <span class="co"># use ACTUAL y for bar height</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-11-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="index_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Alternatively, we could also use <code>stat = "identity"</code> within <code>geom_bar()</code> to indicate that <em>y</em> represents the <em>actual</em> height of the bars …</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mydata, <span class="co"># the data that I am using</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="co"># 'aesthetic' includes x</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> y)) <span class="sc">+</span> <span class="co"># and y</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>,  <span class="co"># use ACTUAL y for bar height</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>           <span class="at">fill =</span> <span class="st">"deepskyblue"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-12-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="index_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="a-potential-problem" class="level1">
-<h1>A Potential Problem</h1>
-<p>If we go back and look at our data, we remember that we have some duplicate <em>x</em>’s,</p>
-<div class="cell">
-<div class="cell-output-display">
-<p><em>1</em>, <em>2</em>, <em>2</em>, <em>3</em>, <em>3</em> and <em>3</em></p>
-</div>
-</div>
-<p>so some of the bars are actually <strong>over-printing</strong>.</p>
-<p>We can see this if we make the bars semi-transparent, and outline the bars with a different color.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mydata, <span class="co"># the data that I am using</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> x,</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> y)) <span class="sc">+</span> <span class="co"># 'aesthetic' only includes x</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"identity"</span>, <span class="co"># use ACTUAL y for bar height</span></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>           <span class="at">fill =</span> <span class="st">"deepskyblue"</span>, <span class="co"># fill</span></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> <span class="st">"red"</span>, <span class="co"># outline</span></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>           <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="co"># transparency</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-14-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="index_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="thinking-through-the-issue" class="level1">
-<h1>Thinking Through The Issue</h1>
-<p>What is the solution? We may want to go back and look at our data to ensure that if we are using the actual <em>y</em> value for the height of the bars that we do <strong>not</strong> have duplicate values of <em>x</em> in our data.</p>
-<p><strong>Or</strong>, we may want to have the bars represent the <strong>average value of y</strong> rather than the <strong>actual values of y</strong>, as we did in one of the examples above.</p>
-</section>
-<section id="of-course-the-problem-wouldnt-come-up-if-we-had-different-data-without-those-duplicate-x-observations" class="level1">
-<h1>Of Course The Problem Wouldn’t Come Up If We Had Different Data, Without Those Duplicate <em>x</em> Observations</h1>
-<div class="cell">
-<div class="cell-output-display">
-<table class="table table-sm table-striped small">
-<colgroup>
-<col style="width: 15%">
-<col style="width: 15%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">xREVISED</th>
-<th style="text-align: center;">yREVISED</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">10</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">5</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">8</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<section id="and-then-a-bar-chart-is-easy" class="level2">
-<h2 class="anchored" data-anchor-id="and-then-a-bar-chart-is-easy">And Then A Bar Chart Is Easy</h2>
-<div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mydataREVISED, <span class="co"># the data that I am using</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> xREVISED, <span class="co"># 'aesthetic' includes x</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> yREVISED)) <span class="sc">+</span> <span class="co"># and y</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="co"># use ACTUAL y for bar height</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>           <span class="at">fill =</span> <span class="st">"deepskyblue"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-16-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="index_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="a-line-chart-is-easy-too" class="level2">
-<h2 class="anchored" data-anchor-id="a-line-chart-is-easy-too">A Line Chart Is Easy Too</h2>
-<div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mydataREVISED, <span class="co"># the data that I am using</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> xREVISED, <span class="co"># 'aesthetic' includes x</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> yREVISED)) <span class="sc">+</span> <span class="co"># and y</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="co"># use ACTUAL y for bar height</span></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> <span class="st">"deepskyblue"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-17-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="index_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="and-then-there-are-pie-charts" class="level1">
-<h1>And Then There Are Pie Charts</h1>
-<p>In some ways it is confusing, and in some ways it is helpful, that according to the underlying <em>grammar of graphics</em> in <code>ggplot2</code>, pie charts can be seen as <strong>bar charts that use polar coordinates</strong>. With that in mind, we take some of our earlier code, and add <code>coord_polar()</code>.</p>
-<p>In the code below, I need to ensure that <code>ggplot2</code> sees <em>x</em> as a <strong>factor</strong>, and to use <em>x</em> as a <strong>fill</strong>. <strong>Fill</strong> is a <em>crucial</em> piece of information in a pie chart.</p>
-<p>I also need to change <code>x=</code> in the <code>aes</code>thetic to <code>1</code> so that ggplot locates all the slices at the same place in terms of <em>polar coordinates</em>.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mydata, <span class="co"># the data that I am using</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">1</span>, <span class="co"># all the slices have the same x</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">fill =</span> <span class="fu">factor</span>(x))) <span class="sc">+</span> <span class="co"># x is now the fill</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> <span class="co"># using bars to graph </span></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_polar</span>(<span class="at">theta =</span> <span class="st">"y"</span>) <span class="sc">+</span> <span class="co"># polar coordinates</span></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() <span class="co"># get rid of distracting numbers</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-18-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="index_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
-</div>
-</div>
-</div>
-<blockquote class="blockquote">
-<p>Unfortunately, pie charts are deprecated in some circles, so support for pie charts is not very strong in <code>ggplot</code>. It is certainly possible to create a pie chart in <code>ggplot</code>, but adding labels to a pie chart ends up being very very difficult.</p>
-</blockquote>
-<section id="pie-chart-with-better-colors" class="level2">
-<h2 class="anchored" data-anchor-id="pie-chart-with-better-colors">Pie Chart With Better Colors</h2>
-<div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mydata, <span class="co"># the data that I am using</span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">1</span>, </span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">fill =</span> <span class="fu">factor</span>(x))) <span class="sc">+</span> </span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> <span class="co"># using bars to graph </span></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_polar</span>(<span class="at">theta =</span> <span class="st">"y"</span>) <span class="sc">+</span> <span class="co"># polar coordinates </span></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_d</span>(<span class="at">name =</span> <span class="st">"x"</span>) <span class="sc">+</span> <span class="co"># beautiful colors; named legend</span></span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() <span class="co"># get rid of distracting numbers</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-20-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="index_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="bar-chart-with-better-colors" class="level1">
-<h1>Bar Chart With Better Colors</h1>
-<p>Up until now, we have had a <em>minimalist</em> vision of bar charts, where every bar is the same color, because color would not add <strong>additional information</strong>, over and above the information contained in the position on the <em>x</em> axis. However, for the sake of design, we may also choose to add some color to our bar charts. <code>ggthemes</code>, <code>ggthemr</code> and <code>viridis</code> are all ways of adding color to <code>ggplot</code> graphs.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(viridis) <span class="co"># wonderful colors</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mydata, <span class="co"># the data that I am using</span></span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="co"># x is on the x axis</span></span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>           <span class="at">fill =</span> <span class="fu">factor</span>(x))) <span class="sc">+</span> <span class="co"># x is also a factor for fill</span></span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> <span class="co"># using bars to graph </span></span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_d</span>(<span class="at">name =</span> <span class="st">"x"</span>) <span class="co"># colors; named legend</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-21-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="index_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
-</div>
-</div>
 </div>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">An Aesthetically Appealing Graph of World Bank Data</span>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -1285,7 +858,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"closeEffect":"zoom","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":false,"descPosition":"bottom","openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

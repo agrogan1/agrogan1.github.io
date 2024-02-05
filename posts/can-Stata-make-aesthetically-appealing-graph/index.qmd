@@ -1,0 +1,73 @@
+---
+title: "Can Stata Make An Aesthetically Appealing Graph?"
+author: "Andy Grogan-Kaylor" 
+date: "2024-2-5"
+execute: 
+  echo: true
+  message: false
+code-fold: true
+image: "aesthetically-appealing-World-Bank.svg"
+categories: [stats, dataviz]
+---
+
+# Background
+
+```{r}
+
+library(Statamarkdown)
+
+```
+
+
+Another attempt [to make an aesthetically appealing graph with Stata](../can-Stata-make-a-beautiful-graph).
+
+I make use of the `///` notation which allows me to spread the graph along multiple lines.
+
+# Get The Data
+
+```{stata, collectcode=TRUE}
+#| output: false
+
+use "https://github.com/agrogan1/multilevel/raw/master/fixed-effects-example-World-Bank-data/WorldBankData.dta", clear
+
+```
+
+# Data Management
+
+```{stata, collectcode=TRUE}
+#| output: false
+
+drop if region == "Aggregates" // drop Aggregates
+
+```
+
+# Graph
+
+```{stata, collectcode=TRUE}
+#| output: false
+
+
+twoway (scatter GDP year, mcolor(%10)) /// scatterplot; transparent markers
+(lowess GDP year, lwidth(thick)),  /// lowess smoother
+xlabel(, angle(270) labsize(vsmall)) /// x label tweaks
+ylabel(, angle(0) labsize(vsmall)) /// y label tweaks
+by(region, title("GDP by Year") ///
+note ("World Bank Data: Every Dot is a Country-Year") ///
+legend(off)) ///
+subtitle(, size(small)) ///
+xsize(5) ysize(5) /// x and y size
+scheme(michigan) 
+	
+graph export aesthetically-appealing-World-Bank.svg, width(2000) replace
+
+```
+
+![An Aesthetically Appealing Graph of World Bank Data](aesthetically-appealing-World-Bank.svg){width=75%}
+
+		
+	
+	
+	
+	
+	
+	
