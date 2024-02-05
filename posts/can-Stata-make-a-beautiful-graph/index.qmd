@@ -1,7 +1,7 @@
 ---
 title: "Can Stata Make A Beautiful Graph?"
 author: "Andy Grogan-Kaylor" 
-date: "2023-12-13"
+date: "2024-2-05"
 categories: [stats, dataviz]
 ---
 
@@ -73,14 +73,14 @@ use gutten.dta
 
 twoway /// two way graph
 (scatter height age_base, /// scatterplot
-mcolor(dkgreen%25) msymbol(circle)) /// dark green transparent markers
-(lowess height age_base, /// smoother 
+mcolor(dkgreen%25) msymbol(circle) msize(large)) /// dark green transparent markers
+(mspline height age_base, /// median spline 
 lcolor(gold) lwidth(thick)), /// gold line
 title("Tree Height by Tree Age") /// title
 xtitle("Tree Age") /// title for x axis
 ytitle("Tree Height") /// title for y axis
 caption("Gutten Tree Data") /// caption
-legend(order(1 "trees" 2 "smoother") position(6) rows(1)) /// better labels and format for legend
+legend(order(1 "trees" 2 "median spline") position(6) rows(1)) /// better labels and format for legend
 aspectratio(.5) // better aspect ratio
 
 graph export gutten.png, width(2000) replace
