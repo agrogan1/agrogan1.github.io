@@ -19,7 +19,7 @@ library(Statamarkdown)
 ```
 
 
-Another attempt [to make an aesthetically appealing graph with Stata](../can-Stata-make-a-beautiful-graph).
+Another attempt [to make an aesthetically appealing graph with Stata](https://agrogan1.github.io/posts/can-Stata-make-a-beautiful-graph/).
 
 I make use of the `///` notation which allows me to spread the graph along multiple lines.
 

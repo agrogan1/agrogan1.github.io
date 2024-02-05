@@ -1,5 +1,13 @@
 [
   {
+    "listing": "/teaching.html",
+    "items": []
+  },
+  {
+    "listing": "/contact.html",
+    "items": []
+  },
+  {
     "listing": "/blog.html",
     "items": [
       "/posts/can-Stata-make-aesthetically-appealing-graph/index.html",
@@ -53,14 +61,6 @@
   },
   {
     "listing": "/stats-stuff.html",
-    "items": []
-  },
-  {
-    "listing": "/contact.html",
-    "items": []
-  },
-  {
-    "listing": "/teaching.html",
     "items": []
   }
 ]
