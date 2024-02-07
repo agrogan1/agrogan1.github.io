@@ -1,0 +1,16 @@
+---
+title: "Updated UNICEF Colors for Stata Graphs"
+author: "Andy Grogan-Kaylor"
+date: "2024-2-7"
+image: "UNICEFpalette.png"
+categories: [stats, dataviz]
+---
+
+I've updated my *UNICEF Colors for Stata Graphs*, using the most recent version of official colors for UNICEF. 
+
+The updated graph scheme can be installed by typing `net from https://agrogan1.github.io/Stata` at the Stata command prompt.
+
+![UNICEF Color Palette](UNICEFpalette.png)
+
+
+

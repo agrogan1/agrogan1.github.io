@@ -10,8 +10,10 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/can-Stata-make-aesthetically-appealing-graph/index.html",
       "/posts/multilevel-thinking-a-book-draft/index.html",
+      "/posts/UNICEF-colors-for-Stata-graphs/index.html",
+      "/posts/why-Stata-is-better-at-graphing-than-R/index.html",
+      "/posts/can-Stata-make-aesthetically-appealing-graph/index.html",
       "/posts/Cohens-d-calculator/index.html",
       "/posts/can-Stata-make-a-beautiful-graph/index.html",
       "/posts/bar-charts-in-ggplot2/index.html",

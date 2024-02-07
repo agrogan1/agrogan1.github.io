@@ -1,0 +1,71 @@
+---
+title: "Why Stata Is Better (At Graphing) Than R"
+author: "Andy Grogan-Kaylor"
+date: 2024-2-7
+categories: [stats, dataviz]
+image: "mybarStata.png"
+execute: 
+  echo: true
+code-fold: true
+---
+
+# Introduction
+
+Both R and Stata are programs with strong data visualization and analysis capabilities. However, Stata's capabilities as a data visualization program are sometimes under-rated. The intent of the post is to show that Stata can often perform the same graphing task as R, with much simpler, and much more intuitive, command syntax.
+
+This post uses simulated social service agency data clients. In each program, I am going to graph mental health of clients (at Time 2) by program.
+
+```{r}
+#| echo: false
+
+library(Statamarkdown)
+
+```
+
+# Stata
+
+```{stata}
+
+import delimited "clients.csv", encoding(ISO-8859-2) clear // import data
+	
+graph bar mental_health_t2, /// bar graph of mean outcome
+over(program, gap(10)) /// over program
+scheme(michigan) /// michigan graph scheme
+asyvars // bars that have color
+
+quietly graph export mybarStata.png, width(2000) replace
+
+```
+
+
+![Bar Graph in Stata](mybarStata.png)
+
+# R
+
+```{r}
+
+library(readr) # library to import data
+	
+clients <- read_csv("clients.csv") # import data
+	
+library(ggplot2)
+	
+library(michigancolors)
+
+ggplot(clients, # the data that I am using
+       aes(x = program, # 'aesthetic' includes x
+           y = mental_health_T2, # and y
+           fill = program)) + # and fill by program
+  stat_summary(fun = mean, # summarizing y 
+               geom = "bar") + # with bars
+  scale_fill_manual(values = michigancolors()) + # UM colors
+  theme_minimal() # minimal theme
+
+```
+
+
+
+
+
+
+
