@@ -14,10 +14,6 @@ Suppose that your control group has a mean score of 100, and a standard deviatio
 
 Suppose that your treatment group has a mean score of 110, and a standard deviation of 7 on this outcome.
 
-# Statistical Significance
-
-It's relatively easy to test for the *statistical significance* of this difference, as one can see in the example below.
-
 ```{r}
 #| echo: true
 #| code-fold: true
@@ -30,17 +26,7 @@ control <- rnorm(N, 100, 5) # control group data
 
 treatment <- rnorm(N, 110, 7) # control group data
 
-t.test(treatment, control) # t-test of treatment vs. control
-
 ```
-
-# Substantive Significance
-
-But what if you want to think about the *substantive significance* of the difference between treatment and control group? Effect sizes are *one way* to think about these issues. Discussion about the *merits of*, and *calculation of* effect sizes is *energetic* and *complex*. However, one commonly accepted way of thinking about effect sizes is *Cohen's d*.
-
-# Cohen's d Calculator
-
-I have recently updated my calculator to calculate and visualize Cohen's d. It can be found here: [https://agrogan.shinyapps.io/es_calculator/](https://agrogan.shinyapps.io/es_calculator/).
 
 ```{r}
 #| echo: false
@@ -66,6 +52,27 @@ ggplot(data = mydata,
   theme_minimal()
   
 ```
+
+# Statistical Significance
+
+It's relatively easy to test for the *statistical significance* of this difference, as one can see in the example below.
+
+```{r}
+#| echo: true
+#| code-fold: true
+
+t.test(treatment, control) # t-test of treatment vs. control
+
+```
+
+# Substantive Significance
+
+But what if you want to think about the *substantive significance* of the difference between treatment and control group? Effect sizes are *one way* to think about these issues. Discussion about the *merits of*, and *calculation of* effect sizes is *energetic* and *complex*. However, one commonly accepted way of thinking about effect sizes is *Cohen's d*.
+
+# Cohen's d Calculator
+
+I have recently updated my calculator to calculate and visualize Cohen's d. It can be found here: [https://agrogan.shinyapps.io/es_calculator/](https://agrogan.shinyapps.io/es_calculator/).
+
 
 
 
