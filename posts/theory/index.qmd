@@ -1,7 +1,7 @@
 ---
 title: "Theory"
 author: "Andy Grogan-Kaylor"
-date: "2023-11-17"
+date: "today"
 categories: [social justice, theory]
 image: "thumbnail.jpg"
 ---
