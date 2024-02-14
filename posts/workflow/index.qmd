@@ -7,7 +7,10 @@ categories: [stats, workflow]
 image: "thumbnail.jpg"
 ---
 
-I have been thinking a lot recently about workflow, particularly in data science and data analysis projects. My thoughts are here:  [https://agrogan1.github.io/teaching/workflow/workflow.html](https://agrogan1.github.io/teaching/workflow/workflow.html) [[Word Version](https://agrogan1.github.io/teaching/workflow/workflow.docx)]
+I have been thinking a lot recently about workflow, particularly in data science and data analysis projects. My thoughts are here:  [https://agrogan1.github.io/teaching/workflow/workflow.html](https://agrogan1.github.io/teaching/workflow/workflow.html).
+
+
+
 
 
 
