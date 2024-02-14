@@ -3,7 +3,7 @@ title: "Theory"
 author: "Andy Grogan-Kaylor"
 date: "today"
 categories: [social justice, theory]
-image: "thumbnail.jpg"
+image: "greengrid.png"
 ---
 
 A few ideas relevant to theory that have been on my mind.
@@ -12,6 +12,6 @@ A few ideas relevant to theory that have been on my mind.
 
 > "What we see and how we see is of course determined by our perspective, by the place from which we begin our examination of history; but it is determined also by reality itself." [@Martin-Baro1994B]
 
-> "The present reality in Latin America leads us to the hypothesis that philosophy can only carry out its critical and creative function in favor of an effective praxis of liberation if it is adequately situated within that liberating praxis, which is independent of philosophy." @Ellacuria2013
+> "The present reality in Latin America leads us to the hypothesis that philosophy can only carry out its critical and creative function in favor of an effective praxis of liberation if it is adequately situated within that liberating praxis, which is independent of philosophy." [@Ellacuria2013]
 
 
