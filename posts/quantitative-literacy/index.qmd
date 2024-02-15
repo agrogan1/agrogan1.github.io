@@ -1,7 +1,7 @@
 ---
 title: "Quantitative Literacy"
 author: "Andy Grogan-Kaylor"
-date: "2023-11-17"
+date: "2024-2-15"
 categories: [stats, workflow, social justice]
 image: "lightbulb-and-clover.png"
 ---
