@@ -2,7 +2,7 @@
 title: "GIS and Mapping"
 subtitle: "Notes for a GIS Course Under Development."
 author: "Andy Grogan-Kaylor"
-date: "2023-12-9"
+date: "2024-2-15"
 categories: [GIS]
 image: leaflet-capture.png
 ---
@@ -15,6 +15,8 @@ library(sf) # simple (spatial) features
 
 library(leaflet) # beautiful maps
 
+library(rnaturalearth) # natural earth data
+
 ```
 
 
@@ -23,16 +25,17 @@ library(leaflet) # beautiful maps
 #| fig-cap: "Countries of the World"
 #| fig-height: 3
 
-global_data <- read_sf("../../../mapping/shapefiles/wrld_simpl/wrld_simpl.shp")
+ne_countries <- ne_countries(scale = "medium", 
+                             returnclass = "sf") 
 
   leaflet() %>%
     setView(0, 0, zoom = 1.5) %>%
     addProviderTiles(providers$Esri.WorldImagery) %>%
-    addPolygons(data = global_data, 
+    addPolygons(data = ne_countries, 
                 fillOpacity = .0, 
                 weight = 2,
                 color = "#009edb", 
-                label = global_data$NAME,
+                label = ne_countries$name,
                 highlightOptions = highlightOptions(color = "red", 
                                                     weight = 2,
                                                     bringToFront = TRUE)) 
