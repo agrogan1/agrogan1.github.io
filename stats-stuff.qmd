@@ -207,7 +207,7 @@ listing:
       path: https://agrogan1.github.io/posts/comparing-program-outcomes-with-ggplot/index.html
       categories: [R, dataviz, social justice]  
     - title: "Graphing Change Over Time"
-      path: https://agrogan1.github.io/dataviz/graphing-change-over-time/index.pdf
+      path: https://agrogan1.github.io/dataviz/graphing-change-over-time/index.html
       categories: [stats, dataviz]
 ---      
 
