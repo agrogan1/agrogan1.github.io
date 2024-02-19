@@ -10,6 +10,7 @@ listing:
   contents:
     - title: "Many Blog Entries Have Relevant Content"
       path: https://agrogan1.github.io/blog.html
+      image: https://agrogan1.github.io/posts/quantitative-literacy/lightbulb-and-clover.png
       categories: [Stata, R, multilevel, Bayes, dataviz]
     - title: "All Stata Materials"
       path: https://agrogan1.github.io/Stata/
