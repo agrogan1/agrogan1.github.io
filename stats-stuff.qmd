@@ -78,27 +78,35 @@ listing:
       categories: [R, dataviz]
     - title: "Introduction to ggplot2"
       path: https://agrogan1.github.io/R/introduction-to-ggplot2/introduction-to-ggplot2.html
+      image: https://agrogan1.github.io/R/R.png
       categories: [R, dataviz]
     - title: "Two Page ggplot"
       path: https://agrogan1.github.io/R/two-page-ggplot2/two-page-ggplot2.pdf
+      image: https://agrogan1.github.io/R/R.png
       categories: [R, dataviz]
     - title: "What Geometry Do I Use?"
       path: https://agrogan1.github.io/R/what-geom-do-I-use/how-to-choose-a-chart-a-visual-guide-GEOMs.pdf
+      image: https://agrogan1.github.io/R/R.png
       categories: [R, dataviz]
     - title: "ggplot Flipbook"
       path: https://agrogan1.github.io/R/ggplot-flipbook/ggplot-flipbook.html
+      image: https://agrogan1.github.io/R/R.png
       categories: [R, dataviz]
     - title: "Advanced ggplot"
       path: https://agrogan1.github.io/dataviz/advanced-ggplot/advanced-ggplot.html
+      image: https://agrogan1.github.io/R/R.png
       categories: [R, dataviz]
     - title: "Comparing Program Outcomes with ggplot2"
       path: https://agrogan1.github.io/posts/comparing-program-outcomes-with-ggplot/
-      categories: [R, dataviz]
+      image: https://agrogan1.github.io/R/R.png
+      categories: [R, dataviz, social justice]
     - title: "Multi-page dplyr"
       path: https://agrogan1.github.io/R/multi-page-dplyr/multi-page-dplyr.html
+      image: https://agrogan1.github.io/R/R.png
       categories: [R, workflow]
     - title: "Themes for Xaringan"
       path: https://agrogan1.github.io/R/xaringan-themes/
+      image: https://agrogan1.github.io/R/R.png
       categories: [R, Xaringan]
     - title: "Basic Bayes"
       path: https://agrogan1.github.io/Bayes/basic-Bayes/basic-Bayes.html
@@ -206,9 +214,6 @@ listing:
       categories: [R, dataviz, social justice]
     - title: "Visualizing Disparities in a Categorical Risk Factor or Outcome"
       path: https://agrogan1.github.io/posts/visualizing-disparities-in-a-categorical-outcome/
-      categories: [R, dataviz, social justice]  
-    - title: "Comparing Program Outcomes With ggplot"
-      path: https://agrogan1.github.io/posts/comparing-program-outcomes-with-ggplot/index.html
       categories: [R, dataviz, social justice]  
     - title: "Graphing Change Over Time"
       path: https://agrogan1.github.io/dataviz/graphing-change-over-time/index.html
