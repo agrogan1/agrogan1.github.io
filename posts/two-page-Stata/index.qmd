@@ -4,7 +4,7 @@ subtitle: "Content updates and clarifications"
 author: "Andy Grogan-Kaylor" 
 date: "2024-2-15"
 categories: [stats]
-image: "thumbnail.jpg"
+image: "Stata.png"
 ---
 
 I've made updates to *Two Page Stata*: [https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.pdf](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.pdf) [[HTML](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.html)].
