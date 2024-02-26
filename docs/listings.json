@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/everything-is-obvious-once-you-know-the-answer/index.html",
       "/posts/theory/index.html",
       "/posts/multilevel-thinking-a-book-draft/index.html",
       "/posts/two-page-Stata/index.html",
@@ -29,7 +30,6 @@
       "/posts/visualizing MLM/index.html",
       "/posts/visualizing-disparities-in-a-categorical-outcome/index.html",
       "/posts/visualizing-disparities-in-a-continuous-outcome/index.html",
-      "/posts/everything-is-obvious-once-you-know-the-answer/index.html",
       "/posts/working with dates in Stata/index.html",
       "/posts/bar-charts-to-pie-charts-another-look/index.html",
       "/posts/data-visualization-with-Stata/index.html",
