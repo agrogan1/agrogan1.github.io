@@ -3,7 +3,7 @@ title: "Cohen's d Calculator"
 subtitle: "Calculating and Visualizing Effect Sizes."
 author: "Andy Grogan-Kaylor" 
 categories: [stats]
-date: "2024-2-5"
+date: "2024-3-10"
 ---
 
 # Effect Sizes 
