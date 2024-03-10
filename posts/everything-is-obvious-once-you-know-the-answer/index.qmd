@@ -2,7 +2,7 @@
 title: "Everything is Obvious Once You Know The Answer"
 subtitle: "Are the results of social science so 'obvious'?"
 author:  Andy Grogan-Kaylor 
-date: "2024-2-26"
+date: "2024-3-1"
 categories: [stats, social justice]
 image: "everything-is-obvious-once-you-know-the-answer.png"
 ---
