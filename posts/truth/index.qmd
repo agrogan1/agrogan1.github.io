@@ -1,0 +1,13 @@
+---
+title: "Some Thoughts About Science"
+author: "Andy Grogan-Kaylor"
+date: "2023-3-12"
+categories: [theory, social justice]
+image: "Hazan.png"
+---
+
+I've been reflecting on the quote below. The language is unfortunately gendered, but perhaps some context is that the author was writing around 1000 AD.
+
+> "Truth is sought for itself; and in seeking that which is sought for itself one is only concerned to find it... The seeker after the truth... is not he who studies the writings of the ancients and... puts his trust in them, but rather the one who suspects his faith in them and questions what he gathers from them, the one who submits to argument and demonstration, and not to the sayings of a human being whose nature is fraught with all kinds of imperfection and deficiency. It is thus the duty of the man who studies the writings of scientists, if learning the truth is his goal, to make himself an enemy of all that he reads, and, applying his mind to the core and margins of its content, attack it from every side. He should also suspect himself as he performs his critical examination of it, so that he may avoid falling into either prejudice or leniency. If he follows this path, the truths will be revealed to him, and whatever shortcomings or uncertainties may exist in the discourse of those who came before him will become manifest." [@Alhazen_2023]
+
+
