@@ -2,7 +2,7 @@
 title: "Workflow"
 subtitle: "Thoughts about data science / data analysis workflow."
 author: "Andy Grogan-Kaylor"
-date: "2023-8-16"
+date: "2024-3-12"
 categories: [stats, workflow, science]
 image: "thumbnail.jpg"
 ---
