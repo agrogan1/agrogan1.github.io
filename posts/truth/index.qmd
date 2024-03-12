@@ -1,7 +1,7 @@
 ---
 title: "Some Thoughts About Science"
 author: "Andy Grogan-Kaylor"
-date: "2023-3-12"
+date: "2024-3-12"
 categories: [theory, social justice]
 image: "Hazan.png"
 ---
