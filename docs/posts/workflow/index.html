@@ -43,6 +43,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -75,12 +78,10 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Andrew Grogan-Kaylor - Workflow">
 <meta property="og:description" content="Thoughts about data science / data analysis workflow.">
-<meta property="og:image" content="thumbnail.jpg">
 <meta property="og:site_name" content="Andrew Grogan-Kaylor">
 <meta name="twitter:title" content="Andrew Grogan-Kaylor - Workflow">
 <meta name="twitter:description" content="Thoughts about data science / data analysis workflow.">
-<meta name="twitter:image" content="thumbnail.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 <meta name="citation_title" content="Workflow">
 <meta name="citation_author" content="Andy Grogan-Kaylor">
 <meta name="citation_publication_date" content="2024-03-12">
@@ -221,8 +222,17 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>I have been thinking a lot recently about workflow, particularly in data science and data analysis projects. My thoughts are here: <a href="https://agrogan1.github.io/teaching/workflow/workflow.html">https://agrogan1.github.io/teaching/workflow/workflow.html</a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://agrogan1.github.io/teaching/workflow/workflows.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="sample workflow"><img src="https://agrogan1.github.io/teaching/workflow/workflows.png" class="img-fluid figure-img" style="width:80.0%" alt="sample workflow"></a></p>
+<figcaption>sample workflow</figcaption>
+</figure>
+</div>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">sample workflow</span>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -757,6 +767,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 
