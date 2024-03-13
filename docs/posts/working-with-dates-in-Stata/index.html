@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Andy Grogan-Kaylor">
-<meta name="dcterms.date" content="2022-07-01">
+<meta name="author" content="Andrew Grogan-Kaylor">
+<meta name="dcterms.date" content="2023-10-20">
 
-<title>Andrew Grogan-Kaylor - Bar Charts in ggplot With Multiple Outcomes</title>
+<title>Andrew Grogan-Kaylor - Working With Dates in Stata</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -77,9 +77,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -110,16 +107,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Andrew Grogan-Kaylor - Bar Charts in ggplot With Multiple Outcomes">
+<meta property="og:title" content="Andrew Grogan-Kaylor - Working With Dates in Stata">
+<meta property="og:description" content="">
+<meta property="og:image" content="data.png">
 <meta property="og:site_name" content="Andrew Grogan-Kaylor">
-<meta name="twitter:title" content="Andrew Grogan-Kaylor - Bar Charts in ggplot With Multiple Outcomes">
-<meta name="twitter:card" content="summary">
-<meta name="citation_title" content="Bar Charts in ggplot With Multiple Outcomes">
-<meta name="citation_author" content="Andy Grogan-Kaylor">
-<meta name="citation_publication_date" content="2022-07-01">
-<meta name="citation_cover_date" content="2022-07-01">
-<meta name="citation_year" content="2022">
-<meta name="citation_online_date" content="2022-07-01">
+<meta name="twitter:title" content="Andrew Grogan-Kaylor - Working With Dates in Stata">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="data.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="citation_title" content="Working With Dates in Stata">
+<meta name="citation_author" content="Andrew Grogan-Kaylor">
+<meta name="citation_publication_date" content="2023-10-20">
+<meta name="citation_cover_date" content="2023-10-20">
+<meta name="citation_year" content="2023">
+<meta name="citation_online_date" content="2023-10-20">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=The optics of Ibn al-Haytham books IV-V: On reflection and images seen by reflection;,citation_author=Alhazen;,citation_editor=J. P. Hogendijk;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_series_title=Warburg institute studies and texts; 8;">
 <meta name="citation_reference" content="citation_title=Liberation Social Psychology: Learning From Latin America Psychology of liberation: Learning from Latin America;,citation_abstract=Liberation Social Psychology (la psicologia social de la liberacion, LSP) has developed amongst a body of psychologists in Latin America over the last decade. There has been no survey of the field in English, although some of the ideas are of relevance for those working with oppressed groups elsewhere in the world. This article explores the context in which LSP grew from the work of Ignacio Martin-Baro and was developed by Maritza Montero, amongst others. Within LSP, key concepts emerge, including ’conscientization’, ’realismo-critico’, ’de-ideologization’, a social orientation, ’the preferential option for the oppressed majorities’ and methodological eclecticism. The application of LSP is explored with reference to three domains. First, it is suggested that community social psychology as practised in some parts of Latin America reflects LSP in its emphasis on social transformation and participatory methods. Second, psycho-social work with victims of state oppression, which adopts a highly social and societal orientation embodies LSP. Third, social analyses which explicitly adopt socio-psychological-political analyses of the social realities confronting countries in Latin America embrace, in different ways, principles and concepts of LSE Some of the challenges facing LSP are discussed and open dialogue is encouraged between LSP and critical, community and applied social psychologists. Copyright (C) 2004 John Wiley Sons, Ltd.;,citation_author=Mark Burton;,citation_author=Carolyn Kagan;,citation_publication_date=2005-01;,citation_cover_date=2005-01;,citation_year=2005;,citation_doi=10.1002/casp.786;,citation_volume=15;,citation_journal_title=Journal of Community &amp;amp;amp; Applied Social Psychology;">
@@ -209,10 +210,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Bar Charts in ggplot With Multiple Outcomes</h1>
+      <h1 class="title">Working With Dates in Stata</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">stats</div>
-                <div class="quarto-category">dataviz</div>
               </div>
                   </div>
   </div>
@@ -223,14 +223,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Andy Grogan-Kaylor </p>
+               <p>Andrew Grogan-Kaylor </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">July 1, 2022</p>
+        <p class="date">October 20, 2023</p>
       </div>
     </div>
     
@@ -246,19 +246,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#setup" id="toc-setup" class="nav-link active" data-scroll-target="#setup">Setup</a></li>
-  <li><a href="#simulated-data" id="toc-simulated-data" class="nav-link" data-scroll-target="#simulated-data">Simulated Data</a></li>
-  <li><a href="#reshape-data-with-pivot_longer" id="toc-reshape-data-with-pivot_longer" class="nav-link" data-scroll-target="#reshape-data-with-pivot_longer">Reshape Data With <code>pivot_longer</code></a></li>
-  <li><a href="#graphs" id="toc-graphs" class="nav-link" data-scroll-target="#graphs">Graphs</a>
-  <ul class="collapse">
-  <li><a href="#bar-chart-with-stacked-bars" id="toc-bar-chart-with-stacked-bars" class="nav-link" data-scroll-target="#bar-chart-with-stacked-bars">Bar Chart With Stacked Bars</a>
-  <ul class="collapse">
-  <li><a href="#geom_bar" id="toc-geom_bar" class="nav-link" data-scroll-target="#geom_bar"><code>geom_bar()</code></a></li>
-  <li><a href="#geom_col" id="toc-geom_col" class="nav-link" data-scroll-target="#geom_col"><code>geom_col()</code></a></li>
-  </ul></li>
-  <li><a href="#bar-chart-with-unstacked-bars" id="toc-bar-chart-with-unstacked-bars" class="nav-link" data-scroll-target="#bar-chart-with-unstacked-bars">Bar Chart With Unstacked Bars</a></li>
-  <li><a href="#line-chart" id="toc-line-chart" class="nav-link" data-scroll-target="#line-chart">Line Chart</a></li>
-  </ul></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#get-the-data" id="toc-get-the-data" class="nav-link" data-scroll-target="#get-the-data">Get The Data</a></li>
+  <li><a href="#list-and-describe-the-data" id="toc-list-and-describe-the-data" class="nav-link" data-scroll-target="#list-and-describe-the-data">List And Describe The Data</a></li>
+  <li><a href="#create-date-variables" id="toc-create-date-variables" class="nav-link" data-scroll-target="#create-date-variables">Create Date Variables</a></li>
+  <li><a href="#format-as-dates" id="toc-format-as-dates" class="nav-link" data-scroll-target="#format-as-dates">Format As Dates</a></li>
+  <li><a href="#calculations" id="toc-calculations" class="nav-link" data-scroll-target="#calculations">Calculations</a></li>
   </ul>
 </nav>
     </div>
@@ -269,157 +262,153 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="setup" class="level1">
-<h1>Setup</h1>
-<div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co"># beautiful graphs</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr) <span class="co"># tidy data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>Dates in any statistical software (Stata, R) are complicated.</p>
+<p>For example, a particular date could be coded as “4-5-2021”, or “5-4-2021” or “April 5, 2021” or “5APR2021”.</p>
+<p>In addition to the multiplicity of possible formats it is also difficult to do calculations on these kinds of quantities e.g.&nbsp;“How many days have elapsed from Day A to Day B?”</p>
+<p>To address these issues, Stata wants these dates to be encoded as a <em>number</em>, specifically the number of days since January 1, 1960. We then make sure to format these numbers as dates.</p>
+</section>
+<section id="get-the-data" class="level1">
+<h1>Get The Data</h1>
+<div class="cell" data-collectcode="true">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> simulated-<span class="fu">date</span>.dta, <span class="kw">clear</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="simulated-data" class="level1">
-<h1>Simulated Data</h1>
+<section id="list-and-describe-the-data" class="level1">
+<h1>List And Describe The Data</h1>
+<p>We see that both date variables are formatted as strings</p>
 <div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>) <span class="co"># independent variable</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>) <span class="co"># first outcome</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">3</span>) <span class="co"># second outcome</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>mydata <span class="ot">&lt;-</span> <span class="fu">tibble</span>(x, y, z)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>mydata <span class="co"># replay mydata</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">describe</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 3
-      x     y     z
-  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-1     1     4     7
-2     2     5     8
-3     3     6     3</code></pre>
+<pre><code>     |  startdate     enddate |
+     |------------------------|
+  1. | 2019-01-01   2019-1-30 |
+  2. | 2019-02-15   2019-5-30 |
+  3. | 2019-03-01   2019-4-30 |
+     +------------------------+
+
+
+Contains data from simulated-date.dta
+ Observations:             3                  
+    Variables:             2                  6 Apr 2021 16:46
+---------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+---------------------------------------------------------------------------------------
+startdate       str10   %10s                  startdate
+enddate         str9    %9s                   enddate
+---------------------------------------------------------------------------------------
+Sorted by: </code></pre>
 </div>
 </div>
 </section>
-<section id="reshape-data-with-pivot_longer" class="level1">
-<h1>Reshape Data With <code>pivot_longer</code></h1>
+<section id="create-date-variables" class="level1">
+<h1>Create Date Variables</h1>
+<blockquote class="blockquote">
+<p>There are <em>many</em> date functions in Stata, to work with different kinds of data in different formats. <code>help date</code> should direct you to the documentation for <em>Date and time functions</em>.</p>
+</blockquote>
+<div class="cell" data-collectcode="true">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">generate</span> startdate2 = <span class="fu">date</span>(startdate, <span class="st">"YMD"</span>) <span class="co">// create a date, specifying order of elements</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">generate</span> enddate2 = <span class="fu">date</span>(enddate, <span class="st">"YMD"</span>) <span class="co">// create a date, specifying order of elements</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<blockquote class="blockquote">
+<p>The command has created 2 dates in numeric form, but they display as numbers.</p>
+</blockquote>
 <div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>myReshapedData <span class="ot">&lt;-</span> mydata <span class="sc">%&gt;%</span> </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="fu">c</span>(y, z), <span class="co"># values to pivot or reshape</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">"newnames"</span>, <span class="co"># names will be</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">"newvalues"</span>) <span class="co"># values will be</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>myReshapedData <span class="co"># replay myReshapedData</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">describe</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 3
-      x newnames newvalues
-  &lt;dbl&gt; &lt;chr&gt;        &lt;dbl&gt;
-1     1 y                4
-2     1 z                7
-3     2 y                5
-4     2 z                8
-5     3 y                6
-6     3 z                3</code></pre>
+<pre><code>Contains data from simulated-date.dta
+ Observations:             3                  
+    Variables:             4                  6 Apr 2021 16:46
+---------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+---------------------------------------------------------------------------------------
+startdate       str10   %10s                  startdate
+enddate         str9    %9s                   enddate
+startdate2      float   %9.0g                 
+enddate2        float   %9.0g                 
+---------------------------------------------------------------------------------------
+Sorted by: 
+     Note: Dataset has changed since last saved.
+
+     +----------------------------------------------+
+     |  startdate     enddate   startd~2   enddate2 |
+     |----------------------------------------------|
+  1. | 2019-01-01   2019-1-30      21550      21579 |
+  2. | 2019-02-15   2019-5-30      21595      21699 |
+  3. | 2019-03-01   2019-4-30      21609      21669 |
+     +----------------------------------------------+</code></pre>
 </div>
 </div>
 </section>
-<section id="graphs" class="level1">
-<h1>Graphs</h1>
-<section id="bar-chart-with-stacked-bars" class="level2">
-<h2 class="anchored" data-anchor-id="bar-chart-with-stacked-bars">Bar Chart With Stacked Bars</h2>
-<section id="geom_bar" class="level3">
-<h3 class="anchored" data-anchor-id="geom_bar"><code>geom_bar()</code></h3>
+<section id="format-as-dates" class="level1">
+<h1>Format As Dates</h1>
+<p>We format these <em>numeric</em> variables as <em>dates</em>. While the variables remain as the number of days since January 1, 1960, since they are formatted as dates, they now appear as human readable dates.</p>
+<div class="cell" data-collectcode="true">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">format</span> %<span class="kw">d</span> startdate2 enddate2</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="kw">describe</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Contains data from simulated-date.dta
+ Observations:             3                  
+    Variables:             4                  6 Apr 2021 16:46
+---------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+---------------------------------------------------------------------------------------
+startdate       str10   %10s                  startdate
+enddate         str9    %9s                   enddate
+startdate2      float   %d                    
+enddate2        float   %d                    
+---------------------------------------------------------------------------------------
+Sorted by: 
+     Note: Dataset has changed since last saved.
+
+     +------------------------------------------------+
+     |  startdate     enddate   startda~2    enddate2 |
+     |------------------------------------------------|
+  1. | 2019-01-01   2019-1-30   01jan2019   30jan2019 |
+  2. | 2019-02-15   2019-5-30   15feb2019   30may2019 |
+  3. | 2019-03-01   2019-4-30   01mar2019   30apr2019 |
+     +------------------------------------------------+</code></pre>
+</div>
+</div>
+</section>
+<section id="calculations" class="level1">
+<h1>Calculations</h1>
+<p>We can now use dates in calculations. For example, “How much time has elapsed between <code>startdate2</code> and <code>enddate2</code>?”</p>
 <div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(myReshapedData, <span class="co"># data I am using</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="co"># x is newnames</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> newvalues, <span class="co"># y is newvalues</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">fill =</span> newnames)) <span class="sc">+</span> <span class="co"># fill is newnames</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="co"># y is actual bar height</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-4-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="geom_col" class="level3">
-<h3 class="anchored" data-anchor-id="geom_col"><code>geom_col()</code></h3>
-<p>By default, <code>geom_col()</code> assumes <code>stat = 'identity'</code> i.e.&nbsp;<code>y</code> is the height of the bar.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(myReshapedData, <span class="co"># data I am using</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="co"># x is newnames</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> newvalues, <span class="co"># y is newvalues</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">fill =</span> newnames)) <span class="sc">+</span> <span class="co"># fill is newnames</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="co"># y is actual bar height</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-5-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="bar-chart-with-unstacked-bars" class="level2">
-<h2 class="anchored" data-anchor-id="bar-chart-with-unstacked-bars">Bar Chart With Unstacked Bars</h2>
-<div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(myReshapedData, <span class="co"># data I am using</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="co"># x is newnames</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> newvalues, <span class="co"># y is newvalues</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">fill =</span> newnames)) <span class="sc">+</span> <span class="co"># fill is newnames</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="co"># y is actual bar height</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>           <span class="at">position =</span> <span class="fu">position_dodge</span>()) <span class="co"># unstack bars</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-6-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="line-chart" class="level2">
-<h2 class="anchored" data-anchor-id="line-chart">Line Chart</h2>
-<div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(myReshapedData, <span class="co"># data I am using</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="co"># x is x</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> newvalues, <span class="co"># y is value</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> newnames, <span class="co"># color is key</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">group =</span> newnames)) <span class="sc">+</span> <span class="co"># line needs a group aesthetic</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-7-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
-</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">generate</span> elapseddays = enddate2 - startdate2</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="kw">generate</span> elapsedyears = (enddate2 - startdate2)/365</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span>, abbreviate(15) <span class="co">// list out the data with new variables</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     |  startdate     enddate   startdate2    enddate2   elapseddays   elapsedyears |
+     |------------------------------------------------------------------------------|
+  1. | 2019-01-01   2019-1-30    01jan2019   30jan2019            29       .0794521 |
+  2. | 2019-02-15   2019-5-30    15feb2019   30may2019           104       .2849315 |
+  3. | 2019-03-01   2019-4-30    01mar2019   30apr2019            60       .1643836 |
+     +------------------------------------------------------------------------------+</code></pre>
 </div>
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -955,31 +944,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});
-window.onload = () => {
-  lightboxQuarto.on('slide_before_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    const href = trigger.getAttribute('href');
-    if (href !== null) {
-      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-      if (imgEl !== null) {
-        const srcAttr = imgEl.getAttribute("src");
-        if (srcAttr && srcAttr.startsWith("data:")) {
-          slideConfig.href = srcAttr;
-        }
-      }
-    } 
-  });
-
-  lightboxQuarto.on('slide_after_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    if (window.Quarto?.typesetMath) {
-      window.Quarto.typesetMath(slideNode);
-    }
-  });
-
-};
-          </script>
 
 
 

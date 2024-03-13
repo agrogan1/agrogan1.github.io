@@ -4,6 +4,7 @@ subtitle: "Thoughts about data science / data analysis workflow."
 author: "Andy Grogan-Kaylor"
 date: "2024-3-12"
 categories: [stats, workflow, science]
+image: "workflows.png"
 ---
 
 I have been thinking a lot recently about workflow, particularly in data science and data analysis projects. My thoughts are here:  [https://agrogan1.github.io/teaching/workflow/workflow.html](https://agrogan1.github.io/teaching/workflow/workflow.html).
