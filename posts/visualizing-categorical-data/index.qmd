@@ -2,6 +2,7 @@
 title: "Visualizing Categorical Data"
 subtitle: "Alternative approaches to visualizing categorical data"
 author: "Andy Grogan-Kaylor"
+categories: [stats, dataviz]
 date: "2023-12-5"
 ---
 
