@@ -1,7 +1,7 @@
 ---
 title: "An Introduction to Bayesian Statistics"
 author: "Andy Grogan-Kaylor"
-date: "2024-1-17"
+date: "2024-3-14"
 categories: [stats, Bayes, multilevel]
 image: "Bayestalk.png"
 ---
