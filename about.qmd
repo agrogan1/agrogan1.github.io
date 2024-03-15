@@ -24,6 +24,9 @@ about:
     - icon: flower1
       text: Orcid
       href: https://orcid.org/0000-0003-0065-9991
+    - icon: mortarboard-fill
+      text: Faculty Web Page
+      href: https://ssw.umich.edu/faculty/profiles/tenure-track/agrogan
 ---
 
 I am the *Sandra K. Danziger Collegiate Professor of Social Work*. 
@@ -32,7 +35,7 @@ I am strongly motivated by concerns for social justice. Right after undergraduat
 
 My core intellectual interest is the way in which [parenting behaviors have an effect on child outcomes](https://agrogan1.github.io/research.html). For example, parenting behaviors like the use of corporal punishment, or parental expressions of emotional warmth, are likely to have an effect on child outcomes like aggression, antisocial behavior, anxiety and depression. I am interested in how these dynamics play out [across contexts, neighborhoods, and cultures](https://agrogan1.github.io/multilevel-thinking/).
 
-In my work I use advanced statistical models, like [multilevel models](https://agrogan1.github.io/multilevel/) and some econometric models, and software like [Stata](https://agrogan1.github.io/stats_stuff.html#stata-materials), [R](https://agrogan1.github.io/stats_stuff.html#r-materials) and [GIS](https://agrogan1.github.io/mapping), to examine things like [growth and change over time](https://agrogan1.github.io/multilevel/), or [community, school or parent effects on children and families](https://agrogan1.github.io/multilevel/). I’m also very interested in [data visualization](https://agrogan1.github.io/stats_stuff.html#data-visualization-1).
+In my work I use advanced statistical models, like [multilevel models](https://agrogan1.github.io/multilevel/) and some econometric models, and software like [Stata](https://agrogan1.github.io/stats-stuff.html#category=Stata), [R](https://agrogan1.github.io/stats-stuff.html#category=R) and [GIS](https://agrogan1.github.io/mapping), to examine things like [growth and change over time](https://agrogan1.github.io/multilevel/), or [community, school or parent effects on children and families](https://agrogan1.github.io/multilevel/). I’m also very interested in [data visualization](https://agrogan1.github.io/dataviz/dataviz-course/).
 
 I have also worked on developing and evaluating interventions for under-served populations, particularly among people who speak Spanish as their primary language. 
 
@@ -90,7 +93,9 @@ save(y, file="countries.Rdata")
 
 ```
 
-```{r, fig.cap = "Countries where some of the data that I’ve used has come from, or where I have done some work."}
+```{r}
+#| fig-cap: "Countries where some of the data that I’ve used has come from, or where I have done some work."
+#| label: fig-1
 
 l <- list(color = toRGB("black"), width = 1)
 
@@ -117,7 +122,9 @@ plot_geo(y) %>%
 
 More recently, my collaborators and I have been doing quite a bit of work with the MICS data collected by UNICEF. Below, please find a map of the countries in which the MICS surveys were conducted.
 
-```{r, echo=FALSE, warning=FALSE}
+```{r}
+#| echo: false
+#| warning: false
 
 country <- c("Algeria",  "Argentina",  "Bangladesh",  "Barbados",  "Belarus",  "Belize",  "Benin",  "Bosnia and Herzegovina",  "Cameroon",  "Central African Republic",  "Chad",  "Democratic Republic of the Congo",  "Republic of the Congo",  "Costa Rica",  "Cote d'Ivoire",  "Dominican Republic",  "El Salvador",  "Eswatini",  "Ghana",  "Guinea",  "Guinea Bissau",  "Guyana",  "Iraq",  "Jamaica",  "Kazakhstan",  "Kenya",  "Kosovo",  "Kyrgyzstan",  "Laos", "Macedonia",  "Madagascar",  "Malawi",  "Mali",  "Mauritania",  "Mexico",  "Moldova",  "Mongolia",  "Montenegro",  "Nepal",  "Nigeria",  "Pakistan",  "Panama",  "Paraguay",  "Sao Tome and Principe",  "Senegal",  "Serbia",  "Sierra Leone",  "Somalia",  "St. Lucia",  "State of Palestine",  "Suriname",  "Thailand",  "The Gambia",  "Togo",  "Trinidad and Tobago",  "Tunisia",  "Turkmenistan",  "Ukraine",  "Uruguay",  "Vietnam",  "Zimbabwe")
 
@@ -129,7 +136,11 @@ MICScountries$country_iso <- countrycode(MICScountries$country,
 
 ```
 
-```{r, echo=FALSE, fig.cap="Countries in MICS"}
+```{r}
+#| echo: false
+#| fig-cap: "Countries in MICS"
+#| label: fig-2
+
 
 g <- list(showframe = TRUE, 
           showcoastlines = TRUE, 
