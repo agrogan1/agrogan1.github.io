@@ -1,7 +1,7 @@
 ---
 title: "Theory"
 author: "Andy Grogan-Kaylor"
-date: "today"
+date: "2023-3-17"
 categories: [social justice, theory, science]
 image: "greengrid.png"
 ---
