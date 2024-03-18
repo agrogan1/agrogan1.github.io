@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Andrew Grogan-Kaylor">
-<meta name="dcterms.date" content="2023-10-20">
+<meta name="author" content="Andy Grogan-Kaylor">
+<meta name="dcterms.date" content="2024-03-17">
 
-<title>Andrew Grogan-Kaylor - Working With Dates in Stata</title>
+<title>Andrew Grogan-Kaylor - There Is Also Relevant Material in Stats Stuff</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -107,20 +73,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Andrew Grogan-Kaylor - Working With Dates in Stata">
+<meta property="og:title" content="Andrew Grogan-Kaylor - There Is Also Relevant Material in Stats Stuff">
 <meta property="og:description" content="">
-<meta property="og:image" content="data.png">
+<meta property="og:image" content="https://agrogan1.github.io/posts/quantitative-literacy/lightbulb-and-clover.png">
 <meta property="og:site_name" content="Andrew Grogan-Kaylor">
-<meta name="twitter:title" content="Andrew Grogan-Kaylor - Working With Dates in Stata">
+<meta name="twitter:title" content="Andrew Grogan-Kaylor - There Is Also Relevant Material in Stats Stuff">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="data.png">
+<meta name="twitter:image" content="https://agrogan1.github.io/posts/quantitative-literacy/lightbulb-and-clover.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="citation_title" content="Working With Dates in Stata">
-<meta name="citation_author" content="Andrew Grogan-Kaylor">
-<meta name="citation_publication_date" content="2023-10-20">
-<meta name="citation_cover_date" content="2023-10-20">
-<meta name="citation_year" content="2023">
-<meta name="citation_online_date" content="2023-10-20">
+<meta name="citation_title" content="There Is Also Relevant Material in Stats Stuff">
+<meta name="citation_author" content="Andy Grogan-Kaylor">
+<meta name="citation_publication_date" content="2024-03-17">
+<meta name="citation_cover_date" content="2024-03-17">
+<meta name="citation_year" content="2024">
+<meta name="citation_online_date" content="2024-03-17">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=The optics of Ibn al-Haytham books IV-V: On reflection and images seen by reflection;,citation_author=Alhazen;,citation_editor=J. P. Hogendijk;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_series_title=Warburg institute studies and texts; 8;">
 <meta name="citation_reference" content="citation_title=Liberation Social Psychology: Learning From Latin America Psychology of liberation: Learning from Latin America;,citation_abstract=Liberation Social Psychology (la psicologia social de la liberacion, LSP) has developed amongst a body of psychologists in Latin America over the last decade. There has been no survey of the field in English, although some of the ideas are of relevance for those working with oppressed groups elsewhere in the world. This article explores the context in which LSP grew from the work of Ignacio Martin-Baro and was developed by Maritza Montero, amongst others. Within LSP, key concepts emerge, including ’conscientization’, ’realismo-critico’, ’de-ideologization’, a social orientation, ’the preferential option for the oppressed majorities’ and methodological eclecticism. The application of LSP is explored with reference to three domains. First, it is suggested that community social psychology as practised in some parts of Latin America reflects LSP in its emphasis on social transformation and participatory methods. Second, psycho-social work with victims of state oppression, which adopts a highly social and societal orientation embodies LSP. Third, social analyses which explicitly adopt socio-psychological-political analyses of the social realities confronting countries in Latin America embrace, in different ways, principles and concepts of LSE Some of the challenges facing LSP are discussed and open dialogue is encouraged between LSP and critical, community and applied social psychologists. Copyright (C) 2004 John Wiley Sons, Ltd.;,citation_author=Mark Burton;,citation_author=Carolyn Kagan;,citation_publication_date=2005-01;,citation_cover_date=2005-01;,citation_year=2005;,citation_doi=10.1002/casp.786;,citation_volume=15;,citation_journal_title=Journal of Community &amp;amp;amp; Applied Social Psychology;">
@@ -210,11 +176,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Working With Dates in Stata</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">stats</div>
-              </div>
-                  </div>
+      <h1 class="title">There Is Also Relevant Material in Stats Stuff</h1>
+                      </div>
   </div>
     
   
@@ -223,14 +186,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Andrew Grogan-Kaylor </p>
+               <p>Andy Grogan-Kaylor </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 20, 2023</p>
+        <p class="date">March 17, 2024</p>
       </div>
     </div>
     
@@ -242,18 +205,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#get-the-data" id="toc-get-the-data" class="nav-link" data-scroll-target="#get-the-data">Get The Data</a></li>
-  <li><a href="#list-and-describe-the-data" id="toc-list-and-describe-the-data" class="nav-link" data-scroll-target="#list-and-describe-the-data">List And Describe The Data</a></li>
-  <li><a href="#create-date-variables" id="toc-create-date-variables" class="nav-link" data-scroll-target="#create-date-variables">Create Date Variables</a></li>
-  <li><a href="#format-as-dates" id="toc-format-as-dates" class="nav-link" data-scroll-target="#format-as-dates">Format As Dates</a></li>
-  <li><a href="#calculations" id="toc-calculations" class="nav-link" data-scroll-target="#calculations">Calculations</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -262,189 +214,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>Dates in any statistical software (Stata, R) are complicated.</p>
-<p>For example, a particular date could be coded as “4-5-2021”, or “5-4-2021” or “April 5, 2021” or “5APR2021”.</p>
-<p>In addition to the multiplicity of possible formats it is also difficult to do calculations on these kinds of quantities e.g.&nbsp;“How many days have elapsed from Day A to Day B?”</p>
-<p>To address these issues, Stata wants these dates to be encoded as a <em>number</em>, specifically the number of days since January 1, 1960. We then make sure to format these numbers as dates.</p>
-</section>
-<section id="get-the-data" class="level1">
-<h1>Get The Data</h1>
-<div class="cell" data-collectcode="true">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> simulated-<span class="fu">date</span>.dta, <span class="kw">clear</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="list-and-describe-the-data" class="level1">
-<h1>List And Describe The Data</h1>
-<p>We see that both date variables are formatted as strings</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">describe</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Running C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\posts\working with d
-&gt; ates in Stata\profile.do . 
-
-     +------------------------+
-     |  startdate     enddate |
-     |------------------------|
-  1. | 2019-01-01   2019-1-30 |
-  2. | 2019-02-15   2019-5-30 |
-  3. | 2019-03-01   2019-4-30 |
-     +------------------------+
+<p>In addition to these blog posts, there is also sometimes relevant material in <a href="https://agrogan1.github.io/stats-stuff.html">Stats Stuff</a></p>
 
 
-Contains data from simulated-date.dta
- Observations:             3                  
-    Variables:             2                  6 Apr 2021 16:46
--------------------------------------------------------------------------------
-Variable      Storage   Display    Value
-    name         type    format    label      Variable label
--------------------------------------------------------------------------------
-startdate       str10   %10s                  startdate
-enddate         str9    %9s                   enddate
--------------------------------------------------------------------------------
-Sorted by: </code></pre>
-</div>
-</div>
-</section>
-<section id="create-date-variables" class="level1">
-<h1>Create Date Variables</h1>
-<blockquote class="blockquote">
-<p>There are <em>many</em> date functions in Stata, to work with different kinds of data in different formats. <code>help date</code> should direct you to the documentation for <em>Date and time functions</em>.</p>
-</blockquote>
-<div class="cell" data-collectcode="true">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">generate</span> startdate2 = <span class="fu">date</span>(startdate, <span class="st">"YMD"</span>) <span class="co">// create a date, specifying order of elements</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">generate</span> enddate2 = <span class="fu">date</span>(enddate, <span class="st">"YMD"</span>) <span class="co">// create a date, specifying order of elements</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Running C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\posts\working with d
-&gt; ates in Stata\profile.do . </code></pre>
-</div>
-</div>
-<blockquote class="blockquote">
-<p>The command has created 2 dates in numeric form, but they display as numbers.</p>
-</blockquote>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">describe</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Running C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\posts\working with d
-&gt; ates in Stata\profile.do . 
-
-Contains data from simulated-date.dta
- Observations:             3                  
-    Variables:             4                  6 Apr 2021 16:46
--------------------------------------------------------------------------------
-Variable      Storage   Display    Value
-    name         type    format    label      Variable label
--------------------------------------------------------------------------------
-startdate       str10   %10s                  startdate
-enddate         str9    %9s                   enddate
-startdate2      float   %9.0g                 
-enddate2        float   %9.0g                 
--------------------------------------------------------------------------------
-Sorted by: 
-     Note: Dataset has changed since last saved.
-
-     +----------------------------------------------+
-     |  startdate     enddate   startd~2   enddate2 |
-     |----------------------------------------------|
-  1. | 2019-01-01   2019-1-30      21550      21579 |
-  2. | 2019-02-15   2019-5-30      21595      21699 |
-  3. | 2019-03-01   2019-4-30      21609      21669 |
-     +----------------------------------------------+</code></pre>
-</div>
-</div>
-</section>
-<section id="format-as-dates" class="level1">
-<h1>Format As Dates</h1>
-<p>We format these <em>numeric</em> variables as <em>dates</em>. While the variables remain as the number of days since January 1, 1960, since they are formatted as dates, they now appear as human readable dates.</p>
-<div class="cell" data-collectcode="true">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">format</span> %<span class="kw">d</span> startdate2 enddate2</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="kw">describe</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Running C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\posts\working with d
-&gt; ates in Stata\profile.do . 
-
-
-Contains data from simulated-date.dta
- Observations:             3                  
-    Variables:             4                  6 Apr 2021 16:46
--------------------------------------------------------------------------------
-Variable      Storage   Display    Value
-    name         type    format    label      Variable label
--------------------------------------------------------------------------------
-startdate       str10   %10s                  startdate
-enddate         str9    %9s                   enddate
-startdate2      float   %d                    
-enddate2        float   %d                    
--------------------------------------------------------------------------------
-Sorted by: 
-     Note: Dataset has changed since last saved.
-
-     +------------------------------------------------+
-     |  startdate     enddate   startda~2    enddate2 |
-     |------------------------------------------------|
-  1. | 2019-01-01   2019-1-30   01jan2019   30jan2019 |
-  2. | 2019-02-15   2019-5-30   15feb2019   30may2019 |
-  3. | 2019-03-01   2019-4-30   01mar2019   30apr2019 |
-     +------------------------------------------------+</code></pre>
-</div>
-</div>
-</section>
-<section id="calculations" class="level1">
-<h1>Calculations</h1>
-<p>We can now use dates in calculations. For example, “How much time has elapsed between <code>startdate2</code> and <code>enddate2</code>?”</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">generate</span> elapseddays = enddate2 - startdate2</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="kw">generate</span> elapsedyears = (enddate2 - startdate2)/365</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span>, abbreviate(15) <span class="co">// list out the data with new variables</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Running C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\posts\working with d
-&gt; ates in Stata\profile.do . 
-
-     +---------------------------------------------------------------+
-  1. |  startdate |   enddate | startdate2 |  enddate2 | elapseddays |
-     | 2019-01-01 | 2019-1-30 |  01jan2019 | 30jan2019 |          29 |
-     |---------------------------------------------------------------|
-     |                         elapsedyears                          |
-     |                             .0794521                          |
-     +---------------------------------------------------------------+
-
-     +---------------------------------------------------------------+
-  2. |  startdate |   enddate | startdate2 |  enddate2 | elapseddays |
-     | 2019-02-15 | 2019-5-30 |  15feb2019 | 30may2019 |         104 |
-     |---------------------------------------------------------------|
-     |                         elapsedyears                          |
-     |                             .2849315                          |
-     +---------------------------------------------------------------+
-
-     +---------------------------------------------------------------+
-  3. |  startdate |   enddate | startdate2 |  enddate2 | elapseddays |
-     | 2019-03-01 | 2019-4-30 |  01mar2019 | 30apr2019 |          60 |
-     |---------------------------------------------------------------|
-     |                         elapsedyears                          |
-     |                             .1643836                          |
-     +---------------------------------------------------------------+</code></pre>
-</div>
-</div>
-
-
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
