@@ -7,6 +7,8 @@ image: "mathblackboard.png"
 draft: true
 ---
 
+![](teaching2.png)
+
 The best teaching advice that I ever received was at a new faculty workshop, at my first academic job, at the University of Kentucky. The Professor giving the advice, who I believe was an Astronomy Professor, said that the most important rules of teaching were: 
 
 1. Care about your material. Believe that it is important.
