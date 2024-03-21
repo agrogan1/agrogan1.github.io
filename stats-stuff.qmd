@@ -140,6 +140,10 @@ listing:
       path: https://agrogan1.github.io/multilevel/visualizing-MLM/visualizing-MLM.html
       image: mysmallmultiples.png
       categories: [multilevel, dataviz]
+    - title: "Stata Tables (Especially for Multilevel Models)"
+      path: https://agrogan1.github.io/multilevel/tables/tables.html
+      image: https://agrogan1.github.io/Stata/Stata.png
+      categories: [multilevel, Stata]
     - title: "What is Data?"
       path: https://agrogan1.github.io/teaching/what-is-data/what-is-data.html
       categories: [workflow]
