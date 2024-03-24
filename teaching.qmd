@@ -36,6 +36,7 @@ listing:
       categories: [multilevel, book]
     - title: "Multilevel Visualization"
       path: https://agrogan1.github.io/multilevel-visualization/
+      image: multilevel-visualization.png
       categories: [multilevel, book]
     - title: "Categorical Data Analysis"
       path: https://agrogan1.github.io/newstuff/categorical/
