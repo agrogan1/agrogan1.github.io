@@ -3,7 +3,7 @@ title: "Multilevel Thinking (A Book Draft)"
 subtitle: "Discovering Diversity, Universals, and Particulars in Cross-Cultural Research."
 author: "Andy Grogan-Kaylor"
 date: "today"
-categories: [multilevel, stats]
+categories: [multilevel, stats, book]
 image: "bookcover-landscape.png"
 ---
 
