@@ -1,7 +1,8 @@
 {
-  "hash": "e9035f55c0837147bbaedad81a4af23a",
+  "hash": "08e4a5852e8a547fbd59887de1c1c637",
   "result": {
-    "markdown": "---\ntitle: \"How To Choose A Chart\"\nsubtitle: \"A Statistically Informed Visual Guide With Stata Commands\"\nauthor: \"Andy Grogan-Kaylor\" \ndate: \"2023-12-20\"\ncategories: [stats]\n---\n\n\nI've developed a new graphing tutorial for Stata:  [How To Choose A Chart - A Statistically Informed Visual Guide With Stata Commands](https://agrogan1.github.io/Stata/how-to-choose-a-chart-a-visual-guide-with-Stata/how-to-choose-a-chart-a-visual-guide-with-Stata.pdf)\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](https://agrogan1.github.io/Stata/how-to-choose-a-chart-a-visual-guide-with-Stata/how-to-choose-a-chart-a-visual-guide-with-Stata.png)\n:::\n:::\n",
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"How To Choose A Chart\"\nsubtitle: \"A Statistically Informed Visual Guide With Stata Commands\"\nauthor: \"Andy Grogan-Kaylor\" \ndate: \"2023-12-20\"\ncategories: [stats, dataviz]\nimage: how-to-choose-a-chart-a-visual-guide-with-Stata.png\n---\n\n\nI've developed a new graphing tutorial for Stata:  [How To Choose A Chart - A Statistically Informed Visual Guide With Stata Commands](https://agrogan1.github.io/Stata/how-to-choose-a-chart-a-visual-guide-with-Stata/how-to-choose-a-chart-a-visual-guide-with-Stata.pdf)\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](https://agrogan1.github.io/Stata/how-to-choose-a-chart-a-visual-guide-with-Stata/how-to-choose-a-chart-a-visual-guide-with-Stata.png)\n:::\n:::\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
