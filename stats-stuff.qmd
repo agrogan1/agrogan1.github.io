@@ -192,6 +192,7 @@ listing:
       categories: [GIS]
     - title: "How to Choose a Chart: A Visual Guide"
       path: https://agrogan1.github.io/dataviz/how-to-choose-a-chart/how-to-choose-a-chart-a-visual-guide.pdf
+      image: how-to-choose-a-chart-a-visual-guide-with-Stata.png
       categories: [dataviz]
     - title: "How to Choose a Chart: An Intuitive Guide"
       path: https://agrogan1.github.io/dataviz/how-to-choose-a-chart-intuitive/how-to-choose-a-chart-intuitive.html
