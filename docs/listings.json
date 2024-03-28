@@ -1,7 +1,12 @@
 [
   {
+    "listing": "/teaching.html",
+    "items": []
+  },
+  {
     "listing": "/blog.html",
     "items": [
+      "/posts/how-to-choose-a-chart-a-visual-guide-with-Stata/index.html",
       "/posts/multilevel-thinking-a-book-draft/index.html",
       "/posts/stats-stuff/index.html",
       "/posts/multilevel-multilingual/index.html",
@@ -26,7 +31,6 @@
       "/posts/comparing-program-outcomes-with-ggplot/index.html",
       "/posts/logic-models/index.html",
       "/posts/cp-meta/index.html",
-      "/posts/how-to-choose-a-chart-a-visual-guide-with-Stata/index.html",
       "/posts/cleaning-data/index.html",
       "/posts/why-Excel-is-a-bad-format-for-storing-data/index.html",
       "/posts/visualizing-categorical-data/index.html",
@@ -58,15 +62,11 @@
     ]
   },
   {
-    "listing": "/stats-stuff.html",
-    "items": []
-  },
-  {
     "listing": "/contact.html",
     "items": []
   },
   {
-    "listing": "/teaching.html",
+    "listing": "/stats-stuff.html",
     "items": []
   }
 ]
