@@ -1,0 +1,13 @@
+---
+title: "Tables in Stata"
+subtitle: "With Particular Attention to Multilevel Models"
+author:  Andy Grogan-Kaylor 
+date: "2024-3-30"
+categories: [stats, multilevel, workflow]
+image: "Old-Tjikko-Small.jpg"
+---
+
+I've developed two new handouts on making tables in Stata.
+
+* The [longer more complicated handout](https://agrogan1.github.io/multilevel/tables/tables.html). 
+* A [shorter working example](https://agrogan1.github.io/multilevel/tables/tables2.html) 😃.
