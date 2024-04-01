@@ -1,15 +1,11 @@
 [
   {
-    "listing": "/teaching.html",
-    "items": []
-  },
-  {
     "listing": "/blog.html",
     "items": [
-      "/posts/ArcGIS-storymaps/index.html",
       "/posts/multilevel-thinking-a-book-draft/index.html",
-      "/posts/tables-in-Stata/index.html",
       "/posts/stats-stuff/index.html",
+      "/posts/ArcGIS-storymaps/index.html",
+      "/posts/tables-in-Stata/index.html",
       "/posts/how-to-choose-a-chart-a-visual-guide-with-Stata/index.html",
       "/posts/multilevel-multilingual/index.html",
       "/posts/multilevel-visualization/index.html",
@@ -63,11 +59,15 @@
     ]
   },
   {
-    "listing": "/contact.html",
+    "listing": "/stats-stuff.html",
     "items": []
   },
   {
-    "listing": "/stats-stuff.html",
+    "listing": "/teaching.html",
+    "items": []
+  },
+  {
+    "listing": "/contact.html",
     "items": []
   }
 ]
