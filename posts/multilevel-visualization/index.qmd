@@ -11,7 +11,7 @@ I have developed a book draft on multilevel modeling, entitled [*Multilevel Thin
 
 The book draft is being updated to reflect the perspective of visualizing multilevel models using multiple statistical languages: Stata, R, and Julia. This developing tutorial can be found at: [https://agrogan1.github.io/multilevel-visualization/](https://agrogan1.github.io/multilevel-visualization/)
 
-![Multilevel Visualization](multilevel-visualization.png)
+![Multilevel Visualization](multilevel-visualization.png){width=50%}
 
 
 
