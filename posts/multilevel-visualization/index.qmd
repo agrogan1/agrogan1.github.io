@@ -2,7 +2,7 @@
 title: "Multilevel Visualization"
 description: "Visualizing Multilevel Data in Multiple Statistical Languages."
 author: "Andy Grogan-Kaylor"
-date: "2024-3-24"
+date: "2024-4-6"
 categories: [multilevel, stats, book, dataviz]
 image: "multilevel-visualization.png"
 ---
