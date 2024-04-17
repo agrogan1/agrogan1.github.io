@@ -7,7 +7,15 @@ categories: [stats, dataviz]
 image: "how-to-choose-a-chart-a-visual-guide-with-Stata.png"
 ---
 
-I've developed a new graphing tutorial for Stata:  [How To Choose A Chart - A Statistically Informed Visual Guide With Stata Commands](https://agrogan1.github.io/Stata/how-to-choose-a-chart-a-visual-guide-with-Stata/how-to-choose-a-chart-a-visual-guide-with-Stata.pdf)
+I've updated my graphing tutorial for Stata:  [How To Choose A Chart - A Statistically Informed Visual Guide With Stata Commands](https://agrogan1.github.io/Stata/how-to-choose-a-chart-a-visual-guide-with-Stata/how-to-choose-a-chart-a-visual-guide-with-Stata.pdf)
+
+```{r}
+#| output: false
+
+download.file("https://agrogan1.github.io/Stata/how-to-choose-a-chart-a-visual-guide-with-Stata/how-to-choose-a-chart-a-visual-guide-with-Stata.png",
+              "how-to-choose-a-chart-a-visual-guide-with-Stata.png")
+
+```
 
 ```{r}
 
