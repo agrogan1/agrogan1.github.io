@@ -2,11 +2,10 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/how-to-choose-a-chart-a-visual-guide-with-Stata/index.html",
-      "/posts/multilevel-thinking-a-book-draft/index.html",
       "/posts/stats-stuff/index.html",
-      "/posts/multilevel-visualization/index.html",
       "/posts/multilevel-multilingual/index.html",
+      "/posts/how-to-choose-a-chart-a-visual-guide-with-Stata/index.html",
+      "/posts/multilevel-visualization/index.html",
       "/posts/ArcGIS-storymaps/index.html",
       "/posts/tables-in-Stata/index.html",
       "/posts/theory/index.html",
