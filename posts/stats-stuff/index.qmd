@@ -2,7 +2,8 @@
 title: "There Is Also Relevant Material in Stats Stuff"
 author:  Andy Grogan-Kaylor 
 date: "today"
-image: https://agrogan1.github.io/posts/quantitative-literacy/lightbulb-and-clover.png
+categories: [stats, dataviz, multilevel, Bayes]
+image: "data.png"
 ---
 
 In addition to these blog posts, there is also sometimes relevant material in [Stats Stuff](https://agrogan1.github.io/stats-stuff.html)
