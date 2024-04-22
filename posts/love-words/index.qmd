@@ -3,7 +3,7 @@ title: "Love Words - Agonize Over Sentences"
 subtitle: "Wisdom from Susan Sontag"
 author:  Andy Grogan-Kaylor 
 date: "2024-4-19"
-categories: [teaching]
+categories: [teaching, stats]
 image: https://agrogan1.github.io/posts/quantitative-literacy/lightbulb-and-clover.png
 ---
 
