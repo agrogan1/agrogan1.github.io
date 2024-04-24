@@ -30,7 +30,7 @@ listing:
       categories: [Stata]
     - title: "Cleaning Data With Stata"
       path: https://agrogan1.github.io/Stata/cleaning-data-with-stata/cleaning-data-with-stata.html
-      image: https://agrogan1.github.io/Stata/Stata.png      
+      image: https://agrogan1.github.io/Stata/cleaning-data-with-stata/color.png      
       categories: [Stata]
     - title: "Michigan Graph Scheme for Stata"
       path: https://agrogan1.github.io/Stata/michigan-graph-scheme/
