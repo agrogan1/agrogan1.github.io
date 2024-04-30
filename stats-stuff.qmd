@@ -92,6 +92,10 @@ listing:
       path: https://agrogan1.github.io/R/ggplot-flipbook/ggplot-flipbook.html
       image: https://agrogan1.github.io/R/R.png
       categories: [R, dataviz]
+    - title: "ggplot Flipbook for Global Families Project"
+      path: https://agrogan1.github.io/globalfamilies-flipbook/
+      image: https://agrogan1.github.io/R/R.png
+      categories: [R, dataviz]
     - title: "Advanced ggplot"
       path: https://agrogan1.github.io/dataviz/advanced-ggplot/advanced-ggplot.html
       image: https://agrogan1.github.io/R/R.png
@@ -183,9 +187,9 @@ listing:
     - title: "Interactions"
       path: https://agrogan1.github.io/teaching/interactions/interactions.html
       categories: [stats]
-    - title: "Logistic Regression"
+    - title: "Exploring Logistic Regression"
       path: https://agrogan.shinyapps.io/exploring_logistic_regression/
-      categories: [stats, interactive]
+      categories: [stats, interactive, categorical]
     - title: "Mapping and GIS"
       path: https://agrogan1.github.io/mapping/
       image: https://agrogan1.github.io/posts/GIS-and-mapping/leaflet-capture.png
@@ -219,7 +223,7 @@ listing:
       categories: [R, dataviz, social justice]
     - title: "Visualizing Disparities in a Categorical Risk Factor or Outcome"
       path: https://agrogan1.github.io/posts/visualizing-disparities-in-a-categorical-outcome/
-      categories: [R, dataviz, social justice]  
+      categories: [R, dataviz, social justice, categorical]  
     - title: "Graphing Change Over Time"
       path: https://agrogan1.github.io/dataviz/graphing-change-over-time/index.html
       categories: [stats, dataviz]

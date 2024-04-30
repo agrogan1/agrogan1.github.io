@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Andy Grogan-Kaylor">
-<meta name="dcterms.date" content="2024-04-19">
+<meta name="dcterms.date" content="2024-04-29">
 
 <title>Andrew Grogan-Kaylor - Love Words - Agonize Over Sentences</title>
 <style>
@@ -103,10 +103,10 @@ div.csl-indent {
 <meta name="twitter:card" content="summary_large_image">
 <meta name="citation_title" content="Love Words - Agonize Over Sentences">
 <meta name="citation_author" content="Andy Grogan-Kaylor">
-<meta name="citation_publication_date" content="2024-04-19">
-<meta name="citation_cover_date" content="2024-04-19">
+<meta name="citation_publication_date" content="2024-04-29">
+<meta name="citation_cover_date" content="2024-04-29">
 <meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-04-19">
+<meta name="citation_online_date" content="2024-04-29">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Position statement: Corporal punishment of children;,citation_author=American Professional Society Abuse;,citation_publication_date=2016;,citation_cover_date=2016;,citation_year=2016;,citation_technical_report_institution=American Professional Society on the Abuse of Children;">
 <meta name="citation_reference" content="citation_title=The optics of Ibn al-Haytham books IV-V: On reflection and images seen by reflection;,citation_author=Alhazen;,citation_editor=J. P. Hogendijk;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_series_title=Warburg institute studies and texts; 8;">
@@ -218,7 +218,7 @@ div.csl-indent {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 19, 2024</p>
+        <p class="date">April 29, 2024</p>
       </div>
     </div>
     
@@ -243,7 +243,7 @@ div.csl-indent {
 <blockquote class="blockquote">
 <p>“I’m often asked if there is something I think writers ought to do, and recently in an interview I heard myself say: ‘Several things. Love words, agonize over sentences. And pay attention to the world.’” <span class="citation" data-cites="Sontag2007">(<a href="#ref-Sontag2007" role="doc-biblioref">Sontag, 2007</a>)</span></p>
 </blockquote>
-<p>Terminology is certainly important: for example, it wouldn’t make sense to refer to a <em>regression coefficient</em> as a <em>Hobbit</em>. At the same time, I think that in thinking and teaching about data analysis and statistics, we can lose sight of the deeper ideas in a particular equation or statistical model when we focus on getting the terminology <em>exactly</em> right. More important I think is to <em>“agonize over the sentences”</em> that are contained in the statistical equations that we look at.</p>
+<p>Terminology is certainly important: for example, a <em>regression coefficient</em> is certainly a different quantity than its <em>standard error</em>, and it is important to be able to distinguish the two. At the same time, I think that in thinking and teaching about data analysis and statistics, we can lose sight of the deeper ideas in a particular equation or statistical model when we focus on getting the terminology <em>exactly</em> right, or on parsing between roughly equivalent statistical terms. More important I think is to <em>“agonize over the sentences”</em> that are contained in the statistical equations that we look at so that we can engage with the deeper understandings of statistics.</p>
 
 
 
@@ -476,6 +476,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -510,7 +528,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
