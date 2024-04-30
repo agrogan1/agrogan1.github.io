@@ -1,0 +1,18 @@
+---
+title: "Lao PDR is #66"
+subtitle: "Lao PDR is the 66th Country to Ban Corporal Punishment"
+author: "Andy Grogan-Kaylor"
+date: "2024-4-30"
+categories: [corporal punishment]
+image: "cpbans.png"
+---
+
+Lao PDR is the 66th country to ban corporal punishment: [https://agrogan1.github.io/research/cpbans/](https://agrogan1.github.io/research/cpbans/)
+
+![Countries With Bans on Corporal Punishment of Children](cpbans.png){width=50%}
+
+
+
+
+
+
