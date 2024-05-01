@@ -2,7 +2,6 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/love-words/index.html",
       "/posts/complexity-hidden-inside-simplicity/index.html",
       "/posts/stats-stuff/index.html",
       "/posts/LaoPDR-is-66/index.html",
@@ -65,11 +64,11 @@
     "items": []
   },
   {
-    "listing": "/teaching.html",
+    "listing": "/contact.html",
     "items": []
   },
   {
-    "listing": "/contact.html",
+    "listing": "/teaching.html",
     "items": []
   }
 ]
