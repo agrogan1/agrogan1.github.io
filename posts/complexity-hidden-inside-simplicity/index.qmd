@@ -1,25 +1,22 @@
 ---
-title: "Love Words - Agonize Over Sentences"
-subtitle: "Wisdom from Susan Sontag"
+title: "Complexity Hidden Inside Simplicity"
+subtitle: "Complex Answers To Seemingly Simple Questions"
 author:  Andy Grogan-Kaylor 
-date: "2024-4-29"
+date: "2024-5-1"
 categories: [teaching, stats]
-image: https://agrogan1.github.io/posts/quantitative-literacy/lightbulb-and-clover.png
+image: nautilus-new.png
 ---
 
-I have been thinking a lot about this wisdom from Susan Sontag, which I think has a lot of applicability to teaching, especially in teaching statistics and data analysis.
+I have been thinking a lot lately about the idea that statistical questions are often seemingly simple questions, that contain complex answers, or answers that have complex operationalizations.
 
-> "I’m often asked if there is something I think writers ought to do, and recently in an interview I heard myself say: 'Several things. Love words, agonize over sentences. And pay attention to the world.'" [@Sontag2007]
+I hope to develop this idea more in some writing projects I’m working on. Without getting into a lot of detail in this blog post, it is also an issue that comes up a lot in teaching.
 
-Terminology is certainly important: for example, a *regression coefficient* is certainly a different quantity than its *standard error*, and it is important to be able to distinguish the two. At the same time, I think that in thinking and teaching about data analysis and statistics, we can lose sight of the deeper ideas in a particular equation or statistical model when we focus on getting the terminology *exactly* right, or on parsing between roughly equivalent statistical terms. More important I think is to *"agonize over the sentences"* that are contained in the statistical equations that we look at so that we can engage with the deeper understandings of statistics.
+One thing that I often say in teaching is that because so many of the outcomes we study are so important–and are often unequally allocated–we want to make sure our answers are as precise, and as close to correct, as we can make them. It turns out that failing to understand some of the hidden complexities of statistical thinking may lead to providing very wrong answers to important questions.
 
+Two images that help me convey this idea are the Nautilus Shell, and the Mandelbrot Set.
 
+::: {layout-ncol=2}
+![The Nautilus Shell: Simple seeming questions contain hidden complexities.](nautilus-new.png)
 
-
-
-
-
-
-
-
-
+![Image of the Mandelbrot Set, produced with `mandelbrot` by @Mandelbrot; a complex structure produced with very simple rules](mandelbrot.png)
+:::

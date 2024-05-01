@@ -3,9 +3,9 @@
     "listing": "/blog.html",
     "items": [
       "/posts/love-words/index.html",
+      "/posts/complexity-hidden-inside-simplicity/index.html",
       "/posts/stats-stuff/index.html",
       "/posts/LaoPDR-is-66/index.html",
-      "/posts/complexity-hidden-inside-simplicity/index.html",
       "/posts/multilevel-multilingual/index.html",
       "/posts/how-to-choose-a-chart-a-visual-guide-with-Stata/index.html",
       "/posts/multilevel-visualization/index.html",
@@ -65,11 +65,11 @@
     "items": []
   },
   {
-    "listing": "/contact.html",
+    "listing": "/teaching.html",
     "items": []
   },
   {
-    "listing": "/teaching.html",
+    "listing": "/contact.html",
     "items": []
   }
 ]
