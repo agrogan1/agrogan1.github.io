@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -255,7 +255,7 @@ div.csl-indent {
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="nautilus-new.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="The Nautilus Shell: Simple seeming questions contain hidden complexities."><img src="nautilus-new.png" class="img-fluid figure-img" alt="The Nautilus Shell: Simple seeming questions contain hidden complexities."></a></p>
+<p><a href="nautilus-new.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="The Nautilus Shell: Simple seeming questions contain hidden complexities."><img src="nautilus-new.png" class="img-fluid figure-img" alt="The Nautilus Shell: Simple seeming questions contain hidden complexities."></a></p>
 <figcaption>The Nautilus Shell: Simple seeming questions contain hidden complexities.</figcaption>
 </figure>
 </div>
@@ -263,7 +263,7 @@ div.csl-indent {
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="mandelbrot.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="Image of the Mandelbrot Set, produced with mandelbrot by @Mandelbrot; a complex structure produced with very simple rules"><img src="mandelbrot.png" class="img-fluid figure-img" alt="Image of the Mandelbrot Set, produced with mandelbrot by Moore &amp; dos Reis (2017); a complex structure produced with very simple rules"></a></p>
+<p><a href="mandelbrot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="Image of the Mandelbrot Set, produced with mandelbrot by @Mandelbrot; a complex structure produced with very simple rules"><img src="mandelbrot.png" class="img-fluid figure-img" alt="Image of the Mandelbrot Set, produced with mandelbrot by Moore &amp; dos Reis (2017); a complex structure produced with very simple rules"></a></p>
 <figcaption>Image of the Mandelbrot Set, produced with <code>mandelbrot</code> by <span class="citation" data-cites="Mandelbrot">Moore &amp; dos Reis (<a href="#ref-Mandelbrot" role="doc-biblioref">2017</a>)</span>; a complex structure produced with very simple rules</figcaption>
 </figure>
 </div>
@@ -506,6 +506,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -540,7 +558,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -815,7 +837,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
