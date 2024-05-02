@@ -16,7 +16,7 @@ One thing that I often say in teaching is that because so many of the outcomes w
 Two images that help me convey this idea are the Nautilus Shell, and the Mandelbrot Set.
 
 ::: {layout-ncol=2}
-![The Nautilus Shell: Simple seeming questions contain hidden complexities.](nautilus-new.png)
+![The Nautilus Shell: Simple seeming questions contain hidden complexities.](nautilus-new.png){height=3in}
 
-![Image of the Mandelbrot Set, produced with `mandelbrot` by @Mandelbrot; a complex structure produced with very simple rules](mandelbrot.png)
+![Image of the Mandelbrot Set, produced with `mandelbrot` by @Mandelbrot; a complex structure produced with very simple rules](mandelbrot.png){height=3in}
 :::
