@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/multiple-principled-solutions/index.html",
       "/posts/stats-stuff/index.html",
       "/posts/multilevel-multilingual/index.html",
       "/posts/multilevel-visualization/index.html",
@@ -53,7 +54,6 @@
       "/posts/you-have-to-get-your-data-from-somewhere/index.html",
       "/posts/transcendental-etude/index.html",
       "/posts/welcome/index.html",
-      "/posts/multiple-principled-solutions/index.html",
       "/posts/interviewed-in-the-Lancet/index.html",
       "/posts/Mauritius-is-65/index.html",
       "/posts/bar-charts-in-ggplot-with-multiple-outcomes/index.html",
