@@ -3,6 +3,7 @@
     "listing": "/blog.html",
     "items": [
       "/posts/stats-stuff/index.html",
+      "/posts/updated-Michigan-colors-for-R-graphs/index.html",
       "/posts/Bayestalk/index.html",
       "/posts/multiple-principled-solutions/index.html",
       "/posts/multilevel-multilingual/index.html",
@@ -35,7 +36,6 @@
       "/posts/cleaning-data/index.html",
       "/posts/why-Excel-is-a-bad-format-for-storing-data/index.html",
       "/posts/visualizing-categorical-data/index.html",
-      "/posts/updated-Michigan-colors-for-R-graphs/index.html",
       "/posts/visualizing MLM/index.html",
       "/posts/visualizing-disparities-in-a-categorical-outcome/index.html",
       "/posts/visualizing-disparities-in-a-continuous-outcome/index.html",

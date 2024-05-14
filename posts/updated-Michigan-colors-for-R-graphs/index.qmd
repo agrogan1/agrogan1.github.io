@@ -1,7 +1,7 @@
 ---
 title: "Updated Michigan Colors for R Graphs"
 author: "Andy Grogan-Kaylor"
-date: "2023-11-30"
+date: "2024-5-14"
 categories: [stats, dataviz]
 ---
 
