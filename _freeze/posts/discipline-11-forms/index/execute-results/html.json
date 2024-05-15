@@ -1,0 +1,15 @@
+{
+  "hash": "4e8497858eebae5e6dd0ef9c01211e69",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Associations Between 11 Forms of Discipline and Child Outcomes Across 60 Countries\"\nauthor:  Andy Grogan-Kaylor \ndate: \"2024-5-15\"\ncategories: [multilevel, Bayes, corporal punishment]\nimage: \"MICS.png\"\n---\n\n\nLast Fall, we published an article entitled \"Associations Between 11 Forms of Discipline and Child Outcomes Across 60 Countries\" in *BMJ Open*:  [https://bmjopen.bmj.com/content/13/10/e058439](https://bmjopen.bmj.com/content/13/10/e058439)\n\nI prepared a slide deck summarizing that research--which is linked to [elsewhere on this website](research.qmd)--but realized that I wanted to link to it in this blog. For full screen view, click on [this link](https://websites.umich.edu/~parentingandchilddev/MICS-discipline-11-forms/v1/MICS-discipline-11-forms.html). \n\nYou may also view the presentation below.\n\n\n::: {.cell}\n<iframe src=\"https://websites.umich.edu/~parentingandchilddev/MICS-discipline-11-forms/v1/MICS-discipline-11-forms.html\" width=\"672\" height=\"400px\" data-external=\"1\"></iframe>\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

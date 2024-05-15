@@ -1,0 +1,19 @@
+---
+title: "Associations Between 11 Forms of Discipline and Child Outcomes Across 60 Countries"
+author:  Andy Grogan-Kaylor 
+date: "2024-5-15"
+categories: [multilevel, Bayes, corporal punishment]
+image: "MICS.png"
+---
+
+Last Fall, we published an article entitled "Associations Between 11 Forms of Discipline and Child Outcomes Across 60 Countries" in *BMJ Open*:  [https://bmjopen.bmj.com/content/13/10/e058439](https://bmjopen.bmj.com/content/13/10/e058439)
+
+I prepared a slide deck summarizing that research--which is linked to [elsewhere on this website](research.qmd)--but realized that I wanted to link to it in this blog. For full screen view, click on [this link](https://websites.umich.edu/~parentingandchilddev/MICS-discipline-11-forms/v1/MICS-discipline-11-forms.html). 
+
+You may also view the presentation below.
+
+```{r}
+
+knitr::include_url("https://websites.umich.edu/~parentingandchilddev/MICS-discipline-11-forms/v1/MICS-discipline-11-forms.html")
+
+```
