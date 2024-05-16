@@ -2,11 +2,13 @@
 title: "Data Visualization With Stata"
 subtitle: "Visualizing Data With Stata"
 author: "Andy Grogan-Kaylor"
-date: "2023-9-8"
+date: "2024-5-16"
 categories: [stats, dataviz]
 ---
 
 ```{r}
+#| output: false
+#| echo: false
 
 library(Statamarkdown)
 
@@ -17,6 +19,7 @@ library(Statamarkdown)
 #| execute: false
 #| code-fold: true
 #| code-summary: "Show the code"
+#| output: false
 
 use gutten.dta
 
@@ -39,7 +42,7 @@ Stata is a powerful and intuitive data analysis program. However, Stata is often
 
 I posted a few materials on using Stata for data visualization:
 
-* [Data Visualization With Stata](https://agrogan1.github.io/Stata/data-visualization-with-Stata/data-visualization-with-Stata-slidy.html) [[PDF](https://agrogan1.github.io/Stata/data-visualization-with-Stata/data-visualization-with-Stata.pdf)] 
+* [Data Visualization With Stata](https://agrogan1.github.io/Stata/data-visualization-with-Stata/data-visualization-with-Stata.html) [[PDF](https://agrogan1.github.io/Stata/data-visualization-with-Stata/data-visualization-with-Stata.pdf)] 
 * [The Basics of Data Visualization With Stata](https://agrogan1.github.io/Stata/data-visualization-with-Stata-the-basics/data-visualization-with-Stata-the-basics.html) ([PDF](https://agrogan1.github.io/Stata/data-visualization-with-Stata-the-basics/data-visualization-with-Stata-the-basics.pdf))
 
 
