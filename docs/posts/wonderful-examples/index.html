@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Andy Grogan-Kaylor">
-<meta name="dcterms.date" content="2023-09-08">
+<meta name="dcterms.date" content="2024-05-17">
 
-<title>Andrew Grogan-Kaylor - Data Visualization With Stata</title>
+<title>Andrew Grogan-Kaylor - Building Statistical Models</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,41 +22,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
 }
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
 }
-</style>
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -77,9 +63,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -110,18 +93,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Andrew Grogan-Kaylor - Data Visualization With Stata">
-<meta property="og:description" content="Visualizing Data With Stata">
+<meta property="og:title" content="Andrew Grogan-Kaylor - Building Statistical Models">
+<meta property="og:image" content="math">
 <meta property="og:site_name" content="Andrew Grogan-Kaylor">
-<meta name="twitter:title" content="Andrew Grogan-Kaylor - Data Visualization With Stata">
-<meta name="twitter:description" content="Visualizing Data With Stata">
-<meta name="twitter:card" content="summary">
-<meta name="citation_title" content="Data Visualization With Stata">
+<meta name="twitter:title" content="Andrew Grogan-Kaylor - Building Statistical Models">
+<meta name="twitter:image" content="math">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="citation_title" content="Building Statistical Models">
 <meta name="citation_author" content="Andy Grogan-Kaylor">
-<meta name="citation_publication_date" content="2023-09-08">
-<meta name="citation_cover_date" content="2023-09-08">
-<meta name="citation_year" content="2023">
-<meta name="citation_online_date" content="2023-09-08">
+<meta name="citation_publication_date" content="2024-05-17">
+<meta name="citation_cover_date" content="2024-05-17">
+<meta name="citation_year" content="2024">
+<meta name="citation_online_date" content="2024-05-17">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=The optics of Ibn al-Haytham books IV-V: On reflection and images seen by reflection;,citation_author=Alhazen;,citation_editor=J. P. Hogendijk;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_series_title=Warburg institute studies and texts; 8;">
 <meta name="citation_reference" content="citation_title=Resolution on physical discipline of children by parents;,citation_author=American Psychological Association;,citation_publication_date=2019;,citation_cover_date=2019;,citation_year=2019;,citation_fulltext_html_url=https://www.apa.org/about/policy/physical-discipline.pdf;,citation_technical_report_institution=American Psychological Association;">
@@ -219,11 +202,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Data Visualization With Stata</h1>
-            <p class="subtitle lead">Visualizing Data With Stata</p>
+      <h1 class="title">Building Statistical Models</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">stats</div>
-                <div class="quarto-category">dataviz</div>
+                <div class="quarto-category">social justice</div>
+                <div class="quarto-category">science</div>
               </div>
                   </div>
   </div>
@@ -241,7 +224,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 8, 2023</p>
+        <p class="date">May 17, 2024</p>
       </div>
     </div>
     
@@ -262,40 +245,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div class="cell" data-execute="false">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> gutten.dta</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">twoway</span> (<span class="kw">scatter</span> height age_base, mcolor(<span class="kw">green</span>%50)) <span class="co">///</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>(<span class="kw">lfit</span> height age_base, lcolor(<span class="bn">gold</span>) lwidth(thick)), <span class="co">///</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bn">title</span>(<span class="st">"Tree Height by Tree Age"</span>) <span class="co">///</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bn">caption</span>(<span class="st">"Gutten Tree Data"</span>) <span class="co">///</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bn">xtitle</span>(<span class="st">"Tree Age"</span>) <span class="co">///</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bn">ytitle</span>(<span class="st">"Tree Height"</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> <span class="st">"gutten.png"</span>, <span class="kw">width</span>(2000) <span class="kw">replace</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="gutten.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Graph of Gutten Tree Data"><img src="gutten.png" class="img-fluid figure-img" alt="Graph of Gutten Tree Data"></a></p>
-<figcaption>Graph of Gutten Tree Data</figcaption>
-</figure>
-</div>
-<p>Stata is a powerful and intuitive data analysis program. However, Stata is often under-appreciated as data visualization software. Learning how to graph in Stata is an important part of learning how to use Stata. In older versions of Stata, the default graphs in Stata could sometimes be less than optimal. In newer versions of Stata, the default graphs have been very much improved and are professional looking and aesthetically appealing <em>out of the box</em>. With a few tweaks, graphs in Stata can be even further customized.</p>
-<p>I posted a few materials on using Stata for data visualization:</p>
-<ul>
-<li><a href="https://agrogan1.github.io/Stata/data-visualization-with-Stata/data-visualization-with-Stata.html">Data Visualization With Stata</a> [<a href="https://agrogan1.github.io/Stata/data-visualization-with-Stata/data-visualization-with-Stata.pdf">PDF</a>]</li>
-<li><a href="https://agrogan1.github.io/Stata/data-visualization-with-Stata-the-basics/data-visualization-with-Stata-the-basics.html">The Basics of Data Visualization With Stata</a> (<a href="https://agrogan1.github.io/Stata/data-visualization-with-Stata-the-basics/data-visualization-with-Stata-the-basics.pdf">PDF</a>)</li>
-</ul>
+<blockquote class="blockquote">
+<p>“In general, when building statistical models, we must not forget that the aim is to understand something about the real world. Or predict, choose an action, make a decision, summarize evidence, and so on, but always about the real world, not an abstract mathematical world: our models are not the reality—a point well made by George Box in his oft-cited remark that ‘all models are wrong, but some are useful’ (Box, 1979 in <span class="citation" data-cites="MR0554183">Launer &amp; Wilkinson (<a href="#ref-MR0554183" role="doc-biblioref">1979</a>)</span>).” <span class="citation" data-cites="Hand2014">(<a href="#ref-Hand2014" role="doc-biblioref">Hand, 2014</a>)</span></p>
+</blockquote>
 
 
-<div class="hidden" aria-hidden="true">
-<span class="glightbox-desc lightbox-desc-1">Graph of Gutten Tree Data</span>
-</div>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-Hand2014" class="csl-entry" role="listitem">
+Hand, D. J. (2014). <span class="nocase">Wonderful Examples, but Let’s not Close Our Eyes</span>. <em>Statistical Science</em>, <em>29</em>(1), 98–100. <a href="https://doi.org/10.1214/13-STS446">https://doi.org/10.1214/13-STS446</a>
+</div>
+<div id="ref-MR0554183" class="csl-entry" role="listitem">
+Launer, R. L., &amp; Wilkinson, G. N. (1979). Robustness in statistics. In R. L. Launer &amp; G. N. Wilkinson (Eds.), <em>Proceedings of a <span>W</span>orkshop held at the <span>A</span>rmy <span>R</span>esearch <span>O</span>ffice, <span>R</span>esearch <span>T</span>riangle <span>P</span>ark, <span>N</span>.<span>C</span>., <span>A</span>pril 11–12, 1978</em> (p. xvi+296). Academic Press, Inc. [Harcourt Brace Jovanovich, Publishers], New York-London.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -850,31 +814,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom"});
-window.onload = () => {
-  lightboxQuarto.on('slide_before_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    const href = trigger.getAttribute('href');
-    if (href !== null) {
-      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-      if (imgEl !== null) {
-        const srcAttr = imgEl.getAttribute("src");
-        if (srcAttr && srcAttr.startsWith("data:")) {
-          slideConfig.href = srcAttr;
-        }
-      }
-    } 
-  });
-
-  lightboxQuarto.on('slide_after_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    if (window.Quarto?.typesetMath) {
-      window.Quarto.typesetMath(slideNode);
-    }
-  });
-
-};
-          </script>
 
 
 
