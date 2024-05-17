@@ -1,7 +1,16 @@
 [
   {
+    "listing": "/teaching.html",
+    "items": []
+  },
+  {
+    "listing": "/contact.html",
+    "items": []
+  },
+  {
     "listing": "/blog.html",
     "items": [
+      "/posts/discipline-11-forms-storymap/index.html",
       "/posts/stats-stuff/index.html",
       "/posts/teaching/index.html",
       "/posts/wonderful-examples/index.html",
@@ -65,14 +74,6 @@
   },
   {
     "listing": "/stats-stuff.html",
-    "items": []
-  },
-  {
-    "listing": "/teaching.html",
-    "items": []
-  },
-  {
-    "listing": "/contact.html",
     "items": []
   }
 ]
