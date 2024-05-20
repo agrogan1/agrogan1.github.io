@@ -1,0 +1,9 @@
+---
+title: "Working Truths"
+author:  "Andy Grogan-Kaylor" 
+date: "2024-5-20"
+categories: [science, social justice, stats]
+image: "candles.png"
+---
+
+> "... there is no way to know when our observations about complex events in nature are complete. Our knowledge is finite, Karl Popper emphasised, but our ignorance is infinite. ... [W]e can never be certain about the consequences of our interventions, we can only narrow the area of uncertainty. This admission is not as pessimistic as it sounds: claims that resist repeated energetic challenges often turn out to be quite reliable. Such 'working truths' are the building blocks for the reasonably solid structures that support our everyday actions..." [@Silverman1998]
