@@ -1,18 +1,10 @@
 [
   {
-    "listing": "/teaching.html",
-    "items": []
-  },
-  {
-    "listing": "/contact.html",
-    "items": []
-  },
-  {
     "listing": "/blog.html",
     "items": [
-      "/posts/working-truths/index.html",
       "/posts/teaching/index.html",
       "/posts/stats-stuff/index.html",
+      "/posts/working-truths/index.html",
       "/posts/discipline-11-forms-storymap/index.html",
       "/posts/wonderful-examples/index.html",
       "/posts/data-visualization-with-Stata/index.html",
@@ -75,6 +67,14 @@
   },
   {
     "listing": "/stats-stuff.html",
+    "items": []
+  },
+  {
+    "listing": "/contact.html",
+    "items": []
+  },
+  {
+    "listing": "/teaching.html",
     "items": []
   }
 ]
