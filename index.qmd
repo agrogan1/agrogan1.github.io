@@ -14,6 +14,13 @@ Our meta-analytic review of 50 years of research on the outcomes of physical pun
 
 Additional quantitative work has demonstrated that this finding remains true even in contexts when physical punishment is used minimally, or when used in ostensibly "normative" ways. In a number of papers, we have investigated these associations [across diverse communities and countries](research.qmd). Lastly, in additional papers, we have worked to demonstrate more "causally robust" associations between physical punishment and undesirable child outcomes using a variety of quantitative methods [e.g. @Cuartas2020; @GroganKaylor2004; @GroganKaylor2005; @Ma2018; @Ward2020].
 
-A more recent stream of research pays particular attention to parenting and child development [across low and middle income countries (LMIC's)](research.qmd#multiple-indicator-cluster-surveys-mics-unicef-data). Countries that are not high-income countries are under-represented in current social research [@Henrich2010], particularly research on parenting and child development [@Draper2022]. Further, in this new stream of research, we examine a broader range of parenting behaviors, with a particular emphasis on "positive parenting" strategies [e.g. @Ward2022LCA; @Ward2023]. From this research, the only positive discipline behavior that has emerged so far as being associated with better child outcomes is "explain[ing] why (child)’s behaviour was wrong." [@Ward2023]
+A more recent stream of research pays particular attention to parenting and child development [across low and middle income countries (LMIC's)](research.qmd#multiple-indicator-cluster-surveys-mics-unicef-data). Countries that are not high-income countries are under-represented in current social research [@Henrich2010], particularly research on parenting and child development [@Draper2022]. We have examined the degree to which the association of particular parental discipline behaviors with child outcomes varies across a large number of countries. We have found some modest between country variation in these associations, but more importantly, have found a large degree of consistency in the degree to which parenting is associated with child outcomes across countries [@Pace2019; @Ward2023]. 
+
+Further, in this new stream of research, we examine a broader range of parenting behaviors, with a particular emphasis on "positive parenting" strategies [e.g. @Ward2022LCA; @Ward2023]. From this research, a positive discipline behavior that has emerged as being associated with better child outcomes is "explain[ing] why (child)’s behaviour was wrong." [@Ward2023]
 
 I teach courses mostly in the area of statistics, quantitative methods and data visualization.
+
+
+
+
+
