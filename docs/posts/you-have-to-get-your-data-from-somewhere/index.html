@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.29">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Andy Grogan-Kaylor">
 <meta name="dcterms.date" content="2023-08-14">
 
-<title>Andrew Grogan-Kaylor – You Have To Get Your Data From Somewhere</title>
+<title>Andrew Grogan-Kaylor - You Have To Get Your Data From Somewhere</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -140,6 +140,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="citation_reference" content="citation_title=Retos y perspectivas de la psicología latinoamericana;,citation_author=Ignacio Martin-Baro;,citation_editor=A. Blanco;,citation_publication_date=1998;,citation_cover_date=1998;,citation_year=1998;,citation_inbook_title=Psicología de la liberación;">
 <meta name="citation_reference" content="citation_title=Mandelbrot: Generates views on the mandelbrot set;,citation_author=Ben Moore;,citation_author=Mario Reis;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_fulltext_html_url=https://CRAN.R-project.org/package=mandelbrot;">
 <meta name="citation_reference" content="citation_title=Position statement: Corporal punishment of children;,citation_author=American Professional Society Abuse;,citation_publication_date=2016;,citation_cover_date=2016;,citation_year=2016;,citation_technical_report_institution=American Professional Society on the Abuse of Children;">
+<meta name="citation_reference" content="citation_title=Spanking and young children’s socioemotional development in low- and middle-income countries;,citation_abstract=Spanking is one of the most common forms of child discipline used by parents around the world. Research on children in high-income countries has shown that parental spanking is associated with adverse child outcomes, yet less is known about how spanking is related to child well-being in low- and middle-income countries. This study uses data from 215,885 children in 62 countries from the fourth and fifth rounds of UNICEF’s Multiple Indicator Cluster Surveys (MICS) to examine the relationship between spanking and child well-being. In this large international sample which includes data from nearly one-third of the world’s countries, 43;,citation_author=Garrett T. Pace;,citation_author=Shawna J. Lee;,citation_author=Andrew Grogan-Kaylor;,citation_publication_date=2019;,citation_cover_date=2019;,citation_year=2019;,citation_doi=10.1016/j.chiabu.2018.11.003;,citation_issn=18737757;,citation_pmid=30448642;,citation_volume=88;,citation_journal_title=Child Abuse and Neglect;">
 <meta name="citation_reference" content="citation_title=Eveline Pye: Poetry in numbers, by Julian Champkin;,citation_abstract=Statistics is dry, practical, unimaginative? Unpoetical? Too many people think so. Is there poetry in numbers? Julian Champkin talks to Eveline Pye, statistician and poet of statistics, to disprove it.;,citation_author=Eveline Pye;,citation_publication_date=2011;,citation_cover_date=2011;,citation_year=2011;,citation_fulltext_html_url=https://rss.onlinelibrary.wiley.com/doi/abs/10.1111/j.1740-9713.2011.00510.x;,citation_issue=3;,citation_doi=10.1111/j.1740-9713.2011.00510.x;,citation_volume=8;,citation_journal_title=Significance;">
 <meta name="citation_reference" content="citation_title=Transcendental etude;,citation_abstract=The Fact of a Doorframe: Poems Selected and New 1950-1984 (New York: Norton, 1984);,citation_author=Adrienne Rich;,citation_publication_date=1984;,citation_cover_date=1984;,citation_year=1984;,citation_inbook_title=The fact of a doorframe: Poems selected and new 1950-1984;">
 <meta name="citation_reference" content="citation_title=Effective discipline to raise healthy children;,citation_abstract=In the AAP policy statement “Effective Discipline to Raise Healthy Children” …;,citation_author=Robert D Sege;,citation_author=Benjamin S Siegel;,citation_author=Council Child Abuse;,citation_author=eglect;,citation_author=Committee Psychosocial Aspects;,citation_author=amily Health;,citation_publication_date=2019-02;,citation_cover_date=2019-02;,citation_year=2019;,citation_fulltext_html_url=http://pediatrics.aappublications.org/content/143/2/e20183609.abstract;,citation_doi=10.1542/peds.2018-3609;,citation_volume=143;,citation_journal_title=Pediatrics;">
@@ -209,7 +210,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
+          <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
@@ -683,7 +684,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -715,47 +727,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -790,11 +762,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
+      return note.innerHTML;
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

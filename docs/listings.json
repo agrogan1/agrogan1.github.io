@@ -1,17 +1,9 @@
 [
   {
-    "listing": "/teaching.html",
-    "items": []
-  },
-  {
-    "listing": "/contact.html",
-    "items": []
-  },
-  {
     "listing": "/blog.html",
     "items": [
-      "/posts/stats-stuff/index.html",
       "/posts/teaching/index.html",
+      "/posts/stats-stuff/index.html",
       "/posts/working-truths/index.html",
       "/posts/discipline-11-forms-storymap/index.html",
       "/posts/wonderful-examples/index.html",
@@ -30,13 +22,13 @@
       "/posts/tables-in-Stata/index.html",
       "/posts/theory/index.html",
       "/posts/updated-Michigan-colors-for-Stata-graphs/index.html",
-      "/posts/truth/index.html",
       "/posts/workflow/index.html",
+      "/posts/truth/index.html",
       "/posts/Cohens-d-calculator/index.html",
       "/posts/everything-is-obvious-once-you-know-the-answer/index.html",
-      "/posts/GIS-and-mapping/index.html",
-      "/posts/quantitative-literacy/index.html",
       "/posts/two-page-Stata/index.html",
+      "/posts/quantitative-literacy/index.html",
+      "/posts/GIS-and-mapping/index.html",
       "/posts/logic-models-Mermaid/index.html",
       "/posts/UNICEF-colors-for-Stata-graphs/index.html",
       "/posts/why-Stata-is-better-at-graphing-than-R/index.html",
@@ -56,16 +48,16 @@
       "/posts/working-with-dates-in-Stata/index.html",
       "/posts/bar-charts-to-pie-charts-another-look/index.html",
       "/posts/criticizing-a-musician-is-easy/index.html",
-      "/posts/multilevel-workshop/index.html",
-      "/posts/Simpsons-paradox-and-aggregation-paradox/index.html",
       "/posts/Simpsons-paradox-R/index.html",
+      "/posts/Simpsons-paradox-and-aggregation-paradox/index.html",
+      "/posts/multilevel-workshop/index.html",
       "/posts/bar-charts-and-pie-charts/index.html",
       "/posts/bignumber/index.html",
       "/posts/a-simple-visual-explanation-of-Simpsons-paradox/index.html",
       "/posts/its-not-just-what-youre-born-with/index.html",
-      "/posts/transcendental-etude/index.html",
       "/posts/why-cant-numbers-be-beautiful-too/index.html",
       "/posts/you-have-to-get-your-data-from-somewhere/index.html",
+      "/posts/transcendental-etude/index.html",
       "/posts/welcome/index.html",
       "/posts/interviewed-in-the-Lancet/index.html",
       "/posts/Mauritius-is-65/index.html",
@@ -75,6 +67,14 @@
   },
   {
     "listing": "/stats-stuff.html",
+    "items": []
+  },
+  {
+    "listing": "/teaching.html",
+    "items": []
+  },
+  {
+    "listing": "/contact.html",
     "items": []
   }
 ]
