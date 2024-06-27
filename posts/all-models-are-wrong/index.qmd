@@ -14,7 +14,7 @@ As @Silverman1998 wrote:
 
 > "... there is no way to know when our observations about complex events in nature are complete. Our knowledge is finite, Karl Popper emphasised, but our ignorance is infinite. ... [W]e can never be certain about the consequences of our interventions, we can only narrow the area of uncertainty. This admission is not as pessimistic as it sounds: claims that resist repeated energetic challenges often turn out to be quite reliable. Such 'working truths' are the building blocks for the reasonably solid structures that support our everyday actions..." [@Silverman1998]
 
-This echoes the famous saying by the statistician George Box about statistical models, reported in many places, and well captured in the passage below by @Hand2014:
+This recalls the famous saying by the statistician George Box about statistical models, reported in many places, and well captured in the passage below by @Hand2014:
 
 > "In general, when building statistical models, we must not forget that the aim is to understand something about the real world. Or predict, choose an action, make a decision, summarize evidence, and so on, but always about the real world, not an abstract mathematical world: our models are not the reality—a point well made by George Box in his oft-cited remark that 'all models are wrong, but some are useful' (Box, 1979 in @MR0554183)." [@Hand2014]
 
