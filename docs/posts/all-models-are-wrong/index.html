@@ -8,9 +8,8 @@
 
 <meta name="author" content="Andy Grogan-Kaylor">
 <meta name="dcterms.date" content="2024-06-27">
-<meta name="description" content="Analyzing Multilevel Data in Multiple Statistical Languages.">
 
-<title>Andrew Grogan-Kaylor - Multilevel Multilingual</title>
+<title>Andrew Grogan-Kaylor - All Models Are Wrong, But Some Are Useful</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,7 +22,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -44,9 +63,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,15 +93,15 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Andrew Grogan-Kaylor - Multilevel Multilingual">
-<meta property="og:description" content="Analyzing Multilevel Data in Multiple Statistical Languages.">
-<meta property="og:image" content="multilevel-multilingual.png">
+<meta property="og:title" content="Andrew Grogan-Kaylor - All Models Are Wrong, But Some Are Useful">
+<meta property="og:description" content="Continously Trying To Be Less Wrong">
+<meta property="og:image" content="mathblackboard.png">
 <meta property="og:site_name" content="Andrew Grogan-Kaylor">
-<meta name="twitter:title" content="Andrew Grogan-Kaylor - Multilevel Multilingual">
-<meta name="twitter:description" content="Analyzing Multilevel Data in Multiple Statistical Languages.">
-<meta name="twitter:image" content="multilevel-multilingual.png">
+<meta name="twitter:title" content="Andrew Grogan-Kaylor - All Models Are Wrong, But Some Are Useful">
+<meta name="twitter:description" content="Continously Trying To Be Less Wrong">
+<meta name="twitter:image" content="mathblackboard.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="citation_title" content="Multilevel Multilingual">
+<meta name="citation_title" content="All Models Are Wrong, But Some Are Useful">
 <meta name="citation_author" content="Andy Grogan-Kaylor">
 <meta name="citation_publication_date" content="2024-06-27">
 <meta name="citation_cover_date" content="2024-06-27">
@@ -192,16 +208,13 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Multilevel Multilingual</h1>
-                  <div>
-        <div class="description">
-          Analyzing Multilevel Data in Multiple Statistical Languages.
-        </div>
-      </div>
-                          <div class="quarto-categories">
-                <div class="quarto-category">multilevel</div>
-                <div class="quarto-category">stats</div>
+      <h1 class="title">All Models Are Wrong, But Some Are Useful</h1>
+            <p class="subtitle lead">Continously Trying To Be Less Wrong</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">science</div>
+                <div class="quarto-category">social justice</div>
                 <div class="quarto-category">book</div>
+                <div class="quarto-category">stats</div>
               </div>
                   </div>
   </div>
@@ -240,21 +253,30 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>I have developed a book draft on multilevel modeling, entitled <a href="https://agrogan1.github.io/multilevel-thinking/"><em>Multilevel Thinking</em></a>. The book draft discusses multilevel modeling in the context of cross cultural, or international, research.</p>
-<p>The book draft is being updated to reflect the perspective of analyzing multilevel models using multiple statistical languages: Stata, R, and Julia. This developing tutorial can be found at: <a href="https://agrogan1.github.io/multilevel-multilingual/">https://agrogan1.github.io/multilevel-multilingual/</a></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="multilevel-multilingual.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Multilevel Multilingual"><img src="multilevel-multilingual.png" class="img-fluid figure-img" style="width:50.0%" alt="Multilevel Multilingual"></a></p>
-<figcaption>Multilevel Multilingual</figcaption>
-</figure>
+<p>In the approach that I am taking in this book, I believe that there are definitely <em>realities</em> of suffering, exploitation, violence, discrimination, and other associated problems that we are trying to understand. We hope that our understandings will inform efforts for social change. Yet, at the same time we must recognize that our understandings are at best <em>iterative</em> and <em>contingent.</em> While we will never have a perfect understanding of social reality, we can always improve our understandings, and move in the direction of being <em>less wrong</em>.</p>
+<p>As <span class="citation" data-cites="Silverman1998">Silverman (<a href="#ref-Silverman1998" role="doc-biblioref">1998</a>)</span> wrote:</p>
+<blockquote class="blockquote">
+<p>“… there is no way to know when our observations about complex events in nature are complete. Our knowledge is finite, Karl Popper emphasised, but our ignorance is infinite. … [W]e can never be certain about the consequences of our interventions, we can only narrow the area of uncertainty. This admission is not as pessimistic as it sounds: claims that resist repeated energetic challenges often turn out to be quite reliable. Such ‘working truths’ are the building blocks for the reasonably solid structures that support our everyday actions…” <span class="citation" data-cites="Silverman1998">(<a href="#ref-Silverman1998" role="doc-biblioref">Silverman, 1998</a>)</span></p>
+</blockquote>
+<p>This echoes the famous saying by the statistician George Box about statistical models, reported in many places, and well captured in the passage below by <span class="citation" data-cites="Hand2014">Hand (<a href="#ref-Hand2014" role="doc-biblioref">2014</a>)</span>:</p>
+<blockquote class="blockquote">
+<p>“In general, when building statistical models, we must not forget that the aim is to understand something about the real world. Or predict, choose an action, make a decision, summarize evidence, and so on, but always about the real world, not an abstract mathematical world: our models are not the reality—a point well made by George Box in his oft-cited remark that ‘all models are wrong, but some are useful’ (Box, 1979 in <span class="citation" data-cites="MR0554183">Launer &amp; Wilkinson (<a href="#ref-MR0554183" role="doc-biblioref">1979</a>)</span>).” <span class="citation" data-cites="Hand2014">(<a href="#ref-Hand2014" role="doc-biblioref">Hand, 2014</a>)</span></p>
+</blockquote>
+
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-Hand2014" class="csl-entry" role="listitem">
+Hand, D. J. (2014). <span class="nocase">Wonderful Examples, but Let’s not Close Our Eyes</span>. <em>Statistical Science</em>, <em>29</em>(1), 98–100. <a href="https://doi.org/10.1214/13-STS446">https://doi.org/10.1214/13-STS446</a>
 </div>
-
-
-<div class="hidden" aria-hidden="true">
-<span class="glightbox-desc lightbox-desc-1">Multilevel Multilingual</span>
+<div id="ref-MR0554183" class="csl-entry" role="listitem">
+Launer, R. L., &amp; Wilkinson, G. N. (1979). Robustness in statistics. In R. L. Launer &amp; G. N. Wilkinson (Eds.), <em>Proceedings of a <span>W</span>orkshop held at the <span>A</span>rmy <span>R</span>esearch <span>O</span>ffice, <span>R</span>esearch <span>T</span>riangle <span>P</span>ark, <span>N</span>.<span>C</span>., <span>A</span>pril 11–12, 1978</em> (p. xvi+296). Academic Press, Inc. [Harcourt Brace Jovanovich, Publishers], New York-London.
 </div>
-
-</main> <!-- /main -->
+<div id="ref-Silverman1998" class="csl-entry" role="listitem">
+Silverman, W. A. (1998). Non-replication of the replicable (1996). In <em>Where’s the evidence? Debates in modern medicine</em>. Oxford University Press.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -787,31 +809,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":false});
-window.onload = () => {
-  lightboxQuarto.on('slide_before_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    const href = trigger.getAttribute('href');
-    if (href !== null) {
-      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-      if (imgEl !== null) {
-        const srcAttr = imgEl.getAttribute("src");
-        if (srcAttr && srcAttr.startsWith("data:")) {
-          slideConfig.href = srcAttr;
-        }
-      }
-    } 
-  });
-
-  lightboxQuarto.on('slide_after_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    if (window.Quarto?.typesetMath) {
-      window.Quarto.typesetMath(slideNode);
-    }
-  });
-
-};
-          </script>
 
 
 
