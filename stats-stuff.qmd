@@ -191,6 +191,9 @@ listing:
     - title: "Interactions"
       path: https://agrogan1.github.io/teaching/interactions/interactions.html
       categories: [stats]
+    - title: "Interactions in Logistic Regression"
+      path: https://agrogan1.github.io/newstuff/categorical/logistic-interactions-2/logistic-interactions-2.html
+      categories: [stats, categorical]      
     - title: "Exploring Logistic Regression"
       path: https://agrogan.shinyapps.io/exploring_logistic_regression/
       categories: [stats, interactive, categorical]
