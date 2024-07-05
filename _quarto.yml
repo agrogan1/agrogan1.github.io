@@ -6,6 +6,7 @@ website:
   title: "Andrew Grogan-Kaylor"
   twitter-card: true
   open-graph: true
+  favicon: compass.png
   navbar:
     left:
       - href: index.qmd
