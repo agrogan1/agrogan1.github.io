@@ -539,32 +539,18 @@
     "text": "Make The Waffle Plot\n\n\nShow the code\n# use geom_waffle with this data set of counts\n\nggplot(mycounts, # use this new data\n       aes(fill = outcome, # color fill is outcome\n           values = n)) + # values are n\n  geom_waffle(color = \"grey\") + # waffle geometry w/ grey separator\n  facet_wrap(~group) + # facet on group\n  coord_equal() + # squares!\n  scale_fill_manual(values = michigancolors()) + # Michigan colors\n  theme_void()  # nice theme"
   },
   {
-    "objectID": "posts/articles-with-UNICEF-MICS-data/index.html",
-    "href": "posts/articles-with-UNICEF-MICS-data/index.html",
-    "title": "Articles With UNICEF MICS Data",
+    "objectID": "posts/bignumber/index.html",
+    "href": "posts/bignumber/index.html",
+    "title": "Making a ‘Big Number’ (And Circle) With R",
     "section": "",
-    "text": "I have updated the list of articles published with the UNICEF Multiple Indicator Cluster Survey (MICS) data: https://agrogan1.github.io/research.html\nThis research is conducted in collaboration with colleagues Shawna Lee, Julie Ma, Kaitlin Ward, Garrett Pace, and Jorge Cuartas.\n\n\n\n\nLocations of Countries in MICS"
+    "text": "Sometimes a large number (and accompanying circle) can represent a compelling visualization. This flipbook explains how to make such visualizations in R: https://agrogan1.github.io/R/bignumber/bignumber.html"
   },
   {
-    "objectID": "posts/two-page-Stata/index.html",
-    "href": "posts/two-page-Stata/index.html",
-    "title": "Two Page Stata",
+    "objectID": "posts/everything-is-obvious-once-you-know-the-answer/index.html",
+    "href": "posts/everything-is-obvious-once-you-know-the-answer/index.html",
+    "title": "Everything is Obvious Once You Know The Answer",
     "section": "",
-    "text": "I’ve made updates to Two Page Stata: https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.pdf [HTML].\nTwo Page Stata is intended to be an introduction to Stata in 2 pages. The treatment here is intended to be extremely brief, in order to create a kind of “cheat sheet” that can be presented in 2 pages."
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Andrew Grogan-Kaylor",
-    "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\n\n\n\n\nWeb\n\n\n\n\nEmail\n\n\n\n\nDeep Blue\n\n\n\n\nGitHub\n\n\n\n\nResearchGate\n\n\n\n\nGoogle Scholar\n\n\n\n\nOrcid\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "Data Visualization\n\n\n\n\n\n\ndataviz\n\n\ncourse\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMultilevel and Longitudinal Modeling\n\n\n\n\n\n\nmultilevel\n\n\ncourse\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMultilevel Workshop\n\n\n\n\n\n\nmultilevel\n\n\nworkshop\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVisualizing Multilevel Models\n\n\n\n\n\n\nmultilevel\n\n\ndataviz\n\n\nhandout\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMultilevel Thinking\n\n\n\n\n\n\nmultilevel\n\n\nbook\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMultilevel Multilingual\n\n\n\n\n\n\nmultilevel\n\n\nbook\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMultilevel Visualization\n\n\n\n\n\n\nmultilevel\n\n\nbook\n\n\ndataviz\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCategorical Data Analysis\n\n\n\n\n\n\ncategorical\n\n\ncourse\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "I have been thinking a lot about the idea that Everything Is Obvious, Once You Know The Answer, as detailed in the book with this title by Duncan Watts.\nThis seems to me especially true in Social Research.\nFor example, in our work with the international MICS data, we conducted a study of the link between gender inequality and physical child abuse. We expected to find that higher levels of gender inequality led to higher levels of physical abuse for female children, but not for male children. Instead, we found that higher levels of gender inequality were associated with higher levels of physical abuse for both male and female children. Equally interesting was that we found that gender inequality was predictive of levels of child abuse, while country level GDP was not.\nSimilarly, in a study of parenting during Covid-19, we expected to find that households with children would experience higher levels of anxiety and depression than households without children. Instead, we found the opposite. Being in a household with children was generally protective for anxiety and depression.\nIn his book, Watts uses the example from over 50 years ago, of a large study conducted by Lazarsfeld of veterans returning from World War II. The results are surprising. I’ve prepared a slide deck on these ideas here: https://agrogan1.github.io/teaching/everything-is-obvious/everything-is-obvious.html#/title-slide"
   },
   {
     "objectID": "research.html",
@@ -588,18 +574,32 @@
     "text": "Community Based Research in Alaska\n\nCulturally Grounded Strategies for Suicide and Alcohol Risk Prevention Delivered by Rural Alaska Native Communities: A Dynamic Wait‐listed Design Evaluation of the Qungasvik Intervention.\n\nOpen Access Article"
   },
   {
-    "objectID": "posts/everything-is-obvious-once-you-know-the-answer/index.html",
-    "href": "posts/everything-is-obvious-once-you-know-the-answer/index.html",
-    "title": "Everything is Obvious Once You Know The Answer",
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
     "section": "",
-    "text": "I have been thinking a lot about the idea that Everything Is Obvious, Once You Know The Answer, as detailed in the book with this title by Duncan Watts.\nThis seems to me especially true in Social Research.\nFor example, in our work with the international MICS data, we conducted a study of the link between gender inequality and physical child abuse. We expected to find that higher levels of gender inequality led to higher levels of physical abuse for female children, but not for male children. Instead, we found that higher levels of gender inequality were associated with higher levels of physical abuse for both male and female children. Equally interesting was that we found that gender inequality was predictive of levels of child abuse, while country level GDP was not.\nSimilarly, in a study of parenting during Covid-19, we expected to find that households with children would experience higher levels of anxiety and depression than households without children. Instead, we found the opposite. Being in a household with children was generally protective for anxiety and depression.\nIn his book, Watts uses the example from over 50 years ago, of a large study conducted by Lazarsfeld of veterans returning from World War II. The results are surprising. I’ve prepared a slide deck on these ideas here: https://agrogan1.github.io/teaching/everything-is-obvious/everything-is-obvious.html#/title-slide"
+    "text": "Data Visualization\n\n\n\n\n\n\ndataviz\n\n\ncourse\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMultilevel and Longitudinal Modeling\n\n\n\n\n\n\nmultilevel\n\n\ncourse\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMultilevel Workshop\n\n\n\n\n\n\nmultilevel\n\n\nworkshop\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVisualizing Multilevel Models\n\n\n\n\n\n\nmultilevel\n\n\ndataviz\n\n\nhandout\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMultilevel Thinking\n\n\n\n\n\n\nmultilevel\n\n\nbook\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMultilevel Multilingual\n\n\n\n\n\n\nmultilevel\n\n\nbook\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMultilevel Visualization\n\n\n\n\n\n\nmultilevel\n\n\nbook\n\n\ndataviz\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCategorical Data Analysis\n\n\n\n\n\n\ncategorical\n\n\ncourse\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/bignumber/index.html",
-    "href": "posts/bignumber/index.html",
-    "title": "Making a ‘Big Number’ (And Circle) With R",
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Andrew Grogan-Kaylor",
     "section": "",
-    "text": "Sometimes a large number (and accompanying circle) can represent a compelling visualization. This flipbook explains how to make such visualizations in R: https://agrogan1.github.io/R/bignumber/bignumber.html"
+    "text": "Order By\n       Default\n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\n\n\n\n\nWeb\n\n\n\n\nEmail\n\n\n\n\nDeep Blue\n\n\n\n\nGitHub\n\n\n\n\nResearchGate\n\n\n\n\nGoogle Scholar\n\n\n\n\nOrcid\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/two-page-Stata/index.html",
+    "href": "posts/two-page-Stata/index.html",
+    "title": "Two Page Stata",
+    "section": "",
+    "text": "I’ve made updates to Two Page Stata: https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.pdf [HTML].\nTwo Page Stata is intended to be an introduction to Stata in 2 pages. The treatment here is intended to be extremely brief, in order to create a kind of “cheat sheet” that can be presented in 2 pages."
+  },
+  {
+    "objectID": "posts/articles-with-UNICEF-MICS-data/index.html",
+    "href": "posts/articles-with-UNICEF-MICS-data/index.html",
+    "title": "Articles With UNICEF MICS Data",
+    "section": "",
+    "text": "I have updated the list of articles published with the UNICEF Multiple Indicator Cluster Survey (MICS) data: https://agrogan1.github.io/research.html\nThis research is conducted in collaboration with colleagues Shawna Lee, Julie Ma, Kaitlin Ward, Garrett Pace, and Jorge Cuartas.\n\n\n\n\nLocations of Countries in MICS"
   },
   {
     "objectID": "posts/can-Stata-make-aesthetically-appealing-graph/index.html",
