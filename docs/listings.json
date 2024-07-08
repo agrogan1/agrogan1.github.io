@@ -2,9 +2,10 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/teaching/index.html",
-      "/posts/stats-stuff/index.html",
       "/posts/multilevel-multilingual/index.html",
+      "/posts/teaching/index.html",
+      "/posts/multilevel-visualization/index.html",
+      "/posts/stats-stuff/index.html",
       "/posts/working-truths/index.html",
       "/posts/discipline-11-forms-storymap/index.html",
       "/posts/wonderful-examples/index.html",
@@ -13,7 +14,6 @@
       "/posts/updated-Michigan-colors-for-R-graphs/index.html",
       "/posts/Bayestalk/index.html",
       "/posts/multiple-principled-solutions/index.html",
-      "/posts/multilevel-visualization/index.html",
       "/posts/love-words/index.html",
       "/posts/complexity-hidden-inside-simplicity/index.html",
       "/posts/LaoPDR-is-66/index.html",
