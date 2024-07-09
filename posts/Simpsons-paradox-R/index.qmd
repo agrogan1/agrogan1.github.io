@@ -1,7 +1,7 @@
 ---
 title: "Simpson's Paradox"
 author: "Andy Grogan-Kaylor"
-date: "2023-9-5"
+date: "2024-7-9"
 categories: [stats]
 ---
 
@@ -25,20 +25,9 @@ library(foreign)
 
 ```
 
-
-```{css, echo=FALSE}
-
-blockquote {
-  color: black;
-  border-left: 2px solid gold; 
-  padding: 0.5em 10px;
-  }
-  
-```
-
 # Introduction
 
-*Simpson's Paradox* is the idea that associations between variables that are found between two variables in the sample as a whole, can be *very different* (or even *reversed*) when a third variable is introduced.
+*Simpson's Paradox* [@Simpson1951] is the idea that associations between variables that are found between two variables in the sample as a whole, can be *very different* (or even *reversed*) when a third variable is introduced.
 
 There are specific mathematical conditions under which Simpson's Paradox applies. However, thinking through these mathematical conditions may not be helpful to develop intuitions about Simpson's Paradox.
 
@@ -48,7 +37,7 @@ Careful inspection of visualizations can help us to develop some understanding o
 
 # Some Hypothetical Data
 
-These data are based on the hypothetical data provided by Simpson (1951).
+These data are based on the hypothetical data provided by @Simpson1951.
 
 ```{r}
 
@@ -196,7 +185,4 @@ ggplot(mydata_expanded,
 
 ```
 
-# Reference
-
-Simpson, E. (1951). The Interpretation of Interaction in Contingency Tables. *Journal of the Royal Statistical Society. Series B (Methodological)*, 13(2), 238-241. Retrieved February 2, 2021, from [http://www.jstor.org/stable/2984065](http://www.jstor.org/stable/2984065)
 

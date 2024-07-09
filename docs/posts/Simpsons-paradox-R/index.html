@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Andy Grogan-Kaylor">
-<meta name="dcterms.date" content="2023-09-05">
+<meta name="dcterms.date" content="2024-07-09">
 
 <title>Andrew Grogan-Kaylor - Simpson’s Paradox</title>
 <style>
@@ -22,7 +22,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -85,10 +105,10 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:card" content="summary">
 <meta name="citation_title" content="Simpson&amp;amp;#039;s Paradox">
 <meta name="citation_author" content="Andy Grogan-Kaylor">
-<meta name="citation_publication_date" content="2023-09-05">
-<meta name="citation_cover_date" content="2023-09-05">
-<meta name="citation_year" content="2023">
-<meta name="citation_online_date" content="2023-09-05">
+<meta name="citation_publication_date" content="2024-07-09">
+<meta name="citation_cover_date" content="2024-07-09">
+<meta name="citation_year" content="2024">
+<meta name="citation_online_date" content="2024-07-09">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience;,citation_abstract=Adverse Childhood Experiences (ACEs) such as child abuse are related to poor health outcomes. Spanking has indicated a similar association with health outcomes, but to date has not been considered an ACE. Physical and emotional abuse have been shown in previous research to correlate highly and may be similar in nature to spanking. To determine if spanking should be considered an ACE, this study aimed to examine 1): the grouping of spanking with physical and emotional abuse; and 2) if spanking has similar associations with poor adult health problems and accounts for additional model variance. Adult mental health problems included depressive affect, suicide attempts, moderate to heavy drinking, and street drug use. Data were from the CDC-Kaiser ACE study (N = 8316, response rate = 65;,citation_author=Tracie O. Afifi;,citation_author=Derek Ford;,citation_author=Elizabeth T. Gershoff;,citation_author=Melissa Merrick;,citation_author=Andrew Grogan-Kaylor;,citation_author=Katie A. Ports;,citation_author=Harriet L. MacMillan;,citation_author=George W. Holden;,citation_author=Catherine A. Taylor;,citation_author=Shawna J. Lee;,citation_author=Robbyn Peters Bennett;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_doi=10.1016/j.chiabu.2017.01.014;,citation_isbn=0145-2134;,citation_issn=18737757;,citation_volume=71;,citation_journal_title=Child Abuse and Neglect;">
 <meta name="citation_reference" content="citation_title=The optics of Ibn al-Haytham books IV-V: On reflection and images seen by reflection;,citation_author=Alhazen;,citation_editor=J. P. Hogendijk;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_series_title=Warburg institute studies and texts; 8;">
@@ -124,6 +144,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="citation_reference" content="citation_title=Quantitative literacy for social justice;,citation_abstract=In this article, we argue that many adults lack the ?numeracy? needed to function in a maximally effective manner in their vocational, civic, and personal lives. We believe schools need to foster skills in quantitative literacy (QL), an inclination and ability to make reasoned decisions using general world knowledge and fundamental mathematics in authentic everyday circumstances. We explain how schools might begin to make inroads in preparing more quantitatively literate students and how this goal coincides with efforts toward greater social justice.;,citation_author=Lynda R Wiest;,citation_author=Heidi J Higgins;,citation_author=Janet Hart Frost;,citation_publication_date=2007-04;,citation_cover_date=2007-04;,citation_year=2007;,citation_fulltext_html_url=https://doi.org/10.1080/10665680601079894;,citation_doi=10.1080/10665680601079894;,citation_issn=1066-5684;,citation_volume=40;,citation_journal_title=Equity &amp;amp;amp; Excellence in Education;,citation_publisher=Routledge;">
 <meta name="citation_reference" content="citation_title=Global status report on preventing violence against children 2020;,citation_author=World Health Organization;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_fulltext_html_url=https://www.unicef.org/sites/default/files/2020-06/Global-status-report-on-preventing-violence-against-children-2020.pdf;,citation_technical_report_institution=World Health Organization;">
 <meta name="citation_reference" content="citation_title=The demon haunted world: Science as a candle in the dark;,citation_author=Carl Sagan;,citation_publication_date=1995;,citation_cover_date=1995;,citation_year=1995;">
+<meta name="citation_reference" content="citation_title=The interpretation of interaction in contingency tables;,citation_abstract=[The definition of second order interaction in a (2 × 2 × 2) table given by Bartlett is accepted, but it is shown by an example that the vanishing of this second order interaction does not necessarily justify the mechanical procedure of forming the three component 2 × 2 tables and testing each of these for significance by standard methods.];,citation_author=E H Simpson;,citation_publication_date=1951;,citation_cover_date=1951;,citation_year=1951;,citation_fulltext_html_url=http://www.jstor.org/stable/2984065;,citation_issn=00359246;,citation_volume=13;,citation_journal_title=Journal of the Royal Statistical Society. Series B (Methodological);,citation_publisher=[Royal Statistical Society, Wiley];">
 </head>
 
 <body class="nav-fixed">
@@ -211,7 +232,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 5, 2023</p>
+        <p class="date">July 9, 2024</p>
       </div>
     </div>
     
@@ -241,7 +262,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#mosaic-plot-1" id="toc-mosaic-plot-1" class="nav-link" data-scroll-target="#mosaic-plot-1">Mosaic Plot</a></li>
   <li><a href="#pie-chart-1" id="toc-pie-chart-1" class="nav-link" data-scroll-target="#pie-chart-1">Pie Chart</a></li>
   </ul></li>
-  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
   </ul>
 </nav>
     </div>
@@ -252,20 +272,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="cell">
-<style type="text/css">
-
-blockquote {
-  color: black;
-  border-left: 2px solid gold; 
-  padding: 0.5em 10px;
-  }
-  
-</style>
-</div>
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
-<p><em>Simpson’s Paradox</em> is the idea that associations between variables that are found between two variables in the sample as a whole, can be <em>very different</em> (or even <em>reversed</em>) when a third variable is introduced.</p>
+<p><em>Simpson’s Paradox</em> <span class="citation" data-cites="Simpson1951">(<a href="#ref-Simpson1951" role="doc-biblioref">Simpson, 1951</a>)</span> is the idea that associations between variables that are found between two variables in the sample as a whole, can be <em>very different</em> (or even <em>reversed</em>) when a third variable is introduced.</p>
 <p>There are specific mathematical conditions under which Simpson’s Paradox applies. However, thinking through these mathematical conditions may not be helpful to develop intuitions about Simpson’s Paradox.</p>
 <p>Careful inspection of visualizations can help us to develop some understanding of Simpson’s Paradox.</p>
 <blockquote class="blockquote">
@@ -274,7 +283,7 @@ blockquote {
 </section>
 <section id="some-hypothetical-data" class="level1">
 <h1>Some Hypothetical Data</h1>
-<p>These data are based on the hypothetical data provided by Simpson (1951).</p>
+<p>These data are based on the hypothetical data provided by <span class="citation" data-cites="Simpson1951">Simpson (<a href="#ref-Simpson1951" role="doc-biblioref">1951</a>)</span>.</p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="table table-sm table-striped small">
@@ -393,7 +402,7 @@ blockquote {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-6-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p><a href="index_files/figure-html/unnamed-chunk-5-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -408,7 +417,7 @@ blockquote {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-7-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p><a href="index_files/figure-html/unnamed-chunk-6-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -479,7 +488,7 @@ blockquote {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-9-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p><a href="index_files/figure-html/unnamed-chunk-8-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -491,21 +500,22 @@ blockquote {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-10-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="index_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p><a href="index_files/figure-html/unnamed-chunk-9-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="reference" class="level1">
-<h1>Reference</h1>
-<p>Simpson, E. (1951). The Interpretation of Interaction in Contingency Tables. <em>Journal of the Royal Statistical Society. Series B (Methodological)</em>, 13(2), 238-241. Retrieved February 2, 2021, from <a href="http://www.jstor.org/stable/2984065">http://www.jstor.org/stable/2984065</a></p>
+
 
 
 </section>
+</section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-Simpson1951" class="csl-entry" role="listitem">
+Simpson, E. H. (1951). The interpretation of interaction in contingency tables. <em>Journal of the Royal Statistical Society. Series B (Methodological)</em>, <em>13</em>, 238–241. <a href="http://www.jstor.org/stable/2984065">http://www.jstor.org/stable/2984065</a>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1038,7 +1048,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":false});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

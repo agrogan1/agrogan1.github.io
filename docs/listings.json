@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/Simpsons-paradox-R/index.html",
       "/posts/teaching/index.html",
       "/posts/stats-stuff/index.html",
       "/posts/multilevel-multilingual/index.html",
@@ -48,7 +49,6 @@
       "/posts/working-with-dates-in-Stata/index.html",
       "/posts/bar-charts-to-pie-charts-another-look/index.html",
       "/posts/criticizing-a-musician-is-easy/index.html",
-      "/posts/Simpsons-paradox-R/index.html",
       "/posts/Simpsons-paradox-and-aggregation-paradox/index.html",
       "/posts/multilevel-workshop/index.html",
       "/posts/bar-charts-and-pie-charts/index.html",
