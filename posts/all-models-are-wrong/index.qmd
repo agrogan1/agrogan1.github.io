@@ -8,7 +8,7 @@ image: "mathblackboard.png"
 draft: true
 ---
 
-In the approach that I am taking in this book, I believe that there are definite *realities* of suffering, exploitation, violence, discrimination, and other associated problems that we are trying to understand. 
+I believe that there are definite *realities* of suffering, exploitation, violence, discrimination, and other associated problems that we are trying to understand. 
 
 > "What we see and how we see is of course determined by our perspective, by the place from which we begin our examination of history; but it is determined also by reality itself." [@Martin-Baro1994B]
 
@@ -22,10 +22,56 @@ This recalls the famous saying by the statistician George Box about statistical 
 
 > "In general, when building statistical models, we must not forget that the aim is to understand something about the real world. Or predict, choose an action, make a decision, summarize evidence, and so on, but always about the real world, not an abstract mathematical world: our models are not the reality—a point well made by George Box in his oft-cited remark that 'all models are wrong, but some are useful' (Box, 1979 in @MR0554183)." [@Hand2014]
 
-A key task then, of using advanced quantitative methods such as multilevel modeling is to use them to try to be progressively *less wrong* about the answers we are finding to important questions about improving human wellbeing. 
+A key task then, of using advanced quantitative methods is to use them to try to be progressively *less wrong* about the answers we are finding to important questions about improving human wellbeing. 
 
-To reiterate a point made earlier in this chapter, there are many potential complications in data analysis. Omitted variables are an issue that trouble all quantitative research. Multilevel data provides additional complications in that statistical significance (p values) becomes more difficult to estimate correctly (making false positives more likely), and without use of appropriate methods, the signs and magnitudes of regression coefficients ($\beta$'s) may be wrong. 
+There are many potential complications in data analysis. 
 
-Correct application of multilevel models can help us to be *less wrong* about all of these issues, and to come closer to providing helpful answers to the people we are working with. 
+Omitted variables are an issue that trouble all quantitative research. 
+
+*Simpson's Paradox* [@Simpson1951] wherein omission of a relevant *covariate* (e.g. $z_{it}$ such as SES, community characteristics, country level characteristics) may also lead to dramatically incorrect results. The issue of omitted variables is a crucially important--and sometimes underappreciated--issue that pervades all statistical work.
+
+Statistically, we imagine a situation where the true model is:
+
+$$\text{child outcome}_{it} = \beta_0 + \beta_1 \text{parenting}_{it} +$$ 
+
+$$\beta_2 \text{individual or family or community or country characteristic}_{it} + $$
+$$u_{0i} + e_{it}$$
+
+If *individual or family or community or country characteristics* in fact influence *outcome*, but are not included in the statistical model, perhaps because they are not measured in the data, then the estimate of $\beta_1$ for *parenting* will be biased. See @fig-Simpson for an illustration. 
+
+```{r}
+
+library(haven)
+
+multilevelstructure <- read_dta("multilevelstructure.dta")
+
+multilevelstructure$country <- factor(multilevelstructure$country)
+
+```
+
+```{r}
+#| label: fig-Simpson
+#| fig-cap: "An Illustration of Simpson's Paradox"
+#| fig-height: 3
+#| message: false
+
+library(ggplot2)
+
+ggplot(multilevelstructure, 
+             aes(x = x,
+                 y = y)) +
+  geom_smooth(method = "lm") +
+  geom_point(aes(color = country)) + # points with country color
+  geom_smooth(aes(color = country), # smoothers with country color
+              method = "lm") + 
+  labs(title = "Desirable Outcome as a Function of Parenting",
+       x = "intervention or treatment or parenting (x)",
+       y = "desirable outcome (y)",
+       caption = "Slope not accounting for covariate(s) slopes downward. \nSlope accounting for covariate(s) slopes upward.") +
+  scale_color_viridis_d(name = "covariate (z)") +
+  theme_minimal() 
 
 
+```
+
+When possible confounders are *measured*, we can include those variables in the statistical model. When possible confounders are *unmeasured*, we need to try to use methods that capture those *unmeasured* confounders.
