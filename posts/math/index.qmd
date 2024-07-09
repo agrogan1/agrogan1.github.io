@@ -1,7 +1,7 @@
 ---
 title: "You've Been RickRolled!"
 author: "Andy Grogan-Kaylor"
-date: "2024-5-29"
+date: "today"
 categories: [teaching]
 draft: true
 ---
@@ -9,3 +9,4 @@ draft: true
 [What is this about?](https://en.wikipedia.org/wiki/Rickrolling)
 
 {{< video https://youtu.be/dQw4w9WgXcQ >}}
+
