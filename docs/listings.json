@@ -2,9 +2,9 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/Simpsons-paradox-R/index.html",
       "/posts/teaching/index.html",
       "/posts/stats-stuff/index.html",
+      "/posts/Simpsons-paradox-R/index.html",
       "/posts/multilevel-multilingual/index.html",
       "/posts/multilevel-visualization/index.html",
       "/posts/working-truths/index.html",
