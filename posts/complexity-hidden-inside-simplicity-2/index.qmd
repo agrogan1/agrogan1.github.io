@@ -1,0 +1,23 @@
+---
+title: "Complexity Hidden Inside Simplicity"
+subtitle: "Complex Answers To Seemingly Simple Questions"
+author:  Andy Grogan-Kaylor 
+date: "today"
+categories: [teaching, stats, science]
+image: nautilus-new.png
+draft: true
+---
+
+I have been thinking a lot lately about the idea that statistical questions are often seemingly simple questions, that contain complex answers, or answers that have complex operationalizations.
+
+I hope to develop this idea more in some writing projects I’m working on. Without getting into a lot of detail in this blog post, it is also an issue that comes up a lot in teaching.
+
+One thing that I often say in teaching is that because so many of the outcomes we study are so important–and are often unequally allocated–we want to make sure our answers are as precise, and as close to correct, as we can make them. It turns out that failing to understand some of the hidden complexities of statistical thinking may lead to providing very wrong answers to important questions.
+
+Two images that help me convey this idea are the Nautilus Shell, and the Mandelbrot Set.
+
+::: {layout-ncol=2}
+![The Nautilus Shell: Simple seeming questions contain hidden complexities.](nautilus-new.png){height=3in}
+
+![Image of the Mandelbrot Set, produced with `mandelbrot` by @Mandelbrot; a complex structure produced with very simple rules](mandelbrot.png){height=3in}
+:::
