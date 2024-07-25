@@ -18,7 +18,7 @@ One thing that I often say in teaching is that because so many of the outcomes w
 Two images that I carry with me, and that help me convey this idea are the Nautilus Shell, and the Mandelbrot Set.
 
 ::: {layout-ncol=2}
-![The Nautilus Shell](nautilus-new.png){height=3in}
+![The Nautilus Shell, image courtesy @PowerPoint2024](nautilus-new.png){height=3in}
 
 ![Image of the Mandelbrot Set, produced with `mandelbrot` by @Mandelbrot](mandelbrot.png){height=3in}
 
