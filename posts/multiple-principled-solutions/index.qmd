@@ -2,7 +2,7 @@
 title: "Multiple Principled Solutions"
 author: "Andy Grogan-Kaylor" 
 date: "2024-7-29"
-categories: [stats, workflow, social justice, science]
+categories: [stats, workflow, social justice, science, teaching]
 image: "candles.png"
 ---
 
