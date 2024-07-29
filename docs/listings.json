@@ -3,6 +3,7 @@
     "listing": "/blog.html",
     "items": [
       "/posts/teaching/index.html",
+      "/posts/multiple-principled-solutions/index.html",
       "/posts/stats-stuff/index.html",
       "/posts/Simpsons-paradox-R/index.html",
       "/posts/multilevel-multilingual/index.html",
@@ -14,7 +15,6 @@
       "/posts/discipline-11-forms/index.html",
       "/posts/updated-Michigan-colors-for-R-graphs/index.html",
       "/posts/Bayestalk/index.html",
-      "/posts/multiple-principled-solutions/index.html",
       "/posts/love-words/index.html",
       "/posts/complexity-hidden-inside-simplicity/index.html",
       "/posts/LaoPDR-is-66/index.html",

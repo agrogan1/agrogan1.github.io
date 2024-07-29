@@ -1,7 +1,7 @@
 ---
 title: "Multiple Principled Solutions"
 author: "Andy Grogan-Kaylor" 
-date: "2024-5-11"
+date: "2024-7-29"
 categories: [stats, workflow, social justice, science]
 image: "candles.png"
 ---
@@ -20,7 +20,7 @@ For example, to analyze clustered data, I could employ multilevel models, fixed 
 
 To further illustrate this point, within the domain of multilevel models, I would have further choices: I could estimate only a random intercept; estimate one or more random slopes; or estimate all possible random slopes. These random effects could be correlated or uncorrelated. I could estimate only main effects, or could estimate interactions of several variables. Each of these would be a different, yet principled, approach to analyzing the data.
 
-As another example, to more robustly estimate *causal* effects, I could employ fixed effects, propensity scores, or cross-lagged regression models. Again, each of these methods of analysis would be a different, yet principled, approach to analyzing the data.
+As another example, to more robustly estimate *causal* effects, I could employ fixed effects, propensity scores, or cross-lagged regression models. Again, each of these methods of analysis would carry with it different assumptions, and would be a different, yet principled, approach to analyzing the data.
 
 
 
