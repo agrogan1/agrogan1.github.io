@@ -22,6 +22,8 @@ To further illustrate this point, within the domain of multilevel models, I woul
 
 As another example, to more robustly estimate *causal* effects, I could employ fixed effects, propensity scores, or cross-lagged regression models. Again, each of these methods of analysis would carry with it different assumptions, and would be a different, yet principled, approach to analyzing the data.
 
+In science and statistics, we often want an answer that provides one clear direction. Instead, I'm increasingly convinced that the best science (and teaching!) often involves engaging in open discussion about the multiple possible alternatives, and then choosing one principled solution and being transparent about its implementation. 
+
 
 
 
