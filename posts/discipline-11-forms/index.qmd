@@ -2,7 +2,7 @@
 title: "Associations Between 11 Forms of Discipline and Child Outcomes Across 60 Countries"
 author:  Andy Grogan-Kaylor 
 date: "2024-5-15"
-categories: [multilevel, Bayes, corporal punishment]
+categories: [multilevel, Bayes, corporal punishment, MICS]
 image: "MICS.png"
 ---
 
