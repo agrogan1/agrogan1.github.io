@@ -3,7 +3,7 @@ title: "Multiple Principled Solutions"
 author: "Andy Grogan-Kaylor" 
 date: "2024-7-29"
 categories: [stats, workflow, social justice, science, teaching]
-image: "candles.png"
+image: "northernlights.png"
 ---
 
 One of my most recent ideas about statistical workflows is that there are certainly *wrong* decisions that one can make with data. 
