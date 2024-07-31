@@ -1,0 +1,15 @@
+---
+title: "Mathematics is My Secret"
+author:  Andy Grogan-Kaylor 
+date: "2024-7-31"
+categories: [teaching, stats, science]
+image: mandelbrot.png
+---
+
+I really like this quote by Julia Schanen, as it embodies much of what I feel about research and teaching.
+
+> "Mathematics is my secret. My secret weakness. I feel like a stubborn, helpless fool in the middle of a problem. Trapped and crazed. Also, thrilled." [@Schanen2021]
+
+
+
+
