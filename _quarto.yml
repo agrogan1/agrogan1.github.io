@@ -16,8 +16,16 @@ website:
       - teaching.qmd  
       - research.qmd
       - stats-stuff.qmd
-      - href: https://agrogan1.github.io/multilevel-thinking/
-        text: Multilevel Thinking      
+      - text: Multilevel Thinking 
+        menu:
+          - text: Multilevel Thinking (Book)
+            href: https://agrogan1.github.io/multilevel-thinking/
+          - text: Multilevel Multilingual
+            href: https://agrogan1.github.io/multilevel-multilingual/
+          - text: Multilevel Visualization
+            href: https://agrogan1.github.io/multilevel-visualization/
+          - text: Multilevel Workshop
+            href: https://agrogan1.github.io/multilevel-workshop/
       - href: https://globalfamilies.quarto.pub/global-families-project/
         text: Global Families
       - href: https://agrogan1.github.io/mapping/

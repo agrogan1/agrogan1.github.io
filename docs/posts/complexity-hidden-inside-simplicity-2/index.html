@@ -189,10 +189,29 @@ div.csl-indent {
     <a class="nav-link" href="../../stats-stuff.html"> 
 <span class="menu-text">Stats Stuff</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="https://agrogan1.github.io/multilevel-thinking/"> 
-<span class="menu-text">Multilevel Thinking</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-multilevel-thinking" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Multilevel Thinking</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-multilevel-thinking">    
+        <li>
+    <a class="dropdown-item" href="https://agrogan1.github.io/multilevel-thinking/">
+ <span class="dropdown-text">Multilevel Thinking (Book)</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="https://agrogan1.github.io/multilevel-multilingual/">
+ <span class="dropdown-text">Multilevel Multilingual</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://agrogan1.github.io/multilevel-visualization/">
+ <span class="dropdown-text">Multilevel Visualization</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://agrogan1.github.io/multilevel-workshop/">
+ <span class="dropdown-text">Multilevel Workshop</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="https://globalfamilies.quarto.pub/global-families-project/"> 
 <span class="menu-text">Global Families</span></a>
@@ -286,7 +305,7 @@ Complex Answers Hidden Inside Simple Questions
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="nautilus-new.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="The Nautilus Shell, image courtesy @PowerPoint2024"><img src="nautilus-new.png" style="height:3in" alt="The Nautilus Shell, image courtesy Microsoft (2024)" class="figure-img"></a></p>
+<p><a href="nautilus-new.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="The Nautilus Shell, image courtesy @PowerPoint2024"><img src="nautilus-new.png" style="height:3in" alt="The Nautilus Shell, image courtesy Microsoft (2024)" class="figure-img"></a></p>
 <figcaption>The Nautilus Shell, image courtesy <span class="citation" data-cites="PowerPoint2024">Microsoft (<a href="#ref-PowerPoint2024" role="doc-biblioref">2024</a>)</span></figcaption>
 </figure>
 </div>
@@ -294,7 +313,7 @@ Complex Answers Hidden Inside Simple Questions
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="mandelbrot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="Image of the Mandelbrot Set, produced with mandelbrot by @Mandelbrot"><img src="mandelbrot.png" style="height:3in" alt="Image of the Mandelbrot Set, produced with mandelbrot by Moore &amp; dos Reis (2017)" class="figure-img"></a></p>
+<p><a href="mandelbrot.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="Image of the Mandelbrot Set, produced with mandelbrot by @Mandelbrot"><img src="mandelbrot.png" style="height:3in" alt="Image of the Mandelbrot Set, produced with mandelbrot by Moore &amp; dos Reis (2017)" class="figure-img"></a></p>
 <figcaption>Image of the Mandelbrot Set, produced with <code>mandelbrot</code> by <span class="citation" data-cites="Mandelbrot">Moore &amp; dos Reis (<a href="#ref-Mandelbrot" role="doc-biblioref">2017</a>)</span></figcaption>
 </figure>
 </div>
@@ -860,7 +879,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

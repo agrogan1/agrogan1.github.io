@@ -169,10 +169,29 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../../stats-stuff.html"> 
 <span class="menu-text">Stats Stuff</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="https://agrogan1.github.io/multilevel-thinking/"> 
-<span class="menu-text">Multilevel Thinking</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-multilevel-thinking" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Multilevel Thinking</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-multilevel-thinking">    
+        <li>
+    <a class="dropdown-item" href="https://agrogan1.github.io/multilevel-thinking/">
+ <span class="dropdown-text">Multilevel Thinking (Book)</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="https://agrogan1.github.io/multilevel-multilingual/">
+ <span class="dropdown-text">Multilevel Multilingual</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://agrogan1.github.io/multilevel-visualization/">
+ <span class="dropdown-text">Multilevel Visualization</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://agrogan1.github.io/multilevel-workshop/">
+ <span class="dropdown-text">Multilevel Workshop</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="https://globalfamilies.quarto.pub/global-families-project/"> 
 <span class="menu-text">Global Families</span></a>
@@ -816,7 +835,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"openEffect":"zoom","selector":".lightbox","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
