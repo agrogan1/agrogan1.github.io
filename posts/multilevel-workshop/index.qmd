@@ -11,11 +11,10 @@ I have developed a set of workshop materials based upon my draft book on multile
 
 The workshop materials are here: [https://agrogan1.github.io/multilevel-workshop/](https://agrogan1.github.io/multilevel-workshop/)
 
-```{r, fig.height=3}
+![Multilevel Workshop](multilevel-workshop.png){width=33%}
 
-knitr::include_graphics("multilevel-workshop.png")
 
-```
+
 
 
 
