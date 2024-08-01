@@ -1,8 +1,8 @@
 {
-  "hash": "78fd2a4d672b92ec6e7226cc558638cd",
+  "hash": "bc3a50705db355c96c0f39d8d00e2e5f",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"Multilevel Workshop\"\nsubtitle: \"An In-Development Workshop on Multilevel Modeling\"\nauthor: \"Andy Grogan-Kaylor\"\ndate: \"2024-7-31\"\ncategories: [stats, multilevel, book, teaching]\nimage: \"bookcover-landscape.png\"\n---\n\n\nI have developed a set of workshop materials based upon my draft book on multilevel modeling. The book is entitled [*Multilevel Thinking*](https://agrogan1.github.io/multilevel-thinking/). The book draft discusses multilevel modeling in the context of cross cultural, or international, research. \n\nThe workshop materials are here: [https://agrogan1.github.io/multilevel-workshop/](https://agrogan1.github.io/multilevel-workshop/)\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](bookcover.png){width=90}\n:::\n:::\n",
+    "markdown": "---\ntitle: \"Multilevel Workshop\"\nsubtitle: \"An In-Development Workshop on Multilevel Modeling\"\nauthor: \"Andy Grogan-Kaylor\"\ndate: \"2024-7-31\"\ncategories: [stats, multilevel, book, teaching]\nimage: \"multilevel-workshop.png\"\n---\n\n\nI have developed a set of workshop materials based upon my draft book on multilevel modeling. The book is entitled [*Multilevel Thinking*](https://agrogan1.github.io/multilevel-thinking/). The book draft discusses multilevel modeling in the context of cross cultural, or international, research. \n\nThe workshop materials are here: [https://agrogan1.github.io/multilevel-workshop/](https://agrogan1.github.io/multilevel-workshop/)\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](multilevel-workshop.png){width=806}\n:::\n:::\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"

@@ -13,7 +13,7 @@ The workshop materials are here: [https://agrogan1.github.io/multilevel-workshop
 
 ```{r, fig.height=3}
 
-knitr::include_graphics("bookcover.png")
+knitr::include_graphics("multilevel-workshop.png")
 
 ```
 
