@@ -2,10 +2,10 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/mathematics-is-my-secret/index.html",
       "/posts/teaching/index.html",
-      "/posts/multilevel-workshop/index.html",
       "/posts/stats-stuff/index.html",
+      "/posts/mathematics-is-my-secret/index.html",
+      "/posts/multilevel-workshop/index.html",
       "/posts/multiple-principled-solutions/index.html",
       "/posts/Simpsons-paradox-R/index.html",
       "/posts/multilevel-multilingual/index.html",
@@ -71,11 +71,11 @@
     "items": []
   },
   {
-    "listing": "/contact.html",
+    "listing": "/teaching.html",
     "items": []
   },
   {
-    "listing": "/teaching.html",
+    "listing": "/contact.html",
     "items": []
   }
 ]
