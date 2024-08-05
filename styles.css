@@ -15,5 +15,7 @@ blockquote {
   text-transform: uppercase;
 }
 
-
+.dropdown-item {
+  font-size: 75%;
+}
 
