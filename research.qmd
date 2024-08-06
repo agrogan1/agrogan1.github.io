@@ -107,6 +107,9 @@ leaflet() %>%
 
 #### Publications
 
+* "Interactions of Gender Inequality and Parental Discipline Predicting Child Aggression in Low- and Middle-Income Countries"
+    + [ArcGIS Storymap](https://arcg.is/0m4qDb)
+
 * "Associations between 11 parental discipline behaviours and child outcomes across 60 countries"
     + [Article](https://bmjopen.bmj.com/content/13/10/e058439)
     + [ArcGIS Storymap](https://arcg.is/1OSzvG0)
