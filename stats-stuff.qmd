@@ -14,7 +14,7 @@ listing:
       categories: [Stata, R, multilevel, Bayes, dataviz]
     - title: "Many Entires in Teaching Have Relevant Content"
       path: https://agrogan1.github.io/teaching.html
-      image: https://agrogan1.github.io/posts/multiple-principled-solutions/candles.png
+      image: https://agrogan1.github.io/posts/multiple-principled-solutions/northernlights.png
       categories: [Stata, R, multilevel, Bayes, dataviz]    
     - title: "All Stata Materials"
       path: https://agrogan1.github.io/Stata/
