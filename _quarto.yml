@@ -32,12 +32,6 @@ website:
         text: Mapping/GIS
       - blog.qmd  
       - about.qmd
-  announcement: 
-    icon: info-circle
-    dismissable: true
-    content: "New Publication: [Interactions Of Gender Inequality And Parental Discipline Predicting Child Aggression In Low- And Middle-Income Countries](https://agrogan1.github.io/posts/discipline-GII/)"
-    type: primary
-    position: below-navbar
 
 bibliography: agrogan.bib
 
