@@ -1,0 +1,23 @@
+---
+title: "Interactions Of Gender Inequality And Parental Discipline Predicting Child Aggression In Low- And Middle-Income Countries"
+author:  Andy Grogan-Kaylor 
+date: "2024-8-12"
+categories: [multilevel, corporal punishment, MICS]
+image: "positiveparenting.png"
+---
+
+We've just published an article entitled *Interactions Of Gender Inequality And Parental Discipline Predicting Child Aggression In Low- And Middle-Income Countries*.
+
+Contrary to expectations from theory, we find that parenting effects are *weaker* in contexts of *higher* gender inequality, and *stronger* in contexts of *lower* gender inequality. We recommend that interventions to improve parenting and child well being need to have a *multilevel* conceptualization, and to focus on both parenting and reducing gender inequality at a country level.
+
+* [Open Access Article](http://doi.org/10.1111/cdev.14152)
+* [ArcGIS Storymap](https://arcg.is/0m4qDb)
+
+
+![](positiveparenting.png){width=33%}
+
+
+
+
+
+
