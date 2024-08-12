@@ -83,12 +83,14 @@ MICS <- global_data %>%
   
 ```
 
-```{r, fig.cap="Locations of Countries in MICS", fig.height=3}
+```{r}
+#| fig-cap: "Locations of Countries in MICS"
+#| fig-height: 5
 
 library(leaflet)
 
 leaflet() %>%
-  setView(0, 25, zoom = 1.5) %>%
+  setView(0, 0, zoom = 1.5) %>%
   # addTiles() %>%
   addProviderTiles(providers$Esri.WorldImagery) %>%
   addPolygons(data = MICS, 
@@ -108,6 +110,7 @@ leaflet() %>%
 #### Publications
 
 * "Interactions of Gender Inequality and Parental Discipline Predicting Child Aggression in Low- and Middle-Income Countries"
+    + [Open Access Article](http://doi.org/10.1111/cdev.14152)
     + [ArcGIS Storymap](https://arcg.is/0m4qDb)
 
 * "Associations between 11 parental discipline behaviours and child outcomes across 60 countries"
