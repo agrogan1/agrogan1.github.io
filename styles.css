@@ -17,5 +17,6 @@ blockquote {
 
 .dropdown-item {
   font-size: 75%;
+  font-weight: bold;
 }
 
