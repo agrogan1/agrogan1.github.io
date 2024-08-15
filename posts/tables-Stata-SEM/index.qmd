@@ -1,0 +1,16 @@
+---
+title: "Tables in Stata for `sem`"
+author:  Andy Grogan-Kaylor 
+date: "2024-8-15"
+categories: [stats, workflow]
+image: "mathblackboard.png"
+---
+
+I have a new abbreviated handout on making tables for `sem` in Stata: [https://agrogan1.github.io/Stata/tables-SEM/tables-SEM.html](https://agrogan1.github.io/Stata/tables-SEM/tables-SEM.html)
+
+Earlier, I developed [two new handouts](https://agrogan1.github.io/posts/tables-in-Stata/index.html) on making tables in Stata with a particular focus on multilevel models.
+
+
+
+
+
