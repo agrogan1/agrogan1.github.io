@@ -7,7 +7,7 @@ categories: [stats, multilevel, workflow]
 image: "Old-Tjikko-Small.jpg"
 ---
 
-I've developed two new handouts on making tables in Stata.
+I've developed two new handouts on making tables in Stata with the older `estimates table` and the newer `etable` command.
 
 * The [longer more complicated handout](https://agrogan1.github.io/multilevel/tables/tables.html). 
 * A [shorter working example](https://agrogan1.github.io/multilevel/tables/tables2.html) 😃.
