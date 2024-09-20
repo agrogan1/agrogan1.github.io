@@ -154,7 +154,8 @@ listing:
       categories: [multilevel, Stata]
     - title: "What is Data?"
       path: https://agrogan1.github.io/teaching/what-is-data/what-is-data.html
-      categories: [workflow]
+      image: mathblackboard.png
+      categories: [workflow, stats]
     - title: "Everything is Obvious Once You Know The Answer"
       path: https://agrogan1.github.io/teaching/everything-is-obvious/everything-is-obvious.html
       categories: [workflow]
