@@ -10,6 +10,28 @@ I've updated my *UNICEF Colors for Stata Graphs*, using the most recent version 
 
 The updated graph scheme can be installed by typing `net from https://agrogan1.github.io/Stata` at the Stata command prompt.
 
+```{r}
+
+library(Statamarkdown)
+
+```
+
+```{stata}
+#| output: false
+
+clear all
+
+set obs 10
+
+generate row = _n
+
+graph bar, over(row) asyvars scheme(UNICEF) title("UNICEF Color Palette") ytitle("") ylabel(none) ysize(3)
+
+graph export "UNICEFpalette.png", as(png) name("Graph") replace
+
+```
+
+
 ![UNICEF Color Palette](UNICEFpalette.png)
 
 

@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/UNICEF-colors-for-Stata-graphs/index.html",
       "/posts/teaching/index.html",
       "/posts/stats-stuff/index.html",
       "/posts/Tajikstan-is-67/index.html",
@@ -36,7 +37,6 @@
       "/posts/quantitative-literacy/index.html",
       "/posts/GIS-and-mapping/index.html",
       "/posts/logic-models-Mermaid/index.html",
-      "/posts/UNICEF-colors-for-Stata-graphs/index.html",
       "/posts/why-Stata-is-better-at-graphing-than-R/index.html",
       "/posts/can-Stata-make-aesthetically-appealing-graph/index.html",
       "/posts/can-Stata-make-a-beautiful-graph/index.html",
