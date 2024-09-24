@@ -1,7 +1,7 @@
 ---
 title: "Updated UNICEF Colors for Stata Graphs"
 author: "Andy Grogan-Kaylor"
-date: "2024-2-7"
+date: "2024-9-24"
 image: "UNICEFpalette.png"
 categories: [stats, dataviz]
 ---
