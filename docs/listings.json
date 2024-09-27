@@ -2,9 +2,10 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/UNICEF-colors-for-Stata-graphs/index.html",
+      "/posts/visualizing-MLM/index.html",
       "/posts/teaching/index.html",
       "/posts/stats-stuff/index.html",
+      "/posts/UNICEF-colors-for-Stata-graphs/index.html",
       "/posts/Tajikstan-is-67/index.html",
       "/posts/updated-Michigan-colors-for-R-graphs/index.html",
       "/posts/tables-Stata-SEM/index.html",
@@ -48,7 +49,6 @@
       "/posts/cleaning-data/index.html",
       "/posts/why-Excel-is-a-bad-format-for-storing-data/index.html",
       "/posts/visualizing-categorical-data/index.html",
-      "/posts/visualizing MLM/index.html",
       "/posts/visualizing-disparities-in-a-categorical-outcome/index.html",
       "/posts/visualizing-disparities-in-a-continuous-outcome/index.html",
       "/posts/working-with-dates-in-Stata/index.html",
