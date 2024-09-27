@@ -2,7 +2,7 @@
 title: "Visualizing Multilevel Models"
 subtitle: "An In Development Tutorial"
 author: "Andy Grogan-Kaylor"
-date: "2023-11-30"
+date: "2024-9-27"
 categories: [stats, dataviz, multilevel]
 ---
 
