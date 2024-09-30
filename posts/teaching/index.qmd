@@ -2,7 +2,7 @@
 title: "There Is Also Relevant Material in Teaching"
 author:  Andy Grogan-Kaylor 
 date: "today"
-categories: [stats, dataviz, multilevel, Bayes]
+categories: [stats, dataviz, multilevel, Bayes, R, Stata]
 image: "northernlights.png"
 ---
 

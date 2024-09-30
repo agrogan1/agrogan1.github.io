@@ -3,6 +3,7 @@
     "listing": "/blog.html",
     "items": [
       "/posts/teaching/index.html",
+      "/posts/why-Stata-is-better-at-graphing-than-R/index.html",
       "/posts/very-short-introduction-Stata/index.html",
       "/posts/stats-stuff/index.html",
       "/posts/visualizing-MLM/index.html",
@@ -39,7 +40,6 @@
       "/posts/quantitative-literacy/index.html",
       "/posts/GIS-and-mapping/index.html",
       "/posts/logic-models-Mermaid/index.html",
-      "/posts/why-Stata-is-better-at-graphing-than-R/index.html",
       "/posts/can-Stata-make-aesthetically-appealing-graph/index.html",
       "/posts/can-Stata-make-a-beautiful-graph/index.html",
       "/posts/bar-charts-in-ggplot2/index.html",
@@ -75,11 +75,11 @@
     "items": []
   },
   {
-    "listing": "/contact.html",
+    "listing": "/teaching.html",
     "items": []
   },
   {
-    "listing": "/teaching.html",
+    "listing": "/contact.html",
     "items": []
   }
 ]
