@@ -2,7 +2,7 @@
 title: "Bar Charts in ggplot With Multiple Outcomes"
 author: "Andy Grogan-Kaylor"
 date: "2022-7-1"
-categories: [stats, dataviz]
+categories: [stats, dataviz, R]
 ---
 
 # Setup

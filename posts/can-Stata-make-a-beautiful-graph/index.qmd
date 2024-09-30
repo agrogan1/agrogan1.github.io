@@ -2,7 +2,7 @@
 title: "Can Stata Make A Beautiful Graph?"
 author: "Andy Grogan-Kaylor" 
 date: "2024-2-4"
-categories: [stats, dataviz]
+categories: [stats, dataviz, Stata]
 ---
 
 # Introduction 🌲

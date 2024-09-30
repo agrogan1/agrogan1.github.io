@@ -1,8 +1,8 @@
 ---
 title: "Why Stata Is Better (At Graphing) Than R"
 author: "Andy Grogan-Kaylor"
-date: 2024-2-7
-categories: [stats, dataviz]
+date: 2024-9-30
+categories: [stats, dataviz, Stata, R]
 image: "mybarStata.png"
 execute: 
   echo: true

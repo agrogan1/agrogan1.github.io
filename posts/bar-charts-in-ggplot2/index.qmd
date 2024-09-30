@@ -2,7 +2,7 @@
 title: "Bar Charts in ggplot2"
 author: "Andy Grogan-Kaylor"
 date: "2024-2-1"
-categories: [stats, dataviz]
+categories: [stats, dataviz, R]
 echo: true
 code-fold: true
 code-summary: "Show the code"

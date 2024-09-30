@@ -2,9 +2,10 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/visualizing-MLM/index.html",
       "/posts/teaching/index.html",
+      "/posts/very-short-introduction-Stata/index.html",
       "/posts/stats-stuff/index.html",
+      "/posts/visualizing-MLM/index.html",
       "/posts/UNICEF-colors-for-Stata-graphs/index.html",
       "/posts/Tajikstan-is-67/index.html",
       "/posts/updated-Michigan-colors-for-R-graphs/index.html",

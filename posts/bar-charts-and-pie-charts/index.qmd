@@ -3,7 +3,7 @@ title: "Telling Stories With Data: Bar Charts and Pie Charts"
 subtitle: "Conceptual Relationships Among Graphs, and the Grammar of Graphics"
 author: "Andy Grogan-Kaylor"
 date: "2023-8-23"
-categories: [stats, dataviz]
+categories: [stats, dataviz, R]
 ---
 
 # Background

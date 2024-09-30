@@ -2,7 +2,7 @@
 title: "Tables in Stata for `sem`"
 author:  Andy Grogan-Kaylor 
 date: "2024-8-15"
-categories: [stats, workflow]
+categories: [stats, workflow, Stata]
 image: "mathblackboard.png"
 ---
 

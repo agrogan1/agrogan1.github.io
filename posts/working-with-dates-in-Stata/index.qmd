@@ -2,7 +2,7 @@
 title: "Working With Dates in Stata"
 author: "Andrew Grogan-Kaylor"
 date: "2023-10-20"
-categories: [stats]
+categories: [stats, Stata]
 image: "data.png"
 ---
 

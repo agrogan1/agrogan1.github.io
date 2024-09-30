@@ -3,7 +3,7 @@ title: 'Visualizing Disparities in a Continuous Risk Factor or Outcome'
 subtitle: "Telling Stories With Data"
 author: "Andy Grogan-Kaylor"
 date: "2023-11-8"
-categories: [stats, dataviz, social justice]
+categories: [stats, dataviz, social justice, R]
 ---
 
 # Background

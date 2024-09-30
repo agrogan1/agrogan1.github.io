@@ -3,7 +3,7 @@ title: "Cleaning Data"
 subtitle: "Resources for Stata and R"
 author:  Andy Grogan-Kaylor 
 date: "2023-12-14"
-categories: [stats, workflow]
+categories: [stats, workflow, R, Stata]
 image: "data.png"
 ---
 

@@ -3,7 +3,7 @@ title: "Data Visualization With Stata"
 subtitle: "Visualizing Data With Stata"
 author: "Andy Grogan-Kaylor"
 date: "2024-5-16"
-categories: [stats, dataviz]
+categories: [stats, dataviz, Stata]
 ---
 
 ```{r}

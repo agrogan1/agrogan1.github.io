@@ -2,7 +2,7 @@
 title: "Making a 'Big Number' (And Circle) With R"
 author: "Andy Grogan-Kaylor"
 date: "2023-8-20"
-categories: [dataviz]
+categories: [dataviz, R]
 image: "bignumber.png"
 ---
 

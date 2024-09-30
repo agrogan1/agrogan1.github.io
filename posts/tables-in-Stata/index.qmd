@@ -3,7 +3,7 @@ title: "Tables in Stata"
 subtitle: "With Particular Attention to Multilevel Models"
 author:  Andy Grogan-Kaylor 
 date: "2024-3-30"
-categories: [stats, multilevel, workflow]
+categories: [stats, multilevel, workflow, Stata]
 image: "Old-Tjikko-Small.jpg"
 ---
 

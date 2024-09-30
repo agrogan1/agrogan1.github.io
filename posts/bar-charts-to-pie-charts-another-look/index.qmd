@@ -2,7 +2,7 @@
 title: "Bar Charts to Pie Charts: Another Look"
 author: "Andy Grogan-Kaylor"
 date: "2023-9-9"
-categories: [stats, dataviz]
+categories: [stats, dataviz, R]
 echo: true
 code-fold: true
 code-summary: "Show the code"

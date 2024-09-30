@@ -2,7 +2,7 @@
 title: "You Have To Get Your Data From Somewhere"
 author: "Andy Grogan-Kaylor"
 date: "2023-8-14"
-categories: [stats, dataviz]
+categories: [stats, dataviz, R]
 image: "data.png"
 ---
 

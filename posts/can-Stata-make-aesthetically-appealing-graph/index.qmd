@@ -7,7 +7,7 @@ execute:
   message: false
 code-fold: true
 image: "aesthetically-appealing-World-Bank.svg"
-categories: [stats, dataviz]
+categories: [stats, dataviz, Stata]
 ---
 
 # Background
