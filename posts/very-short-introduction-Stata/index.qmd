@@ -1,0 +1,15 @@
+---
+title: "A Very Short Introduction to Stata"
+subtitle: "Content updates and clarifications"
+author: "Andy Grogan-Kaylor" 
+date: "2024-9-30"
+categories: [stats, Stata]
+image: "thumbnail.jpg"
+---
+
+I've made updates to my *Very Short Introduction to Stata*: [https://agrogan1.github.io/Stata/very-short-introduction/very-short-introduction.html](https://agrogan1.github.io/Stata/very-short-introduction/very-short-introduction.html).
+
+
+
+
+
