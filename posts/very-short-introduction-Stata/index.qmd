@@ -1,13 +1,15 @@
 ---
-title: "A Very Short Introduction to Stata"
+title: "A *Very* Short Introduction to Stata"
 subtitle: "Content updates and clarifications"
 author: "Andy Grogan-Kaylor" 
-date: "2024-9-30"
+date: "2024-10-8"
 categories: [stats, Stata]
 image: "thumbnail.jpg"
 ---
 
 I've made updates to my *Very Short Introduction to Stata*: [https://agrogan1.github.io/Stata/very-short-introduction/very-short-introduction.html](https://agrogan1.github.io/Stata/very-short-introduction/very-short-introduction.html).
+
+One of the things I especially like about this *Very Short Introduction* is that it shows me--and hopefully helps me to show my students--the simple intuitive syntax of Stata that is incredibly consistent across a wide variety of statistical models and tasks: `command variables, options`.
 
 
 
