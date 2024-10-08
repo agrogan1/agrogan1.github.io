@@ -3,6 +3,7 @@
     "listing": "/blog.html",
     "items": [
       "/posts/teaching/index.html",
+      "/posts/interactions-in-logistic-regression/index.html",
       "/posts/very-short-introduction-Stata/index.html",
       "/posts/stats-stuff/index.html",
       "/posts/tables-in-Stata/index.html",

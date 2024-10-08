@@ -1,0 +1,17 @@
+---
+title: "Interactions in Logistic Regression"
+subtitle: "More complicated than you would think"
+author: "Andy Grogan-Kaylor" 
+date: "2024-10-8"
+categories: [stats, Stata, teaching]
+image: "interactions.png"
+---
+
+This is just a placeholder post to share a link to my materials on interactions in logistic regression, to help students and others find it: [https://agrogan1.github.io/newstuff/categorical/logistic-interactions-2/logistic-interactions-2.html](https://agrogan1.github.io/newstuff/categorical/logistic-interactions-2/logistic-interactions-2.html).
+
+
+
+
+
+
+
