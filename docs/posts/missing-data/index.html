@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Andy Grogan-Kaylor">
+<meta name="dcterms.date" content="2024-10-14">
 
-<title>Andrew Grogan-Kaylor - Home</title>
+<title>Andrew Grogan-Kaylor - Missing Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,48 +22,28 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -89,38 +71,52 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
-<script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
 
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
-<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
-
-<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
-
-<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
-
-<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
-
-<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
-
-<script src="site_libs/leaflet-binding-2.2.1/leaflet.js"></script>
-
-<script src="site_libs/leaflet-providers-2.0.0/leaflet-providers_2.0.0.js"></script>
-
-<script src="site_libs/leaflet-providers-plugin-2.2.1/leaflet-providers-plugin.js"></script>
-
-
-
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Andrew Grogan-Kaylor - Home">
-<meta property="og:description" content="">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Andrew Grogan-Kaylor - Missing Data">
+<meta property="og:description" content="An Evolving Blog Post on a Complicated Issue">
+<meta property="og:image" content="puzzle-piece.png">
 <meta property="og:site_name" content="Andrew Grogan-Kaylor">
-<meta name="twitter:title" content="Andrew Grogan-Kaylor - Home">
-<meta name="twitter:description" content="">
-<meta name="twitter:card" content="summary">
-<meta name="citation_title" content="Home">
+<meta name="twitter:title" content="Andrew Grogan-Kaylor - Missing Data">
+<meta name="twitter:description" content="An Evolving Blog Post on a Complicated Issue">
+<meta name="twitter:image" content="puzzle-piece.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="citation_title" content="Missing Data">
+<meta name="citation_author" content="Andy Grogan-Kaylor">
+<meta name="citation_publication_date" content="2024-10-14">
+<meta name="citation_cover_date" content="2024-10-14">
+<meta name="citation_year" content="2024">
+<meta name="citation_online_date" content="2024-10-14">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience;,citation_abstract=Adverse Childhood Experiences (ACEs) such as child abuse are related to poor health outcomes. Spanking has indicated a similar association with health outcomes, but to date has not been considered an ACE. Physical and emotional abuse have been shown in previous research to correlate highly and may be similar in nature to spanking. To determine if spanking should be considered an ACE, this study aimed to examine 1): the grouping of spanking with physical and emotional abuse; and 2) if spanking has similar associations with poor adult health problems and accounts for additional model variance. Adult mental health problems included depressive affect, suicide attempts, moderate to heavy drinking, and street drug use. Data were from the CDC-Kaiser ACE study (N = 8316, response rate = 65;,citation_author=Tracie O. Afifi;,citation_author=Derek Ford;,citation_author=Elizabeth T. Gershoff;,citation_author=Melissa Merrick;,citation_author=Andrew Grogan-Kaylor;,citation_author=Katie A. Ports;,citation_author=Harriet L. MacMillan;,citation_author=George W. Holden;,citation_author=Catherine A. Taylor;,citation_author=Shawna J. Lee;,citation_author=Robbyn Peters Bennett;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_doi=10.1016/j.chiabu.2017.01.014;,citation_isbn=0145-2134;,citation_issn=18737757;,citation_volume=71;,citation_journal_title=Child Abuse and Neglect;">
 <meta name="citation_reference" content="citation_title=The optics of Ibn al-Haytham books IV-V: On reflection and images seen by reflection;,citation_author=Alhazen;,citation_editor=J. P. Hogendijk;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_series_title=Warburg institute studies and texts; 8;">
@@ -165,11 +161,11 @@ div.csl-indent {
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Andrew Grogan-Kaylor</span>
     </a>
   </div>
@@ -180,7 +176,7 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -188,15 +184,15 @@ div.csl-indent {
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./teaching.html"> 
+    <a class="nav-link" href="../../teaching.html"> 
 <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./research.html"> 
+    <a class="nav-link" href="../../research.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./stats-stuff.html"> 
+    <a class="nav-link" href="../../stats-stuff.html"> 
 <span class="menu-text">Stats Stuff</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -231,11 +227,11 @@ div.csl-indent {
 <span class="menu-text">Mapping/GIS</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html"> 
+    <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blog-ish Posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About Me</span></a>
   </li>  
 </ul>
@@ -247,122 +243,123 @@ div.csl-indent {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Missing Data</h1>
+            <p class="subtitle lead">An Evolving Blog Post on a Complicated Issue</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">stats</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Andy Grogan-Kaylor </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 14, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Home</h1>
-</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
 
 
-</header>
-
-
-<style>
-.leaflet {
-    margin: auto;
-}
-</style>
-<div class="cell" data-layout-align="center">
+<p>Dealing with missing data is a complex issue. This is an evolving blog post on approaches to this issue.</p>
+<p>In the simulated data below, there are several missing values in the first few rows of data.</p>
+<div class="cell">
+<div id="tbl-simulated-data" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-simulated-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Simulated Data
+</figcaption>
+<div aria-describedby="tbl-simulated-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="htmlwidget-bb9972450955c2ab86d7" style="width:50%;height:288px;" class="leaflet html-widget "></div>
-<script type="application/json" data-for="htmlwidget-bb9972450955c2ab86d7">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[0,0],1.25,[]],"calls":[{"method":"addProviderTiles","args":["Esri.WorldImagery",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]}]},"evals":[],"jsHooks":[]}</script>
-<p>Countries of the World</p>
+<table class="do-not-create-environment cell table table-sm table-striped small">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 6%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">x</th>
+<th style="text-align: center;">z</th>
+<th style="text-align: center;">y</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">17.57</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">24.84</td>
+<td style="text-align: center;">NA</td>
+<td style="text-align: center;">23.17</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.7685</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-4.166</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">22.19</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">11.14</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">13.07</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">13.03</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4.508</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">6.433</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
-<p>My interests are in developing more knowledge to reduce violence against children and Adverse Childhood Experiences (ACEs), with the aim of improving child and family well-being. It is my hope that a better understanding of how to reduce violence against children, and how to reduce ACEs, will contribute to a better understanding of how to improve mental health and well-being across the lifespan. In this research I try to understand the family and community origins of aggression, antisocial behavior, anxiety and depression across diverse communities and contexts. My current research focuses on parenting and child development using international data. I try to understand these issues within the context of current conversations about children’s rights.</p>
-<p>A particular focus of my work has been to examine the outcomes of physical punishment.</p>
-<blockquote class="blockquote">
-<p>“Corporal punishment is the most common form of violence against children worldwide, leading to the injury and death of thousands of children each year. Its very widespread social acceptance means that a level of violence in childrearing is normalised, entrenching children’s low status and paving the way for other forms of violence and mistreatment.” <span class="citation" data-cites="CP10KeyMessages2022">(<a href="#ref-CP10KeyMessages2022" role="doc-biblioref">End Violence Against Children &amp; End Corporal Punishment, 2022</a>)</span></p>
-</blockquote>
-<blockquote class="blockquote">
-<p>“The magnitude of violence against children is staggering. Globally, the most pervasive form of violence against children is corporal punishment. Because it often occurs in the confines of homes and other settings where children live, study and play, it is largely hidden and challenging to detect. Worldwide, it is estimated that nearly one billion children are hit, slapped, spanked, pinched, or otherwise physically punished regularly by their parents, caregivers, teachers, or other trusted adults, the same individuals responsible for nurturing, protecting, and educating them <span class="citation" data-cites="UNICEF2017 WHO2020">(<a href="#ref-UNICEF2017" role="doc-biblioref">UNICEF, 2017</a>; <a href="#ref-WHO2020" role="doc-biblioref">World Health Organization, 2020</a>)</span>.” <span class="citation" data-cites="StewartTufescu2023">(<a href="#ref-StewartTufescu2023" role="doc-biblioref">Stewart-Tufescu, 2023</a>)</span></p>
-</blockquote>
-<p>Our meta-analytic review of 50 years of research on the outcomes of physical punishment <span class="citation" data-cites="Gershoff2016">(<a href="#ref-Gershoff2016" role="doc-biblioref">Gershoff &amp; Grogan-Kaylor, 2016</a>)</span> demonstrated that physical punishment is associated with a wide variety of negative outcomes [<a href="https://agrogan1.github.io/research/cp/CP-meta.html"><em>learn more</em></a>], and has been part of several national level policy discussions on parenting. In 2018, the American Academy of Pediatrics passed a policy statement discouraging the use of physical punishment of children <span class="citation" data-cites="Sege2019">(<a href="#ref-Sege2019" role="doc-biblioref">Sege et al., 2019</a>)</span>. Our meta-analysis was cited in that policy statement. Referring to our work, the policy statement indicated that “A 2016 meta-analysis showed that current literature does not support the finding of benefit from physical punishment in the long-term.” Similarly, in early 2019, the American Psychological Association also passed a resolution discouraging the use of physical punishment <span class="citation" data-cites="AmericanPsychologicalAssociation2019">(<a href="#ref-AmericanPsychologicalAssociation2019" role="doc-biblioref">American Psychological Association, 2019</a>)</span>. This policy statement also cited our meta-analysis.</p>
-<p>Some research suggests that the effects of spanking–as well as other Adverse Childhood Experiences–may persist well into adulthood <span class="citation" data-cites="Gershoff2016 Merrick2017 Afifi2017">(<a href="#ref-Afifi2017" role="doc-biblioref">Afifi et al., 2017</a>; <a href="#ref-Gershoff2016" role="doc-biblioref">Gershoff &amp; Grogan-Kaylor, 2016</a>; <a href="#ref-Merrick2017" role="doc-biblioref">Merrick et al., 2017</a>)</span>. Additional quantitative work has demonstrated that the effects of spanking are evident even in contexts when physical punishment is used minimally, or when used in ostensibly “normative” ways. In a number of papers, we have investigated these associations <a href="./research.html">across diverse communities and countries</a>. Lastly, in additional papers, we have worked to demonstrate more “causally robust” associations between physical punishment and undesirable child outcomes using a variety of quantitative methods <span class="citation" data-cites="Cuartas2020 GroganKaylor2004 GroganKaylor2005 Ma2018 Ward2020">(e.g. <a href="#ref-Cuartas2020" role="doc-biblioref">Cuartas et al., 2020</a>; <a href="#ref-GroganKaylor2004" role="doc-biblioref">Grogan-Kaylor, 2004</a>, <a href="#ref-GroganKaylor2005" role="doc-biblioref">2005</a>; <a href="#ref-Ma2018" role="doc-biblioref">Ma et al., 2018</a>; <a href="#ref-Ward2020" role="doc-biblioref">Ward et al., 2020</a>)</span>.</p>
-<p>A more recent stream of research pays particular attention to parenting and child development <a href="./research.html#multiple-indicator-cluster-surveys-mics-unicef-data">across low and middle income countries (LMIC’s)</a>. Countries that are not high-income countries are under-represented in current social research <span class="citation" data-cites="Henrich2010">(<a href="#ref-Henrich2010" role="doc-biblioref">Henrich et al., 2010</a>)</span>, particularly research on parenting and child development <span class="citation" data-cites="Draper2022">(<a href="#ref-Draper2022" role="doc-biblioref">Draper et al., 2022</a>)</span>. We have examined the degree to which the association of particular parental discipline behaviors with child outcomes varies across a large number of countries. We have found some modest between country variation in these associations, but more importantly, have found a large degree of <em>consistency</em> in the degree to which parenting is associated with child outcomes across countries <span class="citation" data-cites="Pace2019 Ward2023">(<a href="#ref-Pace2019" role="doc-biblioref">Pace et al., 2019</a>; <a href="#ref-Ward2023" role="doc-biblioref">Ward et al., 2023</a>)</span>.</p>
-<p>Further, in this new stream of research, we examine a broader range of parenting behaviors, with a particular emphasis on “positive parenting” strategies <span class="citation" data-cites="Ward2022LCA Ward2023">(e.g. <a href="#ref-Ward2022LCA" role="doc-biblioref">Ward et al., 2022</a>, <a href="#ref-Ward2023" role="doc-biblioref">2023</a>)</span>. From this research, a positive discipline behavior that has emerged as being associated with better child outcomes is “explain[ing] why (child)’s behaviour was wrong.” <span class="citation" data-cites="Ward2023">(<a href="#ref-Ward2023" role="doc-biblioref">Ward et al., 2023</a>)</span></p>
-<p>I teach courses mostly in the area of statistics, quantitative methods and data visualization.</p>
+</figure>
+</div>
+</div>
+<p>Here are some possible approaches that we could employ with missing data.</p>
+<ol type="1">
+<li><strong>We could do nothing.</strong> Doing nothing would be easy. However, our sample size would be reduced because most analyses depend on complete case data. Also, missing data usually occur for a <em>reason</em>. Often respondents with missing data have the lowest incomes, are the most marginalized or discriminated against, and have histories with the most trauma or violence. Therefore relying on complete case analyses might introduce some amount of <em>bias</em>.</li>
+<li><strong>We could replace missing values with the mean.</strong> Replacing missing values with the mean would be easy. However, because respondents usually having missing data for a <em>reason</em>, replacing missing data with the mean would introduce <em>bias</em> into the data, and would also introduce <em>false certainty</em> into the data (p values would be artificially lowered).</li>
+<li><strong>We could use regression to impute the missing values from the complete cases.</strong> For example <span class="math inline">\(\hat{y} = \beta_0 + \beta_1 x + \beta_2 z\)</span>. This approach would be more difficult, but would be making use of the information in the covariates about the <em>reasons</em> for missing data, and would therefore reduce <em>bias</em>. However, by imputing a single value for each missing value, we would still be introducing <em>false certainty</em> into the data (p values would be artificially lowered).</li>
+<li><strong>We could perform multiple imputation.</strong> Multiple imputation would involve using regression to impute the missing values, but we would impute the missing values <em>multiple</em> times, each time introducing a small amount of random variation. This procedure would be more difficult–though readily available in most statistical software–and would both make use of the information in the covariates about the <em>reasons</em> for missing data, thus reducing bias. Further, by imputing the data multiple times, we would preserve the <em>uncertainty</em> around the estimates, thus making better estimates of p values.</li>
+</ol>
 
 
 
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-Afifi2017" class="csl-entry" role="listitem">
-Afifi, T. O., Ford, D., Gershoff, E. T., Merrick, M., Grogan-Kaylor, A., Ports, K. A., MacMillan, H. L., Holden, G. W., Taylor, C. A., Lee, S. J., &amp; Bennett, R. P. (2017). Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience. <em>Child Abuse and Neglect</em>, <em>71</em>, 24–31. <a href="https://doi.org/10.1016/j.chiabu.2017.01.014">https://doi.org/10.1016/j.chiabu.2017.01.014</a>
-</div>
-<div id="ref-AmericanPsychologicalAssociation2019" class="csl-entry" role="listitem">
-American Psychological Association. (2019). <em>Resolution on physical discipline of children by parents</em> [Report]. American Psychological Association. <a href="https://www.apa.org/about/policy/physical-discipline.pdf">https://www.apa.org/about/policy/physical-discipline.pdf</a>
-</div>
-<div id="ref-Cuartas2020" class="csl-entry" role="listitem">
-Cuartas, J., McCoy, D. C., Grogan-Kaylor, A., &amp; Gershoff, E. (2020). Physical punishment as a predictor of early cognitive development: Evidence from econometric approaches. <em>Developmental Psychology</em>. <a href="https://doi.org/10.1037/dev0001114">https://doi.org/10.1037/dev0001114</a>
-</div>
-<div id="ref-Draper2022" class="csl-entry" role="listitem">
-Draper, C. E., Barnett, L. M., Cook, C. J., Cuartas, J. A., Howard, S. J., McCoy, D. C., Merkley, R., Molano, A., Maldonado-Carreño, C., Obradovic, J., Scerif, G., Valentini, N. C., Venetsanou, F., &amp; Yousafzai, A. K. (2022). Publishing child development research from around the world: An unfair playing field resulting in most of the world’s child population under-represented in research. <em>Infant and Child Development</em>, <em>n/a</em>, e2375. <a href="https://doi.org/10.1002/icd.2375">https://doi.org/10.1002/icd.2375</a>
-</div>
-<div id="ref-CP10KeyMessages2022" class="csl-entry" role="listitem">
-End Violence Against Children, &amp; End Corporal Punishment. (2022). <em>Corporal punishment – 10 key messages</em> [Report]. <span>E</span>nd <span>C</span>orporal <span>P</span>unishment. <a href="https://www.end-violence.org/">https://www.end-violence.org/</a>
-</div>
-<div id="ref-Gershoff2016" class="csl-entry" role="listitem">
-Gershoff, E. T., &amp; Grogan-Kaylor, A. (2016). Spanking and child outcomes: Old controversies and new meta-analyses. <em>Journal of Family Psychology</em>, <em>30</em>, 453–469. <a href="https://doi.org/10.1037/fam0000191">https://doi.org/10.1037/fam0000191</a>
-</div>
-<div id="ref-GroganKaylor2004" class="csl-entry" role="listitem">
-Grogan-Kaylor, A. (2004). The effect of corporal punishment on antisocial behavior in children. <em>Social Work Research</em>, <em>28</em>, 153–162. <a href="https://doi.org/10.1093/swr/28.3.153">https://doi.org/10.1093/swr/28.3.153</a>
-</div>
-<div id="ref-GroganKaylor2005" class="csl-entry" role="listitem">
-Grogan-Kaylor, A. (2005). Relationship of corporal punishment and antisocial behavior by neighborhood. <em>Archives of Pediatrics &amp; Adolescent Medicine</em>, <em>159</em>, 938–942. <a href="https://doi.org/10.1001/archpedi.159.10.938">https://doi.org/10.1001/archpedi.159.10.938</a>
-</div>
-<div id="ref-Henrich2010" class="csl-entry" role="listitem">
-Henrich, J., Heine, S. J., &amp; Norenzayan, A. (2010). <span class="nocase">The weirdest people in the world?</span> <em>Behavioral and Brain Sciences</em>. <a href="https://doi.org/10.1017/S0140525X0999152X">https://doi.org/10.1017/S0140525X0999152X</a>
-</div>
-<div id="ref-Ma2018" class="csl-entry" role="listitem">
-Ma, J., Grogan-Kaylor, A., &amp; Lee, S. J. (2018). Associations of neighborhood disorganization and maternal spanking with children’s aggression: A fixed-effects regression analysis. <em>Child Abuse and Neglect</em>, <em>76</em>, 106–116. <a href="https://doi.org/10.1016/j.chiabu.2017.10.013">https://doi.org/10.1016/j.chiabu.2017.10.013</a>
-</div>
-<div id="ref-Merrick2017" class="csl-entry" role="listitem">
-Merrick, M. T., Ports, K. A., Ford, D. C., Afifi, T. O., Gershoff, E. T., &amp; Grogan-Kaylor, A. (2017). Unpacking the impact of adverse childhood experiences on adult mental health. <em>Child Abuse &amp; Neglect</em>, <em>69</em>, 10–19. <a href="https://doi.org/10.1016/j.chiabu.2017.03.016">https://doi.org/10.1016/j.chiabu.2017.03.016</a>
-</div>
-<div id="ref-Pace2019" class="csl-entry" role="listitem">
-Pace, G. T., Lee, S. J., &amp; Grogan-Kaylor, A. (2019). Spanking and young children’s socioemotional development in low- and middle-income countries. <em>Child Abuse and Neglect</em>, <em>88</em>, 84–95. <a href="https://doi.org/10.1016/j.chiabu.2018.11.003">https://doi.org/10.1016/j.chiabu.2018.11.003</a>
-</div>
-<div id="ref-Sege2019" class="csl-entry" role="listitem">
-Sege, R. D., Siegel, B. S., on Child Abuse, C., eglect, on Psychosocial Aspects, C., &amp; amily Health. (2019). Effective discipline to raise healthy children. <em>Pediatrics</em>, <em>143</em>, e20183609. <a href="https://doi.org/10.1542/peds.2018-3609">https://doi.org/10.1542/peds.2018-3609</a>
-</div>
-<div id="ref-StewartTufescu2023" class="csl-entry" role="listitem">
-Stewart-Tufescu, A. (2023). Corporal punishment: The global picture. <em>The Canadian Journal of Children’s Rights / Revue Canadienne Des Droits Des Enfants</em>, <em>10</em>. <a href="https://doi.org/10.22215/cjcr.v10i1">https://doi.org/10.22215/cjcr.v10i1</a>
-</div>
-<div id="ref-UNICEF2017" class="csl-entry" role="listitem">
-UNICEF. (2017). <em>A familiar face: Violence in the lives of children and adolescents</em> [Report]. UNICEF.
-</div>
-<div id="ref-Ward2023" class="csl-entry" role="listitem">
-Ward, K. P., Grogan-Kaylor, A. C., Ma, J., Pace, G., &amp; Lee, S. J. (2023). Associations between 11 parental discipline behaviors and child outcomes across 60 countries. <em>BMJ Open</em>. <a href="https://doi.org/10.1136/bmjopen-2021-058439">https://doi.org/10.1136/bmjopen-2021-058439</a>
-</div>
-<div id="ref-Ward2022LCA" class="csl-entry" role="listitem">
-Ward, K. P., Lee, S. J., Grogan-Kaylor, A. C., Ma, J., &amp; Pace, G. T. (2022). Patterns of caregiver aggressive and nonaggressive discipline toward young children in low- and middle-income countries: A latent class approach. <em>Child Abuse &amp; Neglect</em>, <em>128</em>. https://doi.org/<a href="https://doi.org/10.1016/j.chiabu.2022.105606">https://doi.org/10.1016/j.chiabu.2022.105606</a>
-</div>
-<div id="ref-Ward2020" class="csl-entry" role="listitem">
-Ward, K. P., Lee, S. J., Pace, G. T., Grogan-Kaylor, A., &amp; Ma, J. (2020). Attachment style and the association of spanking and child externalizing behavior. <em>Academic Pediatrics</em>, <em>20</em>, 501–507. <a href="https://doi.org/10.1016/j.acap.2019.06.017">https://doi.org/10.1016/j.acap.2019.06.017</a>
-</div>
-<div id="ref-WHO2020" class="csl-entry" role="listitem">
-World Health Organization. (2020). <em>Global status report on preventing violence against children 2020</em> [Report]. <span>World Health Organization</span>. <a href="https://www.unicef.org/sites/default/files/2020-06/Global-status-report-on-preventing-violence-against-children-2020.pdf">https://www.unicef.org/sites/default/files/2020-06/Global-status-report-on-preventing-violence-against-children-2020.pdf</a>
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
