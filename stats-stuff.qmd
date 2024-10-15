@@ -176,10 +176,12 @@ listing:
       categories: [stats, interactive]
     - title: "Correlation"
       path: https://agrogan.shinyapps.io/correlation_demo/
+      image: correlation.png
       categories: [stats, interactive]
     - title: "Thinking about Correlations"
       path: https://agrogan.shinyapps.io/thinking_about_correlations/
-      categrories: [stats, interactive]
+      image: correlation.png
+      categories: [stats, interactive]
     - title: "Cohen's d Calculator"
       path: https://agrogan.shinyapps.io/es_calculator/
       categories: [stats, interactive]
