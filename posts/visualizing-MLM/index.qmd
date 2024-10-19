@@ -2,15 +2,15 @@
 title: "Visualizing Multilevel Models"
 subtitle: "An In Development Tutorial"
 author: "Andy Grogan-Kaylor"
-date: "2024-9-27"
+date: "2024-10-19"
 categories: [stats, dataviz, multilevel, Stata]
 ---
 
-I have developed a book draft on multilevel modeling, entitled [*Multilevel Thinking*](https://agrogan1.github.io/multilevel-thinking/). The book draft discusses multilevel modeling in the context of cross cultural, or international, research. 
+I have developed a book draft on multilevel modeling, entitled *Multilevel Thinking*. The book draft discusses multilevel modeling in the context of cross cultural, or international, research. 
 
-I have been thinking more about one of the ideas in that book draft: [multilevel models as the *exploration* of variation and diversity](https://agrogan1.github.io/multilevel-thinking/conceptual-framework.html#sec-studyvariation).
+I have been thinking more about one of the ideas in that book draft:  multilevel models as the *exploration* of variation and diversity.
 
-With those ideas in mind, I am developing a [tutorial on visualizing multilevel models](https://agrogan1.github.io/multilevel/visualizing-MLM/visualizing-MLM.html). 
+With those ideas in mind, I have developed a [tutorial on visualizing multilevel models](https://agrogan1.github.io/multilevel/visualizing-MLM/visualizing-MLM.html). (I've been working on an alternative version in [Slide Show Format](https://agrogan1.github.io/multilevel/visualizing-MLM/visualizing-MLM-slidy.html))
 
 ![Small Multiples](mysmallmultiples.png)
 
