@@ -2,7 +2,7 @@
 title: "Visualizing Multilevel Models"
 subtitle: "An In Development Tutorial"
 author: "Andy Grogan-Kaylor"
-date: "2024-10-19"
+date: "2024-10-21"
 categories: [stats, dataviz, multilevel, Stata]
 ---
 
@@ -10,7 +10,9 @@ I have developed a book draft on multilevel modeling, entitled *Multilevel Think
 
 I have been thinking more about one of the ideas in that book draft:  multilevel models as the *exploration* of variation and diversity.
 
-With those ideas in mind, I have developed a [tutorial on visualizing multilevel models](https://agrogan1.github.io/multilevel/visualizing-MLM/visualizing-MLM.html). (I've been working on an alternative version in [Slide Show Format](https://agrogan1.github.io/multilevel/visualizing-MLM/visualizing-MLM-slidy.html))
+With those ideas in mind, I have developed a [tutorial on visualizing multilevel models](https://agrogan1.github.io/multilevel/visualizing-MLM/visualizing-MLM.html). 
+
+I've been working on an alternative version in [Slide Show Format](https://agrogan1.github.io/multilevel/visualizing-MLM/visualizing-MLM-slidy.html). Use the **right arrow** and **left arrow** to scroll through the presentation. Use **b** to make text bigger, and **s** to make text smaller. Press **c** for a table of contents.
 
 ![Small Multiples](mysmallmultiples.png)
 
