@@ -23,23 +23,10 @@ listing:
       path: https://agrogan1.github.io/multilevel/visualizing-MLM/visualizing-MLM.html
       image: mysmallmultiples.png
       categories: [multilevel, dataviz, handout]
-    - title: "Multilevel Thinking"
-      path: https://agrogan1.github.io/multilevel-thinking/
-      image: https://agrogan1.github.io/multilevel-thinking/bookcover.png
-      categories: [multilevel, book]      
-    - title: "Multilevel Multilingual"
-      path: https://agrogan1.github.io/multilevel-multilingual/
-      image: multilevel-multilingual.png
-      categories: [multilevel, book]
-    - title: "Multilevel Visualization"
-      path: https://agrogan1.github.io/multilevel-visualization/
-      image: multilevel-visualization.png
-      categories: [multilevel, book, dataviz]
     - title: "Categorical Data Analysis"
       path: https://agrogan1.github.io/newstuff/categorical/
       image: nautilus-new.png
       categories: [categorical, course]
-    
 ---
     
     

@@ -2,9 +2,10 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/visualizing-MLM/index.html",
       "/posts/teaching/index.html",
       "/posts/stats-stuff/index.html",
+      "/posts/visualizing-MLM/index.html",
+      "/posts/multilevel-workshop/index.html",
       "/posts/missing-data/index.html",
       "/posts/interactions-in-logistic-regression/index.html",
       "/posts/very-short-introduction-Stata/index.html",
@@ -16,7 +17,6 @@
       "/posts/tables-Stata-SEM/index.html",
       "/posts/discipline-GII/index.html",
       "/posts/mathematics-is-my-secret/index.html",
-      "/posts/multilevel-workshop/index.html",
       "/posts/multiple-principled-solutions/index.html",
       "/posts/Simpsons-paradox-R/index.html",
       "/posts/multilevel-multilingual/index.html",

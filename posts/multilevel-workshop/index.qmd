@@ -2,12 +2,12 @@
 title: "Multilevel Workshop"
 subtitle: "An In-Development Workshop on Multilevel Modeling"
 author: "Andy Grogan-Kaylor"
-date: "2024-7-31"
+date: "2024-10-15"
 categories: [stats, multilevel, book, teaching]
 image: "multilevel-workshop.png"
 ---
 
-I have developed a set of workshop materials based upon my draft book on multilevel modeling. The book is entitled [*Multilevel Thinking*](https://agrogan1.github.io/multilevel-thinking/). The book draft discusses multilevel modeling in the context of cross cultural, or international, research. 
+I have developed a set of workshop materials based upon my draft book on multilevel modeling. The book is entitled *Multilevel Thinking*. The book draft discusses multilevel modeling in the context of cross cultural, or international, research. 
 
 The workshop materials are here: [https://agrogan1.github.io/multilevel-workshop/](https://agrogan1.github.io/multilevel-workshop/)
 
