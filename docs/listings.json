@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/interactions/index.html",
       "/posts/teaching/index.html",
       "/posts/stats-stuff/index.html",
       "/posts/visualizing-MLM/index.html",
