@@ -2,9 +2,10 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/interactions/index.html",
+      "/posts/mediation/index.html",
       "/posts/teaching/index.html",
       "/posts/stats-stuff/index.html",
+      "/posts/interactions/index.html",
       "/posts/visualizing-MLM/index.html",
       "/posts/multilevel-workshop/index.html",
       "/posts/missing-data/index.html",
