@@ -6,7 +6,9 @@ categories: [stats, teaching]
 image: "gears.png"
 ---
 
-A quick placeholder post to share some thoughts on statistical mediation: [https://agrogan1.github.io/teaching/mediation/mediation.html](https://agrogan1.github.io/teaching/mediation/mediation.html)
+A quick placeholder post to share some thoughts on statistical mediation: 
+
+[https://agrogan1.github.io/teaching/mediation/mediation.html](https://agrogan1.github.io/teaching/mediation/mediation.html)
 
 
 

@@ -6,7 +6,11 @@ categories: [stats, Bayes, multilevel]
 image: "Bayestalk.png"
 ---
 
-Last Fall, I gave a talk on Bayesian statistics to a group of PHD students at Michigan. The slides are display below, but here is a link to the fullscreen version:  [https://agrogan1.github.io/Bayes/Bayestalk/Bayestalk.html](https://agrogan1.github.io/Bayes/Bayestalk/Bayestalk.html).
+Last Fall, I gave a talk on Bayesian statistics to a group of PHD students at Michigan. 
+
+The slides are display below, but here is a link to the fullscreen version:
+
+[https://agrogan1.github.io/Bayes/Bayestalk/Bayestalk.html](https://agrogan1.github.io/Bayes/Bayestalk/Bayestalk.html).
 
 
 ```{r}
