@@ -2,10 +2,6 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/science-as-a-human-activity/index.html",
-      "/posts/complexity-hidden-inside-simplicity-2/index.html",
-      "/posts/math/index.html",
-      "/posts/all-models-are-wrong/index.html",
       "/posts/teaching/index.html",
       "/posts/stats-stuff/index.html",
       "/posts/mediation/index.html",
@@ -38,7 +34,6 @@
       "/posts/LaoPDR-is-66/index.html",
       "/posts/how-to-choose-a-chart-a-visual-guide-with-Stata/index.html",
       "/posts/ArcGIS-storymaps/index.html",
-      "/posts/best-teaching-advice/index.html",
       "/posts/theory/index.html",
       "/posts/updated-Michigan-colors-for-Stata-graphs/index.html",
       "/posts/workflow/index.html",
