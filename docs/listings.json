@@ -10,6 +10,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/data-visualization-with-Stata/index.html",
       "/posts/stats-stuff/index.html",
       "/posts/teaching/index.html",
       "/posts/mediation/index.html",
@@ -34,7 +35,6 @@
       "/posts/working-truths/index.html",
       "/posts/discipline-11-forms-storymap/index.html",
       "/posts/wonderful-examples/index.html",
-      "/posts/data-visualization-with-Stata/index.html",
       "/posts/discipline-11-forms/index.html",
       "/posts/Bayestalk/index.html",
       "/posts/love-words/index.html",
