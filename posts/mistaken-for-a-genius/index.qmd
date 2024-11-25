@@ -1,0 +1,34 @@
+---
+title: "I’m Getting Tired Of Being Mistaken For A Genius"
+subtitle: "More From Julia Schanen"
+author:  Andy Grogan-Kaylor 
+date: "2024-11-25"
+categories: [teaching, stats, science]
+image: mandelbrot.png
+---
+
+Another quote that has recently struck me from the wonderful essay / poem by Julia Schanen [@Schanen2021]:
+
+> "I’m getting tired of being mistaken for a genius,
+>
+> when I’m just a plain old nerd.
+>
+> Struggling, stumbling, pushing, experimenting.
+>
+> Trying to get more of something that makes me feel
+>
+> fascinated and uncomfortable,
+>
+> hopeless,
+>
+> stupid,
+>
+> excited,
+>
+> real." [@Schanen2021]
+
+
+
+
+
+
