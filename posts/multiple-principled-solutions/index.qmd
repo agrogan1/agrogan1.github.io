@@ -2,7 +2,7 @@
 title: "Multiple Principled Solutions"
 author: "Andy Grogan-Kaylor" 
 date: "2024-11-27"
-categories: [stats, workflow, social justice, science, teaching]
+categories: [stats, workflow, social justice, science, teaching, theory]
 image: "northernlights.png"
 ---
 
@@ -10,7 +10,7 @@ For me, a recurring idea about statistical workflows is that there are certainly
 
 For example, I would not want to write the paper that says that smoking prevents lung cancer, nor would I want to write a paper saying spanking is good for children. 
 
-That being said, I think there are often *multiple principled ways forward*.
+That being said, I think there are often *multiple principled ways forward* or *multiple principled solutions*.
 
 Often the key is not so much to make the 100% correct decision, but to make one of *several possible principled decisions*. 
 

@@ -11,6 +11,7 @@
     "listing": "/blog.html",
     "items": [
       "/posts/teaching/index.html",
+      "/posts/multiple-principled-solutions/index.html",
       "/posts/stats-stuff/index.html",
       "/posts/plain-old-nerd/index.html",
       "/posts/data-visualization-with-Stata/index.html",
@@ -29,7 +30,6 @@
       "/posts/tables-Stata-SEM/index.html",
       "/posts/discipline-GII/index.html",
       "/posts/mathematics-is-my-secret/index.html",
-      "/posts/multiple-principled-solutions/index.html",
       "/posts/Simpsons-paradox-R/index.html",
       "/posts/multilevel-multilingual/index.html",
       "/posts/multilevel-visualization/index.html",
