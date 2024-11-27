@@ -15,8 +15,8 @@ title: "Home"
 
 library(leaflet)
 
-leaflet(width = "50%") %>%
-  setView(0, 0, zoom = 1.25) %>%
+leaflet(width = "100%") %>%
+  setView(0, 0, zoom = 1.5) %>%
   # addTiles() %>%
   addProviderTiles(providers$Esri.WorldImagery) 
 
