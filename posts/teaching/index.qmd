@@ -3,7 +3,7 @@ title: "There Is Also Relevant Material in Teaching"
 author:  Andy Grogan-Kaylor 
 date: "today"
 categories: [stats, dataviz, multilevel, Bayes, R, Stata]
-image: "northernlights.png"
+image: "forest.png"
 ---
 
 In addition to these blog posts, there is also sometimes relevant material in [Teaching](https://agrogan1.github.io/teaching.html)

@@ -3,8 +3,8 @@
     "listing": "/blog.html",
     "items": [
       "/posts/teaching/index.html",
-      "/posts/multiple-principled-solutions/index.html",
       "/posts/stats-stuff/index.html",
+      "/posts/multiple-principled-solutions/index.html",
       "/posts/plain-old-nerd/index.html",
       "/posts/data-visualization-with-Stata/index.html",
       "/posts/mediation/index.html",
