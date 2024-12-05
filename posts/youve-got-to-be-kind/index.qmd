@@ -1,34 +1,13 @@
 ---
-title: "Just a Plain Old Nerd"
-subtitle: "More From Julia Schanen"
+title: "You've Got To Be Kind"
+subtitle: "Wisdom From Kurt Vonnegut"
 author:  Andy Grogan-Kaylor 
-date: "2024-11-25"
+date: "2024-12-5"
 categories: [teaching, stats, science]
-image: mandelbrot.png
+image: "positiveparenting.png"
 ---
 
-Another quote that has recently struck me from the wonderful essay / poem by Julia Schanen [@Schanen2021]:
-
-> "I’m getting tired of being mistaken for a genius,
->
-> when I’m just a plain old nerd.
->
-> Struggling, stumbling, pushing, experimenting.
->
-> Trying to get more of something that makes me feel
->
-> fascinated and uncomfortable,
->
-> hopeless,
->
-> stupid,
->
-> excited,
->
-> real." [@Schanen2021]
-
-
-
+> "Hello babies. Welcome to Earth. It’s hot in the summer and cold in the winter. It’s round and wet and crowded. On the outside, babies, you’ve got a hundred years here. There’s only one rule that I know of, babies-“G** d*** it, you’ve got to be kind." [@Vonnegut1965]
 
 
 
