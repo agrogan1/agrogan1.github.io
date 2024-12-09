@@ -2,10 +2,11 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/youve-got-to-be-kind/index.html",
-      "/posts/how-to-choose-a-chart-a-visual-guide-with-Stata/index.html",
+      "/posts/theory/index.html",
       "/posts/teaching/index.html",
       "/posts/stats-stuff/index.html",
+      "/posts/youve-got-to-be-kind/index.html",
+      "/posts/how-to-choose-a-chart-a-visual-guide-with-Stata/index.html",
       "/posts/discipline-11-forms-storymap/index.html",
       "/posts/multiple-principled-solutions/index.html",
       "/posts/plain-old-nerd/index.html",
@@ -36,7 +37,6 @@
       "/posts/complexity-hidden-inside-simplicity/index.html",
       "/posts/LaoPDR-is-66/index.html",
       "/posts/ArcGIS-storymaps/index.html",
-      "/posts/theory/index.html",
       "/posts/updated-Michigan-colors-for-Stata-graphs/index.html",
       "/posts/workflow/index.html",
       "/posts/truth/index.html",
