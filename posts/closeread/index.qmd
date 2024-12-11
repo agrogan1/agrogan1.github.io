@@ -1,9 +1,9 @@
 ---
-title: "11 Forms of Discipline"
+title: "Associations between 11 parental discipline behaviors and child outcomes across 60 countries"
 subtitle: "*scrollytelling* using `closeread`"
 author:  Andy Grogan-Kaylor 
 date: "2024-12-11"
-categories: [multilevel, corporal punishment, scrollytelling]
+categories: [multilevel, Bayes, MICS, corporal punishment, scrollytelling]
 image: "positiveparenting.png"
 ---
 
