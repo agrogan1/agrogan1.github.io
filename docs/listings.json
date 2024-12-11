@@ -2,9 +2,10 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/theory/index.html",
       "/posts/teaching/index.html",
       "/posts/stats-stuff/index.html",
+      "/posts/closeread/index.html",
+      "/posts/theory/index.html",
       "/posts/youve-got-to-be-kind/index.html",
       "/posts/how-to-choose-a-chart-a-visual-guide-with-Stata/index.html",
       "/posts/discipline-11-forms-storymap/index.html",

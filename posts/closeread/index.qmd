@@ -1,0 +1,15 @@
+---
+title: "11 Forms of Discipline"
+subtitle: "*scrollytelling* using `closeread`"
+author:  Andy Grogan-Kaylor 
+date: "2024-12-11"
+categories: [multilevel, corporal punishment, scrollytelling]
+image: "positiveparenting.png"
+---
+
+[`closeread`](https://closeread.dev/) is a new extension for [Quarto](https://quarto.org/) that allows one to present stories using *scrollytelling.*
+
+I have developed a *scrollytelling* page to present the results of [@Ward2023]:  [https://globalfamilies.quarto.pub/parenting/](https://globalfamilies.quarto.pub/parenting/).
+
+![positive parenting](positiveparenting.png)
+

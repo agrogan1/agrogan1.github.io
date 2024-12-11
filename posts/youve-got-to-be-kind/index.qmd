@@ -4,7 +4,7 @@ subtitle: "Wisdom From Kurt Vonnegut"
 author:  Andy Grogan-Kaylor 
 date: "2024-12-5"
 categories: [teaching, stats, science]
-image: "positiveparenting.png"
+image: "connections2.png"
 ---
 
 > "Hello babies. Welcome to Earth. It’s hot in the summer and cold in the winter. It’s round and wet and crowded. On the outside, babies, you’ve got a hundred years here. There’s only one rule that I know of, babies-“G** d*** it, you’ve got to be kind." [@Vonnegut1965]
