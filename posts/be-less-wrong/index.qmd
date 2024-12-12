@@ -1,0 +1,52 @@
+---
+title: "Be Less Wrong"
+author: "Andy Grogan-Kaylor"
+date: "today"
+categories: [science, social justice, stats]
+image: "mathblackboard.png"
+draft: true
+---
+
+```{r}
+
+library(ggplot2)
+
+```
+
+```{r}
+
+intervention <- seq(1,15) # intervention
+
+group <- rep(seq(1,5), each=3) # group
+
+index <- rep(seq(1,3), 5) # index within group
+
+e <- rnorm(15, 0, .25) # randomly distributed error
+
+outcome <- index + -.1 * intervention # + e
+
+group <- factor(group)
+
+mydata <- data.frame(intervention, group, outcome)
+
+```
+
+```{r}
+
+p0 <- ggplot(mydata,
+       aes(x = intervention,
+           y = outcome)) + 
+  geom_point(size = 5)+
+  geom_smooth(method="lm",
+              size = 2,
+              se = FALSE) +
+  scale_color_viridis_d(name = "group",
+                        option = "turbo") +
+  theme_minimal()
+
+p0 # replay
+
+p0 + aes(color = group)
+
+```
+
