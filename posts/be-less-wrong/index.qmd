@@ -3,9 +3,25 @@ title: "Be Less Wrong"
 author: "Andy Grogan-Kaylor"
 date: "today"
 categories: [science, social justice, stats]
-image: "mathblackboard.png"
+image: "math1.png"
 draft: true
 ---
+
+There are definite *realities* of suffering, exploitation, violence, discrimination, and other associated problems that we are trying to understand, and to reduce. 
+
+> "What we see and how we see is of course determined by our perspective, by the place from which we begin our examination of history; but it is determined also by reality itself." [@Martin-Baro1994B]
+
+We hope that our research will inform efforts to change these *realities*. Yet, at the same time we must recognize that our understandings are at best *iterative* and *contingent.* While we will never have a perfect understanding of social reality, we can always improve our understandings, and move in the direction of being *less wrong*.
+
+As @Silverman1998 wrote: 
+
+> "... there is no way to know when our observations about complex events in nature are complete. Our knowledge is finite, Karl Popper emphasised, but our ignorance is infinite. ... [W]e can never be certain about the consequences of our interventions, we can only narrow the area of uncertainty. This admission is not as pessimistic as it sounds: claims that resist repeated energetic challenges often turn out to be quite reliable. Such 'working truths' are the building blocks for the reasonably solid structures that support our everyday actions..." [@Silverman1998]
+
+This recalls the famous saying by the statistician George Box about statistical models, reported in many places, and well captured in the passage below by @Hand2014:
+
+> "In general, when building statistical models, we must not forget that the aim is to understand something about the real world. Or predict, choose an action, make a decision, summarize evidence, and so on, but always about the real world, not an abstract mathematical world: our models are not the reality—a point well made by George Box in his oft-cited remark that 'all models are wrong, but some are useful' (Box, 1979 in @MR0554183)." [@Hand2014]
+
+A key task then, of using quantitative methods is to use them to try to be progressively *less wrong* about the answers we are finding to important questions about improving human wellbeing. 
 
 ```{r}
 
@@ -44,8 +60,15 @@ p0 <- ggplot(mydata,
                         option = "turbo") +
   theme_minimal()
 
+```
+
+```{r}
+
 p0 # replay
 
+```
+
+```{r}
 p0 + aes(color = group)
 
 ```
