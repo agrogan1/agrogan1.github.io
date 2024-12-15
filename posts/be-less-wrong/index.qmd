@@ -1,7 +1,7 @@
 ---
 title: "Be Less Wrong"
 author: "Andy Grogan-Kaylor"
-date: "today"
+date: "2024-12-15"
 categories: [science, social justice, stats]
 image: "math1.png"
 draft: true
@@ -23,13 +23,20 @@ This recalls the famous saying by the statistician George Box about statistical 
 
 A key task then, of using quantitative methods is to use them to try to be progressively *less wrong* about the answers we are finding to important questions about improving human wellbeing. 
 
+Let's consider some simple visual models based upon some simulated data. Two key variables in this model are *intervention* (a treatment or program that we hope does some good), and the *outcome* (an improved or beneficial mental health or psychological outcome).
+
 ```{r}
 
+set.seed(1080)
+
 library(ggplot2)
+
+library(patchwork)
 
 ```
 
 ```{r}
+#| label: mydata
 
 intervention <- seq(1,15) # intervention
 
@@ -47,6 +54,7 @@ mydata <- data.frame(intervention, group, outcome)
 
 ```
 
+
 ```{r}
 
 p0 <- ggplot(mydata,
@@ -54,7 +62,104 @@ p0 <- ggplot(mydata,
            y = outcome)) + 
   geom_point(size = 5)+
   geom_smooth(method="lm",
-              size = 2,
+              linewidth = 2,
+              se = FALSE) +
+  scale_color_viridis_d(name = "group",
+                        option = "turbo") +
+  theme_minimal()
+
+```
+
+
+Here is a first model. What do these results say about the relationship of the *intervention* and the *outcome*?
+
+```{r}
+#| label: fig-p0
+
+p0 + # replay
+  labs(title = "A Simple Model of The Data",
+       subtitle = "What is the observed relationship between intervention and outcome?",
+       y = "beneficial mental health or psychological outcome")
+
+```
+
+These simple straightforward results suggest that the *intervention* is associated with a worsening of the *outcome*.
+
+::: {.callout-important}
+## The Intervention is *Not* Recommended
+
+Based upon these results we would *not* recommend using this intervention.  
+:::
+
+Let's now consider a slightly more complex model. In addition to examining the *intervention* and the *outcome*, we account for the fact that individuals come from different *groups*. This could be any kind of group, e.g. a racial, ethnic, religious, cultural, or economic group. 
+
+```{r}
+#| label: fig-p0-group
+
+p0 + 
+  aes(color = group) +
+  labs(title = "A Simple Model of The Data Accounting for Group Membership",
+       subtitle = "What is the observed relationship between intervention and outcome?",
+       y = "beneficial mental health or psychological outcome")
+
+
+```
+
+::: {.callout-important}
+## The Intervention is Recommended
+
+Our conclusion seems to have flipped! Based upon these results we *would* recommend using this intervention.  
+:::
+
+The fact that statistical results--and analogously visual results--can flip when more variables are accounted for is known as Simpson's Paradox [@Simpson1951]. Put briefly, and intuitively, our evidence based "story" can change--sometimes quite dramatically--as we add more and more factors to our model.[^multilevelstructure]
+
+[^multilevelstructure]: An analogous process can occur with multilevel data, in which there are often many groups. Failure to account for the grouping of the data can sometimes mean that our results are wrong, again sometimes quite dramatically [@Gelman2007; @Nieuwenhuis2015]. 
+
+::: {.callout-tip}
+## Include As Many Relevant Variables As You Can
+
+Failure to include all of the relevant variables in our model--whether that model is visual or statistical--may lead to very wrong conclusions.
+
+If those variables are observed, and included in our data set, it may be straightforward to build them into our model. If those variables are not observed, and not present in our data set, more complicated modeling strategies may be necessary.
+:::
+
+At first the scenario I've just presented seems almost like a trick, or a puzzle, designed to confound us, or to illustrate a convoluted statistical scenario. Yet, upon reflection, the scenario I've just presented is surprisingly plausible. 
+
+::: {.callout-tip}
+## A Thought Experiment
+
+Imagine a situation in which an intervention is administered based upon the situation in a local community. Quite possibly, the intervention might be given in communities where outcomes are less good. At the same time the intervention might be beneficial to individuals. Such a scenario would present us with exactly the data that we see reflected in @fig-p0 and @fig-p0-group.
+:::
+
+Let's think about one more of these scenarios. For the sake of parsimony, this time I'm going to present the two graphs together. 
+
+```{r}
+#| label: mydata2
+
+intervention <- seq(1,15) # intervention
+
+group <- rep(seq(1,5), each=3) # group
+
+index <- rep(seq(1,3), 5) # index within group
+
+e <- rnorm(15, 0, .25) # randomly distributed error
+
+outcome <- -1 * index + .05 * intervention # + e
+
+group <- factor(group)
+
+mydata2 <- data.frame(intervention, group, outcome)
+
+```
+
+```{r}
+
+p1 <- ggplot(mydata2,
+       aes(x = intervention,
+           y = outcome)) + 
+  geom_point(size = 5)+
+  geom_smooth(method="lm",
+              linewidth = 2,
               se = FALSE) +
   scale_color_viridis_d(name = "group",
                         option = "turbo") +
@@ -64,12 +169,41 @@ p0 <- ggplot(mydata,
 
 ```{r}
 
-p0 # replay
+p1A <- p1 + # replay
+  labs(title = "A Simple Model of The Data",
+       subtitle = "What is the observed relationship between intervention and outcome?")
 
 ```
 
 ```{r}
-p0 + aes(color = group)
+
+p1B <- p1 + 
+  aes(color = group) +
+  labs(title = "A Simple Model of The Data Accounting for Group Membership",
+       subtitle = "What is the observed relationship between intervention and outcome?")
+
 
 ```
+
+```{r}
+#| label: fig-p1-combined
+
+p1A / p1B
+
+```
+
+::: {.callout-tip}
+## Be Less Wrong
+
+My point? Simple models feel intuitive and have a commonsense appeal. Yet, with even slightly complicated social issues, simple models may be wrong.
+:::
+
+What I have illustrated here is only one set of ideas about how we need to complicate our quantitative thinking to try to be a little less wrong in thinking about social problems. Other more advanced statistical techniques may be seen as attempts to deal with other complications of the data, in an effort to be *less wrong*. 
+
+
+
+
+
+
+
 
