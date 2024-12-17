@@ -2,7 +2,7 @@
 title: "An Introduction to Bayesian Statistics"
 author: "Andy Grogan-Kaylor"
 date: "2024-5-12"
-categories: [stats, Bayes, multilevel]
+categories: [stats, Bayes, multilevel, Stata, R]
 image: "Bayestalk.png"
 ---
 

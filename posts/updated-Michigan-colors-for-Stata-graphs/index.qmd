@@ -2,7 +2,7 @@
 title: "Updated Michigan Colors for Stata Graphs"
 author: "Andy Grogan-Kaylor"
 date: "2024-3-17"
-categories: [stats, dataviz]
+categories: [stats, dataviz, Stata]
 ---
 
 I've updated my *Michigan Colors for Stata Graphs* at:  [https://agrogan1.github.io/Stata/michigan-graph-scheme/](https://agrogan1.github.io/Stata/michigan-graph-scheme/).

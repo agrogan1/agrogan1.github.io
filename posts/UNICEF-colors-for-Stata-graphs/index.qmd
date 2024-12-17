@@ -3,7 +3,7 @@ title: "Updated UNICEF Colors for Stata Graphs"
 author: "Andy Grogan-Kaylor"
 date: "2024-9-24"
 image: "UNICEFpalette.png"
-categories: [stats, dataviz]
+categories: [stats, dataviz, Stata]
 ---
 
 I've updated my *UNICEF Colors for Stata Graphs*, using the most recent version of official colors for UNICEF. 
