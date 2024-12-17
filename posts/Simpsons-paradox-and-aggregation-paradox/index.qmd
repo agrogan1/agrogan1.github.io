@@ -3,7 +3,7 @@ title: "Simpson's Paradox and The Aggregation Paradox"
 subtitle: "An evolving blog post"
 author: "Andy Grogan-Kaylor" 
 date: "2023-9-5"
-categories: [stats, multilevel]
+categories: [stats, multilevel, science, teaching]
 image: "fig-Simpson-1.png"
 ---
 
