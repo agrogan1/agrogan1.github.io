@@ -31,6 +31,8 @@ set.seed(1080)
 
 library(ggplot2)
 
+library(ggthemes)
+
 library(patchwork)
 
 ```
@@ -75,6 +77,7 @@ Here is a first model. What do these results say about the relationship of the *
 
 ```{r}
 #| label: fig-p0
+#| fig-dpi: 600
 
 p0 + # replay
   labs(title = "A Simple Model of The Data",
@@ -95,6 +98,7 @@ Let's now consider a slightly more complex model. In addition to examining the *
 
 ```{r}
 #| label: fig-p0-group
+#| fig-dpi: 600
 
 p0 + 
   aes(color = group) +
@@ -187,6 +191,8 @@ p1B <- p1 +
 
 ```{r}
 #| label: fig-p1-combined
+#| fig-dpi: 600
+#| fig-height: 6
 
 p1A / p1B
 

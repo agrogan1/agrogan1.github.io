@@ -10,6 +10,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/Simpsons-paradox-simple-visual-explanation/index.html",
       "/posts/stats-stuff/index.html",
       "/posts/teaching/index.html",
       "/posts/closeread/index.html",
@@ -36,8 +37,6 @@
       "/posts/discipline-GII/index.html",
       "/posts/mathematics-is-my-secret/index.html",
       "/posts/Simpsons-paradox-R/index.html",
-      "/posts/multilevel-multilingual/index.html",
-      "/posts/multilevel-visualization/index.html",
       "/posts/working-truths/index.html",
       "/posts/wonderful-examples/index.html",
       "/posts/discipline-11-forms/index.html",
@@ -73,7 +72,6 @@
       "/posts/Simpsons-paradox-and-aggregation-paradox/index.html",
       "/posts/bar-charts-and-pie-charts/index.html",
       "/posts/bignumber/index.html",
-      "/posts/Simpsons-paradox-simple-visual-explanation/index.html",
       "/posts/its-not-just-what-youre-born-with/index.html",
       "/posts/transcendental-etude/index.html",
       "/posts/why-cant-numbers-be-beautiful-too/index.html",
