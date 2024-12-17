@@ -1,13 +1,13 @@
 ---
 title: "Be Less Wrong"
 author: "Andy Grogan-Kaylor"
-date: "2024-12-15"
+date: "2024-12-17"
 categories: [science, social justice, stats]
 image: "math1.png"
 draft: true
 ---
 
-There are definite *realities* of suffering, exploitation, violence, discrimination, and other associated problems that we are trying to understand, and to reduce. 
+There are definite *realities* of abuse, neglect, suffering, exploitation, violence, discrimination, and other associated problems that we are trying to understand, and to reduce. 
 
 > "What we see and how we see is of course determined by our perspective, by the place from which we begin our examination of history; but it is determined also by reality itself." [@Martin-Baro1994B]
 
