@@ -1,5 +1,6 @@
 ---
 title: "Be Less Wrong"
+subtitle: "Why Use Advanced Quantitative Methods?"
 author: "Andy Grogan-Kaylor"
 date: "2024-12-17"
 categories: [science, social justice, stats]
