@@ -10,6 +10,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/complexity-hidden-inside-simplicity/index.html",
       "/posts/stats-stuff/index.html",
       "/posts/teaching/index.html",
       "/posts/Simpsons-paradox-simple-visual-explanation/index.html",
@@ -42,7 +43,6 @@
       "/posts/discipline-11-forms/index.html",
       "/posts/Bayestalk/index.html",
       "/posts/love-words/index.html",
-      "/posts/complexity-hidden-inside-simplicity/index.html",
       "/posts/LaoPDR-is-66/index.html",
       "/posts/ArcGIS-storymaps/index.html",
       "/posts/updated-Michigan-colors-for-Stata-graphs/index.html",
