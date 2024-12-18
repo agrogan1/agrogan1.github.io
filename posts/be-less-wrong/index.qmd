@@ -10,7 +10,36 @@ fig-height: 3
 fig-dpi: 600
 ---
 
-There are definite *realities* of abuse, neglect, suffering, exploitation, violence, discrimination, and other associated problems that we are trying to understand, and to reduce. 
+Across the globe, there are definite *realities* of abuse, neglect, suffering, exploitation, violence, discrimination, and other associated problems that we are trying to understand, and to reduce. 
+
+```{r}
+#| label: fig-globe
+
+library(plotly)
+
+mymap <- plot_geo() %>%
+  layout(geo = list(showland = TRUE, # show land
+                    landcolor = toRGB("darkgrey"), # land color
+                    showcountries = TRUE, # show countries
+                    showocean = FALSE, # show ocean
+                    oceancolor = "lightblue", # ocean color
+                    lataxis = list(showgrid = TRUE, # latitude options
+                                   gridcolor = toRGB("grey")),
+                    lonaxis = list(showgrid = TRUE, # longitude options
+                                   gridcolor = toRGB("grey")))) 
+
+# mymap # replay
+
+myglobe <- mymap %>% 
+  layout(geo = list(projection = list(type = 'orthographic',
+                                      rotation = list(lon = -45,
+                                                      lat = 0,
+                                                      roll = 0))))
+
+myglobe # replay
+
+```
+
 
 > "What we see and how we see is of course determined by our perspective, by the place from which we begin our examination of history; but it is determined also by reality itself." [@Martin-Baro1994B]
 
@@ -90,7 +119,7 @@ p0 + # replay
 
 These simple straightforward results suggest that the *intervention* is associated with a worsening of the *outcome*.
 
-::: {.callout-important}
+::: {.callout-important appearance="simple"}
 ## The Intervention is *Not* Recommended
 
 Based upon these results we would *not* recommend using this intervention.  
@@ -110,7 +139,7 @@ p0 +
 
 ```
 
-::: {.callout-important}
+::: {.callout-important appearance="simple"}
 ## The Intervention is Recommended
 
 Our conclusion seems to have flipped! Based upon these results we *would* recommend using this intervention.  
@@ -120,7 +149,7 @@ The fact that statistical results--and analogously visual results--can flip when
 
 [^multilevelstructure]: An analogous process can occur with *multilevel* data, in which there are often many groups. Failure to account for the grouping of the data can sometimes mean that our results are wrong, again sometimes quite dramatically [@Gelman2007; @Nieuwenhuis2015]. 
 
-::: {.callout-tip}
+::: {.callout-tip appearance="simple"}
 ## Include As Many Relevant Variables As You Can
 
 Failure to include all of the relevant variables in our model--whether that model is visual or statistical--may lead to very wrong conclusions.
@@ -130,7 +159,7 @@ If those variables are observed, and included in our data set, it may be straigh
 
 At first the scenario I've just presented seems almost like a trick, or a puzzle, designed to confound us, or to illustrate a convoluted statistical scenario. Yet, upon reflection, the scenario I've just presented is surprisingly plausible. 
 
-::: {.callout-tip}
+::: {.callout-tip appearance="simple"}
 ## A Thought Experiment
 
 Imagine a situation in which an intervention is administered based upon the situation in a local community. Quite possibly, the intervention might be given in communities where outcomes are less good. At the same time the intervention might be beneficial to individuals. Such a scenario would present us with exactly the data that we see reflected in @fig-p0 and @fig-p0-group.
@@ -206,7 +235,7 @@ p1B
 
 ```
 
-::: {.callout-tip}
+::: {.callout-tip appearance="simple"}
 ## Be Less Wrong
 
 My point? Simple models feel intuitive and have a commonsense appeal. Yet, with even slightly complicated social issues, simple models may be wrong.
