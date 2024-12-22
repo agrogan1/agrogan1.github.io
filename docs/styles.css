@@ -19,4 +19,6 @@ blockquote {
   font-size: 75%;
   font-weight: bold;
 }
-
+div.cell-output-display {
+  color: #00274C;
+}
