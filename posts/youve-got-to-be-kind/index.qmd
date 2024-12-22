@@ -7,6 +7,8 @@ categories: [teaching, stats, science]
 image: "connections2.png"
 ---
 
+A thought that has come up a lot recently with regard to teaching and research:
+
 > "Hello babies. Welcome to Earth. It’s hot in the summer and cold in the winter. It’s round and wet and crowded. On the outside, babies, you’ve got a hundred years here. There’s only one rule that I know of, babies-“G** d*** it, you’ve got to be kind." [@Vonnegut1965]
 
 
