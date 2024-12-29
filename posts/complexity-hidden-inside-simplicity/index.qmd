@@ -9,7 +9,7 @@ image: nautilus-new.png
 
 I have been thinking a lot lately about the idea that statistical questions are often seemingly simple questions, that contain complex answers, or answers that have complex operationalizations.
 
-Without getting into a lot of detail in this blog post, it is also an issue that comes up a lot in teaching. I've written up some more detailed examples of this kind of issue [here](https://agrogan1.github.io/posts/multiple-principled-solutions/index.html) and [here](https://agrogan1.github.io/posts/Simpsons-paradox-simple-visual-explanation/index.html).
+Without getting into a lot of detail in this blog post, it is also an issue that comes up a lot in teaching. I've written up some more detailed examples of this kind of issue [here](https://agrogan1.github.io/posts/multiple-principled-solutions/index.html) and [here](https://agrogan1.github.io/posts/Simpsons-paradox-simple-visual-explanation/index.html) and [here](https://globalfamilies.quarto.pub/be-less-wrong/).
 
 One thing that I often say in teaching is that because so many of the outcomes we study are so important–and are often unequally allocated–we want to make sure our answers are as precise, and as close to correct, as we can make them. It turns out that failing to understand some of the hidden complexities of statistical thinking may lead to providing very wrong answers to important questions.
 
