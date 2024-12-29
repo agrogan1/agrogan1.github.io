@@ -3,13 +3,13 @@ title: "Associations between 11 parental discipline behaviors and child outcomes
 subtitle: "*scrollytelling* using `closeread`"
 author:  Andy Grogan-Kaylor 
 date: "2024-12-11"
-categories: [multilevel, Bayes, MICS, corporal punishment, scrollytelling]
+categories: [multilevel, Bayes, MICS, corporal punishment, scrollytelling, closeread]
 image: "positiveparenting.png"
 ---
 
 [`closeread`](https://closeread.dev/) is a new extension for [Quarto](https://quarto.org/) that allows one to present stories using *scrollytelling.*
 
-I have developed a *scrollytelling* page to present the results of [@Ward2023]:  [https://globalfamilies.quarto.pub/parenting/](https://globalfamilies.quarto.pub/parenting/).
+I have developed a *scrollytelling* page to present the results of an article that we published last year, [@Ward2023]:  [https://globalfamilies.quarto.pub/parenting/](https://globalfamilies.quarto.pub/parenting/).
 
 ![positive parenting](positiveparenting.png)
 
