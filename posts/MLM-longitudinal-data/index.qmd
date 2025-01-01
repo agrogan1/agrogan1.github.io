@@ -1,6 +1,5 @@
 ---
-title: "Visualizing Multilevel Models"
-subtitle: "An In Development Tutorial"
+title: "Advantages of Using Multilevel Models To Analyze Longitudinal Data"
 author: "Andy Grogan-Kaylor"
 date: "2025-1-1"
 categories: [stats, teaching, multilevel]
