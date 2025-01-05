@@ -2,7 +2,7 @@
 title: "Complexity Hidden Inside Simplicity"
 subtitle: "Complex Answers To Seemingly Simple Questions"
 author:  Andy Grogan-Kaylor 
-date: "2024-1-5"
+date: "2025-1-5"
 categories: [teaching, stats, science]
 image: nautilus-new.png
 ---
