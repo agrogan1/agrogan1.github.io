@@ -2,7 +2,7 @@
 title: "Complexity Hidden Inside Simplicity"
 subtitle: "Complex Answers To Seemingly Simple Questions"
 author:  Andy Grogan-Kaylor 
-date: "2024-12-18"
+date: "2024-1-5"
 categories: [teaching, stats, science]
 image: nautilus-new.png
 ---
@@ -23,6 +23,6 @@ Two images that help me convey this idea are the Nautilus Shell, and the Mandelb
 Complex structures produced with simple rules
 :::
 
-Each of these structures is based upon simple rules that produce a complex set of outcomes. A nautilus shell is a logistic spiral, a structure that depends upon maintaining a constant angle with the center as the structure expands [@Livio2002]. The Mandelbrot set is a complex pattern that emerges from some simple rules about iterating the values of a complex function [@Mandelbrot]. 
+Each of these structures is based upon simple rules that produce a complex set of outcomes [@Stewart2017]. A nautilus shell is a logarithmic spiral, a structure that depends upon maintaining a constant angle with the center as the structure expands [@Livio2002]. The Mandelbrot set is a complex pattern that emerges from some simple rules about iterating the values of a complex function [@Mandelbrot]. 
 
 
