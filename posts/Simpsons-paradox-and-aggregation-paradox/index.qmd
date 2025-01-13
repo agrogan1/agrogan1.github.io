@@ -1,23 +1,98 @@
 ---
 title: "Simpson's Paradox and The Aggregation Paradox"
-subtitle: "An evolving blog post"
+subtitle: "Closely Related Statistical Phenomena"
 author: "Andy Grogan-Kaylor" 
-date: "2023-9-5"
+date: "2025-1-12"
 categories: [stats, multilevel, science, teaching]
-image: "fig-Simpson-1.png"
 ---
 
-> This is an evolving blog post.
-
-I am starting to think that [Simpson's Paradox](https://agrogan1.github.io/multilevel-thinking/longitudinal.html#simpsons-paradox) and the Aggregation Paradox (which elsewhere I term "[multilevel structure](https://agrogan1.github.io/multilevel-thinking/cross-sectional.html#sec-multilevelstructure)"), are variations of the same phenomenon.
+I am starting to think that [Simpson's Paradox](https://agrogan1.github.io/posts/Simpsons-paradox-simple-visual-explanation/) [@Simpson1951] and the Aggregation Paradox (which elsewhere I term "multilevel structure" [C.F. @Gelman2007; @Nieuwenhuis2015]), are variations of the same phenomenon.
 
 Consider a simple regression equation.
 
 $$y_{ij} = \beta_0 + \beta_1 x_{ij} + \beta_2 z_{ij} + u_{0j} + e_{ij}$$
 
-* Simpson's Paradox could possibly occur if we omit $z_{ij}$ from the regression equation.
-* The Aggregation Paradox could possibly occur if we omit $u_{0j}$ from the regression equation.
+* *Simpson's Paradox* could possibly occur if we omit $z_{ij}$ from the regression equation.
+* The *Aggregation Paradox* could possibly occur if we omit $u_{0j}$ from the regression equation.
 
 
+```{r}
+#| output: false
+#| warning: false
 
+set.seed(1080)
 
+library(ggplot2)
+
+library(ggthemes)
+
+# library(gganimate)
+
+library(ggsci)
+
+library(patchwork)
+
+```
+
+```{r}
+#| label: mydata
+
+intervention <- seq(1,15) # intervention
+
+group <- rep(seq(1,5), each=3) # group
+
+index <- rep(seq(1,3), 5) # index within group
+
+e <- rnorm(15, 0, .25) # randomly distributed error
+
+outcome <- index + -.1 * intervention # + e
+
+group <- factor(group)
+
+mydata <- data.frame(intervention, group, outcome)
+
+```
+
+```{r}
+
+p0 <- ggplot(mydata,
+             aes(x = intervention,
+                 y = outcome)) + 
+  geom_point(aes(color=group), 
+             size = 5) +
+  geom_smooth(aes(color=group), 
+              method="lm",
+              linewidth = 2,
+              se = FALSE) +
+  geom_smooth(method="lm",
+              linewidth = 2,
+              se = FALSE) +
+  # scale_color_viridis_d(name = "group",
+  #                       option = "turbo") +
+  # scale_color_bmj() +
+  # scale_color_npg() +
+  theme_minimal()
+
+```
+
+```{r}
+#| label: fig-p0
+#| message: false
+#| fig-height: 7
+
+name2 <- paste("school, \nneighborhood, or \ncountry expression(u_0)",
+               expression(u_0))
+
+(p0 + 
+    labs(title = "Simpson's Paradox") +
+   scale_color_npg(name = "group")) /
+  (p0 + 
+     labs(title = "Aggregation Paradox") +
+     scale_color_npg(name = "school \n neighborhood \ncountry") +
+   labs(caption = "A true multilevel model would have many more groups")) +
+  plot_annotation(title = "A Model That Ignores Group, School, Neighborhood or Country Shows A Downward Slope",
+                  subtitle = "A Model Accounting For Group, School, Neighborhood or Country Shows An Upward Slope",
+                  theme = theme(title = element_text(size = rel(.75)))
+) 
+
+```

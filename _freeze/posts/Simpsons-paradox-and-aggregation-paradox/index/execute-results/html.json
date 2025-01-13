@@ -1,0 +1,17 @@
+{
+  "hash": "12f92bf253938a28a44fb57dd956bfdd",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Simpson's Paradox and The Aggregation Paradox\"\nsubtitle: \"An evolving blog post\"\nauthor: \"Andy Grogan-Kaylor\" \ndate: \"2025-1-12\"\ncategories: [stats, multilevel, science, teaching]\nimage: \"fig-Simpson-1.png\"\n---\n\n\n\nI am starting to think that [Simpson's Paradox](https://agrogan1.github.io/posts/Simpsons-paradox-simple-visual-explanation/) [@Simpson1951] and the Aggregation Paradox (which elsewhere I term \"multilevel structure\" [C.F. @Gelman2007; @Nieuwenhuis2015]), are variations of the same phenomenon.\n\nConsider a simple regression equation.\n\n$$y_{ij} = \\beta_0 + \\beta_1 x_{ij} + \\beta_2 z_{ij} + u_{0j} + e_{ij}$$\n\n* *Simpson's Paradox* could possibly occur if we omit $z_{ij}$ from the regression equation.\n* The *Aggregation Paradox* could possibly occur if we omit $u_{0j}$ from the regression equation.\n\n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/fig-p0-1.png){#fig-p0 width=672}\n:::\n:::",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

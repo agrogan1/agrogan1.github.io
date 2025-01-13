@@ -3,8 +3,9 @@
     "listing": "/blog.html",
     "items": [
       "/posts/teaching/index.html",
-      "/posts/complexity-hidden-inside-simplicity/index.html",
       "/posts/stats-stuff/index.html",
+      "/posts/Simpsons-paradox-and-aggregation-paradox/index.html",
+      "/posts/complexity-hidden-inside-simplicity/index.html",
       "/posts/MLM-longitudinal-data/index.html",
       "/posts/closeread-be-less-wrong/index.html",
       "/posts/Simpsons-paradox-simple-visual-explanation/index.html",
@@ -63,7 +64,6 @@
       "/posts/working-with-dates-in-Stata/index.html",
       "/posts/bar-charts-to-pie-charts-another-look/index.html",
       "/posts/criticizing-a-musician-is-easy/index.html",
-      "/posts/Simpsons-paradox-and-aggregation-paradox/index.html",
       "/posts/bar-charts-and-pie-charts/index.html",
       "/posts/bignumber/index.html",
       "/posts/its-not-just-what-youre-born-with/index.html",
