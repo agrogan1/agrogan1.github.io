@@ -1,0 +1,15 @@
+{
+  "hash": "6daa5c05d2516361ec4512ad786df66b",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Cartogram\"\nsubtitle: \"Most the World's Children Are Not Protected by Corporal Punishment Bans\"\nauthor:  Andy Grogan-Kaylor \ndate: \"2025-1-21\"\ncategories: [GIS, corporal punishment, social justice]\n---\n\n\n\nA [cartogram](https://agrogan1.github.io/mapping/cartogram.html) is a map where the area of map polygons are *distorted* by some feature of the data, while still attempting to preserve some visual intuitive features of the map.\n\nI've worked on the cartogram below to demonstrate that the majority of the world's children are not protected by bans on corporal punishment.\n\n\n\n::: {.cell}\n\n:::\n\n\n\n![Most the World's Children Are Not Protected by Corporal Punishment Bans](cartogram.png)\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

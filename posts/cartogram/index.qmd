@@ -1,0 +1,26 @@
+---
+title: "Cartogram"
+subtitle: "Most of the World's Children Are Not Protected by Corporal Punishment Bans"
+author:  Andy Grogan-Kaylor 
+date: "2025-1-21"
+categories: [GIS, corporal punishment, social justice]
+---
+
+A [cartogram](https://agrogan1.github.io/mapping/cartogram.html) is a map where the area of map polygons are *distorted* by some feature of the data, while still attempting to preserve some visual intuitive features of the map.
+
+I've worked on the cartogram below to demonstrate that the majority of the world's children are not protected by bans on corporal punishment.
+
+```{r}
+#| output: false
+
+# list.files("../../../cpbans")
+
+file.copy("../../../cpbans/cartogram.png",
+          ".")
+
+```
+
+![Most of the World's Children Are Not Protected by Corporal Punishment Bans](cartogram.png)
+
+
+
