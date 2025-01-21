@@ -3,6 +3,7 @@
     "listing": "/blog.html",
     "items": [
       "/posts/teaching/index.html",
+      "/posts/cartogram/index.html",
       "/posts/stats-stuff/index.html",
       "/posts/Simpsons-paradox-and-aggregation-paradox/index.html",
       "/posts/complexity-hidden-inside-simplicity/index.html",
