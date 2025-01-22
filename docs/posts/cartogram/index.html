@@ -22,7 +22,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -209,7 +229,7 @@ ul.task-list li input[type="checkbox"] {
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Cartogram</h1>
-            <p class="subtitle lead">Most the World’s Children Are Not Protected by Corporal Punishment Bans</p>
+            <p class="subtitle lead">Most of the World’s Children Are Not Protected by Corporal Punishment Bans</p>
                                 <div class="quarto-categories">
                 <div class="quarto-category">GIS</div>
                 <div class="quarto-category">corporal punishment</div>
@@ -253,17 +273,39 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>A <a href="https://agrogan1.github.io/mapping/cartogram.html">cartogram</a> is a map where the area of map polygons are <em>distorted</em> by some feature of the data, while still attempting to preserve some visual intuitive features of the map.</p>
-<p>I’ve worked on the cartogram below to demonstrate that the majority of the world’s children are not protected by bans on corporal punishment.</p>
+<p>I’ve developed the cartogram below to demonstrate that the majority of the world’s children are not protected by bans on corporal punishment.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="cartogram.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Most the World’s Children Are Not Protected by Corporal Punishment Bans"><img src="cartogram.png" class="img-fluid figure-img" alt="Most the World’s Children Are Not Protected by Corporal Punishment Bans"></a></p>
-<figcaption>Most the World’s Children Are Not Protected by Corporal Punishment Bans</figcaption>
+<p><a href="cartogram.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Most of the World’s Children Are Not Protected by Corporal Punishment Bans"><img src="cartogram.png" class="img-fluid figure-img" alt="Most of the World’s Children Are Not Protected by Corporal Punishment Bans"></a></p>
+<figcaption>Most of the World’s Children Are Not Protected by Corporal Punishment Bans</figcaption>
 </figure>
 </div>
+<p>As <span class="citation" data-cites="StewartTufescu2023">Stewart-Tufescu (<a href="#ref-StewartTufescu2023" role="doc-biblioref">2023</a>)</span> observes:</p>
+<blockquote class="blockquote">
+<p>“The magnitude of violence against children is staggering. Globally, the most pervasive form of violence against children is corporal punishment. Because it often occurs in the confines of homes and other settings where children live, study and play, it is largely hidden and challenging to detect. Worldwide, it is estimated that nearly one billion children are hit, slapped, spanked, pinched, or otherwise physically punished regularly by their parents, caregivers, teachers, or other trusted adults, the same individuals responsible for nurturing, protecting, and educating them <span class="citation" data-cites="UNICEF2017 WHO2020">(<a href="#ref-UNICEF2017" role="doc-biblioref">UNICEF, 2017</a>; <a href="#ref-WHO2020" role="doc-biblioref">World Health Organization, 2020</a>)</span>.” <span class="citation" data-cites="StewartTufescu2023">(<a href="#ref-StewartTufescu2023" role="doc-biblioref">Stewart-Tufescu, 2023</a>)</span></p>
+</blockquote>
+<p><span class="citation" data-cites="Gershoff2016">Gershoff &amp; Grogan-Kaylor (<a href="#ref-Gershoff2016" role="doc-biblioref">2016</a>)</span> reviewed 50 years of research on corporal punishment and found that:</p>
+<blockquote class="blockquote">
+<p>“Among the outcomes in childhood, spanking was associated with more aggression, more antisocial behavior, more externalizing problems, more internalizing problems, more mental health problems, and more negative relationships with parents. Spanking was also significantly associated with lower moral internalization, lower cognitive ability, and lower self-esteem. The largest effect size was for physical abuse; the more children are spanked, the greater the risk that they will be physically abused by their parents.” <span class="citation" data-cites="Gershoff2016">(<a href="#ref-Gershoff2016" role="doc-biblioref">Gershoff &amp; Grogan-Kaylor, 2016</a>)</span></p>
+</blockquote>
 
 
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-Gershoff2016" class="csl-entry" role="listitem">
+Gershoff, E. T., &amp; Grogan-Kaylor, A. (2016). Spanking and child outcomes: Old controversies and new meta-analyses. <em>Journal of Family Psychology</em>, <em>30</em>, 453–469. <a href="https://doi.org/10.1037/fam0000191">https://doi.org/10.1037/fam0000191</a>
+</div>
+<div id="ref-StewartTufescu2023" class="csl-entry" role="listitem">
+Stewart-Tufescu, A. (2023). Corporal punishment: The global picture. <em>The Canadian Journal of Children’s Rights / Revue Canadienne Des Droits Des Enfants</em>, <em>10</em>. <a href="https://doi.org/10.22215/cjcr.v10i1">https://doi.org/10.22215/cjcr.v10i1</a>
+</div>
+<div id="ref-UNICEF2017" class="csl-entry" role="listitem">
+UNICEF. (2017). <em>A familiar face: Violence in the lives of children and adolescents</em> [Report]. UNICEF.
+</div>
+<div id="ref-WHO2020" class="csl-entry" role="listitem">
+World Health Organization. (2020). <em>Global status report on preventing violence against children 2020</em> [Report]. <span>World Health Organization</span>. <a href="https://www.unicef.org/sites/default/files/2020-06/Global-status-report-on-preventing-violence-against-children-2020.pdf">https://www.unicef.org/sites/default/files/2020-06/Global-status-report-on-preventing-violence-against-children-2020.pdf</a>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -829,7 +871,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

@@ -8,7 +8,7 @@ categories: [GIS, corporal punishment, social justice]
 
 A [cartogram](https://agrogan1.github.io/mapping/cartogram.html) is a map where the area of map polygons are *distorted* by some feature of the data, while still attempting to preserve some visual intuitive features of the map.
 
-I've worked on the cartogram below to demonstrate that the majority of the world's children are not protected by bans on corporal punishment.
+I've developed the *cartogram* below to demonstrate that the majority of the world's children are not protected by bans on corporal punishment.
 
 ```{r}
 #| output: false
@@ -22,5 +22,11 @@ file.copy("../../../cpbans/cartogram.png",
 
 ![Most of the World's Children Are Not Protected by Corporal Punishment Bans](cartogram.png)
 
+As @StewartTufescu2023 observes: 
 
+> "The magnitude of violence against children is staggering. Globally, the most pervasive form of violence against children is corporal punishment. Because it often occurs in the confines of homes and other settings where children live, study and play, it is largely hidden and challenging to detect. Worldwide, it is estimated that nearly one billion children are hit, slapped, spanked, pinched, or otherwise physically punished regularly by their parents, caregivers, teachers, or other trusted adults, the same individuals responsible for nurturing, protecting, and educating them [@UNICEF2017; @WHO2020]." [@StewartTufescu2023]
+
+@Gershoff2016 reviewed 50 years of research on corporal punishment and found that:
+
+> "Among the outcomes in childhood, spanking was associated with more aggression, more antisocial behavior, more externalizing problems, more internalizing problems, more mental health problems, and more negative relationships with parents. Spanking was also significantly associated with lower moral internalization, lower cognitive ability, and lower self-esteem. The largest effect size was for physical abuse; the more children are spanked, the greater the risk that they will be physically abused by their parents." [@Gershoff2016]
 
