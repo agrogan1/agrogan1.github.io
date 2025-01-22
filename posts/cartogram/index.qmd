@@ -2,7 +2,7 @@
 title: "Cartogram"
 subtitle: "Most of the World's Children Are Not Protected by Corporal Punishment Bans"
 author:  Andy Grogan-Kaylor 
-date: "2025-1-21"
+date: "2025-1-22"
 categories: [GIS, corporal punishment, social justice]
 ---
 
