@@ -1,0 +1,15 @@
+{
+  "hash": "a573d2858c41fa6efe45917bccf19540",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Treemap\"\nsubtitle: \"Most of the World's Children Are Not Protected by Corporal Punishment Bans\"\nauthor:  Andy Grogan-Kaylor \ndate: \"2025-1-25\"\ncategories: [GIS, corporal punishment, social justice]\n---\n\n\n\nA *treemap* is a visualization of the data where the area of polygons are sized by some feature of the data.\n\nI've developed the *treemap* below to demonstrate that the majority of the world's children are not protected by bans on corporal punishment.\n\n\n\n::: {.cell}\n\n:::\n\n\n\n![Most of the World's Children Are Not Protected by Corporal Punishment Bans](treemap.png)\n\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,28 @@
+---
+title: "Treemap"
+subtitle: "Most of the World's Children Are Not Protected by Corporal Punishment Bans"
+author:  Andy Grogan-Kaylor 
+date: "2025-1-25"
+categories: [GIS, corporal punishment, social justice]
+---
+
+A *treemap* is a visualization of the data where the area of polygons are sized by some feature of the data.
+
+I've developed the *treemap* below to demonstrate that the majority of the world's children are not protected by bans on corporal punishment.
+
+```{r}
+#| output: false
+
+# list.files("../../../cpbans")
+
+file.copy("../../../cpbans/treemap.png",
+          ".")
+
+```
+
+![Most of the World's Children Are Not Protected by Corporal Punishment Bans](treemap.png)
+
+
+
+
+
