@@ -1,7 +1,7 @@
 ---
 title: "Why Stata Is Better (At Graphing) Than R"
 author: "Andy Grogan-Kaylor"
-date: 2024-9-30
+date: 2025-1-28
 categories: [stats, dataviz, Stata, R]
 image: "mybarStata.png"
 execute: 
@@ -24,18 +24,26 @@ library(Statamarkdown)
 
 # Stata
 
-```{stata}
+```{stata, collectcode=TRUE}
+#| output: false
 
-import delimited "clients.csv", encoding(ISO-8859-2) clear // import data
+import delimited "clients.csv", clear // import data
 	
 graph bar mental_health_t2, /// bar graph of mean outcome
-over(program, gap(10)) /// over program
-scheme(michigan) /// michigan graph scheme
+over(program) /// over program
 asyvars // bars that have color
+
+```
+
+```{stata}
+#| output: false
+#| echo: false
 
 quietly graph export mybarStata.png, width(2000) replace
 
+
 ```
+
 
 
 ![Bar Graph in Stata](mybarStata.png)
@@ -48,17 +56,14 @@ library(readr) # library to import data
 	
 clients <- read_csv("clients.csv") # import data
 	
-library(ggplot2)
+library(ggplot2) # library for graphs
 	
-library(michigancolors)
-
 ggplot(clients, # the data that I am using
        aes(x = program, # 'aesthetic' includes x
            y = mental_health_T2, # and y
            fill = program)) + # and fill by program
   stat_summary(fun = mean, # summarizing y 
                geom = "bar") + # with bars
-  scale_fill_manual(values = michigancolors()) + # UM colors
   theme_minimal() # minimal theme
 
 ```
