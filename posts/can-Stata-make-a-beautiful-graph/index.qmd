@@ -1,7 +1,7 @@
 ---
 title: "Can Stata Make A Beautiful Graph?"
 author: "Andy Grogan-Kaylor" 
-date: "2024-2-4"
+date: "2025-1-29"
 categories: [stats, dataviz, Stata]
 ---
 
@@ -16,7 +16,7 @@ library(Statamarkdown)
 ```
 
 
-There is sometimes a *debate*--shall we say--about whether Stata can make beautiful graphs, particularly in comparison to using `ggplot` in R. Below, I try to use as many of Stata's options as I can to make a beautiful graph. I believe that this Stata graph comes close to being as beautiful of a graph as would be made by `ggplot`.
+There is sometimes a *debate*--shall we say--about whether Stata can make beautiful graphs, particularly in comparison to using `ggplot` in R. Below, I try to use as many of Stata's options as I can to make a beautiful graph. I believe that this Stata graph comes close to being as beautiful of a graph as would be made by `ggplot` (and perhaps the syntax is a little more intuitive).
 
 I use green and gold since they are common colors for forestry and park signage.
 
@@ -49,7 +49,7 @@ The default graphing scheme in Stata 18 is much improved over previous versions,
 
 use gutten.dta
 
-twoway (scatter height age_base) (lowess height age_base)
+twoway (scatter height age_base) (mspline height age_base)
 	
 graph export gutten0.svg, width(2000) replace
 
@@ -61,7 +61,7 @@ graph export gutten0.png, width(2000) replace
 
 # A Beautiful Graph 🌲
 
-Below please find an *admittedly complicated* graph command. Note, however, that the graph builds upon basic ideas that we want a `twoway` graph, with a `scatter`plot and a `lowess` smoother. Everything else is just an option to improve the appearance of the graph.
+Below please find an *admittedly complicated* graph command. Note, however, that the graph builds upon basic ideas that we want a `twoway` graph, with a `scatter`plot and a `mspline` (median spline) smoother. Everything else is just an *option* to improve the appearance of the graph.
 
 I make extensive use of the `///` notation which allows me to spread the graph along multiple lines.
 
@@ -73,7 +73,7 @@ use gutten.dta
 
 twoway /// two way graph
 (scatter height age_base, /// scatterplot
-mcolor(dkgreen%25) msymbol(circle) msize(large)) /// dark green transparent markers
+mcolor(dkgreen%25) msymbol(circle) msize(medium)) /// dark green transparent markers
 (mspline height age_base, /// median spline 
 lcolor(gold) lwidth(thick)), /// gold line
 title("Tree Height by Tree Age") /// title
@@ -81,7 +81,7 @@ xtitle("Tree Age") /// title for x axis
 ytitle("Tree Height") /// title for y axis
 caption("Gutten Tree Data") /// caption
 legend(order(1 "trees" 2 "median spline") position(6) rows(1)) /// better labels and format for legend
-aspectratio(.5) // better aspect ratio
+aspectratio(.75) // better aspect ratio
 
 graph export gutten.png, width(2000) replace
 	

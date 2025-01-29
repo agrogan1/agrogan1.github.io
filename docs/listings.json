@@ -2,9 +2,11 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/can-Stata-make-aesthetically-appealing-graph/index.html",
       "/posts/teaching/index.html",
-      "/posts/why-Stata-is-better-at-graphing-than-R/index.html",
       "/posts/stats-stuff/index.html",
+      "/posts/can-Stata-make-a-beautiful-graph/index.html",
+      "/posts/why-Stata-is-better-at-graphing-than-R/index.html",
       "/posts/treemap/index.html",
       "/posts/cartogram/index.html",
       "/posts/closeread-be-less-wrong/index.html",
@@ -51,8 +53,6 @@
       "/posts/quantitative-literacy/index.html",
       "/posts/GIS-and-mapping/index.html",
       "/posts/logic-models-Mermaid/index.html",
-      "/posts/can-Stata-make-aesthetically-appealing-graph/index.html",
-      "/posts/can-Stata-make-a-beautiful-graph/index.html",
       "/posts/bar-charts-in-ggplot2/index.html",
       "/posts/articles-with-UNICEF-MICS-data/index.html",
       "/posts/comparing-program-outcomes-with-ggplot/index.html",
