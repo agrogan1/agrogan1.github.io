@@ -3,7 +3,7 @@ title: "Cartogram"
 subtitle: "Most of the World's Children Are Not Protected by Corporal Punishment Bans"
 author:  Andy Grogan-Kaylor 
 date: "2025-1-22"
-categories: [GIS, corporal punishment, social justice]
+categories: [GIS, corporal punishment]
 ---
 
 A [cartogram](https://agrogan1.github.io/mapping/cartogram.html) is a map where the area of map polygons are *distorted* by some feature of the data, while still attempting to preserve some visual intuitive features of the map.

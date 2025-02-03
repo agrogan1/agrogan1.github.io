@@ -31,7 +31,7 @@ about:
 
 I am the *Sandra K. Danziger Collegiate Professor of Social Work*. 
 
-I am strongly motivated by concerns for social justice. Right after undergraduate studies, I was a community organizer for a year, and then a Peace Corps Volunteer living for two years in the at-the-time remote Upper East Region of Ghana, and doing community development work, both in English, and in the local language Kusaal. These early experiences have been the source of commitments to social justice, and to developing an evidence base for practice, that continue in my work today.
+I am strongly motivated by concerns for human well-being. Right after undergraduate studies, I was a community organizer for a year, and then a Peace Corps Volunteer living for two years in the at-the-time remote Upper East Region of Ghana, and doing community development work, both in English, and in the local language Kusaal. These early experiences have been the source of commitments to human well-being, and to developing an evidence base for practice, that continue in my work today.
 
 My core intellectual interest is the way in which [parenting behaviors have an effect on child outcomes](https://agrogan1.github.io/research.html). For example, parenting behaviors like the use of corporal punishment, or parental expressions of emotional warmth, are likely to have an effect on child outcomes like aggression, antisocial behavior, anxiety and depression. I am interested in how these dynamics play out [across contexts, neighborhoods, and cultures](research.qmd).
 

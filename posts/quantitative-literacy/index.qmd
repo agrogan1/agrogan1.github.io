@@ -2,7 +2,7 @@
 title: "Quantitative Literacy"
 author: "Andy Grogan-Kaylor"
 date: "2024-2-15"
-categories: [stats, workflow, social justice, science]
+categories: [stats, workflow, science]
 image: "lightbulb-and-clover.png"
 ---
 

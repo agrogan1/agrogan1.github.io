@@ -3,7 +3,7 @@ title: "All Models Are Wrong, But Some Are Useful"
 subtitle: "Continously Trying To Be Less Wrong"
 author: "Andy Grogan-Kaylor"
 date: "today"
-categories: [science, social justice, book, stats]
+categories: [science, book, stats]
 image: "mathblackboard.png"
 draft: true
 ---

@@ -2,7 +2,7 @@
 title: "'Criticizing a musican is easy...'"
 author: "Andy Grogan-Kaylor"
 date: "2023-9-6"
-categories: [workflow, social justice, science]
+categories: [workflow, science]
 image: guitar.png
 ---
 

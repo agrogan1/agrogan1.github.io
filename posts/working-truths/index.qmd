@@ -2,7 +2,7 @@
 title: "Working Truths"
 author:  "Andy Grogan-Kaylor" 
 date: "2024-5-20"
-categories: [science, social justice, stats]
+categories: [science, stats]
 image: "candles.png"
 ---
 

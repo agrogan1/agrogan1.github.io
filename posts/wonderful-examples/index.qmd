@@ -2,7 +2,7 @@
 title: "Building Statistical Models"
 author:  Andy Grogan-Kaylor 
 date: "2024-5-17"
-categories: [stats, social justice, science]
+categories: [stats, science]
 image: "math.png"
 ---
 

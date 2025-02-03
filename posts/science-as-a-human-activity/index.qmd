@@ -2,7 +2,7 @@
 title: "Science as a Human Activity"
 author: "Andy Grogan-Kaylor"
 date: "2024-11-9"
-categories: [science, social justice, book, stats]
+categories: [science, book, stats]
 image: "mathblackboard.png"
 draft: true
 ---

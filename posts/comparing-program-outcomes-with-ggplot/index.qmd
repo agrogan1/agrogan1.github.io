@@ -3,7 +3,7 @@ title: 'Telling Stories With Data: Comparing Program Outcomes with ggplot2'
 author: "Andy Grogan-Kaylor"
 date: "2024-1-16"
 fig-height: 3
-categories: [dataviz, social justice, R]
+categories: [dataviz, R]
 ---
 
 # Background

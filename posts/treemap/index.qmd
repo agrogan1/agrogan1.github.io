@@ -3,7 +3,7 @@ title: "Treemap"
 subtitle: "Most of the World's Children Are Not Protected by Corporal Punishment Bans"
 author:  Andy Grogan-Kaylor 
 date: "2025-1-25"
-categories: [GIS, corporal punishment, social justice]
+categories: [GIS, corporal punishment]
 ---
 
 A *treemap* is a visualization of the data where the area of polygons are sized by some feature of the data.
