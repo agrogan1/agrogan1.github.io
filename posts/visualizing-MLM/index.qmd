@@ -8,7 +8,7 @@ categories: [stats, dataviz, multilevel, Stata]
 
 I have developed a book draft on multilevel modeling, entitled *Multilevel Thinking*. The book draft discusses multilevel modeling in the context of cross cultural, or international, research. 
 
-I have been thinking more about one of the ideas in that book draft:  multilevel models as the *exploration* of variation and diversity.
+I have been thinking more about one of the ideas in that book draft:  multilevel models as the *exploration* of human variation.
 
 With those ideas in mind, I have developed a [tutorial on visualizing multilevel models](https://agrogan1.github.io/multilevel/visualizing-MLM/visualizing-MLM.html). 
 
