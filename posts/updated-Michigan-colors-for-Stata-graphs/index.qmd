@@ -1,7 +1,7 @@
 ---
 title: "Updated Michigan Colors for Stata Graphs"
 author: "Andy Grogan-Kaylor"
-date: "2024-3-17"
+date: "2025-2-18"
 categories: [stats, dataviz, Stata]
 ---
 
