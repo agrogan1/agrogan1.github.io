@@ -2,9 +2,10 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/graphing-change-over-time/index.html",
       "/posts/teaching/index.html",
-      "/posts/updated-Michigan-colors-for-Stata-graphs/index.html",
       "/posts/stats-stuff/index.html",
+      "/posts/updated-Michigan-colors-for-Stata-graphs/index.html",
       "/posts/can-Stata-make-aesthetically-appealing-graph/index.html",
       "/posts/can-Stata-make-a-beautiful-graph/index.html",
       "/posts/why-Stata-is-better-at-graphing-than-R/index.html",
@@ -84,11 +85,11 @@
     "items": []
   },
   {
-    "listing": "/contact.html",
+    "listing": "/teaching.html",
     "items": []
   },
   {
-    "listing": "/teaching.html",
+    "listing": "/contact.html",
     "items": []
   }
 ]

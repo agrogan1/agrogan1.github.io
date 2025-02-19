@@ -1,0 +1,12 @@
+---
+title: "Graphing Change Over Time"
+author:  Andy Grogan-Kaylor 
+date: "2025-2-19"
+categories: [dataviz, stats]
+image: "spaghetti.png"
+---
+
+I have updated a tutorial on [Graphing Change Over Time](https://agrogan1.github.io/dataviz/graphing-change-over-time/index.html)
+
+
+
