@@ -2,9 +2,9 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/graphing-change-over-time/index.html",
       "/posts/teaching/index.html",
       "/posts/stats-stuff/index.html",
+      "/posts/graphing-change-over-time/index.html",
       "/posts/updated-Michigan-colors-for-Stata-graphs/index.html",
       "/posts/can-Stata-make-aesthetically-appealing-graph/index.html",
       "/posts/can-Stata-make-a-beautiful-graph/index.html",
