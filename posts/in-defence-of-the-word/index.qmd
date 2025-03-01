@@ -1,0 +1,12 @@
+---
+title: "In Defence of the Word"
+author: "Eduardo Galeano"
+date: "today"
+categories: [teaching]
+image: "bookshelf.png"
+draft: true
+---
+
+> "A literature born of crisis and change and deeply immersed in the risk and adventure of its time, can certainly help to create the symbols of the new reality and perhaps illuminate - if talent and courage are not lacking - the signs that show the way...."
+
+> "To claim that literature on its own will change reality would be an act of arrogance or madness. It seems to me no less stupid to deny that in some degree it can help to bring about change." [@Galeano1977]
