@@ -6,7 +6,8 @@ categories: [dataviz, stats]
 image: "spaghetti.png"
 ---
 
-I have updated a tutorial on [Graphing Change Over Time](https://agrogan1.github.io/dataviz/graphing-change-over-time/index.html)
+I have updated a tutorial on [Graphing Change Over Time](https://agrogan1.github.io/dataviz/graphing-change-over-time/graphing-change-over-time.html)
+
 
 
 
