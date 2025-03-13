@@ -22,7 +22,7 @@ library(countrycode) # manage country data
 
 library(plotly) # interactive graphs
 
-library(maps) # maps
+# library(maps) # maps
 
 library(leaflet) # web maps
 
