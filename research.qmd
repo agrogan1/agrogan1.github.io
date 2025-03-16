@@ -208,7 +208,7 @@ plot_geo(mydata) %>%
 
     + [Open Access Article](https://onlinelibrary.wiley.com/doi/full/10.1002/ajcp.12621)
     
-* Community-level Protective Factors in the Prevention of Indigenous Suicide: Enlarging a Definition of Cultural Continuity in Rural Alaska Native Communities.
+* Indigenous Community-level Protective Factors in the Prevention of Suicide: Enlarging a Definition of Cultural Continuity in Rural Alaska Native Communities.
 
 
     
