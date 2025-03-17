@@ -14,7 +14,7 @@ library(dplyr) # data wrangling
 
 library(tidyr) # tidy data
 
-library(DT) # nice data table
+# library(DT) # nice data table
 
 library(tibble) # tibbles
 
@@ -26,7 +26,7 @@ library(plotly) # interactive graphs
 
 library(leaflet) # web maps
 
-library(sp) # spatial data
+# library(sp) # spatial data
 
 library(sf) # simple features
 
@@ -109,19 +109,22 @@ leaflet() %>%
 
 #### Publications
 
+* "Orphan discipline and child neglect: An analysis from 48 countries"
+    + [ArcGIS Storymap](https://arcg.is/1HjKyW2)
+
 * "Interactions of Gender Inequality and Parental Discipline Predicting Child Aggression in Low- and Middle-Income Countries"
     + [Open Access Article](http://doi.org/10.1111/cdev.14152)
     + [ArcGIS Storymap](https://arcg.is/0m4qDb)
 
 * "Associations between 11 parental discipline behaviours and child outcomes across 60 countries"
-    + [Article](https://bmjopen.bmj.com/content/13/10/e058439)
+    + [Open Access Article](https://bmjopen.bmj.com/content/13/10/e058439)
     + [ArcGIS Storymap](https://arcg.is/1OSzvG0)
     + [HTML Slides](https://websites.umich.edu/~parentingandchilddev/MICS-discipline-11-forms/v1/MICS-discipline-11-forms.html)
     + [*scrollytelling* Version with `closeread`](https://globalfamilies.quarto.pub/parenting/)
 
 * "Gender Inequality in Low- and Middle-Income Countries: Associations
 with Parental Physical Abuse and Moderation by Child Gender"
-    + [Article](https://www.mdpi.com/1841422)
+    + [Open Access Article](https://www.mdpi.com/1841422)
     + [ArcGIS Storymap](https://arcg.is/1WzHHP)
     + [Press Release](https://news.umich.edu/gender-inequality-can-predict-high-rates-of-child-physical-abuse/)
 
@@ -144,7 +147,7 @@ with Parental Physical Abuse and Moderation by Child Gender"
     + [Article](https://doi.org/10.1177%2F0165025420981642)
 
 * "Spanking and young children's socioemotional development in low- and middle-income countries"
-    + [Open Access](https://doi.org/10.1016/j.chiabu.2018.11.003)
+    + [Open Access Article](https://doi.org/10.1016/j.chiabu.2018.11.003)
     + *Child Trends News Service* has released a well done [video summarizing this research](https://youtu.be/8LYZ-UpR5wE). 
 
 ### Adverse Childhood Experiences (ACES)
