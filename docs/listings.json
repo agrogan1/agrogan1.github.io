@@ -1,9 +1,5 @@
 [
   {
-    "listing": "/teaching.html",
-    "items": []
-  },
-  {
     "listing": "/blog.html",
     "items": [
       "/posts/teaching/index.html",
@@ -85,11 +81,15 @@
     ]
   },
   {
-    "listing": "/contact.html",
+    "listing": "/stats-stuff.html",
     "items": []
   },
   {
-    "listing": "/stats-stuff.html",
+    "listing": "/teaching.html",
+    "items": []
+  },
+  {
+    "listing": "/contact.html",
     "items": []
   }
 ]
