@@ -1,0 +1,12 @@
+---
+title: "Dialogue"
+author: "Maritza Montero"
+date: "2025-3-19"
+categories: [teaching]
+draft: true
+image: "people.png"
+---
+
+> "Citizen participation means a horizontal, equal relationship. It means relating with the other at the same level. One understands one’s usefulness as part of the solidarity produced within the relationship. Accepting the otherness involves admitting different modes of knowing and making possible the dialogue and the relation with the other in a plane of equality based on the acceptance of our own differences." [@Montero2004]
+
+
