@@ -148,6 +148,10 @@ listing:
       path: https://agrogan1.github.io/multilevel/visualizing-MLM/visualizing-MLM.html
       image: mysmallmultiples.png
       categories: [multilevel, dataviz]
+    - title: "Multilevel Workshop"
+      path: https://agrogan1.github.io/multilevel-workshop/
+      image: multilevel-workshop.png
+      categories: [multilevel, dataviz]
     - title: "Stata Tables (Especially for Multilevel Models)"
       path: https://agrogan1.github.io/multilevel/tables/tables2.html
       image: https://agrogan1.github.io/multilevel/tables/Old-Tjikko-Small.jpg
