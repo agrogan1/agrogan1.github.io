@@ -1,0 +1,20 @@
+---
+title: "Orphan discipline and child neglect: An analysis from 48 countries"
+subtitle: "An ArcGIS StoryMap"
+author:  Andy Grogan-Kaylor 
+date: "2025-3-21"
+categories: [multilevel, corporal punishment, MICS]
+image: "children.png"
+---
+
+We have published an article entitled "Orphan discipline and child neglect: An analysis from 48 countries" in *Child Abuse and Neglect*.
+
+I prepared an ArcGIS StoryMap summarizing that research: [https://arcg.is/1HjKyW2](https://arcg.is/1HjKyW2)
+
+![](children.png){width=33%}
+
+
+
+
+
+
