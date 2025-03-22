@@ -2,9 +2,10 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/orphan-storymap/index.html",
+      "/posts/theory/index.html",
       "/posts/teaching/index.html",
       "/posts/stats-stuff/index.html",
+      "/posts/orphan-storymap/index.html",
       "/posts/interactions-in-logistic-regression/index.html",
       "/posts/graphing-change-over-time/index.html",
       "/posts/updated-Michigan-colors-for-Stata-graphs/index.html",
@@ -19,7 +20,6 @@
       "/posts/MLM-longitudinal-data/index.html",
       "/posts/Simpsons-paradox-simple-visual-explanation/index.html",
       "/posts/closeread/index.html",
-      "/posts/theory/index.html",
       "/posts/youve-got-to-be-kind/index.html",
       "/posts/how-to-choose-a-chart-a-visual-guide-with-Stata/index.html",
       "/posts/discipline-11-forms-storymap/index.html",

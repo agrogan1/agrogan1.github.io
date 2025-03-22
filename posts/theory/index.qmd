@@ -1,7 +1,7 @@
 ---
 title: "Theory"
 author: "Andy Grogan-Kaylor"
-date: "2024-12-9"
+date: "2025-3-22"
 categories: [theory, science]
 image: "greengrid.png"
 ---
