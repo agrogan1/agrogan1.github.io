@@ -1,0 +1,18 @@
+---
+title: "Thailand is #68"
+subtitle: "Thailand is the 68th Country to Ban Corporal Punishment"
+author: "Andy Grogan-Kaylor"
+date: "2025-3-31"
+categories: [corporal punishment]
+image: "Thailand.png"
+---
+
+Thailand is the 68th country to ban corporal punishment: [https://agrogan1.github.io/research/cpbans/](https://agrogan1.github.io/research/cpbans/)
+
+![Countries With Bans on Corporal Punishment of Children](Thailand.png){width=50%} 
+
+
+
+
+
+
