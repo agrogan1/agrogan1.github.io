@@ -16,7 +16,7 @@ Often the key is not so much to make the 100% correct decision, but to make one 
 
 Then after making a *principled decision*, one is *transparent* and *thorough* about describing the decision that one made. 
 
-> "In general, when building statistical models, we must not forget that the aim is to understand something about the real world. Or predict, choose an action, make a decision, summarize evidence, and so on, but always about the real world, not an abstract mathematical world: our models are not the reality—a point well made by George Box in his oft-cited remark that 'all models are wrong, but some are useful' (Box, 1979 in @MR0554183)." [@Hand2014]
+> "In general, when building statistical models, we must not forget that the aim is to understand something about the real world. Or predict, choose an action, make a decision, summarize evidence, and so on, but always about the real world, not an abstract mathematical world: our models are not the reality—a point well made by George Box in his oft-cited remark that **'all models are wrong, but some are useful'** (Box, 1979 in @MR0554183)." [@Hand2014] [emphasis added]
 
 To propose a concrete example, to analyze clustered data, I could employ multilevel models, fixed effects regression, clustered standard errors, or generalized estimating equations. Each of these methods of analysis would carry with it different assumptions. 
 
