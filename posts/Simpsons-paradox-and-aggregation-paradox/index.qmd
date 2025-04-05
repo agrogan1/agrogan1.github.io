@@ -2,7 +2,7 @@
 title: "Simpson's Paradox and The Aggregation Paradox"
 subtitle: "Closely Related Statistical Phenomena"
 author: "Andy Grogan-Kaylor" 
-date: "2025-1-12"
+date: "2025-4-5"
 categories: [stats, multilevel, science, teaching]
 ---
 
