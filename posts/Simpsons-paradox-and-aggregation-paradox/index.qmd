@@ -8,11 +8,11 @@ categories: [stats, multilevel, science, teaching]
 
 I am starting to think that [Simpson's Paradox](https://agrogan1.github.io/posts/Simpsons-paradox-simple-visual-explanation/) [@Simpson1951] and the Aggregation Paradox (which elsewhere I term "multilevel structure" [C.F. @Gelman2007; @Nieuwenhuis2015]), are variations of the same phenomenon.
 
-Consider a simple regression equation.
+Consider a simple regression equation with independent variable $x$ and a set of $k$ indicator variables $z$.
 
-$$y_{ij} = \beta_0 + \beta_1 x_{ij} + \beta_2 z_{ij} + u_{0j} + e_{ij}$$
+$$y_{ij} = \beta_0 + \beta_1 x_{ij} + \sum_2^k \beta_k z_{kij} + u_{0j} + e_{ij}$$
 
-* *Simpson's Paradox* could possibly occur if we omit $z_{ij}$ from the regression equation.
+* *Simpson's Paradox* could possibly occur if we omit the $z_{kij}$ from the regression equation.
 * The *Aggregation Paradox* could possibly occur if we omit $u_{0j}$ from the regression equation.
 
 

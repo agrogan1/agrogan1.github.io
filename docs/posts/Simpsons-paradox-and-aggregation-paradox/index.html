@@ -307,10 +307,10 @@ window.Quarto = {
 
 
 <p>I am starting to think that <a href="https://agrogan1.github.io/posts/Simpsons-paradox-simple-visual-explanation/">Simpson’s Paradox</a> <span class="citation" data-cites="Simpson1951">(<a href="#ref-Simpson1951" role="doc-biblioref">Simpson, 1951</a>)</span> and the Aggregation Paradox (which elsewhere I term “multilevel structure” <span class="citation" data-cites="Gelman2007 Nieuwenhuis2015">(C.F. <a href="#ref-Gelman2007" role="doc-biblioref">Gelman et al., 2007</a>; <a href="#ref-Nieuwenhuis2015" role="doc-biblioref">Nieuwenhuis, 2015</a>)</span>), are variations of the same phenomenon.</p>
-<p>Consider a simple regression equation.</p>
-<p><span class="math display">\[y_{ij} = \beta_0 + \beta_1 x_{ij} + \beta_2 z_{ij} + u_{0j} + e_{ij}\]</span></p>
+<p>Consider a simple regression equation with independnt variable <span class="math inline">\(x\)</span> and a set of indicator variables <span class="math inline">\(z\)</span>.</p>
+<p><span class="math display">\[y_{ij} = \beta_0 + \beta_1 x_{ij} + \sum_2^k \beta_k z_{kij} + u_{0j} + e_{ij}\]</span></p>
 <ul>
-<li><em>Simpson’s Paradox</em> could possibly occur if we omit <span class="math inline">\(z_{ij}\)</span> from the regression equation.</li>
+<li><em>Simpson’s Paradox</em> could possibly occur if we omit the <span class="math inline">\(z_{kij}\)</span> from the regression equation.</li>
 <li>The <em>Aggregation Paradox</em> could possibly occur if we omit <span class="math inline">\(u_{0j}\)</span> from the regression equation.</li>
 </ul>
 <div class="cell">
