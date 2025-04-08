@@ -3,7 +3,7 @@ title: "Just a Plain Old Nerd"
 subtitle: "More From Julia Schanen"
 author:  Andy Grogan-Kaylor 
 date: "2024-11-25"
-categories: [teaching, stats, science]
+categories: [teaching, stats, science, math]
 image: mandelbrot.png
 ---
 

@@ -2,7 +2,7 @@
 title: "Why can’t numbers be beautiful too?"
 author: "Eveline Pye"
 date: "2023-8-14"
-categories: [poetry]
+categories: [poetry, math, stats]
 image: "math.png"
 ---
 

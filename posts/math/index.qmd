@@ -2,7 +2,7 @@
 title: "You've Been RickRolled!"
 author: "Andy Grogan-Kaylor"
 date: "today"
-categories: [teaching]
+categories: [teaching, math]
 draft: true
 ---
 
