@@ -2,7 +2,7 @@
 title: "Transcendental Etude"
 subtitle: "Excerpts"
 author: "Adrienne Rich"
-date: "2023-8-14"
+date: "2025-4-1"
 categories: [poetry]
 image: "starfield.png"
 ---
