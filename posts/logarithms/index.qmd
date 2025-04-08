@@ -1,0 +1,34 @@
+---
+title: "Logarithms"
+subtitle: "A Short Explanation"
+author: "Andy Grogan-Kaylor"
+date: "2025-4-8"
+categories: [stats, math]
+---
+
+I've developed a short set of tutorial materials on [logarithms](https://agrogan1.github.io/teaching/logarithms/logarithms.html#/title-slide).
+
+```{r}
+#| fig-height: 3
+
+library(ggplot2)
+
+x3 <- seq(-10,5, by = .01)
+
+x4 <- seq(.01, 10, by = .01)
+
+y3exp <- 2^x3
+
+y4log <- log2(x4)
+
+ggplot(data=NULL) + 
+geom_point(aes(x = x3, y = y3exp, color = "exponential")) + 
+geom_point(aes(x = x4, y = y4log, color = "logarithmic")) +
+labs(title = "Exponential and Logarithmic Functions Are Mirror Images",
+x = "x", y = "y") +
+scale_color_manual(values = c("purple", "blue")) +
+theme_minimal()
+
+ggsave("exponential-logarithmic.png")
+
+```
