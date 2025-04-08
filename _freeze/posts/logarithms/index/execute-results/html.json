@@ -1,0 +1,17 @@
+{
+  "hash": "04ca3e7881ac18ea246e0eda2bb4e1b1",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Logarithms\"\nsubtitle: \"A Short Explanation\"\nauthor: \"Andy Grogan-Kaylor\"\ndate: \"2025-4-8\"\ncategories: [stats, math]\n---\n\n\nI've developed a short set of tutorial materials on [logarithms](https://agrogan1.github.io/teaching/logarithms/logarithms.html#/title-slide).\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
