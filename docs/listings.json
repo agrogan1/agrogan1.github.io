@@ -1,5 +1,9 @@
 [
   {
+    "listing": "/teaching.html",
+    "items": []
+  },
+  {
     "listing": "/blog.html",
     "items": [
       "/posts/logarithms/index.html",
@@ -84,15 +88,11 @@
     ]
   },
   {
-    "listing": "/stats-stuff.html",
-    "items": []
-  },
-  {
-    "listing": "/teaching.html",
-    "items": []
-  },
-  {
     "listing": "/contact.html",
+    "items": []
+  },
+  {
+    "listing": "/stats-stuff.html",
     "items": []
   }
 ]
