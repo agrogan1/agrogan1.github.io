@@ -1,0 +1,17 @@
+{
+  "hash": "6af4c028784c5bedb012e34089a7aa03",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Physical Punishment and Psychological Aggression\"\nsubtitle: \"Estimates From UNICEF\"\nauthor: \"Andy Grogan-Kaylor\"\ndate: \"2025-4-12\"\ncategories: [stats, corporal punishment, dataviz]\n---\n\n\n\n> \"1.6 billion children (2 in 3) regularly face violent punishment at home; more than two thirds are subjected to both physical punishment and psychological aggression.\" [@UNICEF2024]\n\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

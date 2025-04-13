@@ -1,0 +1,42 @@
+---
+title: "Physical Punishment and Psychological Aggression"
+subtitle: "Estimates From UNICEF"
+author: "Andy Grogan-Kaylor"
+date: "2025-4-12"
+categories: [stats, corporal punishment, dataviz]
+---
+
+> "1.6 billion children (2 in 3) regularly face violent punishment at home; more than two thirds are subjected to both physical punishment and psychological aggression." [@UNICEF2024]
+
+
+```{r}
+#| echo: false
+
+library(waffle)
+
+library(ggplot2)
+
+parts <- data.frame(
+  names = c("no punishment",
+            "physical punishment and \npsychological aggression"),
+  values = c(33, 67))
+
+mytitle <- paste("More Than Two Thirds Of Children",
+                 "Are Subjected To Both", 
+                 "\n",
+                 "Physical Punishment And",
+                 "Psychological Aggression")
+
+ggplot(parts,
+       aes(fill = names,
+           values = values)) +
+  geom_waffle() +
+  coord_equal() +
+  scale_fill_manual(name = "punishment",
+                    values =c("#D8D1C9", 
+                              "#E2231A")) +
+  labs(title = mytitle,
+       caption = "Source: UNICEF 2024") +
+  theme_void()
+
+```
