@@ -1,0 +1,23 @@
+---
+title: "Multilevel Thinking"
+subtitle: "Discovering Variation, Universals, and Particulars in Cross-Cultural Research"
+author: "Andy Grogan-Kaylor"
+date: "today"
+categories: [stats, multilevel, book, teaching, Stata, R, Julia]
+image: "multilevel-thinking.png"
+---
+
+I’d like to share that my book, *Multilevel Thinking: Discovering Variation, Universals, and Particulars in Cross-Cultural Research* is [available for pre-order](https://global.oup.com/academic/product/multilevel-thinking-9780197806463?cc=us&lang=en&# ) at Oxford University Press
+
+* This book explains multilevel modeling building upon my 15 years of teaching this topic.
+* I argue that multilevel modeling is a principled way of thinking about human variation and universals. 
+* The book contains appendices for estimating multilevel models in Stata, R, and Julia.
+
+![Multilevel Thinking](multilevel-thinking.png){width=33%}
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+---
+title: "Spillover of macro-level violence to parental physical abuse of children in low- and middle-income countries "
+subtitle: "scrollytelling using `closeread`"
+author:  Andy Grogan-Kaylor 
+date: "2025-4-12"
+categories: [multilevel, corporal punishment, MICS, closeread]
+image: "MICS-countries.png"
+---
+
+We have published an article entitled "Spillover of macro-level violence to parental physical abuse of children in low- and middle-income countries" in *Child Abuse and Neglect*.
+
+I prepared a *scrollytelling* webpage summarizing that research: [https://globalfamilies.quarto.pub/spillover-of-violence/](https://globalfamilies.quarto.pub/spillover-of-violence/)
+
+![Countries in UNICEF MICS Data](MICS-countries.png){width=33%}
+
+
+
+
+
+
