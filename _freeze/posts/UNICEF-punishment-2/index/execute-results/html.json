@@ -1,0 +1,17 @@
+{
+  "hash": "70ffe75bbbf4aa66a3e333889dc86195",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Physical Punishment\"\nsubtitle: \"Estimates From UNICEF\"\nauthor: \"Andy Grogan-Kaylor\"\ndate: \"2025-4-12\"\ncategories: [stats, corporal punishment, dataviz]\n---\n\n\n> 63% of children aged 2 to 4 years are regularly (within the past month) subjected to physical punishment [@UNICEF2017]\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

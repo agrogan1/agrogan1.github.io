@@ -1,0 +1,41 @@
+---
+title: "Physical Punishment"
+subtitle: "Estimates From UNICEF"
+author: "Andy Grogan-Kaylor"
+date: "2025-4-12"
+categories: [stats, corporal punishment, dataviz]
+---
+
+> 63% of children aged 2 to 4 years are regularly (within the past month) subjected to physical punishment [@UNICEF2017]
+
+
+```{r}
+#| echo: false
+
+library(waffle)
+
+library(ggplot2)
+
+parts <- data.frame(
+  names = c("no punishment",
+            "physical punishment"),
+  values = c(37, 63))
+
+mytitle <- paste("63% Of Children Aged 2 To 4 Years", 
+                 "Are Regularly (Within The Past Month)",
+                 "\n", 
+                 "Subjected To Physical Punishment")
+
+ggplot(parts,
+       aes(fill = names,
+           values = values)) +
+  geom_waffle() +
+  coord_equal() +
+  scale_fill_manual(name = "punishment",
+                    values =c("#D8D1C9", 
+                              "#F26A21")) +
+  labs(title = mytitle,
+       caption = "Source: UNICEF 2017") +
+  theme_void()
+
+```
