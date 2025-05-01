@@ -38,7 +38,7 @@ format:
       dark: vapor
     mermaid: 
       theme: default
-    css: styles.css
+    css: agrogan.css
     lightbox: true
     toc: true
     execute:
