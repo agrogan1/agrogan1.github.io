@@ -1,38 +1,38 @@
 ---
 title: "Why can’t numbers be beautiful too?"
 author: "Eveline Pye"
-date: "2023-8-14"
+date: "2025-5-1"
 categories: [poetry, math, stats]
 image: "math.png"
 ---
 
-"Why can’t numbers be beautiful too? 
-
-We all talk of beautiful words, art, buildings
- and they’re not part of the natural world, either. 
-An *x* in Algebra is no more abstract than 
-an idea in philosophy, just more useful. 
-
-But it can’t be use that makes the difference. 
-Keats found beauty in a Grecian urn, 
-surely practical at some time 
-and no one is blind to the beauty of symmetry. 
-
-We all get Blake’s awe of the tiger’s stripes. 
-Why not awe at Gaussian curves? 
-Of course, I know there is no great beauty in a single number, 
-in a four or a seven or an eight, but it is the same 
-
-with the alphabet. Where is the wonder in a *b* 
-or a *k* or a *t*? It is only the combinations, 
-the meanings, the relationships between 
-the letters that make the words and sounds we love. 
-
-– And so, why can’t my numbers be beautiful to me? 
-Why the scorn, the doubt in your face? Do you think 
-I am brittle and dusty as old paper? 
-
-Look again. See the numbers shine in my eyes"
+> "Why can’t numbers be beautiful too? 
+> 
+> We all talk of beautiful words, art, buildings
+>  and they’re not part of the natural world, either. 
+> An *x* in Algebra is no more abstract than 
+> an idea in philosophy, just more useful. 
+> 
+> But it can’t be use that makes the difference. 
+> Keats found beauty in a Grecian urn, 
+> surely practical at some time 
+> and no one is blind to the beauty of symmetry. 
+> 
+> We all get Blake’s awe of the tiger’s stripes. 
+> Why not awe at Gaussian curves? 
+> Of course, I know there is no great beauty in a single number, 
+> in a four or a seven or an eight, but it is the same 
+> 
+> with the alphabet. Where is the wonder in a *b* 
+> or a *k* or a *t*? It is only the combinations, 
+> the meanings, the relationships between 
+> the letters that make the words and sounds we love. 
+> 
+> – And so, why can’t my numbers be beautiful to me? 
+> Why the scorn, the doubt in your face? Do you think 
+> I am brittle and dusty as old paper? 
+> 
+> Look again. See the numbers shine in my eyes"
 
 -- @Pye2011
 
