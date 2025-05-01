@@ -1,0 +1,26 @@
+/* css styles */
+
+blockquote {
+  color: black;
+  border-left: 3px solid #FFCB05; 
+  padding: 0.5em 10px;
+}
+.blockquote { 
+  color: black;
+}
+.navbar-brand{
+  font-weight: bold;
+  font-size: 95%;
+}
+.navbar-nav {
+  font-size: 75%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.dropdown-item {
+  font-size: 75%;
+  font-weight: bold;
+}
+div.cell-output-display {
+  color: #00274C;
+}
