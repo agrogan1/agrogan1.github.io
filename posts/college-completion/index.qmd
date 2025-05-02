@@ -90,7 +90,7 @@ p4 <- ggplot(fourthquartile,
   theme(legend.position = "right")
 
 p1 + p2 + p3 + p4 + plot_annotation(
-  title = 'Fraction of Students Completing College, by Income Quartile',
+  title = 'Fraction of Students Completing College by Income Quartile',
   subtitle = '1961 to 1964 Birth Cohorts',
   caption = "Bailey's and Dynarski's (2011) calculations based on data from \nNational Longitudinal Survey of Youth, 1979 and 1997 \n(U.S. Bureau of Labor Statistics, 2010a, 2010b)")
 
