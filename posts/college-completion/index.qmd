@@ -1,0 +1,102 @@
+---
+title: "Fraction of Students Completing College by Income Quartile"
+subtitle: "Estimates From Martha Bailey and Susan Dynarski"
+author: "Andy Grogan-Kaylor"
+date: "2025-5-2"
+categories: [stats, income inequality, dataviz]
+---
+
+> "One pattern evident in the figure is that ... higher family income is associated with a greater probability that a child will enter and will graduate from college...A second pattern evident is that ... the increases were highly uneven, with gains largest at the top of the income distribution and smallest at the right." [@Bailey2011]
+
+```{r}
+#| echo: false
+
+library(waffle)
+
+library(ggplot2)
+
+library(patchwork)
+
+lowestquartile <- data.frame(
+  names = c("college completion",
+            "no college completion"),
+  values = c(5, 95))
+
+secondquartile <- data.frame(
+  names = c("college completion",
+            "no college completion"),
+  values = c(14, 86))
+
+thirdquartile <- data.frame(
+  names = c("college completion",
+            "no college completion"),
+  values = c(17, 83))
+
+fourthquartile <- data.frame(
+  names = c("college completion",
+            "no college completion"),
+  values = c(36, 64))
+
+p1 <- ggplot(lowestquartile,
+       aes(fill = names,
+           values = values)) +
+  geom_waffle() +
+  coord_equal() +
+  scale_fill_manual(name = "",
+                    values =c("red", 
+                              "lightgrey")) +
+  guides(fill=guide_legend(nrow=2)) +
+  labs(title = "lowest quartile") +
+  theme_void() +
+  theme(legend.position = "right")
+
+p2 <- ggplot(secondquartile,
+       aes(fill = names,
+           values = values)) +
+  geom_waffle() +
+  coord_equal() +
+  scale_fill_manual(name = "",
+                    values =c("red", 
+                              "lightgrey")) +
+  guides(fill=guide_legend(nrow=2)) +
+  labs(title = "second quartile") +
+  theme_void() +
+  theme(legend.position = "right")
+
+p3 <- ggplot(thirdquartile,
+       aes(fill = names,
+           values = values)) +
+  geom_waffle() +
+  coord_equal() +
+  scale_fill_manual(name = "",
+                    values =c("red", 
+                              "lightgrey")) +
+  guides(fill=guide_legend(nrow=2)) +
+  labs(title = "third quartile") +
+  theme_void() +
+  theme(legend.position = "right")
+
+p4 <- ggplot(fourthquartile,
+       aes(fill = names,
+           values = values)) +
+  geom_waffle() +
+  coord_equal() +
+  scale_fill_manual(name = "",
+                    values =c("red", 
+                              "lightgrey")) +
+  guides(fill=guide_legend(nrow=2)) +
+  labs(title = "fourth quartile") +
+  theme_void() +
+  theme(legend.position = "right")
+
+p1 + p2 + p3 + p4 + plot_annotation(
+  title = 'Fraction of Students Completing College, by Income Quartile',
+  subtitle = '1961 to 1964 Birth Cohorts',
+  caption = "Bailey's and Dynarski's (2011) calculations based on data from \nNational Longitudinal Survey of Youth, 1979 and 1997 \n(U.S. Bureau of Labor Statistics, 2010a, 2010b)")
+
+```
+
+
+
+
+

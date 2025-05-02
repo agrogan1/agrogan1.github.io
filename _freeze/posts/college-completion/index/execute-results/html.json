@@ -1,0 +1,17 @@
+{
+  "hash": "99c162f9b83288b499d60cbfc8fa7373",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Fraction of Students Completing College, by Income Quartile and Birth Year\"\nsubtitle: \"Estimates From Martha Bailey and Susan Dynarski\"\nauthor: \"Andy Grogan-Kaylor\"\ndate: \"2025-5-2\"\ncategories: [stats, income inequality, dataviz]\n---\n\n> \"One pattern evident in the figure is that ... higher family income is associated with a greater probability that a child will enter and will graduate from college...A second pattern evident is that ... the increases were highly uneven, with gains largest at the top of the income distribution and smallest at the right.\" [@Bailey2011]\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\n\n\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
