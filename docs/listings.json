@@ -2,14 +2,14 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/college-completion/index.html",
       "/posts/multilevel-thinking/index.html",
-      "/posts/stats-stuff/index.html",
       "/posts/teaching/index.html",
+      "/posts/college-completion/index.html",
+      "/posts/stats-stuff/index.html",
       "/posts/why-cant-numbers-be-beautiful-too/index.html",
       "/posts/spillover-of-violence/index.html",
-      "/posts/UNICEF-punishment/index.html",
       "/posts/UNICEF-punishment-2/index.html",
+      "/posts/UNICEF-punishment/index.html",
       "/posts/logarithms/index.html",
       "/posts/Simpsons-paradox-and-aggregation-paradox/index.html",
       "/posts/transcendental-etude/index.html",
@@ -19,8 +19,8 @@
       "/posts/interactions-in-logistic-regression/index.html",
       "/posts/graphing-change-over-time/index.html",
       "/posts/updated-Michigan-colors-for-Stata-graphs/index.html",
-      "/posts/can-Stata-make-a-beautiful-graph/index.html",
       "/posts/can-Stata-make-aesthetically-appealing-graph/index.html",
+      "/posts/can-Stata-make-a-beautiful-graph/index.html",
       "/posts/why-Stata-is-better-at-graphing-than-R/index.html",
       "/posts/treemap/index.html",
       "/posts/cartogram/index.html",
@@ -29,8 +29,8 @@
       "/posts/MLM-longitudinal-data/index.html",
       "/posts/Simpsons-paradox-simple-visual-explanation/index.html",
       "/posts/closeread/index.html",
-      "/posts/how-to-choose-a-chart-a-visual-guide-with-Stata/index.html",
       "/posts/youve-got-to-be-kind/index.html",
+      "/posts/how-to-choose-a-chart-a-visual-guide-with-Stata/index.html",
       "/posts/discipline-11-forms-storymap/index.html",
       "/posts/multiple-principled-solutions/index.html",
       "/posts/plain-old-nerd/index.html",
@@ -56,13 +56,13 @@
       "/posts/love-words/index.html",
       "/posts/LaoPDR-is-66/index.html",
       "/posts/ArcGIS-storymaps/index.html",
-      "/posts/truth/index.html",
       "/posts/workflow/index.html",
+      "/posts/truth/index.html",
       "/posts/Cohens-d-calculator/index.html",
       "/posts/everything-is-obvious-once-you-know-the-answer/index.html",
-      "/posts/GIS-and-mapping/index.html",
-      "/posts/quantitative-literacy/index.html",
       "/posts/two-page-Stata/index.html",
+      "/posts/quantitative-literacy/index.html",
+      "/posts/GIS-and-mapping/index.html",
       "/posts/logic-models-Mermaid/index.html",
       "/posts/bar-charts-in-ggplot2/index.html",
       "/posts/articles-with-UNICEF-MICS-data/index.html",
@@ -93,11 +93,11 @@
     "items": []
   },
   {
-    "listing": "/contact.html",
+    "listing": "/teaching.html",
     "items": []
   },
   {
-    "listing": "/teaching.html",
+    "listing": "/contact.html",
     "items": []
   }
 ]
