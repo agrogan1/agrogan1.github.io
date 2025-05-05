@@ -38,8 +38,6 @@ Many of these publications are available from [Deep Blue](https://deepblue.lib.u
 
 ### Multiple Indicator Cluster Surveys (MICS) (UNICEF Data)
 
-> This research is conducted in collaboration with colleagues [Shawna Lee](https://www.parentingincontext.org/), [Julie Ma](https://poverty.umich.edu/research/faculty-experts/julie-ma/), [Kaitlin Ward](https://www.kaitlinpward.com/), [Garrett Pace](https://www.garrettpace.com/), and [Jorge Cuartas](https://scholar.harvard.edu/jorgecuartas/home).
-
 ```{r}
 
 global_data <- read_sf("../mapping/shapefiles/wrld_simpl/wrld_simpl.shp") 
