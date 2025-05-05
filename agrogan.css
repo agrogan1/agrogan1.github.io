@@ -13,9 +13,17 @@ blockquote {
   font-size: 95%;
 }
 .navbar-nav {
-  font-size: 75%;
+  font-size: 90%;
   font-weight: bold;
   text-transform: uppercase;
+}
+.navbar-nav .nav-link.active {
+  color: #FFCB05;
+  background-color: #00274C;
+}
+.navbar a:hover {
+  color: black;
+  background-color: #FFCB05;
 }
 .dropdown-item {
   font-size: 75%;

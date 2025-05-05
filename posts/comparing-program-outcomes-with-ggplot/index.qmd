@@ -120,7 +120,6 @@ myplot1 +
 #| echo: true
 #| code-fold: true
 #| code-summary: "Show the code"
-#| fig-cap-location: "Horizontal Bar Chart"
 
 myplot1 + 
   stat_summary(fun = "mean", # summarize at mean
