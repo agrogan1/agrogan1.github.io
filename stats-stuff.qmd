@@ -136,6 +136,10 @@ listing:
       path: https://agrogan1.github.io/Bayes/Bayesian-calculations/Bayesian-calculations.html
       image: https://agrogan1.github.io/Bayes/basic-Bayes/Thomas_Bayes.png
       categories: [Bayes]
+    - title: "Multilevel Modeling With the Gutten Tree Data"
+      path: https://agrogan1.github.io/multilevel/mlm-gutten/mlm-gutten.html
+      image: https://agrogan1.github.io/multilevel/Bayesian-longitudinal-mlm/fotolia-small.jpg
+      categories: [multilevel]    
     - title: "Bayesian and Frequentist Multilevel Modeling"
       path: https://agrogan1.github.io/multilevel/Bayesian-and-frequentist-MLM/Bayesian-and-frequentist-MLM.html
       image: https://agrogan1.github.io/multilevel/Bayesian-and-frequentist-MLM/multilevel.png
