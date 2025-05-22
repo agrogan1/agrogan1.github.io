@@ -1,11 +1,14 @@
 ---
-title: "In Defence of the Word"
-author: "Eduardo Galeano"
+title: "Complexity"
+author: "Matthew Desmond"
 date: "today"
-categories: [teaching]
-image: "bookshelf.png"
+categories: [teaching, science, stats]
+image: "puzzle.png"
 draft: true
 ---
 
-> “*It’s more complicated than that*, some will say. Most social problems are complicated, of course, but a retreat into complexity is more often a reflection of our social standing than evidence of critical intelligence. Hungry people want bread. The rich convene a panel of experts. Complexity is the refuge of the powerful.”
+> “*It’s more complicated than that*, some will say. Most social problems are complicated, of course, but a retreat into complexity is more often a reflection of our social standing than evidence of critical intelligence. Hungry people want bread. The rich convene a panel of experts. Complexity is the refuge of the powerful.” [@Desmond2023]
+
+
+
 
