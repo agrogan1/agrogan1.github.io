@@ -3,7 +3,7 @@ title: "Associations Between 11 Forms of Discipline and Child Outcomes Across 60
 subtitle: "An ArcGIS StoryMap"
 author:  Andy Grogan-Kaylor 
 date: "2024-12-2"
-categories: [multilevel, Bayes, corporal punishment, MICS]
+categories: [multilevel, Bayes, corporal punishment, positive parenting, MICS]
 image: "positiveparenting.png"
 ---
 
