@@ -3,7 +3,7 @@ title: "Associations between 11 parental discipline behaviors and child outcomes
 subtitle: "*scrollytelling* using `closeread`"
 author:  Andy Grogan-Kaylor 
 date: "2024-12-11"
-categories: [multilevel, Bayes, MICS, corporal punishment, scrollytelling, closeread]
+categories: [multilevel, Bayes, MICS, corporal punishment, positive parenting, scrollytelling, closeread]
 image: "positiveparenting.png"
 ---
 
