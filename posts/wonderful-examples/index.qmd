@@ -2,7 +2,7 @@
 title: "Building Statistical Models"
 author:  Andy Grogan-Kaylor 
 date: "2024-5-17"
-categories: [stats, science]
+categories: [stats, science, teaching]
 image: "math.png"
 ---
 
