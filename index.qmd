@@ -60,11 +60,11 @@ Some research suggests that spanking should be classified as an Adverse Child Ex
 
 A more recent stream of research pays particular attention to parenting and child development [across low and middle income countries (LMIC's)](research.qmd#multiple-indicator-cluster-surveys-mics-unicef-data). Countries that are not high-income countries are under-represented in current social research [@Henrich2010], particularly research on parenting and child development [@Draper2022]. We have examined the degree to which the association of particular parental discipline behaviors with child outcomes varies across a large number of countries. We have found some modest between country variation in these associations, but more importantly, have found a large degree of *consistency* in the degree to which parenting is associated with child outcomes across countries [@Pace2019; @Ward2023]. 
 
-In this new stream of research, we examine a broader range of parenting behaviors, with a particular emphasis on "positive parenting" strategies [e.g. @Ward2022LCA; @Ward2023]. From this research, a positive discipline behavior that has emerged as being associated with better child outcomes is "explain[ing] why (child)’s behaviour was wrong." [@Ward2023]
+In this new stream of research, we examine a broader range of parenting behaviors, with a particular emphasis on "positive parenting" strategies [e.g. @Ward2022LCA; @Ward2023]. From this research, a positive discipline behavior that has emerged as being associated with better child outcomes is "explain[ing] why (child)’s behaviour was wrong." [@Ward2022LCA; @Ward2023]
 
 Further, we are beginning to examine the association of more macro-level, or structural, factors with parenting and children's outcomes. Most recently we have been focusing on the association of gender inequality [@Ma2022; @Ward2024] and political violence [@Ma2025] with physical abuse, parental discipline, and child outcomes.
 
-I teach courses mostly in the area of statistics, quantitative methods and data visualization.
+I [teach courses](teaching.qmd) mostly in the area of statistics, quantitative methods and data visualization.
 
 
 
