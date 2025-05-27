@@ -2,7 +2,7 @@
 title: "Interactions Of Gender Inequality And Parental Discipline Predicting Child Aggression In Low- And Middle-Income Countries"
 author:  Andy Grogan-Kaylor 
 date: "2024-8-12"
-categories: [multilevel, corporal punishment, MICS]
+categories: [multilevel, corporal punishment, positive parenting, MICS]
 image: "positiveparenting.png"
 ---
 
