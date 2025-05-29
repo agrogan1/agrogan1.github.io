@@ -33,9 +33,7 @@ google-scholar: true
 
 format:
   html:
-    theme: 
-      light: [yeti, theme-light.scss]
-      dark: vapor
+    theme: [yeti, theme-light.scss]
     mermaid: 
       theme: default
     css: agrogan.css
