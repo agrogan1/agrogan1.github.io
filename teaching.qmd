@@ -1,11 +1,10 @@
 ---
 title: "Teaching"
 listing:
-  type: default
+  type: grid
   sort-ui: false
   filter-ui: true
   categories: true
-  fields: [title, image, categories]
   contents:
     - title: "Data Visualization"
       path: https://agrogan1.github.io/dataviz/dataviz-course
@@ -17,7 +16,7 @@ listing:
       categories: [multilevel, course]
     - title: "Multilevel Workshop"
       path: https://agrogan1.github.io/multilevel-workshop/
-      image: multilevel-workshop.png
+      image: neighborhood.png
       categories: [multilevel, workshop]
     - title: "Visualizing Multilevel Models"
       path: https://agrogan1.github.io/multilevel/visualizing-MLM/visualizing-MLM.html

@@ -1,0 +1,22 @@
+---
+title: "Listing Demo"
+editor: source
+listing:
+  type: grid
+  table-hover: true
+  sort-ui: true
+  filter-ui: false
+  contents:
+    - title: "About My Research"
+      path: about.qmd
+    - title: "Research Papers"
+      path: research.qmd
+      image: earth.png
+    - title: "Teaching"
+      path: teaching.qmd
+      image: plant.png
+    - title: "About Me"
+      path: about.qmd
+    - title: "Stats Stuff"
+      path: stats-stuff.qmd
+---

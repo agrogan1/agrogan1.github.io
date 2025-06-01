@@ -89,7 +89,16 @@
     ]
   },
   {
-    "listing": "/stats-stuff.html",
+    "listing": "/listing-demo.html",
+    "items": [
+      "/about.html",
+      "/research.html",
+      "/stats-stuff.html",
+      "/teaching.html"
+    ]
+  },
+  {
+    "listing": "/teaching.html",
     "items": []
   },
   {
@@ -97,7 +106,7 @@
     "items": []
   },
   {
-    "listing": "/teaching.html",
+    "listing": "/stats-stuff.html",
     "items": []
   }
 ]
