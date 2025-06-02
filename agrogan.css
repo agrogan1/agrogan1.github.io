@@ -15,6 +15,7 @@ blockquote {
 .navbar-nav {
   font-size: 75%;
   font-weight: bold;
+  text-align: center;
   text-transform: uppercase;
 }
 .navbar-nav .nav-link.active {
