@@ -13,8 +13,9 @@ website:
         text: Home
       - href: https://ssw.umich.edu/sites/default/files/documents/faculty/cvs/agrogan_cv.pdf
         text: CV
-      - teaching.qmd  
+      - about-research.qmd
       - research.qmd
+      - teaching.qmd  
       - stats-stuff.qmd
       - href: https://agrogan1.github.io/multilevel-workshop/
         text: Multilevel Workshop
