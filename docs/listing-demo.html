@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
       searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
     };
@@ -131,10 +131,10 @@ window.Quarto = {
 
 <link rel="stylesheet" href="agrogan.css">
 <meta property="og:title" content="Listing Demo – Andrew Grogan-Kaylor">
-<meta property="og:image" content="earth.png">
+<meta property="og:image" content="thumbnail.jpg">
 <meta property="og:site_name" content="Andrew Grogan-Kaylor">
 <meta name="twitter:title" content="Listing Demo – Andrew Grogan-Kaylor">
-<meta name="twitter:image" content="earth.png">
+<meta name="twitter:image" content="thumbnail.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="citation_title" content="Listing Demo">
 <meta name="citation_language" content="en">
@@ -292,63 +292,22 @@ window.Quarto = {
 
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
-     </select>
-  </div>
-</div>
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1739749664283" data-listing-reading-time-sort="9" data-listing-word-count-sort="1673">
-<a href="./about.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1748364630007" data-listing-reading-time-sort="6" data-listing-word-count-sort="1019">
+<a href="./index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-About Me
-</h5>
-<div class="card-text listing-description">
-I am the <em>Sandra K. Danziger Collegiate Professor of Social Work</em>.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1739749664283" data-listing-reading-time-sort="9" data-listing-word-count-sort="1673">
-<a href="./about.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<p class="card-img-top">
+<img loading="lazy" src="thumbnail.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 About My Research
 </h5>
-<div class="card-text listing-description">
-I am the <em>Sandra K. Danziger Collegiate Professor of Social Work</em>.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
 </div>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1747844015362" data-listing-reading-time-sort="9" data-listing-word-count-sort="1726">
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1747844015362" data-listing-reading-time-sort="9" data-listing-word-count-sort="1726">
 <a href="./research.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -356,43 +315,13 @@ I am the <em>Sandra K. Danziger Collegiate Professor of Social Work</em>.
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-Research Papers
+Research Papers and Projects
 </h5>
-<div class="card-text listing-description">
-Many of these publications are available from Deep Blue.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
 </div>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1747844345569" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./stats-stuff.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Stats Stuff
-</h5>
-<div class="card-text listing-description">
-
-
-
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1748813483691" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
+<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1748813483691" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
 <a href="./teaching.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -402,16 +331,46 @@ Stats Stuff
 <h5 class="no-anchor card-title listing-title">
 Teaching
 </h5>
-<div class="card-text listing-description">
-
-
-
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
 </div>
 </div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1747844345569" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<a href="./stats-stuff.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="nautilus-new.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Stats Stuff
+</h5>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1739749664283" data-listing-reading-time-sort="9" data-listing-word-count-sort="1673">
+<a href="./about.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="forest.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+About Me
+</h5>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1744723779610" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<a href="./blog.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts/multilevel-thinking/multilevel-thinking.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Blog-ish Posts
+</h5>
 </div>
 </div>
 </a>

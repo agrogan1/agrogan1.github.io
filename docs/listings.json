@@ -91,10 +91,12 @@
   {
     "listing": "/listing-demo.html",
     "items": [
-      "/about.html",
+      "/index.html",
       "/research.html",
+      "/teaching.html",
       "/stats-stuff.html",
-      "/teaching.html"
+      "/about.html",
+      "/blog.html"
     ]
   },
   {
@@ -108,5 +110,16 @@
   {
     "listing": "/stats-stuff.html",
     "items": []
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/about-research.html",
+      "/research.html",
+      "/teaching.html",
+      "/stats-stuff.html",
+      "/about.html",
+      "/blog.html"
+    ]
   }
 ]
