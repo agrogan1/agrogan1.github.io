@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Andrew <br>Grogan-Kaylor"
+  title: "Andrew Grogan-Kaylor"
   twitter-card: true
   open-graph: true
   favicon: logo.png
@@ -13,8 +13,12 @@ website:
         text: Home
       - href: https://ssw.umich.edu/sites/default/files/documents/faculty/cvs/agrogan_cv.pdf
         text: CV
-      - about-research.qmd
-      - research.qmd
+      - text: "Research"
+        menu:
+          - text: "About My Research"
+            href: about-research.qmd
+          - text: "Research Papers and Projects"
+            href: research.qmd
       - teaching.qmd  
       - stats-stuff.qmd
       - href: https://agrogan1.github.io/multilevel-workshop/
