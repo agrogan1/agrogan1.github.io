@@ -127,8 +127,7 @@ leaflet() %>%
     + [HTML Slides](https://websites.umich.edu/~parentingandchilddev/MICS-discipline-11-forms/v1/MICS-discipline-11-forms.html)
     + [*scrollytelling* Version with `closeread`](https://globalfamilies.quarto.pub/parenting/)
 
-* "Gender Inequality in Low- and Middle-Income Countries: Associations
-with Parental Physical Abuse and Moderation by Child Gender"
+* "Gender Inequality in Low- and Middle-Income Countries: Associations with Parental Physical Abuse and Moderation by Child Gender"
     + [Open Access Article](https://www.mdpi.com/1841422)
     + [ArcGIS Storymap](https://arcg.is/1WzHHP)
     + [Press Release](https://news.umich.edu/gender-inequality-can-predict-high-rates-of-child-physical-abuse/)

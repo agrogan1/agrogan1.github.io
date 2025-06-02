@@ -2,8 +2,8 @@
 title: "ArcGIS Storymaps"
 subtitle: "Experimenting with a new format for sharing research."
 author:  Andy Grogan-Kaylor 
-date: "2024-3-30"
-categories: [GIS, MICS]
+date: "2025-6-1"
+categories: [GIS, MICS, multilevel, corporal punishment, positive parenting]
 image: "worldmap.png"
 ---
 
@@ -75,8 +75,8 @@ MICS <- global_data %>%
 library(leaflet)
 
 leaflet(options = leafletOptions(attributionControl=TRUE)) %>%
-  setView(0, 0, zoom = 1.5) %>%
-  addProviderTiles(providers$Stamen.Terrain) %>%
+  setView(0, 0, zoom = 1.5) %>% 
+  addProviderTiles(providers$Esri.WorldImagery) %>% 
   addPolygons(data = MICS, 
               fillOpacity = .75, 
               color = "#5b92e5", 
@@ -87,10 +87,25 @@ leaflet(options = leafletOptions(attributionControl=TRUE)) %>%
 
 ```
 
-For [our work with the UNICEF Multiple Indicator Cluster Survey (MICS) data](https://agrogan1.github.io/research.html#multiple-indicator-cluster-surveys-mics-unicef-data) on parenting and child development in Low and Middle Income Countries around the world, I have been experimenting with the ArcGIS "storymaps" format:
+For [our work with the UNICEF Multiple Indicator Cluster Survey (MICS) data](https://agrogan1.github.io/research.html#multiple-indicator-cluster-surveys-mics-unicef-data) on parenting and child development in Low and Middle Income Countries around the world, I have been experimenting with the ArcGIS "StoryMap" format:
 
-* Gender Inequality in Low- and Middle-Income Countries: Associations
-with Parental Physical Abuse and Moderation by Child Gender
+* "How does context shape differences and changes in caregivers’ engagement in psychosocial stimulation over time? Evidence from a cross-national study"
+    + [ArcGIS StoryMap](https://arcg.is/1jHXPX1)
+    
+* "Orphan discipline and child neglect: An analysis from 48 countries"
+    + [ArcGIS Storymap](https://arcg.is/1HjKyW2)
+
+* "Interactions of Gender Inequality and Parental Discipline Predicting Child Aggression in Low- and Middle-Income Countries"
+    + [Open Access Article](http://doi.org/10.1111/cdev.14152)
+    + [ArcGIS Storymap](https://arcg.is/0m4qDb)
+
+* "Associations between 11 parental discipline behaviours and child outcomes across 60 countries"
+    + [Open Access Article](https://bmjopen.bmj.com/content/13/10/e058439)
+    + [ArcGIS Storymap](https://arcg.is/1OSzvG0)
+    + [HTML Slides](https://websites.umich.edu/~parentingandchilddev/MICS-discipline-11-forms/v1/MICS-discipline-11-forms.html)
+    + [*scrollytelling* Version with `closeread`](https://globalfamilies.quarto.pub/parenting/)    
+
+* Gender Inequality in Low- and Middle-Income Countries: Associations with Parental Physical Abuse and Moderation by Child Gender
     + [Article](https://www.mdpi.com/1841422)
     + [ArcGIS Storymap](https://arcg.is/1WzHHP)
     + [Press Release](https://news.umich.edu/gender-inequality-can-predict-high-rates-of-child-physical-abuse/)
