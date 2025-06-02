@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Andrew Grogan-Kaylor"
+  title: "Andrew <br>Grogan-Kaylor"
   twitter-card: true
   open-graph: true
   favicon: logo.png
