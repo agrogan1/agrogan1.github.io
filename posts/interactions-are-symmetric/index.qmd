@@ -1,0 +1,68 @@
+---
+title: "Interactions Are Symmetric"
+author: "Andy Grogan-Kaylor" 
+date: "2025-6-9"
+categories: [stats, teaching]
+draft: true
+---
+
+```{r}
+
+library(plotly)
+
+library(ggplot2)
+
+# library(car)
+
+N <- 100
+
+x <- trunc(runif(N, 1, 5)) # uniform x from 1 to 5
+
+m <- rbinom(N, 1, .5) # binomial moderator
+
+# e <- rnorm(N, 0, 10)
+
+y <- x + m + .1 * x * m 
+
+# m <- factor(m)
+
+# scatter3d(x = x, y = m, z = y)
+
+mydata <- data.frame(x, m , y)
+
+```
+
+```{r}
+
+p1 <- plot_ly(data = mydata, 
+              x = ~x, 
+              y = ~y,
+              color = ~factor(m), 
+              colors = "Set1",
+              text = ~paste("x:", x, 
+                            '<br>m:', m),
+              hoverinfo = 'text',
+              mode = 'lines+markers',
+              marker = list(size = 10))
+
+p1
+
+```
+
+```{r}
+
+p2 <- plot_ly(data = mydata, 
+              x = ~m, 
+              y = ~y,
+              color = ~factor(x), 
+              colors = "Set1",
+              text = ~paste("x:", x, 
+                            '<br>m:', m),
+              hoverinfo = 'text',
+              mode = 'lines+markers',
+              marker = list(size = 10))
+
+p2
+
+```
+
