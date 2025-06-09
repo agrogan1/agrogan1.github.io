@@ -5,6 +5,7 @@
       "/posts/multilevel-thinking/index.html",
       "/posts/teaching/index.html",
       "/posts/stats-stuff/index.html",
+      "/posts/MLM-longitudinal-data/index.html",
       "/posts/ArcGIS-storymaps/index.html",
       "/posts/closeread-be-less-wrong/index.html",
       "/posts/college-completion/index.html",
@@ -27,7 +28,6 @@
       "/posts/treemap/index.html",
       "/posts/cartogram/index.html",
       "/posts/complexity-hidden-inside-simplicity/index.html",
-      "/posts/MLM-longitudinal-data/index.html",
       "/posts/Simpsons-paradox-simple-visual-explanation/index.html",
       "/posts/closeread/index.html",
       "/posts/youve-got-to-be-kind/index.html",
@@ -100,11 +100,11 @@
     ]
   },
   {
-    "listing": "/teaching.html",
+    "listing": "/contact.html",
     "items": []
   },
   {
-    "listing": "/contact.html",
+    "listing": "/teaching.html",
     "items": []
   },
   {

@@ -12,6 +12,8 @@ library(plotly)
 
 library(ggplot2)
 
+library(crosstalk)
+
 # library(car)
 
 N <- 100
@@ -30,11 +32,13 @@ y <- x + m + .1 * x * m
 
 mydata <- data.frame(x, m , y)
 
+shared_mydata <- SharedData$new(mydata)
+
 ```
 
 ```{r}
 
-p1 <- plot_ly(data = mydata, 
+p1 <- plot_ly(data = shared_mydata, 
               x = ~x, 
               y = ~y,
               color = ~factor(m), 
@@ -51,7 +55,7 @@ p1
 
 ```{r}
 
-p2 <- plot_ly(data = mydata, 
+p2 <- plot_ly(data = shared_mydata, 
               x = ~m, 
               y = ~y,
               color = ~factor(x), 
@@ -63,6 +67,12 @@ p2 <- plot_ly(data = mydata,
               marker = list(size = 10))
 
 p2
+
+```
+
+```{r}
+
+bscols(p1, p2)
 
 ```
 
