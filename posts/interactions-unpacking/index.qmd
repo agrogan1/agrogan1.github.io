@@ -1,0 +1,51 @@
+---
+title: "Unpacking Interactions"
+author: "Andy Grogan-Kaylor" 
+date: "2025-6-10"
+categories: [stats, teaching, interactions]
+---
+
+```{r}
+#| output: false
+
+library(Statamarkdown)
+
+```
+
+```{stata}
+#| output: false
+
+twoway (function y = .1 + x) ///
+(function y = 1 + .5 * x) ///
+(pcarrowi .05 .1 .08 .01) ///
+(pcarrowi .95 .1 .98 .01) ///
+(pcarrowi .6 .6 .65 .57) ///
+(pcarrowi 1.2 .6 1.25 .57), ///
+title("Main Effects and Interactions") ///
+subtitle("y = {&beta}{sub:0} + {&beta}{sub:1} x + {&beta}{sub:2} z + {&beta}{sub:3} xz + e{sub:i}") ///
+xtitle("z") ///
+ytitle("y") ///
+legend(order(1 "x = 0" 2 "x = 1")) ///
+text(.05 .1 "{&beta}{sub:0}", place(e)) ///
+text(.95 .1 "{&beta}{sub:0} + {&beta}{sub:1}", place(e)) /// 
+text(.6 .6 "{&beta}{sub:2}", place(e)) ///
+text(1.2 .6 "{&beta}{sub:2} + {&beta}{sub:3}", place(e)) ///
+name(unpacking, replace)
+
+graph export "interactions-unpacking.png", as(png) name("unpacking") replace
+
+```
+
+![Unpacking Interactions](interactions-unpacking.png){#fig-unpacking}
+
+Each group in @fig-unpacking has its own intercept and slope:
+
+| Group | Intercept           |  Slope                     |
+|-------|---------------------|----------------------------|
+| x = 0 | $\beta_0$           | $\beta_2$                  |
+| x = 1 | $\beta_0 + \beta_1$ | $\beta_2 + \beta_3$        |
+
+: Unpacking Interactions {#tbl-unpacking}
+
+
+
