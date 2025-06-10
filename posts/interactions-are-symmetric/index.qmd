@@ -3,7 +3,7 @@ title: "Interactions Are Symmetric"
 author: "Andy Grogan-Kaylor" 
 date: "2025-6-10"
 categories: [stats, teaching, interactions]
-image: colorsplash.png
+image: mandelbrot.png
 draft: false
 ---
 
