@@ -1,0 +1,27 @@
+---
+title: "Interactions And Main Effects Need To Be Interpreted Together"
+author: "Andy Grogan-Kaylor" 
+date: "2025-6-10"
+categories: [stats, teaching, interactions]
+image: slope.png
+---
+
+As a teacher, with some frequency, I hear the idea from students that when statistically significant *interaction terms* are present, one does not need to interpret main effects at all, a contention apparently heard by others [@GraceMartin], yet which to me appears mathematically and statistically unfounded.
+
+I'm thankful to a StataList post by @Kolev2022 for providing a mathematical foundation to this thinking. 
+
+Consider the following equation with an interaction term:  
+
+$$y = \beta_0 + \beta_1 x + \beta_2 m + \beta_3 xm + e_i$$ {#eq-moderation}
+
+@Kolev2022 uses derivatives to make a point. I'm going to use partial derivatives, because I think they are more accurate.
+
+$$\frac{\partial y}{\partial x} = \beta_1 + \beta_3 m$$ {#eq-moderation}
+
+So, using the partial derivative of y with respect to x, we see that this partial derivative depends both upon the main effect of x, $\beta_1$, and the effect of $m$, $\beta_3 m$.
+
+That main effect, $\beta_1$, might be 0, but even then, it needs to be interpreted. 
+
+Interactions and main effects need to be interpreted together. 
+
+
