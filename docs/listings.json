@@ -2,10 +2,10 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/interactions-are-symmetric/index.html",
       "/posts/multilevel-thinking/index.html",
       "/posts/teaching/index.html",
       "/posts/stats-stuff/index.html",
+      "/posts/interactions-are-symmetric/index.html",
       "/posts/MLM-longitudinal-data/index.html",
       "/posts/ArcGIS-storymaps/index.html",
       "/posts/closeread-be-less-wrong/index.html",

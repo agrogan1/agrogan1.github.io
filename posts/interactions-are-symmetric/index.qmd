@@ -1,9 +1,9 @@
 ---
 title: "Interactions Are Symmetric"
 author: "Andy Grogan-Kaylor" 
-date: "2025-6-9"
+date: "2025-6-10"
 categories: [stats, teaching, interactions]
-draft: true
+draft: false
 ---
 
 ```{r}
@@ -16,7 +16,23 @@ library(crosstalk)
 
 # library(car)
 
-# N <- 100
+```
+
+# Idea
+
+Interactions are often presented as though one variable were the main variable *x*, while a second variable is the moderator variable *m*.
+
+$$y = \beta_0 + \beta_1 x + \beta_2 m + \beta_3 xm + e_i$$ {#eq-moderation}
+
+In truth, however, because of the commutative property of multiplication, $a \times b = b \times a$, each variable can be thought of as moderating the other.
+
+In terms of visualizing interactions, it is perhaps more *conventional* to have the variable that is conceptualized as the *independent variable*, *x*, along the *x* axis, and to show separate regression lines for each value of the *moderator* *m*. However, despite being more conventional, it is mathematically plausible to present the inverse: *m* along the *x* axis, and different regression lines for different values of *x*.
+
+# Explore
+
+Explore these ideas using the visualization below. Click on values in the table to see how they are displayed in each of the two visualization possibilities.
+
+```{r}
 
 x <- rep(seq(1:5), 2) # sequence from 1 to 5
 
@@ -44,10 +60,12 @@ p1 <- plot_ly(data = shared_mydata,
               color = ~factor(m), 
               colors = "Set1",
               text = ~paste("x:", x, 
-                            '<br>m:', m),
+                            '<br>m:', m,
+                            '<br>y:', y),
               hoverinfo = 'text',
               mode = 'lines+markers',
-              marker = list(size = 10))
+              marker = list(size = 10)) %>% 
+  layout(legend=list(title=list(text='m')))
 
 # p1
 
@@ -61,10 +79,12 @@ p2 <- plot_ly(data = shared_mydata,
               color = ~factor(x), 
               colors = "Set1",
               text = ~paste("x:", x, 
-                            '<br>m:', m),
+                            '<br>m:', m,
+                            '<br>y:', y),
               hoverinfo = 'text',
               mode = 'lines+markers',
-              marker = list(size = 10))
+              marker = list(size = 10)) %>% 
+  layout(legend=list(title=list(text='x')))
 
 # p2
 
@@ -72,7 +92,8 @@ p2 <- plot_ly(data = shared_mydata,
 
 ```{r}
 
-mytable <- DT::datatable(shared_mydata)
+mytable <- DT::datatable(shared_mydata, 
+                         options = list(dom = 't'))
 
 ```
 
@@ -82,7 +103,8 @@ mytable <- DT::datatable(shared_mydata)
 
 # mytable
 
-bscols(mytable, p1, p2)
+bscols(widths = c(2, NA, NA), 
+       mytable, p1, p2)
 
 ```
 
