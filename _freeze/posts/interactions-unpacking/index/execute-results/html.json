@@ -1,0 +1,15 @@
+{
+  "hash": "08522af27272b54f059689c5addefd7d",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Unpacking Interactions\"\nauthor: \"Andy Grogan-Kaylor\" \ndate: \"2025-6-10\"\ncategories: [stats, teaching, interactions]\n---\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n\n\n![Unpacking Interactions](interactions-unpacking.png){#fig-unpacking}\n\nEach group in @fig-unpacking has its own intercept and slope:\n\n| Group | Intercept           |  Slope                     |\n|-------|---------------------|----------------------------|\n| x = 0 | $\\beta_0$           | $\\beta_2$                  |\n| x = 1 | $\\beta_0 + \\beta_1$ | $\\beta_2 + \\beta_3$        |\n\n: Unpacking Interactions {#tbl-unpacking}\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
