@@ -5,6 +5,7 @@
       "/posts/interactions-are-symmetric/index.html",
       "/posts/multilevel-thinking/index.html",
       "/posts/teaching/index.html",
+      "/posts/interactions-unpacking/index.html",
       "/posts/stats-stuff/index.html",
       "/posts/MLM-longitudinal-data/index.html",
       "/posts/ArcGIS-storymaps/index.html",
@@ -101,11 +102,11 @@
     ]
   },
   {
-    "listing": "/contact.html",
+    "listing": "/teaching.html",
     "items": []
   },
   {
-    "listing": "/teaching.html",
+    "listing": "/contact.html",
     "items": []
   },
   {

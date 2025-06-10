@@ -4,7 +4,6 @@ author: "Andy Grogan-Kaylor"
 date: "2025-6-10"
 categories: [stats, teaching, interactions]
 image: mandelbrot.png
-draft: false
 ---
 
 ```{r}
