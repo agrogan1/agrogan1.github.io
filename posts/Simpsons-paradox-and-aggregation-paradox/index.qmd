@@ -2,11 +2,11 @@
 title: "Simpson's Paradox and The Aggregation Paradox"
 subtitle: "Closely Related Statistical Phenomena"
 author: "Andy Grogan-Kaylor" 
-date: "2025-4-5"
+date: "2025-6-1"
 categories: [stats, multilevel, science, teaching]
 ---
 
-I am starting to think that [Simpson's Paradox](https://agrogan1.github.io/posts/Simpsons-paradox-simple-visual-explanation/) [@Simpson1951] and the Aggregation Paradox [C.F. @Gelman2007; @Nieuwenhuis2015; @langbliese] (which elsewhere I term "multilevel structure"), are variations of the same phenomenon.
+I am starting to think that [Simpson's Paradox](https://agrogan1.github.io/posts/Simpsons-paradox-simple-visual-explanation/) [@Simpson1951] and the Aggregation Paradox [C.F. @Gelman2007; @Nieuwenhuis2015] (which elsewhere I term "multilevel structure"), are variations of the same phenomenon.
 
 Consider a simple regression equation with independent variable $x$ and a set of $k$ indicator variables $z$.
 
