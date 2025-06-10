@@ -2,7 +2,7 @@
 title: "Interactions Are Symmetric"
 author: "Andy Grogan-Kaylor" 
 date: "2025-6-9"
-categories: [stats, teaching]
+categories: [stats, teaching, interactions]
 draft: true
 ---
 
