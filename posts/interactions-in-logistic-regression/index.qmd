@@ -3,7 +3,7 @@ title: "Interactions in Logistic Regression"
 subtitle: "More complicated than you would think"
 author: "Andy Grogan-Kaylor" 
 date: "2025-3-1"
-categories: [stats, Stata, teaching]
+categories: [stats, Stata, teaching, interactions]
 image: "interactions.png"
 ---
 
