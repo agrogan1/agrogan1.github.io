@@ -25,13 +25,13 @@ Interactions are often presented as though one variable were the main variable *
 
 $$y = \beta_0 + \beta_1 x + \beta_2 m + \beta_3 xm + e_i$$ {#eq-moderation}
 
-In truth, however, because of the commutative property of multiplication, $a \times b = b \times a$, each variable can be thought of as moderating the other.
+In truth, however, because of the commutative property of multiplication, $a \times b = b \times a$, each variable can be thought of as moderating the other: $x \times m = m \times x$.
 
 In terms of visualizing interactions, it is perhaps more *conventional* to have the variable that is conceptualized as the *independent variable*, *x*, along the *x* axis, and to show separate regression lines for each value of the *moderator* *m*. However, despite being more conventional, it is mathematically plausible to present the inverse: *m* along the *x* axis, and different regression lines for different values of *x*.
 
 # Explore
 
-Explore these ideas using the visualization below. Click on values in the table to see how they are displayed in each of the two visualization possibilities.
+Explore these ideas using the visualization below. Start by clicking on values in the table to see how they are displayed in each of the two visualization possibilities. You may also click on the graphs themselves.
 
 ```{r}
 
