@@ -2,7 +2,7 @@
 title: "Interactions"
 author: "Andy Grogan-Kaylor" 
 date: "2024-11-4"
-categories: [stats, teaching]
+categories: [stats, teaching, interactions]
 image: "colorsplash.png"
 ---
 
