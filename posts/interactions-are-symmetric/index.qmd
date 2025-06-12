@@ -20,7 +20,7 @@ library(crosstalk)
 
 # Idea
 
-Interactions are often presented as though one variable were the main variable *x*, while a second variable is the moderator variable *m*.
+Interactions are often presented as though one variable were the *main independent variable* *x*, while a second variable is the *moderator variable* *m*.
 
 $$y = \beta_0 + \beta_1 x + \beta_2 m + \beta_3 xm + e_i$$ {#eq-moderation}
 
@@ -62,9 +62,10 @@ p1 <- plot_ly(data = shared_mydata,
               text = ~paste("x:", x, 
                             '<br>m:', m,
                             '<br>y:', y),
-              hoverinfo = 'text',
+              hoverinfo = 'text', 
+              type = 'scatter',
               mode = 'lines+markers',
-              marker = list(size = 10)) %>% 
+              marker = list(size = 15)) %>% 
   layout(legend=list(title=list(text='m')))
 
 # p1
@@ -82,8 +83,9 @@ p2 <- plot_ly(data = shared_mydata,
                             '<br>m:', m,
                             '<br>y:', y),
               hoverinfo = 'text',
+              type = 'scatter',
               mode = 'lines+markers',
-              marker = list(size = 10)) %>% 
+              marker = list(size = 15)) %>% 
   layout(legend=list(title=list(text='x')))
 
 # p2
@@ -96,7 +98,6 @@ mytable <- DT::datatable(shared_mydata,
                          options = list(dom = 't'))
 
 ```
-
 
 ```{r}
 #| column: page

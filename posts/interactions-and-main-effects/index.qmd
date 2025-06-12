@@ -6,7 +6,7 @@ categories: [stats, teaching, interactions]
 image: slope.png
 ---
 
-As a teacher, with some frequency, I hear the idea from students that when statistically significant *interaction terms* are present, one does not need to interpret main effects at all, a contention apparently heard by others [@GraceMartin], yet which to me appears mathematically and statistically unfounded.
+As a teacher, with some frequency, I hear the idea from students that when statistically significant *interaction terms* are present, one does not need to interpret *main effects* at all, a contention apparently heard by others [@GraceMartin], yet which to me appears mathematically and statistically unfounded.
 
 I'm thankful to a StataList post by @Kolev2022 for providing a mathematical foundation to this thinking. 
 
