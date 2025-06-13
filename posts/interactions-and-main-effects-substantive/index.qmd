@@ -1,0 +1,86 @@
+---
+title: "Interactions And Main Effects Need To Be Interpreted Together"
+subtitle: "A Substantive Example"
+author: "Andy Grogan-Kaylor" 
+date: "2025-6-10"
+categories: [stats, teaching, interactions]
+image: slope.png
+---
+
+In [another post](../interactions-and-main-effects-mathematical/index.html), I wrote about how interactions and main effects need to be interpreted together from a mathematical perspective. Below, please find a visual example of a substantive issue that we have been thinking through for some papers that we have been working on. This visual example should similarly demonstrate that interactions and main effects need to be interpreted together. 
+
+```{r}
+
+library(Statamarkdown)
+
+```
+
+```{stata}
+#| output: false
+
+* main effects and interactions
+
+
+if "$S_OS" == "Windows" {
+	graph set window fontface "Tekton Pro"
+}
+
+if "$S_OS" == "MacOSX" {
+	graph set window fontface "Chalkboard"
+}
+
+
+twoway (function y = x) (function y = -.02 + x), ///
+title("(a) Harsh Parenting Matters (Nearly)" "The Same In a Violent Context") ///
+xtitle("harsh parenting") ///
+ytitle("aggression") ///
+xlabel(none) ylabel(none) ///
+legend(order(1 "context with lower violence" 2 "context with higher violence") row(2) pos(3)) ///
+aspect(1) ///
+scheme(stsj) name(equivalent, replace)
+
+twoway (function y = x) (function y = 1.5 * x), ///
+title("(b) Harsh Parenting Matters More" "In a Violent Context") ///
+xtitle("harsh parenting") ///
+ytitle("aggression") ///
+xlabel(none) ylabel(none) ///
+legend(order(1 "context with lower violence" 2 "context with higher violence") row(2) pos(3)) ///
+aspect(1) ///
+scheme(stsj) name(mattersmore, replace)
+
+twoway (function y = x) (function y = .5 * x), ///
+title("(c) Harsh Parenting Matters Less" "In a Violent Context") ///
+xtitle("harsh parenting") ///
+ytitle("aggression") ///
+xlabel(none) ylabel(none) ///
+legend(order(1 "context with lower violence" 2 "context with higher violence") row(2) pos(3)) ///
+aspect(1) ///
+scheme(stsj) name(mattersless, replace)
+
+twoway (function y = x) (function y = 1 + .5 * x), ///
+title("(d) Harsh Parenting Matters Less" "In a Violent Context") ///
+text(.9 0 "However, overall levels of aggression" "are already high", place(e) size(vsmall) j(left)) ///
+xtitle("harsh parenting") ///
+ytitle("aggression") ///
+xlabel(none) ylabel(none) ///
+aspect(1) ///
+legend(order(1 "context with lower violence" 2 "context with higher violence") row(2) pos(3)) ///
+scheme(stsj) name(matterslessalreadyhigh, replace)
+
+graph combine equivalent mattersmore mattersless matterslessalreadyhigh, ///
+title("Main Effects And Interactions Must Be Considered Together") ///
+iscale(*.7) ///
+imargin(large) ///
+ycommon xcommon  ///
+name(combined, replace)
+
+graph export "main-effects-interactions-considered-together.png", as(png) name("combined") replace
+
+graph set window fontface default // restore default settings
+
+```
+
+![Main Effects and Interactions Must Be Interpeted Together](main-effects-interactions-considered-together.png)
+
+
+

@@ -1,0 +1,15 @@
+{
+  "hash": "adebe4ff5621dd99f9a557c426401d29",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Interactions And Main Effects Need To Be Interpreted Together\"\nsubtitle: \"A Substantive Example\"\nauthor: \"Andy Grogan-Kaylor\" \ndate: \"2025-6-10\"\ncategories: [stats, teaching, interactions]\nimage: slope.png\n---\n\n\n\nIn [another post](../interactions-and-main-effects-mathematical/index.html), I wrote about how interactions and main effects need to be interpreted together from a mathematical perspective. Below, please find a visual example of an issue that we have been thinking through for some papers that we have been working on. This visual example should similarly demonstrate that interactions and main effects need to be interpreted together. \n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n\n\n![Main Effects and Interactions Must Be Interpeted Together](main-effects-interactions-considered-together.png)\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

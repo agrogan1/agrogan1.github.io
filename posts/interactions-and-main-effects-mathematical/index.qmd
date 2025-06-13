@@ -1,9 +1,10 @@
 ---
 title: "Interactions And Main Effects Need To Be Interpreted Together"
+subtitle: "A Mathematical Perspective"
 author: "Andy Grogan-Kaylor" 
 date: "2025-6-10"
 categories: [stats, teaching, interactions]
-image: slope.png
+image: lines.png
 ---
 
 As a teacher, with some frequency, I hear the idea from students that when statistically significant *interaction terms* are present, one does not need to interpret *main effects* at all, a contention apparently heard by others [@GraceMartin], yet which to me appears mathematically and statistically unfounded.

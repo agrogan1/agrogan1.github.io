@@ -1,15 +1,14 @@
 ---
 title: "Interactions"
 author: "Andy Grogan-Kaylor" 
-date: "2024-11-4"
+date: "2025-6-11"
 categories: [stats, teaching, interactions]
 image: "colorsplash.png"
 ---
 
-A quick placeholder post to share a link to my materials on interactions:
+A quick placeholder post to share a link to some materials on interactions:
 
 * [Interactions and Moderation](https://agrogan1.github.io/teaching/interactions/interactions.html)
-* [Presenting Interactions](https://agrogan1.github.io/teaching/presenting-interactions/presenting-interactions.html)
 * [Interactions in Logistic Regression](https://agrogan1.github.io/newstuff/categorical/logistic-interactions-2/logistic-interactions-2.html)
 
 
