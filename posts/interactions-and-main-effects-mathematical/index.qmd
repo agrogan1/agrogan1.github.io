@@ -19,7 +19,7 @@ $$y = \beta_0 + \beta_1 x + \beta_2 m + \beta_3 xm + e_i$$ {#eq-moderation}
 
 $$\frac{\partial y}{\partial x} = \beta_1 + \beta_3 m$$ {#eq-moderation}
 
-So, using the partial derivative of y with respect to x, we see that this partial derivative depends both upon the main effect of x, $\beta_1$, and the effect of $m$, $\beta_3 m$.
+So, using the partial derivative of $y$ with respect to $x$, we see that this partial derivative depends both upon the main effect of $x$, $\beta_1$, and the effect of $m$, $\beta_3 m$.
 
 That main effect, $\beta_1$, might be 0, but even then, it needs to be interpreted. 
 
