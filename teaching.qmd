@@ -24,7 +24,7 @@ listing:
       categories: [multilevel, dataviz, handout]
     - title: "Categorical Data Analysis"
       path: https://agrogan1.github.io/newstuff/categorical/
-      image: nautilus-new.png
+      image: dice.png
       categories: [categorical, course]
 ---
     
