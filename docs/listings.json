@@ -14,7 +14,6 @@
       "/posts/ArcGIS-storymaps/index.html",
       "/posts/Simpsons-paradox-and-aggregation-paradox/index.html",
       "/posts/tables-in-Stata/index.html",
-      "/posts/tables-Stata-SEM/index.html",
       "/posts/closeread-be-less-wrong/index.html",
       "/posts/college-completion/index.html",
       "/posts/why-cant-numbers-be-beautiful-too/index.html",
@@ -104,11 +103,11 @@
     ]
   },
   {
-    "listing": "/teaching.html",
+    "listing": "/contact.html",
     "items": []
   },
   {
-    "listing": "/contact.html",
+    "listing": "/teaching.html",
     "items": []
   },
   {
