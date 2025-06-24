@@ -116,6 +116,10 @@ listing:
       path: https://agrogan1.github.io/R/xaringan-themes/
       image: https://agrogan1.github.io/R/R.png
       categories: [R, Xaringan]
+    - title: "Derivation of Bayes Theorem"
+      path: https://agrogan1.github.io/Bayes/Bayes-Theorem/Bayes-Theorem.html
+      image: https://agrogan1.github.io/Bayes/basic-Bayes/Thomas_Bayes.png
+      categories: [Bayes]      
     - title: "Basic Bayes"
       path: https://agrogan1.github.io/Bayes/basic-Bayes/basic-Bayes.html
       image: https://agrogan1.github.io/Bayes/basic-Bayes/Thomas_Bayes.png
