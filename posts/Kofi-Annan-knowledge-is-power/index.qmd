@@ -4,6 +4,7 @@ author:  Kofi Annan
 date: "2025-6-27"
 categories: [teaching, science]
 image: "earth.png"
+draft: true
 ---
 
 > "Knowledge is power. Information is liberating. Education is the premise of progress, in every society, in every family.
@@ -15,13 +16,3 @@ image: "earth.png"
 
 
 
-
-
-@InCollection{Annan1997,
-   author = {Kofi Annan},
-   city = {Toronto, ON},
-   booktitle = {Global Knowledge '97},
-   publisher = {World Bank},
-   title = {Address to World Bank Conference 'Global Knowledge '97},
-   year = {1997}
-}
