@@ -1,0 +1,26 @@
+---
+title: "Knowledge is power. Information is liberating."
+author:  Kofi Annan 
+date: "2025-6-27"
+categories: [teaching, science]
+---
+
+> "Knowledge is power. Information is liberating. Education is the premise of progress, in every society, in every family.
+
+> We at the United Nations are convinced that information has a great democratizing power waiting to be harnessed to our global struggle for peace and development.
+
+> We believe this because we are convinced that it is ignorance, not knowledge, that makes enemies of men. It is ignorance, not knowledge, that makes fighters of children. It is ignorance, not knowledge, that leads some to advocate tyranny over democracy. It is ignorance, not knowledge, that makes some think that human misery is inevitable. It is ignorance, not knowledge, that make others say that there are many worlds, when we know that there is one. Ours."
+
+
+
+
+
+
+@InCollection{Annan1997,
+   author = {Kofi Annan},
+   city = {Toronto, ON},
+   booktitle = {Global Knowledge '97},
+   publisher = {World Bank},
+   title = {Address to World Bank Conference 'Global Knowledge '97},
+   year = {1997}
+}
