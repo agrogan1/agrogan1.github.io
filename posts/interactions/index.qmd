@@ -6,10 +6,10 @@ categories: [stats, teaching, interactions]
 image: "colorsplash.png"
 ---
 
-A quick placeholder post to share a link to some materials on interactions:
+A quick placeholder post to share a link to a handout on interactions:
 
 * [Interactions and Moderation](https://agrogan1.github.io/teaching/interactions/interactions.html)
-* [Interactions in Logistic Regression](https://agrogan1.github.io/newstuff/categorical/logistic-interactions-2/logistic-interactions-2.html)
+
 
 
 
