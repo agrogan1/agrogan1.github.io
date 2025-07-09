@@ -18,6 +18,9 @@ blockquote {
   text-align: center;
   text-transform: uppercase;
 }
+.nav-link {
+    border-radius: 5px;    
+}
 .navbar-nav .nav-link.active {
   color: #FFCB05;
   background-color: #00274C;
