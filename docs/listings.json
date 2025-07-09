@@ -4,6 +4,7 @@
     "items": [
       "/posts/multilevel-thinking/index.html",
       "/posts/teaching/index.html",
+      "/posts/multilevel-workshop/index.html",
       "/posts/stats-stuff/index.html",
       "/posts/interactions/index.html",
       "/posts/interactions-are-symmetric/index.html",
@@ -44,7 +45,6 @@
       "/posts/data-visualization-with-Stata/index.html",
       "/posts/mediation/index.html",
       "/posts/visualizing-MLM/index.html",
-      "/posts/multilevel-workshop/index.html",
       "/posts/missing-data/index.html",
       "/posts/very-short-introduction-Stata/index.html",
       "/posts/UNICEF-colors-for-Stata-graphs/index.html",
