@@ -16,7 +16,7 @@ listing:
       categories: [multilevel, course]
     - title: "Multilevel Workshop"
       path: https://agrogan1.github.io/multilevel-workshop/
-      image: neighborhood.png
+      image: communities.png
       categories: [multilevel, workshop]
     - title: "Visualizing Multilevel Models"
       path: https://agrogan1.github.io/multilevel/visualizing-MLM/visualizing-MLM.html
