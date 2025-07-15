@@ -126,7 +126,7 @@ listing:
       categories: [Bayes]
     - title: "Thinking Through Bayesian Ideas"
       path: https://agrogan.shinyapps.io/Thinking-Through-Bayes/
-      image: https://agrogan1.github.io/Bayes/basic-Bayes/Thomas_Bayes.png
+      image: doughnut.png
       categories: [Bayes, interactive]
     - title: "Notes on Accepting the Null ($H_0$) Hypothesis"
       path: https://agrogan1.github.io/Bayes/accepting-H0/accepting-H0.html
