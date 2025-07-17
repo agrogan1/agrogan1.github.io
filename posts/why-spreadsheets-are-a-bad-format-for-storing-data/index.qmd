@@ -1,17 +1,17 @@
 ---
-title: "Why Excel Is A Bad Format For Storing Data"
+title: "Why Spreadsheets Are A Bad Format For Storing Data"
 author: "Andy Grogan-Kaylor"
-date: "2023-12-09"
+date: "2025-7-01"
 categories: [stats, workflow]
 ---
 
 # Background
 
-Excel is sometimes used as a program to collect and store data. Excel may sometimes be used because it is the only program that some individuals or agencies have for storing data. Excel and other spreadsheet programs may also be used because spreadsheets can be very intuitive and easy ways of managing small amounts of data. 
+Excel and Google Sheets are sometimes used as programs to collect and store data. Excel and Google Sheets are sometimes used because they are the only programs that some individuals or agencies have for storing data. Excel and other spreadsheet programs may also be used because spreadsheets can be very intuitive and easy ways of managing small amounts of data. 
 
-However, Excel may be problematic as a data storage solution for a number of reasons detailed below, especially as data sets grow in size. Notably, statistical programs like [Stata](https://www.stata.com/), [SAS](https://www.sas.com/en_us/home.html), or SPSS all store additional information with each variable such as: a *variable label*, describing the contents of the variable, or the survey question that resulted in the variable; and a *value label*, which attaches qualitative information to each possible value of the response. 
+However, Excel and Google Sheets may be problematic as a data storage solution for a number of reasons detailed below, especially as data sets grow in size. Notably, statistical programs like [Stata](https://www.stata.com/), [SAS](https://www.sas.com/en_us/home.html), or SPSS all store additional information with each variable such as: a *variable label*, describing the contents of the variable, or the survey question that resulted in the variable; and a *value label*, which attaches qualitative information to each possible value of the response. 
 
-Excel does not generally contain this extra information about each variable, or column of data, which may lead to errors in working with quantitative information.
+Excel and Google Sheets do not generally contain this extra information about each variable, or column of data, which may lead to errors in working with quantitative information.
 
 The data below are stored in Stata format, but could as easily be stored in SAS or SPSS format.
 
@@ -103,6 +103,8 @@ list in 1/10
 ```
 
 # Now Use The Data In Excel Format
+
+> The example below focuses on Excel, but could as easily apply to a program like Google Sheets.
 
 ```{stata, echo=FALSE}
 

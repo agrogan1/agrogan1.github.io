@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Andy Grogan-Kaylor">
-<meta name="dcterms.date" content="2023-12-06">
+<meta name="dcterms.date" content="2025-07-01">
 
-<title>Why Excel Is A Bad Format For Storing Data – Andrew Grogan-Kaylor</title>
+<title>Why Spreadsheets Are A Bad Format For Storing Data – Andrew Grogan-Kaylor</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -109,22 +109,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../agrogan.css">
-<meta property="og:title" content="Why Excel Is A Bad Format For Storing Data – Andrew Grogan-Kaylor">
+<meta property="og:title" content="Why Spreadsheets Are A Bad Format For Storing Data – Andrew Grogan-Kaylor">
 <meta property="og:description" content="">
 <meta property="og:image" content="screenshot-Stata.png">
 <meta property="og:site_name" content="Andrew Grogan-Kaylor">
 <meta property="og:image:alt" content="Screenshot of Stata">
-<meta name="twitter:title" content="Why Excel Is A Bad Format For Storing Data – Andrew Grogan-Kaylor">
+<meta name="twitter:title" content="Why Spreadsheets Are A Bad Format For Storing Data – Andrew Grogan-Kaylor">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="screenshot-Stata.png">
 <meta name="twitter:image:alt" content="Screenshot of Stata">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="citation_title" content="Why Excel Is A Bad Format For Storing Data">
+<meta name="citation_title" content="Why Spreadsheets Are A Bad Format For Storing Data">
 <meta name="citation_author" content="Andy Grogan-Kaylor">
-<meta name="citation_publication_date" content="2023-12-06">
-<meta name="citation_cover_date" content="2023-12-06">
-<meta name="citation_year" content="2023">
-<meta name="citation_online_date" content="2023-12-06">
+<meta name="citation_publication_date" content="2025-07-01">
+<meta name="citation_cover_date" content="2025-07-01">
+<meta name="citation_year" content="2025">
+<meta name="citation_online_date" content="2025-07-01">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience;,citation_abstract=Adverse Childhood Experiences (ACEs) such as child abuse are related to poor health outcomes. Spanking has indicated a similar association with health outcomes, but to date has not been considered an ACE. Physical and emotional abuse have been shown in previous research to correlate highly and may be similar in nature to spanking. To determine if spanking should be considered an ACE, this study aimed to examine 1): the grouping of spanking with physical and emotional abuse; and 2) if spanking has similar associations with poor adult health problems and accounts for additional model variance. Adult mental health problems included depressive affect, suicide attempts, moderate to heavy drinking, and street drug use. Data were from the CDC-Kaiser ACE study (N = 8316, response rate = 65;,citation_author=Tracie O. Afifi;,citation_author=Derek Ford;,citation_author=Elizabeth T. Gershoff;,citation_author=Melissa Merrick;,citation_author=Andrew Grogan-Kaylor;,citation_author=Katie A. Ports;,citation_author=Harriet L. MacMillan;,citation_author=George W. Holden;,citation_author=Catherine A. Taylor;,citation_author=Shawna J. Lee;,citation_author=Robbyn Peters Bennett;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_doi=10.1016/j.chiabu.2017.01.014;,citation_isbn=0145-2134;,citation_issn=18737757;,citation_volume=71;,citation_journal_title=Child Abuse and Neglect;">
 <meta name="citation_reference" content="citation_title=Interaction terms in logit and probit models;,citation_abstract=The magnitude of the interaction effect in nonlinear models does not equal the marginal effect of the interaction term, can be of opposite sign, and its statistical significance is not calculated by standard software. We present the correct way to estimate the magnitude and standard errors of the interaction effect in nonlinear models. © 2003 Elsevier Science B.V. All rights reserved.;,citation_author=Chunrong Ai;,citation_author=Edward C. Norton;,citation_publication_date=2003;,citation_cover_date=2003;,citation_year=2003;,citation_doi=10.1016/S0165-1765(03)00032-6;,citation_issn=01651765;,citation_journal_title=Economics Letters;">
@@ -268,7 +268,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Why Excel Is A Bad Format For Storing Data</h1>
+      <h1 class="title">Why Spreadsheets Are A Bad Format For Storing Data</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">stats</div>
                 <div class="quarto-category">workflow</div>
@@ -289,7 +289,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">December 6, 2023</p>
+        <p class="date">July 1, 2025</p>
       </div>
     </div>
     
@@ -334,9 +334,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="background" class="level1">
 <h1>Background</h1>
-<p>Excel is sometimes used as a program to collect and store data. Excel may sometimes be used because sometimes it is the only program that individuals or agencies have for storing data. Excel and other spreadsheet programs may also be used because spreadsheets can be very intuitive and easy ways of managing small amounts of data.</p>
-<p>However, Excel may be problematic as a data storage solution for a number of reasons detailed below. Notably, statistical programs like <a href="https://www.stata.com/">Stata</a>, <a href="https://www.sas.com/en_us/home.html">SAS</a>, or SPSS all store additional information with each variable such as: a <em>variable label</em>, describing the contents of the variable, or the survey question that resulted in the variable; and a <em>value label</em>, which attaches qualitative information to each possible value of the response.</p>
-<p>Excel does not generally contain this extra information about each variable, or column of data, which may lead to errors in working with quantitative information.</p>
+<p>Excel and Google Sheets are sometimes used as programs to collect and store data. Excel and Google Sheets are sometimes used because they are the only programs that some individuals or agencies have for storing data. Excel and other spreadsheet programs may also be used because spreadsheets can be very intuitive and easy ways of managing small amounts of data.</p>
+<p>However, Excel and Google Sheets may be problematic as a data storage solution for a number of reasons detailed below, especially as data sets grow in size. Notably, statistical programs like <a href="https://www.stata.com/">Stata</a>, <a href="https://www.sas.com/en_us/home.html">SAS</a>, or SPSS all store additional information with each variable such as: a <em>variable label</em>, describing the contents of the variable, or the survey question that resulted in the variable; and a <em>value label</em>, which attaches qualitative information to each possible value of the response.</p>
+<p>Excel and Google Sheets do not generally contain this extra information about each variable, or column of data, which may lead to errors in working with quantitative information.</p>
 <p>The data below are stored in Stata format, but could as easily be stored in SAS or SPSS format.</p>
 </section>
 <section id="get-and-describe-the-data" class="level1">
@@ -355,14 +355,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stdout">
 <pre><code>Contains data from simulated-happiness-data.dta
  Observations:           100                  
-    Variables:             2                  7 Dec 2023 10:25
--------------------------------------------------------------------------------
+    Variables:             2                  17 Jul 2025 16:39
+-------------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
--------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
 id              float   %9.0g                 id
 Q1              float   %9.0g      Likert1    How often do you feel happy?
--------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
 Sorted by: </code></pre>
 </div>
 </div>
@@ -380,11 +380,7 @@ Sorted by: </code></pre>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">tabulate</span> Q1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Running C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\posts\why-Excel-is-a
-&gt; -bad-format-for-storing-data\profile.do . 
-
-
-  How often |
+<pre><code>  How often |
 do you feel |
      happy? |      Freq.     Percent        Cum.
 ------------+-----------------------------------
@@ -422,11 +418,7 @@ do you feel |
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span> <span class="kw">in</span> 1/10</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Running C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\posts\why-Excel-is-a
-&gt; -bad-format-for-storing-data\profile.do . 
-
-     +----------------+
-     | id          Q1 |
+<pre><code>     | id          Q1 |
      |----------------|
   1. |  1       Never |
   2. |  2   Sometimes |
@@ -446,12 +438,9 @@ do you feel |
 </section>
 <section id="now-use-the-data-in-excel-format" class="level1">
 <h1>Now Use The Data In Excel Format</h1>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>Running C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\posts\why-Excel-is-a
-&gt; -bad-format-for-storing-data\profile.do . </code></pre>
-</div>
-</div>
+<blockquote class="blockquote">
+<p>The example below focuses on Excel, but could as easily apply to a program like Google Sheets.</p>
+</blockquote>
 <p>We’ve saved this simulated data in Excel format.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -464,16 +453,12 @@ do you feel |
 <p>We see right away–when we list some of the data–that the data are less informative.</p>
 </blockquote>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"simulated-happiness-data-EXCEL.dta"</span>, <span class="kw">clear</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span> <span class="kw">in</span> 1/10</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"simulated-happiness-data-EXCEL.dta"</span>, <span class="kw">clear</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span> <span class="kw">in</span> 1/10</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Running C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\posts\why-Excel-is-a
-&gt; -bad-format-for-storing-data\profile.do . 
-
-     +---------+
-     | id   Q1 |
+<pre><code>     | id   Q1 |
      |---------|
   1. |  1    1 |
   2. |  2    3 |
@@ -504,15 +489,12 @@ do you feel |
 <section id="descriptive-statistics-1" class="level2">
 <h2 class="anchored" data-anchor-id="descriptive-statistics-1">Descriptive Statistics</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"simulated-happiness-data-EXCEL.dta"</span>, <span class="kw">clear</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="kw">tabulate</span> Q1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"simulated-happiness-data-EXCEL.dta"</span>, <span class="kw">clear</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="kw">tabulate</span> Q1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Running C:\Users\agrogan\Desktop\GitHub\agrogan1.github.io\posts\why-Excel-is-a
-&gt; -bad-format-for-storing-data\profile.do . 
-
-         Q1 |      Freq.     Percent        Cum.
+<pre><code>         Q1 |      Freq.     Percent        Cum.
 ------------+-----------------------------------
           1 |         21       21.00       21.00
           2 |         29       29.00       50.00
@@ -525,12 +507,12 @@ do you feel |
 <section id="bar-graph-1" class="level3">
 <h3 class="anchored" data-anchor-id="bar-graph-1">Bar Graph</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"simulated-happiness-data-EXCEL.dta"</span>, <span class="kw">clear</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="bn">bar</span>, <span class="bn">over</span>(Q1) <span class="bn">title</span>(<span class="st">"How often do you feel happy?"</span>) <span class="dv">scheme</span>(michigan2) asyvars</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> mybar2.png, <span class="kw">width</span>(1500) <span class="kw">replace</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"simulated-happiness-data-EXCEL.dta"</span>, <span class="kw">clear</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="bn">bar</span>, <span class="bn">over</span>(Q1) <span class="bn">title</span>(<span class="st">"How often do you feel happy?"</span>) <span class="dv">scheme</span>(michigan2) asyvars</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> mybar2.png, <span class="kw">width</span>(1500) <span class="kw">replace</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
