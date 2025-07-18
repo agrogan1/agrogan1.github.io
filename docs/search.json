@@ -637,6 +637,13 @@
     "text": "Descriptive Statistics\n\n\nuse \"simulated-happiness-data-EXCEL.dta\", clear\n\ntabulate Q1\n\n         Q1 |      Freq.     Percent        Cum.\n------------+-----------------------------------\n          1 |         21       21.00       21.00\n          2 |         29       29.00       50.00\n          3 |         28       28.00       78.00\n          4 |         22       22.00      100.00\n------------+-----------------------------------\n      Total |        100      100.00\n\n\n\nBar Graph\n\n\nuse \"simulated-happiness-data-EXCEL.dta\", clear\n\ngraph bar, over(Q1) title(\"How often do you feel happy?\") asyvars\n    \ngraph export mybar2.png, width(1500) replace\n\n\n\n\nBar Graph"
   },
   {
+    "objectID": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html#footnotes",
+    "href": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html#footnotes",
+    "title": "Why Spreadsheets Are A Bad Format For Storing Data",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nOver time, I’ve realized that the issues discussed in this post also apply to the use of CSV (comma separated value) files. While CSV files are convenient, and can be imported by almost any software, they may lead to many of the same issues discussed in this post.↩︎"
+  },
+  {
     "objectID": "posts/quantitative-literacy/index.html",
     "href": "posts/quantitative-literacy/index.html",
     "title": "Quantitative Literacy",
@@ -1174,12 +1181,5 @@
     "title": "Security Policy",
     "section": "",
     "text": "Please report any security issues directly to agrogan@umich.edu."
-  },
-  {
-    "objectID": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html#footnotes",
-    "href": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html#footnotes",
-    "title": "Why Spreadsheets Are A Bad Format For Storing Data",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nOver time, I’ve realized that the issues discussed in this post also apply to the use of CSV (comma separated value) files. While CSV files are convenient, and can be imported by almost any software, they may lead to many of the same issues discussed in this post.↩︎"
   }
 ]
