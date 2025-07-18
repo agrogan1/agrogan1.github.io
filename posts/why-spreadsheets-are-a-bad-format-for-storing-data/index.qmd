@@ -9,7 +9,9 @@ categories: [stats, workflow]
 
 Excel and Google Sheets are sometimes used as programs to collect and store data. Excel and Google Sheets are sometimes used because they are the only programs that some individuals or agencies have for storing data. Excel and other spreadsheet programs may also be used because spreadsheets can be very intuitive and easy ways of managing small amounts of data. 
 
-However, Excel and Google Sheets may be problematic as a data storage solution for a number of reasons detailed below, especially as data sets grow in size. Notably, statistical programs like [Stata](https://www.stata.com/), [SAS](https://www.sas.com/en_us/home.html), or SPSS all store additional information with each variable such as: a *variable label*, describing the contents of the variable, or the survey question that resulted in the variable; and a *value label*, which attaches qualitative information to each possible value of the response. 
+However, Excel and Google Sheets may be problematic as a data storage solution for a number of reasons detailed below, especially as data sets grow in size. Notably, statistical programs like [Stata](https://www.stata.com/), [SAS](https://www.sas.com/en_us/home.html), or SPSS all store additional information with each variable such as: a *variable label*, describing the contents of the variable, or the survey question that resulted in the variable; and a *value label*, which attaches qualitative information to each possible value of the response.[^CSV]
+
+[^CSV]: Over time, I've realized that the issues discussed in this post also apply to the use of CSV (comma separated value) files. While CSV files are convenient, and can be imported by almost any software, they may lead to many of the same issues discussed in this post.
 
 Excel and Google Sheets do not generally contain this extra information about each variable, or column of data, which may lead to errors in working with quantitative information.
 
@@ -84,7 +86,7 @@ tabulate Q1
 
 use "simulated-happiness-data.dta", clear
 
-graph bar, over(Q1) title("How often do you feel happy?") scheme(michigan2) asyvars
+graph bar, over(Q1) title("How often do you feel happy?") asyvars
 	
 graph export mybar1.png, width(1500) replace
 
@@ -145,7 +147,9 @@ list in 1/10
 
 > Notice how the descriptive statistics and graph are much less informative. For example, it is now not immediately clear what `Q1` represents. 
 
-> It is also not clear whether higher values of `Q1` represent higher levels of *happiness*, or higher levels of *unhappiness*, a crucially important substantive distinction. The information on variable label and value label will have to be added back into the data when preparing a report for dissemination.
+> It is also not clear whether higher values of `Q1` represent higher levels of *happiness*, or higher levels of *unhappiness*, a crucially important substantive distinction. The information on variable label and value label will have to be added back into the data when preparing a report for dissemination. 
+
+> If there are several, or many, variables in the data set, this step of adding information back into the data will have to be done multiple times, increasing the time for data processing, as well as introducing a possibility for error.
 
 ## Descriptive Statistics
 
@@ -163,7 +167,7 @@ tabulate Q1
 
 use "simulated-happiness-data-EXCEL.dta", clear
 
-graph bar, over(Q1) title("How often do you feel happy?") scheme(michigan2) asyvars
+graph bar, over(Q1) title("How often do you feel happy?") asyvars
 	
 graph export mybar2.png, width(1500) replace
 
@@ -175,13 +179,15 @@ graph export mybar2.png, width(1500) replace
 
 Notice how Excel doesn't enforce the idea of whether variables are *numeric*, or *string*, and so would allow storage of different types of information in the same column. Relatedly, *numeric* variables may be improperly stored as *strings*, often necessitating recoding before graphical or statistical procedures can be employed.
 
-Secondly, Excel would allow some of your columns to have the same name, which might make data difficult to work with in other software.
+Excel also doesn't enforce the idea that data in the same row belong to the same individual, making it easily to accidentally move, or write over, data.
 
-| x           | y           | verylongvariablename | verylongvariablename |
-| ----------- | ----------- |--------------------- | -------------------- |
-| 100         | 1           | Smith                | 20                   |
-| 200         | 2           | 30                   | NA                   |
-| not applicable   | x      | yes                  | 60                   |
+Lastly, Excel would allow some of your columns to have the same name, which might make data difficult to work with in other software.
+
+| x           | y           | verylongvariablename | verylongvariablename | verylongvariablename |
+| ----------- | ----------- |--------------------- | -------------------- | -------------------- |
+| 100         | 1           | Smith                | 20                   | 30                   |
+| 200         | 2           | 30                   | NA                   | 40                   |
+| not applicable   | x      | yes                  | 60                   | 50                   |
 
 
 
