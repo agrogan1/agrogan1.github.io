@@ -334,8 +334,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="background" class="level1">
 <h1>Background</h1>
-<p>Excel and Google Sheets are sometimes used as programs to collect and store data. Excel and Google Sheets are sometimes used because they are the only programs that some individuals or agencies have for storing data. Excel and other spreadsheet programs may also be used because spreadsheets can be very intuitive and easy ways of managing small amounts of data.</p>
-<p>However, Excel and Google Sheets may be problematic as a data storage solution for a number of reasons detailed below, especially as data sets grow in size. Notably, statistical programs like <a href="https://www.stata.com/">Stata</a>, <a href="https://www.sas.com/en_us/home.html">SAS</a>, or SPSS all store additional information with each variable such as: a <em>variable label</em>, describing the contents of the variable, or the survey question that resulted in the variable; and a <em>value label</em>, which attaches qualitative information to each possible value of the response.</p>
+<p>Excel and Google Sheets are sometimes used as programs to collect and store data. Excel and Google Sheets are often used because they are the only programs that some individuals or agencies have for storing data. Excel and other spreadsheet programs may also be used because spreadsheets can be very intuitive and easy ways of managing small amounts of data.</p>
+<p>However, Excel and Google Sheets may be problematic as a data storage solution for a number of reasons detailed below, especially as data sets grow in size. Notably, statistical programs like <a href="https://www.stata.com/">Stata</a>, <a href="https://www.sas.com/en_us/home.html">SAS</a>, or SPSS all store additional information with each variable such as: a <em>variable label</em>, describing the contents of the variable, or the survey question that resulted in the variable; and a <em>value label</em>, which attaches qualitative information to each possible value of the response.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p>Excel and Google Sheets do not generally contain this extra information about each variable, or column of data, which may lead to errors in working with quantitative information.</p>
 <p>The data below are stored in Stata format, but could as easily be stored in SAS or SPSS format.</p>
 </section>
@@ -355,7 +355,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stdout">
 <pre><code>Contains data from simulated-happiness-data.dta
  Observations:           100                  
-    Variables:             2                  17 Jul 2025 16:39
+    Variables:             2                  18 Jul 2025 11:51
 -------------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
@@ -369,9 +369,19 @@ Sorted by: </code></pre>
 </section>
 <section id="descriptive-statistics-and-bar-graph" class="level1">
 <h1>Descriptive Statistics and Bar Graph</h1>
-<blockquote class="blockquote">
-<p>Notice how the descriptive statistics and graph are informative in that they contain information on the <em>variable label</em> and <em>value label</em>. These help us to get an intuitive sense of the information in the data. We see this information when we list out the data as well.</p>
-</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The Descriptive Statistics And Graph Are Informative
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Notice how the descriptive statistics and graph are <em>informative</em> in that they contain information on the <em>variable label</em> and <em>value label</em>. These help us to get an intuitive sense of the information in the data. We see this information when we list out the data as well.</p>
+</div>
+</div>
 <section id="descriptive-statistics" class="level2">
 <h2 class="anchored" data-anchor-id="descriptive-statistics">Descriptive Statistics</h2>
 <div class="cell">
@@ -399,7 +409,7 @@ do you feel |
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"simulated-happiness-data.dta"</span>, <span class="kw">clear</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="bn">bar</span>, <span class="bn">over</span>(Q1) <span class="bn">title</span>(<span class="st">"How often do you feel happy?"</span>) <span class="dv">scheme</span>(michigan2) asyvars</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="bn">bar</span>, <span class="bn">over</span>(Q1) <span class="bn">title</span>(<span class="st">"How often do you feel happy?"</span>) asyvars</span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> mybar1.png, <span class="kw">width</span>(1500) <span class="kw">replace</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -438,20 +448,40 @@ do you feel |
 </section>
 <section id="now-use-the-data-in-excel-format" class="level1">
 <h1>Now Use The Data In Excel Format</h1>
-<blockquote class="blockquote">
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Spreadsheets Are All Similar
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>The example below focuses on Excel, but could as easily apply to a program like Google Sheets.</p>
-</blockquote>
-<p>We’ve saved this simulated data in Excel format.</p>
+</div>
+</div>
+<p>I’ve saved this simulated data in Excel format.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="screenshot-Excel.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Screenshot of Excel"><img src="screenshot-Excel.png" class="img-fluid figure-img" style="width:75.0%" alt="Screenshot of Excel"></a></p>
 <figcaption>Screenshot of Excel</figcaption>
 </figure>
 </div>
-<p>We now import the Excel data file. We use the first row of data as variable names.</p>
-<blockquote class="blockquote">
+<p>I now import the Excel data file. I use the first row of data as variable names.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Spreadsheet Data Are Less Informative
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>We see right away–when we list some of the data–that the data are less informative.</p>
-</blockquote>
+</div>
+</div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"simulated-happiness-data-EXCEL.dta"</span>, <span class="kw">clear</span></span>
@@ -474,18 +504,25 @@ do you feel |
      +---------+</code></pre>
 </div>
 </div>
-<blockquote class="blockquote">
-<p>Adding this valuable information back into the data set may take a great deal of extra effort.</p>
-</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Statistical Formats Save Work and Reduce Error Rates
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Adding this valuable information back into the data set may take a great deal of extra effort, which may lead to errors.</p>
+</div>
+</div>
 </section>
 <section id="descriptive-statistics-and-bar-graph-1" class="level1">
 <h1>Descriptive Statistics and Bar Graph</h1>
-<blockquote class="blockquote">
 <p>Notice how the descriptive statistics and graph are much less informative. For example, it is now not immediately clear what <code>Q1</code> represents.</p>
-</blockquote>
-<blockquote class="blockquote">
 <p>It is also not clear whether higher values of <code>Q1</code> represent higher levels of <em>happiness</em>, or higher levels of <em>unhappiness</em>, a crucially important substantive distinction. The information on variable label and value label will have to be added back into the data when preparing a report for dissemination.</p>
-</blockquote>
+<p>If there are several, or many, variables in the data set, this step of adding information back into the data will have to be done multiple times, increasing the time for data processing, as well as introducing a possibility for error.</p>
 <section id="descriptive-statistics-1" class="level2">
 <h2 class="anchored" data-anchor-id="descriptive-statistics-1">Descriptive Statistics</h2>
 <div class="cell">
@@ -510,7 +547,7 @@ do you feel |
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"simulated-happiness-data-EXCEL.dta"</span>, <span class="kw">clear</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="bn">bar</span>, <span class="bn">over</span>(Q1) <span class="bn">title</span>(<span class="st">"How often do you feel happy?"</span>) <span class="dv">scheme</span>(michigan2) asyvars</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="bn">bar</span>, <span class="bn">over</span>(Q1) <span class="bn">title</span>(<span class="st">"How often do you feel happy?"</span>) asyvars</span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> mybar2.png, <span class="kw">width</span>(1500) <span class="kw">replace</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -526,18 +563,21 @@ do you feel |
 <section id="a-few-final-issues" class="level1">
 <h1>A Few Final Issues</h1>
 <p>Notice how Excel doesn’t enforce the idea of whether variables are <em>numeric</em>, or <em>string</em>, and so would allow storage of different types of information in the same column. Relatedly, <em>numeric</em> variables may be improperly stored as <em>strings</em>, often necessitating recoding before graphical or statistical procedures can be employed.</p>
-<p>Secondly, Excel would allow some of your columns to have the same name, which might make data difficult to work with in other software.</p>
+<p>Excel also doesn’t enforce the idea that data in the same row belong to the same individual, making it easily to accidentally move, or write over, data.</p>
+<p>Lastly, Excel would allow some of your columns to have the same name, which might make data difficult to work with in other software.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 17%">
-<col style="width: 17%">
-<col style="width: 33%">
-<col style="width: 31%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 25%">
+<col style="width: 24%">
+<col style="width: 24%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>x</th>
 <th>y</th>
+<th>verylongvariablename</th>
 <th>verylongvariablename</th>
 <th>verylongvariablename</th>
 </tr>
@@ -548,18 +588,21 @@ do you feel |
 <td>1</td>
 <td>Smith</td>
 <td>20</td>
+<td>30</td>
 </tr>
 <tr class="even">
 <td>200</td>
 <td>2</td>
 <td>30</td>
 <td>NA</td>
+<td>40</td>
 </tr>
 <tr class="odd">
 <td>not applicable</td>
 <td>x</td>
 <td>yes</td>
 <td>60</td>
+<td>50</td>
 </tr>
 </tbody>
 </table>
@@ -567,7 +610,13 @@ do you feel |
 
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Over time, I’ve realized that the issues discussed in this post also apply to the use of CSV (comma separated value) files. While CSV files are convenient, and can be imported by almost any software, they may lead to many of the same issues discussed in this post.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

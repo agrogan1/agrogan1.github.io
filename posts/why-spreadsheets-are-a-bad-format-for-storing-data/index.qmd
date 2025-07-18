@@ -7,7 +7,7 @@ categories: [stats, workflow]
 
 # Background
 
-Excel and Google Sheets are sometimes used as programs to collect and store data. Excel and Google Sheets are sometimes used because they are the only programs that some individuals or agencies have for storing data. Excel and other spreadsheet programs may also be used because spreadsheets can be very intuitive and easy ways of managing small amounts of data. 
+Excel and Google Sheets are sometimes used as programs to collect and store data. Excel and Google Sheets are often used because they are the only programs that some individuals or agencies have for storing data. Excel and other spreadsheet programs may also be used because spreadsheets can be very intuitive and easy ways of managing small amounts of data. 
 
 However, Excel and Google Sheets may be problematic as a data storage solution for a number of reasons detailed below, especially as data sets grow in size. Notably, statistical programs like [Stata](https://www.stata.com/), [SAS](https://www.sas.com/en_us/home.html), or SPSS all store additional information with each variable such as: a *variable label*, describing the contents of the variable, or the survey question that resulted in the variable; and a *value label*, which attaches qualitative information to each possible value of the response.[^CSV]
 
@@ -68,7 +68,11 @@ describe
 
 # Descriptive Statistics and Bar Graph
 
-> Notice how the descriptive statistics and graph are informative in that they contain information on the *variable label* and *value label*. These help us to get an intuitive sense of the information in the data. We see this information when we list out the data as well.
+::: {.callout-tip}
+## The Descriptive Statistics And Graph Are Informative
+
+Notice how the descriptive statistics and graph are *informative* in that they contain information on the *variable label* and *value label*. These help us to get an intuitive sense of the information in the data. We see this information when we list out the data as well.
+:::
 
 ## Descriptive Statistics
 
@@ -106,7 +110,11 @@ list in 1/10
 
 # Now Use The Data In Excel Format
 
-> The example below focuses on Excel, but could as easily apply to a program like Google Sheets.
+::: {.callout-tip}
+## Spreadsheets Are All Similar
+
+The example below focuses on Excel, but could as easily apply to a program like Google Sheets.
+:::
 
 ```{stata, echo=FALSE}
 
@@ -117,11 +125,11 @@ firstrow(variables) nolabel replace
 
 ```
 
-We've saved this simulated data in Excel format.
+I've saved this simulated data in Excel format.
 
 ![Screenshot of Excel](screenshot-Excel.png){ width=75% } 
 
-We now import the Excel data file. We use the first row of data as variable names.
+I now import the Excel data file. I use the first row of data as variable names.
 
 ```{stata, collectcode=TRUE, output=FALSE}
 
@@ -131,7 +139,11 @@ save "simulated-happiness-data-EXCEL.dta", replace
 
 ```
 
-> We see right away--when we list some of the data--that the data are less informative. 
+::: {.callout-tip}
+## Spreadsheet Data Are Less Informative
+
+We see right away--when we list some of the data--that the data are less informative. 
+:::
 
 ```{stata, echo=TRUE}
 
@@ -141,15 +153,19 @@ list in 1/10
 
 ```
 
-> Adding this valuable information back into the data set may take a great deal of extra effort.
-	
+::: {.callout-tip}
+## Statistical Formats Save Work and Reduce Error Rates
+
+Adding this valuable information back into the data set may take a great deal of extra effort, which may lead to errors.
+:::
+
 # Descriptive Statistics and Bar Graph
 
-> Notice how the descriptive statistics and graph are much less informative. For example, it is now not immediately clear what `Q1` represents. 
+Notice how the descriptive statistics and graph are much less informative. For example, it is now not immediately clear what `Q1` represents. 
 
-> It is also not clear whether higher values of `Q1` represent higher levels of *happiness*, or higher levels of *unhappiness*, a crucially important substantive distinction. The information on variable label and value label will have to be added back into the data when preparing a report for dissemination. 
+It is also not clear whether higher values of `Q1` represent higher levels of *happiness*, or higher levels of *unhappiness*, a crucially important substantive distinction. The information on variable label and value label will have to be added back into the data when preparing a report for dissemination. 
 
-> If there are several, or many, variables in the data set, this step of adding information back into the data will have to be done multiple times, increasing the time for data processing, as well as introducing a possibility for error.
+If there are several, or many, variables in the data set, this step of adding information back into the data will have to be done multiple times, increasing the time for data processing, as well as introducing a possibility for error.
 
 ## Descriptive Statistics
 
