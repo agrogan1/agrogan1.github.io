@@ -1,14 +1,241 @@
 ---
-title: "Interactions"
+title: "Interactions and Moderation"
 author: "Andy Grogan-Kaylor" 
-date: "2025-6-11"
+date: "2025-7-1"
 categories: [stats, teaching, interactions]
 image: "colorsplash.png"
 ---
 
-A quick placeholder post to share a link to a handout on interactions:
+```{r}
 
-* [Interactions and Moderation](https://agrogan1.github.io/teaching/interactions/interactions.html)
+# library(ggplot2)
+
+library(pander)
+
+library(sjPlot)
+
+library(DT)
+
+# library(gt)
+
+```
+
+# Introduction
+
+I’ve heard somewhere--I unfortunately forget exactly where--that a statistical model is nothing more than a principled statement about the data, that can be tested against the data. I think of moderation in that context. 
+
+Moderation is a kind of "statistical story" about different groups in the data. 
+
+As we build up to the idea of moderation, we are telling various "stories" about the data, and testing whether they are accurate.
+
+# Setup
+
+## The Equation That Generates The Data
+
+::: {.callout-important}
+### Important
+
+In practice, we usually **don't** know this equation. We are trying to **estimate** it.
+:::
+
+$$y_i = \beta_0 + \beta_1 x + \beta_2 \text{group} + \beta_3 (x \times \text{group}) + e_i$$
+
+Numerically...
+
+$$y_i = 10 + 1x + 30 \text{group} -.25 (x \times \text{group}) + e_i$$ 
+
+## Simulated Data
+
+```{r}
+
+set.seed(1234) # random seed
+
+N <- 1000 # sample size
+
+x <- round(rnorm(N, 100, 10), 2) # random x
+
+group <- rbinom(N, 1, .5) # random group
+
+e <- round(rnorm(N, 0, 1), 2) # random error
+
+y <- 10 + 
+  x + 
+  (30 * group) + 
+  (-.25 * x * group) +
+  e # the true equation that generates y
+
+y <- round(y, 2)
+
+mydata <- data.frame(x, group, e, y)
+
+DT::datatable(mydata, 
+              extensions = 'Buttons', 
+              options = list(pageLength = 5,
+                             dom = 'Bfrtip',
+                             buttons = c('copy', 
+                                         'csv', 
+                                         'excel')))
+
+```
+
+## Graph The Data
+
+```{r}
+
+plot(x, y, col = "grey", pch = 19)
+
+```
+
+# First Model: *x* Only
+
+## The Story
+
+> Our first story is that the regression coefficients function the same for everyone in the data set, regardless of the group that they are in. Everyone has the same $\beta_0$, and the same $\beta_1$ or regression slope.
+
+::: {.callout-tip}
+## y Is A Function Of ...
+
+*y* is a function of an *intercept*, *x* and some *error*.
+:::
+
+## The Equation
+
+$$y = \beta_0 + \beta_1 x + e_i$$
+
+## The Regression
+
+```{r}
+
+myfit1 <- lm(y ~ x, data = mydata)
+
+# pander(summary(myfit1))
+
+tab_model(myfit1)
+
+```
+
+## Graph The Regression
+
+```{r}
+
+plot(x, y, col="grey", pch = 19)
+
+abline(24.57, .8803, col="purple", lwd = 3)
+
+```
+
+# Second Model: *x* and *group*
+
+## The Story
+
+> Our second story is that one group has a different $\beta_0$, a different intercept from the other group, But both groups have the same regression slope or $\beta_1$. 
+
+::: {.callout-tip}
+## y Is A Function Of ...
+*y* is a function of an *intercept*, *x*, *group* membership, and some *error*.
+:::
+
+## The Equation
+
+$$y = \beta_0 + \beta_1 x + \beta_2 group + e_i$$
+
+## The Regression
+
+```{r}
+
+myfit2 <- lm(y ~ x + group, data = mydata)
+
+# pander(summary(myfit2))
+
+tab_model(myfit2)
+
+```
+
+## Graph The Regression
+
+```{r}
+
+plot(x, y, col="grey", pch = 19)
+
+abline(21.92, .8808, col="red", lwd = 3)
+
+abline(21.92 + 5.039, .8808, col="blue", lwd = 3)
+
+```
+
+# Third Model: *x* and *group* and interaction of *x* and *group*
+
+## The Story
+
+> Our third and final story--and this is where interactions and moderation come in--is that each group has its own regression intercept, **and** *each group now also has its own slope*. One group has a slope of $\beta_1$. The other group has a slope of $\beta_1 + \beta_3$, where $\beta_3$ indicates how the regression slope for the second group, is different from the regression slope for the first group.
+
+::: {.callout-tip}
+## y Is A Function Of ...
+
+*y* is a function of an *intercept*, *x*, *group* membership, *group* membership multiplied by *x*, and some *error*.
+:::
+
+## The Equation
+
+$$y = \beta_0 + \beta_1 x + \beta_2 group + \beta_3 x \times group + e_i$$
+
+## The Regression
+
+```{r}
+
+myfit3 <- lm(y ~ x * group, data = mydata)
+
+# pander(summary(myfit3))
+
+tab_model(myfit3)
+
+```
+
+## Graph The Regression
+
+```{r}
+
+plot(x, y, col="grey", pch = 19)
+
+abline(9.648, 1.004, col = "red", lwd = 3)
+
+abline(9.648 + 30.54, 1.004 - .2557, col = "blue", lwd = 3)
+
+```
+
+# Summary of the Coefficients for Each Group
+
+-------------------------------------------------------------
+Group      Intercept            Slope
+---------- ----------           --------------------
+0          $\beta_0$            $\beta_1$
+
+1          $\beta_0 + \beta_2$  $\beta_1 + \beta_3$
+-------------------------------------------------------------
+
+If we consider a group membership variable that has values *0* or *1*, then effectively, the *intercept* for *group 0* is $\beta_0$ and the *slope* for *group 0* is $\beta_1$. For *group 1*, the *intercept* is $\beta_0 + \beta_2$ while the *slope* is $\beta_1 + \beta_3$.
+
+$\beta_2$ is thus the *difference in intercepts* between the two groups.
+
+$\beta_3$ is the *difference in slopes* between the two groups.
+
+```{r}
+
+plot(x, y, col="grey", pch = 19, xlim = c(0,140), ylim = c(0,140))
+
+abline(9.648, 1.004, col = "red", lwd = 3)
+
+abline(9.648 + 30.54, 1.004 - .2557, col = "blue", lwd = 3)
+
+text(0, 3, expression(beta[0]), col = "red")
+
+text(3, 25, expression(beta[0] + beta[2]), col = "blue")
+
+text(100, 90, expression(beta[1]), col = "red")
+
+text(90, 125, expression(beta[1] + beta[3]), col = "blue")
+
+```
 
 
 
