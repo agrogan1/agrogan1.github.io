@@ -14,6 +14,8 @@ library(ggplot2)
 
 library(crosstalk)
 
+library(d3scatter)
+
 # library(car)
 
 ```
@@ -36,7 +38,7 @@ Explore these ideas using the visualization below. Start by clicking on values i
 
 x <- rep(seq(1:5), 2) # sequence from 1 to 5
 
-m <- rep(seq(from=0, to=1), each=5) # binomial moderator
+m <- rep(seq(from = 0, to = 1), each = 5) # binomial moderator
 
 # e <- rnorm(N, 0, 10)
 
@@ -105,7 +107,9 @@ mytable <- DT::datatable(shared_mydata,
 # mytable
 
 bscols(widths = c(2, NA, NA), 
-       mytable, p1, p2)
+       mytable, 
+       p1,
+       p2)
 
 ```
 
