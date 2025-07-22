@@ -1,7 +1,7 @@
 ---
 title: "Interactions Are Symmetric"
 author: "Andy Grogan-Kaylor" 
-date: "2025-6-10"
+date: "2025-7-22"
 categories: [stats, teaching, interactions]
 image: mandelbrot.png
 ---
@@ -14,7 +14,7 @@ library(ggplot2)
 
 library(crosstalk)
 
-library(d3scatter)
+# library(d3scatter)
 
 # library(car)
 
@@ -28,7 +28,11 @@ $$y = \beta_0 + \beta_1 x + \beta_2 m + \beta_3 xm + e_i$$ {#eq-moderation}
 
 In truth, however, because of the commutative property of multiplication, $a \times b = b \times a$, each variable can be thought of as moderating the other: $x \times m = m \times x$.
 
-In terms of visualizing interactions, it is perhaps more *conventional* to have the variable that is conceptualized as the *independent variable*, *x*, along the *x* axis, and to show separate regression lines for each value of the *moderator* *m*. However, despite being more conventional, it is mathematically plausible to present the inverse: *m* along the *x* axis, and different regression lines for different values of *x*.
+In terms of visualizing interactions, it is perhaps more *conventional* to have the variable that is conceptualized as the *independent variable*, *x*, along the *x* axis, and to show separate regression lines for each value of the *moderator* *m* [^dataviz1]. However, despite being more conventional, it is mathematically plausible to present the inverse: *m* along the *x* axis, and different regression lines for different values of *x* [^dataviz2].
+
+[^dataviz1]: In the language of data visualization, I'd think of this as a classic problem of visualizing 3 dimensions of data on a 2 dimensional surface. In this approach, we are  visualizing *y* by using the *y* axis, *x* by using the *x* axis, and *m* with *color* or *linetype* or both.
+
+[^dataviz2]: Again, in the language of data visualization, I'd think of this as a classic problem of visualizing 3 dimensions of data on a 2 dimensional surface. In this approach, we are  visualizing *y* by using the *y* axis, *m* by using the *x* axis, and *x* with *color* or *linetype* or both.
 
 # Explore
 
@@ -59,7 +63,8 @@ shared_mydata <- SharedData$new(mydata)
 p1 <- plot_ly(data = shared_mydata, 
               x = ~x, 
               y = ~y,
-              color = ~factor(m), 
+              color = ~factor(m),
+              linetype = ~factor(m), 
               colors = "Set1",
               text = ~paste("x:", x, 
                             '<br>m:', m,
@@ -80,6 +85,7 @@ p2 <- plot_ly(data = shared_mydata,
               x = ~m, 
               y = ~y,
               color = ~factor(x), 
+              linetype = ~factor(x), 
               colors = "Set1",
               text = ~paste("x:", x, 
                             '<br>m:', m,
