@@ -2,10 +2,11 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/interactions-are-symmetric/index.html",
       "/posts/multilevel-thinking/index.html",
       "/posts/teaching/index.html",
       "/posts/stats-stuff/index.html",
+      "/posts/interactions-are-symmetric/index.html",
+      "/posts/complexity-hidden-inside-simplicity/index.html",
       "/posts/multilevel-workshop/index.html",
       "/posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html",
       "/posts/interactions-and-moderation/index.html",
@@ -35,7 +36,6 @@
       "/posts/why-Stata-is-better-at-graphing-than-R/index.html",
       "/posts/treemap/index.html",
       "/posts/cartogram/index.html",
-      "/posts/complexity-hidden-inside-simplicity/index.html",
       "/posts/Simpsons-paradox-simple-visual-explanation/index.html",
       "/posts/closeread/index.html",
       "/posts/youve-got-to-be-kind/index.html",
