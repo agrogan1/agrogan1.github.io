@@ -3,10 +3,10 @@ title: "Why Care About Interactions?"
 author: "Andy Grogan-Kaylor" 
 date: "2025-7-23"
 categories: [stats, teaching, interactions]
-image: colorsplash-new.png
+image: ball-of-string.png
 ---
 
-In a series of posts I have been writing about [the technical details of interactions](https://agrogan1.github.io/blog.html#category=interactions). I have realized that it might be important to write a post emphasizing *why* we should care so much about these technical details.
+In a series of posts I have been writing about [the technical details of interactions](https://agrogan1.github.io/blog.html#category=interactions). I have realized that it might be important to write a post emphasizing **why** we should care so much about these technical details.
 
 First of all, imagine a statistical association. 
 
