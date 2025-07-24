@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/closeread-be-less-wrong/index.html",
       "/posts/multilevel-thinking/index.html",
       "/posts/teaching/index.html",
       "/posts/stats-stuff/index.html",
@@ -18,7 +19,6 @@
       "/posts/ArcGIS-storymaps/index.html",
       "/posts/Simpsons-paradox-and-aggregation-paradox/index.html",
       "/posts/tables-in-Stata/index.html",
-      "/posts/closeread-be-less-wrong/index.html",
       "/posts/college-completion/index.html",
       "/posts/why-cant-numbers-be-beautiful-too/index.html",
       "/posts/spillover-of-violence/index.html",

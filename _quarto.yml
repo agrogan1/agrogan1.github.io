@@ -27,7 +27,14 @@ website:
         text: Global Families
       - href: https://agrogan1.github.io/mapping/
         text: Mapping/GIS
-      - blog.qmd  
+      - text: "Blog-ish Posts"
+        menu: 
+          - text: Blog
+            href: blog.qmd  
+          - text: Multilevel Thinking
+            href: https://agrogan1.github.io/posts/multilevel-thinking/
+          - text: Be Less Wrong
+            href: https://agrogan1.github.io/posts/closeread-be-less-wrong/index.html
       - about.qmd
 
 bibliography: agrogan.bib
