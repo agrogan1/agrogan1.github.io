@@ -1,0 +1,29 @@
+---
+title: "Why Care About Interactions?"
+author: "Andy Grogan-Kaylor" 
+date: "2025-7-23"
+categories: [stats, teaching, interactions]
+image: colorsplash-new.png
+---
+
+In a series of posts I have been writing about [the technical details of interactions](https://agrogan1.github.io/blog.html#category=interactions). I have realized that it might be important to write a post emphasizing *why* we should care so much about these technical details.
+
+First of all, imagine a statistical association. 
+
+It might be:
+
+$$\text{intervention} \rightarrow \text{treatment}$$
+
+Or it might be:
+
+$$\text{parenting behavior} \rightarrow \text{child development}$$
+
+We might think it is important to ask whether these relationships are consistent, or very different, across groups, across identities, or across various social contexts, such as countries or cultures. 
+
+*Interactions* are one of our major statistical tools for examining similarity or difference in statistical relationships across groups, identities, or contexts.
+
+In social research, so many of the outcomes we study are crucially important to people's well being. If we get the technical details of estimating interactions wrong, it is possible that we may mis-state our substantive findings.
+
+Thus, understanding the [technical details of interactions](https://agrogan1.github.io/blog.html#category=interactions) is important.
+
+
