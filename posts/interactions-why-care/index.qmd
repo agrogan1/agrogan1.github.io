@@ -12,7 +12,7 @@ First of all, imagine a statistical association.
 
 It might be:
 
-$$\text{intervention} \rightarrow \text{treatment}$$
+$$\text{intervention} \rightarrow \text{outcome}$$
 
 Or it might be:
 
