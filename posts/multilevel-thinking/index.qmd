@@ -7,7 +7,7 @@ categories: [stats, multilevel, book, teaching, Stata, R, Julia]
 image: "multilevel-thinking.png"
 ---
 
-I’d like to share that my book, *Multilevel Thinking: Discovering Variation, Universals, and Particulars in Cross-Cultural Research* has been [published electronically](https://academic.oup.com/book/60530) at Oxford University Press. A print version will be available in July.
+I’d like to share that my book, *Multilevel Thinking: Discovering Variation, Universals, and Particulars in Cross-Cultural Research* has been [published electronically](https://academic.oup.com/book/60530) at Oxford University Press. [Electronic and print copies](https://www.google.com/books/edition/_/iYUI0QEACAAJ?hl=en) are also available through Google Books.
 
 * This book explains multilevel modeling building upon my 15 years of teaching this topic.
 * I argue that multilevel modeling is a principled way of thinking about human variation and universals. 
