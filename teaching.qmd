@@ -6,26 +6,30 @@ listing:
   filter-ui: true
   categories: true
   contents:
-    - title: "Data Visualization"
-      path: https://agrogan1.github.io/dataviz/dataviz-course
-      image: banner.png
-      categories: [dataviz, course]
     - title: "Multilevel and Longitudinal Modeling"
       path: https://agrogan1.github.io/multilevel/
       image: plant.png
       categories: [multilevel, course]
-    - title: "Multilevel Workshop"
-      path: https://agrogan1.github.io/multilevel-workshop/
-      image: communities.png
-      categories: [multilevel, workshop]
-    - title: "Visualizing Multilevel Models"
-      path: https://agrogan1.github.io/multilevel/visualizing-MLM/visualizing-MLM.html
-      image: mysmallmultiples.png
-      categories: [multilevel, dataviz, handout]
     - title: "Categorical Data Analysis"
       path: https://agrogan1.github.io/newstuff/categorical/
       image: nautilus-new.png
       categories: [categorical, course]
+    - title: "Data Visualization"
+      path: https://agrogan1.github.io/dataviz/dataviz-course
+      image: banner.png
+      categories: [dataviz, course]      
+    - title: "Multilevel Workshop"
+      path: https://agrogan1.github.io/multilevel-workshop/
+      image: communities.png
+      categories: [multilevel, resource]
+    - title: "Visualizing Multilevel Models"
+      path: https://agrogan1.github.io/multilevel/visualizing-MLM/visualizing-MLM.html
+      image: mysmallmultiples.png
+      categories: [multilevel, dataviz, resource]
+    - title: "Be Less Wrong"
+      path: https://globalfamilies.quarto.pub/be-less-wrong/
+      image: fig-combined-1.png
+      categories: [resource]
 ---
     
     
