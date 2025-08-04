@@ -2,7 +2,7 @@
 title: "Be Less Wrong"
 subtitle: "Why Use Quantitative Methods?"
 author:  Andy Grogan-Kaylor 
-date: "2025-7-23"
+date: "2025-7-30"
 categories: [stats, science, teaching, scrollytelling, closeread]
 image: "fig-combined-1.png"
 ---
