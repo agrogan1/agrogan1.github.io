@@ -1,8 +1,8 @@
 {
-  "hash": "2a5b2d4c0a6596786f4571bcf537970a",
+  "hash": "5a7c146d7407dd2c7988898ac2f2cec5",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"Updated Michigan Colors for R Graphs\"\nauthor: \"Andy Grogan-Kaylor\"\ndate: \"2024-5-14\"\ncategories: [stats, dataviz]\n---\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\nI've updated my R package for *Michigan colors for R Graphs* at:  [https://agrogan1.github.io/michigancolors/](https://agrogan1.github.io/michigancolors/)\n\n\n\n\n\n\n",
+    "markdown": "---\ntitle: \"Updated Michigan Colors for R Graphs\"\nauthor: \"Andy Grogan-Kaylor\"\ndate: \"2025-8-10\"\ncategories: [stats, dataviz, R]\n---\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\n\nI've updated my R package for *Michigan colors for R Graphs* at:  [https://agrogan1.github.io/michigancolors/](https://agrogan1.github.io/michigancolors/)\n\n\n\n\n\n\n",
     "supporting": [
       "index_files"
     ],
