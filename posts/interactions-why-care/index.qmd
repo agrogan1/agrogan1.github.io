@@ -12,15 +12,17 @@ First of all, imagine a statistical association.
 
 It might be:
 
-$$\text{intervention} \rightarrow \text{outcome}$$
+$$\text{intervention} \rightarrow \text{outcome}$$ {#eq-intervention}
 
 Or it might be:
 
-$$\text{parenting behavior} \rightarrow \text{child development}$$
+$$\text{parenting behavior} \rightarrow \text{child development}$$ {#eq-parenting-child-development}
 
-We might think it is important to ask whether these relationships are consistent, or very different, across groups, across identities, or across various social contexts, such as countries or cultures. 
+We might think it is important to ask whether the relationships in @eq-intervention or @eq-parenting-child-development are consistent, or very different, across groups, across identities, or across various social contexts, such as countries or cultures. 
 
 *Interactions* are one of our major statistical tools for examining similarity or difference in statistical relationships across groups, identities, or contexts.
+
+I tend to think a lot in my own work about whether statistical relationships are generalizable across contexts, but we could also think about whether there are *risk factors* or *protective factors* that might strengthen or weaken the relationships in @eq-intervention or @eq-parenting-child-development. *Interactions* are a key tool to study this kind of effect modification.
 
 In social research, so many of the outcomes we study are crucially important to people's well being. If we get the technical details of estimating interactions wrong, it is possible that we may mis-state our substantive findings.
 
