@@ -1,0 +1,61 @@
+---
+title: "Pairs Plots"
+author: "Andy Grogan-Kaylor" 
+date: "2025-8-23"
+categories: [stats, dataviz]
+---
+
+For a few recent projects, I have had to quickly get up to speed on new data. If I'm focusing on a relatively small number of variables--perhaps a subset of a much larger dataset--I have found the *pairs plot* an incredibly useful tool for learning about new data, and getting a visual sense of the distributions of the variables and their relationships. After experimenting with a few different libraries, I have come to really like `pairs.panels` in the `psych` [@psych] library. I provide an example of `pairs.panels` below, but I also sometime use what seems to me to be the quite similar in spirit `corrgram` [@corrgram] library.
+
+For this example, I use the data from my [Multilevel Workshop](https://agrogan1.github.io/multilevel-workshop/) site.
+
+# Call Relevant Libraries
+
+```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
+ 
+library(haven) # read Stata data
+
+library(psych) # useful routines for psych data
+
+```
+
+# Get The Data
+
+```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
+ 
+mydata <- read_dta("simulated_multilevel_data.dta")
+
+```
+
+# Variable Labels
+
+```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
+ 
+labelled::look_for(mydata) # look at variables and variable labels
+
+```
+
+# Pairs Plot
+
+Here I set `show.points` to `FALSE` for two reasons: by design, most of the variables in my simulated data are uncorrelated, showing the points seemed to somehow create more confusion than clarity; there are *a lot* of data points, and for that reason as well, showing the points seemed to create more confusion than clarity. You of course can experiment with setting `show.points` to `TRUE`
+
+```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
+ 
+pairs.panels(mydata,
+             show.points = FALSE)
+
+```
+
+
