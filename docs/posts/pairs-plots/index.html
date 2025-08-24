@@ -399,12 +399,44 @@ div.csl-indent {
 </section>
 <section id="pairs-plot" class="level1">
 <h1>Pairs Plot</h1>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Options Options Options
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>Here I set <code>show.points</code> to <code>FALSE</code> for two reasons: by design, most of the variables in my simulated data are uncorrelated, showing the points seemed to somehow create more confusion than clarity; there are <em>a lot</em> of data points, and for that reason as well, showing the points seemed to create more confusion than clarity. You of course can experiment with setting <code>show.points</code> to <code>TRUE</code></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What Do I See? What Am I Looking For?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>In the <em>diagonal panel</em>, I see the distribution of each variable by itself. In the <em>bottom panel</em>, there are are <em>smoother plots</em> of each variable against each other. Here I am looking for lines that are <em>not flat</em>–in part or in whole–because this indicates that one variable has a relationship with another. In the <em>top panel</em>, I see the <em>correlations</em> of each variable with each other, and I am looking for either <em>negative or positive numbers that depart significantly from zero</em>.</p>
+<p>It seems in this example, that <code>parental warmth</code> and <code>physical punishment</code> have the biggest association with <code>outcome</code>. In regression models, it turns out that <code>intervention</code> also has a relationship with <code>outcome</code>, but that is harder to see here. It is worth investigating even smaller correlations further!</p>
+</div>
+</div>
+</div>
 <div class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pairs.panels</span>(mydata,</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">show.points =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pairs.panels</span>(mydata, <span class="co"># pairs plot</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">show.points =</span> <span class="cn">FALSE</span>) <span class="co"># don't show data points</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>

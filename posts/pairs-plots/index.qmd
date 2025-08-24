@@ -46,15 +46,27 @@ labelled::look_for(mydata) # look at variables and variable labels
 
 # Pairs Plot
 
+::: {.callout-note collapse="true"}
+## Options Options Options
+
 Here I set `show.points` to `FALSE` for two reasons: by design, most of the variables in my simulated data are uncorrelated, showing the points seemed to somehow create more confusion than clarity; there are *a lot* of data points, and for that reason as well, showing the points seemed to create more confusion than clarity. You of course can experiment with setting `show.points` to `TRUE`
+:::
+
+::: {.callout-tip collapse="true"}
+## What Do I See? What Am I Looking For?
+
+In the *diagonal panel*, I see the distribution of each variable by itself. In the *bottom panel*, there are are *smoother plots* of each variable against each other. Here I am looking for lines that are *not flat*--in part or in whole--because this indicates that one variable has a relationship with another. In the *top panel*, I see the *correlations* of each variable with each other, and I am looking for either *negative or positive numbers that depart significantly from zero*.
+
+It seems in this example, that `parental warmth` and `physical punishment` have the biggest association with `outcome`. In regression models, it turns out that `intervention` also has a relationship with `outcome`, but that is harder to see here. It is worth investigating even smaller correlations further!
+:::
 
 ```{r}
 #| echo: true
 #| code-fold: true
 #| code-summary: "Show the code"
  
-pairs.panels(mydata,
-             show.points = FALSE)
+pairs.panels(mydata, # pairs plot
+             show.points = FALSE) # don't show data points
 
 ```
 
