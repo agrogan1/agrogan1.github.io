@@ -5,7 +5,7 @@ date: "2025-8-23"
 categories: [stats, dataviz]
 ---
 
-For a few recent projects, I have had to quickly get up to speed on new data. If I'm focusing on a relatively small number of variables--perhaps a subset of a much larger dataset--I have found the *pairs plot* an incredibly useful tool for learning about new data, and getting a visual sense of the distributions of the variables and their relationships. After experimenting with a few different libraries, I have come to really like `pairs.panels` in the `psych` [@psych] library. I provide an example of `pairs.panels` below, but I also sometime use what seems to me to be the quite similar in spirit `corrgram` [@corrgram] library.
+For a few recent projects, I have had to quickly get up to speed on new data. If I'm focusing on a relatively small number of variables--perhaps a subset of a much larger dataset--I have found the *pairs plot* an incredibly useful tool for learning about new data, and getting a visual sense of the distributions of the variables and their relationships. After experimenting with a few different libraries, I have come to really like `pairs.panels` in the `psych` [@psych] library. I provide an example of `pairs.panels` below, but I also sometimes use what seems to me to be the quite similar in spirit `corrgram` [@corrgram] library.
 
 For this example, I use the data from my [Multilevel Workshop](https://agrogan1.github.io/multilevel-workshop/) site.
 
