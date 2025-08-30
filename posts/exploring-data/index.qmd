@@ -113,6 +113,8 @@ In conclusion:
 2. I transferred the values of the $\beta$ regression coefficients to `margins`. 
 3. I used `marginsplot` with a few options to see the results.
 
+These steps: `mixed` or `regress`; `margins`; `marginsplot`, could be repeated for almost any analysis.
+
 Results suggest that `identity` is not associated with the `outcome`. The `intervention` is associated with improvements in the `outcome`. `physical_punishment` is associated with a worsened `outcome`. Parental `warmth` is associated with an improved `outcome`.
 
 
