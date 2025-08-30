@@ -7,7 +7,7 @@ categories: [stats, dataviz]
 
 In [another post](../pairs-plots), I mentioned that for a few recent projects, I have had to quickly get up to speed on new data. In that other post, I focused on the idea of using a *pairs plot* in R. 
 
-In this post, I want to focus on a similar idea. But instead of a *pairs plot*, I focus on using a *regression model* with a number of risk and protective factors predicting an outcome. Here I use Stata instead of R, and use Stata's powerful `margins` and `marginsplot` command to get a visual idea of relationships in the data. 
+In this post, I want to focus on a similar idea. But instead of a *pairs plot*, I focus on using a *regression model* with a number of risk and protective factors predicting an outcome. Here I use Stata instead of R, and use Stata's powerful `margins` and `marginsplot` command to get a visual idea of the way that these different risk and protective factors are associated with the outcome. 
 
 Using `margins` means that I'm going to use some complicated looking syntax to get some results that are actually pretty straightforward.
 
