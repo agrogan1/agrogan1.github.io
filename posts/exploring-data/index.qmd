@@ -1,0 +1,121 @@
+---
+title: "Exploring Data"
+author: "Andy Grogan-Kaylor" 
+date: "2025-8-30"
+categories: [stats, dataviz]
+---
+
+In [another post](../pairs-plots), I mentioned that for a few recent projects, I have had to quickly get up to speed on new data. In that other post, I focused on the idea of using a *pairs plot* in R. 
+
+In this post, I want to focus on a similar idea. But instead of a *pairs plot*, I focus on using a *regression model* with a number of risk and protective factors predicting an outcome. Here I use Stata instead of R, and use Stata's powerful `margins` and `marginsplot` command to get a visual idea of relationships in the data. 
+
+Using `margins` means that I'm going to use some complicated looking syntax to get some results that are actually pretty straightforward.
+
+For this example, I use the data from my [Multilevel Workshop](https://agrogan1.github.io/multilevel-workshop/) site.
+
+
+```{r}
+#| output: false
+#| echo: false
+
+library(Statamarkdown)
+
+```
+
+# Get The Data
+
+```{stata, collectcode=TRUE}
+#| echo: true
+#| output: false
+
+use simulated_multilevel_data.dta, clear
+
+```
+
+# Regression Model
+
+Because these data are clustered by country, I use the `mixed` command to get accurate standard errors and p values. 
+
+Were the data not clustered, I could have just as easily used `regress y x1 x2 ...`.
+
+```{stata, collectcode=TRUE}
+#| echo: true
+
+mixed outcome warmth physical_punishment i.intervention i.identity || country: 
+  
+```
+
+# Use `margins` to Get *Marginal Effects*
+
+`margins` in Stata is a very versatile (and sometimes confusing) command. Here I use slightly complicated syntax, to get a very simple set of results. I use `margins`, and the `dydx(*)` option to get marginal effects, which here are simply the $\beta$ coefficients reported above.
+
+::: {.callout-tip collapse="false"}
+## Why Go Through This Step?
+
+We want to "let `margins` know about the regression coefficients".  As we will see below, using letting `margins` calculate the regression coefficients lets us graph the results using `marginsplot`.
+:::
+
+::: {.callout-tip collapse="true"}
+## Technically Speaking...
+
+Technically speaking, `dydx(*)` is asking Stata to calculate the marginal effects, $\frac{\partial y}{\partial x}$ for all (`*`) independent variables in the model. In a linear model, with no interaction terms, $\frac{\partial y}{\partial x} = \beta$. 
+
+Again, we are essentially using slightly complicated syntax to get simple results. 
+:::
+
+```{stata, collectcode=TRUE}
+#| echo: true
+
+margins, dydx(*)
+
+```
+
+# Use `marginsplot` To Visualize the Marginal Effects
+
+First I use `marginsplot` with no options to visualize the marginal effects. This produces a pretty non-intuitive graph.
+
+```{stata}
+#| echo: true
+#| output: false
+
+marginsplot
+
+graph export "marginsplot1.png", replace
+
+```
+
+![`marginsplot` with default options](marginsplot1.png)
+
+# Use `marginsplot` With Better Options
+
+I add some options to clarify the graph. I `recast` the graph as a `scatter`plot. I flip the graph to be `horizontal`. I also add a reference line at $x = 0$ to make more clear which coefficients are significant, and which coefficients are not significant. 
+
+```{stata}
+#| echo: true
+#| output: false
+
+marginsplot, ///
+recast(scatter) /// recast as scatterplot
+horizontal /// flip to horizontal
+xline(0, lcolor(red)) // line at x = 0 in red
+
+graph export "marginsplot2.png", replace
+  
+```
+
+![`marginsplot` with better options](marginsplot2.png)
+
+# Conclusion
+
+In conclusion:
+
+1. We ran a regression model using `mixed` (we could have used `regress`). 
+2. We transferred the values of the $\beta$ regression coefficients to `margins`. 
+3. We used `marginsplot` with a few options to see our results.
+
+Results suggest that `identity` is not associated with the `outcome`. The `intervention` is associated with improvements in the `outcome`. `physical_punishment` is associated with a worsened `outcome`. Parental `warmth` is associated with an improved `outcome`.
+
+
+
+
+
