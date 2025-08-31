@@ -52,7 +52,9 @@ mixed outcome warmth physical_punishment i.intervention i.identity || country:
 ::: {.callout-tip collapse="false"}
 ## Why Go Through This Step?
 
-We want to "let `margins` know about the regression coefficients".  As we will see below, using letting `margins` calculate the regression coefficients lets us graph the results using `marginsplot`.
+We want to "let `margins` know about the regression coefficients".  
+
+As we will see below, letting `margins` calculate the regression coefficients lets us graph the results using `marginsplot`.
 :::
 
 ::: {.callout-tip collapse="true"}
