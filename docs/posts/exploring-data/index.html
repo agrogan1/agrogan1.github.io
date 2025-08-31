@@ -370,7 +370,7 @@ window.Quarto = {
 
 
 <p>In <a href="../pairs-plots">another post</a>, I mentioned that for a few recent projects, I have had to quickly get up to speed on new data. In that other post, I focused on the idea of using a <em>pairs plot</em> in R.</p>
-<p>In this post, I want to focus on a similar idea. But instead of a <em>pairs plot</em>, I focus on using a <em>regression model</em> with a number of risk and protective factors predicting an outcome. Here I use Stata instead of R, and use Stata’s powerful <code>margins</code> and <code>marginsplot</code> command to get a visual idea of relationships in the data.</p>
+<p>In this post, I want to focus on a similar idea. But instead of a <em>pairs plot</em>, I focus on using a <em>regression model</em> with a number of risk and protective factors predicting an outcome. Here I use Stata instead of R, and use Stata’s powerful <code>margins</code> and <code>marginsplot</code> command to get a visual idea of the way that these different risk and protective factors are associated with the outcome.</p>
 <p>Using <code>margins</code> means that I’m going to use some complicated looking syntax to get some results that are actually pretty straightforward.</p>
 <p>For this example, I use the data from my <a href="https://agrogan1.github.io/multilevel-workshop/">Multilevel Workshop</a> site.</p>
 <section id="get-the-data" class="level1">
@@ -382,7 +382,6 @@ window.Quarto = {
 <section id="regression-model" class="level1">
 <h1>Regression Model</h1>
 <p>Because these data are clustered by country, I use the <code>mixed</code> command to get accurate standard errors and p values.</p>
-<p>Were the data not clustered, I could have just as easily used <code>regress y x1 x2 ...</code>.</p>
 <div class="cell" data-collectcode="true">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>mixed outcome warmth physical_punishment i.intervention i.<span class="kw">identity</span> || country: </span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -431,6 +430,11 @@ country: Identity            |
 LR test vs. linear model: chibar2(01) = 204.68        Prob &gt;= chibar2 = 0.0000</code></pre>
 </div>
 </div>
+<p>Were the data not clustered, I could have just as easily used <code>regress</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">regress</span> outcome warmth physical_punishment i.intervention i.<span class="kw">identity</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="use-margins-to-get-marginal-effects" class="level1">
 <h1>Use <code>margins</code> to Get <em>Marginal Effects</em></h1>
@@ -447,7 +451,8 @@ Why Go Through This Step?
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p>We want to “let <code>margins</code> know about the regression coefficients”. As we will see below, using letting <code>margins</code> calculate the regression coefficients lets us graph the results using <code>marginsplot</code>.</p>
+<p>We want to “let <code>margins</code> know about the regression coefficients”.</p>
+<p>As we will see below, letting <code>margins</code> calculate the regression coefficients lets us graph the results using <code>marginsplot</code>.</p>
 </div>
 </div>
 </div>
@@ -469,7 +474,7 @@ Technically Speaking…
 </div>
 </div>
 <div class="cell" data-collectcode="true">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>margins, <span class="kw">dydx</span>(*)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>margins, <span class="kw">dydx</span>(*)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/exploring-data/profile
 
@@ -499,9 +504,9 @@ Note: dy/dx for factor levels is the discrete change from the base level.</code>
 <h1>Use <code>marginsplot</code> To Visualize the Marginal Effects</h1>
 <p>First I use <code>marginsplot</code> with no options to visualize the marginal effects. This produces a pretty non-intuitive graph.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>marginsplot</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> <span class="st">"marginsplot1.png"</span>, <span class="kw">replace</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>marginsplot</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> <span class="st">"marginsplot1.png"</span>, <span class="kw">replace</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -514,13 +519,13 @@ Note: dy/dx for factor levels is the discrete change from the base level.</code>
 <h1>Use <code>marginsplot</code> With Better Options</h1>
 <p>I add some options to clarify the graph. I <code>recast</code> the graph as a <code>scatter</code>plot. I flip the graph to be <code>horizontal</code>. I also add a reference line at <span class="math inline">\(x = 0\)</span> to make more clear which coefficients are significant, and which coefficients are not significant.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>marginsplot, <span class="co">///</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">recast</span>(<span class="kw">scatter</span>) <span class="co">/// recast as scatterplot</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>horizontal <span class="co">/// flip to horizontal</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bn">xline</span>(0, lcolor(<span class="kw">red</span>)) <span class="co">// line at x = 0 in red</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> <span class="st">"marginsplot2.png"</span>, <span class="kw">replace</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>marginsplot, <span class="co">///</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">recast</span>(<span class="kw">scatter</span>) <span class="co">/// recast as scatterplot</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>horizontal <span class="co">/// flip to horizontal</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="bn">xline</span>(0, lcolor(<span class="kw">red</span>)) <span class="co">// line at x = 0 in red</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> <span class="st">"marginsplot2.png"</span>, <span class="kw">replace</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -533,10 +538,11 @@ Note: dy/dx for factor levels is the discrete change from the base level.</code>
 <h1>Conclusion</h1>
 <p>In conclusion:</p>
 <ol type="1">
-<li>We ran a regression model using <code>mixed</code> (we could have used <code>regress</code>).</li>
-<li>We transferred the values of the <span class="math inline">\(\beta\)</span> regression coefficients to <code>margins</code>.</li>
-<li>We used <code>marginsplot</code> with a few options to see our results.</li>
+<li>I ran a regression model using <code>mixed</code> (I could have used <code>regress</code>).</li>
+<li>I transferred the values of the <span class="math inline">\(\beta\)</span> regression coefficients to <code>margins</code>.</li>
+<li>I used <code>marginsplot</code> with a few options to see the results.</li>
 </ol>
+<p>These steps: <code>mixed</code> or <code>regress</code>; <code>margins</code>; <code>marginsplot</code>, could be repeated for almost any analysis.</p>
 <p>Results suggest that <code>identity</code> is not associated with the <code>outcome</code>. The <code>intervention</code> is associated with improvements in the <code>outcome</code>. <code>physical_punishment</code> is associated with a worsened <code>outcome</code>. Parental <code>warmth</code> is associated with an improved <code>outcome</code>.</p>
 
 
