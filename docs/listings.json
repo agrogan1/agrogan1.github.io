@@ -2,10 +2,10 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/exploring-data/index.html",
       "/posts/multilevel-thinking/index.html",
       "/posts/teaching/index.html",
       "/posts/stats-stuff/index.html",
+      "/posts/exploring-data/index.html",
       "/posts/pairs-plots/index.html",
       "/posts/updated-Michigan-colors-for-R-graphs/index.html",
       "/posts/updated-Michigan-colors-for-Stata-graphs/index.html",
