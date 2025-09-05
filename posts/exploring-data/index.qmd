@@ -3,6 +3,7 @@ title: "Exploring Data"
 author: "Andy Grogan-Kaylor" 
 date: "2025-8-30"
 categories: [stats, dataviz]
+image: "marginsplot2.png"
 ---
 
 In [another post](../pairs-plots), I mentioned that for a few recent projects, I have had to quickly get up to speed on new data. In that other post, I focused on the idea of using a *pairs plot* in R. 
@@ -35,6 +36,7 @@ use simulated_multilevel_data.dta, clear
 # Regression Model
 
 Because these data are clustered by country, I use the `mixed` command to get accurate standard errors and p values. 
+
 
 ```{stata, collectcode=TRUE}
 #| echo: true
