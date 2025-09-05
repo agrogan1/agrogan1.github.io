@@ -383,6 +383,20 @@ window.Quarto = {
 <div class="cell" data-collectcode="true">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>mixed outcome warmth physical_punishment i.intervention i.<span class="kw">identity</span> || country: </span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Show The Results
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell" data-collectcode="true">
 <div class="cell-output cell-output-stdout">
 <pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/exploring-data/profile
 
@@ -428,6 +442,9 @@ country: Identity            |
 LR test vs. linear model: chibar2(01) = 204.68        Prob &gt;= chibar2 = 0.0000</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
 <p>Were the data not clustered, I could have just as easily used <code>regress</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">regress</span> outcome warmth physical_punishment i.intervention i.<span class="kw">identity</span></span>
@@ -438,7 +455,7 @@ LR test vs. linear model: chibar2(01) = 204.68        Prob &gt;= chibar2 = 0.000
 <h1>Use <code>margins</code> to Get <em>Marginal Effects</em></h1>
 <p><code>margins</code> in Stata is a very versatile (and sometimes confusing) command. Here I use slightly complicated syntax, to get a very simple set of results. I use <code>margins</code>, and the <code>dydx(*)</code> option to get marginal effects, which here are simply the <span class="math inline">\(\beta\)</span> coefficients reported above.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -447,7 +464,7 @@ Why Go Through This Step?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <p>We want to “let <code>margins</code> know about the regression coefficients”.</p>
 <p>As we will see below, letting <code>margins</code> calculate the regression coefficients lets us graph the results using <code>marginsplot</code>.</p>
@@ -455,7 +472,7 @@ Why Go Through This Step?
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -464,7 +481,7 @@ Technically Speaking…
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Technically speaking, <code>dydx(*)</code> is asking Stata to calculate the marginal effects, <span class="math inline">\(\frac{\partial y}{\partial x}\)</span> for all (<code>*</code>) independent variables in the model. In a linear model, with no interaction terms, <span class="math inline">\(\frac{\partial y}{\partial x} = \beta\)</span>.</p>
 <p>Again, we are essentially using slightly complicated syntax to get simple results.</p>

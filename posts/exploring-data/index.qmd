@@ -37,14 +37,26 @@ use simulated_multilevel_data.dta, clear
 
 Because these data are clustered by country, I use the `mixed` command to get accurate standard errors and p values. 
 
-
 ```{stata, collectcode=TRUE}
 #| echo: true
+#| eval: false
 
 mixed outcome warmth physical_punishment i.intervention i.identity || country: 
   
 ```
 
+::: {.callout-note collapse="true"}
+## Show The Results
+
+```{stata, collectcode=TRUE}
+#| echo: false
+#| eval: true
+
+mixed outcome warmth physical_punishment i.intervention i.identity || country: 
+  
+```
+
+:::
 Were the data not clustered, I could have just as easily used `regress`.
 
 ```{stata}
