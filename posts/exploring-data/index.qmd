@@ -1,7 +1,7 @@
 ---
 title: "Exploring Data"
 author: "Andy Grogan-Kaylor" 
-date: "2025-8-30"
+date: "2025-9-7"
 categories: [stats, dataviz]
 image: "marginsplot2.png"
 ---
@@ -30,6 +30,16 @@ library(Statamarkdown)
 #| output: false
 
 use simulated_multilevel_data.dta, clear
+
+```
+
+# Describe The Data
+
+```{stata}
+#| echo: true
+#| output: true
+
+describe
 
 ```
 

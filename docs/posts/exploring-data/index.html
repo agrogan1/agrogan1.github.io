@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Andy Grogan-Kaylor">
-<meta name="dcterms.date" content="2025-08-30">
+<meta name="dcterms.date" content="2025-09-07">
 
 <title>Exploring Data – Andrew Grogan-Kaylor</title>
 <style>
@@ -150,10 +150,10 @@ window.Quarto = {
 <meta name="twitter:card" content="summary_large_image">
 <meta name="citation_title" content="Exploring Data">
 <meta name="citation_author" content="Andy Grogan-Kaylor">
-<meta name="citation_publication_date" content="2025-08-30">
-<meta name="citation_cover_date" content="2025-08-30">
+<meta name="citation_publication_date" content="2025-09-07">
+<meta name="citation_cover_date" content="2025-09-07">
 <meta name="citation_year" content="2025">
-<meta name="citation_online_date" content="2025-08-30">
+<meta name="citation_online_date" content="2025-09-07">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience;,citation_abstract=Adverse Childhood Experiences (ACEs) such as child abuse are related to poor health outcomes. Spanking has indicated a similar association with health outcomes, but to date has not been considered an ACE. Physical and emotional abuse have been shown in previous research to correlate highly and may be similar in nature to spanking. To determine if spanking should be considered an ACE, this study aimed to examine 1): the grouping of spanking with physical and emotional abuse; and 2) if spanking has similar associations with poor adult health problems and accounts for additional model variance. Adult mental health problems included depressive affect, suicide attempts, moderate to heavy drinking, and street drug use. Data were from the CDC-Kaiser ACE study (N = 8316, response rate = 65;,citation_author=Tracie O. Afifi;,citation_author=Derek Ford;,citation_author=Elizabeth T. Gershoff;,citation_author=Melissa Merrick;,citation_author=Andrew Grogan-Kaylor;,citation_author=Katie A. Ports;,citation_author=Harriet L. MacMillan;,citation_author=George W. Holden;,citation_author=Catherine A. Taylor;,citation_author=Shawna J. Lee;,citation_author=Robbyn Peters Bennett;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_doi=10.1016/j.chiabu.2017.01.014;,citation_isbn=0145-2134;,citation_issn=18737757;,citation_volume=71;,citation_journal_title=Child Abuse and Neglect;">
 <meta name="citation_reference" content="citation_title=Interaction terms in logit and probit models;,citation_abstract=The magnitude of the interaction effect in nonlinear models does not equal the marginal effect of the interaction term, can be of opposite sign, and its statistical significance is not calculated by standard software. We present the correct way to estimate the magnitude and standard errors of the interaction effect in nonlinear models. © 2003 Elsevier Science B.V. All rights reserved.;,citation_author=Chunrong Ai;,citation_author=Edward C. Norton;,citation_publication_date=2003;,citation_cover_date=2003;,citation_year=2003;,citation_doi=10.1016/S0165-1765(03)00032-6;,citation_issn=01651765;,citation_journal_title=Economics Letters;">
@@ -335,7 +335,7 @@ window.Quarto = {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">August 30, 2025</p>
+        <p class="date">September 7, 2025</p>
       </div>
     </div>
     
@@ -352,6 +352,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#get-the-data" id="toc-get-the-data" class="nav-link active" data-scroll-target="#get-the-data">Get The Data</a></li>
+  <li><a href="#describe-the-data" id="toc-describe-the-data" class="nav-link" data-scroll-target="#describe-the-data">Describe The Data</a></li>
   <li><a href="#regression-model" id="toc-regression-model" class="nav-link" data-scroll-target="#regression-model">Regression Model</a></li>
   <li><a href="#use-margins-to-get-marginal-effects" id="toc-use-margins-to-get-marginal-effects" class="nav-link" data-scroll-target="#use-margins-to-get-marginal-effects">Use <code>margins</code> to Get <em>Marginal Effects</em></a></li>
   <li><a href="#use-marginsplot-to-visualize-the-marginal-effects" id="toc-use-marginsplot-to-visualize-the-marginal-effects" class="nav-link" data-scroll-target="#use-marginsplot-to-visualize-the-marginal-effects">Use <code>marginsplot</code> To Visualize the Marginal Effects</a></li>
@@ -377,12 +378,44 @@ window.Quarto = {
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> simulated_multilevel_data.dta, <span class="kw">clear</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
+<section id="describe-the-data" class="level1">
+<h1>Describe The Data</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">describe</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/exploring-data/profile
+
+&gt; .do ...
+
+
+
+Contains data from simulated_multilevel_data.dta
+ Observations:         3,000                  
+    Variables:             9                  15 May 2024 14:54
+-------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+-------------------------------------------------------------------------------------
+country         float   %9.0g                 country id
+HDI             float   %9.0g                 Human Development Index
+family          float   %9.0g                 family id
+id              str7    %9s                   unique country family id
+identity        float   %9.0g                 hypothetical identity group variable
+intervention    float   %9.0g                 recieved intervention
+physical_puni~t float   %9.0g                 physical punishment in past week
+warmth          float   %9.0g                 parental warmth in past week
+outcome         float   %9.0g                 beneficial outcome
+-------------------------------------------------------------------------------------
+Sorted by: country  family</code></pre>
+</div>
+</div>
+</section>
 <section id="regression-model" class="level1">
 <h1>Regression Model</h1>
 <p>Because these data are clustered by country, I use the <code>mixed</code> command to get accurate standard errors and p values.</p>
 <div class="cell" data-collectcode="true">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>mixed outcome warmth physical_punishment i.intervention i.<span class="kw">identity</span> || country: </span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>mixed outcome warmth physical_punishment i.intervention i.<span class="kw">identity</span> || country: </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -447,8 +480,8 @@ LR test vs. linear model: chibar2(01) = 204.68        Prob &gt;= chibar2 = 0.000
 </div>
 <p>Were the data not clustered, I could have just as easily used <code>regress</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">regress</span> outcome warmth physical_punishment i.intervention i.<span class="kw">identity</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">regress</span> outcome warmth physical_punishment i.intervention i.<span class="kw">identity</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="use-margins-to-get-marginal-effects" class="level1">
@@ -489,7 +522,7 @@ Technically Speaking…
 </div>
 </div>
 <div class="cell" data-collectcode="true">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>margins, <span class="kw">dydx</span>(*)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>margins, <span class="kw">dydx</span>(*)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/exploring-data/profile
 
@@ -519,9 +552,9 @@ Note: dy/dx for factor levels is the discrete change from the base level.</code>
 <h1>Use <code>marginsplot</code> To Visualize the Marginal Effects</h1>
 <p>First I use <code>marginsplot</code> with no options to visualize the marginal effects. This produces a pretty non-intuitive graph.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>marginsplot</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> <span class="st">"marginsplot1.png"</span>, <span class="kw">replace</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>marginsplot</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> <span class="st">"marginsplot1.png"</span>, <span class="kw">replace</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -534,13 +567,13 @@ Note: dy/dx for factor levels is the discrete change from the base level.</code>
 <h1>Use <code>marginsplot</code> With Better Options</h1>
 <p>I add some options to clarify the graph. I <code>recast</code> the graph as a <code>scatter</code>plot. I flip the graph to be <code>horizontal</code>. I also add a reference line at <span class="math inline">\(x = 0\)</span> to make more clear which coefficients are significant, and which coefficients are not significant.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>marginsplot, <span class="co">///</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">recast</span>(<span class="kw">scatter</span>) <span class="co">/// recast as scatterplot</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>horizontal <span class="co">/// flip to horizontal</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="bn">xline</span>(0, lcolor(<span class="kw">red</span>)) <span class="co">// line at x = 0 in red</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> <span class="st">"marginsplot2.png"</span>, <span class="kw">replace</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>marginsplot, <span class="co">///</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">recast</span>(<span class="kw">scatter</span>) <span class="co">/// recast as scatterplot</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>horizontal <span class="co">/// flip to horizontal</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bn">xline</span>(0, lcolor(<span class="kw">red</span>)) <span class="co">// line at x = 0 in red</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> <span class="st">"marginsplot2.png"</span>, <span class="kw">replace</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
