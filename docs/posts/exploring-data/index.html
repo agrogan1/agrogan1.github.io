@@ -352,8 +352,8 @@ window.Quarto = {
    
   <ul>
   <li><a href="#get-the-data" id="toc-get-the-data" class="nav-link active" data-scroll-target="#get-the-data">Get The Data</a></li>
-  <li><a href="#describe-the-data" id="toc-describe-the-data" class="nav-link" data-scroll-target="#describe-the-data">Describe The Data</a></li>
-  <li><a href="#regression-model" id="toc-regression-model" class="nav-link" data-scroll-target="#regression-model">Regression Model</a></li>
+  <li><a href="#describe-the-data" id="toc-describe-the-data" class="nav-link" data-scroll-target="#describe-the-data"><code>describe</code> The Data</a></li>
+  <li><a href="#regression-model-mixed-or-regress" id="toc-regression-model-mixed-or-regress" class="nav-link" data-scroll-target="#regression-model-mixed-or-regress">Regression Model (<code>mixed</code> or <code>regress</code>)</a></li>
   <li><a href="#use-margins-to-get-marginal-effects" id="toc-use-margins-to-get-marginal-effects" class="nav-link" data-scroll-target="#use-margins-to-get-marginal-effects">Use <code>margins</code> to Get <em>Marginal Effects</em></a></li>
   <li><a href="#use-marginsplot-to-visualize-the-marginal-effects" id="toc-use-marginsplot-to-visualize-the-marginal-effects" class="nav-link" data-scroll-target="#use-marginsplot-to-visualize-the-marginal-effects">Use <code>marginsplot</code> To Visualize the Marginal Effects</a></li>
   <li><a href="#use-marginsplot-with-better-options" id="toc-use-marginsplot-with-better-options" class="nav-link" data-scroll-target="#use-marginsplot-with-better-options">Use <code>marginsplot</code> With Better Options</a></li>
@@ -379,7 +379,7 @@ window.Quarto = {
 </div>
 </section>
 <section id="describe-the-data" class="level1">
-<h1>Describe The Data</h1>
+<h1><code>describe</code> The Data</h1>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">describe</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -410,8 +410,8 @@ Sorted by: country  family</code></pre>
 </div>
 </div>
 </section>
-<section id="regression-model" class="level1">
-<h1>Regression Model</h1>
+<section id="regression-model-mixed-or-regress" class="level1">
+<h1>Regression Model (<code>mixed</code> or <code>regress</code>)</h1>
 <p>Because these data are clustered by country, I use the <code>mixed</code> command to get accurate standard errors and p values.</p>
 <div class="cell" data-collectcode="true">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>mixed outcome warmth physical_punishment i.intervention i.<span class="kw">identity</span> || country: </span>
