@@ -1,7 +1,7 @@
 ---
 title: "Spillover of macro-level violence to parental physical abuse of children in low- and middle-income countries"
 author:  Andy Grogan-Kaylor 
-date: "2025-4-23"
+date: "2025-8-30"
 categories: [multilevel, corporal punishment, MICS, closeread]
 image: "MICS-countries.png"
 ---
