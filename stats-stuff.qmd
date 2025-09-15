@@ -38,7 +38,7 @@ listing:
       categories: [Stata]
     - title: "Michigan Graph Scheme for Stata"
       path: https://agrogan1.github.io/Stata/michigan-graph-scheme/
-      image: https://agrogan1.github.io/Stata/michigan-graph-scheme/MichiganColorsStata3.png
+      image: michigan.png
       categories: [Stata, dataviz]
     - title: "Data Visualization With Stata"
       path: https://agrogan1.github.io/Stata/data-visualization-with-Stata/data-visualization-with-Stata.html
