@@ -18,7 +18,7 @@ Then after making a *principled decision*, one is *transparent* and *thorough* a
 
 > "In general, when building statistical models, we must not forget that the aim is to understand something about the real world. Or predict, choose an action, make a decision, summarize evidence, and so on, but always about the real world, not an abstract mathematical world: our models are not the reality—a point well made by George Box in his oft-cited remark that **'all models are wrong, but some are useful'** (Box, 1979 in @MR0554183)." [@Hand2014] [emphasis added]
 
-To propose a concrete example, to analyze clustered data, I could employ multilevel models, fixed effects regression, clustered standard errors, or generalized estimating equations. Each of these methods of analysis would carry with it different assumptions. 
+To propose a concrete example, to analyze *clustered data*, I could employ multilevel models, fixed effects regression, clustered standard errors, or generalized estimating equations. Each of these methods of analysis would carry with it different assumptions. 
 
 To further illustrate this point, within the domain of *multilevel models*, I would have further choices: I could estimate only a random intercept; estimate one or more random slopes; or estimate all possible random slopes. These random effects could be correlated or uncorrelated. I could estimate only main effects, or could estimate interactions of several variables. Each of these would be a different, yet principled, approach to analyzing the data.
 
