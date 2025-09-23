@@ -1,7 +1,7 @@
 ---
 title: "Why Spreadsheets Are A Bad Format For Storing Data"
 author: "Andy Grogan-Kaylor"
-date: "2025-9-23"
+date: "2025-9-22"
 categories: [stats, workflow]
 ---
 

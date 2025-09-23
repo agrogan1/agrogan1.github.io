@@ -2,10 +2,10 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html",
       "/posts/multilevel-thinking/index.html",
       "/posts/teaching/index.html",
       "/posts/stats-stuff/index.html",
+      "/posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html",
       "/posts/closeread-be-less-wrong/index.html",
       "/posts/exploring-data/index.html",
       "/posts/plain-old-nerd/index.html",
