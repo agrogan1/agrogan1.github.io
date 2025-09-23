@@ -1,19 +1,21 @@
 ---
 title: "Why Spreadsheets Are A Bad Format For Storing Data"
 author: "Andy Grogan-Kaylor"
-date: "2025-7-01"
+date: "2025-9-23"
 categories: [stats, workflow]
 ---
 
 # Background
 
-Excel and Google Sheets are sometimes used as programs to collect and store data. Excel and Google Sheets are often used because they are the only programs that some individuals or agencies have for storing data. Excel and other spreadsheet programs may also be used because spreadsheets can be very intuitive and easy ways of managing small amounts of data. 
+Excel and Google Sheets are sometimes used as programs to collect and store data. Excel and Google Sheets are often used because they are the only programs that some individuals or agencies have for storing data. Additionally, many programs like Qualtrics or RedCap may use Excel as a default output format. 
+
+Excel and other spreadsheet programs may also be used because spreadsheets can be very intuitive and easy ways of managing small amounts of data. 
 
 However, Excel and Google Sheets may be problematic as a data storage solution for a number of reasons detailed below, especially as data sets grow in size. Notably, statistical programs like [Stata](https://www.stata.com/), [SAS](https://www.sas.com/en_us/home.html), or SPSS all store additional information with each variable such as: a *variable label*, describing the contents of the variable, or the survey question that resulted in the variable; and a *value label*, which attaches qualitative information to each possible value of the response.[^CSV]
 
 [^CSV]: Over time, I've realized that the issues discussed in this post also apply to the use of CSV (comma separated value) files. While CSV files are convenient, and can be imported by almost any software, they may lead to many of the same issues discussed in this post.
 
-Excel and Google Sheets do not generally contain this extra information about each variable, or column of data, which may lead to errors in working with quantitative information.
+Excel and Google Sheets do not generally contain this extra information about each variable, or column of data, which may lead to extra work, extra effort, or even errors in working with quantitative information.
 
 The data below are stored in Stata format, but could as easily be stored in SAS or SPSS format.
 
@@ -56,7 +58,7 @@ quietly save "simulated-happiness-data.dta", replace
 
 # Get And Describe The Data
 
-![Screenshot of Stata](screenshot-Stata.png){ width=75% } 
+![Screenshot of Data in Stata](screenshot-Stata.png){ width=75% } 
 
 ```{stata, collectcode=TRUE, echo=TRUE}
 
@@ -127,7 +129,7 @@ firstrow(variables) nolabel replace
 
 I've saved this simulated data in Excel format.
 
-![Screenshot of Excel](screenshot-Excel.png){ width=75% } 
+![Screenshot of Data in Excel Format](screenshot-Excel.png){ width=75% } 
 
 I now import the Excel data file. I use the first row of data as variable names.
 
@@ -156,7 +158,7 @@ list in 1/10
 ::: {.callout-tip}
 ## Statistical Formats Save Work and Reduce Error Rates
 
-Adding this valuable information back into the data set may take a great deal of extra effort, which may lead to errors.
+Adding this valuable information back into the data set may take a great deal of extra effort, and may also lead to errors.
 :::
 
 # Descriptive Statistics and Bar Graph
