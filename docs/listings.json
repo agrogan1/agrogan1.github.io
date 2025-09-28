@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/patterns/index.html",
       "/posts/multilevel-thinking/index.html",
       "/posts/teaching/index.html",
       "/posts/stats-stuff/index.html",
@@ -106,11 +107,11 @@
     ]
   },
   {
-    "listing": "/contact.html",
+    "listing": "/teaching.html",
     "items": []
   },
   {
-    "listing": "/teaching.html",
+    "listing": "/contact.html",
     "items": []
   },
   {

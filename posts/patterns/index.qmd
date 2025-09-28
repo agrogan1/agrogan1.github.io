@@ -1,0 +1,15 @@
+---
+title: "Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach"
+author:  Andy Grogan-Kaylor 
+date: "2025-9-28"
+categories: [corporal punishment, positive parenting, MICS]
+image: "patterns.png"
+---
+
+A few years ago, we published an article entitled "Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach". I've linked to that article elsewhere on this site, but wanted to make sure that the links were included in this blog, particularly as the article was one where we discuss positive parenting. Notably, the study found:
+
+> "The [analysis] suggested caregiver discipline fell into three overall patterns: high behavioral control, moderate behavior control, and lower behavioral control. The lower behavioral control class was associated with the most advantageous child outcomes and household socio-demographic characteristics, whereas the high behavioral control class was associated with the most disadvantageous child outcomes and household characteristics."
+
+* [Article](https://doi.org/10.1016/j.chiabu.2022.105606)
+* [ArcGIS Storymap](https://arcg.is/1S5XPK)
+    
