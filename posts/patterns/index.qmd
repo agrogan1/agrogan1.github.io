@@ -1,7 +1,7 @@
 ---
 title: "Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach"
 author:  Andy Grogan-Kaylor 
-date: "2025-9-28"
+date: "2025-9-27"
 categories: [corporal punishment, positive parenting, MICS]
 image: "patterns.png"
 ---
