@@ -12,4 +12,6 @@ A few years ago, we published an article entitled "Patterns of Caregiver Aggress
 
 * [Article](https://doi.org/10.1016/j.chiabu.2022.105606)
 * [ArcGIS Storymap](https://arcg.is/1S5XPK)
+
+![patterns of caregiver discipline](patterns.png){width=50%}
     
