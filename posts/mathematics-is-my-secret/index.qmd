@@ -1,7 +1,7 @@
 ---
 title: "Mathematics is My Secret"
 author:  Andy Grogan-Kaylor 
-date: "2025-8-31"
+date: "2025-8-15"
 categories: [teaching, stats, science]
 image: mandelbrot.png
 ---
