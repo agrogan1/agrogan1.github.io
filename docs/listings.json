@@ -2,9 +2,14 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/multilevel-thinking/index.html",
+      "/posts/complexity/index.html",
+      "/posts/complexity-hidden-inside-simplicity-2/index.html",
+      "/posts/math/index.html",
+      "/posts/all-models-are-wrong/index.html",
       "/posts/teaching/index.html",
+      "/posts/in-defence-of-the-word/index.html",
       "/posts/stats-stuff/index.html",
+      "/posts/multilevel-thinking/index.html",
       "/posts/patterns/index.html",
       "/posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html",
       "/posts/closeread-be-less-wrong/index.html",
@@ -20,6 +25,7 @@
       "/posts/complexity-hidden-inside-simplicity/index.html",
       "/posts/multilevel-workshop/index.html",
       "/posts/interactions-and-moderation/index.html",
+      "/posts/Kofi-Annan-knowledge-is-power/index.html",
       "/posts/interactions-and-main-effects-mathematical/index.html",
       "/posts/interactions-and-main-effects-substantive/index.html",
       "/posts/interactions-unpacking/index.html",
@@ -36,6 +42,7 @@
       "/posts/Thailand-is-68/index.html",
       "/posts/theory/index.html",
       "/posts/orphan-storymap/index.html",
+      "/posts/Montero/index.html",
       "/posts/interactions-in-logistic-regression/index.html",
       "/posts/graphing-change-over-time/index.html",
       "/posts/can-Stata-make-aesthetically-appealing-graph/index.html",
@@ -50,6 +57,7 @@
       "/posts/discipline-11-forms-storymap/index.html",
       "/posts/multiple-principled-solutions/index.html",
       "/posts/data-visualization-with-Stata/index.html",
+      "/posts/science-as-a-human-activity/index.html",
       "/posts/mediation/index.html",
       "/posts/visualizing-MLM/index.html",
       "/posts/missing-data/index.html",
@@ -64,6 +72,7 @@
       "/posts/Bayestalk/index.html",
       "/posts/love-words/index.html",
       "/posts/LaoPDR-is-66/index.html",
+      "/posts/best-teaching-advice/index.html",
       "/posts/workflow/index.html",
       "/posts/truth/index.html",
       "/posts/Cohens-d-calculator/index.html",
@@ -103,7 +112,8 @@
       "/teaching.html",
       "/stats-stuff.html",
       "/about.html",
-      "/blog.html"
+      "/blog.html",
+      "/posts/multilevel-thinking/index.html"
     ]
   },
   {
