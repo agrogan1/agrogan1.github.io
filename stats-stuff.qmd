@@ -140,6 +140,10 @@ listing:
       path: https://agrogan1.github.io/Bayes/Bayesian-calculations/Bayesian-calculations.html
       image: https://agrogan1.github.io/Bayes/basic-Bayes/Thomas_Bayes.png
       categories: [Bayes]
+    - title: "*Multilevel Thinking* Book"
+      path: https://agrogan1.github.io/posts/multilevel-thinking/
+      image: bookcover.png
+      categories: [multilevel, book]
     - title: "Multilevel Modeling in Stata With the Gutten Tree Data"
       path: https://agrogan1.github.io/multilevel/mlm-gutten/mlm-gutten.html
       image: https://agrogan1.github.io/multilevel/Bayesian-longitudinal-mlm/fotolia-small.jpg
