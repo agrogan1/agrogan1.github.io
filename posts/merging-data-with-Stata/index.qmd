@@ -1,0 +1,38 @@
+---
+title: "Merging Data With Stata"
+author: "Andy Grogan-Kaylor"
+date: 2025-10-10
+categories: [stats, Stata]
+execute: 
+  echo: true
+code-fold: true
+draft: true
+---
+
+# Introduction
+
+Merging data is often one of the most simple seeming, but actually complicated tasks in any statistical software program.
+
+In this post, I try to provide a brief introduction to merging data in Stata.
+
+# Types of Merges
+
+```{mermaid}
+
+flowchart LR
+    subgraph datasetA
+    a1
+    a2
+    a3
+    end
+    subgraph datasetB
+    b1
+    b2
+    b3
+    end
+    
+    a1 <--> b1
+    a2 <--> b2
+    a3 <--> b3
+    
+```
