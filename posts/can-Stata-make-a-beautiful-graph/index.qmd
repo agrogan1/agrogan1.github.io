@@ -1,7 +1,7 @@
 ---
 title: "Can Stata Make A Beautiful Graph?"
 author: "Andy Grogan-Kaylor" 
-date: "2025-1-29"
+date: "2025-10-10"
 categories: [stats, dataviz, Stata]
 ---
 
@@ -22,7 +22,7 @@ I use green and gold since they are common colors for forestry and park signage.
 
 # Data Source 🌲
 
-The data used in this example are derived from the R package *Functions and Datasets for "Forest Analytics with R"*.
+The data used in this example are derived from the R package by @FAwR.
 
 According to the documentation, the source of these data are: "von Guttenberg’s Norway spruce (Picea abies [L.] Karst) tree measurement data."
 
@@ -35,7 +35,9 @@ The documentation goes on to further note that:
 ```{stata, collectcode=TRUE}
 #| echo: true
 
-use "https://github.com/agrogan1/multilevel/raw/master/mlm-R2-gutten/gutten.dta", clear
+clear all
+
+use "https://github.com/agrogan1/multilevel/raw/master/mlm-R2-gutten/gutten.dta"
 
 ```
 
@@ -81,7 +83,7 @@ xtitle("Tree Age") /// title for x axis
 ytitle("Tree Height") /// title for y axis
 caption("Gutten Tree Data") /// caption
 legend(order(1 "trees" 2 "median spline") position(6) rows(1)) /// better labels and format for legend
-aspectratio(.75) // better aspect ratio
+aspectratio(.5) // better aspect ratio
 
 graph export gutten.png, width(2000) replace
 	
@@ -89,7 +91,7 @@ graph export gutten.svg, width(2000) replace
 
 ```
 
-![A Beautiful? Graph of the Gutten Trees](gutten.svg){width=75%}
+![A Beautiful? Graph of the Gutten Trees](gutten.png){width=80%}
 
 	
 	
