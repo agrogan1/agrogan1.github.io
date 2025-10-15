@@ -27,6 +27,9 @@ ggplot(data = NULL,
         axis.text = element_blank(),
         axis.title = element_blank())
 
+ggsave("michigancolors.png",
+       width = 8.5)
+
 ```
 
 I've updated my R package for *Michigan colors for R Graphs* at:  [https://agrogan1.github.io/michigancolors/](https://agrogan1.github.io/michigancolors/)
