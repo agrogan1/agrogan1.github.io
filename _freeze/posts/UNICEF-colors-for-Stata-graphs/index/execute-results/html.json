@@ -1,8 +1,8 @@
 {
-  "hash": "e007bddf7a070bbd0a4c756b2e58db6d",
+  "hash": "9b63dedac1a0615a9dff72eef19b56d9",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"Updated UNICEF Colors for Stata Graphs\"\nauthor: \"Andy Grogan-Kaylor\"\ndate: \"2024-9-24\"\nimage: \"UNICEFpalette.png\"\ncategories: [stats, dataviz]\n---\n\n\nI've updated my *UNICEF Colors for Stata Graphs*, using the most recent version of official colors for UNICEF. \n\nThe updated graph scheme can be installed by typing `net from https://agrogan1.github.io/Stata` at the Stata command prompt.\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n\n\n![UNICEF Color Palette](UNICEFpalette.png)\n\n\n\n",
+    "markdown": "---\ntitle: \"Updated UNICEF Colors for Stata Graphs\"\nauthor: \"Andy Grogan-Kaylor\"\ndate: \"2024-9-24\"\nimage: \"UNICEFpalette.png\"\ncategories: [stats, dataviz, Stata]\n---\n\nI've updated my *UNICEF Colors for Stata Graphs*, using the most recent version of official colors for UNICEF. \n\nThe updated graph scheme can be installed by typing `net from https://agrogan1.github.io/Stata` at the Stata command prompt.\n\n\n::: {.cell}\n\n:::\n\n\n\n::: {.cell}\n\n:::\n\n\n\n![UNICEF Color Palette](UNICEFpalette.png)\n\n\n\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"

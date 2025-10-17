@@ -1,7 +1,7 @@
 ---
 title: "Updated UNICEF Colors for Stata Graphs"
 author: "Andy Grogan-Kaylor"
-date: "2024-9-24"
+date: "2025-10-15"
 image: "UNICEFpalette.png"
 categories: [stats, dataviz, Stata]
 ---
@@ -25,7 +25,11 @@ set obs 10
 
 generate row = _n
 
-graph bar, over(row) asyvars scheme(UNICEF) title("UNICEF Color Palette") ytitle("") ylabel(none) ysize(3)
+graph bar, over(row, axis(off)) ///
+asyvars scheme(UNICEF) ///
+title("UNICEF Color Palette") ///
+ytitle("") ylabel(none) ysize(3) yscale(lcolor(none)) ///
+lintensity(0)
 
 graph export "UNICEFpalette.png", as(png) name("Graph") replace
 

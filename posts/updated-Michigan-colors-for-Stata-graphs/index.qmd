@@ -31,7 +31,7 @@ ytitle(" ") ylabel(none) ///
 yscale(lcolor(none)) ///
 title(Michigan Graph Scheme Colors) ///
 scheme(michigan) ///
-ysize(1.5) scale(2) ///
+ysize(3) scale(2) ///
 name(michigan, replace)
 	
 quietly graph export michigan.png, name("michigan") width(2000) replace
