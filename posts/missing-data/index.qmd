@@ -2,7 +2,7 @@
 title: "Missing Data"
 subtitle: "An Evolving Blog Post on a Complicated Issue"
 author: "Andy Grogan-Kaylor"
-date: "2024-10-14"
+date: "2025-10-15"
 categories: [stats]
 image: "puzzle-piece.png"
 ---
@@ -41,8 +41,8 @@ Here are some possible approaches that we could employ with missing data.
 
 1. **We could do nothing.** Doing nothing would be easy. However, our sample size would be reduced because most analyses depend on complete case data. Also, missing data usually occur for a *reason*. Often respondents with missing data have the lowest incomes, are the most marginalized or discriminated against, and have histories with the most trauma or violence. Therefore relying on complete case analyses might introduce some amount of *bias*.
 2. **We could replace missing values with the mean.** Replacing missing values with the mean would be easy. However, because respondents usually having missing data for a *reason*, replacing missing data with the mean would introduce *bias* into the data, and would also introduce *false certainty* into the data (p values would be artificially lowered).
-3. **We could use regression to impute the missing values from the complete cases.** For example $\hat{y} = \beta_0 + \beta_1 x + \beta_2 z$. This approach would be more difficult, but would be making use of the information in the covariates about the *reasons* for missing data, and would therefore reduce *bias*. However, by imputing a single value for each missing value, we would still be introducing *false certainty* into the data (p values would be artificially lowered).
-4. **We could perform multiple imputation.** Multiple imputation would involve using regression to impute the missing values, but we would impute the missing values *multiple* times, each time introducing a small amount of random variation. This procedure would be more difficult--though readily available in most statistical software--and would both make use of the information in the covariates about the *reasons* for missing data, thus reducing *bias*. Further, by imputing the data multiple times, we would preserve the *uncertainty* around the estimates, thus making better estimates of p values.
+3. **We could use regression to impute the missing values from the complete cases.** For example $\hat{y} = \beta_0 + \beta_1 x + \beta_2 z$. This approach would be more difficult, but would be making use of the information in the covariates about the *reasons* for missing data, and would therefore reduce *bias*. However, by imputing a *single value* for each missing value, we would still be introducing *false certainty* into the data (p values would be artificially lowered).
+4. **We could perform multiple imputation.** Multiple imputation would involve using regression to impute the missing values, but we would impute the missing values *multiple times*, each time introducing a small amount of random variation. This procedure would be more difficult--though readily available in most statistical software--and would both make use of the information in the covariates about the *reasons* for missing data, thus reducing *bias*. Further, by imputing the data *multiple times*, we would preserve the *uncertainty* around the estimates, thus making better estimates of p values.
 
 
 

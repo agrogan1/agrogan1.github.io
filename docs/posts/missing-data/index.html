@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Andy Grogan-Kaylor">
-<meta name="dcterms.date" content="2024-10-14">
+<meta name="dcterms.date" content="2025-10-15">
 
 <title>Missing Data – Andrew Grogan-Kaylor</title>
 <style>
@@ -112,10 +112,10 @@ window.Quarto = {
 <meta name="twitter:card" content="summary_large_image">
 <meta name="citation_title" content="Missing Data">
 <meta name="citation_author" content="Andy Grogan-Kaylor">
-<meta name="citation_publication_date" content="2024-10-14">
-<meta name="citation_cover_date" content="2024-10-14">
-<meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-10-14">
+<meta name="citation_publication_date" content="2025-10-15">
+<meta name="citation_cover_date" content="2025-10-15">
+<meta name="citation_year" content="2025">
+<meta name="citation_online_date" content="2025-10-15">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience;,citation_abstract=Adverse Childhood Experiences (ACEs) such as child abuse are related to poor health outcomes. Spanking has indicated a similar association with health outcomes, but to date has not been considered an ACE. Physical and emotional abuse have been shown in previous research to correlate highly and may be similar in nature to spanking. To determine if spanking should be considered an ACE, this study aimed to examine 1): the grouping of spanking with physical and emotional abuse; and 2) if spanking has similar associations with poor adult health problems and accounts for additional model variance. Adult mental health problems included depressive affect, suicide attempts, moderate to heavy drinking, and street drug use. Data were from the CDC-Kaiser ACE study (N = 8316, response rate = 65;,citation_author=Tracie O. Afifi;,citation_author=Derek Ford;,citation_author=Elizabeth T. Gershoff;,citation_author=Melissa Merrick;,citation_author=Andrew Grogan-Kaylor;,citation_author=Katie A. Ports;,citation_author=Harriet L. MacMillan;,citation_author=George W. Holden;,citation_author=Catherine A. Taylor;,citation_author=Shawna J. Lee;,citation_author=Robbyn Peters Bennett;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_doi=10.1016/j.chiabu.2017.01.014;,citation_isbn=0145-2134;,citation_issn=18737757;,citation_volume=71;,citation_journal_title=Child Abuse and Neglect;">
 <meta name="citation_reference" content="citation_title=Interaction terms in logit and probit models;,citation_abstract=The magnitude of the interaction effect in nonlinear models does not equal the marginal effect of the interaction term, can be of opposite sign, and its statistical significance is not calculated by standard software. We present the correct way to estimate the magnitude and standard errors of the interaction effect in nonlinear models. © 2003 Elsevier Science B.V. All rights reserved.;,citation_author=Chunrong Ai;,citation_author=Edward C. Norton;,citation_publication_date=2003;,citation_cover_date=2003;,citation_year=2003;,citation_doi=10.1016/S0165-1765(03)00032-6;,citation_issn=01651765;,citation_journal_title=Economics Letters;">
@@ -298,7 +298,7 @@ window.Quarto = {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 14, 2024</p>
+        <p class="date">October 15, 2025</p>
       </div>
     </div>
     
@@ -331,9 +331,9 @@ Table&nbsp;1: Simulated Data
 <div class="cell-output-display">
 <table class="do-not-create-environment cell caption-top table table-sm table-striped small">
 <colgroup>
-<col style="width: 11%">
+<col style="width: 12%">
 <col style="width: 6%">
-<col style="width: 11%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -344,34 +344,34 @@ Table&nbsp;1: Simulated Data
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">25.5</td>
+<td style="text-align: center;">10.61</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">NA</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">10.3</td>
+<td style="text-align: center;">22.99</td>
 <td style="text-align: center;">NA</td>
-<td style="text-align: center;">10.21</td>
+<td style="text-align: center;">26.32</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">10.43</td>
+<td style="text-align: center;">-2.148</td>
 <td style="text-align: center;">1</td>
-<td style="text-align: center;">8.274</td>
+<td style="text-align: center;">-11.15</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">5.596</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">6.159</td>
+<td style="text-align: center;">7.451</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">16.64</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">11.53</td>
+<td style="text-align: center;">15.63</td>
 <td style="text-align: center;">0</td>
-<td style="text-align: center;">8.09</td>
+<td style="text-align: center;">14.45</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">18.26</td>
+<td style="text-align: center;">5.711</td>
 <td style="text-align: center;">1</td>
-<td style="text-align: center;">22.38</td>
+<td style="text-align: center;">9.511</td>
 </tr>
 </tbody>
 </table>
@@ -384,8 +384,8 @@ Table&nbsp;1: Simulated Data
 <ol type="1">
 <li><strong>We could do nothing.</strong> Doing nothing would be easy. However, our sample size would be reduced because most analyses depend on complete case data. Also, missing data usually occur for a <em>reason</em>. Often respondents with missing data have the lowest incomes, are the most marginalized or discriminated against, and have histories with the most trauma or violence. Therefore relying on complete case analyses might introduce some amount of <em>bias</em>.</li>
 <li><strong>We could replace missing values with the mean.</strong> Replacing missing values with the mean would be easy. However, because respondents usually having missing data for a <em>reason</em>, replacing missing data with the mean would introduce <em>bias</em> into the data, and would also introduce <em>false certainty</em> into the data (p values would be artificially lowered).</li>
-<li><strong>We could use regression to impute the missing values from the complete cases.</strong> For example <span class="math inline">\(\hat{y} = \beta_0 + \beta_1 x + \beta_2 z\)</span>. This approach would be more difficult, but would be making use of the information in the covariates about the <em>reasons</em> for missing data, and would therefore reduce <em>bias</em>. However, by imputing a single value for each missing value, we would still be introducing <em>false certainty</em> into the data (p values would be artificially lowered).</li>
-<li><strong>We could perform multiple imputation.</strong> Multiple imputation would involve using regression to impute the missing values, but we would impute the missing values <em>multiple</em> times, each time introducing a small amount of random variation. This procedure would be more difficult–though readily available in most statistical software–and would both make use of the information in the covariates about the <em>reasons</em> for missing data, thus reducing <em>bias</em>. Further, by imputing the data multiple times, we would preserve the <em>uncertainty</em> around the estimates, thus making better estimates of p values.</li>
+<li><strong>We could use regression to impute the missing values from the complete cases.</strong> For example <span class="math inline">\(\hat{y} = \beta_0 + \beta_1 x + \beta_2 z\)</span>. This approach would be more difficult, but would be making use of the information in the covariates about the <em>reasons</em> for missing data, and would therefore reduce <em>bias</em>. However, by imputing a <em>single value</em> for each missing value, we would still be introducing <em>false certainty</em> into the data (p values would be artificially lowered).</li>
+<li><strong>We could perform multiple imputation.</strong> Multiple imputation would involve using regression to impute the missing values, but we would impute the missing values <em>multiple times</em>, each time introducing a small amount of random variation. This procedure would be more difficult–though readily available in most statistical software–and would both make use of the information in the covariates about the <em>reasons</em> for missing data, thus reducing <em>bias</em>. Further, by imputing the data <em>multiple times</em>, we would preserve the <em>uncertainty</em> around the estimates, thus making better estimates of p values.</li>
 </ol>
 
 
