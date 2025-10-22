@@ -1,7 +1,7 @@
 ---
 title: "Love Words, Agonize Over Sentences"
 author:  Andy Grogan-Kaylor 
-date: "2024-5-2"
+date: "2025-10-1"
 categories: [teaching, stats, science]
 image: "math.png"
 ---
@@ -10,7 +10,7 @@ I have been thinking a lot about this wisdom from Susan Sontag, which I think ha
  
 > "I’m often asked if there is something I think writers ought to do, and recently in an interview I heard myself say: 'Several things. Love words, agonize over sentences. And pay attention to the world.'" [@Sontag2007]
 
-Terminology is certainly important: for example, a *regression coefficient* is certainly a different quantity than its *standard error*, and it is important to be able to distinguish the two. At the same time, I think that in thinking and teaching about data analysis and statistics, we can lose sight of the deeper ideas in a particular equation or statistical model when we *love the words too much*, and focus on getting the terminology *exactly* right, or on parsing between roughly equivalent statistical terms. More important I think is to *"agonize over the sentences"* that are contained in the statistical equations that we look at so that we can engage with the deeper understandings of statistics.
+Terminology, particularly statistical terminology, is certainly important: for example, a *regression coefficient* is certainly a different quantity than its *standard error*, and it is important to be able to distinguish the two. At the same time, I think that in thinking and teaching about data analysis and statistics, we can lose sight of the deeper ideas in a particular equation or statistical model when we *love the words too much*, and focus on getting the terminology *exactly* right, or on parsing between roughly equivalent statistical terms. More important I think is to *"agonize over the sentences"* that are contained in the statistical equations and statistical models that we look at so that we can engage with a deeper understandings of the statistical ideas that those equations and models contain.
 
 
 
