@@ -2,33 +2,21 @@
 title: "Logarithms"
 subtitle: "A Short Explanation"
 author: "Andy Grogan-Kaylor"
-date: "2025-4-8"
+date: "2025-10-25"
 categories: [stats, math]
 ---
 
-I've developed a short set of tutorial materials on [logarithms](https://agrogan1.github.io/teaching/logarithms/logarithms.html#/title-slide).
+I've revised my introductory materials on logarithms.
 
-```{r}
-#| fig-height: 3
+* Here is a [version of these materials that makes connections to the logistic regression models](https://globalfamilies.quarto.pub/logarithms/) used in categorical data anlaysis.
+* And here is a [simpler more straightforward version](https://globalfamilies.quarto.pub/logarithms-simple/).
 
-library(ggplot2)
+::: {layout-ncol=3}
+![Nautilus Shell, Courtesy Wikipedia](NautilusCutawayLogarithmicSpiral.jpg)
 
-x3 <- seq(-10,5, by = .01)
+![Sunflower, Courtesy Wikipedia](Sunflower_sky_backdrop.jpg)
 
-x4 <- seq(.01, 10, by = .01)
+![Spiral Flight of Hawk from @Livio2002](hawk.png)
+:::
 
-y3exp <- 2^x3
 
-y4log <- log2(x4)
-
-ggplot(data=NULL) + 
-geom_point(aes(x = x3, y = y3exp, color = "exponential")) + 
-geom_point(aes(x = x4, y = y4log, color = "logarithmic")) +
-labs(title = "Exponential and Logarithmic Functions Are Mirror Images",
-x = "x", y = "y") +
-scale_color_manual(values = c("purple", "blue")) +
-theme_minimal()
-
-ggsave("exponential-logarithmic.png")
-
-```
