@@ -1,14 +1,14 @@
 ---
 title: "Logarithms"
-subtitle: "A Short Explanation"
+subtitle: "A *scrollytelling* explanation"
 author: "Andy Grogan-Kaylor"
 date: "2025-10-25"
-categories: [stats, math]
+categories: [stats, math, closeread, scrollytelling]
 ---
 
 I've revised my introductory materials on logarithms.
 
-* Here is a [version of these materials that makes connections to the logistic regression models](https://globalfamilies.quarto.pub/logarithms/) used in categorical data anlaysis.
+* Here is a [version of these materials that makes connections to the logistic regression model](https://globalfamilies.quarto.pub/logarithms/) used in categorical data analysis.
 * And here is a [simpler more straightforward version](https://globalfamilies.quarto.pub/logarithms-simple/).
 
 ::: {layout-ncol=3}
@@ -16,7 +16,7 @@ I've revised my introductory materials on logarithms.
 
 ![Sunflower, Courtesy Wikipedia](Sunflower_sky_backdrop.jpg)
 
-![Spiral Flight of Hawk from @Livio2002](hawk.png)
+![Spiral Flight of Hawk from @Livio2002](hawk2.png)
 :::
 
 
