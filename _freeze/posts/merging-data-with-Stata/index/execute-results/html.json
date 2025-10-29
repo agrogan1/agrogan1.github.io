@@ -1,0 +1,15 @@
+{
+  "hash": "7fc0b431a7134434a6dcb8eb3b704bfb",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Merging Data With Stata\"\nauthor: \"Andy Grogan-Kaylor\"\ndate: 2025-10-10\ncategories: [stats, Stata]\nexecute: \n  echo: true\ncode-fold: true\ndraft: false\n---\n\n# Introduction\n\nMerging data is often one of the most simple seeming, but actually complicated tasks in any statistical software program.\n\nIn this post, I try to provide a brief introduction to merging data in Stata.\n\n# Types of Merges\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(Statamarkdown)\n```\n:::\n\n\n\n\n::: {.cell}\n\n```{.stata .cell-code}\nclear \n\ninput str20 name id age str20 region\n \"A. Cesaire\" 1 40  \"Caribbean\"\n \"K. Nkrumah\" 2 50 \"Africa\"\n \"L. Senghor\" 3 60 \"Africa\"\nend\n\nsave individual.dta, replace\n\nlist\n\n```\n\n\n::: {.cell-output .cell-output-stdout}\n\n```\n                     name         id        age                region\n  1.  \"A. Cesaire\" 1 40  \"Caribbean\"\n  2.  \"K. Nkrumah\" 2 50 \"Africa\"\n  3.  \"L. Senghor\" 3 60 \"Africa\"\n  4. end\n\nfile individual.dta saved\n\n     +-----------------------------------+\n     |       name   id   age      region |\n     |-----------------------------------|\n  1. | A. Cesaire    1    40   Caribbean |\n  2. | K. Nkrumah    2    50      Africa |\n  3. | L. Senghor    3    60      Africa |\n     +-----------------------------------+\n```\n\n\n:::\n:::\n\n\n\n```{mermaid}\n%%| echo: false\n%%| eval: false\n\nflowchart LR\n    subgraph datasetA\n    a1\n    a2\n    a3\n    end\n    subgraph datasetB\n    b1\n    b2\n    b3\n    end\n    \n    a1 <--> b1\n    a2 <--> b2\n    a3 <--> b3\n    \n```",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -17,7 +17,32 @@ In this post, I try to provide a brief introduction to merging data in Stata.
 
 # Types of Merges
 
+```{r}
+
+library(Statamarkdown)
+
+```
+
+
+```{stata}
+#| output: true
+
+clear 
+
+input str20 name id age str20 region
+ "A. Cesaire" 1 40  "Caribbean"
+ "K. Nkrumah" 2 50 "Africa"
+ "L. Senghor" 3 60 "Africa"
+end
+
+save individual.dta, replace
+
+```
+
+
 ```{mermaid}
+%%| echo: false
+%%| eval: false
 
 flowchart LR
     subgraph datasetA
