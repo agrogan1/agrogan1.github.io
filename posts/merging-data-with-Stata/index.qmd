@@ -2,10 +2,11 @@
 title: "Merging Data With Stata"
 author: "Andy Grogan-Kaylor"
 date: 2025-10-10
-categories: [stats, Stata]
+categories: [stats, Stata, workflow]
 execute: 
   echo: true
 code-fold: true
+code-summary: "Show the code"
 draft: true
 ---
 
@@ -15,17 +16,29 @@ Merging data is often one of the most simple seeming, but actually complicated t
 
 In this post, I try to provide a brief introduction to merging data in Stata.
 
-# Types of Merges
+I use three different data sets:
+
+1. `individual.dta`, a hypothetical data on individuals
+2. `individual2.dta`, a hypothetical data set of supplementary individual data 
+3. `region.dta`, a hypothetical data set at the region level.
 
 ```{r}
+#| echo: false
+#| output: false
 
 library(Statamarkdown)
 
+library(knitr)
+
+library(kableExtra)
+
+library(haven)
+
 ```
 
-
 ```{stata}
-#| output: true
+#| output: false
+#| echo: false
 
 clear 
 
@@ -37,27 +50,107 @@ end
 
 save individual.dta, replace
 
+clear
+
+input id x
+ 1 90
+ 2 100
+ 3 110
+end
+
+save individual2.dta, replace
+
+clear
+
+input str20 region z
+ "Caribbean" 50
+ "Africa" 60
+end
+
+save region.dta, replace
+
 ```
 
+# Types of Merges
 
-```{mermaid}
-%%| echo: false
-%%| eval: false
+In Stata, there are four types of merges `1:1` (one to one), `1:m` (one to many), `m:1` (many to one), and the much less used `m:m` (many to many).
 
-flowchart LR
-    subgraph datasetA
-    a1
-    a2
-    a3
-    end
-    subgraph datasetB
-    b1
-    b2
-    b3
-    end
-    
-    a1 <--> b1
-    a2 <--> b2
-    a3 <--> b3
-    
+In this post, I consider the `1:1` and `m:1` merges.
+
+Looking at your data using `list` or `browse` is often very helpful. In this post, I use the `list in x` syntax to list the first `x` observations of different data sets.
+
+## One to One (`1:1`) Merges
+
+Here I consider merging `individual.dta`, with the supplementary data `individual2.dta`. 
+
+I list out both data files. Notice that each data file has `id` numbers for the *same* individuals. There is one individual in `individual.dta` for each individual in `individual2.dta`.
+
+```{stata}
+
+use individual.dta, clear
+
+list in 1/3
+
+use individual2.dta
+
+list in 1/3
+
 ```
+
+`merge`-ing these two data sets is straightforward. We first `use` the first data set, `individual.dta`, and then `merge` it with `individual2`.dta.
+
+The output of `merge` is the results of the merging process.
+
+```{stata}
+
+use individual.dta
+
+merge 1:1 id using individual2.dta
+
+list in 1/3
+
+```
+
+Because there are exactly the same `id` numbers in both data sets, we see that 3 observations have matched.
+
+## Many to One (`m:1`) Merges
+
+Here I consider merging `individual.dta`, with the regional level data `region.dta`. 
+
+I list out both data files. Notice that each data file has `region` information for the *same* regions. There are multiple individuals in `individual.dta` for each region in `region.dta`.
+
+```{stata}
+
+use individual.dta, clear
+
+list in 1/3
+
+use region.dta
+
+list in 1/2
+
+```
+
+`merge`-ing these two data sets is straightforward. We first `use` the first data set, `individual.dta`, and then `merge` it with `region.dta`.
+
+The output of `merge` is the results of the merging process.
+
+```{stata}
+
+use individual.dta
+
+merge m:1 region using region.dta
+
+list in 1/3
+
+```
+
+Because there are exactly the same `region`'s listed in both data sets, we see that 3 observations have matched.
+
+
+
+
+
+
+
+
