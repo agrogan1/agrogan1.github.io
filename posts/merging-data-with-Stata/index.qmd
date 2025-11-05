@@ -71,6 +71,7 @@ save region.dta, replace
 
 ```
 
+
 # Types of Merges
 
 In Stata, there are four types of merges `1:1` (one to one), `1:m` (one to many), `m:1` (many to one), and the much less used `m:m` (many to many).
