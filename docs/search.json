@@ -189,6 +189,48 @@
     "text": "Introduction\nDates in any statistical software (Stata, R) are complicated.\nFor example, a particular date could be coded as “4-5-2021”, or “5-4-2021” or “April 5, 2021” or “5APR2021”.\nIn addition to the multiplicity of possible formats it is also difficult to do calculations on these kinds of quantities e.g. “How many days have elapsed from Day A to Day B?”\nTo address these issues, Stata wants these dates to be encoded as a number, specifically the number of days since January 1, 1960. We then make sure to format these numbers as dates.\n\n\nGet The Data\n\n\nuse simulated-date.dta, clear\n\n\n\nList And Describe The Data\nWe see that both date variables are formatted as strings\n\n\nlist\n\ndescribe\n\n     |  startdate     enddate |\n     |------------------------|\n  1. | 2019-01-01   2019-1-30 |\n  2. | 2019-02-15   2019-5-30 |\n  3. | 2019-03-01   2019-4-30 |\n     +------------------------+\n\n\nContains data from simulated-date.dta\n Observations:             3                  \n    Variables:             2                  6 Apr 2021 16:46\n---------------------------------------------------------------------------------------\nVariable      Storage   Display    Value\n    name         type    format    label      Variable label\n---------------------------------------------------------------------------------------\nstartdate       str10   %10s                  startdate\nenddate         str9    %9s                   enddate\n---------------------------------------------------------------------------------------\nSorted by: \n\n\n\n\nCreate Date Variables\n\nThere are many date functions in Stata, to work with different kinds of data in different formats. help date should direct you to the documentation for Date and time functions.\n\n\n\ngenerate startdate2 = date(startdate, \"YMD\") // create a date, specifying order of elements\n\ngenerate enddate2 = date(enddate, \"YMD\") // create a date, specifying order of elements\n\n\nThe command has created 2 dates in numeric form, but they display as numbers.\n\n\n\ndescribe\n\nlist\n\nContains data from simulated-date.dta\n Observations:             3                  \n    Variables:             4                  6 Apr 2021 16:46\n---------------------------------------------------------------------------------------\nVariable      Storage   Display    Value\n    name         type    format    label      Variable label\n---------------------------------------------------------------------------------------\nstartdate       str10   %10s                  startdate\nenddate         str9    %9s                   enddate\nstartdate2      float   %9.0g                 \nenddate2        float   %9.0g                 \n---------------------------------------------------------------------------------------\nSorted by: \n     Note: Dataset has changed since last saved.\n\n     +----------------------------------------------+\n     |  startdate     enddate   startd~2   enddate2 |\n     |----------------------------------------------|\n  1. | 2019-01-01   2019-1-30      21550      21579 |\n  2. | 2019-02-15   2019-5-30      21595      21699 |\n  3. | 2019-03-01   2019-4-30      21609      21669 |\n     +----------------------------------------------+\n\n\n\n\nFormat As Dates\nWe format these numeric variables as dates. While the variables remain as the number of days since January 1, 1960, since they are formatted as dates, they now appear as human readable dates.\n\n\nformat %d startdate2 enddate2\n    \ndescribe\n\nlist\n\nContains data from simulated-date.dta\n Observations:             3                  \n    Variables:             4                  6 Apr 2021 16:46\n---------------------------------------------------------------------------------------\nVariable      Storage   Display    Value\n    name         type    format    label      Variable label\n---------------------------------------------------------------------------------------\nstartdate       str10   %10s                  startdate\nenddate         str9    %9s                   enddate\nstartdate2      float   %d                    \nenddate2        float   %d                    \n---------------------------------------------------------------------------------------\nSorted by: \n     Note: Dataset has changed since last saved.\n\n     +------------------------------------------------+\n     |  startdate     enddate   startda~2    enddate2 |\n     |------------------------------------------------|\n  1. | 2019-01-01   2019-1-30   01jan2019   30jan2019 |\n  2. | 2019-02-15   2019-5-30   15feb2019   30may2019 |\n  3. | 2019-03-01   2019-4-30   01mar2019   30apr2019 |\n     +------------------------------------------------+\n\n\n\n\nCalculations\nWe can now use dates in calculations. For example, “How much time has elapsed between startdate2 and enddate2?”\n\n\ngenerate elapseddays = enddate2 - startdate2\n    \ngenerate elapsedyears = (enddate2 - startdate2)/365\n    \nlist, abbreviate(15) // list out the data with new variables\n\n     |  startdate     enddate   startdate2    enddate2   elapseddays   elapsedyears |\n     |------------------------------------------------------------------------------|\n  1. | 2019-01-01   2019-1-30    01jan2019   30jan2019            29       .0794521 |\n  2. | 2019-02-15   2019-5-30    15feb2019   30may2019           104       .2849315 |\n  3. | 2019-03-01   2019-4-30    01mar2019   30apr2019            60       .1643836 |\n     +------------------------------------------------------------------------------+"
   },
   {
+    "objectID": "posts/merging-data-with-Stata/index.html",
+    "href": "posts/merging-data-with-Stata/index.html",
+    "title": "Merging Data With Stata",
+    "section": "",
+    "text": "Merging data is often one of the most simple seeming, but actually complicated tasks in any statistical software program.\nIn this post, I try to provide a brief introduction to merging data in Stata.\nI use three different data sets:\n\nindividual.dta, a hypothetical data on individuals\nindividual2.dta, a hypothetical data set of supplementary individual data\nregion.dta, a hypothetical data set at the region level."
+  },
+  {
+    "objectID": "posts/merging-data-with-Stata/index.html#individual.dta",
+    "href": "posts/merging-data-with-Stata/index.html#individual.dta",
+    "title": "Merging Data With Stata",
+    "section": "individual.dta",
+    "text": "individual.dta\n\n\nShow the code\n\nuse individual.dta, clear\n\nlist\n\n\n     |       name   id   age      region |\n     |-----------------------------------|\n  1. | A. Cesaire    1    40   Caribbean |\n  2. | K. Nkrumah    2    50      Africa |\n  3. | L. Senghor    3    60      Africa |\n     +-----------------------------------+"
+  },
+  {
+    "objectID": "posts/merging-data-with-Stata/index.html#individual2.dta",
+    "href": "posts/merging-data-with-Stata/index.html#individual2.dta",
+    "title": "Merging Data With Stata",
+    "section": "individual2.dta",
+    "text": "individual2.dta\n\n\nShow the code\n\nuse individual2.dta, clear\n\nlist\n\n\n     | id     x |\n     |----------|\n  1. |  1    90 |\n  2. |  2   100 |\n  3. |  3   110 |\n     +----------+"
+  },
+  {
+    "objectID": "posts/merging-data-with-Stata/index.html#region.dta",
+    "href": "posts/merging-data-with-Stata/index.html#region.dta",
+    "title": "Merging Data With Stata",
+    "section": "region.dta",
+    "text": "region.dta\n\n\nShow the code\n\n  \nuse region.dta, clear\n\nlist\n\n\n     |    region    z |\n     |----------------|\n  1. | Caribbean   50 |\n  2. |    Africa   60 |\n     +----------------+"
+  },
+  {
+    "objectID": "posts/merging-data-with-Stata/index.html#one-to-one-11-merges",
+    "href": "posts/merging-data-with-Stata/index.html#one-to-one-11-merges",
+    "title": "Merging Data With Stata",
+    "section": "One to One (1:1) Merges",
+    "text": "One to One (1:1) Merges\nHere I consider merging individual.dta, with the supplementary data individual2.dta.\nI list out some observations in each data file. Notice that each data file has id numbers for the same individuals. There is one individual in individual.dta for each individual in individual2.dta.\n\n\nShow the code\n\nuse individual.dta, clear\n\nlist in 1/3\n\nuse individual2.dta\n\nlist in 1/3\n\n\n     |       name   id   age      region |\n     |-----------------------------------|\n  1. | A. Cesaire    1    40   Caribbean |\n  2. | K. Nkrumah    2    50      Africa |\n  3. | L. Senghor    3    60      Africa |\n     +-----------------------------------+\n\n     +----------+\n     | id     x |\n     |----------|\n  1. |  1    90 |\n  2. |  2   100 |\n  3. |  3   110 |\n     +----------+\n\n\nmerge-ing these two data sets is straightforward. We first use the first data set, individual.dta, and then merge it with individual2.dta.\nThe output of merge is the results of the merging process.\n\n\nShow the code\n\nuse individual.dta, clear\n\nmerge 1:1 id using individual2.dta\n\n\n    Result                      Number of obs\n    -----------------------------------------\n    Not matched                             0\n    Matched                                 3  (_merge==3)\n    -----------------------------------------\n\n\nBecause there are exactly the same id numbers in both data sets, we see that 3 observations have matched.\n\n\nShow the code\n\nlist in 1/3\n\n\n     |       name   id   age      region     x        _merge |\n     |-------------------------------------------------------|\n  1. | A. Cesaire    1    40   Caribbean    90   Matched (3) |\n  2. | K. Nkrumah    2    50      Africa   100   Matched (3) |\n  3. | L. Senghor    3    60      Africa   110   Matched (3) |\n     +-------------------------------------------------------+"
+  },
+  {
+    "objectID": "posts/merging-data-with-Stata/index.html#many-to-one-m1-merges",
+    "href": "posts/merging-data-with-Stata/index.html#many-to-one-m1-merges",
+    "title": "Merging Data With Stata",
+    "section": "Many to One (m:1) Merges",
+    "text": "Many to One (m:1) Merges\nHere I consider merging individual.dta, with the regional level data region.dta.\nI list out some observations for each data file. Notice that each data file has region information for the same regions. There are multiple individuals in individual.dta for each region in region.dta.\n\n\nShow the code\n\nuse individual.dta, clear\n\nlist in 1/3\n\nuse region.dta, clear\n\nlist in 1/2\n\n\n     |       name   id   age      region |\n     |-----------------------------------|\n  1. | A. Cesaire    1    40   Caribbean |\n  2. | K. Nkrumah    2    50      Africa |\n  3. | L. Senghor    3    60      Africa |\n     +-----------------------------------+\n\n     +----------------+\n     |    region    z |\n     |----------------|\n  1. | Caribbean   50 |\n  2. |    Africa   60 |\n     +----------------+\n\n\nmerge-ing these two data sets is straightforward. We first use the first data set, individual.dta, and then merge it with region.dta.\nThe output of merge is the results of the merging process.\n\n\nShow the code\n\nuse individual.dta, clear\n\nmerge m:1 region using region.dta\n\n\n    Result                      Number of obs\n    -----------------------------------------\n    Not matched                             0\n    Matched                                 3  (_merge==3)\n    -----------------------------------------\n\n\nBecause there are exactly the same region’s listed in both data sets, we see that 3 observations have matched.\n\n\nShow the code\n\nlist in 1/3\n\n\n     |       name   id   age      region    z        _merge |\n     |------------------------------------------------------|\n  1. | L. Senghor    3    60      Africa   60   Matched (3) |\n  2. | K. Nkrumah    2    50      Africa   60   Matched (3) |\n  3. | A. Cesaire    1    40   Caribbean   50   Matched (3) |\n     +------------------------------------------------------+"
+  },
+  {
     "objectID": "posts/updated-Michigan-colors-for-R-graphs/index.html",
     "href": "posts/updated-Michigan-colors-for-R-graphs/index.html",
     "title": "Updated Michigan Colors for R Graphs",
@@ -1321,47 +1363,5 @@
     "title": "Security Policy",
     "section": "",
     "text": "Please report any security issues directly to agrogan@umich.edu."
-  },
-  {
-    "objectID": "posts/merging-data-with-Stata/index.html",
-    "href": "posts/merging-data-with-Stata/index.html",
-    "title": "Merging Data With Stata",
-    "section": "",
-    "text": "Merging data is often one of the most simple seeming, but actually complicated tasks in any statistical software program.\nIn this post, I try to provide a brief introduction to merging data in Stata.\nI use three different data sets:\n\nindividual.dta, a hypothetical data on individuals\nindividual2.dta, a hypothetical data set of supplementary individual data\nregion.dta, a hypothetical data set at the region level."
-  },
-  {
-    "objectID": "posts/merging-data-with-Stata/index.html#one-to-one-11-merges",
-    "href": "posts/merging-data-with-Stata/index.html#one-to-one-11-merges",
-    "title": "Merging Data With Stata",
-    "section": "One to One (1:1) Merges",
-    "text": "One to One (1:1) Merges\nHere I consider merging individual.dta, with the supplementary data individual2.dta.\nI list out some observations in each data file. Notice that each data file has id numbers for the same individuals. There is one individual in individual.dta for each individual in individual2.dta.\n\n\nShow the code\n\nuse individual.dta, clear\n\nlist in 1/3\n\nuse individual2.dta\n\nlist in 1/3\n\n\n     |       name   id   age      region |\n     |-----------------------------------|\n  1. | A. Cesaire    1    40   Caribbean |\n  2. | K. Nkrumah    2    50      Africa |\n  3. | L. Senghor    3    60      Africa |\n     +-----------------------------------+\n\n     +----------+\n     | id     x |\n     |----------|\n  1. |  1    90 |\n  2. |  2   100 |\n  3. |  3   110 |\n     +----------+\n\n\nmerge-ing these two data sets is straightforward. We first use the first data set, individual.dta, and then merge it with individual2.dta.\nThe output of merge is the results of the merging process.\n\n\nShow the code\n\nuse individual.dta, clear\n\nmerge 1:1 id using individual2.dta\n\n\n    Result                      Number of obs\n    -----------------------------------------\n    Not matched                             0\n    Matched                                 3  (_merge==3)\n    -----------------------------------------\n\n\nBecause there are exactly the same id numbers in both data sets, we see that 3 observations have matched.\n\n\nShow the code\n\nlist in 1/3\n\n\n     |       name   id   age      region     x        _merge |\n     |-------------------------------------------------------|\n  1. | A. Cesaire    1    40   Caribbean    90   Matched (3) |\n  2. | K. Nkrumah    2    50      Africa   100   Matched (3) |\n  3. | L. Senghor    3    60      Africa   110   Matched (3) |\n     +-------------------------------------------------------+"
-  },
-  {
-    "objectID": "posts/merging-data-with-Stata/index.html#many-to-one-m1-merges",
-    "href": "posts/merging-data-with-Stata/index.html#many-to-one-m1-merges",
-    "title": "Merging Data With Stata",
-    "section": "Many to One (m:1) Merges",
-    "text": "Many to One (m:1) Merges\nHere I consider merging individual.dta, with the regional level data region.dta.\nI list out some observations for each data file. Notice that each data file has region information for the same regions. There are multiple individuals in individual.dta for each region in region.dta.\n\n\nShow the code\n\nuse individual.dta, clear\n\nlist in 1/3\n\nuse region.dta, clear\n\nlist in 1/2\n\n\n     |       name   id   age      region |\n     |-----------------------------------|\n  1. | A. Cesaire    1    40   Caribbean |\n  2. | K. Nkrumah    2    50      Africa |\n  3. | L. Senghor    3    60      Africa |\n     +-----------------------------------+\n\n     +----------------+\n     |    region    z |\n     |----------------|\n  1. | Caribbean   50 |\n  2. |    Africa   60 |\n     +----------------+\n\n\nmerge-ing these two data sets is straightforward. We first use the first data set, individual.dta, and then merge it with region.dta.\nThe output of merge is the results of the merging process.\n\n\nShow the code\n\nuse individual.dta, clear\n\nmerge m:1 region using region.dta\n\n\n    Result                      Number of obs\n    -----------------------------------------\n    Not matched                             0\n    Matched                                 3  (_merge==3)\n    -----------------------------------------\n\n\nBecause there are exactly the same region’s listed in both data sets, we see that 3 observations have matched.\n\n\nShow the code\n\nlist in 1/3\n\n\n     |       name   id   age      region    z        _merge |\n     |------------------------------------------------------|\n  1. | L. Senghor    3    60      Africa   60   Matched (3) |\n  2. | K. Nkrumah    2    50      Africa   60   Matched (3) |\n  3. | A. Cesaire    1    40   Caribbean   50   Matched (3) |\n     +------------------------------------------------------+"
-  },
-  {
-    "objectID": "posts/merging-data-with-Stata/index.html#individual.dta",
-    "href": "posts/merging-data-with-Stata/index.html#individual.dta",
-    "title": "Merging Data With Stata",
-    "section": "individual.dta",
-    "text": "individual.dta\n\n\nShow the code\n\nuse individual.dta, clear\n\nlist\n\n\n     |       name   id   age      region |\n     |-----------------------------------|\n  1. | A. Cesaire    1    40   Caribbean |\n  2. | K. Nkrumah    2    50      Africa |\n  3. | L. Senghor    3    60      Africa |\n     +-----------------------------------+"
-  },
-  {
-    "objectID": "posts/merging-data-with-Stata/index.html#individual2.dta",
-    "href": "posts/merging-data-with-Stata/index.html#individual2.dta",
-    "title": "Merging Data With Stata",
-    "section": "individual2.dta",
-    "text": "individual2.dta\n\n\nShow the code\n\nuse individual2.dta, clear\n\nlist\n\n\n     | id     x |\n     |----------|\n  1. |  1    90 |\n  2. |  2   100 |\n  3. |  3   110 |\n     +----------+"
-  },
-  {
-    "objectID": "posts/merging-data-with-Stata/index.html#region.dta",
-    "href": "posts/merging-data-with-Stata/index.html#region.dta",
-    "title": "Merging Data With Stata",
-    "section": "region.dta",
-    "text": "region.dta\n\n\nShow the code\n\n  \nuse region.dta, clear\n\nlist\n\n\n     |    region    z |\n     |----------------|\n  1. | Caribbean   50 |\n  2. |    Africa   60 |\n     +----------------+"
   }
 ]
