@@ -2,9 +2,12 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/variables-and-visualization/index.html",
       "/posts/multilevel-thinking/index.html",
       "/posts/teaching/index.html",
+      "/posts/do-files/index.html",
       "/posts/stats-stuff/index.html",
+      "/posts/visualizing-MLM/index.html",
       "/posts/Czech-is-69-Switzerland-is-70/index.html",
       "/posts/merging-data-with-Stata/index.html",
       "/posts/workflow/index.html",
@@ -57,7 +60,6 @@
       "/posts/multiple-principled-solutions/index.html",
       "/posts/data-visualization-with-Stata/index.html",
       "/posts/mediation/index.html",
-      "/posts/visualizing-MLM/index.html",
       "/posts/very-short-introduction-Stata/index.html",
       "/posts/Tajikstan-is-67/index.html",
       "/posts/discipline-GII/index.html",

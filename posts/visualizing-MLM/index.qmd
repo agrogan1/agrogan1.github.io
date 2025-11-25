@@ -1,18 +1,20 @@
 ---
 title: "Visualizing Multilevel Models"
-subtitle: "An In Development Tutorial"
+subtitle: "A Tutorial"
 author: "Andy Grogan-Kaylor"
-date: "2024-10-21"
-categories: [stats, dataviz, multilevel, Stata]
+date: "2025-11-24"
+categories: [stats, dataviz, multilevel, Stata, book]
 ---
 
-I have developed a book draft on multilevel modeling, entitled *Multilevel Thinking*. The book draft discusses multilevel modeling in the context of cross cultural, or international, research. 
+I have published a book on multilevel modeling, entitled [Multilevel Thinking](https://academic.oup.com/book/60530) at Oxford University Press. [Electronic and print copies](https://www.google.com/books/edition/_/iYUI0QEACAAJ?hl=en) are also available through Google Books. 
 
-I have been thinking more about one of the ideas in that book draft:  multilevel models as the *exploration* of human variation.
+The book discusses multilevel modeling in the context of cross cultural, or international, research. 
+
+Writing the book prompted a lot of thinking about a key idea: multilevel models as the *exploration* of human variation.
 
 With those ideas in mind, I have developed a [tutorial on visualizing multilevel models](https://agrogan1.github.io/multilevel/visualizing-MLM/visualizing-MLM.html). 
 
-I've been working on an alternative version in [Slide Show Format](https://agrogan1.github.io/multilevel/visualizing-MLM/visualizing-MLM-slidy.html). Use the **right arrow** and **left arrow** to scroll through the presentation. Use **b** to make text bigger, and **s** to make text smaller. Press **c** for a table of contents.
+An alternative version in [Slide Show Format](https://agrogan1.github.io/multilevel/visualizing-MLM/visualizing-MLM-slidy.html) is also available, though less frequently updated. Use the **right arrow** and **left arrow** to scroll through the presentation. Use **b** to make text bigger, and **s** to make text smaller. Press **c** for a table of contents.
 
 ![Small Multiples](mysmallmultiples.png)
 

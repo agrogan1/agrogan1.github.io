@@ -1,0 +1,12 @@
+---
+title: "Variables and Visualization"
+subtitle: "What is the story you are trying to tell?"
+author: "Andy Grogan-Kaylor" 
+date: "2025-11-25"
+categories: [stats, dataviz]
+image: "variables-and-visualization.png"
+---
+
+I am posting here a link to some older--but hopefully still useful--materials on data visualization:  [https://agrogan1.github.io/dataviz/variables-and-visualization/variables-and-visualization.html](https://agrogan1.github.io/dataviz/variables-and-visualization/variables-and-visualization.html)
+
+![variables and visualization](variables-and-visualization.png){width=33%}
