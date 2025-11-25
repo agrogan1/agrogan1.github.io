@@ -2,7 +2,7 @@
 title: "Variables and Visualization"
 subtitle: "What is the story you are trying to tell?"
 author: "Andy Grogan-Kaylor" 
-date: "2025-11-25"
+date: "2025-11-24"
 categories: [stats, dataviz]
 image: "variables-and-visualization.png"
 ---

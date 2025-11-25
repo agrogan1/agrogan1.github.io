@@ -6,7 +6,7 @@ date: "2025-11-24"
 categories: [stats, dataviz, multilevel, Stata, book]
 ---
 
-I have published a book on multilevel modeling, entitled [Multilevel Thinking](https://academic.oup.com/book/60530) at Oxford University Press. [Electronic and print copies](https://www.google.com/books/edition/_/iYUI0QEACAAJ?hl=en) are also available through Google Books. 
+I have published a book on multilevel modeling, entitled [*Multilevel Thinking*](https://academic.oup.com/book/60530) at Oxford University Press. [Electronic and print copies](https://www.google.com/books/edition/_/iYUI0QEACAAJ?hl=en) are also available through Google Books. 
 
 The book discusses multilevel modeling in the context of cross cultural, or international, research. 
 

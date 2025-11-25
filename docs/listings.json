@@ -2,11 +2,11 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/variables-and-visualization/index.html",
       "/posts/multilevel-thinking/index.html",
       "/posts/teaching/index.html",
       "/posts/do-files/index.html",
       "/posts/stats-stuff/index.html",
+      "/posts/variables-and-visualization/index.html",
       "/posts/visualizing-MLM/index.html",
       "/posts/Czech-is-69-Switzerland-is-70/index.html",
       "/posts/merging-data-with-Stata/index.html",
