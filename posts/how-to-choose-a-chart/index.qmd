@@ -2,7 +2,7 @@
 title: "How To Choose A Chart"
 author: "Andy Grogan-Kaylor" 
 date: "2025-11-25"
-categories: [stats, dataviz, Stata, multilevel]
+categories: [stats, dataviz, Stata, R, multilevel]
 image: "how-to-choose-a-chart-a-visual-guide-with-Stata.png"
 ---
 
