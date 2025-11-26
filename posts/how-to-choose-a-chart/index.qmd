@@ -1,0 +1,17 @@
+---
+title: "How To Choose A Chart"
+author: "Andy Grogan-Kaylor" 
+date: "2025-11-25"
+categories: [stats, dataviz, Stata, multilevel]
+image: "how-to-choose-a-chart-a-visual-guide-with-Stata.png"
+---
+
+When I have taught a course on *Data Visualization*, and more recently, when I have taught *Multilevel Modeling*, I have developed various documents entitled "How To Choose A Chart". I'm posting this to provide links to all of them here.
+
+* [How to Choose a Chart: A Visual Guide](https://agrogan1.github.io/dataviz/how-to-choose-a-chart/how-to-choose-a-chart-a-visual-guide.pdf)
+* [How to Choose a Chart: An Intuitive Guide](https://agrogan1.github.io/dataviz/how-to-choose-a-chart-intuitive/how-to-choose-a-chart-intuitive.html)
+* [How to Choose a Chart: Extended Version](https://agrogan1.github.io/dataviz/how-to-choose-a-chart/how-to-choose-a-chart-v3.html)
+* [How To Choose A Chart - A Statistically Informed Visual Guide With Stata Commands](https://agrogan1.github.io/Stata/how-to-choose-a-chart-a-visual-guide-with-Stata/how-to-choose-a-chart-a-visual-guide-with-Stata.pdf)
+
+
+
