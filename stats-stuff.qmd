@@ -137,17 +137,6 @@ listing:
       path: https://agrogan.shinyapps.io/exploring_logistic_regression/
       categories: [stats, interactive, categorical]
       image: logistic.png
-    - title: "How to Choose a Chart: A Visual Guide"
-      path: https://agrogan1.github.io/dataviz/how-to-choose-a-chart/how-to-choose-a-chart-a-visual-guide.pdf
-      image: how-to-choose-a-chart-a-visual-guide-with-Stata.png
-      categories: [dataviz]
-    - title: "How to Choose a Chart: An Intuitive Guide"
-      path: https://agrogan1.github.io/dataviz/how-to-choose-a-chart-intuitive/how-to-choose-a-chart-intuitive.html
-      image: https://agrogan1.github.io/dataviz/how-to-choose-a-chart-intuitive/intuitive-guide.png
-      categories: [dataviz]
-    - title: "How to Choose a Chart: Extended Version"
-      path: https://agrogan1.github.io/dataviz/how-to-choose-a-chart/how-to-choose-a-chart-v3.html
-      categories: [dataviz]
     - title: "Should Everything Be A Bar Graph?"
       path: https://agrogan1.github.io/dataviz/should-everything-be-a-bar-graph/
       categories: [R, dataviz]

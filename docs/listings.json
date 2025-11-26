@@ -4,8 +4,9 @@
     "items": [
       "/posts/multilevel-thinking/index.html",
       "/posts/teaching/index.html",
-      "/posts/do-files/index.html",
       "/posts/stats-stuff/index.html",
+      "/posts/how-to-choose-a-chart/index.html",
+      "/posts/do-files/index.html",
       "/posts/variables-and-visualization/index.html",
       "/posts/visualizing-MLM/index.html",
       "/posts/Czech-is-69-Switzerland-is-70/index.html",
@@ -111,11 +112,11 @@
     ]
   },
   {
-    "listing": "/teaching.html",
+    "listing": "/contact.html",
     "items": []
   },
   {
-    "listing": "/contact.html",
+    "listing": "/teaching.html",
     "items": []
   },
   {
