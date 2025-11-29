@@ -1,0 +1,35 @@
+---
+title: "Multilevel Resources"
+subtitle: "Moved from stats-stuff"
+author: "Andy Grogan-Kaylor" 
+date: "2025-11-28"
+categories: [stats, multilevel]
+image: fotolia-small.jpg
+listing:
+  type: grid
+  table-hover: true
+  sort: false
+  sort-ui: false
+  filter-ui: false
+  fields: [title, image]
+  contents:
+    - title: "Multilevel Modeling in Stata With the Gutten Tree Data"
+      path: https://agrogan1.github.io/multilevel/mlm-gutten/mlm-gutten.html
+      image: https://agrogan1.github.io/multilevel/Bayesian-longitudinal-mlm/fotolia-small.jpg
+      categories: [multilevel] 
+    - title: "`lmer` Demo With The Gutten Tree Demo"
+      path: https://agrogan1.github.io/multilevel/lmer-demo/lmer-demo.html  
+      image: https://agrogan1.github.io/multilevel/Bayesian-longitudinal-mlm/fotolia-small.jpg
+      categories: [multilevel]       
+    - title: "Bayesian and Frequentist Multilevel Modeling"
+      path: https://agrogan1.github.io/multilevel/Bayesian-and-frequentist-MLM/Bayesian-and-frequentist-MLM.html
+      image: https://agrogan1.github.io/multilevel/Bayesian-and-frequentist-MLM/multilevel.png
+      categories: [Bayes, multilevel]
+    - title: "Bayesian Longitudinal MLM With the Gutten Tree Data"
+      path: https://agrogan1.github.io/multilevel/Bayesian-longitudinal-mlm/Bayesian-longitudinal-mlm.html
+      image: https://agrogan1.github.io/multilevel/Bayesian-longitudinal-mlm/fotolia-small.jpg
+      categories: [Bayes, multilevel]
+
+---
+
+I have compiled a list of some multilevel resources that I have moved here from the old stats-stuff page.

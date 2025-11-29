@@ -3,8 +3,10 @@
     "listing": "/blog.html",
     "items": [
       "/posts/multilevel-thinking/index.html",
-      "/posts/teaching/index.html",
+      "/posts/Bayesian-resources/index.html",
+      "/posts/R-resources/index.html",
       "/posts/stats-stuff/index.html",
+      "/posts/multilevel-resources/index.html",
       "/posts/how-to-choose-a-chart/index.html",
       "/posts/do-files/index.html",
       "/posts/variables-and-visualization/index.html",
@@ -121,6 +123,22 @@
   },
   {
     "listing": "/stats-stuff.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/R-resources/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/Bayesian-resources/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/multilevel-resources/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/stats-stuff/index.html",
     "items": []
   }
 ]

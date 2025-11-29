@@ -20,7 +20,6 @@ website:
           - text: "Research Papers and Projects"
             href: research.qmd
       - teaching.qmd  
-      - stats-stuff.qmd
       - href: https://agrogan1.github.io/multilevel-workshop/
         text: Multilevel Workshop
       - href: https://globalfamilies.quarto.pub/global-families-project/

@@ -1,0 +1,38 @@
+---
+title: "Bayesian Resources"
+subtitle: "Moved from stats-stuff"
+author: "Andy Grogan-Kaylor" 
+date: "2025-11-28"
+categories: [stats, Bayes]
+image: "Thomas_Bayes.png"
+listing:
+  type: grid
+  table-hover: true
+  sort: false
+  sort-ui: false
+  filter-ui: false
+  fields: [title]
+  contents:
+    - title: "Derivation of Bayes Theorem"
+      path: https://agrogan1.github.io/Bayes/Bayes-Theorem/Bayes-Theorem.html
+      image: https://agrogan1.github.io/Bayes/basic-Bayes/Thomas_Bayes.png
+      categories: [Bayes]      
+    - title: "Basic Bayes"
+      path: https://agrogan1.github.io/Bayes/basic-Bayes/basic-Bayes.html
+      image: https://agrogan1.github.io/Bayes/basic-Bayes/Thomas_Bayes.png
+      categories: [Bayes]
+    - title: "Thinking Through Bayesian Ideas"
+      path: https://agrogan.shinyapps.io/Thinking-Through-Bayes/
+      image: https://agrogan1.github.io/Bayes/basic-Bayes/Thomas_Bayes.png
+      categories: [Bayes, interactive]
+    - title: "Notes on Accepting the Null ($H_0$) Hypothesis"
+      path: https://agrogan1.github.io/Bayes/accepting-H0/accepting-H0.html
+      image: https://agrogan1.github.io/Bayes/basic-Bayes/Thomas_Bayes.png
+      categories: [Bayes]
+    - title: "Bayesian Calculations"
+      path: https://agrogan1.github.io/Bayes/Bayesian-calculations/Bayesian-calculations.html
+      image: https://agrogan1.github.io/Bayes/basic-Bayes/Thomas_Bayes.png
+      categories: [Bayes]
+---
+
+I have compiled a list of Bayesian resources that I have moved here from the old stats-stuff page.

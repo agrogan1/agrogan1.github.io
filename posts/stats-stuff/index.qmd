@@ -1,9 +1,51 @@
 ---
-title: "There Is Also Relevant Material in Stats Stuff"
-author:  Andy Grogan-Kaylor 
-date: "today"
-categories: [stats, dataviz, multilevel, Bayes, R, Stata]
-image: "data.png"
+title: "Selected Statistical Resources"
+subtitle: "Moved from stats-stuff"
+author: "Andy Grogan-Kaylor" 
+date: "2025-11-28"
+categories: [stats, teaching]
+image: data.png
+listing:
+  type: grid
+  table-hover: true
+  sort: false
+  sort-ui: false
+  filter-ui: false
+  fields: [title, image]
+  contents:
+    - title: "What is Data?"
+      path: https://agrogan1.github.io/teaching/what-is-data/what-is-data.html
+      image: data.png
+      categories: [workflow, stats]
+    - title: "Quantitative Data Analysis"
+      path: https://agrogan1.github.io/teaching/quantitative-data-analysis/quantitative-data-analysis.html
+      image: data.png
+      categories: [workflow, stats, Stata, R]
+    - title: "Causality"
+      path: https://agrogan.shinyapps.io/causality/
+      image: causality.png
+      categories: [stats, causality, interactive]
+    - title: "t-test"
+      path: https://agrogan.shinyapps.io/shiny-t-test/
+      categories: [stats, interactive]
+    - title: "Correlation"
+      path: https://agrogan.shinyapps.io/correlation_demo/
+      image: correlation.png
+      categories: [stats, interactive]
+    - title: "Thinking about Correlations"
+      path: https://agrogan.shinyapps.io/thinking_about_correlations/
+      image: correlation.png
+      categories: [stats, interactive]
+    - title: "Regression Tutorial" 
+      path: https://agrogan1.github.io/teaching/new-regression-tutorial/
+      categories: [stats]
+    - title: "Regression Demo"
+      path: https://agrogan.shinyapps.io/regression_demo/
+      categories: [stats, interactive]
+    - title: "Exploring Logistic Regression"
+      path: https://agrogan.shinyapps.io/exploring_logistic_regression/
+      categories: [stats, interactive, categorical]
+      image: logistic.png
 ---
 
-In addition to these blog posts, there is also sometimes relevant material in [Stats Stuff](https://agrogan1.github.io/stats-stuff.html)
+I have compiled a list of some selected statistical resources that I have moved here from the old stats-stuff page.

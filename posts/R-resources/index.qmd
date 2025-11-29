@@ -2,8 +2,9 @@
 title: "R Resources"
 subtitle: "Moved from stats-stuff"
 author: "Andy Grogan-Kaylor" 
-date: "2025-11-29"
+date: "2025-11-28"
 categories: [stats, R]
+image: "R.png"
 listing:
   type: grid
   table-hover: true
@@ -64,6 +65,15 @@ listing:
       path: https://agrogan1.github.io/R/xaringan-themes/
       image: https://agrogan1.github.io/R/R.png
       categories: [R, Xaringan]
+    - title: "Should Everything Be A Bar Graph?"
+      path: https://agrogan1.github.io/dataviz/should-everything-be-a-bar-graph/
+      categories: [R, dataviz]
+    - title: "Data Driven Document Demo"
+      path: https://agrogan1.github.io/dataviz/data-driven-document-demo/
+      image: https://agrogan1.github.io/dataviz/data-driven-document-demo/scatterplot.png
+      categories: [R, workflow]
 ---
+
+I have compiled a list of R resources that I have moved here from the old stats-stuff page.
 
  
