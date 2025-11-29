@@ -1,0 +1,69 @@
+---
+title: "R Resources"
+subtitle: "Moved from stats-stuff"
+author: "Andy Grogan-Kaylor" 
+date: "2025-11-29"
+categories: [stats, R]
+listing:
+  type: grid
+  table-hover: true
+  sort: false
+  sort-ui: false
+  filter-ui: false
+  fields: [image, title]
+  contents:
+    - title: "Introduction to R"
+      path: https://agrogan1.github.io/R/introduction-to-R/introduction-to-R.html
+      image: https://agrogan1.github.io/R/introduction-to-R/rplot.png
+      categories: [R]
+    - title: "Quick Introduction To R"
+      path: https://agrogan1.github.io/R/quick-intro-R/quick-intro-R.html
+      image: https://agrogan1.github.io/R/quick-intro-R/histogram.png
+      categories: [R]
+    - title: "Colors in R"
+      path: https://agrogan1.github.io/R/colors/colors.html
+      image: https://agrogan1.github.io/R/colors/colors.png
+      categories: [R, dataviz]
+    - title: "Viridis Colors"
+      path: https://agrogan1.github.io/R/viridis/viridis.html
+      image: https://agrogan1.github.io/R/viridis/viridis.png
+      categories: [R, dataviz]
+    - title: "Working With Data From the World Bank Indicators"
+      path: https://agrogan1.github.io/R/wbdemo/
+      image: https://agrogan1.github.io/R/wbdemo/globe.png
+      categories: [R, dataviz]
+    - title: "Introduction to ggplot2"
+      path: https://agrogan1.github.io/R/introduction-to-ggplot2/introduction-to-ggplot2.html
+      image: https://agrogan1.github.io/R/R.png
+      categories: [R, dataviz]
+    - title: "Two Page ggplot"
+      path: https://agrogan1.github.io/R/two-page-ggplot2/two-page-ggplot2.pdf
+      image: https://agrogan1.github.io/R/R.png
+      categories: [R, dataviz]
+    - title: "What Geometry Do I Use?"
+      path: https://agrogan1.github.io/R/what-geom-do-I-use/how-to-choose-a-chart-a-visual-guide-GEOMs.pdf
+      image: https://agrogan1.github.io/R/R.png
+      categories: [R, dataviz]
+    - title: "ggplot Flipbook"
+      path: https://agrogan1.github.io/R/ggplot-flipbook/ggplot-flipbook.html
+      image: https://agrogan1.github.io/R/R.png
+      categories: [R, dataviz]
+    - title: "ggplot Flipbook for Global Families Project"
+      path: https://agrogan1.github.io/globalfamilies-flipbook/
+      image: https://agrogan1.github.io/R/R.png
+      categories: [R, dataviz]
+    - title: "Advanced ggplot"
+      path: https://agrogan1.github.io/dataviz/advanced-ggplot/advanced-ggplot.html
+      image: https://agrogan1.github.io/R/R.png
+      categories: [R, dataviz]
+    - title: "Multi-page dplyr"
+      path: https://agrogan1.github.io/R/multi-page-dplyr/multi-page-dplyr.html
+      image: https://agrogan1.github.io/R/R.png
+      categories: [R, workflow]
+    - title: "Themes for Xaringan"
+      path: https://agrogan1.github.io/R/xaringan-themes/
+      image: https://agrogan1.github.io/R/R.png
+      categories: [R, Xaringan]
+---
+
+ 
