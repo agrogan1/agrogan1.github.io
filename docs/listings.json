@@ -108,10 +108,17 @@
       "/about-research.html",
       "/research.html",
       "/teaching.html",
-      "/stats-stuff.html",
       "/about.html",
       "/blog.html"
     ]
+  },
+  {
+    "listing": "/posts/multilevel-resources/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/Bayesian-resources/index.html",
+    "items": []
   },
   {
     "listing": "/contact.html",
@@ -122,19 +129,7 @@
     "items": []
   },
   {
-    "listing": "/stats-stuff.html",
-    "items": []
-  },
-  {
     "listing": "/posts/R-resources/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/Bayesian-resources/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/multilevel-resources/index.html",
     "items": []
   },
   {

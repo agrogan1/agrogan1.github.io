@@ -18,28 +18,35 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "About My Research\n\n\n\n\n\n\n\n\n\n\n\n\nResearch Papers and Projects\n\n\n\n\n\n\n\n\n\n\n\n\nTeaching\n\n\n\n\n\n\n\n\n\n\n\n\nStats Stuff\n\n\n\n\n\n\n\n\n\n\n\n\nAbout Me\n\n\n\n\n\n\n\n\n\n\nBlog-ish Posts\n\n\n\n\n\nNo matching items"
+    "text": "About My Research\n\n\n\n\n\n\n\n\n\n\n\n\nResearch Papers and Projects\n\n\n\n\n\n\n\n\n\n\n\n\nTeaching\n\n\n\n\n\n\n\n\n\n\n\n\nAbout Me\n\n\n\n\n\n\n\n\n\n\nBlog-ish Posts\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/discipline-GII/index.html",
-    "href": "posts/discipline-GII/index.html",
-    "title": "Interactions Of Gender Inequality And Parental Discipline Predicting Child Aggression In Low- And Middle-Income Countries",
+    "objectID": "posts/closeread/index.html",
+    "href": "posts/closeread/index.html",
+    "title": "Associations between 11 parental discipline behaviors and child outcomes across 60 countries",
     "section": "",
-    "text": "We’ve just published an article entitled Interactions Of Gender Inequality And Parental Discipline Predicting Child Aggression In Low- And Middle-Income Countries.\nContrary to expectations from theory, we find that parenting effects are weaker in contexts of higher gender inequality, and stronger in contexts of lower gender inequality. We recommend that interventions to improve parenting and child well being need to have a multilevel conceptualization, and to focus on both parenting and reducing gender inequality at a country level.\n\nOpen Access Article\nArcGIS Storymap"
+    "text": "closeread is a new extension for Quarto that allows one to present stories using scrollytelling.\nI have developed a scrollytelling page to present the results of an article that we published last year, (Ward et al., 2023): https://globalfamilies.quarto.pub/parenting/.\n\n\n\npositive parenting\n\n\n\n\n\n\nReferences\n\nWard, K. P., Grogan-Kaylor, A. C., Ma, J., Pace, G., & Lee, S. J. (2023). Associations between 11 parental discipline behaviors and child outcomes across 60 countries. BMJ Open. https://doi.org/10.1136/bmjopen-2021-058439"
   },
   {
-    "objectID": "posts/Mauritius-is-65/index.html",
-    "href": "posts/Mauritius-is-65/index.html",
-    "title": "Mauritius is #65",
+    "objectID": "posts/pairs-plots/index.html",
+    "href": "posts/pairs-plots/index.html",
+    "title": "Pairs Plots",
     "section": "",
-    "text": "Mauritius is the 65th country to ban corporal punishment: https://agrogan1.github.io/research/cpbans/"
+    "text": "For a few recent projects, I have had to quickly get up to speed on new data. If I’m focusing on a relatively small number of variables–perhaps a subset of a much larger dataset–I have found the pairs plot an incredibly useful tool for learning about new data, and getting a visual sense of the distributions of the variables and their relationships. After experimenting with a few different libraries, I have come to really like pairs.panels in the psych (Revelle, 2025) library. I provide an example of pairs.panels below, but I also sometime use what seems to me to be the quite similar in spirit corrgram (Wright, 2021) library.\nFor this example, I use the data from my Multilevel Workshop site.\n\nCall Relevant Libraries\n\n\nShow the code\nlibrary(haven) # read Stata data\n\nlibrary(psych) # useful routines for psych data\n\n\n\n\nGet The Data\n\n\nShow the code\nmydata &lt;- read_dta(\"simulated_multilevel_data.dta\")\n\n\n\n\nVariable Labels\n\n\nShow the code\nlabelled::look_for(mydata) # look at variables and variable labels\n\n\n pos variable            label                          col_type missing values\n 1   country             country id                     dbl      0             \n 2   HDI                 Human Development Index        dbl      0             \n 3   family              family id                      dbl      0             \n 4   id                  unique country family id       chr      0             \n 5   identity            hypothetical identity group v~ dbl      0             \n 6   intervention        recieved intervention          dbl      0             \n 7   physical_punishment physical punishment in past w~ dbl      0             \n 8   warmth              parental warmth in past week   dbl      0             \n 9   outcome             beneficial outcome             dbl      0             \n\n\n\n\nPairs Plot\n\n\n\n\n\n\nOptions Options Options\n\n\n\n\n\nHere I set show.points to FALSE for two reasons: by design, most of the variables in my simulated data are uncorrelated, showing the points seemed to somehow create more confusion than clarity; there are a lot of data points, and for that reason as well, showing the points seemed to create more confusion than clarity. You of course can experiment with setting show.points to TRUE\n\n\n\n\n\n\n\n\n\nWhat Do I See? What Am I Looking For?\n\n\n\n\n\nIn the diagonal panel, I see the distribution of each variable by itself. In the bottom panel, there are are smoother plots of each variable against each other. Here I am looking for lines that are not flat–in part or in whole–because this indicates that one variable has a relationship with another. In the top panel, I see the correlations of each variable with each other, and I am looking for either negative or positive numbers that depart significantly from zero.\nIt seems in this example, that parental warmth and physical punishment have the biggest association with outcome. In regression models, it turns out that intervention also has a relationship with outcome, but that is harder to see here. It is worth investigating even smaller correlations further!\n\n\n\n\n\nShow the code\npairs.panels(mydata, # pairs plot\n             show.points = FALSE) # don't show data points\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReferences\n\nRevelle, W. (2025). Psych: Procedures for psychological, psychometric, and personality research. Northwestern University. https://CRAN.R-project.org/package=psych\n\n\nWright, K. (2021). Corrgram: Plot a correlogram. https://doi.org/10.32614/CRAN.package.corrgram"
   },
   {
-    "objectID": "posts/GIS-and-mapping/index.html",
-    "href": "posts/GIS-and-mapping/index.html",
-    "title": "GIS and Mapping",
+    "objectID": "posts/can-Stata-make-a-beautiful-graph/index.html",
+    "href": "posts/can-Stata-make-a-beautiful-graph/index.html",
+    "title": "Can Stata Make A Beautiful Graph?",
     "section": "",
-    "text": "I’ve been working on some ideas for a GIS and Mapping Course that may happen some day.\n\n\n\n\n\n\n\n\nFigure 1: Countries of the World"
+    "text": "Introduction 🌲\nThere is sometimes a debate–shall we say–about whether Stata can make beautiful graphs, particularly in comparison to using ggplot in R. Below, I try to use as many of Stata’s options as I can to make a beautiful graph. I believe that this Stata graph comes close to being as beautiful of a graph as would be made by ggplot (and perhaps the syntax is a little more intuitive).\nI use green and gold since they are common colors for forestry and park signage.\n\n\nData Source 🌲\nThe data used in this example are derived from the R package by Robinson & Hamann (2020).\nAccording to the documentation, the source of these data are: “von Guttenberg’s Norway spruce (Picea abies [L.] Karst) tree measurement data.”\n\n\n\nOld Tjikko, a 9,550 Year Old Norway Spruce in Sweden\n\n\nThe documentation goes on to further note that:\n\n“The data are measures from 107 trees. The trees were selected as being of average size from healthy and well stocked stands in the Alps.”\n\n\nclear all\n\nuse \"https://github.com/agrogan1/multilevel/raw/master/mlm-R2-gutten/gutten.dta\"\n\n\n\nA Simple Graph 🌲\nThe default graphing scheme in Stata 18 is much improved over previous versions, and the below graph may be very good for many purposes.\n\nuse gutten.dta\n\ntwoway (scatter height age_base) (mspline height age_base)\n    \ngraph export gutten0.svg, width(2000) replace\n\ngraph export gutten0.png, width(2000) replace\n\n\n\n\nA Simple Graph of the Gutten Trees\n\n\n\n\nA Beautiful Graph 🌲\nBelow please find an admittedly complicated graph command. Note, however, that the graph builds upon basic ideas that we want a twoway graph, with a scatterplot and a mspline (median spline) smoother. Everything else is just an option to improve the appearance of the graph.\nI make extensive use of the /// notation which allows me to spread the graph along multiple lines.\n\nuse gutten.dta\n\ntwoway /// two way graph\n(scatter height age_base, /// scatterplot\nmcolor(dkgreen%25) msymbol(circle) msize(medium)) /// dark green transparent markers\n(mspline height age_base, /// median spline \nlcolor(gold) lwidth(thick)), /// gold line\ntitle(\"Tree Height by Tree Age\") /// title\nxtitle(\"Tree Age\") /// title for x axis\nytitle(\"Tree Height\") /// title for y axis\ncaption(\"Gutten Tree Data\") /// caption\nlegend(order(1 \"trees\" 2 \"median spline\") position(6) rows(1)) /// better labels and format for legend\naspectratio(.5) // better aspect ratio\n\ngraph export gutten.png, width(2000) replace\n    \ngraph export gutten.svg, width(2000) replace\n\n\n\n\nA Beautiful? Graph of the Gutten Trees\n\n\n\n\n\n\n\nReferences\n\nRobinson, A., & Hamann, J. (2020). FAwR: Functions and datasets for \"forest analytics with r. https://doi.org/10.32614/CRAN.package.FAwR"
+  },
+  {
+    "objectID": "posts/multilevel-resources/index.html",
+    "href": "posts/multilevel-resources/index.html",
+    "title": "Multilevel Resources",
+    "section": "",
+    "text": "I have compiled a list of some multilevel resources that I have moved here from the old stats-stuff page.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMultilevel Modeling in Stata With the Gutten Tree Data\n\n\n\n\n\n\n\n\n\n\n\n\nlmer Demo With The Gutten Tree Demo\n\n\n\n\n\n\n\n\n\n\n\n\nBayesian and Frequentist Multilevel Modeling\n\n\n\n\n\n\n\n\n\n\n\n\nBayesian Longitudinal MLM With the Gutten Tree Data\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/treemap/index.html",
@@ -490,370 +497,6 @@
     "text": "I have been thinking a lot about this wisdom from Susan Sontag, which I think has a lot of applicability to teaching, especially in teaching statistics and data analysis.\n\n“I’m often asked if there is something I think writers ought to do, and recently in an interview I heard myself say: ‘Several things. Love words, agonize over sentences. And pay attention to the world.’” (Sontag, 2007)\n\nTerminology, particularly statistical terminology, is certainly important: for example, a regression coefficient is certainly a different quantity than its standard error, and it is important to be able to distinguish the two. At the same time, I think that in thinking and teaching about data analysis and statistics, we can lose sight of the deeper ideas in a particular equation or statistical model when we love the words too much, and focus on getting the terminology exactly right, or on parsing between roughly equivalent statistical terms. More important I think is to “agonize over the sentences” that are contained in the statistical equations and statistical models that we look at so that we can engage with a deeper understandings of the statistical ideas that those equations and models contain.\n\n\n\n\nReferences\n\nSontag, S. (2007). At the same time: The novelist and moral reasoning. In P. Dilonardo & A. Jump (Eds.), At the same time: The novelist and moral reasoning. Picador."
   },
   {
-    "objectID": "posts/logic-models-Mermaid/index.html",
-    "href": "posts/logic-models-Mermaid/index.html",
-    "title": "A Logic Model Using the mermaid Diagram Language",
-    "section": "",
-    "text": "Logic models are used extensively in program development and program evaluation. I have worked on a logic model in graphviz. Here is an implementation using the mermaid graphing language.\nWhile still sometimes not completely intuitive, I think that the language of mermaid is more intuitive than my graphviz example.\nmermaid is implemented in RStudio using Quarto. This logic model was made with RStudio.\nThis proof of concept makes use of subgraphs to organize the components of a logic model.\nLike all programming languages, mermaid may facilitate automation, replication, and documentation of a project. In this way, using mermaid may make creating a logic model easier.\nLike all programming languages, mermaid may be finicky and hard to tweak. In this way, using mermaid may make creating a logic model much more difficult.\nIt may be much easier to use PowerPoint or Google Slides to create a logic model!!!\n\n\nCode\nflowchart LR\n\n    %% first block: Domains\n\n    subgraph Domains\n    direction TB\n    D1(Workshops)\n    D2(Publications)\n    end\n\n    %% second block: Activities\n\n    subgraph Activities\n    direction TB\n    A1(Meetings)\n    A2(Social Media Posts)\n    A3(Information Cards)\n    end\n\n    %% third block: Outcomes\n\n    subgraph Outcomes\n    direction TB\n    O1(Better Parenting)\n    end\n\n    %% links\n\n    D1--&gt;A1\n    D2--&gt;A2\n    D2--&gt;A3\n    A1--&gt;O1\n    A2--&gt;O1\n    A3--&gt;O1\n\n\n\n\n\nflowchart LR\n\n    %% first block: Domains\n\n    subgraph Domains\n    direction TB\n    D1(Workshops)\n    D2(Publications)\n    end\n\n    %% second block: Activities\n\n    subgraph Activities\n    direction TB\n    A1(Meetings)\n    A2(Social Media Posts)\n    A3(Information Cards)\n    end\n\n    %% third block: Outcomes\n\n    subgraph Outcomes\n    direction TB\n    O1(Better Parenting)\n    end\n\n    %% links\n\n    D1--&gt;A1\n    D2--&gt;A2\n    D2--&gt;A3\n    A1--&gt;O1\n    A2--&gt;O1\n    A3--&gt;O1"
-  },
-  {
-    "objectID": "posts/graphing-change-over-time/index.html",
-    "href": "posts/graphing-change-over-time/index.html",
-    "title": "Graphing Change Over Time",
-    "section": "",
-    "text": "I have updated a tutorial on Graphing Change Over Time"
-  },
-  {
-    "objectID": "posts/orphan-storymap/index.html",
-    "href": "posts/orphan-storymap/index.html",
-    "title": "Orphan discipline and child neglect: An analysis from 48 countries",
-    "section": "",
-    "text": "We have published an article entitled “Orphan discipline and child neglect: An analysis from 48 countries” in Child Abuse and Neglect.\nI prepared an ArcGIS StoryMap summarizing that research: https://arcg.is/1HjKyW2"
-  },
-  {
-    "objectID": "posts/how-to-choose-a-chart-a-visual-guide-with-Stata/index.html",
-    "href": "posts/how-to-choose-a-chart-a-visual-guide-with-Stata/index.html",
-    "title": "How To Choose A Chart",
-    "section": "",
-    "text": "I’ve updated my graphing tutorial for Stata: How To Choose A Chart - A Statistically Informed Visual Guide With Stata Commands"
-  },
-  {
-    "objectID": "posts/why-cant-numbers-be-beautiful-too/index.html",
-    "href": "posts/why-cant-numbers-be-beautiful-too/index.html",
-    "title": "Why can’t numbers be beautiful too?",
-    "section": "",
-    "text": "“Why can’t numbers be beautiful too?\nWe all talk of beautiful words, art, buildings and they’re not part of the natural world, either. An x in Algebra is no more abstract than an idea in philosophy, just more useful.\nBut it can’t be use that makes the difference. Keats found beauty in a Grecian urn, surely practical at some time and no one is blind to the beauty of symmetry.\nWe all get Blake’s awe of the tiger’s stripes. Why not awe at Gaussian curves? Of course, I know there is no great beauty in a single number, in a four or a seven or an eight, but it is the same\nwith the alphabet. Where is the wonder in a b or a k or a t? It is only the combinations, the meanings, the relationships between the letters that make the words and sounds we love.\n– And so, why can’t my numbers be beautiful to me? Why the scorn, the doubt in your face? Do you think I am brittle and dusty as old paper?\nLook again. See the numbers shine in my eyes”\n\n– Pye (2011)\n\n\n\n\nReferences\n\nPye, E. (2011). Eveline Pye: Poetry in numbers, by Julian Champkin. Significance, 8(3), 127–130. https://doi.org/10.1111/j.1740-9713.2011.00510.x"
-  },
-  {
-    "objectID": "posts/interviewed-in-the-Lancet/index.html",
-    "href": "posts/interviewed-in-the-Lancet/index.html",
-    "title": "Interviewed in The Lancet Child & Adolescent Health",
-    "section": "",
-    "text": "I was quoted in this interview in The Lancet Child & Adolescent Health on corporal punishment: The Strange Endurance of Corporal Punishment"
-  },
-  {
-    "objectID": "posts/visualizing-disparities-in-a-categorical-outcome/index.html",
-    "href": "posts/visualizing-disparities-in-a-categorical-outcome/index.html",
-    "title": "Visualizing Disparities in a Categorical Risk Factor or Outcome",
-    "section": "",
-    "text": "Visualizing categorical data presents unique challenges. A common solution is a bar graph, which may often be the best data visualization solution.\nHowever there are also some alternatives to bar graphs.\nBelow I present some options for bar graphs, and some possible alternative strategies.\n\nNote that the outcomes–which you could think of as a good outcome, or a bad outcome, are unevenly distributed by group. Therefore, these data represent inequities or disparities."
-  },
-  {
-    "objectID": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#stacked-bar-graph",
-    "href": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#stacked-bar-graph",
-    "title": "Visualizing Disparities in a Categorical Risk Factor or Outcome",
-    "section": "Stacked Bar Graph",
-    "text": "Stacked Bar Graph\n\n\nShow the code\nggplot(mydata, aes(x = group, # x is group\n                   fill = outcome)) + # color fill is outcome\n  geom_bar() + # bars\n  scale_fill_manual(values = michigancolors()) + # Michigan colors\n  theme_minimal() # nice theme"
-  },
-  {
-    "objectID": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#unstacked-bar-graph",
-    "href": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#unstacked-bar-graph",
-    "title": "Visualizing Disparities in a Categorical Risk Factor or Outcome",
-    "section": "Unstacked Bar Graph",
-    "text": "Unstacked Bar Graph\n\n\nShow the code\nggplot(mydata, aes(x = group, # x is group\n                   fill = outcome)) + # color fill is outcome\n  geom_bar(position = position_dodge()) + # \"dodged\" bars\n  scale_fill_manual(values = michigancolors()) + # Michigan colors\n  theme_minimal() # nice theme"
-  },
-  {
-    "objectID": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#faceted-bar-graph",
-    "href": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#faceted-bar-graph",
-    "title": "Visualizing Disparities in a Categorical Risk Factor or Outcome",
-    "section": "Faceted Bar Graph",
-    "text": "Faceted Bar Graph\n\n\nShow the code\nggplot(mydata, aes(x = outcome, # x is outcome\n                   fill = outcome)) + # color fill is outcome\n  geom_bar() + # bars\n  scale_fill_manual(values = michigancolors()) + # Michigan colors\n  theme_minimal() + # nice theme\n  theme(axis.text.x = element_text(size = rel(.75))) + # smaller x axis text\n  facet_wrap(~group) # facet on group"
-  },
-  {
-    "objectID": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#call-the-libraries",
-    "href": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#call-the-libraries",
-    "title": "Visualizing Disparities in a Categorical Risk Factor or Outcome",
-    "section": "Call The Libraries",
-    "text": "Call The Libraries\n\n\nShow the code\nlibrary(waffle) # waffle geometry\n\nlibrary(dplyr) # data wrangling"
-  },
-  {
-    "objectID": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#make-a-data-set-of-counts",
-    "href": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#make-a-data-set-of-counts",
-    "title": "Visualizing Disparities in a Categorical Risk Factor or Outcome",
-    "section": "Make A Data Set Of Counts",
-    "text": "Make A Data Set Of Counts\n\n\nShow the code\n# make a data set of counts\n\nmycounts &lt;- mydata %&gt;%\n  group_by(group, outcome) %&gt;% # group by group & outcome\n  tally() # count up observations\n\npander(mycounts) # replay this data\n\n\n\n\n\n\n\n\n\n\ngroup\noutcome\nn\n\n\n\n\nGroup A\nbeneficial outcome\n55\n\n\nGroup A\nundesirable outcome\n40\n\n\nGroup B\nbeneficial outcome\n50\n\n\nGroup B\nundesirable outcome\n75"
-  },
-  {
-    "objectID": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#make-the-waffle-plot",
-    "href": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#make-the-waffle-plot",
-    "title": "Visualizing Disparities in a Categorical Risk Factor or Outcome",
-    "section": "Make The Waffle Plot",
-    "text": "Make The Waffle Plot\n\n\nShow the code\n# use geom_waffle with this data set of counts\n\nggplot(mycounts, # use this new data\n       aes(fill = outcome, # color fill is outcome\n           values = n)) + # values are n\n  geom_waffle(color = \"grey\") + # waffle geometry w/ grey separator\n  facet_wrap(~group) + # facet on group\n  coord_equal() + # squares!\n  scale_fill_manual(values = michigancolors()) + # Michigan colors\n  theme_void()  # nice theme"
-  },
-  {
-    "objectID": "posts/can-Stata-make-aesthetically-appealing-graph/index.html",
-    "href": "posts/can-Stata-make-aesthetically-appealing-graph/index.html",
-    "title": "Can Stata Make An Aesthetically Appealing Graph?",
-    "section": "",
-    "text": "Background\n\n\nCode\nlibrary(Statamarkdown)\n\n\nAnother attempt to make an aesthetically appealing graph with Stata.\nI make use of the /// notation which allows me to spread the graph along multiple lines.\n\n\nGet The Data\n\n\nCode\nuse \"https://github.com/agrogan1/multilevel/raw/master/fixed-effects-example-World-Bank-data/WorldBankData.dta\", clear\n\n\n\n\nData Management\n\n\nCode\ndrop if region == \"Aggregates\" // drop Aggregates\n\n\n\n\nGraph\n\n\nCode\n\ntwoway (scatter GDP year, mcolor(%10)) /// scatterplot; transparent markers\n(lowess GDP year, lwidth(thick)),  /// lowess smoother\nxlabel(, angle(270) labsize(vsmall)) /// x label tweaks\nylabel(, angle(0) labsize(vsmall)) /// y label tweaks\nby(region, title(\"GDP by Year\") ///\nnote (\"World Bank Data: Every Dot is a Country-Year\") ///\nlegend(off)) ///\nsubtitle(, size(small)) ///\nxsize(5) ysize(5) /// x and y size\nscheme(michigan) \n    \ngraph export aesthetically-appealing-World-Bank.svg, width(2000) replace\n\n\n\n\n\nAn Aesthetically Appealing Graph of World Bank Data"
-  },
-  {
-    "objectID": "posts/plain-old-nerd/index.html",
-    "href": "posts/plain-old-nerd/index.html",
-    "title": "Just a Plain Old Nerd",
-    "section": "",
-    "text": "Another quote that has recently struck me from the wonderful essay / poem by Julia Schanen (Schanen, 2021):\n\n“I’m getting tired of being mistaken for a genius,\nwhen I’m just a plain old nerd.\nStruggling, stumbling, pushing, experimenting.\nTrying to get more of something that makes me feel\nfascinated and uncomfortable,\nhopeless,\nstupid,\nexcited,\nreal.” (Schanen, 2021)\n\n\n\n\n\nReferences\n\nSchanen, J. (2021). Math person (Strogatz Prize entry). National Museum of Mathematics."
-  },
-  {
-    "objectID": "posts/articles-with-UNICEF-MICS-data/index.html",
-    "href": "posts/articles-with-UNICEF-MICS-data/index.html",
-    "title": "Articles With UNICEF MICS Data",
-    "section": "",
-    "text": "I have updated the list of articles published with the UNICEF Multiple Indicator Cluster Survey (MICS) data: https://agrogan1.github.io/research.html\nThis research is conducted in collaboration with colleagues Shawna Lee, Julie Ma, Kaitlin Ward, Garrett Pace, and Jorge Cuartas.\n\n\n\n\nLocations of Countries in MICS"
-  },
-  {
-    "objectID": "posts/interactions-are-symmetric/index.html",
-    "href": "posts/interactions-are-symmetric/index.html",
-    "title": "Interactions Are Symmetric",
-    "section": "",
-    "text": "Interactions are often presented as though one variable were the main independent variable x, while a second variable is the moderator variable m.\n\\[y = \\beta_0 + \\beta_1 x + \\beta_2 m + \\beta_3 xm + e_i \\tag{1}\\]\nIn truth, however, because of the commutative property of multiplication, \\(a \\times b = b \\times a\\), each variable can be thought of as moderating the other: \\(x \\times m = m \\times x\\).\nIn terms of visualizing interactions, it is perhaps more conventional to have the variable that is conceptualized as the independent variable, x, along the x axis, and to show separate regression lines for each value of the moderator m 1. However, despite being more conventional, it is mathematically plausible to present the inverse: m along the x axis, and different regression lines for different values of x 2."
-  },
-  {
-    "objectID": "posts/interactions-are-symmetric/index.html#footnotes",
-    "href": "posts/interactions-are-symmetric/index.html#footnotes",
-    "title": "Interactions Are Symmetric",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nIn the language of data visualization, I’d think of this as a classic problem of visualizing 3 dimensions of data on a 2 dimensional surface. In this approach, we are visualizing y by using the y axis, x by using the x axis, and m with color or linetype or both.↩︎\nAgain, in the language of data visualization, I’d think of this as a classic problem of visualizing 3 dimensions of data on a 2 dimensional surface. In this approach, we are visualizing y by using the y axis, m by using the x axis, and x with color or linetype or both.↩︎"
-  },
-  {
-    "objectID": "posts/two-page-Stata/index.html",
-    "href": "posts/two-page-Stata/index.html",
-    "title": "Two Page Stata",
-    "section": "",
-    "text": "I’ve made updates to Two Page Stata: https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.pdf [HTML].\nTwo Page Stata is intended to be an introduction to Stata in 2 pages. The treatment here is intended to be extremely brief, in order to create a kind of “cheat sheet” that can be presented in 2 pages."
-  },
-  {
-    "objectID": "posts/everything-is-obvious-once-you-know-the-answer/index.html",
-    "href": "posts/everything-is-obvious-once-you-know-the-answer/index.html",
-    "title": "Everything is Obvious Once You Know The Answer",
-    "section": "",
-    "text": "I have been thinking a lot about the idea that Everything Is Obvious, Once You Know The Answer, as detailed in the book with this title by Duncan Watts.\nThis seems to me especially true in Social Research.\nFor example, in our work with the international MICS data, we conducted a study of the link between gender inequality and physical child abuse. We expected to find that higher levels of gender inequality led to higher levels of physical abuse for female children, but not for male children. Instead, we found that higher levels of gender inequality were associated with higher levels of physical abuse for both male and female children. Equally interesting was that we found that gender inequality was predictive of levels of child abuse, while country level GDP was not.\nSimilarly, in a study of parenting during Covid-19, we expected to find that households with children would experience higher levels of anxiety and depression than households without children. Instead, we found the opposite. Being in a household with children was generally protective for anxiety and depression.\nIn his book, Watts uses the example from over 50 years ago, of a large study conducted by Lazarsfeld of veterans returning from World War II. The results are surprising. I’ve prepared a slide deck on these ideas here: https://agrogan1.github.io/teaching/everything-is-obvious/everything-is-obvious.html#/title-slide"
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Andrew Grogan-Kaylor",
-    "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\nWeb\n\n\n\n\n\n\nEmail\n\n\n\n\n\n\nDeep Blue\n\n\n\n\n\n\nGitHub\n\n\n\n\n\n\nResearchGate\n\n\n\n\n\n\nGoogle Scholar\n\n\n\n\n\n\nOrcid\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "Multilevel and Longitudinal Modeling\n\n\n\nmultilevel\n\ncourse\n\n\n\n\n\n\n\n\n\n\n\n\n\nCategorical Data Analysis\n\n\n\ncategorical\n\ncourse\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Visualization\n\n\n\ndataviz\n\ncourse\n\n\n\n\n\n\n\n\n\n\n\n\n\nMultilevel Workshop\n\n\n\nmultilevel\n\nresource\n\n\n\n\n\n\n\n\n\n\n\n\n\nVisualizing Multilevel Models\n\n\n\nmultilevel\n\ndataviz\n\nresource\n\n\n\n\n\n\n\n\n\n\n\n\n\nBe Less Wrong\n\n\n\nresource\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "research.html",
-    "href": "research.html",
-    "title": "Research Papers and Projects",
-    "section": "",
-    "text": "Many of these publications are available from Deep Blue.\n\n\n\n\n\n\nLocations of Countries in MICS\n\n\n\n\n\nProject website\n\n\n\n\n\n“How does context shape differences and changes in caregivers’ engagement in psychosocial stimulation over time? Evidence from a cross-national study”\n\nArcGIS StoryMap\n\n“Spillover of macro-level violence to parental physical abuse of children in low- and middle-income countries”\n\nOpen Access Article\nscrollytelling Version with closeread\n\n“Orphan discipline and child neglect: An analysis from 48 countries”\n\nArcGIS Storymap\n\n“Interactions of Gender Inequality and Parental Discipline Predicting Child Aggression in Low- and Middle-Income Countries”\n\nOpen Access Article\nArcGIS Storymap\n\n“Associations between 11 parental discipline behaviours and child outcomes across 60 countries”\n\nOpen Access Article\nArcGIS Storymap\nHTML Slides\nscrollytelling Version with closeread\n\n“Gender Inequality in Low- and Middle-Income Countries: Associations with Parental Physical Abuse and Moderation by Child Gender”\n\nOpen Access Article\nArcGIS Storymap\nPress Release\n\n“The Association between Spanking and Physical Abuse of Young Children in 56 Low- and Middle-Income Countries”\n\nArticle\nPress Release\nHTML Slides\nArcGIS Storymap\n\n“Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach”\n\nArticle\nArcGIS Storymap\n\n“Multilevel ecological analysis of the predictors of spanking across 65 countries”\n\nArticle\nArcGIS Storymap\n\n“Global Perspectives on Positive and Negative Parenting: A Bayesian Multilevel Analysis”\n\nAbstract\nArticle\n\n“Spanking and young children’s socioemotional development in low- and middle-income countries”\n\nOpen Access Article\nChild Trends News Service has released a well done video summarizing this research.\n\n\n\n\n\n\n\n“Adverse childhood experiences and spanking have similar associations with early behavior problems”\n“Unpacking the impact of adverse childhood experiences on adult mental health”\n“Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience”\n\n\n\n\n\n“Anxiety and Depression During COVID-19: Are Adults in Households with Children Faring Worse?”\n\nNews Release\n\n\n\n\n\n\n“Physical Punishment as a Predictor of Early Cognitive Development: Evidence From Econometric Approaches”\n“Physical punishment and Colombian children and adolescents’ cognitive and behavioral outcomes”\n“Civil conflict, domestic violence, and poverty as predictors of corporal punishment in Colombia”\n\n\n\n\n\nMeta-Analysis of Research on Corporal Punishment [PubMed Full Text] [Slides]\n\n\n\n\n\nData Visualizations of Country Level Bans on Corporal Punishment\n\n\n\n\n\nCountry Level Bans on Corporal Punishment\n\n\n\n\n\n\nEarlier Research On Corporal Punishment"
-  },
-  {
-    "objectID": "research.html#research-on-parenting-and-child-development",
-    "href": "research.html#research-on-parenting-and-child-development",
-    "title": "Research Papers and Projects",
-    "section": "",
-    "text": "Many of these publications are available from Deep Blue.\n\n\n\n\n\n\nLocations of Countries in MICS\n\n\n\n\n\nProject website\n\n\n\n\n\n“How does context shape differences and changes in caregivers’ engagement in psychosocial stimulation over time? Evidence from a cross-national study”\n\nArcGIS StoryMap\n\n“Spillover of macro-level violence to parental physical abuse of children in low- and middle-income countries”\n\nOpen Access Article\nscrollytelling Version with closeread\n\n“Orphan discipline and child neglect: An analysis from 48 countries”\n\nArcGIS Storymap\n\n“Interactions of Gender Inequality and Parental Discipline Predicting Child Aggression in Low- and Middle-Income Countries”\n\nOpen Access Article\nArcGIS Storymap\n\n“Associations between 11 parental discipline behaviours and child outcomes across 60 countries”\n\nOpen Access Article\nArcGIS Storymap\nHTML Slides\nscrollytelling Version with closeread\n\n“Gender Inequality in Low- and Middle-Income Countries: Associations with Parental Physical Abuse and Moderation by Child Gender”\n\nOpen Access Article\nArcGIS Storymap\nPress Release\n\n“The Association between Spanking and Physical Abuse of Young Children in 56 Low- and Middle-Income Countries”\n\nArticle\nPress Release\nHTML Slides\nArcGIS Storymap\n\n“Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach”\n\nArticle\nArcGIS Storymap\n\n“Multilevel ecological analysis of the predictors of spanking across 65 countries”\n\nArticle\nArcGIS Storymap\n\n“Global Perspectives on Positive and Negative Parenting: A Bayesian Multilevel Analysis”\n\nAbstract\nArticle\n\n“Spanking and young children’s socioemotional development in low- and middle-income countries”\n\nOpen Access Article\nChild Trends News Service has released a well done video summarizing this research.\n\n\n\n\n\n\n\n“Adverse childhood experiences and spanking have similar associations with early behavior problems”\n“Unpacking the impact of adverse childhood experiences on adult mental health”\n“Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience”\n\n\n\n\n\n“Anxiety and Depression During COVID-19: Are Adults in Households with Children Faring Worse?”\n\nNews Release\n\n\n\n\n\n\n“Physical Punishment as a Predictor of Early Cognitive Development: Evidence From Econometric Approaches”\n“Physical punishment and Colombian children and adolescents’ cognitive and behavioral outcomes”\n“Civil conflict, domestic violence, and poverty as predictors of corporal punishment in Colombia”\n\n\n\n\n\nMeta-Analysis of Research on Corporal Punishment [PubMed Full Text] [Slides]\n\n\n\n\n\nData Visualizations of Country Level Bans on Corporal Punishment\n\n\n\n\n\nCountry Level Bans on Corporal Punishment\n\n\n\n\n\n\nEarlier Research On Corporal Punishment"
-  },
-  {
-    "objectID": "research.html#community-based-research-in-alaska",
-    "href": "research.html#community-based-research-in-alaska",
-    "title": "Research Papers and Projects",
-    "section": "Community Based Research in Alaska",
-    "text": "Community Based Research in Alaska\n\nCulturally Grounded Strategies for Suicide and Alcohol Risk Prevention Delivered by Rural Alaska Native Communities: A Dynamic Wait‐listed Design Evaluation of the Qungasvik Intervention.\n\nOpen Access Article\n\nIndigenous Community-level Protective Factors in the Prevention of Suicide: Enlarging a Definition of Cultural Continuity in Rural Alaska Native Communities."
-  },
-  {
-    "objectID": "posts/variables-and-visualization/index.html",
-    "href": "posts/variables-and-visualization/index.html",
-    "title": "Variables and Visualization",
-    "section": "",
-    "text": "I am posting here a link to some older–but hopefully still useful–materials on data visualization: https://agrogan1.github.io/dataviz/variables-and-visualization/variables-and-visualization.html\n\n\n\nvariables and visualization"
-  },
-  {
-    "objectID": "posts/Tajikstan-is-67/index.html",
-    "href": "posts/Tajikstan-is-67/index.html",
-    "title": "Tajikstan is #67",
-    "section": "",
-    "text": "Tajikstan is the 67th country to ban corporal punishment: https://agrogan1.github.io/research/cpbans/\n\n\n\nCountries With Bans on Corporal Punishment of Children"
-  },
-  {
-    "objectID": "posts/bignumber/index.html",
-    "href": "posts/bignumber/index.html",
-    "title": "Making a ‘Big Number’ (And Circle) With R",
-    "section": "",
-    "text": "Sometimes a large number (and accompanying circle) can represent a compelling visualization. This flipbook explains how to make such visualizations in R: https://agrogan1.github.io/R/bignumber/bignumber.html"
-  },
-  {
-    "objectID": "posts/interactions-and-main-effects-mathematical/index.html",
-    "href": "posts/interactions-and-main-effects-mathematical/index.html",
-    "title": "Interactions And Main Effects Need To Be Interpreted Together",
-    "section": "",
-    "text": "As a teacher, with some frequency, I hear the idea from students that when statistically significant interaction terms are present, one does not need to interpret main effects at all, a contention apparently heard by others (Grace-Martin, n.d.), yet which to me appears mathematically and statistically unfounded.\nI’m thankful to a StataList post by Kolev (2022) for providing a mathematical foundation to this thinking.\nConsider the following equation with an interaction term:\n\\[y = \\beta_0 + \\beta_1 x + \\beta_2 m + \\beta_3 xm + e_i \\tag{1}\\]\nKolev (2022) uses derivatives to make a point. I’m going to use partial derivatives, because I think they are more accurate.\n\\[\\frac{\\partial y}{\\partial x} = \\beta_1 + \\beta_3 m \\tag{2}\\]\nSo, using the partial derivative of \\(y\\) with respect to \\(x\\), we see that this partial derivative depends both upon the main effect of \\(x\\), \\(\\beta_1\\), and the effect of \\(m\\), \\(\\beta_3 m\\).\nThat main effect, \\(\\beta_1\\), might be 0, but even then, it needs to be interpreted.\nInteractions and main effects need to be interpreted together.\n\n\n\n\nReferences\n\nGrace-Martin, K. (n.d.). Actually, you can interpret some main effects in the presence of an interaction. In The Analysis Factor. https://www.theanalysisfactor.com/interpret-main-effects-interaction\n\n\nKolev, J. (2022). Interpreting significant interaction effect while main effect is insignificant. In StataList. https://www.statalist.org/forums/forum/general-stata-discussion/general/1694948-interpreting-significant-interaction-effect-while-main-effect-is-insignificant"
-  },
-  {
-    "objectID": "posts/spillover-of-violence/index.html",
-    "href": "posts/spillover-of-violence/index.html",
-    "title": "Spillover of macro-level violence to parental physical abuse of children in low- and middle-income countries",
-    "section": "",
-    "text": "We have published an article entitled “Spillover of macro-level violence to parental physical abuse of children in low- and middle-income countries” in Child Abuse and Neglect.\nThe Open Access Article is available here: https://doi.org/10.1016/j.chiabu.2025.107468\nI prepared a scrollytelling webpage summarizing that research: https://globalfamilies.quarto.pub/spillover-of-violence/\n\n\n\nCountries in UNICEF MICS Data"
-  },
-  {
-    "objectID": "posts/Thailand-is-68/index.html",
-    "href": "posts/Thailand-is-68/index.html",
-    "title": "Thailand is #68",
-    "section": "",
-    "text": "Thailand is the 68th country to ban corporal punishment: https://agrogan1.github.io/research/cpbans/\n\n\n\nCountries With Bans on Corporal Punishment of Children"
-  },
-  {
-    "objectID": "posts/patterns/index.html",
-    "href": "posts/patterns/index.html",
-    "title": "Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach",
-    "section": "",
-    "text": "A few years ago, we published an article entitled “Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach”. I’ve linked to that article elsewhere on this site, but wanted to make sure that the links were included in this blog, particularly as the article was one where we discuss positive parenting. Notably, the study found:\n\n“The [analysis] suggested caregiver discipline fell into three overall patterns: high behavioral control, moderate behavior control, and lower behavioral control. The lower behavioral control class was associated with the most advantageous child outcomes and household socio-demographic characteristics, whereas the high behavioral control class was associated with the most disadvantageous child outcomes and household characteristics.”\n\n\nArticle\nArcGIS Storymap\n\n\n\n\npatterns of caregiver discipline"
-  },
-  {
-    "objectID": "posts/youve-got-to-be-kind/index.html",
-    "href": "posts/youve-got-to-be-kind/index.html",
-    "title": "You’ve Got To Be Kind",
-    "section": "",
-    "text": "A thought that has come up a lot recently with regard to teaching and research:\n\n“Hello babies. Welcome to Earth. It’s hot in the summer and cold in the winter. It’s round and wet and crowded. On the outside, babies, you’ve got a hundred years here. There’s only one rule that I know of, babies-“G** d*** it, you’ve got to be kind.” (Vonnegut, 1965)\n\n\n\n\n\nReferences\n\nVonnegut, K. (1965). God bless you, Mr. Rosewater; or, pearls before swine. Delacorte Press."
-  },
-  {
-    "objectID": "posts/closeread-be-less-wrong/index.html",
-    "href": "posts/closeread-be-less-wrong/index.html",
-    "title": "Be Less Wrong",
-    "section": "",
-    "text": "George Box famously said:\n\n“All models are wrong, but some are useful.” (Box, 1979)\n\nDrawing upon this idea, I have developed a page to explore the idea of how quantitative methods can allow one to be less wrong about important social issues: https://globalfamilies.quarto.pub/be-less-wrong/.\nThe page uses ideas of scrollytelling to explain these ideas. closeread is a new extension for Quarto that allows one to present stories using scrollytelling.\n\n\n\nBe Less Wrong\n\n\n\n\n\n\nReferences\n\nBox, G. (1979). Robustness in the strategy of scientific model building. In R. L. Launer & G. N. Wilkinson (Eds.), Robustness in statistics. Academic Press, Inc. [Harcourt Brace Jovanovich, Publishers], New York-London."
-  },
-  {
-    "objectID": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html",
-    "href": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html",
-    "title": "Why Spreadsheets Are A Bad Format For Storing Data",
-    "section": "",
-    "text": "Excel and Google Sheets are sometimes used as programs to collect and store data. Excel and Google Sheets are often used because they are the only programs that some individuals or agencies have for storing data. Additionally, many programs like Qualtrics or RedCap may use Excel as a default output format.\nExcel and other spreadsheet programs may also be used because spreadsheets can be very intuitive and easy ways of managing small amounts of data.\nHowever, Excel and Google Sheets may be problematic as a data storage solution for a number of reasons detailed below, especially as data sets grow in size. Notably, statistical programs like Stata, SAS, or SPSS all store additional information with each variable such as: a variable label, describing the contents of the variable, or the survey question that resulted in the variable; and a value label, which attaches qualitative information to each possible value of the response.1\nExcel and Google Sheets do not generally contain this extra information about each variable, or column of data, which may lead to extra work, extra effort, or even errors in working with quantitative information.\nThe data below are stored in Stata format, but could as easily be stored in SAS or SPSS format."
-  },
-  {
-    "objectID": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html#descriptive-statistics",
-    "href": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html#descriptive-statistics",
-    "title": "Why Spreadsheets Are A Bad Format For Storing Data",
-    "section": "Descriptive Statistics",
-    "text": "Descriptive Statistics\n\n\nuse \"simulated-happiness-data.dta\", clear\n\ntabulate Q1\n\n  How often |\ndo you feel |\n     happy? |      Freq.     Percent        Cum.\n------------+-----------------------------------\n      Never |         21       21.00       21.00\n     Rarely |         29       29.00       50.00\n  Sometimes |         28       28.00       78.00\n      Often |         22       22.00      100.00\n------------+-----------------------------------\n      Total |        100      100.00"
-  },
-  {
-    "objectID": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html#bar-graph",
-    "href": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html#bar-graph",
-    "title": "Why Spreadsheets Are A Bad Format For Storing Data",
-    "section": "Bar Graph",
-    "text": "Bar Graph\n\n\nuse \"simulated-happiness-data.dta\", clear\n\ngraph bar, over(Q1) title(\"How often do you feel happy?\") asyvars\n    \ngraph export mybar1.png, width(1500) replace\n\n\n\n\nBar Graph"
-  },
-  {
-    "objectID": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html#list-out-a-sample-of-the-data",
-    "href": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html#list-out-a-sample-of-the-data",
-    "title": "Why Spreadsheets Are A Bad Format For Storing Data",
-    "section": "List Out A Sample Of The Data",
-    "text": "List Out A Sample Of The Data\n\n\nuse \"simulated-happiness-data.dta\", clear\n\nlist in 1/10\n\n     | id          Q1 |\n     |----------------|\n  1. |  1       Never |\n  2. |  2   Sometimes |\n  3. |  3       Never |\n  4. |  4   Sometimes |\n  5. |  5   Sometimes |\n     |----------------|\n  6. |  6       Often |\n  7. |  7      Rarely |\n  8. |  8   Sometimes |\n  9. |  9       Never |\n 10. | 10      Rarely |\n     +----------------+"
-  },
-  {
-    "objectID": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html#descriptive-statistics-1",
-    "href": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html#descriptive-statistics-1",
-    "title": "Why Spreadsheets Are A Bad Format For Storing Data",
-    "section": "Descriptive Statistics",
-    "text": "Descriptive Statistics\n\n\nuse \"simulated-happiness-data-EXCEL.dta\", clear\n\ntabulate Q1\n\n         Q1 |      Freq.     Percent        Cum.\n------------+-----------------------------------\n          1 |         21       21.00       21.00\n          2 |         29       29.00       50.00\n          3 |         28       28.00       78.00\n          4 |         22       22.00      100.00\n------------+-----------------------------------\n      Total |        100      100.00\n\n\n\nBar Graph\n\n\nuse \"simulated-happiness-data-EXCEL.dta\", clear\n\ngraph bar, over(Q1) title(\"How often do you feel happy?\") asyvars\n    \ngraph export mybar2.png, width(1500) replace\n\n\n\n\nBar Graph"
-  },
-  {
-    "objectID": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html#footnotes",
-    "href": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html#footnotes",
-    "title": "Why Spreadsheets Are A Bad Format For Storing Data",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nOver time, I’ve realized that the issues discussed in this post also apply to the use of CSV (comma separated value) files. While CSV files are convenient, and can be imported by almost any software, they may lead to many of the same issues discussed in this post.↩︎"
-  },
-  {
-    "objectID": "posts/quantitative-literacy/index.html",
-    "href": "posts/quantitative-literacy/index.html",
-    "title": "Quantitative Literacy",
-    "section": "",
-    "text": "I have been thinking a lot about this idea.\n\n“It is hard to imagine that anyone with a humanitarian worldview would argue against the need for a more quantitatively literate citizenry. Informed political decision-making, retirement planning, active parenting, and the vast majority of choices we make in our personal, occupational, and civic lives can be better served by improved quantitative understanding and reasoning, as well as accompanying action-oriented dispositions.” (Wiest et al., 2007)\n\n\n\n\n\nReferences\n\nWiest, L. R., Higgins, H. J., & Frost, J. H. (2007). Quantitative literacy for social justice. Equity & Excellence in Education, 40, 47–55. https://doi.org/10.1080/10665680601079894"
-  },
-  {
-    "objectID": "posts/you-have-to-get-your-data-from-somewhere/index.html",
-    "href": "posts/you-have-to-get-your-data-from-somewhere/index.html",
-    "title": "You Have To Get Your Data From Somewhere",
-    "section": "",
-    "text": "In learning R, as well as RMarkdown, one of the most difficult tasks seems to be understanding how to import data.\nRead your data into a dataset using the right function for the right format from the correct location.\nNote that while learning the correct syntax is very helpful, RStudio can generate much of this syntax for you using the File | Import Dataset | … menu."
-  },
-  {
-    "objectID": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-already-in-r-format",
-    "href": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-already-in-r-format",
-    "title": "You Have To Get Your Data From Somewhere",
-    "section": "Data Already in R Format",
-    "text": "Data Already in R Format\n\nmydata &lt;- load(\"/project1/mydata.RData\") # load R format data"
-  },
-  {
-    "objectID": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-in-csv-format",
-    "href": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-in-csv-format",
-    "title": "You Have To Get Your Data From Somewhere",
-    "section": "Data in CSV Format",
-    "text": "Data in CSV Format\nCSV stands for comma separated values, and is essentially a raw text format for storing data. CSV is often an excellent format for exchanging data between programs. A few lines of simulated data on clients in CSV format are reproduced below.\n\n\"ID\",\"age\",\"gender\",\"program\",\"mental_health_T1\",\"mental_health_T2\",\"latitude\",\"longitude\"\n2941,32,\"Male\",\"Program A\",98.81,95.49,42.1108308238603,-83.6103627437424\n2745,22,\"Other Identity\",\"Program B\",86.28,104.84,42.0016810856589,-83.8064503632259\n1320,28,\"Female\",\"Program B\",89.17,107.48,42.0398163096771,-83.6793088312261\n1211,20,\"Male\",\"Program D\",94.15,95.71,42.2673004816002,-83.8247411126595\n2293,20,\"Female\",\"Program D\",85.38,105.09,42.300730845518,-83.7526918820329\n\n\nlibrary(readr) # library to read CSV\n\nmydata &lt;- read_csv(\"/project1/mydata.csv\")"
-  },
-  {
-    "objectID": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-in-excel-format",
-    "href": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-in-excel-format",
-    "title": "You Have To Get Your Data From Somewhere",
-    "section": "Data in Excel Format",
-    "text": "Data in Excel Format\n\nlibrary(readxl) # library to read Excel\n\nmydata &lt;- read_excel(\"/project1/mydata.xlsx\")"
-  },
-  {
-    "objectID": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-in-stata",
-    "href": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-in-stata",
-    "title": "You Have To Get Your Data From Somewhere",
-    "section": "Data in Stata",
-    "text": "Data in Stata\n\nlibrary(haven) # library to read other file formats\n\nmydata &lt;- read_stata(\"/project1/mydata.dta\")"
-  },
-  {
-    "objectID": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-in-spss-format",
-    "href": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-in-spss-format",
-    "title": "You Have To Get Your Data From Somewhere",
-    "section": "Data in SPSS Format",
-    "text": "Data in SPSS Format\n\nlibrary(haven) # library to read other file formats\n\nmydata &lt;- read_sav(\"/project1/mydata.sav\")"
-  },
-  {
-    "objectID": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-in-sas-format",
-    "href": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-in-sas-format",
-    "title": "You Have To Get Your Data From Somewhere",
-    "section": "Data in SAS Format",
-    "text": "Data in SAS Format\n\nlibrary(haven) # library to read other file formats\n\nmydata &lt;- read_sas(\"/project1/mydata.sas7bdat\")"
-  },
-  {
-    "objectID": "posts/you-have-to-get-your-data-from-somewhere/index.html#hand-code-data-using-tribble",
-    "href": "posts/you-have-to-get-your-data-from-somewhere/index.html#hand-code-data-using-tribble",
-    "title": "You Have To Get Your Data From Somewhere",
-    "section": "Hand Code Data Using tribble",
-    "text": "Hand Code Data Using tribble\n\nThis can be especially useful for hand coding small amounts of data that come from a published online or print data source.\n\n\nlibrary(tibble) # library for updated dataframes\n\nmydata &lt;- tribble(\n  ~ID, ~age, ~gender, ~program,\n2941,32,\"Male\",\"Program A\",\n2745,22,\"Other Identity\",\"Program B\",\n1320,28,\"Female\",\"Program B\",\n2293,20,\"Female\",\"Program D\"\n)\n\nWhen importing data using tribble, it is helpful to get a summary of your data.\n\nsummary(mydata)\n\n       ID            age          gender            program         \n Min.   :1320   Min.   :20.0   Length:4           Length:4          \n 1st Qu.:2050   1st Qu.:21.5   Class :character   Class :character  \n Median :2519   Median :25.0   Mode  :character   Mode  :character  \n Mean   :2325   Mean   :25.5                                        \n 3rd Qu.:2794   3rd Qu.:29.0                                        \n Max.   :2941   Max.   :32.0                                        \n\n\nIt may then be helpful to insure some variables are changed to factors.\n\nmydata$gender &lt;- factor(mydata$gender)\n\nmydata$program &lt;- factor(mydata$program)\n\nsummary(mydata)\n\n       ID            age                  gender       program \n Min.   :1320   Min.   :20.0   Female        :2   Program A:1  \n 1st Qu.:2050   1st Qu.:21.5   Male          :1   Program B:2  \n Median :2519   Median :25.0   Other Identity:1   Program D:1  \n Mean   :2325   Mean   :25.5                                   \n 3rd Qu.:2794   3rd Qu.:29.0                                   \n Max.   :2941   Max.   :32.0"
-  },
-  {
-    "objectID": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-in-r-package",
-    "href": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-in-r-package",
-    "title": "You Have To Get Your Data From Somewhere",
-    "section": "Data in R Package",
-    "text": "Data in R Package\nSometimes data is obtained by calling an R package, or the data is directly built into R.\n\nlibrary(palmerpenguins) # call Palmer Penguins library\n\ndata(\"penguins\") # call the penguins data\n\n\ndata(iris) # call the iris flower data built into R"
-  },
-  {
-    "objectID": "posts/you-have-to-get-your-data-from-somewhere/index.html#footnotes",
-    "href": "posts/you-have-to-get-your-data-from-somewhere/index.html#footnotes",
-    "title": "You Have To Get Your Data From Somewhere",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nHow R will refer to your data. R’s nickname for your data.↩︎\nThe correct function for the type of data you are reading in, e.g. RData, CSV, Excel.↩︎\nWhere is your data located? The directory path to your data.↩︎\nWhat is the filename of the file containing your data? Note that the extension often tells you what kind of data this is.↩︎\nSometimes, especially on a Mac, it is necessary to refer to your directory with a ~, e.g. ~/downloads/project1.RData or ~/Desktop/project1.RData or ~/project1/project1.RData.↩︎"
-  },
-  {
-    "objectID": "posts/exploring-data/index.html",
-    "href": "posts/exploring-data/index.html",
-    "title": "Exploring Data",
-    "section": "",
-    "text": "In another post, I mentioned that for a few recent projects, I have had to quickly get up to speed on new data. In that other post, I focused on the idea of using a pairs plot in R.\nIn this post, I want to focus on a similar idea. But instead of a pairs plot, I focus on using a regression model with a number of risk and protective factors predicting an outcome. Here I use Stata instead of R, and use Stata’s powerful margins and marginsplot command to get a visual idea of the way that these different risk and protective factors are associated with the outcome.\nUsing margins means that I’m going to use some complicated looking syntax to get some results that are actually pretty straightforward.\nFor this example, I use the data from my Multilevel Workshop site.\n\nGet The Data\n\nuse simulated_multilevel_data.dta, clear\n\n\n\ndescribe The Data\n\ndescribe\n\nRunning /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/exploring-data/profile\n\n&gt; .do ...\n\n\n\nContains data from simulated_multilevel_data.dta\n Observations:         3,000                  \n    Variables:             9                  15 May 2024 14:54\n-------------------------------------------------------------------------------------\nVariable      Storage   Display    Value\n    name         type    format    label      Variable label\n-------------------------------------------------------------------------------------\ncountry         float   %9.0g                 country id\nHDI             float   %9.0g                 Human Development Index\nfamily          float   %9.0g                 family id\nid              str7    %9s                   unique country family id\nidentity        float   %9.0g                 hypothetical identity group variable\nintervention    float   %9.0g                 recieved intervention\nphysical_puni~t float   %9.0g                 physical punishment in past week\nwarmth          float   %9.0g                 parental warmth in past week\noutcome         float   %9.0g                 beneficial outcome\n-------------------------------------------------------------------------------------\nSorted by: country  family\n\n\n\n\nRegression Model (mixed or regress)\nBecause these data are clustered by country, I use the mixed command to get accurate standard errors and p values.\n\nmixed outcome warmth physical_punishment i.intervention i.identity || country: \n  \n\n\n\n\n\n\n\nShow The Results\n\n\n\n\n\n\n\nRunning /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/exploring-data/profile\n\n&gt; .do ...\n\n\n\nPerforming EM optimization ...\n\nPerforming gradient-based optimization: \nIteration 0:  Log likelihood = -9627.1393  \nIteration 1:  Log likelihood = -9627.1393  \n\nComputing standard errors ...\n\nMixed-effects ML regression                          Number of obs    =  3,000\nGroup variable: country                              Number of groups =     30\n                                                     Obs per group:\n                                                                  min =    100\n                                                                  avg =  100.0\n                                                                  max =    100\n                                                     Wald chi2(4)     = 373.21\nLog likelihood = -9627.1393                          Prob &gt; chi2      = 0.0000\n\n------------------------------------------------------------------------------------\n           outcome | Coefficient  Std. err.      z    P&gt;|z|     [95% conf. interval]\n-------------------+----------------------------------------------------------------\n            warmth |   .8342119   .0574661    14.52   0.000     .7215805    .9468434\nphysical_punishm~t |  -.9934352   .0798217   -12.45   0.000    -1.149883   -.8369874\n    1.intervention |   .6462874   .2175097     2.97   0.003     .2199762    1.072598\n        1.identity |  -.3104984   .2170594    -1.43   0.153    -.7359271    .1149302\n             _cons |   51.79936   .4777788   108.42   0.000     50.86293    52.73579\n------------------------------------------------------------------------------------\n\n------------------------------------------------------------------------------\n  Random-effects parameters  |   Estimate   Std. err.     [95% conf. interval]\n-----------------------------+------------------------------------------------\ncountry: Identity            |\n                  var(_cons) |   3.377381   .9627211      1.931725    5.904929\n-----------------------------+------------------------------------------------\n               var(Residual) |   35.04285   .9093623       33.3051    36.87127\n------------------------------------------------------------------------------\nLR test vs. linear model: chibar2(01) = 204.68        Prob &gt;= chibar2 = 0.0000\n\n\n\n\n\nWere the data not clustered, I could have just as easily used regress.\n\nregress outcome warmth physical_punishment i.intervention i.identity\n  \n\n\n\nUse margins to Get Marginal Effects\nmargins in Stata is a very versatile (and sometimes confusing) command. Here I use slightly complicated syntax, to get a very simple set of results. I use margins, and the dydx(*) option to get marginal effects, which here are simply the \\(\\beta\\) coefficients reported above.\n\n\n\n\n\n\nWhy Go Through This Step?\n\n\n\n\n\nWe want to “let margins know about the regression coefficients”.\nAs we will see below, letting margins calculate the regression coefficients lets us graph the results using marginsplot.\n\n\n\n\n\n\n\n\n\nTechnically Speaking…\n\n\n\n\n\nTechnically speaking, dydx(*) is asking Stata to calculate the marginal effects, \\(\\frac{\\partial y}{\\partial x}\\) for all (*) independent variables in the model. In a linear model, with no interaction terms, \\(\\frac{\\partial y}{\\partial x} = \\beta\\).\nAgain, we are essentially using slightly complicated syntax to get simple results.\n\n\n\n\nmargins, dydx(*)\n\nRunning /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/exploring-data/profile\n\n&gt; .do ...\n\n\n\nAverage marginal effects                                 Number of obs = 3,000\n\nExpression: Linear prediction, fixed portion, predict()\ndy/dx wrt:  warmth physical_punishment 1.intervention 1.identity\n\n------------------------------------------------------------------------------------\n                   |            Delta-method\n                   |      dy/dx   std. err.      z    P&gt;|z|     [95% conf. interval]\n-------------------+----------------------------------------------------------------\n            warmth |   .8342119   .0574661    14.52   0.000     .7215805    .9468434\nphysical_punishm~t |  -.9934352   .0798217   -12.45   0.000    -1.149883   -.8369874\n    1.intervention |   .6462874   .2175097     2.97   0.003     .2199762    1.072598\n        1.identity |  -.3104984   .2170594    -1.43   0.153    -.7359271    .1149302\n------------------------------------------------------------------------------------\nNote: dy/dx for factor levels is the discrete change from the base level.\n\n\n\n\nUse marginsplot To Visualize the Marginal Effects\nFirst I use marginsplot with no options to visualize the marginal effects. This produces a pretty non-intuitive graph.\n\nmarginsplot\n\ngraph export \"marginsplot1.png\", replace\n\n\n\n\nmarginsplot with default options\n\n\n\n\nUse marginsplot With Better Options\nI add some options to clarify the graph. I recast the graph as a scatterplot. I flip the graph to be horizontal. I also add a reference line at \\(x = 0\\) to make more clear which coefficients are significant, and which coefficients are not significant.\n\nmarginsplot, ///\nrecast(scatter) /// recast as scatterplot\nhorizontal /// flip to horizontal\nxline(0, lcolor(red)) // line at x = 0 in red\n\ngraph export \"marginsplot2.png\", replace\n  \n\n\n\n\nmarginsplot with better options\n\n\n\n\nConclusion\nIn conclusion:\n\nI ran a regression model using mixed (I could have used regress).\nI transferred the values of the \\(\\beta\\) regression coefficients to margins.\nI used marginsplot with a few options to see the results.\n\nThese steps: mixed or regress; margins; marginsplot, could be repeated for almost any analysis.\nResults suggest that identity is not associated with the outcome. The intervention is associated with improvements in the outcome. physical_punishment is associated with a worsened outcome. Parental warmth is associated with an improved outcome."
-  },
-  {
     "objectID": "posts/comparing-program-outcomes-with-ggplot/index.html",
     "href": "posts/comparing-program-outcomes-with-ggplot/index.html",
     "title": "Telling Stories With Data: Comparing Program Outcomes with ggplot2",
@@ -971,6 +614,384 @@
     "title": "Telling Stories With Data: Comparing Program Outcomes with ggplot2",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nIt is important to use (alpha = ...) to create transparency with these geoms.↩︎"
+  },
+  {
+    "objectID": "posts/exploring-data/index.html",
+    "href": "posts/exploring-data/index.html",
+    "title": "Exploring Data",
+    "section": "",
+    "text": "In another post, I mentioned that for a few recent projects, I have had to quickly get up to speed on new data. In that other post, I focused on the idea of using a pairs plot in R.\nIn this post, I want to focus on a similar idea. But instead of a pairs plot, I focus on using a regression model with a number of risk and protective factors predicting an outcome. Here I use Stata instead of R, and use Stata’s powerful margins and marginsplot command to get a visual idea of the way that these different risk and protective factors are associated with the outcome.\nUsing margins means that I’m going to use some complicated looking syntax to get some results that are actually pretty straightforward.\nFor this example, I use the data from my Multilevel Workshop site.\n\nGet The Data\n\nuse simulated_multilevel_data.dta, clear\n\n\n\ndescribe The Data\n\ndescribe\n\nRunning /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/exploring-data/profile\n\n&gt; .do ...\n\n\n\nContains data from simulated_multilevel_data.dta\n Observations:         3,000                  \n    Variables:             9                  15 May 2024 14:54\n-------------------------------------------------------------------------------------\nVariable      Storage   Display    Value\n    name         type    format    label      Variable label\n-------------------------------------------------------------------------------------\ncountry         float   %9.0g                 country id\nHDI             float   %9.0g                 Human Development Index\nfamily          float   %9.0g                 family id\nid              str7    %9s                   unique country family id\nidentity        float   %9.0g                 hypothetical identity group variable\nintervention    float   %9.0g                 recieved intervention\nphysical_puni~t float   %9.0g                 physical punishment in past week\nwarmth          float   %9.0g                 parental warmth in past week\noutcome         float   %9.0g                 beneficial outcome\n-------------------------------------------------------------------------------------\nSorted by: country  family\n\n\n\n\nRegression Model (mixed or regress)\nBecause these data are clustered by country, I use the mixed command to get accurate standard errors and p values.\n\nmixed outcome warmth physical_punishment i.intervention i.identity || country: \n  \n\n\n\n\n\n\n\nShow The Results\n\n\n\n\n\n\n\nRunning /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/exploring-data/profile\n\n&gt; .do ...\n\n\n\nPerforming EM optimization ...\n\nPerforming gradient-based optimization: \nIteration 0:  Log likelihood = -9627.1393  \nIteration 1:  Log likelihood = -9627.1393  \n\nComputing standard errors ...\n\nMixed-effects ML regression                          Number of obs    =  3,000\nGroup variable: country                              Number of groups =     30\n                                                     Obs per group:\n                                                                  min =    100\n                                                                  avg =  100.0\n                                                                  max =    100\n                                                     Wald chi2(4)     = 373.21\nLog likelihood = -9627.1393                          Prob &gt; chi2      = 0.0000\n\n------------------------------------------------------------------------------------\n           outcome | Coefficient  Std. err.      z    P&gt;|z|     [95% conf. interval]\n-------------------+----------------------------------------------------------------\n            warmth |   .8342119   .0574661    14.52   0.000     .7215805    .9468434\nphysical_punishm~t |  -.9934352   .0798217   -12.45   0.000    -1.149883   -.8369874\n    1.intervention |   .6462874   .2175097     2.97   0.003     .2199762    1.072598\n        1.identity |  -.3104984   .2170594    -1.43   0.153    -.7359271    .1149302\n             _cons |   51.79936   .4777788   108.42   0.000     50.86293    52.73579\n------------------------------------------------------------------------------------\n\n------------------------------------------------------------------------------\n  Random-effects parameters  |   Estimate   Std. err.     [95% conf. interval]\n-----------------------------+------------------------------------------------\ncountry: Identity            |\n                  var(_cons) |   3.377381   .9627211      1.931725    5.904929\n-----------------------------+------------------------------------------------\n               var(Residual) |   35.04285   .9093623       33.3051    36.87127\n------------------------------------------------------------------------------\nLR test vs. linear model: chibar2(01) = 204.68        Prob &gt;= chibar2 = 0.0000\n\n\n\n\n\nWere the data not clustered, I could have just as easily used regress.\n\nregress outcome warmth physical_punishment i.intervention i.identity\n  \n\n\n\nUse margins to Get Marginal Effects\nmargins in Stata is a very versatile (and sometimes confusing) command. Here I use slightly complicated syntax, to get a very simple set of results. I use margins, and the dydx(*) option to get marginal effects, which here are simply the \\(\\beta\\) coefficients reported above.\n\n\n\n\n\n\nWhy Go Through This Step?\n\n\n\n\n\nWe want to “let margins know about the regression coefficients”.\nAs we will see below, letting margins calculate the regression coefficients lets us graph the results using marginsplot.\n\n\n\n\n\n\n\n\n\nTechnically Speaking…\n\n\n\n\n\nTechnically speaking, dydx(*) is asking Stata to calculate the marginal effects, \\(\\frac{\\partial y}{\\partial x}\\) for all (*) independent variables in the model. In a linear model, with no interaction terms, \\(\\frac{\\partial y}{\\partial x} = \\beta\\).\nAgain, we are essentially using slightly complicated syntax to get simple results.\n\n\n\n\nmargins, dydx(*)\n\nRunning /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/exploring-data/profile\n\n&gt; .do ...\n\n\n\nAverage marginal effects                                 Number of obs = 3,000\n\nExpression: Linear prediction, fixed portion, predict()\ndy/dx wrt:  warmth physical_punishment 1.intervention 1.identity\n\n------------------------------------------------------------------------------------\n                   |            Delta-method\n                   |      dy/dx   std. err.      z    P&gt;|z|     [95% conf. interval]\n-------------------+----------------------------------------------------------------\n            warmth |   .8342119   .0574661    14.52   0.000     .7215805    .9468434\nphysical_punishm~t |  -.9934352   .0798217   -12.45   0.000    -1.149883   -.8369874\n    1.intervention |   .6462874   .2175097     2.97   0.003     .2199762    1.072598\n        1.identity |  -.3104984   .2170594    -1.43   0.153    -.7359271    .1149302\n------------------------------------------------------------------------------------\nNote: dy/dx for factor levels is the discrete change from the base level.\n\n\n\n\nUse marginsplot To Visualize the Marginal Effects\nFirst I use marginsplot with no options to visualize the marginal effects. This produces a pretty non-intuitive graph.\n\nmarginsplot\n\ngraph export \"marginsplot1.png\", replace\n\n\n\n\nmarginsplot with default options\n\n\n\n\nUse marginsplot With Better Options\nI add some options to clarify the graph. I recast the graph as a scatterplot. I flip the graph to be horizontal. I also add a reference line at \\(x = 0\\) to make more clear which coefficients are significant, and which coefficients are not significant.\n\nmarginsplot, ///\nrecast(scatter) /// recast as scatterplot\nhorizontal /// flip to horizontal\nxline(0, lcolor(red)) // line at x = 0 in red\n\ngraph export \"marginsplot2.png\", replace\n  \n\n\n\n\nmarginsplot with better options\n\n\n\n\nConclusion\nIn conclusion:\n\nI ran a regression model using mixed (I could have used regress).\nI transferred the values of the \\(\\beta\\) regression coefficients to margins.\nI used marginsplot with a few options to see the results.\n\nThese steps: mixed or regress; margins; marginsplot, could be repeated for almost any analysis.\nResults suggest that identity is not associated with the outcome. The intervention is associated with improvements in the outcome. physical_punishment is associated with a worsened outcome. Parental warmth is associated with an improved outcome."
+  },
+  {
+    "objectID": "posts/you-have-to-get-your-data-from-somewhere/index.html",
+    "href": "posts/you-have-to-get-your-data-from-somewhere/index.html",
+    "title": "You Have To Get Your Data From Somewhere",
+    "section": "",
+    "text": "In learning R, as well as RMarkdown, one of the most difficult tasks seems to be understanding how to import data.\nRead your data into a dataset using the right function for the right format from the correct location.\nNote that while learning the correct syntax is very helpful, RStudio can generate much of this syntax for you using the File | Import Dataset | … menu."
+  },
+  {
+    "objectID": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-already-in-r-format",
+    "href": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-already-in-r-format",
+    "title": "You Have To Get Your Data From Somewhere",
+    "section": "Data Already in R Format",
+    "text": "Data Already in R Format\n\nmydata &lt;- load(\"/project1/mydata.RData\") # load R format data"
+  },
+  {
+    "objectID": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-in-csv-format",
+    "href": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-in-csv-format",
+    "title": "You Have To Get Your Data From Somewhere",
+    "section": "Data in CSV Format",
+    "text": "Data in CSV Format\nCSV stands for comma separated values, and is essentially a raw text format for storing data. CSV is often an excellent format for exchanging data between programs. A few lines of simulated data on clients in CSV format are reproduced below.\n\n\"ID\",\"age\",\"gender\",\"program\",\"mental_health_T1\",\"mental_health_T2\",\"latitude\",\"longitude\"\n2941,32,\"Male\",\"Program A\",98.81,95.49,42.1108308238603,-83.6103627437424\n2745,22,\"Other Identity\",\"Program B\",86.28,104.84,42.0016810856589,-83.8064503632259\n1320,28,\"Female\",\"Program B\",89.17,107.48,42.0398163096771,-83.6793088312261\n1211,20,\"Male\",\"Program D\",94.15,95.71,42.2673004816002,-83.8247411126595\n2293,20,\"Female\",\"Program D\",85.38,105.09,42.300730845518,-83.7526918820329\n\n\nlibrary(readr) # library to read CSV\n\nmydata &lt;- read_csv(\"/project1/mydata.csv\")"
+  },
+  {
+    "objectID": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-in-excel-format",
+    "href": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-in-excel-format",
+    "title": "You Have To Get Your Data From Somewhere",
+    "section": "Data in Excel Format",
+    "text": "Data in Excel Format\n\nlibrary(readxl) # library to read Excel\n\nmydata &lt;- read_excel(\"/project1/mydata.xlsx\")"
+  },
+  {
+    "objectID": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-in-stata",
+    "href": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-in-stata",
+    "title": "You Have To Get Your Data From Somewhere",
+    "section": "Data in Stata",
+    "text": "Data in Stata\n\nlibrary(haven) # library to read other file formats\n\nmydata &lt;- read_stata(\"/project1/mydata.dta\")"
+  },
+  {
+    "objectID": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-in-spss-format",
+    "href": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-in-spss-format",
+    "title": "You Have To Get Your Data From Somewhere",
+    "section": "Data in SPSS Format",
+    "text": "Data in SPSS Format\n\nlibrary(haven) # library to read other file formats\n\nmydata &lt;- read_sav(\"/project1/mydata.sav\")"
+  },
+  {
+    "objectID": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-in-sas-format",
+    "href": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-in-sas-format",
+    "title": "You Have To Get Your Data From Somewhere",
+    "section": "Data in SAS Format",
+    "text": "Data in SAS Format\n\nlibrary(haven) # library to read other file formats\n\nmydata &lt;- read_sas(\"/project1/mydata.sas7bdat\")"
+  },
+  {
+    "objectID": "posts/you-have-to-get-your-data-from-somewhere/index.html#hand-code-data-using-tribble",
+    "href": "posts/you-have-to-get-your-data-from-somewhere/index.html#hand-code-data-using-tribble",
+    "title": "You Have To Get Your Data From Somewhere",
+    "section": "Hand Code Data Using tribble",
+    "text": "Hand Code Data Using tribble\n\nThis can be especially useful for hand coding small amounts of data that come from a published online or print data source.\n\n\nlibrary(tibble) # library for updated dataframes\n\nmydata &lt;- tribble(\n  ~ID, ~age, ~gender, ~program,\n2941,32,\"Male\",\"Program A\",\n2745,22,\"Other Identity\",\"Program B\",\n1320,28,\"Female\",\"Program B\",\n2293,20,\"Female\",\"Program D\"\n)\n\nWhen importing data using tribble, it is helpful to get a summary of your data.\n\nsummary(mydata)\n\n       ID            age          gender            program         \n Min.   :1320   Min.   :20.0   Length:4           Length:4          \n 1st Qu.:2050   1st Qu.:21.5   Class :character   Class :character  \n Median :2519   Median :25.0   Mode  :character   Mode  :character  \n Mean   :2325   Mean   :25.5                                        \n 3rd Qu.:2794   3rd Qu.:29.0                                        \n Max.   :2941   Max.   :32.0                                        \n\n\nIt may then be helpful to insure some variables are changed to factors.\n\nmydata$gender &lt;- factor(mydata$gender)\n\nmydata$program &lt;- factor(mydata$program)\n\nsummary(mydata)\n\n       ID            age                  gender       program \n Min.   :1320   Min.   :20.0   Female        :2   Program A:1  \n 1st Qu.:2050   1st Qu.:21.5   Male          :1   Program B:2  \n Median :2519   Median :25.0   Other Identity:1   Program D:1  \n Mean   :2325   Mean   :25.5                                   \n 3rd Qu.:2794   3rd Qu.:29.0                                   \n Max.   :2941   Max.   :32.0"
+  },
+  {
+    "objectID": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-in-r-package",
+    "href": "posts/you-have-to-get-your-data-from-somewhere/index.html#data-in-r-package",
+    "title": "You Have To Get Your Data From Somewhere",
+    "section": "Data in R Package",
+    "text": "Data in R Package\nSometimes data is obtained by calling an R package, or the data is directly built into R.\n\nlibrary(palmerpenguins) # call Palmer Penguins library\n\ndata(\"penguins\") # call the penguins data\n\n\ndata(iris) # call the iris flower data built into R"
+  },
+  {
+    "objectID": "posts/you-have-to-get-your-data-from-somewhere/index.html#footnotes",
+    "href": "posts/you-have-to-get-your-data-from-somewhere/index.html#footnotes",
+    "title": "You Have To Get Your Data From Somewhere",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nHow R will refer to your data. R’s nickname for your data.↩︎\nThe correct function for the type of data you are reading in, e.g. RData, CSV, Excel.↩︎\nWhere is your data located? The directory path to your data.↩︎\nWhat is the filename of the file containing your data? Note that the extension often tells you what kind of data this is.↩︎\nSometimes, especially on a Mac, it is necessary to refer to your directory with a ~, e.g. ~/downloads/project1.RData or ~/Desktop/project1.RData or ~/project1/project1.RData.↩︎"
+  },
+  {
+    "objectID": "posts/quantitative-literacy/index.html",
+    "href": "posts/quantitative-literacy/index.html",
+    "title": "Quantitative Literacy",
+    "section": "",
+    "text": "I have been thinking a lot about this idea.\n\n“It is hard to imagine that anyone with a humanitarian worldview would argue against the need for a more quantitatively literate citizenry. Informed political decision-making, retirement planning, active parenting, and the vast majority of choices we make in our personal, occupational, and civic lives can be better served by improved quantitative understanding and reasoning, as well as accompanying action-oriented dispositions.” (Wiest et al., 2007)\n\n\n\n\n\nReferences\n\nWiest, L. R., Higgins, H. J., & Frost, J. H. (2007). Quantitative literacy for social justice. Equity & Excellence in Education, 40, 47–55. https://doi.org/10.1080/10665680601079894"
+  },
+  {
+    "objectID": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html",
+    "href": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html",
+    "title": "Why Spreadsheets Are A Bad Format For Storing Data",
+    "section": "",
+    "text": "Excel and Google Sheets are sometimes used as programs to collect and store data. Excel and Google Sheets are often used because they are the only programs that some individuals or agencies have for storing data. Additionally, many programs like Qualtrics or RedCap may use Excel as a default output format.\nExcel and other spreadsheet programs may also be used because spreadsheets can be very intuitive and easy ways of managing small amounts of data.\nHowever, Excel and Google Sheets may be problematic as a data storage solution for a number of reasons detailed below, especially as data sets grow in size. Notably, statistical programs like Stata, SAS, or SPSS all store additional information with each variable such as: a variable label, describing the contents of the variable, or the survey question that resulted in the variable; and a value label, which attaches qualitative information to each possible value of the response.1\nExcel and Google Sheets do not generally contain this extra information about each variable, or column of data, which may lead to extra work, extra effort, or even errors in working with quantitative information.\nThe data below are stored in Stata format, but could as easily be stored in SAS or SPSS format."
+  },
+  {
+    "objectID": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html#descriptive-statistics",
+    "href": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html#descriptive-statistics",
+    "title": "Why Spreadsheets Are A Bad Format For Storing Data",
+    "section": "Descriptive Statistics",
+    "text": "Descriptive Statistics\n\n\nuse \"simulated-happiness-data.dta\", clear\n\ntabulate Q1\n\n  How often |\ndo you feel |\n     happy? |      Freq.     Percent        Cum.\n------------+-----------------------------------\n      Never |         21       21.00       21.00\n     Rarely |         29       29.00       50.00\n  Sometimes |         28       28.00       78.00\n      Often |         22       22.00      100.00\n------------+-----------------------------------\n      Total |        100      100.00"
+  },
+  {
+    "objectID": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html#bar-graph",
+    "href": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html#bar-graph",
+    "title": "Why Spreadsheets Are A Bad Format For Storing Data",
+    "section": "Bar Graph",
+    "text": "Bar Graph\n\n\nuse \"simulated-happiness-data.dta\", clear\n\ngraph bar, over(Q1) title(\"How often do you feel happy?\") asyvars\n    \ngraph export mybar1.png, width(1500) replace\n\n\n\n\nBar Graph"
+  },
+  {
+    "objectID": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html#list-out-a-sample-of-the-data",
+    "href": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html#list-out-a-sample-of-the-data",
+    "title": "Why Spreadsheets Are A Bad Format For Storing Data",
+    "section": "List Out A Sample Of The Data",
+    "text": "List Out A Sample Of The Data\n\n\nuse \"simulated-happiness-data.dta\", clear\n\nlist in 1/10\n\n     | id          Q1 |\n     |----------------|\n  1. |  1       Never |\n  2. |  2   Sometimes |\n  3. |  3       Never |\n  4. |  4   Sometimes |\n  5. |  5   Sometimes |\n     |----------------|\n  6. |  6       Often |\n  7. |  7      Rarely |\n  8. |  8   Sometimes |\n  9. |  9       Never |\n 10. | 10      Rarely |\n     +----------------+"
+  },
+  {
+    "objectID": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html#descriptive-statistics-1",
+    "href": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html#descriptive-statistics-1",
+    "title": "Why Spreadsheets Are A Bad Format For Storing Data",
+    "section": "Descriptive Statistics",
+    "text": "Descriptive Statistics\n\n\nuse \"simulated-happiness-data-EXCEL.dta\", clear\n\ntabulate Q1\n\n         Q1 |      Freq.     Percent        Cum.\n------------+-----------------------------------\n          1 |         21       21.00       21.00\n          2 |         29       29.00       50.00\n          3 |         28       28.00       78.00\n          4 |         22       22.00      100.00\n------------+-----------------------------------\n      Total |        100      100.00\n\n\n\nBar Graph\n\n\nuse \"simulated-happiness-data-EXCEL.dta\", clear\n\ngraph bar, over(Q1) title(\"How often do you feel happy?\") asyvars\n    \ngraph export mybar2.png, width(1500) replace\n\n\n\n\nBar Graph"
+  },
+  {
+    "objectID": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html#footnotes",
+    "href": "posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html#footnotes",
+    "title": "Why Spreadsheets Are A Bad Format For Storing Data",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nOver time, I’ve realized that the issues discussed in this post also apply to the use of CSV (comma separated value) files. While CSV files are convenient, and can be imported by almost any software, they may lead to many of the same issues discussed in this post.↩︎"
+  },
+  {
+    "objectID": "posts/closeread-be-less-wrong/index.html",
+    "href": "posts/closeread-be-less-wrong/index.html",
+    "title": "Be Less Wrong",
+    "section": "",
+    "text": "George Box famously said:\n\n“All models are wrong, but some are useful.” (Box, 1979)\n\nDrawing upon this idea, I have developed a page to explore the idea of how quantitative methods can allow one to be less wrong about important social issues: https://globalfamilies.quarto.pub/be-less-wrong/.\nThe page uses ideas of scrollytelling to explain these ideas. closeread is a new extension for Quarto that allows one to present stories using scrollytelling.\n\n\n\nBe Less Wrong\n\n\n\n\n\n\nReferences\n\nBox, G. (1979). Robustness in the strategy of scientific model building. In R. L. Launer & G. N. Wilkinson (Eds.), Robustness in statistics. Academic Press, Inc. [Harcourt Brace Jovanovich, Publishers], New York-London."
+  },
+  {
+    "objectID": "posts/youve-got-to-be-kind/index.html",
+    "href": "posts/youve-got-to-be-kind/index.html",
+    "title": "You’ve Got To Be Kind",
+    "section": "",
+    "text": "A thought that has come up a lot recently with regard to teaching and research:\n\n“Hello babies. Welcome to Earth. It’s hot in the summer and cold in the winter. It’s round and wet and crowded. On the outside, babies, you’ve got a hundred years here. There’s only one rule that I know of, babies-“G** d*** it, you’ve got to be kind.” (Vonnegut, 1965)\n\n\n\n\n\nReferences\n\nVonnegut, K. (1965). God bless you, Mr. Rosewater; or, pearls before swine. Delacorte Press."
+  },
+  {
+    "objectID": "posts/patterns/index.html",
+    "href": "posts/patterns/index.html",
+    "title": "Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach",
+    "section": "",
+    "text": "A few years ago, we published an article entitled “Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach”. I’ve linked to that article elsewhere on this site, but wanted to make sure that the links were included in this blog, particularly as the article was one where we discuss positive parenting. Notably, the study found:\n\n“The [analysis] suggested caregiver discipline fell into three overall patterns: high behavioral control, moderate behavior control, and lower behavioral control. The lower behavioral control class was associated with the most advantageous child outcomes and household socio-demographic characteristics, whereas the high behavioral control class was associated with the most disadvantageous child outcomes and household characteristics.”\n\n\nArticle\nArcGIS Storymap\n\n\n\n\npatterns of caregiver discipline"
+  },
+  {
+    "objectID": "posts/Thailand-is-68/index.html",
+    "href": "posts/Thailand-is-68/index.html",
+    "title": "Thailand is #68",
+    "section": "",
+    "text": "Thailand is the 68th country to ban corporal punishment: https://agrogan1.github.io/research/cpbans/\n\n\n\nCountries With Bans on Corporal Punishment of Children"
+  },
+  {
+    "objectID": "posts/Bayesian-resources/index.html",
+    "href": "posts/Bayesian-resources/index.html",
+    "title": "Bayesian Resources",
+    "section": "",
+    "text": "I have compiled a list of Bayesian resources that I have moved here from the old stats-stuff page.\n\n\n\n\n\n\n\n\n\n\n\nDerivation of Bayes Theorem\n\n\n\n\n\n\n\n\n\nBasic Bayes\n\n\n\n\n\n\n\n\n\nThinking Through Bayesian Ideas\n\n\n\n\n\n\n\n\n\nNotes on Accepting the Null (\\(H_0\\)) Hypothesis\n\n\n\n\n\n\n\n\n\nBayesian Calculations\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/plain-old-nerd/index.html",
+    "href": "posts/plain-old-nerd/index.html",
+    "title": "Just a Plain Old Nerd",
+    "section": "",
+    "text": "Another quote that has recently struck me from the wonderful essay / poem by Julia Schanen (Schanen, 2021):\n\n“I’m getting tired of being mistaken for a genius,\nwhen I’m just a plain old nerd.\nStruggling, stumbling, pushing, experimenting.\nTrying to get more of something that makes me feel\nfascinated and uncomfortable,\nhopeless,\nstupid,\nexcited,\nreal.” (Schanen, 2021)\n\n\n\n\n\nReferences\n\nSchanen, J. (2021). Math person (Strogatz Prize entry). National Museum of Mathematics."
+  },
+  {
+    "objectID": "posts/articles-with-UNICEF-MICS-data/index.html",
+    "href": "posts/articles-with-UNICEF-MICS-data/index.html",
+    "title": "Articles With UNICEF MICS Data",
+    "section": "",
+    "text": "I have updated the list of articles published with the UNICEF Multiple Indicator Cluster Survey (MICS) data: https://agrogan1.github.io/research.html\nThis research is conducted in collaboration with colleagues Shawna Lee, Julie Ma, Kaitlin Ward, Garrett Pace, and Jorge Cuartas.\n\n\n\n\nLocations of Countries in MICS"
+  },
+  {
+    "objectID": "posts/interactions-are-symmetric/index.html",
+    "href": "posts/interactions-are-symmetric/index.html",
+    "title": "Interactions Are Symmetric",
+    "section": "",
+    "text": "Interactions are often presented as though one variable were the main independent variable x, while a second variable is the moderator variable m.\n\\[y = \\beta_0 + \\beta_1 x + \\beta_2 m + \\beta_3 xm + e_i \\tag{1}\\]\nIn truth, however, because of the commutative property of multiplication, \\(a \\times b = b \\times a\\), each variable can be thought of as moderating the other: \\(x \\times m = m \\times x\\).\nIn terms of visualizing interactions, it is perhaps more conventional to have the variable that is conceptualized as the independent variable, x, along the x axis, and to show separate regression lines for each value of the moderator m 1. However, despite being more conventional, it is mathematically plausible to present the inverse: m along the x axis, and different regression lines for different values of x 2."
+  },
+  {
+    "objectID": "posts/interactions-are-symmetric/index.html#footnotes",
+    "href": "posts/interactions-are-symmetric/index.html#footnotes",
+    "title": "Interactions Are Symmetric",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nIn the language of data visualization, I’d think of this as a classic problem of visualizing 3 dimensions of data on a 2 dimensional surface. In this approach, we are visualizing y by using the y axis, x by using the x axis, and m with color or linetype or both.↩︎\nAgain, in the language of data visualization, I’d think of this as a classic problem of visualizing 3 dimensions of data on a 2 dimensional surface. In this approach, we are visualizing y by using the y axis, m by using the x axis, and x with color or linetype or both.↩︎"
+  },
+  {
+    "objectID": "posts/two-page-Stata/index.html",
+    "href": "posts/two-page-Stata/index.html",
+    "title": "Two Page Stata",
+    "section": "",
+    "text": "I’ve made updates to Two Page Stata: https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.pdf [HTML].\nTwo Page Stata is intended to be an introduction to Stata in 2 pages. The treatment here is intended to be extremely brief, in order to create a kind of “cheat sheet” that can be presented in 2 pages."
+  },
+  {
+    "objectID": "posts/everything-is-obvious-once-you-know-the-answer/index.html",
+    "href": "posts/everything-is-obvious-once-you-know-the-answer/index.html",
+    "title": "Everything is Obvious Once You Know The Answer",
+    "section": "",
+    "text": "I have been thinking a lot about the idea that Everything Is Obvious, Once You Know The Answer, as detailed in the book with this title by Duncan Watts.\nThis seems to me especially true in Social Research.\nFor example, in our work with the international MICS data, we conducted a study of the link between gender inequality and physical child abuse. We expected to find that higher levels of gender inequality led to higher levels of physical abuse for female children, but not for male children. Instead, we found that higher levels of gender inequality were associated with higher levels of physical abuse for both male and female children. Equally interesting was that we found that gender inequality was predictive of levels of child abuse, while country level GDP was not.\nSimilarly, in a study of parenting during Covid-19, we expected to find that households with children would experience higher levels of anxiety and depression than households without children. Instead, we found the opposite. Being in a household with children was generally protective for anxiety and depression.\nIn his book, Watts uses the example from over 50 years ago, of a large study conducted by Lazarsfeld of veterans returning from World War II. The results are surprising. I’ve prepared a slide deck on these ideas here: https://agrogan1.github.io/teaching/everything-is-obvious/everything-is-obvious.html#/title-slide"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Andrew Grogan-Kaylor",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\nWeb\n\n\n\n\n\n\nEmail\n\n\n\n\n\n\nDeep Blue\n\n\n\n\n\n\nGitHub\n\n\n\n\n\n\nResearchGate\n\n\n\n\n\n\nGoogle Scholar\n\n\n\n\n\n\nOrcid\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Multilevel and Longitudinal Modeling\n\n\n\nmultilevel\n\ncourse\n\n\n\n\n\n\n\n\n\n\n\n\n\nCategorical Data Analysis\n\n\n\ncategorical\n\ncourse\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Visualization\n\n\n\ndataviz\n\ncourse\n\n\n\n\n\n\n\n\n\n\n\n\n\nMultilevel Workshop\n\n\n\nmultilevel\n\nresource\n\n\n\n\n\n\n\n\n\n\n\n\n\nVisualizing Multilevel Models\n\n\n\nmultilevel\n\ndataviz\n\nresource\n\n\n\n\n\n\n\n\n\n\n\n\n\nBe Less Wrong\n\n\n\nresource\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research Papers and Projects",
+    "section": "",
+    "text": "Many of these publications are available from Deep Blue.\n\n\n\n\n\n\nLocations of Countries in MICS\n\n\n\n\n\nProject website\n\n\n\n\n\n“How does context shape differences and changes in caregivers’ engagement in psychosocial stimulation over time? Evidence from a cross-national study”\n\nArcGIS StoryMap\n\n“Spillover of macro-level violence to parental physical abuse of children in low- and middle-income countries”\n\nOpen Access Article\nscrollytelling Version with closeread\n\n“Orphan discipline and child neglect: An analysis from 48 countries”\n\nArcGIS Storymap\n\n“Interactions of Gender Inequality and Parental Discipline Predicting Child Aggression in Low- and Middle-Income Countries”\n\nOpen Access Article\nArcGIS Storymap\n\n“Associations between 11 parental discipline behaviours and child outcomes across 60 countries”\n\nOpen Access Article\nArcGIS Storymap\nHTML Slides\nscrollytelling Version with closeread\n\n“Gender Inequality in Low- and Middle-Income Countries: Associations with Parental Physical Abuse and Moderation by Child Gender”\n\nOpen Access Article\nArcGIS Storymap\nPress Release\n\n“The Association between Spanking and Physical Abuse of Young Children in 56 Low- and Middle-Income Countries”\n\nArticle\nPress Release\nHTML Slides\nArcGIS Storymap\n\n“Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach”\n\nArticle\nArcGIS Storymap\n\n“Multilevel ecological analysis of the predictors of spanking across 65 countries”\n\nArticle\nArcGIS Storymap\n\n“Global Perspectives on Positive and Negative Parenting: A Bayesian Multilevel Analysis”\n\nAbstract\nArticle\n\n“Spanking and young children’s socioemotional development in low- and middle-income countries”\n\nOpen Access Article\nChild Trends News Service has released a well done video summarizing this research.\n\n\n\n\n\n\n\n“Adverse childhood experiences and spanking have similar associations with early behavior problems”\n“Unpacking the impact of adverse childhood experiences on adult mental health”\n“Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience”\n\n\n\n\n\n“Anxiety and Depression During COVID-19: Are Adults in Households with Children Faring Worse?”\n\nNews Release\n\n\n\n\n\n\n“Physical Punishment as a Predictor of Early Cognitive Development: Evidence From Econometric Approaches”\n“Physical punishment and Colombian children and adolescents’ cognitive and behavioral outcomes”\n“Civil conflict, domestic violence, and poverty as predictors of corporal punishment in Colombia”\n\n\n\n\n\nMeta-Analysis of Research on Corporal Punishment [PubMed Full Text] [Slides]\n\n\n\n\n\nData Visualizations of Country Level Bans on Corporal Punishment\n\n\n\n\n\nCountry Level Bans on Corporal Punishment\n\n\n\n\n\n\nEarlier Research On Corporal Punishment"
+  },
+  {
+    "objectID": "research.html#research-on-parenting-and-child-development",
+    "href": "research.html#research-on-parenting-and-child-development",
+    "title": "Research Papers and Projects",
+    "section": "",
+    "text": "Many of these publications are available from Deep Blue.\n\n\n\n\n\n\nLocations of Countries in MICS\n\n\n\n\n\nProject website\n\n\n\n\n\n“How does context shape differences and changes in caregivers’ engagement in psychosocial stimulation over time? Evidence from a cross-national study”\n\nArcGIS StoryMap\n\n“Spillover of macro-level violence to parental physical abuse of children in low- and middle-income countries”\n\nOpen Access Article\nscrollytelling Version with closeread\n\n“Orphan discipline and child neglect: An analysis from 48 countries”\n\nArcGIS Storymap\n\n“Interactions of Gender Inequality and Parental Discipline Predicting Child Aggression in Low- and Middle-Income Countries”\n\nOpen Access Article\nArcGIS Storymap\n\n“Associations between 11 parental discipline behaviours and child outcomes across 60 countries”\n\nOpen Access Article\nArcGIS Storymap\nHTML Slides\nscrollytelling Version with closeread\n\n“Gender Inequality in Low- and Middle-Income Countries: Associations with Parental Physical Abuse and Moderation by Child Gender”\n\nOpen Access Article\nArcGIS Storymap\nPress Release\n\n“The Association between Spanking and Physical Abuse of Young Children in 56 Low- and Middle-Income Countries”\n\nArticle\nPress Release\nHTML Slides\nArcGIS Storymap\n\n“Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach”\n\nArticle\nArcGIS Storymap\n\n“Multilevel ecological analysis of the predictors of spanking across 65 countries”\n\nArticle\nArcGIS Storymap\n\n“Global Perspectives on Positive and Negative Parenting: A Bayesian Multilevel Analysis”\n\nAbstract\nArticle\n\n“Spanking and young children’s socioemotional development in low- and middle-income countries”\n\nOpen Access Article\nChild Trends News Service has released a well done video summarizing this research.\n\n\n\n\n\n\n\n“Adverse childhood experiences and spanking have similar associations with early behavior problems”\n“Unpacking the impact of adverse childhood experiences on adult mental health”\n“Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience”\n\n\n\n\n\n“Anxiety and Depression During COVID-19: Are Adults in Households with Children Faring Worse?”\n\nNews Release\n\n\n\n\n\n\n“Physical Punishment as a Predictor of Early Cognitive Development: Evidence From Econometric Approaches”\n“Physical punishment and Colombian children and adolescents’ cognitive and behavioral outcomes”\n“Civil conflict, domestic violence, and poverty as predictors of corporal punishment in Colombia”\n\n\n\n\n\nMeta-Analysis of Research on Corporal Punishment [PubMed Full Text] [Slides]\n\n\n\n\n\nData Visualizations of Country Level Bans on Corporal Punishment\n\n\n\n\n\nCountry Level Bans on Corporal Punishment\n\n\n\n\n\n\nEarlier Research On Corporal Punishment"
+  },
+  {
+    "objectID": "research.html#community-based-research-in-alaska",
+    "href": "research.html#community-based-research-in-alaska",
+    "title": "Research Papers and Projects",
+    "section": "Community Based Research in Alaska",
+    "text": "Community Based Research in Alaska\n\nCulturally Grounded Strategies for Suicide and Alcohol Risk Prevention Delivered by Rural Alaska Native Communities: A Dynamic Wait‐listed Design Evaluation of the Qungasvik Intervention.\n\nOpen Access Article\n\nIndigenous Community-level Protective Factors in the Prevention of Suicide: Enlarging a Definition of Cultural Continuity in Rural Alaska Native Communities."
+  },
+  {
+    "objectID": "posts/variables-and-visualization/index.html",
+    "href": "posts/variables-and-visualization/index.html",
+    "title": "Variables and Visualization",
+    "section": "",
+    "text": "I am posting here a link to some older–but hopefully still useful–materials on data visualization: https://agrogan1.github.io/dataviz/variables-and-visualization/variables-and-visualization.html\n\n\n\nvariables and visualization"
+  },
+  {
+    "objectID": "posts/Tajikstan-is-67/index.html",
+    "href": "posts/Tajikstan-is-67/index.html",
+    "title": "Tajikstan is #67",
+    "section": "",
+    "text": "Tajikstan is the 67th country to ban corporal punishment: https://agrogan1.github.io/research/cpbans/\n\n\n\nCountries With Bans on Corporal Punishment of Children"
+  },
+  {
+    "objectID": "posts/bignumber/index.html",
+    "href": "posts/bignumber/index.html",
+    "title": "Making a ‘Big Number’ (And Circle) With R",
+    "section": "",
+    "text": "Sometimes a large number (and accompanying circle) can represent a compelling visualization. This flipbook explains how to make such visualizations in R: https://agrogan1.github.io/R/bignumber/bignumber.html"
+  },
+  {
+    "objectID": "posts/interactions-and-main-effects-mathematical/index.html",
+    "href": "posts/interactions-and-main-effects-mathematical/index.html",
+    "title": "Interactions And Main Effects Need To Be Interpreted Together",
+    "section": "",
+    "text": "As a teacher, with some frequency, I hear the idea from students that when statistically significant interaction terms are present, one does not need to interpret main effects at all, a contention apparently heard by others (Grace-Martin, n.d.), yet which to me appears mathematically and statistically unfounded.\nI’m thankful to a StataList post by Kolev (2022) for providing a mathematical foundation to this thinking.\nConsider the following equation with an interaction term:\n\\[y = \\beta_0 + \\beta_1 x + \\beta_2 m + \\beta_3 xm + e_i \\tag{1}\\]\nKolev (2022) uses derivatives to make a point. I’m going to use partial derivatives, because I think they are more accurate.\n\\[\\frac{\\partial y}{\\partial x} = \\beta_1 + \\beta_3 m \\tag{2}\\]\nSo, using the partial derivative of \\(y\\) with respect to \\(x\\), we see that this partial derivative depends both upon the main effect of \\(x\\), \\(\\beta_1\\), and the effect of \\(m\\), \\(\\beta_3 m\\).\nThat main effect, \\(\\beta_1\\), might be 0, but even then, it needs to be interpreted.\nInteractions and main effects need to be interpreted together.\n\n\n\n\nReferences\n\nGrace-Martin, K. (n.d.). Actually, you can interpret some main effects in the presence of an interaction. In The Analysis Factor. https://www.theanalysisfactor.com/interpret-main-effects-interaction\n\n\nKolev, J. (2022). Interpreting significant interaction effect while main effect is insignificant. In StataList. https://www.statalist.org/forums/forum/general-stata-discussion/general/1694948-interpreting-significant-interaction-effect-while-main-effect-is-insignificant"
+  },
+  {
+    "objectID": "posts/spillover-of-violence/index.html",
+    "href": "posts/spillover-of-violence/index.html",
+    "title": "Spillover of macro-level violence to parental physical abuse of children in low- and middle-income countries",
+    "section": "",
+    "text": "We have published an article entitled “Spillover of macro-level violence to parental physical abuse of children in low- and middle-income countries” in Child Abuse and Neglect.\nThe Open Access Article is available here: https://doi.org/10.1016/j.chiabu.2025.107468\nI prepared a scrollytelling webpage summarizing that research: https://globalfamilies.quarto.pub/spillover-of-violence/\n\n\n\nCountries in UNICEF MICS Data"
+  },
+  {
+    "objectID": "posts/can-Stata-make-aesthetically-appealing-graph/index.html",
+    "href": "posts/can-Stata-make-aesthetically-appealing-graph/index.html",
+    "title": "Can Stata Make An Aesthetically Appealing Graph?",
+    "section": "",
+    "text": "Background\n\n\nCode\nlibrary(Statamarkdown)\n\n\nAnother attempt to make an aesthetically appealing graph with Stata.\nI make use of the /// notation which allows me to spread the graph along multiple lines.\n\n\nGet The Data\n\n\nCode\nuse \"https://github.com/agrogan1/multilevel/raw/master/fixed-effects-example-World-Bank-data/WorldBankData.dta\", clear\n\n\n\n\nData Management\n\n\nCode\ndrop if region == \"Aggregates\" // drop Aggregates\n\n\n\n\nGraph\n\n\nCode\n\ntwoway (scatter GDP year, mcolor(%10)) /// scatterplot; transparent markers\n(lowess GDP year, lwidth(thick)),  /// lowess smoother\nxlabel(, angle(270) labsize(vsmall)) /// x label tweaks\nylabel(, angle(0) labsize(vsmall)) /// y label tweaks\nby(region, title(\"GDP by Year\") ///\nnote (\"World Bank Data: Every Dot is a Country-Year\") ///\nlegend(off)) ///\nsubtitle(, size(small)) ///\nxsize(5) ysize(5) /// x and y size\nscheme(michigan) \n    \ngraph export aesthetically-appealing-World-Bank.svg, width(2000) replace\n\n\n\n\n\nAn Aesthetically Appealing Graph of World Bank Data"
+  },
+  {
+    "objectID": "posts/visualizing-disparities-in-a-categorical-outcome/index.html",
+    "href": "posts/visualizing-disparities-in-a-categorical-outcome/index.html",
+    "title": "Visualizing Disparities in a Categorical Risk Factor or Outcome",
+    "section": "",
+    "text": "Visualizing categorical data presents unique challenges. A common solution is a bar graph, which may often be the best data visualization solution.\nHowever there are also some alternatives to bar graphs.\nBelow I present some options for bar graphs, and some possible alternative strategies.\n\nNote that the outcomes–which you could think of as a good outcome, or a bad outcome, are unevenly distributed by group. Therefore, these data represent inequities or disparities."
+  },
+  {
+    "objectID": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#stacked-bar-graph",
+    "href": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#stacked-bar-graph",
+    "title": "Visualizing Disparities in a Categorical Risk Factor or Outcome",
+    "section": "Stacked Bar Graph",
+    "text": "Stacked Bar Graph\n\n\nShow the code\nggplot(mydata, aes(x = group, # x is group\n                   fill = outcome)) + # color fill is outcome\n  geom_bar() + # bars\n  scale_fill_manual(values = michigancolors()) + # Michigan colors\n  theme_minimal() # nice theme"
+  },
+  {
+    "objectID": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#unstacked-bar-graph",
+    "href": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#unstacked-bar-graph",
+    "title": "Visualizing Disparities in a Categorical Risk Factor or Outcome",
+    "section": "Unstacked Bar Graph",
+    "text": "Unstacked Bar Graph\n\n\nShow the code\nggplot(mydata, aes(x = group, # x is group\n                   fill = outcome)) + # color fill is outcome\n  geom_bar(position = position_dodge()) + # \"dodged\" bars\n  scale_fill_manual(values = michigancolors()) + # Michigan colors\n  theme_minimal() # nice theme"
+  },
+  {
+    "objectID": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#faceted-bar-graph",
+    "href": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#faceted-bar-graph",
+    "title": "Visualizing Disparities in a Categorical Risk Factor or Outcome",
+    "section": "Faceted Bar Graph",
+    "text": "Faceted Bar Graph\n\n\nShow the code\nggplot(mydata, aes(x = outcome, # x is outcome\n                   fill = outcome)) + # color fill is outcome\n  geom_bar() + # bars\n  scale_fill_manual(values = michigancolors()) + # Michigan colors\n  theme_minimal() + # nice theme\n  theme(axis.text.x = element_text(size = rel(.75))) + # smaller x axis text\n  facet_wrap(~group) # facet on group"
+  },
+  {
+    "objectID": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#call-the-libraries",
+    "href": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#call-the-libraries",
+    "title": "Visualizing Disparities in a Categorical Risk Factor or Outcome",
+    "section": "Call The Libraries",
+    "text": "Call The Libraries\n\n\nShow the code\nlibrary(waffle) # waffle geometry\n\nlibrary(dplyr) # data wrangling"
+  },
+  {
+    "objectID": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#make-a-data-set-of-counts",
+    "href": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#make-a-data-set-of-counts",
+    "title": "Visualizing Disparities in a Categorical Risk Factor or Outcome",
+    "section": "Make A Data Set Of Counts",
+    "text": "Make A Data Set Of Counts\n\n\nShow the code\n# make a data set of counts\n\nmycounts &lt;- mydata %&gt;%\n  group_by(group, outcome) %&gt;% # group by group & outcome\n  tally() # count up observations\n\npander(mycounts) # replay this data\n\n\n\n\n\n\n\n\n\n\ngroup\noutcome\nn\n\n\n\n\nGroup A\nbeneficial outcome\n55\n\n\nGroup A\nundesirable outcome\n40\n\n\nGroup B\nbeneficial outcome\n50\n\n\nGroup B\nundesirable outcome\n75"
+  },
+  {
+    "objectID": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#make-the-waffle-plot",
+    "href": "posts/visualizing-disparities-in-a-categorical-outcome/index.html#make-the-waffle-plot",
+    "title": "Visualizing Disparities in a Categorical Risk Factor or Outcome",
+    "section": "Make The Waffle Plot",
+    "text": "Make The Waffle Plot\n\n\nShow the code\n# use geom_waffle with this data set of counts\n\nggplot(mycounts, # use this new data\n       aes(fill = outcome, # color fill is outcome\n           values = n)) + # values are n\n  geom_waffle(color = \"grey\") + # waffle geometry w/ grey separator\n  facet_wrap(~group) + # facet on group\n  coord_equal() + # squares!\n  scale_fill_manual(values = michigancolors()) + # Michigan colors\n  theme_void()  # nice theme"
+  },
+  {
+    "objectID": "posts/interviewed-in-the-Lancet/index.html",
+    "href": "posts/interviewed-in-the-Lancet/index.html",
+    "title": "Interviewed in The Lancet Child & Adolescent Health",
+    "section": "",
+    "text": "I was quoted in this interview in The Lancet Child & Adolescent Health on corporal punishment: The Strange Endurance of Corporal Punishment"
+  },
+  {
+    "objectID": "posts/why-cant-numbers-be-beautiful-too/index.html",
+    "href": "posts/why-cant-numbers-be-beautiful-too/index.html",
+    "title": "Why can’t numbers be beautiful too?",
+    "section": "",
+    "text": "“Why can’t numbers be beautiful too?\nWe all talk of beautiful words, art, buildings and they’re not part of the natural world, either. An x in Algebra is no more abstract than an idea in philosophy, just more useful.\nBut it can’t be use that makes the difference. Keats found beauty in a Grecian urn, surely practical at some time and no one is blind to the beauty of symmetry.\nWe all get Blake’s awe of the tiger’s stripes. Why not awe at Gaussian curves? Of course, I know there is no great beauty in a single number, in a four or a seven or an eight, but it is the same\nwith the alphabet. Where is the wonder in a b or a k or a t? It is only the combinations, the meanings, the relationships between the letters that make the words and sounds we love.\n– And so, why can’t my numbers be beautiful to me? Why the scorn, the doubt in your face? Do you think I am brittle and dusty as old paper?\nLook again. See the numbers shine in my eyes”\n\n– Pye (2011)\n\n\n\n\nReferences\n\nPye, E. (2011). Eveline Pye: Poetry in numbers, by Julian Champkin. Significance, 8(3), 127–130. https://doi.org/10.1111/j.1740-9713.2011.00510.x"
+  },
+  {
+    "objectID": "posts/how-to-choose-a-chart-a-visual-guide-with-Stata/index.html",
+    "href": "posts/how-to-choose-a-chart-a-visual-guide-with-Stata/index.html",
+    "title": "How To Choose A Chart",
+    "section": "",
+    "text": "I’ve updated my graphing tutorial for Stata: How To Choose A Chart - A Statistically Informed Visual Guide With Stata Commands"
+  },
+  {
+    "objectID": "posts/orphan-storymap/index.html",
+    "href": "posts/orphan-storymap/index.html",
+    "title": "Orphan discipline and child neglect: An analysis from 48 countries",
+    "section": "",
+    "text": "We have published an article entitled “Orphan discipline and child neglect: An analysis from 48 countries” in Child Abuse and Neglect.\nI prepared an ArcGIS StoryMap summarizing that research: https://arcg.is/1HjKyW2"
+  },
+  {
+    "objectID": "posts/graphing-change-over-time/index.html",
+    "href": "posts/graphing-change-over-time/index.html",
+    "title": "Graphing Change Over Time",
+    "section": "",
+    "text": "I have updated a tutorial on Graphing Change Over Time"
+  },
+  {
+    "objectID": "posts/logic-models-Mermaid/index.html",
+    "href": "posts/logic-models-Mermaid/index.html",
+    "title": "A Logic Model Using the mermaid Diagram Language",
+    "section": "",
+    "text": "Logic models are used extensively in program development and program evaluation. I have worked on a logic model in graphviz. Here is an implementation using the mermaid graphing language.\nWhile still sometimes not completely intuitive, I think that the language of mermaid is more intuitive than my graphviz example.\nmermaid is implemented in RStudio using Quarto. This logic model was made with RStudio.\nThis proof of concept makes use of subgraphs to organize the components of a logic model.\nLike all programming languages, mermaid may facilitate automation, replication, and documentation of a project. In this way, using mermaid may make creating a logic model easier.\nLike all programming languages, mermaid may be finicky and hard to tweak. In this way, using mermaid may make creating a logic model much more difficult.\nIt may be much easier to use PowerPoint or Google Slides to create a logic model!!!\n\n\nCode\nflowchart LR\n\n    %% first block: Domains\n\n    subgraph Domains\n    direction TB\n    D1(Workshops)\n    D2(Publications)\n    end\n\n    %% second block: Activities\n\n    subgraph Activities\n    direction TB\n    A1(Meetings)\n    A2(Social Media Posts)\n    A3(Information Cards)\n    end\n\n    %% third block: Outcomes\n\n    subgraph Outcomes\n    direction TB\n    O1(Better Parenting)\n    end\n\n    %% links\n\n    D1--&gt;A1\n    D2--&gt;A2\n    D2--&gt;A3\n    A1--&gt;O1\n    A2--&gt;O1\n    A3--&gt;O1\n\n\n\n\n\nflowchart LR\n\n    %% first block: Domains\n\n    subgraph Domains\n    direction TB\n    D1(Workshops)\n    D2(Publications)\n    end\n\n    %% second block: Activities\n\n    subgraph Activities\n    direction TB\n    A1(Meetings)\n    A2(Social Media Posts)\n    A3(Information Cards)\n    end\n\n    %% third block: Outcomes\n\n    subgraph Outcomes\n    direction TB\n    O1(Better Parenting)\n    end\n\n    %% links\n\n    D1--&gt;A1\n    D2--&gt;A2\n    D2--&gt;A3\n    A1--&gt;O1\n    A2--&gt;O1\n    A3--&gt;O1"
+  },
+  {
+    "objectID": "posts/R-resources/index.html",
+    "href": "posts/R-resources/index.html",
+    "title": "R Resources",
+    "section": "",
+    "text": "I have compiled a list of R resources that I have moved here from the old stats-stuff page.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to R\n\n\n\n\n\n\n\n\n\n\n\n\nQuick Introduction To R\n\n\n\n\n\n\n\n\n\n\n\n\nColors in R\n\n\n\n\n\n\n\n\n\n\n\n\nViridis Colors\n\n\n\n\n\n\n\n\n\n\n\n\nWorking With Data From the World Bank Indicators\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to ggplot2\n\n\n\n\n\n\n\n\n\n\n\n\nTwo Page ggplot\n\n\n\n\n\n\n\n\n\n\n\n\nWhat Geometry Do I Use?\n\n\n\n\n\n\n\n\n\n\n\n\nggplot Flipbook\n\n\n\n\n\n\n\n\n\n\n\n\nggplot Flipbook for Global Families Project\n\n\n\n\n\n\n\n\n\n\n\n\nAdvanced ggplot\n\n\n\n\n\n\n\n\n\n\n\n\nMulti-page dplyr\n\n\n\n\n\n\n\n\n\n\n\n\nThemes for Xaringan\n\n\n\n\n\n\n\n\n\n\nShould Everything Be A Bar Graph?\n\n\n\n\n\n\n\n\n\n\n\n\nData Driven Document Demo\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/MLM-longitudinal-data/index.html",
@@ -1337,32 +1358,25 @@
     "text": "I have compiled a list of some selected statistical resources that I have moved here from the old stats-stuff page.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat is Data?\n\n\n\n\n\n\n\n\n\n\n\n\nQuantitative Data Analysis\n\n\n\n\n\n\n\n\n\n\n\n\nCausality\n\n\n\n\n\n\n\n\n\n\nt-test\n\n\n\n\n\n\n\n\n\n\n\n\nCorrelation\n\n\n\n\n\n\n\n\n\n\n\n\nThinking about Correlations\n\n\n\n\n\n\n\n\n\n\nRegression Tutorial\n\n\n\n\n\n\n\n\n\n\nRegression Demo\n\n\n\n\n\n\n\n\n\n\n\n\nExploring Logistic Regression\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/can-Stata-make-a-beautiful-graph/index.html",
-    "href": "posts/can-Stata-make-a-beautiful-graph/index.html",
-    "title": "Can Stata Make A Beautiful Graph?",
+    "objectID": "posts/GIS-and-mapping/index.html",
+    "href": "posts/GIS-and-mapping/index.html",
+    "title": "GIS and Mapping",
     "section": "",
-    "text": "Introduction 🌲\nThere is sometimes a debate–shall we say–about whether Stata can make beautiful graphs, particularly in comparison to using ggplot in R. Below, I try to use as many of Stata’s options as I can to make a beautiful graph. I believe that this Stata graph comes close to being as beautiful of a graph as would be made by ggplot (and perhaps the syntax is a little more intuitive).\nI use green and gold since they are common colors for forestry and park signage.\n\n\nData Source 🌲\nThe data used in this example are derived from the R package by Robinson & Hamann (2020).\nAccording to the documentation, the source of these data are: “von Guttenberg’s Norway spruce (Picea abies [L.] Karst) tree measurement data.”\n\n\n\nOld Tjikko, a 9,550 Year Old Norway Spruce in Sweden\n\n\nThe documentation goes on to further note that:\n\n“The data are measures from 107 trees. The trees were selected as being of average size from healthy and well stocked stands in the Alps.”\n\n\nclear all\n\nuse \"https://github.com/agrogan1/multilevel/raw/master/mlm-R2-gutten/gutten.dta\"\n\n\n\nA Simple Graph 🌲\nThe default graphing scheme in Stata 18 is much improved over previous versions, and the below graph may be very good for many purposes.\n\nuse gutten.dta\n\ntwoway (scatter height age_base) (mspline height age_base)\n    \ngraph export gutten0.svg, width(2000) replace\n\ngraph export gutten0.png, width(2000) replace\n\n\n\n\nA Simple Graph of the Gutten Trees\n\n\n\n\nA Beautiful Graph 🌲\nBelow please find an admittedly complicated graph command. Note, however, that the graph builds upon basic ideas that we want a twoway graph, with a scatterplot and a mspline (median spline) smoother. Everything else is just an option to improve the appearance of the graph.\nI make extensive use of the /// notation which allows me to spread the graph along multiple lines.\n\nuse gutten.dta\n\ntwoway /// two way graph\n(scatter height age_base, /// scatterplot\nmcolor(dkgreen%25) msymbol(circle) msize(medium)) /// dark green transparent markers\n(mspline height age_base, /// median spline \nlcolor(gold) lwidth(thick)), /// gold line\ntitle(\"Tree Height by Tree Age\") /// title\nxtitle(\"Tree Age\") /// title for x axis\nytitle(\"Tree Height\") /// title for y axis\ncaption(\"Gutten Tree Data\") /// caption\nlegend(order(1 \"trees\" 2 \"median spline\") position(6) rows(1)) /// better labels and format for legend\naspectratio(.5) // better aspect ratio\n\ngraph export gutten.png, width(2000) replace\n    \ngraph export gutten.svg, width(2000) replace\n\n\n\n\nA Beautiful? Graph of the Gutten Trees\n\n\n\n\n\n\n\nReferences\n\nRobinson, A., & Hamann, J. (2020). FAwR: Functions and datasets for \"forest analytics with r. https://doi.org/10.32614/CRAN.package.FAwR"
+    "text": "I’ve been working on some ideas for a GIS and Mapping Course that may happen some day.\n\n\n\n\n\n\n\n\nFigure 1: Countries of the World"
   },
   {
-    "objectID": "posts/pairs-plots/index.html",
-    "href": "posts/pairs-plots/index.html",
-    "title": "Pairs Plots",
+    "objectID": "posts/Mauritius-is-65/index.html",
+    "href": "posts/Mauritius-is-65/index.html",
+    "title": "Mauritius is #65",
     "section": "",
-    "text": "For a few recent projects, I have had to quickly get up to speed on new data. If I’m focusing on a relatively small number of variables–perhaps a subset of a much larger dataset–I have found the pairs plot an incredibly useful tool for learning about new data, and getting a visual sense of the distributions of the variables and their relationships. After experimenting with a few different libraries, I have come to really like pairs.panels in the psych (Revelle, 2025) library. I provide an example of pairs.panels below, but I also sometime use what seems to me to be the quite similar in spirit corrgram (Wright, 2021) library.\nFor this example, I use the data from my Multilevel Workshop site.\n\nCall Relevant Libraries\n\n\nShow the code\nlibrary(haven) # read Stata data\n\nlibrary(psych) # useful routines for psych data\n\n\n\n\nGet The Data\n\n\nShow the code\nmydata &lt;- read_dta(\"simulated_multilevel_data.dta\")\n\n\n\n\nVariable Labels\n\n\nShow the code\nlabelled::look_for(mydata) # look at variables and variable labels\n\n\n pos variable            label                          col_type missing values\n 1   country             country id                     dbl      0             \n 2   HDI                 Human Development Index        dbl      0             \n 3   family              family id                      dbl      0             \n 4   id                  unique country family id       chr      0             \n 5   identity            hypothetical identity group v~ dbl      0             \n 6   intervention        recieved intervention          dbl      0             \n 7   physical_punishment physical punishment in past w~ dbl      0             \n 8   warmth              parental warmth in past week   dbl      0             \n 9   outcome             beneficial outcome             dbl      0             \n\n\n\n\nPairs Plot\n\n\n\n\n\n\nOptions Options Options\n\n\n\n\n\nHere I set show.points to FALSE for two reasons: by design, most of the variables in my simulated data are uncorrelated, showing the points seemed to somehow create more confusion than clarity; there are a lot of data points, and for that reason as well, showing the points seemed to create more confusion than clarity. You of course can experiment with setting show.points to TRUE\n\n\n\n\n\n\n\n\n\nWhat Do I See? What Am I Looking For?\n\n\n\n\n\nIn the diagonal panel, I see the distribution of each variable by itself. In the bottom panel, there are are smoother plots of each variable against each other. Here I am looking for lines that are not flat–in part or in whole–because this indicates that one variable has a relationship with another. In the top panel, I see the correlations of each variable with each other, and I am looking for either negative or positive numbers that depart significantly from zero.\nIt seems in this example, that parental warmth and physical punishment have the biggest association with outcome. In regression models, it turns out that intervention also has a relationship with outcome, but that is harder to see here. It is worth investigating even smaller correlations further!\n\n\n\n\n\nShow the code\npairs.panels(mydata, # pairs plot\n             show.points = FALSE) # don't show data points\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReferences\n\nRevelle, W. (2025). Psych: Procedures for psychological, psychometric, and personality research. Northwestern University. https://CRAN.R-project.org/package=psych\n\n\nWright, K. (2021). Corrgram: Plot a correlogram. https://doi.org/10.32614/CRAN.package.corrgram"
+    "text": "Mauritius is the 65th country to ban corporal punishment: https://agrogan1.github.io/research/cpbans/"
   },
   {
-    "objectID": "posts/closeread/index.html",
-    "href": "posts/closeread/index.html",
-    "title": "Associations between 11 parental discipline behaviors and child outcomes across 60 countries",
+    "objectID": "posts/discipline-GII/index.html",
+    "href": "posts/discipline-GII/index.html",
+    "title": "Interactions Of Gender Inequality And Parental Discipline Predicting Child Aggression In Low- And Middle-Income Countries",
     "section": "",
-    "text": "closeread is a new extension for Quarto that allows one to present stories using scrollytelling.\nI have developed a scrollytelling page to present the results of an article that we published last year, (Ward et al., 2023): https://globalfamilies.quarto.pub/parenting/.\n\n\n\npositive parenting\n\n\n\n\n\n\nReferences\n\nWard, K. P., Grogan-Kaylor, A. C., Ma, J., Pace, G., & Lee, S. J. (2023). Associations between 11 parental discipline behaviors and child outcomes across 60 countries. BMJ Open. https://doi.org/10.1136/bmjopen-2021-058439"
-  },
-  {
-    "objectID": "stats-stuff.html",
-    "href": "stats-stuff.html",
-    "title": "Stats Stuff",
-    "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nMany Blog Entries Have Relevant Content\n\n\n\nStata\n\nR\n\nmultilevel\n\nBayes\n\ndataviz\n\n\n\n\n\n\n\n\n\n\n\n\n\nMany Entires in Teaching Have Relevant Content\n\n\n\nStata\n\nR\n\nmultilevel\n\nBayes\n\ndataviz\n\n\n\n\n\n\nNo matching items"
+    "text": "We’ve just published an article entitled Interactions Of Gender Inequality And Parental Discipline Predicting Child Aggression In Low- And Middle-Income Countries.\nContrary to expectations from theory, we find that parenting effects are weaker in contexts of higher gender inequality, and stronger in contexts of lower gender inequality. We recommend that interventions to improve parenting and child well being need to have a multilevel conceptualization, and to focus on both parenting and reducing gender inequality at a country level.\n\nOpen Access Article\nArcGIS Storymap"
   },
   {
     "objectID": "about.html",
@@ -1384,26 +1398,5 @@
     "title": "Security Policy",
     "section": "",
     "text": "Please report any security issues directly to agrogan@umich.edu."
-  },
-  {
-    "objectID": "posts/R-resources/index.html",
-    "href": "posts/R-resources/index.html",
-    "title": "R Resources",
-    "section": "",
-    "text": "I have compiled a list of R resources that I have moved here from the old stats-stuff page.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to R\n\n\n\n\n\n\n\n\n\n\n\n\nQuick Introduction To R\n\n\n\n\n\n\n\n\n\n\n\n\nColors in R\n\n\n\n\n\n\n\n\n\n\n\n\nViridis Colors\n\n\n\n\n\n\n\n\n\n\n\n\nWorking With Data From the World Bank Indicators\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to ggplot2\n\n\n\n\n\n\n\n\n\n\n\n\nTwo Page ggplot\n\n\n\n\n\n\n\n\n\n\n\n\nWhat Geometry Do I Use?\n\n\n\n\n\n\n\n\n\n\n\n\nggplot Flipbook\n\n\n\n\n\n\n\n\n\n\n\n\nggplot Flipbook for Global Families Project\n\n\n\n\n\n\n\n\n\n\n\n\nAdvanced ggplot\n\n\n\n\n\n\n\n\n\n\n\n\nMulti-page dplyr\n\n\n\n\n\n\n\n\n\n\n\n\nThemes for Xaringan\n\n\n\n\n\n\n\n\n\n\nShould Everything Be A Bar Graph?\n\n\n\n\n\n\n\n\n\n\n\n\nData Driven Document Demo\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/Bayesian-resources/index.html",
-    "href": "posts/Bayesian-resources/index.html",
-    "title": "Bayesian Resources",
-    "section": "",
-    "text": "I have compiled a list of Bayesian resources that I have moved here from the old stats-stuff page.\n\n\n\n\n\n\n\n\n\n\n\nDerivation of Bayes Theorem\n\n\n\n\n\n\n\n\n\nBasic Bayes\n\n\n\n\n\n\n\n\n\nThinking Through Bayesian Ideas\n\n\n\n\n\n\n\n\n\nNotes on Accepting the Null (\\(H_0\\)) Hypothesis\n\n\n\n\n\n\n\n\n\nBayesian Calculations\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/multilevel-resources/index.html",
-    "href": "posts/multilevel-resources/index.html",
-    "title": "Multilevel Resources",
-    "section": "",
-    "text": "I have compiled a list of some multilevel resources that I have moved here from the old stats-stuff page.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMultilevel Modeling in Stata With the Gutten Tree Data\n\n\n\n\n\n\n\n\n\n\n\n\nlmer Demo With The Gutten Tree Demo\n\n\n\n\n\n\n\n\n\n\n\n\nBayesian and Frequentist Multilevel Modeling\n\n\n\n\n\n\n\n\n\n\n\n\nBayesian Longitudinal MLM With the Gutten Tree Data\n\n\n\n\n\nNo matching items"
   }
 ]

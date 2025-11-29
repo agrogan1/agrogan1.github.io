@@ -18,9 +18,6 @@ listing:
     - title: "Teaching"
       path: teaching.qmd
       image: plant.png
-    - title: "Stats Stuff"
-      path: stats-stuff.qmd
-      image: nautilus-new.png
     - title: "About Me"
       path: about.qmd  
       image: forest.png   
