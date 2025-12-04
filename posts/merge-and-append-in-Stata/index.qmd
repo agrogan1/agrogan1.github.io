@@ -1,0 +1,35 @@
+---
+title: "Merging And Appending Data With Stata"
+author: "Andy Grogan-Kaylor"
+date: 2025-12-1
+categories: [stats, Stata, workflow]
+execute: 
+  echo: true
+code-fold: true
+code-summary: "Show the code"
+image: "merge.png"
+draft: false
+---
+
+# Introduction
+
+`merge`-ing data and `append`-ing data are often confused. In this post, I try to quickly distinguish the two.
+
+# `merge`-ing Data Compared To `append`-ing Data
+
+1. Visually, `merge` can be thought of as placing data sets side by side, effectively making a wider data set. 
+2. Visually, `append` can be thought of as stacking data sets on top of each other, making a longer data set.
+3. In both procedures, you likely want to start by `use`-ing each data set, only `keep`-ing variables of interest, and `save`-ing under a new filename.
+4. In `merge`-ing you are more likely to want to ensure that variables in *different* waves will have *different* names. You may have to `rename` variables to accomplish this. 
+5. When `append`-ing, you are more likely to want rename the variables in *different* waves of data so that they have the *same* name. Make sure each wave of data has a *time* variable for the wave before you `append`!
+
+::: {layout="[[2,1]]"}
+![`merge`-ing data](merge.png)
+
+![`append`-ing data](append.png)
+:::
+
+
+
+
+

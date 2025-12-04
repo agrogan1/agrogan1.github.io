@@ -3,6 +3,7 @@
     "listing": "/blog.html",
     "items": [
       "/posts/multilevel-thinking/index.html",
+      "/posts/merge-and-append-in-Stata/index.html",
       "/posts/Bayesian-resources/index.html",
       "/posts/R-resources/index.html",
       "/posts/stats-stuff/index.html",
