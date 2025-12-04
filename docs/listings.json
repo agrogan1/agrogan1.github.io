@@ -118,11 +118,7 @@
     "items": []
   },
   {
-    "listing": "/posts/Bayesian-resources/index.html",
-    "items": []
-  },
-  {
-    "listing": "/contact.html",
+    "listing": "/posts/R-resources/index.html",
     "items": []
   },
   {
@@ -130,7 +126,11 @@
     "items": []
   },
   {
-    "listing": "/posts/R-resources/index.html",
+    "listing": "/contact.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/Bayesian-resources/index.html",
     "items": []
   },
   {

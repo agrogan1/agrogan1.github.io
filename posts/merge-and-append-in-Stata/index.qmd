@@ -21,7 +21,7 @@ draft: false
 2. Visually, `append` can be thought of as stacking data sets on top of each other, making a longer data set.
 3. In both procedures, you likely want to start by `use`-ing each data set, only `keep`-ing variables of interest, and `save`-ing under a new filename.
 4. In `merge`-ing you are more likely to want to ensure that variables in *different* waves will have *different* names. You may have to `rename` variables to accomplish this. 
-5. When `append`-ing, you are more likely to want rename the variables in *different* waves of data so that they have the *same* name. Make sure each wave of data has a *time* variable for the wave before you `append`!
+5. When `append`-ing, you are more likely to want `rename` the variables in *different* waves of data so that they have the *same* name. Make sure each wave of data has a *time* variable for the wave before you `append`!
 
 ::: {layout="[[2,1]]"}
 ![`merge`-ing data](merge.png)
