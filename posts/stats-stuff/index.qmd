@@ -27,6 +27,7 @@ listing:
       categories: [stats, causality, interactive]
     - title: "t-test"
       path: https://agrogan.shinyapps.io/shiny-t-test/
+      image: t-test.png
       categories: [stats, interactive]
     - title: "Correlation"
       path: https://agrogan.shinyapps.io/correlation_demo/
@@ -38,9 +39,11 @@ listing:
       categories: [stats, interactive]
     - title: "Regression Tutorial" 
       path: https://agrogan1.github.io/teaching/new-regression-tutorial/
+      image: regression.png
       categories: [stats]
     - title: "Regression Demo"
       path: https://agrogan.shinyapps.io/regression_demo/
+      image: regression.png
       categories: [stats, interactive]
     - title: "Exploring Logistic Regression"
       path: https://agrogan.shinyapps.io/exploring_logistic_regression/
@@ -48,4 +51,4 @@ listing:
       image: logistic.png
 ---
 
-I have compiled a list of some selected statistical resources that I have moved here from the old stats-stuff page.
+I have compiled a list of some selected statistical resources that I have moved here from the old stats-stuff page that was previously on this site.
