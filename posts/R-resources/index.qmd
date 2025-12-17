@@ -67,6 +67,7 @@ listing:
       categories: [R, Xaringan]
     - title: "Should Everything Be A Bar Graph?"
       path: https://agrogan1.github.io/dataviz/should-everything-be-a-bar-graph/
+      image: bargraph.png
       categories: [R, dataviz]
     - title: "Data Driven Document Demo"
       path: https://agrogan1.github.io/dataviz/data-driven-document-demo/
