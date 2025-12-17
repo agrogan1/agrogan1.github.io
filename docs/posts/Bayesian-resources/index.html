@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] }],
       
       searchColumns: ["listing-title","listing-image","listing-categories"],
     };
@@ -353,59 +353,80 @@ window.Quarto = {
 
 
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="QmF5ZXM=">
-<a href="https://agrogan1.github.io/Bayes/Bayes-Theorem/Bayes-Theorem.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Derivation of Bayes Theorem
-</h5>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="QmF5ZXM=">
-<a href="https://agrogan1.github.io/Bayes/basic-Bayes/basic-Bayes.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Basic Bayes
-</h5>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="QmF5ZXMlMkNpbnRlcmFjdGl2ZQ==">
-<a href="https://agrogan.shinyapps.io/Thinking-Through-Bayes/" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Thinking Through Bayesian Ideas
-</h5>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="QmF5ZXM=">
-<a href="https://agrogan1.github.io/Bayes/accepting-H0/accepting-H0.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Notes on Accepting the Null (<span class="math inline">\(H_0\)</span>) Hypothesis
-</h5>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="QmF5ZXM=">
-<a href="https://agrogan1.github.io/Bayes/Bayesian-calculations/Bayesian-calculations.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Bayesian Calculations
-</h5>
-</div>
-</div></a>
-</div>
-</div>
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<table class="quarto-listing-table table table-hover">
+<thead>
+<tr>
+
+<th>
+Title
+</th>
+
+<th>
+ 
+</th>
+
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0" data-categories="QmF5ZXM=" data-listing-title-sort="Derivation of Bayes Theorem" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://agrogan1.github.io/Bayes/Bayes-Theorem/Bayes-Theorem.html" class="title listing-title">Derivation of Bayes Theorem</a>
+</td>
+<td>
+<span class="listing-image"><img loading="lazy" src="https://agrogan1.github.io/Bayes/basic-Bayes/Thomas_Bayes.png" style="height: 40px;"></span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-categories="QmF5ZXM=" data-listing-title-sort="Basic Bayes" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://agrogan1.github.io/Bayes/basic-Bayes/basic-Bayes.html" class="title listing-title">Basic Bayes</a>
+</td>
+<td>
+<span class="listing-image"><img loading="lazy" src="https://agrogan1.github.io/Bayes/basic-Bayes/Thomas_Bayes.png" style="height: 40px;"></span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-categories="QmF5ZXMlMkNpbnRlcmFjdGl2ZQ==" data-listing-title-sort="Thinking Through Bayesian Ideas" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://agrogan.shinyapps.io/Thinking-Through-Bayes/" class="title listing-title">Thinking Through Bayesian Ideas</a>
+</td>
+<td>
+<span class="listing-image"><img loading="lazy" src="https://agrogan1.github.io/Bayes/basic-Bayes/Thomas_Bayes.png" style="height: 40px;"></span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-categories="QmF5ZXM=" data-listing-title-sort="Notes on Accepting the Null ($H_0$) Hypothesis" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://agrogan1.github.io/Bayes/accepting-H0/accepting-H0.html" class="title listing-title">Notes on Accepting the Null (<span class="math inline">\(H_0\)</span>) Hypothesis</a>
+</td>
+<td>
+<span class="listing-image"><img loading="lazy" src="https://agrogan1.github.io/Bayes/basic-Bayes/Thomas_Bayes.png" style="height: 40px;"></span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-categories="QmF5ZXM=" data-listing-title-sort="Bayesian Calculations" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://agrogan1.github.io/Bayes/Bayesian-calculations/Bayesian-calculations.html" class="title listing-title">Bayesian Calculations</a>
+</td>
+<td>
+<span class="listing-image"><img loading="lazy" src="https://agrogan1.github.io/Bayes/basic-Bayes/Thomas_Bayes.png" style="height: 40px;"></span>
+</td>
+
+</tr>
+
+</tbody>
+</table>
 <div class="listing-no-matching d-none">No matching items</div>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
