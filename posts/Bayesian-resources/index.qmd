@@ -6,12 +6,12 @@ date: "2025-11-28"
 categories: [stats, Bayes]
 image: "Thomas_Bayes.png"
 listing:
-  type: grid
+  type: table
   table-hover: true
   sort: false
   sort-ui: false
   filter-ui: false
-  fields: [title]
+  fields: [title, image]
   contents:
     - title: "Derivation of Bayes Theorem"
       path: https://agrogan1.github.io/Bayes/Bayes-Theorem/Bayes-Theorem.html
