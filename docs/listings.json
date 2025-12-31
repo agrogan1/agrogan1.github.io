@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/be-less-wrong-2/index.html",
       "/posts/multilevel-thinking/index.html",
       "/posts/merge-and-append-in-Stata/index.html",
       "/posts/Bayesian-resources/index.html",
@@ -22,7 +23,6 @@
       "/posts/love-words/index.html",
       "/posts/patterns/index.html",
       "/posts/why-spreadsheets-are-a-bad-format-for-storing-data/index.html",
-      "/posts/closeread-be-less-wrong/index.html",
       "/posts/exploring-data/index.html",
       "/posts/plain-old-nerd/index.html",
       "/posts/spillover-of-violence/index.html",
@@ -56,6 +56,7 @@
       "/posts/treemap/index.html",
       "/posts/cartogram/index.html",
       "/posts/MLM-longitudinal-data/index.html",
+      "/posts/be-less-wrong/index.html",
       "/posts/Simpsons-paradox-simple-visual-explanation/index.html",
       "/posts/closeread/index.html",
       "/posts/youve-got-to-be-kind/index.html",
@@ -122,7 +123,7 @@
     "items": []
   },
   {
-    "listing": "/teaching.html",
+    "listing": "/posts/Bayesian-resources/index.html",
     "items": []
   },
   {
@@ -130,7 +131,7 @@
     "items": []
   },
   {
-    "listing": "/posts/Bayesian-resources/index.html",
+    "listing": "/teaching.html",
     "items": []
   },
   {
