@@ -33,7 +33,7 @@ website:
           - text: Multilevel Thinking
             href: https://agrogan1.github.io/posts/multilevel-thinking/
           - text: Be Less Wrong
-            href: https://agrogan1.github.io/posts/closeread-be-less-wrong/index.html
+            href: https://agrogan1.github.io/posts/be-less-wrong/index.html
       - about.qmd
 
 bibliography: agrogan.bib
