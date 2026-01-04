@@ -2,8 +2,8 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/be-less-wrong-2/index.html",
       "/posts/multilevel-thinking/index.html",
+      "/posts/be-less-wrong-2/index.html",
       "/posts/merge-and-append-in-Stata/index.html",
       "/posts/Bayesian-resources/index.html",
       "/posts/R-resources/index.html",
