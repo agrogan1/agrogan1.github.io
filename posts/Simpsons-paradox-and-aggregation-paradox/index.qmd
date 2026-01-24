@@ -28,7 +28,7 @@ library(ggthemes)
 
 # library(gganimate)
 
-library(ggsci)
+# library(ggsci)
 
 library(patchwork)
 
@@ -85,14 +85,15 @@ name2 <- paste("school, \nneighborhood, or \ncountry expression(u_0)",
 
 (p0 + 
     labs(title = "Simpson's Paradox") +
-   scale_color_npg(name = "group")) /
+    scale_color_viridis_d(name = "group",
+                          option = "turbo")) /
   (p0 + 
      labs(title = "Aggregation Paradox") +
-     scale_color_npg(name = "school \n neighborhood \ncountry") +
-   labs(caption = "A true multilevel model would have many more groups")) +
-  plot_annotation(title = "A Model That Ignores Group, School, Neighborhood or Country Shows A Downward Slope",
-                  subtitle = "A Model Accounting For Group, School, Neighborhood or Country Shows An Upward Slope",
+     scale_color_viridis_d(name = "school \nneighborhood \ncountry",
+                           option = "turbo") +
+     labs(caption = "A true multilevel model would have many more groups")) +
+  plot_annotation(title = "A Model That Ignores Group, School, Neighborhood or Country Shows A Downward Slope \nA Model Accounting For Group, School, Neighborhood or Country Shows An Upward Slope",
                   theme = theme(title = element_text(size = rel(.75)))
-) 
+  ) 
 
 ```
