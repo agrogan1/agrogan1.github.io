@@ -1,9 +1,9 @@
 ---
-title: "A Simple Visual Explanation of Simpsons Paradox"
+title: "A Simple Visual Explanation of Simpson's Paradox"
 subtitle: "Results of an analysis or visualization may be ***very*** different depending on the number of factors accounted for."
 author: "Andy Grogan-Kaylor"
 date: "2024-12-17"
-categories: [stats, science, teaching]
+categories: [stats, science, teaching, Simpson's paradox]
 image: "Simpsons-paradox.png"
 ---
 
