@@ -3,7 +3,7 @@ title: "Updates to *Be Less Wrong*"
 subtitle: "Why Use Quantitative Methods?"
 author:  Andy Grogan-Kaylor 
 date: "2025-12-31"
-categories: [stats, science, teaching, scrollytelling, closeread]
+categories: [stats, science, teaching, scrollytelling, closeread, Simpson's paradox]
 image: "fig-combined-1.png"
 ---
 
