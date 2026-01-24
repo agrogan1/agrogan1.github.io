@@ -2,7 +2,7 @@
 title: "Simpson's Paradox"
 author: "Andy Grogan-Kaylor"
 date: "2024-7-9"
-categories: [stats, science, R]
+categories: [stats, science, R, Simpson's paradox]
 ---
 
 ```{r setup, include=FALSE}
