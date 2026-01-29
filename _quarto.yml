@@ -34,6 +34,8 @@ website:
             href: https://agrogan1.github.io/posts/multilevel-thinking/
           - text: Be Less Wrong
             href: https://agrogan1.github.io/posts/be-less-wrong/index.html
+          - text: Multiple Principled Solutions
+            href: https://agrogan1.github.io/posts/multiple-principled-solutions/index.html
       - about.qmd
 
 bibliography: agrogan.bib
