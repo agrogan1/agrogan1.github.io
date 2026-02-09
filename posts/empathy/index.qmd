@@ -1,0 +1,14 @@
+---
+title: "When Empathy Helps and Hurts"
+subtitle: "Non-Linear Associations Between Early Childhood Maltreatment History, Empathy and Self-Harm Thoughts"
+author:  Andy Grogan-Kaylor 
+date: "2026-2-8"
+categories: [closeread, scrollytelling, empathy, GAM]
+image: overall.png
+---
+
+We've published a new paper on empathy and mental health outcomes [@empathy]. The paper uses generalized additive models [@Wood2017; @Wood2025] to examine non-linear relationships between empathy and self-harm, and provides evidence that empathy may be a "risky strength". Too much or too little empathy is associated with higher levels of self-harm thoughts, while a moderate amount of empathy is associated with lower levels of self-harm thoughts.
+
+A *scrollytelling* summary of the paper is available here:  [https://agrogan1.github.io/closeread/empathy/empathy.html](https://agrogan1.github.io/closeread/empathy/empathy.html)
+
+![predicted probability of self-harm by empathy and maltreatment](overall.png){width=33%}
