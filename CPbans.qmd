@@ -123,36 +123,15 @@ cpbans <- tribble(
 ```
 
 ```{r save_data}
-#| eval: false
+#| eval: true
 #| echo: false
 #| warning: false
 
-save(cpbans, file = "CPBans.RData") # save to R
+# save(cpbans, file = "CPBans.RData") # save to R
 
-write.dta(cpbans, "CPBans.dta") # write to Stata
+# write.dta(cpbans, "CPBans.dta") # write to Stata
 
 write.csv(cpbans, file = "CPBans.csv") # save to CSV
-
-# make new data file of ALL Countries
-
-AllCountries <- read_csv("AllCountries.csv") # read data
-
-CPBans_w_AllCountries <- merge(cpbans, 
-                               AllCountries, 
-                               by = "country_code",
-                               all = TRUE) # merge
-
-
-CPBans_w_AllCountries$continent <- 
-  countrycode(CPBans_w_AllCountries$country_code, 
-              origin = 'iso3c',
-              destination = 'continent') 
-
-save(CPBans_w_AllCountries, 
-     file = "CPBans_w_AllCountries.RData") # save to R
-
-write.dta(CPBans_w_AllCountries, 
-          "CPBans_w_AllCountries.dta") # write to Stata
 
 ```
 

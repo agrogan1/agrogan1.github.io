@@ -116,19 +116,7 @@
     ]
   },
   {
-    "listing": "/posts/multilevel-resources/index.html",
-    "items": []
-  },
-  {
-    "listing": "/contact.html",
-    "items": []
-  },
-  {
-    "listing": "/teaching.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/Bayesian-resources/index.html",
+    "listing": "/posts/stats-stuff/index.html",
     "items": []
   },
   {
@@ -136,7 +124,19 @@
     "items": []
   },
   {
-    "listing": "/posts/stats-stuff/index.html",
+    "listing": "/posts/Bayesian-resources/index.html",
+    "items": []
+  },
+  {
+    "listing": "/teaching.html",
+    "items": []
+  },
+  {
+    "listing": "/contact.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/multilevel-resources/index.html",
     "items": []
   }
 ]

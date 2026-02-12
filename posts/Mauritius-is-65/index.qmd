@@ -7,7 +7,7 @@ categories: [corporal punishment]
 image: "cpbans.png"
 ---
 
-Mauritius is the 65th country to ban corporal punishment: [https://agrogan1.github.io/research/cpbans/](https://agrogan1.github.io/research/cpbans/)
+Mauritius is the 65th country to ban corporal punishment: [https://agrogan1.github.io/CPbans.html](https://agrogan1.github.io/CPbans.html)
 
 
 

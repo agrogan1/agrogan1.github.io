@@ -177,11 +177,11 @@ leaflet() %>%
 
 ### Corporal Punishment Bans
 
-* Data Visualizations of [Country Level Bans on Corporal Punishment](https://agrogan1.github.io/research/cpbans/)
+* Data Visualizations of [Country Level Bans on Corporal Punishment](https://agrogan1.github.io/CPbans.html)
 
 ```{r, fig.cap="Country Level Bans on Corporal Punishment"}
 
-mydata <- read_csv("../research/cpbans/CPBans.csv") # read data
+mydata <- read_csv("CPBans.csv") # read data
 
 plot_geo(mydata) %>% 
   add_trace(locations = ~country_code, 
