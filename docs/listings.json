@@ -106,6 +106,30 @@
     ]
   },
   {
+    "listing": "/posts/multilevel-resources/index.html",
+    "items": []
+  },
+  {
+    "listing": "/contact.html",
+    "items": []
+  },
+  {
+    "listing": "/teaching.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/Bayesian-resources/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/R-resources/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/stats-stuff/index.html",
+    "items": []
+  },
+  {
     "listing": "/index.html",
     "items": [
       "/about-research.html",
@@ -114,29 +138,5 @@
       "/about.html",
       "/blog.html"
     ]
-  },
-  {
-    "listing": "/posts/stats-stuff/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/R-resources/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/Bayesian-resources/index.html",
-    "items": []
-  },
-  {
-    "listing": "/teaching.html",
-    "items": []
-  },
-  {
-    "listing": "/contact.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/multilevel-resources/index.html",
-    "items": []
   }
 ]

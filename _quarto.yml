@@ -19,6 +19,12 @@ website:
             href: about-research.qmd
           - text: "Research Papers and Projects"
             href: research.qmd
+          - text: "Meta-Analysis"
+            href: CP-meta.qmd
+          - text: "Media Mentions of Meta-Analysis"
+            href: media-mentions-CP-meta.qmd
+          - text: "Earlier Research on Corporal Punishment"
+            href: earlier-research-on-CP.qmd
       - teaching.qmd  
       - text: "Other Projects"
         menu: 

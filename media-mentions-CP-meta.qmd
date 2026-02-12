@@ -4,19 +4,19 @@ title: "Media Mentions of Meta-Analysis of Research on Corporal Punishment"
 
 ```{r}
 #| column: page
-#| fig-height: 4
+#| fig-height: 5
 #| echo: false
 #| message: false
 
-library(readxl)
+library(readr)
 
-CP_Meta_Summary_Results <- read_excel("data/CP Meta Summary Results.xlsx")
+CP_Meta_summary_results <- read_csv("CP-Meta-summary-results.csv")
 
 library(ggplot2)
 
 library(plotly)
 
-p1 <- ggplot(CP_Meta_Summary_Results,
+p1 <- ggplot(CP_Meta_summary_results,
              aes(x = reorder(Outcome, d),
                  y = d,
                  label = Outcome,
@@ -36,11 +36,7 @@ ggplotly(p1, tooltip = c("fill", "label"))
 
 ```
 
-Media Mentions of Meta-Analysis of Corporal Punishment Research:
-
-> Gershoff, E. T., & Grogan-Kaylor, A. (2016). Spanking and Child Outcomes: Old Controversies and New Meta-Analyses. Journal of Family Psychology. 30(4), 453-469. [http://dx.doi.org/10.1037/fam0000191](http://dx.doi.org/10.1037/fam0000191) 
-
-Our meta-analysis of 50 years of research on corporal punishment received at least 100 mentions in the English language news media.  Further, a report from University of Michigan News indicated that the press release from UM News received "more than 100 hits in Spanish, 60 in Chinese, 43 in Portuguese and 23 in India."
+Our meta-analysis [@Gershoff2016] of 50 years of research on corporal punishment received at least 100 mentions in the English language news media.  Further, a report from University of Michigan News indicated that the press release from UM News received "more than 100 hits in Spanish, 60 in Chinese, 43 in Portuguese and 23 in India."
 
 Here are some of the many mentions:
 
