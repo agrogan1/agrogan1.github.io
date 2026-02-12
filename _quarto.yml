@@ -20,12 +20,16 @@ website:
           - text: "Research Papers and Projects"
             href: research.qmd
       - teaching.qmd  
-      - href: https://agrogan1.github.io/multilevel-workshop/
-        text: Multilevel Workshop
-      - href: https://globalfamilies.quarto.pub/global-families-project/
-        text: Global Families
-      - href: https://agrogan1.github.io/mapping/
-        text: Mapping/GIS
+      - text: "Other Projects"
+        menu: 
+          - text: "Corporal Punishment Bans"
+            href: CPbans.qmd
+          - text: "Multilevel Workshop"
+            href: https://agrogan1.github.io/multilevel-workshop/
+          - text: "Global Families"
+            href: https://globalfamilies.quarto.pub/global-families-project/
+          - text: "Mapping/GIS" 
+            href: https://agrogan1.github.io/mapping/
       - text: "Blog-ish Posts"
         menu: 
           - text: Blog
