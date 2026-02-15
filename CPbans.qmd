@@ -127,7 +127,7 @@ cpbans <- tribble(
 #| echo: false
 #| warning: false
 
-# save(cpbans, file = "CPBans.RData") # save to R
+save(cpbans, file = "CPBans.RData") # save to R
 
 # write.dta(cpbans, "CPBans.dta") # write to Stata
 
