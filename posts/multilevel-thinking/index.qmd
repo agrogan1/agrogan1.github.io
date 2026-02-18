@@ -10,7 +10,7 @@ image: "multilevel-thinking.png"
 I’d like to share that my book, *Multilevel Thinking: Discovering Variation, Universals, and Particulars in Cross-Cultural Research* has been [published electronically](https://academic.oup.com/book/60530) at Oxford University Press. [Electronic and print copies](https://www.google.com/books/edition/_/iYUI0QEACAAJ?hl=en) are also available through Google Books.
 
 * This book explains multilevel modeling building upon my 15 years of teaching this topic.
-* I argue that multilevel modeling is a principled way of thinking about human variation and universals. 
+* I argue that multilevel modeling is a principled way of thinking about human variation, human commonality, and universals. 
 * The book contains appendices for estimating multilevel models in Stata, R, and Julia.
 
 ![Multilevel Thinking](bookcover.jpeg){width=33%}
