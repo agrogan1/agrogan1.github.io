@@ -2,6 +2,8 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/multivariate/annotated-equation.pdf",
+      "/posts/multivariate/multivariate.html",
       "/posts/multilevel-thinking/index.html",
       "/posts/empathy/index.html",
       "/posts/multiple-principled-solutions/index.html",
