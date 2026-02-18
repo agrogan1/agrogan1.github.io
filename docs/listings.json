@@ -2,9 +2,8 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/multivariate/annotated-equation.pdf",
-      "/posts/multivariate/multivariate.html",
       "/posts/multilevel-thinking/index.html",
+      "/posts/multivariate/index.html",
       "/posts/empathy/index.html",
       "/posts/multiple-principled-solutions/index.html",
       "/posts/be-less-wrong-2/index.html",
@@ -112,7 +111,7 @@
     "items": []
   },
   {
-    "listing": "/contact.html",
+    "listing": "/posts/Bayesian-resources/index.html",
     "items": []
   },
   {
@@ -120,7 +119,7 @@
     "items": []
   },
   {
-    "listing": "/posts/Bayesian-resources/index.html",
+    "listing": "/contact.html",
     "items": []
   },
   {

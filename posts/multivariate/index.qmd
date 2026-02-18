@@ -2,7 +2,7 @@
 title: "Why Do We Need Multivariate Models To Evaluate Social Programs?"
 subtitle: "A Long-ish Blog Post"
 author:  Andy Grogan-Kaylor 
-date: "today"
+date: "2026-2-17"
 mermaid:
   theme: neutral
 filters:
@@ -468,12 +468,12 @@ p2 # replay
 
 ```
 
-We see that when we consider a third *dimension* of the data, motivation, that our analysis changes. People with higher levels of motivation are more likely to participate in the program, but among both people with higher levels of motivation, and people with lower levels of motivation, participation in the program is associated with **no change** in the good outcome. 
+We see that when we consider a third *dimension* of the data, motivation, that our analysis changes. People with higher levels of motivation are more likely to participate in the program, but among both people with higher levels of motivation, and people with lower levels of motivation, participation in the program is associated with [**no change**]{fg="#FF0000"} in the good outcome. 
 
 ::: {.callout-tip}
 #### Key Takeaway
 
-In essence, after considering people's pre-existing levels of motivation, the program has[ **no effect**]{fg="#FF0000"}!
+In essence, after considering people's pre-existing levels of motivation, the program has [ **no effect**]{fg="#FF0000"}!
 :::
 
 Since we are considering three *dimensions* of the data, it may be illustrative to provide a 3 dimensional graph. This three dimensional graph illustrates the same idea as @fig-more-complex:  more participation in the program initially appears to be associated with better outcomes; after consideration of the third factor of motivation, the program appears to have [**no effect**]{fg="#FF0000"}!
