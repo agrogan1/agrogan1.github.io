@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Andy Grogan-Kaylor">
-<meta name="dcterms.date" content="2025-10-31">
+<meta name="dcterms.date" content="2026-02-15">
 
 <title>Workflow – Andrew Grogan-Kaylor</title>
 <style>
@@ -21,6 +21,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -73,23 +108,27 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="default">
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../agrogan.css">
 <meta property="og:title" content="Workflow – Andrew Grogan-Kaylor">
-<meta property="og:description" content="Thoughts about data science / data analysis workflow.">
-<meta property="og:image" content="workflows.png">
+<meta property="og:description" content="A Long-ish Post About Data Science / Data Analysis Workflow">
+<meta property="og:image" content="myscatterplot.png">
 <meta property="og:site_name" content="Andrew Grogan-Kaylor">
 <meta name="twitter:title" content="Workflow – Andrew Grogan-Kaylor">
-<meta name="twitter:description" content="Thoughts about data science / data analysis workflow.">
-<meta name="twitter:image" content="workflows.png">
+<meta name="twitter:description" content="A Long-ish Post About Data Science / Data Analysis Workflow">
+<meta name="twitter:image" content="myscatterplot.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="citation_title" content="Workflow">
 <meta name="citation_author" content="Andy Grogan-Kaylor">
-<meta name="citation_publication_date" content="2025-10-31">
-<meta name="citation_cover_date" content="2025-10-31">
-<meta name="citation_year" content="2025">
-<meta name="citation_online_date" content="2025-10-31">
+<meta name="citation_publication_date" content="2026-02-15">
+<meta name="citation_cover_date" content="2026-02-15">
+<meta name="citation_year" content="2026">
+<meta name="citation_online_date" content="2026-02-15">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience;,citation_abstract=Adverse Childhood Experiences (ACEs) such as child abuse are related to poor health outcomes. Spanking has indicated a similar association with health outcomes, but to date has not been considered an ACE. Physical and emotional abuse have been shown in previous research to correlate highly and may be similar in nature to spanking. To determine if spanking should be considered an ACE, this study aimed to examine 1): the grouping of spanking with physical and emotional abuse; and 2) if spanking has similar associations with poor adult health problems and accounts for additional model variance. Adult mental health problems included depressive affect, suicide attempts, moderate to heavy drinking, and street drug use. Data were from the CDC-Kaiser ACE study (N = 8316, response rate = 65;,citation_author=Tracie O. Afifi;,citation_author=Derek Ford;,citation_author=Elizabeth T. Gershoff;,citation_author=Melissa Merrick;,citation_author=Andrew Grogan-Kaylor;,citation_author=Katie A. Ports;,citation_author=Harriet L. MacMillan;,citation_author=George W. Holden;,citation_author=Catherine A. Taylor;,citation_author=Shawna J. Lee;,citation_author=Robbyn Peters Bennett;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_doi=10.1016/j.chiabu.2017.01.014;,citation_isbn=0145-2134;,citation_issn=18737757;,citation_volume=71;,citation_journal_title=Child Abuse and Neglect;">
 <meta name="citation_reference" content="citation_title=Interaction terms in logit and probit models;,citation_abstract=The magnitude of the interaction effect in nonlinear models does not equal the marginal effect of the interaction term, can be of opposite sign, and its statistical significance is not calculated by standard software. We present the correct way to estimate the magnitude and standard errors of the interaction effect in nonlinear models. © 2003 Elsevier Science B.V. All rights reserved.;,citation_author=Chunrong Ai;,citation_author=Edward C. Norton;,citation_publication_date=2003;,citation_cover_date=2003;,citation_year=2003;,citation_doi=10.1016/S0165-1765(03)00032-6;,citation_issn=01651765;,citation_journal_title=Economics Letters;">
@@ -279,13 +318,8 @@ ul.task-list li input[type="checkbox"] {
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Workflow</h1>
-            <p class="subtitle lead">Thoughts about data science / data analysis workflow.</p>
-                                <div class="quarto-categories">
-                <div class="quarto-category">stats</div>
-                <div class="quarto-category">workflow</div>
-                <div class="quarto-category">science</div>
-              </div>
-                  </div>
+            <p class="subtitle lead">A Long-ish Post About Data Science / Data Analysis Workflow.</p>
+                      </div>
   </div>
     
   
@@ -301,7 +335,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 31, 2025</p>
+        <p class="date">February 15, 2026</p>
       </div>
     </div>
     
@@ -312,25 +346,467 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#visually-and-conceptually" id="toc-visually-and-conceptually" class="nav-link" data-scroll-target="#visually-and-conceptually">Visually and Conceptually</a></li>
+  <li><a href="#characteristics-of-good-workflows" id="toc-characteristics-of-good-workflows" class="nav-link" data-scroll-target="#characteristics-of-good-workflows">Characteristics of Good Workflows</a></li>
+  <li><a href="#complex-workflows" id="toc-complex-workflows" class="nav-link" data-scroll-target="#complex-workflows">Complex Workflows</a></li>
+  <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices">Best Practices</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
+  <li><a href="#multiple-person-workflows" id="toc-multiple-person-workflows" class="nav-link" data-scroll-target="#multiple-person-workflows">Multiple Person Workflows</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 
 
 
 
-<p>I have been thinking a lot recently about workflow, particularly in data science and data analysis projects. My thoughts are here: <a href="https://agrogan1.github.io/teaching/workflow/workflow.html">https://agrogan1.github.io/teaching/workflow/workflow.html</a>.</p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>I have increasingly been thinking about the idea of <em>workflow</em> in data science / data analysis work.</p>
+<p>So many workflows follow the same conceptual pattern.</p>
+</section>
+<section id="visually-and-conceptually" class="level1">
+<h1>Visually and Conceptually</h1>
+<div class="cell" data-fig-height="7" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-common-workflow" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-common-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-common-workflow">%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#FFCB05',
+      'primaryTextColor': '#000000',
+      'primaryBorderColor': '#00274C',
+      'lineColor': '#00274C',
+      'secondaryColor': '#00274C',
+      'secondaryTextColor': '#000000',
+      'tertiaryColor': '#F2F2F2',
+      'tertiaryBorderColor': '#00274C'
+    }
+  }
+}%%
+
+flowchart TB
+
+ask[ask a question]--&gt;open
+
+open[open the raw data]--&gt;keep
+
+keep[select or keep variables]--&gt;clean
+
+clean[clean the data, e.g. outliers &amp; errors]--&gt;wrangle
+
+wrangle[create any new variables or scales]--&gt;descriptives
+
+descriptives[descriptive statistics]--&gt;visualize
+
+visualize[visualize the data]--&gt;analyze
+
+analyze[analyze with bivariate or multivariate statistics]--&gt;share["share your results with your community(ies)"]
+
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-common-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: A Common Data Workflow
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="characteristics-of-good-workflows" class="level1">
+<h1>Characteristics of Good Workflows</h1>
+<p>Increasingly, we want to think about workflows that are</p>
+<ul>
+<li><strong>documentable</strong>, <strong>transparent</strong>, and <strong>auditable</strong>: We have a record of what we did if we want to double check our work, clarify a result, or develop a new project with a similar process. We, or others, can find the inevitable errors in our work, <strong>and correct them</strong>.</li>
+<li><strong>replicable</strong>: Others can replicate our findings with the same or new data.</li>
+<li><strong>scalable</strong>: We are developing a process that can be as easily used with <em>thousands</em> or <em>millions</em> of rows of data as it can with <em>ten</em> rows of data. We are developing a process that can be easily repeated if we are <em>constantly getting new or updated data</em>, e.g.&nbsp;getting new data every week, or every month.</li>
+</ul>
+</section>
+<section id="complex-workflows" class="level1">
+<h1>Complex Workflows</h1>
+<p>For <strong>complex workflows</strong>, we will often want to write a script or code.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Complex Workflows Benefit From Scripts or Code
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The more graphs or calculations I have to make, the more complex the project, the more the desires of the community or client are likely to change, the more frequently the data is being updated, the more team members that are involved in the workflow, and/or the more mission critical the results (i.e.&nbsp;I need auditability, documentation, and error correction) the more likely I am to use a scripting or coding tool like Stata or R.</p>
+</div>
+</div>
+<div id="tbl-tools" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-tools-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Tools for Different Workflows
+</figcaption>
+<div aria-describedby="tbl-tools-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 29%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Simple Process: Single Graph or Calculation</th>
+<th>Complex Process: Multiple Graphs or Calculations.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Process Run</strong> <strong>Only Once</strong></td>
+<td>Spreadsheet: Excel or Google</td>
+<td>Scripting Tool: Stata or R</td>
+</tr>
+<tr class="even">
+<td><strong>Process</strong> <strong>Run </strong> <strong>Multiple</strong> <strong>Times</strong> <strong>(Perhaps As</strong> <strong>Data Are</strong> <strong>Regularly</strong> <strong>Updated)</strong></td>
+<td>Scripting Tool: Stata or R</td>
+<td>Scripting Tool: Stata or R</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="best-practices" class="level1">
+<h1>Best Practices</h1>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Start With The Raw Data, Do Your Thinking In Code, And Document Your Thinking In Code
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Always (or usually) beginning with the raw data, and then writing and running a script or code that generates our results allows us to develop a process that is <strong>documentable</strong>, <strong>auditable</strong>, <strong>replicable</strong> and <strong>scalable</strong>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Data Are Often Best Stored In Statistical Formats
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It is usually best to store quantitative data in a statistical format such as R, Stata, or SPSS. <a href="https://agrogan1.github.io/posts/why-spreadsheets-are-a-bad-format-for-storing-data/">Spreadsheets are likely to be a bad tool for storing quantitative data</a>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Good Workflows Require Safe Workspaces
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It is also <em>very important</em> to be aware that good complex workflows are <em>highly iterative</em> and <em>highly collaborative</em>, often requiring <em>a lot of conversation</em>. Some–hopefully small–amount of error is <em>unavoidable</em> and <em>inevitable</em>. Good complex workflows require a <em>safe workspace</em> in which team members feel free to talk through their ideas, admit their own errors, and help with others’ mistakes in a non-judgmental fashion. Such a <em>safe environment</em> is necessary to build an environment where the <em>overall error rate</em> is low.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Good Workflows Require Patience And Can Be Psychologically Demanding
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Developing a good documented and auditable workflow that is implemented in code requires a lot of patience, and often, <strong>many iterations</strong>. Working through these many iterations can be psychologically demanding. It is important to remember that careful attention to getting the details right early in the research process, while sometimes tiring and frustrating, will pay large dividends later on when the research is reviewed, presented, published and read.</p>
+</div>
+</div>
+</section>
+<section id="example" class="level1">
+<h1>Example</h1>
+<p>Below is an example that uses the <a href="https://allisonhorst.github.io/palmerpenguins/">Palmer Penguins</a> data set.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+This Example is in Stata
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The example below is in Stata, due to Stata’s ease of readability, but could as easily be written in any other language that has scripting, such as SPSS, SAS, R, or Julia.</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>* Learning About Penguins</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>* Ask A Question</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>* What can <span class="fu">I</span> learn about penguins?</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-collectcode="true">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>* Open The Raw Data</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"https://github.com/agrogan1/Stata/raw/main/do-files/penguins.dta"</span>, <span class="kw">clear</span> </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>* Clean and Wrangle Data</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="kw">generate</span> big_penguin = body_mass_g &gt; 4000 <span class="co">// create a big penguin variable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>* Descriptive Statistics</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"https://github.com/agrogan1/Stata/raw/main/do-files/penguins.dta"</span>, <span class="kw">clear</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>dtable culmen_length_mm culmen_depth_mm flipper_length_mm body_mass_g i.species</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/workflow/profile
+
+&gt; .do ...
+
+
+
+
+-------------------------------------
+                        Summary      
+-------------------------------------
+N                                 344
+culmen_length_mm       43.922 (5.460)
+culmen_depth_mm        17.151 (1.975)
+flipper_length_mm    200.915 (14.062)
+body_mass_g       4,201.754 (801.955)
+species                              
+  Adelie                  152 (44.2%)
+  Chinstrap                68 (19.8%)
+  Gentoo                  124 (36.0%)
+-------------------------------------</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>* Visualize The Data</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"https://github.com/agrogan1/Stata/raw/main/do-files/penguins.dta"</span>, <span class="kw">clear</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="bn">bar</span> body_mass_g, <span class="bn">over</span>(species) <span class="co">// bar graph</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="kw">quietly</span> <span class="kw">graph</span> <span class="kw">export</span> <span class="st">"mybargraph.png"</span>, <span class="kw">replace</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="kw">twoway</span> <span class="kw">scatter</span> culmen_length_mm body_mass_g <span class="co">// scatterplot</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="kw">quietly</span> <span class="kw">graph</span> <span class="kw">export</span> <span class="st">"myscatterplot.png"</span>, <span class="kw">replace</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/workflow/profile
+
+&gt; .do ...</code></pre>
+</div>
+</div>
+<div class="quarto-layout-panel" data-layout="[[1,1]]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="workflows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="sample complex workflows"><img src="workflows.png" class="img-fluid figure-img" style="width:80.0%" alt="sample complex workflows"></a></p>
-<figcaption>sample complex workflows</figcaption>
+<p><a href="mybargraph.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Bar Graph of Penguin Species"><img src="mybargraph.png" class="img-fluid figure-img" alt="Bar Graph of Penguin Species"></a></p>
+<figcaption>Bar Graph of Penguin Species</figcaption>
 </figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="myscatterplot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Scatterplot of Culmen Length by Body Mass"><img src="myscatterplot.png" class="img-fluid figure-img" alt="Scatterplot of Culmen Length by Body Mass"></a></p>
+<figcaption>Scatterplot of Culmen Length by Body Mass</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>* Analyze</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"https://github.com/agrogan1/Stata/raw/main/do-files/penguins.dta"</span>, <span class="kw">clear</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="kw">quietly</span>: <span class="kw">regress</span> culmen_length_mm body_mass_g <span class="co">// regress culmen length on body mass</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="kw">estimates</span> <span class="kw">store</span> M1 <span class="co">// store these estimates</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>etable, <span class="kw">estimates</span>(M1) showstars showstarsnote <span class="co">// nice table of estimates</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/workflow/profile
+
+&gt; .do ...
+
+
+
+
+
+
+---------------------------------------
+                       culmen_length_mm
+---------------------------------------
+body_mass_g                 0.004 **   
+                          (0.000)      
+Intercept                  26.899 **   
+                          (1.269)      
+Number of observations        342      
+---------------------------------------
+** p&lt;.01, * p&lt;.05</code></pre>
+</div>
+</div>
+</section>
+<section id="multiple-person-workflows" class="level1 page-columns page-full">
+<h1>Multiple Person Workflows</h1>
+<p>When workflows involve multiple people, all of the above considerations apply, but the situation often becomes more complex. Two hypothetical multiple person workflows are illustrated below.</p>
+<p>In the diagram below, one workflow is <em>uncoordinated</em>. Each person’s work is not available to the others, which may cause difficulties if people’s work is supposed to build on the work of others. If one team member makes updates or corrects errors, the results of these efforts are not automatically available to the others.</p>
+<p>In contrast, in the diagram below, one workflow is <em>coordinated</em>. Each person’s work is available to the others so that updates and corrections to errors are propagated through the workflow, and into final analyses and visualizations.</p>
+<p>It is often the case that a <em>coordinated</em> workflow requires more <em>coordination</em>, <em>time</em>, <em>energy</em>, and <em>patience</em> to implement than an <em>uncoordinated</em> workflow, but a <em>coordinated</em> workflow is likely to pay benefits in terms of all of the advantages of good workflows listed above.</p>
+<div class="column-page">
+<div class="cell" data-fig-width="7" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-complex-workflows" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-complex-workflows-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-complex-workflows">%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#FFCB05',
+      'primaryTextColor': '#000000',
+      'primaryBorderColor': '#00274C',
+      'lineColor': '#00274C',
+      'secondaryColor': '#00274C',
+      'secondaryTextColor': '#000000',
+      'tertiaryColor': '#F2F2F2',
+      'tertiaryBorderColor': '#00274C'
+    }
+  }
+}%%
+
+flowchart TB 
+
+%% first block: Uncoordinated Workflow
+
+rawdataA[raw data]
+
+rawdataB[raw data]
+
+person1A[person 1]
+
+person1B[person 1]
+
+cleandataA[cleans the data]
+
+cleandataB[cleans the data]
+
+person2A[person 2]
+
+person2B[person 2]
+
+scale1A[creates scale 1]
+
+scale1B[creates scale 1]
+
+person3A[person 3]
+
+person3B[person 3]
+
+scale2A[creates scale 2]
+
+scale2B[creates scale 2]
+
+person4A[person 4]
+
+person4B[person 4]
+
+complexanalysisA[complex analysis &lt;br&gt;and visualization]
+
+complexanalysisB[complex analysis &lt;br&gt;and visualization]
+
+subgraph "UNCOORDINATED Workflow" 
+
+direction TB
+
+rawdataA--&gt;person1A
+
+person1A--&gt;cleandataA
+
+rawdataA--&gt;person2A
+
+person2A--&gt;scale1A
+
+rawdataA--&gt;person3A
+
+person3A--&gt;scale2A
+
+rawdataA--&gt;person4A
+
+person4A--&gt;complexanalysisA
+
+end
+
+subgraph "COORDINATED Multiperson Workflow"
+
+direction TB
+
+rawdataB--&gt;person1B
+
+person1B--&gt;cleandataB
+
+cleandataB--&gt;person2B
+
+person2B--&gt;scale1B
+
+scale1B--&gt;person3B
+
+person3B--&gt;scale2B
+
+scale2B--&gt;person4B
+
+person4B--&gt;complexanalysisB
+
+end
+
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-complex-workflows-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Complex Data Workflows
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -1,0 +1,341 @@
+---
+title: "Workflow"
+subtitle: "A Long-ish Post About Data Science / Data Analysis Workflow"
+author:  Andy Grogan-Kaylor
+date: "2026-2-15"
+mermaid: 
+  theme: default
+image: "myscatterplot.png"
+---
+
+```{r}
+#| output: false
+#| echo: false
+
+library(Statamarkdown)
+
+```
+
+# Introduction
+
+I have increasingly been thinking about the idea of *workflow* in data science / data analysis work.
+
+So many workflows follow the same conceptual pattern.
+
+# Visually and Conceptually
+
+```{mermaid}
+%%| fig-cap: "A Common Data Workflow"
+%%| fig-height: 7
+%%| label: fig-common-workflow
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#FFCB05',
+      'primaryTextColor': '#000000',
+      'primaryBorderColor': '#00274C',
+      'lineColor': '#00274C',
+      'secondaryColor': '#00274C',
+      'secondaryTextColor': '#000000',
+      'tertiaryColor': '#F2F2F2',
+      'tertiaryBorderColor': '#00274C'
+    }
+  }
+}%%
+
+flowchart TB
+
+ask[ask a question]-->open
+
+open[open the raw data]-->keep
+
+keep[select or keep variables]-->clean
+
+clean[clean the data, e.g. outliers & errors]-->wrangle
+
+wrangle[create any new variables or scales]-->descriptives
+
+descriptives[descriptive statistics]-->visualize
+
+visualize[visualize the data]-->analyze
+
+analyze[analyze with bivariate or multivariate statistics]-->share["share your results with your community(ies)"]
+
+```
+
+# Characteristics of Good Workflows
+
+Increasingly, we want to think about workflows that are 
+
+* **documentable**, **transparent**, and **auditable**: We have a record of what we did if we want to double check our work, clarify a result, or develop a new project with a similar process. We, or others, can find the inevitable errors in our work, **and correct them**.
+* **replicable**: Others can replicate our findings with the same or new data.
+* **scalable**: We are developing a process that can be as easily used with *thousands* or *millions* of rows of data as it can with *ten* rows of data. We are developing a process that can be easily repeated if we are *constantly getting new or updated data*, e.g. getting new data every week, or every month.
+
+# Complex Workflows 
+
+For **complex workflows**, we will often want to write a script or code.
+
+::: {.callout-tip}
+## Complex Workflows Benefit From Scripts or Code
+
+The more graphs or calculations I have to make, the more complex the project, the more the desires of the community or client are likely to change, the more frequently the data is being updated, the more team members that are involved in the workflow, and/or the more mission critical the results (i.e. I need auditability, documentation, and error correction) the more likely I am to use a scripting or coding tool like Stata or R.
+:::
+
++---------------+---------------+--------------------+
+|               | Simple        | Complex Process:   |
+|               | Process:      | Multiple Graphs or |
+|               | Single Graph  | Calculations.      |
+|               | or            |                    |
+|               | Calculation   |                    |
++===============+===============+====================+
+|**Process Run**| Spreadsheet:  | Scripting Tool:    |
+| **Only Once** | Excel or      | Stata or R         |
+|               | Google        |                    |
++---------------+---------------+--------------------+
+| **Process**   | Scripting     | Scripting Tool:    |
+| **Run **      | Tool: Stata   | Stata or R         |
+| **Multiple**  | or R          |                    |
+| **Times**     |               |                    |
+|**(Perhaps As**|               |                    |
+| **Data Are**  |               |                    |
+| **Regularly** |               |                    |
+| **Updated)**  |               |                    |
++---------------+---------------+--------------------+
+
+: Tools for Different Workflows {#tbl-tools}
+
+# Best Practices
+
+::: {.callout-tip}
+## Start With The Raw Data, Do Your Thinking In Code, And Document Your Thinking In Code
+
+Always (or usually) beginning with the raw data, and then writing and running a script or code that generates our results allows us to develop a process that is **documentable**, **auditable**, **replicable** and **scalable**.
+:::
+
+::: {.callout-tip}
+## Data Are Often Best Stored In Statistical Formats
+
+It is usually best to store quantitative data in a statistical format such as R, Stata, or SPSS. [Spreadsheets are likely to be a bad tool for storing quantitative data](https://agrogan1.github.io/posts/why-spreadsheets-are-a-bad-format-for-storing-data/).
+:::
+
+::: {.callout-important}
+## Good Workflows Require Safe Workspaces
+
+It is also *very important* to be aware that good complex workflows are *highly iterative* and *highly collaborative*, often requiring *a lot of conversation*. Some--hopefully small--amount of error is *unavoidable* and *inevitable*. Good complex workflows require a *safe workspace* in which team members feel free to talk through their ideas, admit their own errors, and help with others' mistakes in a non-judgmental fashion. Such a *safe environment* is necessary to build an environment where the *overall error rate* is low.
+:::
+
+:::{.callout-important}
+## Good Workflows Require Patience And Can Be Psychologically Demanding
+
+Developing a good documented and auditable workflow that is implemented in code requires a lot of patience, and often, **many iterations**. Working through these many iterations can be psychologically demanding. It is important to remember that careful attention to getting the details right early in the research process, while sometimes tiring and frustrating, will pay large dividends later on when the research is reviewed, presented, published and read.
+:::
+
+# Example
+
+Below is an example that uses the [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/) data set. 
+
+::: {.callout-tip}
+## This Example is in Stata
+
+The example below is in Stata, due to Stata's ease of readability, but could as easily be written in any other language that has scripting, such as SPSS, SAS, R, or Julia.
+:::
+
+```{stata, echo = TRUE}
+
+* Learning About Penguins
+
+* Ask A Question
+
+* What can I learn about penguins?
+  
+```
+
+```{stata, collectcode = TRUE, echo = TRUE}
+
+* Open The Raw Data
+
+use "https://github.com/agrogan1/Stata/raw/main/do-files/penguins.dta", clear 
+
+* Clean and Wrangle Data
+
+generate big_penguin = body_mass_g > 4000 // create a big penguin variable
+
+```
+
+```{stata, echo = TRUE}
+
+* Descriptive Statistics
+
+use "https://github.com/agrogan1/Stata/raw/main/do-files/penguins.dta", clear
+
+dtable culmen_length_mm culmen_depth_mm flipper_length_mm body_mass_g i.species
+
+```
+
+
+```{stata, echo = TRUE}
+
+* Visualize The Data
+
+use "https://github.com/agrogan1/Stata/raw/main/do-files/penguins.dta", clear
+
+graph bar body_mass_g, over(species) // bar graph
+
+quietly graph export "mybargraph.png", replace
+
+twoway scatter culmen_length_mm body_mass_g // scatterplot
+
+quietly graph export "myscatterplot.png", replace
+
+```
+
+::: {layout="[[1,1]]"}
+
+![Bar Graph of Penguin Species](mybargraph.png)
+
+![Scatterplot of Culmen Length by Body Mass](myscatterplot.png)
+
+:::
+
+```{stata, echo = TRUE}
+
+* Analyze
+
+use "https://github.com/agrogan1/Stata/raw/main/do-files/penguins.dta", clear
+
+quietly: regress culmen_length_mm body_mass_g // regress culmen length on body mass
+
+estimates store M1 // store these estimates
+
+etable, estimates(M1) showstars showstarsnote // nice table of estimates
+
+```
+
+
+# Multiple Person Workflows
+
+When workflows involve multiple people, all of the above considerations apply, but the situation often becomes more complex. Two hypothetical multiple person workflows are illustrated below. 
+
+In the diagram below, one workflow is *uncoordinated*. Each person's work is not available to the others, which may cause difficulties if people's work is supposed to build on the work of others. If one team member makes updates or corrects errors, the results of these efforts are not automatically available to the others.
+
+In contrast, in the diagram below, one workflow is *coordinated*. Each person's work is available to the others so that updates and corrections to errors are propagated through the workflow, and into final analyses and visualizations. 
+
+It is often the case that a *coordinated* workflow requires more *coordination*, *time*, *energy*, and *patience* to implement than an *uncoordinated* workflow, but a *coordinated* workflow is likely to pay benefits in terms of all of the advantages of good workflows listed above. 
+
+:::{.column-page}
+
+```{mermaid}
+%%| fig-cap: "Complex Data Workflows"
+%%| fig-width: 7
+%%| label: fig-complex-workflows
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#FFCB05',
+      'primaryTextColor': '#000000',
+      'primaryBorderColor': '#00274C',
+      'lineColor': '#00274C',
+      'secondaryColor': '#00274C',
+      'secondaryTextColor': '#000000',
+      'tertiaryColor': '#F2F2F2',
+      'tertiaryBorderColor': '#00274C'
+    }
+  }
+}%%
+
+flowchart TB 
+
+%% first block: Uncoordinated Workflow
+
+rawdataA[raw data]
+
+rawdataB[raw data]
+
+person1A[person 1]
+
+person1B[person 1]
+
+cleandataA[cleans the data]
+
+cleandataB[cleans the data]
+
+person2A[person 2]
+
+person2B[person 2]
+
+scale1A[creates scale 1]
+
+scale1B[creates scale 1]
+
+person3A[person 3]
+
+person3B[person 3]
+
+scale2A[creates scale 2]
+
+scale2B[creates scale 2]
+
+person4A[person 4]
+
+person4B[person 4]
+
+complexanalysisA[complex analysis <br>and visualization]
+
+complexanalysisB[complex analysis <br>and visualization]
+
+subgraph "UNCOORDINATED Workflow" 
+
+direction TB
+
+rawdataA-->person1A
+
+person1A-->cleandataA
+
+rawdataA-->person2A
+
+person2A-->scale1A
+
+rawdataA-->person3A
+
+person3A-->scale2A
+
+rawdataA-->person4A
+
+person4A-->complexanalysisA
+
+end
+
+subgraph "COORDINATED Multiperson Workflow"
+
+direction TB
+
+rawdataB-->person1B
+
+person1B-->cleandataB
+
+cleandataB-->person2B
+
+person2B-->scale1B
+
+scale1B-->person3B
+
+person3B-->scale2B
+
+scale2B-->person4B
+
+person4B-->complexanalysisB
+
+end
+
+```
+
+:::
+
+
+
+
+
+
+
