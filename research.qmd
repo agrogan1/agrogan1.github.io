@@ -205,7 +205,7 @@ plot_geo(mydata) %>%
 
 ### Earlier Research on Corporal Punishment
 
-* [Earlier Research On Corporal Punishment](https://agrogan1.github.io/research/cp/)
+* [Earlier Research On Corporal Punishment](earlier-research-on-CP.qmd)
 
 ## Community Based Research in Alaska
 
