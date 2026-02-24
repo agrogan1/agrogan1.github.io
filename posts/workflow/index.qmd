@@ -5,7 +5,7 @@ author:  Andy Grogan-Kaylor
 date: "2026-2-15"
 mermaid: 
   theme: default
-image: "myscatterplot.png"
+image: "workflow.png"
 ---
 
 ```{r}
