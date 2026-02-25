@@ -6,8 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Andy Grogan-Kaylor">
-<meta name="dcterms.date" content="2024-11-20">
+<meta name="dcterms.date" content="2026-02-24">
 
 <title>Data Visualization With Stata – Andrew Grogan-Kaylor</title>
 <style>
@@ -22,42 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
 }
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
 }
-</style>
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -112,21 +96,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <link rel="stylesheet" href="../../agrogan.css">
 <meta property="og:title" content="Data Visualization With Stata – Andrew Grogan-Kaylor">
-<meta property="og:description" content="Visualizing Data With Stata">
-<meta property="og:image" content="gutten.svg">
+<meta property="og:description" content="">
+<meta property="og:image" content="fotolia-small.jpg">
 <meta property="og:site_name" content="Andrew Grogan-Kaylor">
-<meta property="og:image:alt" content="Graph of Gutten Tree Data">
 <meta name="twitter:title" content="Data Visualization With Stata – Andrew Grogan-Kaylor">
-<meta name="twitter:description" content="Visualizing Data With Stata">
-<meta name="twitter:image" content="gutten.svg">
-<meta name="twitter:image:alt" content="Graph of Gutten Tree Data">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="fotolia-small.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="citation_title" content="Data Visualization With Stata">
 <meta name="citation_author" content="Andy Grogan-Kaylor">
-<meta name="citation_publication_date" content="2024-11-20">
-<meta name="citation_cover_date" content="2024-11-20">
-<meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-11-20">
+<meta name="citation_publication_date" content="2026-02-24">
+<meta name="citation_cover_date" content="2026-02-24">
+<meta name="citation_year" content="2026">
+<meta name="citation_online_date" content="2026-02-24">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience;,citation_abstract=Adverse Childhood Experiences (ACEs) such as child abuse are related to poor health outcomes. Spanking has indicated a similar association with health outcomes, but to date has not been considered an ACE. Physical and emotional abuse have been shown in previous research to correlate highly and may be similar in nature to spanking. To determine if spanking should be considered an ACE, this study aimed to examine 1): the grouping of spanking with physical and emotional abuse; and 2) if spanking has similar associations with poor adult health problems and accounts for additional model variance. Adult mental health problems included depressive affect, suicide attempts, moderate to heavy drinking, and street drug use. Data were from the CDC-Kaiser ACE study (N = 8316, response rate = 65;,citation_author=Tracie O. Afifi;,citation_author=Derek Ford;,citation_author=Elizabeth T. Gershoff;,citation_author=Melissa Merrick;,citation_author=Andrew Grogan-Kaylor;,citation_author=Katie A. Ports;,citation_author=Harriet L. MacMillan;,citation_author=George W. Holden;,citation_author=Catherine A. Taylor;,citation_author=Shawna J. Lee;,citation_author=Robbyn Peters Bennett;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_doi=10.1016/j.chiabu.2017.01.014;,citation_isbn=0145-2134;,citation_issn=18737757;,citation_volume=71;,citation_journal_title=Child Abuse and Neglect;">
 <meta name="citation_reference" content="citation_title=Interaction terms in logit and probit models;,citation_abstract=The magnitude of the interaction effect in nonlinear models does not equal the marginal effect of the interaction term, can be of opposite sign, and its statistical significance is not calculated by standard software. We present the correct way to estimate the magnitude and standard errors of the interaction effect in nonlinear models. © 2003 Elsevier Science B.V. All rights reserved.;,citation_author=Chunrong Ai;,citation_author=Edward C. Norton;,citation_publication_date=2003;,citation_cover_date=2003;,citation_year=2003;,citation_doi=10.1016/S0165-1765(03)00032-6;,citation_issn=01651765;,citation_journal_title=Economics Letters;">
@@ -316,7 +298,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Data Visualization With Stata</h1>
-            <p class="subtitle lead">Visualizing Data With Stata</p>
                                 <div class="quarto-categories">
                 <div class="quarto-category">stats</div>
                 <div class="quarto-category">dataviz</div>
@@ -338,7 +319,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 20, 2024</p>
+        <p class="date">February 24, 2026</p>
       </div>
     </div>
     
@@ -349,8 +330,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#what-are-variables" id="toc-what-are-variables" class="nav-link" data-scroll-target="#what-are-variables">What are Variables?</a></li>
+  <li><a href="#variable-types" id="toc-variable-types" class="nav-link" data-scroll-target="#variable-types">Variable Types</a></li>
+  <li><a href="#a-data-visualization-strategy" id="toc-a-data-visualization-strategy" class="nav-link" data-scroll-target="#a-data-visualization-strategy">A Data Visualization Strategy</a></li>
+  <li><a href="#data-source" id="toc-data-source" class="nav-link" data-scroll-target="#data-source">Data Source</a></li>
+  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables">Variables</a></li>
+  <li><a href="#graphs" id="toc-graphs" class="nav-link" data-scroll-target="#graphs">Graphs</a>
+  <ul class="collapse">
+  <li><a href="#one-continuous-thing-at-a-time-histogram-x" id="toc-one-continuous-thing-at-a-time-histogram-x" class="nav-link" data-scroll-target="#one-continuous-thing-at-a-time-histogram-x">One Continuous Thing At A Time (<code>histogram x</code>)</a></li>
+  <li><a href="#one-categorical-thing-at-a-time-graph-bar-overx" id="toc-one-categorical-thing-at-a-time-graph-bar-overx" class="nav-link" data-scroll-target="#one-categorical-thing-at-a-time-graph-bar-overx">One Categorical Thing At A Time (<code>graph bar, over(x)</code>)</a></li>
+  <li><a href="#continuous-by-continuous-twoway-scatter-y-x" id="toc-continuous-by-continuous-twoway-scatter-y-x" class="nav-link" data-scroll-target="#continuous-by-continuous-twoway-scatter-y-x">Continuous by Continuous (<code>twoway scatter y x</code>)</a></li>
+  <li><a href="#categorical-by-categorical-graph-bar-overx-overy-asyvars2" id="toc-categorical-by-categorical-graph-bar-overx-overy-asyvars2" class="nav-link" data-scroll-target="#categorical-by-categorical-graph-bar-overx-overy-asyvars2">Categorical by Categorical (<code>graph bar, over(x) over(y)</code>) </a></li>
+  <li><a href="#continuous-by-categorical-graph-bar-y-overx-asyvars1" id="toc-continuous-by-categorical-graph-bar-y-overx-asyvars1" class="nav-link" data-scroll-target="#continuous-by-categorical-graph-bar-y-overx-asyvars1">Continuous by Categorical (<code>graph bar y, over(x)</code>) </a></li>
+  </ul></li>
+  <li><a href="#schemes-scheme..." id="toc-schemes-scheme..." class="nav-link" data-scroll-target="#schemes-scheme...">Schemes (<code>,scheme(...)</code>)</a>
+  <ul class="collapse">
+  <li><a href="#continuous-by-continuous-twoway-scatter-y-x-scheme..." id="toc-continuous-by-continuous-twoway-scatter-y-x-scheme..." class="nav-link" data-scroll-target="#continuous-by-continuous-twoway-scatter-y-x-scheme...">Continuous by Continuous (<code>twoway scatter y x, scheme(...)</code>)</a></li>
+  <li><a href="#continuous-by-categorical-graph-bar-y-overx-scheme...asyvars1" id="toc-continuous-by-categorical-graph-bar-y-overx-scheme...asyvars1" class="nav-link" data-scroll-target="#continuous-by-categorical-graph-bar-y-overx-scheme...asyvars1">Continuous by Categorical (<code>graph bar y, over(x) scheme(...)</code>)</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -359,37 +364,248 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div class="cell" data-execute="false">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> gutten.dta</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">twoway</span> (<span class="kw">scatter</span> height age_base, mcolor(<span class="kw">green</span>%50)) <span class="co">///</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>(<span class="kw">lfit</span> height age_base, lcolor(<span class="bn">gold</span>) lwidth(thick)), <span class="co">///</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bn">title</span>(<span class="st">"Tree Height by Tree Age"</span>) <span class="co">///</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bn">caption</span>(<span class="st">"Gutten Tree Data"</span>) <span class="co">///</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bn">xtitle</span>(<span class="st">"Tree Age"</span>) <span class="co">///</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bn">ytitle</span>(<span class="st">"Tree Height"</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> <span class="st">"gutten.svg"</span>, <span class="kw">width</span>(2000) <span class="kw">replace</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Stata Is A Powerful And Intuitive Data Analysis Program
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Learning how to graph in Stata is an important part of learning how to use Stata. Yet, until recently, the default graphs in Stata have been less than optimal. However, recent versions of Stata have a very professional looking and aesthetically appealing default graph scheme.</p>
+<p>This document is an introduction to (a) basic graphing ideas in Stata; and (b) a quick note on the use of schemes to customize your Stata graphs.</p>
+</div>
+</div>
+</section>
+<section id="what-are-variables" class="level1">
+<h1>What are Variables?</h1>
+<ul>
+<li>By variables, I simply mean the columns of data that you have.</li>
+<li>For our purposes, you may think of variables as synonymous with questionnaire items, or columns of data.</li>
+</ul>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Column 1</th>
+<th>Column 2</th>
+<th>Column 3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Row 1</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Row 2</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Row 3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="variable-types" class="level1">
+<h1>Variable Types</h1>
+<ul>
+<li><em>Categorical variables</em> represent unordered categories like <em>race</em>, <em>ethnicity</em>, <em>neighborhood</em>, <em>religious affiliation</em>, or <em>place of residence</em>.</li>
+<li><em>Continuous variables</em> represent a continuous scale like <em>income</em>, a <em>mental health scale</em>, or a <em>measure of life expectancy</em>.</li>
+</ul>
+</section>
+<section id="a-data-visualization-strategy" class="level1">
+<h1>A Data Visualization Strategy</h1>
+<p>Once we have discerned the type of variable that have, there are two followup questions we may ask before deciding upon a graphing strategy:</p>
+<ul>
+<li>Is our graph about <strong>one thing at a time</strong>?
+<ul>
+<li>How much of <em>x</em> is there?</li>
+<li>What is the distribution of <em>x</em>?</li>
+</ul></li>
+<li>Is our graph about <strong>two things at a time</strong>?
+<ul>
+<li>What is the relationship of <em>x</em> and <em>y</em>?</li>
+<li>How are <em>x</em> and <em>y</em> associated?</li>
+</ul></li>
+</ul>
+</section>
+<section id="data-source" class="level1">
+<h1>Data Source</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fotolia-small.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Norway Spruce and Larch Forest in Austrian Alps"><img src="fotolia-small.jpg" class="img-fluid figure-img" style="width:40.0%" alt="Norway Spruce and Larch Forest in Austrian Alps"></a></p>
+<figcaption>Norway Spruce and Larch Forest in Austrian Alps</figcaption>
+</figure>
+</div>
+<p>Image Source: <a href="https://ec.europa.eu/jrc/en/research-topic/forestry/qr-tree-project/norway-spruce">https://ec.europa.eu/jrc/en/research-topic/forestry/qr-tree-project/norway-spruce</a></p>
+<p>The data used in this example are derived from the R package <em>Functions and Datasets for “Forest Analytics with R”</em> <span class="citation" data-cites="FAwR">(<a href="#ref-FAwR" role="doc-biblioref">Robinson &amp; Hamann, 2020</a>)</span>.</p>
+<p>According to the documentation, the source of these data are: “von Guttenberg’s Norway spruce (Picea abies [L.] Karst) tree measurement data.”</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Old-Tjikko-Small.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Old Tjikko, a 9,550 Year Old Norway Spruce in Sweden"><img src="Old-Tjikko-Small.jpg" class="img-fluid figure-img" style="width:20.0%" alt="Old Tjikko, a 9,550 Year Old Norway Spruce in Sweden"></a></p>
+<figcaption>Old Tjikko, a 9,550 Year Old Norway Spruce in Sweden</figcaption>
+</figure>
+</div>
+<p>The documentation goes on to further note that:</p>
+<blockquote class="blockquote">
+<p>“The data are measures from 107 trees. The trees were selected as being of average size from healthy and well stocked stands in the Alps.”</p>
+</blockquote>
+</section>
+<section id="variables" class="level1">
+<h1>Variables</h1>
+<p><code>site</code> Growth <em>quality</em> class of the tree’s habitat. 5 levels.</p>
+<p><code>location</code> Distinguishes tree <em>location</em>. 7 levels.</p>
+<p><code>tree</code> An identifier for the tree within location.</p>
+<p><code>age_base</code> The tree age taken at ground level.</p>
+<p><code>height</code> Tree height, m.</p>
+<p><code>dbh_cm</code> Tree diameter, cm.</p>
+<p><code>volume</code> Tree volume.</p>
+<p><code>age_bh</code> Tree age taken at 1.3 m.</p>
+<p><code>tree.ID</code> A factor uniquely identifying the tree.</p>
+</section>
+<section id="graphs" class="level1">
+<h1>Graphs</h1>
+<section id="one-continuous-thing-at-a-time-histogram-x" class="level2">
+<h2 class="anchored" data-anchor-id="one-continuous-thing-at-a-time-histogram-x">One Continuous Thing At A Time (<code>histogram x</code>)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="myhistogram.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Histogram Of Tree Height"><img src="myhistogram.png" class="img-fluid figure-img" style="width:50.0%" alt="Histogram Of Tree Height"></a></p>
+<figcaption>Histogram Of Tree Height</figcaption>
+</figure>
+</div>
+</section>
+<section id="one-categorical-thing-at-a-time-graph-bar-overx" class="level2">
+<h2 class="anchored" data-anchor-id="one-categorical-thing-at-a-time-graph-bar-overx">One Categorical Thing At A Time (<code>graph bar, over(x)</code>)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="mybargraph.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Bar Graph Of Tree Location"><img src="mybargraph.png" class="img-fluid figure-img" style="width:50.0%" alt="Bar Graph Of Tree Location"></a></p>
+<figcaption>Bar Graph Of Tree Location</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<code>asyvars</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <code>asyvars</code> option is especially helpful with bar graphs to create bar graphs with different color bars.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="mybargraph_asyvars.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Bar Graph Of Tree Location Using asyvars"><img src="mybargraph_asyvars.png" class="img-fluid figure-img" style="width:50.0%" alt="Bar Graph Of Tree Location Using asyvars"></a></p>
+<figcaption>Bar Graph Of Tree Location Using <code>asyvars</code></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="continuous-by-continuous-twoway-scatter-y-x" class="level2">
+<h2 class="anchored" data-anchor-id="continuous-by-continuous-twoway-scatter-y-x">Continuous by Continuous (<code>twoway scatter y x</code>)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="myscatter.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Scatterplot Of Tree Height By Age"><img src="myscatter.png" class="img-fluid figure-img" style="width:50.0%" alt="Scatterplot Of Tree Height By Age"></a></p>
+<figcaption>Scatterplot Of Tree Height By Age</figcaption>
+</figure>
+</div>
+</section>
+<section id="categorical-by-categorical-graph-bar-overx-overy-asyvars2" class="level2">
+<h2 class="anchored" data-anchor-id="categorical-by-categorical-graph-bar-overx-overy-asyvars2">Categorical by Categorical (<code>graph bar, over(x) over(y)</code>) <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="mybargraph2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Bar Graph Of Tree Site By Location"><img src="mybargraph2.png" class="img-fluid figure-img" style="width:50.0%" alt="Bar Graph Of Tree Site By Location"></a></p>
+<figcaption>Bar Graph Of Tree Site By Location</figcaption>
+</figure>
+</div>
+</section>
+<section id="continuous-by-categorical-graph-bar-y-overx-asyvars1" class="level2">
+<h2 class="anchored" data-anchor-id="continuous-by-categorical-graph-bar-y-overx-asyvars1">Continuous by Categorical (<code>graph bar y, over(x)</code>) <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="mybargraph3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Bar Graph Of Mean Tree Height By Location"><img src="mybargraph3.png" class="img-fluid figure-img" style="width:50.0%" alt="Bar Graph Of Mean Tree Height By Location"></a></p>
+<figcaption>Bar Graph Of Mean Tree Height By Location</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="schemes-scheme..." class="level1">
+<h1>Schemes (<code>,scheme(...)</code>)</h1>
+<p>Stata <em>graph schemes</em> can substantially change the look of a graph. Built in graph schemes include <code>s1color</code>, the new default scheme <code>stcolor</code>, the older default scheme <code>s2color</code>, <code>sj</code>, <code>economist</code> and <code>s1rcolor</code>.</p>
+<p>I have written a <a href="https://agrogan1.github.io/Stata/">Stata Michigan graph scheme</a> that can be installed. Asjad Naqvi has written <a href="https://github.com/asjadnaqvi/Stata-schemes">an excellent and comprehensive set of Stata graph schemes</a>, including the <code>neon</code> scheme used in some examples in this blog post.</p>
+<section id="continuous-by-continuous-twoway-scatter-y-x-scheme..." class="level2">
+<h2 class="anchored" data-anchor-id="continuous-by-continuous-twoway-scatter-y-x-scheme...">Continuous by Continuous (<code>twoway scatter y x, scheme(...)</code>)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="myscatterM.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Scatterplot Of Tree Height By Age With Michigan Graph Scheme"><img src="myscatterM.png" class="img-fluid figure-img" style="width:50.0%" alt="Scatterplot Of Tree Height By Age With Michigan Graph Scheme"></a></p>
+<figcaption>Scatterplot Of Tree Height By Age With Michigan Graph Scheme</figcaption>
+</figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="gutten.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Graph of Gutten Tree Data"><img src="gutten.svg" class="img-fluid figure-img" alt="Graph of Gutten Tree Data"></a></p>
-<figcaption>Graph of Gutten Tree Data</figcaption>
+<p><a href="myscatterNEON.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Scatterplot Of Tree Height By Age With neon Graph Scheme"><img src="myscatterNEON.png" class="img-fluid figure-img" style="width:50.0%" alt="Scatterplot Of Tree Height By Age With neon Graph Scheme"></a></p>
+<figcaption>Scatterplot Of Tree Height By Age With neon Graph Scheme</figcaption>
 </figure>
 </div>
-<p>Stata is a powerful and intuitive data analysis program. However, Stata is often under-appreciated as data visualization software. Learning how to graph in Stata is an important part of learning how to use Stata. In older versions of Stata, the default graphs in Stata could sometimes be less than optimal. In newer versions of Stata, the default graphs have been very much improved and are professional looking and aesthetically appealing <em>out of the box</em>. With a few tweaks, graphs in Stata can be even further customized.</p>
-<p>I posted a few materials on using Stata for data visualization:</p>
-<ul>
-<li><a href="https://agrogan1.github.io/Stata/data-visualization-with-Stata/data-visualization-with-Stata.html">Data Visualization With Stata</a> [<a href="https://agrogan1.github.io/Stata/data-visualization-with-Stata/data-visualization-with-Stata.pdf">PDF</a>]</li>
-<li><a href="https://agrogan1.github.io/Stata/data-visualization-with-Stata-the-basics/data-visualization-with-Stata-the-basics.html">The Basics of Data Visualization With Stata</a> (<a href="https://agrogan1.github.io/Stata/data-visualization-with-Stata-the-basics/data-visualization-with-Stata-the-basics.pdf">PDF</a>)</li>
-</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="myscatterS.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Scatterplot Of Tree Height By Age With s1color Graph Scheme"><img src="myscatterS.png" class="img-fluid figure-img" style="width:50.0%" alt="Scatterplot Of Tree Height By Age With s1color Graph Scheme"></a></p>
+<figcaption>Scatterplot Of Tree Height By Age With s1color Graph Scheme</figcaption>
+</figure>
+</div>
+</section>
+<section id="continuous-by-categorical-graph-bar-y-overx-scheme...asyvars1" class="level2">
+<h2 class="anchored" data-anchor-id="continuous-by-categorical-graph-bar-y-overx-scheme...asyvars1">Continuous by Categorical (<code>graph bar y, over(x) scheme(...)</code>)<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="mybarM.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Bar Graph Of Mean Tree Height By Location With Michigan Graph Scheme"><img src="mybarM.png" class="img-fluid figure-img" style="width:50.0%" alt="Bar Graph Of Mean Tree Height By Location With Michigan Graph Scheme"></a></p>
+<figcaption>Bar Graph Of Mean Tree Height By Location With Michigan Graph Scheme</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="mybarNEON.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Bar Graph Of Mean Tree Height By Location With neon Graph Scheme"><img src="mybarNEON.png" class="img-fluid figure-img" style="width:50.0%" alt="Bar Graph Of Mean Tree Height By Location With neon Graph Scheme"></a></p>
+<figcaption>Bar Graph Of Mean Tree Height By Location With neon Graph Scheme</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="mybarS.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Bar Graph Of Mean Tree Height By Location With s1color Graph Scheme"><img src="mybarS.png" class="img-fluid figure-img" style="width:50.0%" alt="Bar Graph Of Mean Tree Height By Location With s1color Graph Scheme"></a></p>
+<figcaption>Bar Graph Of Mean Tree Height By Location With s1color Graph Scheme</figcaption>
+</figure>
+</div>
 
 
 
-</main> <!-- /main -->
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-FAwR" class="csl-entry" role="listitem">
+Robinson, A., &amp; Hamann, J. (2020). <em>FAwR: Functions and datasets for "forest analytics with r</em>. <a href="https://doi.org/10.32614/CRAN.package.FAwR">https://doi.org/10.32614/CRAN.package.FAwR</a>
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>You can also use <code>asyvars</code> here, but it may be confusing to understand which categorical variable is being used to color code the data.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>You can also use <code>asyvars</code> here.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>You can also use <code>asyvars</code> here.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

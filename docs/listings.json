@@ -3,6 +3,7 @@
     "listing": "/blog.html",
     "items": [
       "/posts/multilevel-thinking/index.html",
+      "/posts/data-visualization-with-Stata/index.html",
       "/posts/multivariate/index.html",
       "/posts/workflow/index.html",
       "/posts/empathy/index.html",
@@ -65,7 +66,6 @@
       "/posts/youve-got-to-be-kind/index.html",
       "/posts/how-to-choose-a-chart-a-visual-guide-with-Stata/index.html",
       "/posts/discipline-11-forms-storymap/index.html",
-      "/posts/data-visualization-with-Stata/index.html",
       "/posts/mediation/index.html",
       "/posts/very-short-introduction-Stata/index.html",
       "/posts/Tajikstan-is-67/index.html",
