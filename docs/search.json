@@ -238,6 +238,62 @@
     "text": "Stata Is A Powerful And Intuitive Data Analysis Program\n\n\n\nLearning how to graph in Stata is an important part of learning how to use Stata. Yet, until recently, the default graphs in Stata have been less than optimal. However, recent versions of Stata have a very professional looking and aesthetically appealing default graph scheme.\nThis document is an introduction to (a) basic graphing ideas in Stata; and (b) a quick note on the use of schemes to customize your Stata graphs."
   },
   {
+    "objectID": "posts/data-visualization-with-Stata/index.html#one-continuous-thing-at-a-time-histogram-x",
+    "href": "posts/data-visualization-with-Stata/index.html#one-continuous-thing-at-a-time-histogram-x",
+    "title": "Data Visualization With Stata",
+    "section": "One Continuous Thing At A Time (histogram x)",
+    "text": "One Continuous Thing At A Time (histogram x)\n\n\n\nHistogram Of Tree Height"
+  },
+  {
+    "objectID": "posts/data-visualization-with-Stata/index.html#one-categorical-thing-at-a-time-graph-bar-overx",
+    "href": "posts/data-visualization-with-Stata/index.html#one-categorical-thing-at-a-time-graph-bar-overx",
+    "title": "Data Visualization With Stata",
+    "section": "One Categorical Thing At A Time (graph bar, over(x))",
+    "text": "One Categorical Thing At A Time (graph bar, over(x))\n\n\n\nBar Graph Of Tree Location\n\n\n\n\n\n\n\n\nasyvars\n\n\n\nThe asyvars option is especially helpful with bar graphs to create bar graphs with different color bars.\n\n\n\nBar Graph Of Tree Location Using asyvars"
+  },
+  {
+    "objectID": "posts/data-visualization-with-Stata/index.html#continuous-by-continuous-twoway-scatter-y-x",
+    "href": "posts/data-visualization-with-Stata/index.html#continuous-by-continuous-twoway-scatter-y-x",
+    "title": "Data Visualization With Stata",
+    "section": "Continuous by Continuous (twoway scatter y x)",
+    "text": "Continuous by Continuous (twoway scatter y x)\n\n\n\nScatterplot Of Tree Height By Age"
+  },
+  {
+    "objectID": "posts/data-visualization-with-Stata/index.html#categorical-by-categorical-graph-bar-overx-overy-asyvars2",
+    "href": "posts/data-visualization-with-Stata/index.html#categorical-by-categorical-graph-bar-overx-overy-asyvars2",
+    "title": "Data Visualization With Stata",
+    "section": "Categorical by Categorical (graph bar, over(x) over(y)) 1",
+    "text": "Categorical by Categorical (graph bar, over(x) over(y)) 1\n\n\n\nBar Graph Of Tree Site By Location"
+  },
+  {
+    "objectID": "posts/data-visualization-with-Stata/index.html#continuous-by-categorical-graph-bar-y-overx-asyvars1",
+    "href": "posts/data-visualization-with-Stata/index.html#continuous-by-categorical-graph-bar-y-overx-asyvars1",
+    "title": "Data Visualization With Stata",
+    "section": "Continuous by Categorical (graph bar y, over(x)) 2",
+    "text": "Continuous by Categorical (graph bar y, over(x)) 2\n\n\n\nBar Graph Of Mean Tree Height By Location"
+  },
+  {
+    "objectID": "posts/data-visualization-with-Stata/index.html#continuous-by-continuous-twoway-scatter-y-x-scheme...",
+    "href": "posts/data-visualization-with-Stata/index.html#continuous-by-continuous-twoway-scatter-y-x-scheme...",
+    "title": "Data Visualization With Stata",
+    "section": "Continuous by Continuous (twoway scatter y x, scheme(...))",
+    "text": "Continuous by Continuous (twoway scatter y x, scheme(...))\n\n\n\nScatterplot Of Tree Height By Age With Michigan Graph Scheme\n\n\n\n\n\nScatterplot Of Tree Height By Age With neon Graph Scheme\n\n\n\n\n\nScatterplot Of Tree Height By Age With s1color Graph Scheme"
+  },
+  {
+    "objectID": "posts/data-visualization-with-Stata/index.html#continuous-by-categorical-graph-bar-y-overx-scheme...asyvars1",
+    "href": "posts/data-visualization-with-Stata/index.html#continuous-by-categorical-graph-bar-y-overx-scheme...asyvars1",
+    "title": "Data Visualization With Stata",
+    "section": "Continuous by Categorical (graph bar y, over(x) scheme(...))3",
+    "text": "Continuous by Categorical (graph bar y, over(x) scheme(...))3\n\n\n\nBar Graph Of Mean Tree Height By Location With Michigan Graph Scheme\n\n\n\n\n\nBar Graph Of Mean Tree Height By Location With neon Graph Scheme\n\n\n\n\n\nBar Graph Of Mean Tree Height By Location With s1color Graph Scheme"
+  },
+  {
+    "objectID": "posts/data-visualization-with-Stata/index.html#footnotes",
+    "href": "posts/data-visualization-with-Stata/index.html#footnotes",
+    "title": "Data Visualization With Stata",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nYou can also use asyvars here, but it may be confusing to understand which categorical variable is being used to color code the data.↩︎\nYou can also use asyvars here.↩︎\nYou can also use asyvars here.↩︎"
+  },
+  {
     "objectID": "posts/Cohens-d-calculator/index.html",
     "href": "posts/Cohens-d-calculator/index.html",
     "title": "Cohen’s d Calculator",
@@ -1461,61 +1517,5 @@
     "title": "Security Policy",
     "section": "",
     "text": "Please report any security issues directly to agrogan@umich.edu."
-  },
-  {
-    "objectID": "posts/data-visualization-with-Stata/index.html#one-continuous-thing-at-a-time-histogram-x",
-    "href": "posts/data-visualization-with-Stata/index.html#one-continuous-thing-at-a-time-histogram-x",
-    "title": "Data Visualization With Stata",
-    "section": "One Continuous Thing At A Time (histogram x)",
-    "text": "One Continuous Thing At A Time (histogram x)\n\n\n\nHistogram Of Tree Height"
-  },
-  {
-    "objectID": "posts/data-visualization-with-Stata/index.html#one-categorical-thing-at-a-time-graph-bar-overx",
-    "href": "posts/data-visualization-with-Stata/index.html#one-categorical-thing-at-a-time-graph-bar-overx",
-    "title": "Data Visualization With Stata",
-    "section": "One Categorical Thing At A Time (graph bar, over(x))",
-    "text": "One Categorical Thing At A Time (graph bar, over(x))\n\n\n\nBar Graph Of Tree Location\n\n\n\n\n\n\n\n\nasyvars\n\n\n\nThe asyvars option is especially helpful with bar graphs to create bar graphs with different color bars.\n\n\n\nBar Graph Of Tree Location Using asyvars"
-  },
-  {
-    "objectID": "posts/data-visualization-with-Stata/index.html#continuous-by-continuous-twoway-scatter-y-x",
-    "href": "posts/data-visualization-with-Stata/index.html#continuous-by-continuous-twoway-scatter-y-x",
-    "title": "Data Visualization With Stata",
-    "section": "Continuous by Continuous (twoway scatter y x)",
-    "text": "Continuous by Continuous (twoway scatter y x)\n\n\n\nScatterplot Of Tree Height By Age"
-  },
-  {
-    "objectID": "posts/data-visualization-with-Stata/index.html#categorical-by-categorical-graph-bar-overx-overy-asyvars2",
-    "href": "posts/data-visualization-with-Stata/index.html#categorical-by-categorical-graph-bar-overx-overy-asyvars2",
-    "title": "Data Visualization With Stata",
-    "section": "Categorical by Categorical (graph bar, over(x) over(y)) 1",
-    "text": "Categorical by Categorical (graph bar, over(x) over(y)) 1\n\n\n\nBar Graph Of Tree Site By Location"
-  },
-  {
-    "objectID": "posts/data-visualization-with-Stata/index.html#continuous-by-categorical-graph-bar-y-overx-asyvars1",
-    "href": "posts/data-visualization-with-Stata/index.html#continuous-by-categorical-graph-bar-y-overx-asyvars1",
-    "title": "Data Visualization With Stata",
-    "section": "Continuous by Categorical (graph bar y, over(x)) 2",
-    "text": "Continuous by Categorical (graph bar y, over(x)) 2\n\n\n\nBar Graph Of Mean Tree Height By Location"
-  },
-  {
-    "objectID": "posts/data-visualization-with-Stata/index.html#continuous-by-continuous-twoway-scatter-y-x-scheme...",
-    "href": "posts/data-visualization-with-Stata/index.html#continuous-by-continuous-twoway-scatter-y-x-scheme...",
-    "title": "Data Visualization With Stata",
-    "section": "Continuous by Continuous (twoway scatter y x, scheme(...))",
-    "text": "Continuous by Continuous (twoway scatter y x, scheme(...))\n\n\n\nScatterplot Of Tree Height By Age With Michigan Graph Scheme\n\n\n\n\n\nScatterplot Of Tree Height By Age With neon Graph Scheme\n\n\n\n\n\nScatterplot Of Tree Height By Age With s1color Graph Scheme"
-  },
-  {
-    "objectID": "posts/data-visualization-with-Stata/index.html#continuous-by-categorical-graph-bar-y-overx-scheme...asyvars1",
-    "href": "posts/data-visualization-with-Stata/index.html#continuous-by-categorical-graph-bar-y-overx-scheme...asyvars1",
-    "title": "Data Visualization With Stata",
-    "section": "Continuous by Categorical (graph bar y, over(x) scheme(...))3",
-    "text": "Continuous by Categorical (graph bar y, over(x) scheme(...))3\n\n\n\nBar Graph Of Mean Tree Height By Location With Michigan Graph Scheme\n\n\n\n\n\nBar Graph Of Mean Tree Height By Location With neon Graph Scheme\n\n\n\n\n\nBar Graph Of Mean Tree Height By Location With s1color Graph Scheme"
-  },
-  {
-    "objectID": "posts/data-visualization-with-Stata/index.html#footnotes",
-    "href": "posts/data-visualization-with-Stata/index.html#footnotes",
-    "title": "Data Visualization With Stata",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nYou can also use asyvars here, but it may be confusing to understand which categorical variable is being used to color code the data.↩︎\nYou can also use asyvars here.↩︎\nYou can also use asyvars here.↩︎"
   }
 ]
