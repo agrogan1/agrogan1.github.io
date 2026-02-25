@@ -3,7 +3,7 @@ title: "Data Visualization With Stata (The Basics)"
 author: "Andy Grogan-Kaylor"
 date: "2026-2-24"
 categories: [stats, dataviz, Stata]
-image: "lter_penguins.png"
+image: "myscatter.png"
 ---
 
 # Introduction 
