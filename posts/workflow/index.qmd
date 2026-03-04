@@ -3,6 +3,7 @@ title: "Workflow"
 subtitle: "A Long-ish Post About Data Science / Data Analysis Workflow"
 author:  Andy Grogan-Kaylor
 date: "2026-2-15"
+categories: [stats, science, teaching, workflow]
 mermaid: 
   theme: default
 image: "workflow.png"

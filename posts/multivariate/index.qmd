@@ -3,6 +3,7 @@ title: "Why Do We Need Multivariate Models To Evaluate Social Programs?"
 subtitle: "A Long-ish Blog Post"
 author:  Andy Grogan-Kaylor 
 date: "2026-2-17"
+categories: [stats, science, teaching]
 mermaid:
   theme: neutral
 filters:
