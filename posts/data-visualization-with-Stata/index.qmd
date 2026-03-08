@@ -69,6 +69,7 @@ The documentation goes on to further note that:
 > "The data are measures from 107 trees. The trees were selected as being of average size from healthy and well stocked stands in the Alps."
 
 ```{stata, collectcode=TRUE}
+#| echo: true
 
 use "gutten.dta", clear
 
@@ -100,10 +101,11 @@ use "gutten.dta", clear
 
 ```{stata}
 #| output: false
+#| echo: true
 
 histogram height, title("Tree Height")
 	
-graph export myhistogram.png, width(1000) replace
+graph export myhistogram.png, width(2000) replace
 
 ```
 
@@ -113,10 +115,11 @@ graph export myhistogram.png, width(1000) replace
 
 ```{stata}
 #| output: false
+#| echo: true
 
 graph bar, over(location) title("Tree Location")
 	
-graph export mybargraph.png, width(1000) replace
+graph export mybargraph.png, width(2000) replace
 
 ```
 
@@ -130,10 +133,11 @@ The `asyvars` option is especially helpful with bar graphs to create bar graphs 
 
 ```{stata}
 #| output: false
+#| echo: true
 
 graph bar, over(location) title("Tree Location") asyvars
 	
-graph export mybargraph_asyvars.png, width(1000) replace
+graph export mybargraph_asyvars.png, width(2000) replace
 
 ```
 
@@ -144,10 +148,11 @@ graph export mybargraph_asyvars.png, width(1000) replace
 
 ```{stata}
 #| output: false
+#| echo: true
 
 twoway scatter height age_base, title("Tree Height by Age")
 	
-graph export myscatter.png, width(1000) replace
+graph export myscatter.png, width(2000) replace
 
 ```
 
@@ -160,10 +165,11 @@ graph export myscatter.png, width(1000) replace
 
 ```{stata}
 #| output: false
+#| echo: true
 
 graph bar, over(site) over(location) title("Tree Site Growth Quality by Location")
 	
-graph export mybargraph2.png, width(1000) replace
+graph export mybargraph2.png, width(2000) replace
 
 ```
 
@@ -176,10 +182,11 @@ graph export mybargraph2.png, width(1000) replace
 
 ```{stata}
 #| output: false
+#| echo: true
 
 graph bar height, over(location) title("Tree Height by Location")
 	
-graph export mybargraph3.png, width(1000) replace
+graph export mybargraph3.png, width(2000) replace
 
 ```
 
@@ -195,20 +202,22 @@ I have written a [Stata Michigan graph scheme](https://agrogan1.github.io/Stata/
 
 ```{stata}
 #| output: false
+#| echo: true
 
 twoway scatter height age_base, title("Tree Height by Age") scheme(michigan)
 	
-graph export myscatterM.png, width(1000) replace
+graph export myscatterM.png, width(2000) replace
 
 ```
 
 ![Scatterplot Of Tree Height By Age With Michigan Graph Scheme](myscatterM.png){width=50%}
 ```{stata}
 #| output: false
+#| echo: true
 
 twoway scatter height age_base, title("Tree Height by Age") scheme(neon) msymbol(o)
 
-graph export myscatterNEON.png, width(1000) replace
+graph export myscatterNEON.png, width(2000) replace
 
 ```
 
@@ -216,10 +225,11 @@ graph export myscatterNEON.png, width(1000) replace
 
 ```{stata}
 #| output: false
+#| echo: true
 
 twoway scatter height age_base, title("Tree Height by Age") scheme(s1color)
 
-graph export myscatterS.png, width(1000) replace
+graph export myscatterS.png, width(2000) replace
 
 ```
 
@@ -229,30 +239,33 @@ graph export myscatterS.png, width(1000) replace
 
 ```{stata}
 #| output: false
+#| echo: true
 
 graph bar height, over(location) asyvars title("Tree Height by Location") scheme(michigan)
 	
-graph export mybarM.png, width(1000) replace
+graph export mybarM.png, width(2000) replace
 
 ```
 
 ![Bar Graph Of Mean Tree Height By Location With Michigan Graph Scheme](mybarM.png){width=50%}
 ```{stata}
 #| output: false
+#| echo: true
 
 graph bar height, over(location) asyvars title("Tree Height by Location") scheme(neon)
 	
-graph export mybarNEON.png, width(1000) replace
+graph export mybarNEON.png, width(2000) replace
 
 ```
 
 ![Bar Graph Of Mean Tree Height By Location With neon Graph Scheme](mybarNEON.png){width=50%}
 ```{stata}
 #| output: false
+#| echo: true
 
 graph bar height, over(location) asyvars title("Tree Height by Location") scheme(s1color)
 	
-graph export mybarS.png, width(1000) replace
+graph export mybarS.png, width(2000) replace
 
 ```
 

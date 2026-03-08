@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.30">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,6 +10,9 @@
 
 <title>Data Visualization With Stata – Andrew Grogan-Kaylor</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -20,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 /* CSS for citations */
 div.csl-bib-body { }
@@ -54,15 +92,14 @@ div.csl-indent {
 <link href="../../logo.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-b6a8276bf55561bdbc268162d41bd1f7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-cb995aeb2544cdcb218fefcda253762a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-91951e90da365a4745b3d6636fa4fb2d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -463,6 +500,9 @@ div.csl-indent {
 <blockquote class="blockquote">
 <p>“The data are measures from 107 trees. The trees were selected as being of average size from healthy and well stocked stands in the Alps.”</p>
 </blockquote>
+<div class="cell" data-collectcode="true">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"gutten.dta"</span>, <span class="kw">clear</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
 <section id="variables" class="level1">
 <h1>Variables</h1>
@@ -480,6 +520,11 @@ div.csl-indent {
 <h1>Graphs</h1>
 <section id="one-continuous-thing-at-a-time-histogram-x" class="level2">
 <h2 class="anchored" data-anchor-id="one-continuous-thing-at-a-time-histogram-x">One Continuous Thing At A Time (<code>histogram x</code>)</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">histogram</span> height, <span class="bn">title</span>(<span class="st">"Tree Height"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> myhistogram.png, <span class="kw">width</span>(2000) <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="myhistogram.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Histogram Of Tree Height"><img src="myhistogram.png" class="img-fluid figure-img" style="width:50.0%" alt="Histogram Of Tree Height"></a></p>
@@ -489,6 +534,11 @@ div.csl-indent {
 </section>
 <section id="one-categorical-thing-at-a-time-graph-bar-overx" class="level2">
 <h2 class="anchored" data-anchor-id="one-categorical-thing-at-a-time-graph-bar-overx">One Categorical Thing At A Time (<code>graph bar, over(x)</code>)</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="bn">bar</span>, <span class="bn">over</span>(location) <span class="bn">title</span>(<span class="st">"Tree Location"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> mybargraph.png, <span class="kw">width</span>(2000) <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="mybargraph.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Bar Graph Of Tree Location"><img src="mybargraph.png" class="img-fluid figure-img" style="width:50.0%" alt="Bar Graph Of Tree Location"></a></p>
@@ -506,6 +556,11 @@ div.csl-indent {
 </div>
 <div class="callout-body-container callout-body">
 <p>The <code>asyvars</code> option is especially helpful with bar graphs to create bar graphs with different color bars.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="bn">bar</span>, <span class="bn">over</span>(location) <span class="bn">title</span>(<span class="st">"Tree Location"</span>) asyvars</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> mybargraph_asyvars.png, <span class="kw">width</span>(2000) <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="mybargraph_asyvars.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Bar Graph Of Tree Location Using asyvars"><img src="mybargraph_asyvars.png" class="img-fluid figure-img" style="width:50.0%" alt="Bar Graph Of Tree Location Using asyvars"></a></p>
@@ -517,6 +572,11 @@ div.csl-indent {
 </section>
 <section id="continuous-by-continuous-twoway-scatter-y-x" class="level2">
 <h2 class="anchored" data-anchor-id="continuous-by-continuous-twoway-scatter-y-x">Continuous by Continuous (<code>twoway scatter y x</code>)</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">twoway</span> <span class="kw">scatter</span> height age_base, <span class="bn">title</span>(<span class="st">"Tree Height by Age"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> myscatter.png, <span class="kw">width</span>(2000) <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="myscatter.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Scatterplot Of Tree Height By Age"><img src="myscatter.png" class="img-fluid figure-img" style="width:50.0%" alt="Scatterplot Of Tree Height By Age"></a></p>
@@ -526,6 +586,11 @@ div.csl-indent {
 </section>
 <section id="categorical-by-categorical-graph-bar-overx-overy-asyvars2" class="level2">
 <h2 class="anchored" data-anchor-id="categorical-by-categorical-graph-bar-overx-overy-asyvars2">Categorical by Categorical (<code>graph bar, over(x) over(y)</code>) <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="bn">bar</span>, <span class="bn">over</span>(site) <span class="bn">over</span>(location) <span class="bn">title</span>(<span class="st">"Tree Site Growth Quality by Location"</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> mybargraph2.png, <span class="kw">width</span>(2000) <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="mybargraph2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Bar Graph Of Tree Site By Location"><img src="mybargraph2.png" class="img-fluid figure-img" style="width:50.0%" alt="Bar Graph Of Tree Site By Location"></a></p>
@@ -535,6 +600,11 @@ div.csl-indent {
 </section>
 <section id="continuous-by-categorical-graph-bar-y-overx-asyvars1" class="level2">
 <h2 class="anchored" data-anchor-id="continuous-by-categorical-graph-bar-y-overx-asyvars1">Continuous by Categorical (<code>graph bar y, over(x)</code>) <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="bn">bar</span> height, <span class="bn">over</span>(location) <span class="bn">title</span>(<span class="st">"Tree Height by Location"</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> mybargraph3.png, <span class="kw">width</span>(2000) <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="mybargraph3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Bar Graph Of Mean Tree Height By Location"><img src="mybargraph3.png" class="img-fluid figure-img" style="width:50.0%" alt="Bar Graph Of Mean Tree Height By Location"></a></p>
@@ -549,17 +619,32 @@ div.csl-indent {
 <p>I have written a <a href="https://agrogan1.github.io/Stata/">Stata Michigan graph scheme</a> that can be installed. Asjad Naqvi has written <a href="https://github.com/asjadnaqvi/Stata-schemes">an excellent and comprehensive set of Stata graph schemes</a>, including the <code>neon</code> scheme used in some examples in this blog post.</p>
 <section id="continuous-by-continuous-twoway-scatter-y-x-scheme..." class="level2">
 <h2 class="anchored" data-anchor-id="continuous-by-continuous-twoway-scatter-y-x-scheme...">Continuous by Continuous (<code>twoway scatter y x, scheme(...)</code>)</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">twoway</span> <span class="kw">scatter</span> height age_base, <span class="bn">title</span>(<span class="st">"Tree Height by Age"</span>) <span class="dv">scheme</span>(michigan)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> myscatterM.png, <span class="kw">width</span>(2000) <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="myscatterM.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Scatterplot Of Tree Height By Age With Michigan Graph Scheme"><img src="myscatterM.png" class="img-fluid figure-img" style="width:50.0%" alt="Scatterplot Of Tree Height By Age With Michigan Graph Scheme"></a></p>
 <figcaption>Scatterplot Of Tree Height By Age With Michigan Graph Scheme</figcaption>
 </figure>
 </div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">twoway</span> <span class="kw">scatter</span> height age_base, <span class="bn">title</span>(<span class="st">"Tree Height by Age"</span>) <span class="dv">scheme</span>(neon) <span class="bn">msymbol</span>(o)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> myscatterNEON.png, <span class="kw">width</span>(2000) <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="myscatterNEON.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Scatterplot Of Tree Height By Age With neon Graph Scheme"><img src="myscatterNEON.png" class="img-fluid figure-img" style="width:50.0%" alt="Scatterplot Of Tree Height By Age With neon Graph Scheme"></a></p>
 <figcaption>Scatterplot Of Tree Height By Age With neon Graph Scheme</figcaption>
 </figure>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">twoway</span> <span class="kw">scatter</span> height age_base, <span class="bn">title</span>(<span class="st">"Tree Height by Age"</span>) <span class="dv">scheme</span>(s1color)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> myscatterS.png, <span class="kw">width</span>(2000) <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -570,17 +655,32 @@ div.csl-indent {
 </section>
 <section id="continuous-by-categorical-graph-bar-y-overx-scheme...asyvars1" class="level2">
 <h2 class="anchored" data-anchor-id="continuous-by-categorical-graph-bar-y-overx-scheme...asyvars1">Continuous by Categorical (<code>graph bar y, over(x) scheme(...)</code>)<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="bn">bar</span> height, <span class="bn">over</span>(location) asyvars <span class="bn">title</span>(<span class="st">"Tree Height by Location"</span>) <span class="dv">scheme</span>(michigan)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> mybarM.png, <span class="kw">width</span>(2000) <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="mybarM.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Bar Graph Of Mean Tree Height By Location With Michigan Graph Scheme"><img src="mybarM.png" class="img-fluid figure-img" style="width:50.0%" alt="Bar Graph Of Mean Tree Height By Location With Michigan Graph Scheme"></a></p>
 <figcaption>Bar Graph Of Mean Tree Height By Location With Michigan Graph Scheme</figcaption>
 </figure>
 </div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="bn">bar</span> height, <span class="bn">over</span>(location) asyvars <span class="bn">title</span>(<span class="st">"Tree Height by Location"</span>) <span class="dv">scheme</span>(neon)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> mybarNEON.png, <span class="kw">width</span>(2000) <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="mybarNEON.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Bar Graph Of Mean Tree Height By Location With neon Graph Scheme"><img src="mybarNEON.png" class="img-fluid figure-img" style="width:50.0%" alt="Bar Graph Of Mean Tree Height By Location With neon Graph Scheme"></a></p>
 <figcaption>Bar Graph Of Mean Tree Height By Location With neon Graph Scheme</figcaption>
 </figure>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="bn">bar</span> height, <span class="bn">over</span>(location) asyvars <span class="bn">title</span>(<span class="st">"Tree Height by Location"</span>) <span class="dv">scheme</span>(s1color)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> mybarS.png, <span class="kw">width</span>(2000) <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
