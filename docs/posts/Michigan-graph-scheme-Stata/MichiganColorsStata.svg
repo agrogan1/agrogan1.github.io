@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This is a Stata 19.5 generated SVG file (http://www.stata.com) -->
+
+<svg version="1.1" width="2000px" height="800px" viewBox="0 0 5400 2160" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>Stata Graph - michigan</desc>
+	<rect x="0" y="0" width="5400" height="2160" style="fill:#FFFFFF;stroke:none"/>
+	<rect x="0.00" y="0.00" width="5400.00" height="2160.00" style="fill:#FFFFFF"/>
+	<rect x="2.16" y="2.16" width="5395.68" height="2155.68" style="fill:none;stroke:#FFFFFF;stroke-width:4.32"/>
+	<rect x="195.58" y="206.55" width="4706.77" height="1877.85" style="fill:#FFFFFF"/>
+	<rect x="197.74" y="208.71" width="4702.46" height="1873.53" style="fill:none;stroke:#FFFFFF;stroke-width:4.32"/>
+	<rect x="351.17" y="282.15" width="399.60" height="1802.25" style="fill:#00274C"/>
+	<rect x="353.33" y="284.31" width="395.28" height="1797.93" style="fill:none;stroke:#00274C;stroke-width:4.32"/>
+	<rect x="750.77" y="282.15" width="399.60" height="1802.25" style="fill:#FFCB05"/>
+	<rect x="752.93" y="284.31" width="395.28" height="1797.93" style="fill:none;stroke:#FFCB05;stroke-width:4.32"/>
+	<rect x="1150.37" y="282.15" width="399.60" height="1802.25" style="fill:#9A3324"/>
+	<rect x="1152.53" y="284.31" width="395.28" height="1797.93" style="fill:none;stroke:#9A3324;stroke-width:4.32"/>
+	<rect x="1549.97" y="282.15" width="399.60" height="1802.25" style="fill:#D86018"/>
+	<rect x="1552.13" y="284.31" width="395.28" height="1797.93" style="fill:none;stroke:#D86018;stroke-width:4.32"/>
+	<rect x="1949.57" y="282.15" width="399.60" height="1802.25" style="fill:#75988D"/>
+	<rect x="1951.73" y="284.31" width="395.28" height="1797.93" style="fill:none;stroke:#75988D;stroke-width:4.32"/>
+	<rect x="2349.17" y="282.15" width="399.60" height="1802.25" style="fill:#A5A508"/>
+	<rect x="2351.33" y="284.31" width="395.28" height="1797.93" style="fill:none;stroke:#A5A508;stroke-width:4.32"/>
+	<rect x="2748.77" y="282.15" width="399.60" height="1802.25" style="fill:#00B2A9"/>
+	<rect x="2750.93" y="284.31" width="395.28" height="1797.93" style="fill:none;stroke:#00B2A9;stroke-width:4.32"/>
+	<rect x="3148.37" y="282.15" width="399.60" height="1802.25" style="fill:#2F65A7"/>
+	<rect x="3150.53" y="284.31" width="395.28" height="1797.93" style="fill:none;stroke:#2F65A7;stroke-width:4.32"/>
+	<rect x="3547.97" y="282.15" width="399.60" height="1802.25" style="fill:#702082"/>
+	<rect x="3550.13" y="284.31" width="395.28" height="1797.93" style="fill:none;stroke:#702082;stroke-width:4.32"/>
+	<rect x="3947.57" y="282.15" width="399.60" height="1802.25" style="fill:#575294"/>
+	<rect x="3949.73" y="284.31" width="395.28" height="1797.93" style="fill:none;stroke:#575294;stroke-width:4.32"/>
+	<rect x="4347.17" y="282.15" width="399.60" height="1802.25" style="fill:#758BFD"/>
+	<rect x="4349.33" y="284.31" width="395.28" height="1797.93" style="fill:none;stroke:#758BFD;stroke-width:4.32"/>
+	<text x="142.98" y="1145.47" style="font-family:'Helvetica';font-size:74.93px;fill:#000000" transform="rotate(-90 142.98,1145.47)" text-anchor="middle"> </text>
+	<text x="2548.97" y="161.98" style="font-family:'Helvetica';font-size:104.96px;fill:#000000" text-anchor="middle">Michigan Graph Scheme Colors</text>
+	<rect x="4928.34" y="550.63" width="370.07" height="1189.69" style="fill:#FFFFFF"/>
+	<rect x="4930.50" y="552.79" width="365.75" height="1185.37" style="fill:none;stroke:#FFFFFF;stroke-width:4.32"/>
+	<rect x="4960.74" y="583.03" width="172.80" height="74.92" style="fill:#00274C"/>
+	<rect x="4962.90" y="585.19" width="168.48" height="70.60" style="fill:none;stroke:#00274C;stroke-width:4.32"/>
+	<rect x="4960.74" y="687.99" width="172.80" height="74.92" style="fill:#FFCB05"/>
+	<rect x="4962.90" y="690.15" width="168.48" height="70.60" style="fill:none;stroke:#FFCB05;stroke-width:4.32"/>
+	<rect x="4960.74" y="792.96" width="172.80" height="75.09" style="fill:#9A3324"/>
+	<rect x="4962.90" y="795.12" width="168.48" height="70.77" style="fill:none;stroke:#9A3324;stroke-width:4.32"/>
+	<rect x="4960.74" y="897.92" width="172.80" height="75.09" style="fill:#D86018"/>
+	<rect x="4962.90" y="900.08" width="168.48" height="70.77" style="fill:none;stroke:#D86018;stroke-width:4.32"/>
+	<rect x="4960.74" y="1002.88" width="172.80" height="75.09" style="fill:#75988D"/>
+	<rect x="4962.90" y="1005.04" width="168.48" height="70.77" style="fill:none;stroke:#75988D;stroke-width:4.32"/>
+	<rect x="4960.74" y="1108.01" width="172.80" height="74.92" style="fill:#A5A508"/>
+	<rect x="4962.90" y="1110.17" width="168.48" height="70.60" style="fill:none;stroke:#A5A508;stroke-width:4.32"/>
+	<rect x="4960.74" y="1212.97" width="172.80" height="74.93" style="fill:#00B2A9"/>
+	<rect x="4962.90" y="1215.14" width="168.48" height="70.61" style="fill:none;stroke:#00B2A9;stroke-width:4.32"/>
+	<rect x="4960.74" y="1317.94" width="172.80" height="75.09" style="fill:#2F65A7"/>
+	<rect x="4962.90" y="1320.10" width="168.48" height="70.77" style="fill:none;stroke:#2F65A7;stroke-width:4.32"/>
+	<rect x="4960.74" y="1422.90" width="172.80" height="75.09" style="fill:#702082"/>
+	<rect x="4962.90" y="1425.06" width="168.48" height="70.77" style="fill:none;stroke:#702082;stroke-width:4.32"/>
+	<rect x="4960.74" y="1528.03" width="172.80" height="74.92" style="fill:#575294"/>
+	<rect x="4962.90" y="1530.19" width="168.48" height="70.60" style="fill:none;stroke:#575294;stroke-width:4.32"/>
+	<rect x="4960.74" y="1632.99" width="172.80" height="74.92" style="fill:#758BFD"/>
+	<rect x="4962.90" y="1635.15" width="168.48" height="70.60" style="fill:none;stroke:#758BFD;stroke-width:4.32"/>
+	<text x="5178.43" y="646.76" style="font-family:'Helvetica';font-size:74.93px;fill:#000000">1</text>
+	<text x="5178.43" y="751.72" style="font-family:'Helvetica';font-size:74.93px;fill:#000000">2</text>
+	<text x="5178.43" y="856.68" style="font-family:'Helvetica';font-size:74.93px;fill:#000000">3</text>
+	<text x="5178.43" y="961.65" style="font-family:'Helvetica';font-size:74.93px;fill:#000000">4</text>
+	<text x="5178.43" y="1066.78" style="font-family:'Helvetica';font-size:74.93px;fill:#000000">5</text>
+	<text x="5178.43" y="1171.74" style="font-family:'Helvetica';font-size:74.93px;fill:#000000">6</text>
+	<text x="5178.43" y="1276.70" style="font-family:'Helvetica';font-size:74.93px;fill:#000000">7</text>
+	<text x="5178.43" y="1381.67" style="font-family:'Helvetica';font-size:74.93px;fill:#000000">8</text>
+	<text x="5178.43" y="1486.80" style="font-family:'Helvetica';font-size:74.93px;fill:#000000">9</text>
+	<text x="5178.43" y="1591.76" style="font-family:'Helvetica';font-size:74.93px;fill:#000000">10</text>
+	<text x="5178.43" y="1696.72" style="font-family:'Helvetica';font-size:74.93px;fill:#000000">11</text>
+</svg>

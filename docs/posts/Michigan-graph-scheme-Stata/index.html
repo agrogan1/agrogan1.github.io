@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Andrew Grogan-Kaylor">
 <meta name="dcterms.date" content="2026-03-08">
 
-<title>A Very Short Introduction to Stata – Andrew Grogan-Kaylor</title>
+<title>Michigan Graph Scheme for Stata – Andrew Grogan-Kaylor</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -24,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -46,6 +80,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-91951e90da365a4745b3d6636fa4fb2d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -76,14 +113,18 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../agrogan.css">
-<meta property="og:title" content="A Very Short Introduction to Stata – Andrew Grogan-Kaylor">
-<meta property="og:description" content="The basic philosophy of Stata.">
+<meta property="og:title" content="Michigan Graph Scheme for Stata – Andrew Grogan-Kaylor">
+<meta property="og:description" content="">
+<meta property="og:image" content="MichiganColorsStata.svg">
 <meta property="og:site_name" content="Andrew Grogan-Kaylor">
-<meta name="twitter:title" content="A Very Short Introduction to Stata – Andrew Grogan-Kaylor">
-<meta name="twitter:description" content="The basic philosophy of Stata.">
-<meta name="twitter:card" content="summary">
-<meta name="citation_title" content="A *Very* Short Introduction to Stata">
-<meta name="citation_author" content="Andrew Grogan-Kaylor">
+<meta property="og:image:alt" content="Colors in Michigan Graph Scheme">
+<meta name="twitter:title" content="Michigan Graph Scheme for Stata – Andrew Grogan-Kaylor">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="MichiganColorsStata.svg">
+<meta name="twitter:image:alt" content="Colors in Michigan Graph Scheme">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="citation_title" content="Michigan Graph Scheme for Stata">
+<meta name="citation_author" content="Andy Grogan-Kaylor">
 <meta name="citation_publication_date" content="2026-03-08">
 <meta name="citation_cover_date" content="2026-03-08">
 <meta name="citation_year" content="2026">
@@ -276,11 +317,11 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">A <em>Very</em> Short Introduction to Stata</h1>
-            <p class="subtitle lead">The basic <em>philosophy</em> of Stata.</p>
+      <h1 class="title">Michigan Graph Scheme for Stata</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">stats</div>
                 <div class="quarto-category">Stata</div>
+                <div class="quarto-category">dataviz</div>
               </div>
                   </div>
   </div>
@@ -291,7 +332,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Andrew Grogan-Kaylor </p>
+               <p>Andy Grogan-Kaylor </p>
             </div>
     </div>
       
@@ -309,8 +350,24 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
+  <li><a href="#example-data" id="toc-example-data" class="nav-link" data-scroll-target="#example-data">Example Data</a></li>
+  <li><a href="#histogram" id="toc-histogram" class="nav-link" data-scroll-target="#histogram">Histogram</a></li>
+  <li><a href="#histogram-with-transparency" id="toc-histogram-with-transparency" class="nav-link" data-scroll-target="#histogram-with-transparency">Histogram With Transparency</a></li>
+  <li><a href="#bar-graph" id="toc-bar-graph" class="nav-link" data-scroll-target="#bar-graph">Bar Graph</a></li>
+  <li><a href="#bar-graph-with-transparency" id="toc-bar-graph-with-transparency" class="nav-link" data-scroll-target="#bar-graph-with-transparency">Bar Graph With Transparency</a></li>
+  <li><a href="#scatterplot" id="toc-scatterplot" class="nav-link" data-scroll-target="#scatterplot">Scatterplot</a></li>
+  <li><a href="#scatterplot-with-transparency" id="toc-scatterplot-with-transparency" class="nav-link" data-scroll-target="#scatterplot-with-transparency">Scatterplot With Transparency</a></li>
+  <li><a href="#legend-placement" id="toc-legend-placement" class="nav-link" data-scroll-target="#legend-placement">Legend Placement</a></li>
+  <li><a href="#individual-michigan-colors" id="toc-individual-michigan-colors" class="nav-link" data-scroll-target="#individual-michigan-colors">Individual Michigan Colors</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -319,142 +376,237 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="MichiganColorsStata.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Colors in Michigan Graph Scheme"><img src="MichiganColorsStata.svg" class="img-fluid figure-img" style="width:100.0%" alt="Colors in Michigan Graph Scheme"></a></p>
+<figcaption>Colors in Michigan Graph Scheme</figcaption>
+</figure>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Key Idea
+<p>Stata provides the use of graph schemes that improve the overall look of graphs.</p>
+<p>See <code>help scheme</code>.</p>
+<p>The <em>Michigan graph scheme</em> makes use of official University of Michigan colors.</p>
+</section>
+<section id="installation" class="level1">
+<h1>Installation</h1>
+<p>Type <code>net from https://agrogan1.github.io/Stata</code> and click the links to install.</p>
+</section>
+<section id="example-data" class="level1">
+<h1>Example Data</h1>
+<p>We are going to use the famous “iris” data collected by Edgar Anderson.</p>
+<div class="cell" data-collectcode="true">
+<div class="cell-output cell-output-stdout">
+<pre><code>                Summary   
+--------------------------
+N                      150
+Sepal.Length 5.843 (0.828)
+Sepal.Width  3.057 (0.436)
+Petal.Length 3.758 (1.765)
+Petal.Width  1.199 (0.762)
+Species                   
+  setosa        50 (33.3%)
+  versicolor    50 (33.3%)
+  virginica     50 (33.3%)
+--------------------------</code></pre>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>The basic philosophy of Stata—“Stata in one sentence”—is:</p>
-<p><code>do_something to_variable(s), options</code></p>
-<p>Often it is not necessary to use any options since the authors of Stata have done such a good job of creating an intuitive language, and of thinking about the defaults.</p>
+</section>
+<section id="histogram" class="level1">
+<h1>Histogram</h1>
+<div class="cell" data-collectcode="true">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">histogram</span> Petal_Length, <span class="dv">scheme</span>(michigan)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="myhistogram.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Histogram Using Michigan Scheme"><img src="myhistogram.png" class="img-fluid figure-img" style="width:50.0%" alt="Histogram Using Michigan Scheme"></a></p>
+<figcaption>Histogram Using Michigan Scheme</figcaption>
+</figure>
 </div>
-<p>Commands that you actually type are represented in <code>monospace</code> font. <code>x</code> and <code>y</code> refer to variables in your data.</p>
+</section>
+<section id="histogram-with-transparency" class="level1">
+<h1>Histogram With Transparency</h1>
+<div class="cell" data-collectcode="true">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">histogram</span> Petal_Length, fcolor(%50) <span class="dv">scheme</span>(michigan)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="myhistogram2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Histogram Using Michigan Scheme And Slightly Transparent Bars"><img src="myhistogram2.png" class="img-fluid figure-img" style="width:50.0%" alt="Histogram Using Michigan Scheme And Slightly Transparent Bars"></a></p>
+<figcaption>Histogram Using Michigan Scheme And Slightly Transparent Bars</figcaption>
+</figure>
+</div>
+</section>
+<section id="bar-graph" class="level1">
+<h1>Bar Graph</h1>
+<div class="cell" data-collectcode="true">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="bn">bar</span> Petal_Length, <span class="bn">over</span>(Species) <span class="dv">scheme</span>(michigan) asyvars</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="mybargraph.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Bar Graph Using Michigan Scheme"><img src="mybargraph.png" class="img-fluid figure-img" style="width:50.0%" alt="Bar Graph Using Michigan Scheme"></a></p>
+<figcaption>Bar Graph Using Michigan Scheme</figcaption>
+</figure>
+</div>
+</section>
+<section id="bar-graph-with-transparency" class="level1">
+<h1>Bar Graph With Transparency</h1>
+<div class="cell" data-collectcode="true">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="bn">bar</span> Petal_Length, <span class="bn">over</span>(Species) intensity(70) <span class="dv">scheme</span>(michigan) asyvars</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="mybargraph2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Bar Graph Using Michigan Scheme and Slightly Transparent Bars"><img src="mybargraph2.png" class="img-fluid figure-img" style="width:50.0%" alt="Bar Graph Using Michigan Scheme and Slightly Transparent Bars"></a></p>
+<figcaption>Bar Graph Using Michigan Scheme and Slightly Transparent Bars</figcaption>
+</figure>
+</div>
+</section>
+<section id="scatterplot" class="level1">
+<h1>Scatterplot</h1>
+<div class="cell" data-collectcode="true">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">twoway</span> (<span class="kw">scatter</span> Petal_Length Petal_Width) <span class="co">///</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>(<span class="kw">lfit</span> Petal_Length Petal_Width), <span class="co">///</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="dv">scheme</span>(michigan)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="myscatter.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Scatterplot Using Michigan Scheme"><img src="myscatter.png" class="img-fluid figure-img" style="width:50.0%" alt="Scatterplot Using Michigan Scheme"></a></p>
+<figcaption>Scatterplot Using Michigan Scheme</figcaption>
+</figure>
+</div>
+</section>
+<section id="scatterplot-with-transparency" class="level1">
+<h1>Scatterplot With Transparency</h1>
+<div class="cell" data-collectcode="true">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">twoway</span> (<span class="kw">scatter</span> Petal_Length Petal_Width, mcolor(%30)) <span class="co">/// markers have 30% transparency</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>(<span class="kw">lfit</span> Petal_Length Petal_Width), <span class="co">///</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="dv">scheme</span>(michigan)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="myscatter2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Scatterplot Using Michigan Scheme And Slightly Transparent Markers"><img src="myscatter2.png" class="img-fluid figure-img" style="width:50.0%" alt="Scatterplot Using Michigan Scheme And Slightly Transparent Markers"></a></p>
+<figcaption>Scatterplot Using Michigan Scheme And Slightly Transparent Markers</figcaption>
+</figure>
+</div>
+</section>
+<section id="legend-placement" class="level1">
+<h1>Legend Placement</h1>
+<p>Sometimes you may wish to have the legend of the graph placed at the <em>bottom</em> of the graph. The <code>pos(6)</code> suboption inside the <code>legend</code> option will place the legend at the bottom, while you can manually control the number of legend rows with the <code>rows</code> suboption.</p>
+<div class="cell" data-collectcode="true">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="bn">bar</span> Petal_Length, <span class="bn">over</span>(Species) <span class="dv">scheme</span>(michigan) asyvars <span class="bn">legend</span>(pos(6) <span class="bn">rows</span>(1))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="mybargraph3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Bar Graph Using Michigan Scheme and Modified Legend"><img src="mybargraph3.png" class="img-fluid figure-img" style="width:50.0%" alt="Bar Graph Using Michigan Scheme and Modified Legend"></a></p>
+<figcaption>Bar Graph Using Michigan Scheme and Modified Legend</figcaption>
+</figure>
+</div>
+</section>
+<section id="individual-michigan-colors" class="level1">
+<h1>Individual Michigan Colors</h1>
+<p>Individual University of Michigan colors are listed below.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 51%">
-<col style="width: 48%">
+<col style="width: 66%">
+<col style="width: 15%">
+<col style="width: 15%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Task</th>
-<th>Command</th>
+<th style="text-align: left;">Color</th>
+<th style="text-align: left;">Hex</th>
+<th style="text-align: left;">RGB</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Open data</td>
-<td><code>use mydata.dta</code></td>
+<td style="text-align: left;"><span data-fg="white" data-bg="#00274C">Blue</span></td>
+<td style="text-align: left;">#00274C</td>
+<td style="text-align: left;">0 39 76</td>
 </tr>
 <tr class="even">
-<td>Look for or find</td>
-<td><code>lookfor thing</code> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></td>
+<td style="text-align: left;"><span data-bg="#FFCB05">Maize</span></td>
+<td style="text-align: left;">#FFCB05</td>
+<td style="text-align: left;">255 203 5</td>
 </tr>
 <tr class="odd">
-<td>Describe the data</td>
-<td><code>describe x</code> <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></td>
+<td style="text-align: left;"><span data-fg="white" data-bg="#9A3324">Tappan Red</span></td>
+<td style="text-align: left;">#9A3324</td>
+<td style="text-align: left;">154 51 36</td>
 </tr>
 <tr class="even">
-<td>Descriptive statistics</td>
-<td><code>summarize x y</code></td>
+<td style="text-align: left;"><span data-bg="#D86018">Ross School Orange</span></td>
+<td style="text-align: left;">#D86018</td>
+<td style="text-align: left;">216 96 24</td>
 </tr>
 <tr class="odd">
-<td>Frequencies</td>
-<td><code>tabulate x</code></td>
+<td style="text-align: left;"><span data-bg="#75988d">Rackham Green</span></td>
+<td style="text-align: left;">#75988d</td>
+<td style="text-align: left;">117 152 141</td>
 </tr>
 <tr class="even">
-<td>Cross-Tabulation.</td>
-<td><code>tabulate x y</code> <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></td>
+<td style="text-align: left;"><span data-bg="#A5A508">Wave Field Green</span></td>
+<td style="text-align: left;">#A5A508</td>
+<td style="text-align: left;">165 165 8</td>
 </tr>
 <tr class="odd">
-<td>Recode</td>
-<td><code>recode x (old = new)(...), generate(xR)</code><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></td>
+<td style="text-align: left;"><span data-bg="#00B2A9">Taubman Teal</span></td>
+<td style="text-align: left;">#00B2A9</td>
+<td style="text-align: left;">0 178 169</td>
 </tr>
 <tr class="even">
-<td>Rename</td>
-<td><code>rename x z</code></td>
+<td style="text-align: left;"><span data-fg="white" data-bg="#2F65A7">Arboretum Blue</span></td>
+<td style="text-align: left;">#2F65A7</td>
+<td style="text-align: left;">47 101 167</td>
 </tr>
 <tr class="odd">
-<td>Keep</td>
-<td><code>keep x y z</code></td>
+<td style="text-align: left;"><span data-fg="white" data-bg="#702082">Ann Arbor Amethyst</span></td>
+<td style="text-align: left;">#702082</td>
+<td style="text-align: left;">112 32 130</td>
 </tr>
 <tr class="even">
-<td>Drop</td>
-<td><code>drop x y z</code></td>
+<td style="text-align: left;"><span data-fg="white" data-bg="#575294">Matthaei Violet</span></td>
+<td style="text-align: left;">#575294</td>
+<td style="text-align: left;">87 82 148</td>
 </tr>
 <tr class="odd">
-<td>Correlation</td>
-<td><code>corr x y</code></td>
+<td style="text-align: left;"><span data-bg="#CFC096">UMMA Tan</span></td>
+<td style="text-align: left;">#CFC096</td>
+<td style="text-align: left;">207 192 150</td>
 </tr>
 <tr class="even">
-<td>Regression</td>
-<td><code>regress y x z</code></td>
+<td style="text-align: left;"><span data-bg="#9B9A6D">Burton Tower Beige</span></td>
+<td style="text-align: left;">#9B9A6D</td>
+<td style="text-align: left;">155 154 109</td>
 </tr>
 <tr class="odd">
-<td>Logistic Regression</td>
-<td><code>logit y x z, or</code> <a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></td>
+<td style="text-align: left;"><span data-bg="#989C97">Angell Hall Ash</span></td>
+<td style="text-align: left;">#989C97</td>
+<td style="text-align: left;">152 156 151</td>
 </tr>
 <tr class="even">
-<td>Ordinal Logistic Regression</td>
-<td><code>ologit y x z, or</code> <a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></td>
-</tr>
-<tr class="odd">
-<td>Multinomial Logistic Regression</td>
-<td><code>mlogit y x z, rr</code> <a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></td>
-</tr>
-<tr class="even">
-<td>Multilevel Model</td>
-<td><code>mixed y x z || group: x</code></td>
-</tr>
-<tr class="odd">
-<td>Structural Equation Modeling</td>
-<td><code>sem (y &lt;- x m z) (m &lt;- x z)</code></td>
-</tr>
-<tr class="even">
-<td>Histogram</td>
-<td><code>histogram x</code> <a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></td>
-</tr>
-<tr class="odd">
-<td>Bar Graph (of categories)</td>
-<td><code>graph bar, over(x)</code> <a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></td>
-</tr>
-<tr class="even">
-<td>Bar Graph (of means over categories)</td>
-<td><code>graph bar y, over(x)</code></td>
-</tr>
-<tr class="odd">
-<td>Pie Chart</td>
-<td><code>graph pie, over(x)</code></td>
-</tr>
-<tr class="even">
-<td>Scatterplot</td>
-<td><code>twoway scatter y x</code></td>
+<td style="text-align: left;"><span data-fg="white" data-bg="#655A52">Law Quad Stone</span></td>
+<td style="text-align: left;">#655A52</td>
+<td style="text-align: left;">101 90 82</td>
 </tr>
 </tbody>
 </table>
+<p>Stata can use RGB codes for colors. As an example.</p>
+<div class="cell" data-collectcode="true">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">twoway</span> (<span class="kw">scatter</span> Petal_Length Petal_Width, mcolor(<span class="st">"112 32 130 %30"</span>)) <span class="co">/// markers are Amethyst with 30% transparency</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>(<span class="kw">lfit</span> Petal_Length Petal_Width, lcolor(<span class="st">"87 82 148"</span>)), <span class="co">/// Violet line</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="dv">scheme</span>(michigan)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="myscatter3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Scatterplot Using Michigan Scheme, Selected Colors, And Slightly Transparent Markers"><img src="myscatter3.png" class="img-fluid figure-img" style="width:50.0%" alt="Scatterplot Using Michigan Scheme, Selected Colors, And Slightly Transparent Markers"></a></p>
+<figcaption>Scatterplot Using Michigan Scheme, Selected Colors, And Slightly Transparent Markers</figcaption>
+</figure>
+</div>
 
 
+</section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p><code>lookfor thing</code> looks for any variable with <code>thing</code> in the variable name or variable label. <code>lookfor somethingelse</code> looks for any variable with <code>somethingelse</code> in the variable name or variable label. It is often useful to <code>lookfor</code> abbreviations e.g.&nbsp;<code>lookfor anx</code> instead of <code>lookfor anxiety</code>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p><code>describe, short</code> will give you quick summary information about the data including <em>sample size</em>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>After the <code>,</code> the <code>row</code> and <code>col</code> options can be helpful to generate <em>row</em> and <em>column</em> percentages.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>It is usually best practice, but not required, to <code>recode</code> values of a variable (e.g.&nbsp;<code>x</code>) into a <em>new</em> variable (e.g.&nbsp;<code>xR</code>), leaving the original variable untouched.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>Here we need to use the <code>, or</code> option to ask for <em>odds ratios</em> instead of <em>logit coefficients</em>.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>Here again we need to use the <code>, or</code> option to ask for <em>odds ratios</em> instead of <em>logit coefficients</em>.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>Here we need to use the <code>, rr</code> option to ask for <em>risk ratios</em> instead of <em>logit coefficients</em>.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p>For graphing commands, you can often add options after a <code>,</code>. e.g.&nbsp;<code>title("title of the graph")</code>, <code>xtitle("title of the x axis")</code>, <code>ytitle("title of the y axis")</code>.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn9"><p>For bar graphs, the <code>asyvars</code> option is often helpful, as it causes the bars to be different colors.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -856,6 +1008,38 @@ ul.task-list li input[type="checkbox"] {
   });
   </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
