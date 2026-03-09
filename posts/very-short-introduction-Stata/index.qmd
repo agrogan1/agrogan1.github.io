@@ -1,7 +1,7 @@
 ---
 title: "A *Very* Short Introduction to Stata"
 subtitle: "The basic *philosophy* of Stata."
-author: "Andrew Grogan-Kaylor"
+author: Andy Grogan-Kaylor
 date: "2026-3-8"
 categories: [stats, Stata]
 image: "Stata.png"
