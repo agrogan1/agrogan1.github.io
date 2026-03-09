@@ -196,7 +196,7 @@ graph export mybargraph3.png, width(2000) replace
 
 Stata *graph schemes* can substantially change the look of a graph. Built in graph schemes include `s1color`, the new default scheme `stcolor`, the older default scheme `s2color`, `sj`, `economist` and `s1rcolor`. 
 
-I have written a [Stata Michigan graph scheme](https://agrogan1.github.io/Stata/) that can be installed. Asjad Naqvi has written [an excellent and comprehensive set of Stata graph schemes](https://github.com/asjadnaqvi/Stata-schemes).
+I have written a [Stata Michigan graph scheme](https://agrogan1.github.io/posts/Michigan-graph-scheme-Stata/index.html) that can be installed. Asjad Naqvi has written [an excellent and comprehensive set of Stata graph schemes](https://github.com/asjadnaqvi/Stata-schemes).
 
 ## Continuous by Continuous (`twoway scatter y x, scheme(...)`)
 
