@@ -311,9 +311,11 @@ Often funders have objections to random assignment. Often the individuals or com
 
 Sometimes, instead of relying on random assignment, we may wish to observe the effects of a program more naturalistically.
 
-And lastly, the logistical demands of random assignment may require smaller samples, when we wish to observe the outcomes of a program with a larger, and possibly more generalizable samples of participants.[^generalizability] Generalizability is often termed *external validity*.
+And lastly, the logistical demands of random assignment may require smaller samples, as well as shorter time frames, when we wish to observe the outcomes of a program with a larger more generalizable sample of participants[^generalizability], or over a longer time frame[^timeframe]. Generalizability is often termed *external validity*.
 
 [^generalizability]: Increasingly we are aware that an evaluation conducted with a small selected group of participants may not generalize well to other groups of people with different demographic or identity characteristics, who are from different cultures, or who live in different countries. 
+
+[^timeframe]: Somewhat relatedly, results that are observed over a shorter time frame (e.g. several months or a year) may not generalize to longer time frames such as several years or many years.
 
 # When Participants Choose Their Own Level Of Particpation
 
