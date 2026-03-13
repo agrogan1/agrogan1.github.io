@@ -3,6 +3,7 @@
     "listing": "/blog.html",
     "items": [
       "/posts/multilevel-thinking/index.html",
+      "/posts/graphing-change-over-time/index.html",
       "/posts/Michigan-graph-scheme-Stata/index.html",
       "/posts/very-short-introduction-Stata/index.html",
       "/posts/data-visualization-with-Stata/index.html",
@@ -57,7 +58,6 @@
       "/posts/theory/index.html",
       "/posts/orphan-storymap/index.html",
       "/posts/interactions-in-logistic-regression/index.html",
-      "/posts/graphing-change-over-time/index.html",
       "/posts/can-Stata-make-aesthetically-appealing-graph/index.html",
       "/posts/why-Stata-is-better-at-graphing-than-R/index.html",
       "/posts/treemap/index.html",
