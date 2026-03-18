@@ -2,8 +2,8 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/cleaning-data-with-Stata/index.html",
       "/posts/multilevel-thinking/index.html",
+      "/posts/cleaning-data-with-Stata/index.html",
       "/posts/graphing-change-over-time/index.html",
       "/posts/Michigan-graph-scheme-Stata/index.html",
       "/posts/very-short-introduction-Stata/index.html",
