@@ -5,6 +5,7 @@ author: "Andy Grogan-Kaylor"
 date: "2026-3-19"
 categories: [stats, Stata, worfklow]
 image: "workflow.png"
+highlight-style: haddock
 ---
 
 # Workflows
