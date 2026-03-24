@@ -1,13 +1,65 @@
 ---
-title: "Making a 'Big Number' (And Circle) With R"
+title: "Making a 'Big Number' (And Circle)"
+subtitle: "With R"
 author: "Andy Grogan-Kaylor"
-date: "2023-8-20"
-categories: [dataviz, R]
-image: "bignumber.png"
+date: "2026-3-23"
+categories: [R, stats, dataviz]
 ---
 
-Sometimes a large number (and accompanying circle) can represent a compelling visualization. This *flipbook* explains how to make such visualizations in R: [https://agrogan1.github.io/R/bignumber/bignumber.html](https://agrogan1.github.io/R/bignumber/bignumber.html)
+# Background
 
+A big number, enclosed by a circular bar graph, can be a compelling data visualization.
 
+This post provides code for creating such data visualizations. The use of code initially makes this work more difficult than if using a drag-and-drop interface, but ultimately automates the work and makes it auditable and replicable.
+
+# Example Using 30% and Michigan Blue
+
+```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
+
+library(ggplot2) # beautiful graphs
+
+ggplot(data = NULL, # NULL data set
+       aes(x = 3, # arbitrary x; 3 is good
+           y = 30)) + # y value to be graphed
+  geom_col(fill = "#00274C") + # column & column color
+  coord_polar(theta = "y") + # polar coordinates
+  xlim(0, 4) + # xlimits create a doughnut
+  ylim(0, 100) + # ylimits govern the circumference
+  geom_text(aes(x = 0, # text in center
+                y = 0,
+                label = "30%"), # label for text
+            size = 30, # text size
+            col = "#00274C") + # text color
+  theme_void() # empty theme
+
+```
+
+# Example Using 81% And Michigan Maize
+
+```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
+
+library(ggplot2) # beautiful graphs
+
+ggplot(data = NULL, # NULL data set
+       aes(x = 3, # arbitrary x; 3 is good
+           y = 81)) + # y value to be graphed
+  geom_col(fill = "#ffcb05") + # column & column color
+  coord_polar(theta = "y") + # polar coordinates
+  xlim(0, 4) + # xlimits create a doughnut
+  ylim(0, 100) + # ylimits govern the circumference
+  geom_text(aes(x = 0, # text in center
+                y = 0,
+                label = "81%"), # label for text
+            size = 30, # text size
+            col = "#ffcb05") + # text color
+  theme_void() # empty theme
+
+```
 
 

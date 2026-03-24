@@ -1,0 +1,84 @@
+---
+title: "Colors in R"
+subtitle: "An R Color Chart"
+date: "2026-3-23"
+categories: [R, stats, dataviz]
+image: "deepskyblue.png"
+---
+
+A hopefully handy list of colors in R.
+
+```{r}
+#| output: false
+#| echo: false
+
+library(dplyr) # data wrangling
+
+library(gt) # nifty tables
+
+```
+
+
+```{r}
+#| echo: false
+
+colornumber <- seq(1, 657, 1) # sequence of color numbers
+
+colorname <- colors()[colornumber] # get color name associated with that number
+  
+hexcode <- rgb(col2rgb(colorname)[1,], 
+               col2rgb(colorname)[2,], 
+               col2rgb(colorname)[3,], 
+               max = 255) # hex code
+
+# hexcode <- factor(hexcode)
+
+Rcolors <- data.frame(colornumber, colorname, hexcode)
+
+# write.csv(Rcolors, file = "Rcolors.csv")
+
+# DT::datatable(Rcolors)
+
+
+```
+
+
+```{r}
+#| echo: false
+#| eval: false
+
+# from https://bookdown.org/yihui/rmarkdown-cookbook/font-color.html
+
+colorize <- function(x, color) {
+  
+  if (knitr::is_latex_output()) {
+  
+      sprintf("\\textcolor{%s}{%s}", color, x)
+  
+  } else if (knitr::is_html_output()) {
+    
+    sprintf("<span style='background-color: %s;'>%s</span>", color, x)
+    
+  } else x
+  
+}
+
+```
+
+
+```{r}
+#| echo: false
+
+gt::gt(Rcolors) %>% 
+ cols_add(color = rep("  ", 657)) %>%
+  tab_header(
+    title = "Colors in R") %>%
+ tab_style(
+    style = cell_fill(color = from_column(column = "hexcode")),
+    locations = cells_body(columns = color)
+  )     
+
+```
+
+
+

@@ -3,7 +3,7 @@ title: "`do` Files"
 subtitle: "Do your thinking in Stata code"
 author: "Andy Grogan-Kaylor" 
 date: "2026-3-19"
-categories: [stats, Stata, worfklow]
+categories: [stats, Stata, workflow]
 image: "workflow.png"
 highlight-style: haddock
 ---
