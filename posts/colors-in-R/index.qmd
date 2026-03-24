@@ -6,7 +6,7 @@ categories: [R, stats, dataviz]
 image: "deepskyblue.png"
 ---
 
-A hopefully handy list of colors in R.
+A hopefully handy list of named colors in R.
 
 ```{r}
 #| output: false
