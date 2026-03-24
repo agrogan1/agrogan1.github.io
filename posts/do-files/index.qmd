@@ -66,6 +66,8 @@ In my teaching, I often emphasize the importance of thinking in code, whether th
 ```{stata}
 #| eval: false
 #| echo: true
+#| code-fold: false
+#| code-summary: "Show the do file"
 
 ******************************
 * Penguin Analysis
