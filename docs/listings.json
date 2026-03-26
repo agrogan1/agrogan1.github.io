@@ -3,6 +3,7 @@
     "listing": "/blog.html",
     "items": [
       "/posts/multilevel-thinking/index.html",
+      "/posts/multivariate/index.html",
       "/posts/colors-in-R/index.html",
       "/posts/bignumber/index.html",
       "/posts/do-files/index.html",
@@ -13,7 +14,6 @@
       "/posts/very-short-introduction-Stata/index.html",
       "/posts/data-visualization-with-Stata/index.html",
       "/posts/data-visualization-with-Stata-basics/index.html",
-      "/posts/multivariate/index.html",
       "/posts/workflow/index.html",
       "/posts/empathy/index.html",
       "/posts/multiple-principled-solutions/index.html",
