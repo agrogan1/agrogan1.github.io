@@ -1,0 +1,303 @@
+---
+title: "The Idea of Regression"
+subtitle: "New Regression Tutorial (A Hypothetical Example With Runners)"
+author: "Andy Grogan-Kaylor" 
+date: "2026-3-26"
+categories: [teaching, stats]
+fig-height: 3
+---
+
+```{r}
+
+library(ggplot2) # beautiful graphs
+
+library(gganimate) # animated beautiful graphs
+
+library(pander) # beautiful tables
+
+```
+
+# Introduction
+
+Somewhere along the way in a math class in elementary, middle or high school, you may have encountered the idea of graphing lines and thinking about the equations that represent those lines.  
+
+::: {.callout-tip}
+## Key Idea
+
+We are going to try to illustrate the idea of *regression analysis* using some hypothetical data on *runners*.
+:::
+
+# Imagine A Single Runner
+
+Let’s think about this idea using the hypothetical example of several runners.
+
+The <font color="orange">orange</font> line represents a runner who runs 6 miles every hour.  In 2 hours, this person will have run 12 miles, and if that runner continued for 3 hours of running, they would run 18 miles.
+
+```{r}
+#| message: false
+
+x1 <- c(0, 1, 2, 3)
+
+y1 <- 6 * x1
+
+mydata <- data.frame(x1,y1)
+
+p1 <- ggplot(data = mydata,
+             aes(x = x1,
+                 y = y1,
+                 group = 1)) +
+  geom_point(color = "orange",
+             size = 10,
+             alpha = .7) + 
+  geom_line(color = "orange",
+            linewidth = 2) + 
+  # geom_label(aes(label = paste("hours", 
+  #                              round(x, digits = 2),
+  #                              "\n",
+  #                              "distance: ",
+  #                              round(y, digits = 2)))) +
+  labs(title = "Distance as a Function of Time",
+       x = "Hours",
+       y = "Distance") +
+  theme_minimal() +
+  # theme(title = element_text(size = rel(2)),
+  #       axis.text = element_text(size = rel(2)),
+  #       legend.text = element_text(size = rel(2))) +
+  transition_reveal(x1) 
+
+p1 # replay graph
+
+```
+
+We can write an equation that represents the distance run in several equivalent ways:
+
+* $\text{distance} = 6 \times \text{time}$
+
+* $\text{miles} = 6 \times \text{hours}$
+
+* $y = 6 \times x$
+
+In this case, the runner’s speed (6 miles per hour) is what we call the *slope* of the line. The <font color="orange">orange</font> runner is getting 6 miles of distance for every hour spent running.  Economists sometimes talk about this idea as the “rate of return”:  For every hour of running, the <font color="orange">orange</font> runner gets 6 miles of distance.  
+
+# Imagine Two Additional Runners
+
+Imagine now two other runners, represented by a <font color="red">red</font> line and a <font color="blue">blue</font> line.  
+
+```{r}
+#| message: false
+
+x2 <- rep(c(0, 1, 2, 3), 3)
+
+slope2 <- rep(c(6, 3, 6), each= 4)
+
+intercept2 <- rep(c(0, 0, 2), each = 4)
+
+runner <- rep(c("orange", "red", "blue"), each = 4)
+
+y2 <- intercept2 + slope2 * x2
+
+mydata2 <- data.frame(runner, x2, slope2, intercept2, y2)
+
+p2 <- ggplot(data = mydata2,
+            aes(x = x2,
+                y = y2,
+                color = runner,
+                group = runner)) +
+  geom_point(size = 10, 
+             alpha = .7) + 
+  geom_line(linewidth = 2,
+            show.legend = FALSE) + 
+  labs(title = "Distance as a Function of Time",
+       x = "Hours",
+       y = "Distance") +
+  scale_color_manual(values = c("blue",
+                                "orange",
+                                "red")) +
+  theme_minimal() +
+  # theme(title = element_text(size = rel(2)),
+  #       axis.text = element_text(size = rel(2)),
+  #       legend.text = element_text(size = rel(2))) +
+  transition_reveal(x2) 
+
+p2 # replay graph
+
+
+```
+
+The <font color="red">red</font> runner starts at the same place as the <font color="orange">orange</font> runner, but runs at a slower 3 mile per hour pace.  We can say that the *slope* of the <font color="red">red</font> runner’s line is flatter than the line for the <font color="orange">orange</font> runner.  In fact, this *slope* is 3 miles per hour.
+
+The <font color="blue">blue</font> runner’s situation is somewhat different.  The <font color="blue">blue</font> runner runs at the same speed as the <font color="orange">orange</font> runner. We can say that their lines on the graph have the same *slope*. 
+
+But after two hours of running, the <font color="blue">blue</font> runner is further along because the <font color="blue">blue</font> runner started 2 miles ahead of the <font color="orange">orange</font> runner.  We need a new term to describe this idea.  In graphing, and in statistics, we say that the <font color="blue">blue</font> runner’s line intercepts the y axis at a higher point than the line for the <font color="orange">orange</font> runner.  Put another way, the <font color="blue">blue</font> runner has a higher y-intercept than the <font color="orange">orange</font> runner.  
+
+These two concepts of the *slope* and the *y-intercept* are the foundations of the idea of regression.
+
+# A New Example With More Runners
+
+```{r}
+#| message: false
+
+library(haven)
+
+runners <- read_dta("runners.dta")
+
+runners$runner <- factor(runners$runner)
+
+fit <- lm(miles ~ hours, data = runners)
+
+runners$yhat <- fitted.values(fit)
+
+```
+
+```{r}
+#| message: false
+#| warning: false
+
+p3 <- ggplot(runners,
+             aes(x = hours,
+                 y = miles)) +
+  geom_point(aes(color = runner),
+             size = 10) +
+  xlim(0,3) +
+  ylim(0,16) +
+  labs(title = "Distance Run by Time Spent Running",
+       x = "Hours",
+       y = "Distance") + 
+  theme_minimal() 
+  # theme(title = element_text(size = rel(2)),
+  #       axis.text = element_text(size = rel(2)),
+  #       legend.text = element_text(size = rel(2)))
+
+p3 # + 
+  # transition_manual(hours, cumulative = TRUE)
+
+```
+
+Let’s stick with the hypothetical example of runners, but now let’s imagine a slightly different situation.  Imagine  that we have data on how far several different runners have run, and we want to find the average speed of these runners. (you could also think this as the average rate of change of distance over time.)
+
+I want to draw the line that *best fits* these data to get a sense of *on average*, how fast runners run.
+
+```{r}
+#| message: false
+
+p3 + 
+  geom_line(aes(y = yhat),
+            linewidth = 2,
+            color = "blue") + 
+  transition_reveal(hours)
+
+```
+
+My guess is drawn as a <font color="blue">blue</font> line.
+
+I could even make a guess about the *slope* which represents the average speed:  How far does the distance go up for every mile that is run, on average?  
+
+I also need to think about where the line crosses, or *intercepts*, the y-axis.
+
+My best guess about the *slope* and *intercept* together are drawn as a <font color="purple">purple</font> line. It looks like for every hour run, on average, runners run just under 5 miles, so let’s say 4.9 miles per hour.
+
+It looks like my best guess is that all of the runners started the race at 0.  That is to say, none of the runners had a head start, like they did in my first example.
+
+
+```{r}
+#| message: false
+#| warning: false
+
+p3 + 
+  geom_abline(intercept = 0, 
+              slope = 4.9,
+              linewidth = 2,
+              color = "purple") +
+  # geom_label(aes(x = 2.5,
+  #                y = 10,
+  #                label = "4.9 miles per hour")) +
+  annotate("label", 
+           x = 2.5, 
+           y = 10, 
+           label = "4.9 miles per hour", 
+           color = "red")
+
+```
+
+So now, I could think about writing an equation for my line.
+
+I know that the equation for my line is:
+
+$$\text{distance} = \text{starting place} + \text{speed} \times \text{hours} + e_i$$
+
+::: {.callout-tip}
+## $e_i$ 
+
+The $e_i$ is a new concept for us in this tutorial, and represents the *error*. To a certain degree we are going to make a wrong prediction about every runner in our data. We are trying to understand the distances that runners run, *on average*.
+:::
+
+In this particular case my best guess is…
+
+$$\text{miles} = 0 + 4.9 \times \text{hours}$$
+
+Expressed in more intuitive language:  “for every 1 hour that a runner runs, on average, runners get 4.9 miles of distance.”
+
+<a id="regressionsentence"></a>
+
+::: {.callout-tip}
+## Key Idea
+
+In general, this is going to be a template for the kind of sentence we use in regression analysis: "For every 1 unit change in the independent variable, what is the change in the dependent variable?"
+:::
+
+We need to think about a few more issues.
+
+In general, we call the *starting place* by a few different names:
+
+* the *y-intercept*
+* $\beta_0$
+
+We call the *rate of change* by a few different names as well:
+
+* the *slope*
+* $\beta_1$
+
+So now we can talk about a more general form for our equation.  A more general way of writing:
+
+$$\text{miles} = 0 + 4.9 \times \text{hours}$$
+
+Would be to say
+
+* $miles = \beta_0 + \beta_1 hours$
+* $y = \text{intercept} + \text{slope} \times x$
+* $y = \beta_0 + \beta_1 x$
+
+# Getting Estimates From Computer Software
+
+The last thing that I want to do in this tutorial is to ask the computer to make a best guess about the slope and the y-intercept.  
+
+```{r}
+#| message: false
+
+fit <- lm(miles ~ hours, data = runners)
+
+pander(summary(fit))
+
+```
+
+As always, when looking at statistical output, there is probably more information than we want, so it makes sense to identify the crucial quantities.
+
+```{r}
+#| message: false
+
+p3 + 
+  geom_smooth(method = "lm",
+              color = "red",
+              linewidth = 2,
+              fullrange = TRUE) +
+  labs(subtitle = "Fitted Regression Line") + 
+  theme(plot.subtitle = element_text(color = "red"))
+
+```
+
+It turns out our estimate of slope *(4.9)* was pretty close to what the computer finds `r round(fit$coefficients[2], digits = 3)` , while our estimate that the intercept was *0* is a little bit different from the computer’s estimate `r round(fit$coefficients[1], digits = 3)`.  According to the computer, the best guess is that the average runner had a little bit of a head start.
+
+Lastly, the $R^2$ value indicates that `r round(summary(fit)$r.squared, digits = 3)` of the variation in our *dependent variable*, *miles*, is explained by the variation in our *independent variable*, *hours*.
+
+
+
