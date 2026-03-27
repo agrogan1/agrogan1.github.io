@@ -2,7 +2,7 @@
 title: "Why Do We Need Multivariate Models To Evaluate Social Programs?"
 subtitle: "A Long-ish Blog Post"
 author:  Andy Grogan-Kaylor 
-date: "2026-2-17"
+date: "2026-3-25"
 categories: [stats, science, teaching]
 mermaid:
   theme: neutral
@@ -12,7 +12,7 @@ filters:
 
 # Introduction
 
-Across the world, there is a great deal of suffering. Many people deal with mental health problems or substance use issues. People often suffer the after effects of discrimination, poverty, inequality, trauma, violence or conflict.
+Across the world, there is a great deal of suffering. Many people deal with mental health problems or substance use issues. People often suffer the effects of discrimination, poverty, inequality, trauma, violence or conflict.
 
 ```{r}
 #| echo: false
@@ -225,7 +225,7 @@ flowchart TB
 
 # Are Those In the Program Group And Comparison Group Similar?
 
-If participants from Group A and Group B are evenly distributed across the program and treatment groups, then we are not worried about the idea that an apparent effect of the program is because of unequal allocation of groups to the program.
+If participants from Group A and Group B are evenly distributed across the program and comparison groups, then we are not worried about the idea that an apparent effect of the program is because of unequal allocation of groups to the program.
 
 ```{mermaid}
 ---
@@ -318,6 +318,8 @@ And lastly, the logistical demands of random assignment may require smaller samp
 [^timeframe]: Somewhat relatedly, results that are observed over a shorter time frame (e.g. several months or a year) may not generalize to longer time frames such as several years or many years.
 
 # When Participants Choose Their Own Level Of Particpation
+
+So far in this discussion we have been focusing on improving our [**research design**]{color="#FF0000"}. Randomly assigning participants to a control group or program group might be thought of as one way of improving the *internal validity* of an evaluation by improving the [**research design**]{color="#FF0000"}. 
 
 If participants select their own participation, then it is likely that many background characteristics of participants--such as their age, gender, socio-economic resources, and motivation--will affect their decision to participate, and their level of participation.
 
@@ -503,7 +505,9 @@ rglwidget()
 
 ### Accounting For, Ruling Out, Or Controlling For Background Factors
 
-Accounting for, ruling out, or controlling for multiple background factors is one of the major reasons we use statistics.
+Accounting for, ruling out, or controlling for multiple background factors is one of the major reasons we use [**statistics**]{fg="#FF0000"}.
+
+Using [**statistical modeling**]{fg="#FF0000"} allows us to control for multiple background factors when doing so by improving our [**research design**]{fg="#FF0000"} is not possible. 
 
 While a full treatment of statistics is beyond the scope of this presentation, the annotated equation (@fig-annotated-equation) below gives some idea of the logic of statistics.
 
@@ -542,7 +546,7 @@ Briefly, one of the major advantages of a statistical approach is that we can wr
 
 # Conclusion
 
-Evaluation of social programs is complicated, but necessary, to ensure that social programs are evidence based, and that programs represent a wise and responsible use of time, energy and money for people who are often suffering or vulnerable. The *internal validity* of a program is strengthened when we can randomly assign participants to a program group and a control group, and compare the outcomes. 
+Evaluation of social programs is complicated, but necessary, to ensure that social programs are [**evidence based**]{fg="#FF0000"}, and that programs represent a wise and responsible use of time, energy and money for people who are often suffering or vulnerable. The *internal validity* of a program is strengthened when we can randomly assign participants to a program group and a control group, and compare the outcomes. 
 
 However, there are often valid and important reasons that we cannot use random assignment. 
 
