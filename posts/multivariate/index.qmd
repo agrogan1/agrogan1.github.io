@@ -388,7 +388,7 @@ flowchart LR
 
 # What To Do?
 
-When participation in a program is not randomly assigned, we need to think about a way to account for the various background and demographic factors that may be different between participants and non-participants.
+When participation in a program is not randomly assigned, we need to think about a way to [**account for**]{fg="#FF0000"}, or [**model**]{fg="#FF0000"} the various background and demographic factors that may be different between participants and non-participants.
 
 ::: {.panel-tabset}
 ## A Visual Exploration
