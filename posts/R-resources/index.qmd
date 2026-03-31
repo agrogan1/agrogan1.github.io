@@ -21,14 +21,6 @@ listing:
       path: https://agrogan1.github.io/R/quick-intro-R/quick-intro-R.html
       image: https://agrogan1.github.io/R/quick-intro-R/histogram.png
       categories: [R]
-    - title: "Colors in R"
-      path: https://agrogan1.github.io/R/colors/colors.html
-      image: https://agrogan1.github.io/R/colors/colors.png
-      categories: [R, dataviz]
-    - title: "Viridis Colors"
-      path: https://agrogan1.github.io/R/viridis/viridis.html
-      image: https://agrogan1.github.io/R/viridis/viridis.png
-      categories: [R, dataviz]
     - title: "Working With Data From the World Bank Indicators"
       path: https://agrogan1.github.io/R/wbdemo/
       image: https://agrogan1.github.io/R/wbdemo/globe.png
