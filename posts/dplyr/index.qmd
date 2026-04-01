@@ -1,0 +1,288 @@
+---
+title: "An Introduction to `dplyr`"
+author: "Andy Grogan-Kaylor"
+date: "2026-03-30"
+categories: [stats, R]
+image: "plyers.png"
+---
+
+# Background
+
+`dplyr` is a very powerful R library for managing and processing data.[^dplyr]
+
+[^dplyr]: The origins of the name `dplyr` seem somewhat obscure, but I sometimes think of this package as the *data plyers*.
+
+While `dplyr` is very powerful, learning to use `dplyr` can be very confusing. This blog post aims to present some of the most common `dplyr` functions and commands in the form of a brief cheatsheet.
+
+```{r}
+#| echo: false
+
+library(pander)
+
+```
+
+
+```{r}
+#| output: false
+
+library(dplyr) # data wrangling
+
+```
+
+# Simulated Data
+
+```{r}
+#| echo: false
+#| output: false
+
+year <- c(2019, 2020, 2020, 2021, 2021)
+
+x <- c(NA, 50, NA, 70, 80)
+
+y <- c(1, 2, 0, 0, 1)
+
+y <- factor(y,
+            levels = c(0, 1, 2),
+            labels = c("Group A", "Group B", "Group C"))
+
+z <- c(90, 90, 100, 110, 120)
+
+mydata <- tibble(year, x, y, z)
+
+```
+
+```{r}
+#| echo: false
+
+pander(head(mydata))
+  
+```
+
+# Piping
+
+::: {.callout-tip}
+## Key Idea
+*Pipes* `%>%` connect pieces of a command e.g. *data* to *data wrangling* to a *graph command.*
+:::
+
+`dplyr` commands will often look something like the outline below.
+
+```{r}
+#| eval: false
+#| echo: true
+
+mydata %>% 
+  data_wrangling %>% 
+  more_data_wrangling %>%
+  graph_command
+
+```
+
+
+# Aggregate Data: `group_by()` & `summarise()`
+
+:::{.callout-tip}
+## `NA` Values
+
+Notice how when aggregating data, we need to be explicit about whether we are removing `NA` values.
+:::
+
+```{r}
+#| echo: true
+
+mynewdata <- mydata %>% 
+  group_by(year) %>% # group by y
+  summarise(mean_x = mean(x, 
+                          na.rm = TRUE), # mean of x; removing NA's
+            n = n()) # count up
+
+```
+
+```{r}
+#| echo: false
+
+pander(head(mynewdata))
+  
+```
+
+# Select A Subset of Variables: `select()`
+
+```{r}
+#| echo: true
+
+mynewdata <- mydata %>% 
+  select(x,y) # select only x and y
+
+```
+
+```{r}
+#| echo: false
+
+pander(head(mynewdata))
+  
+```
+
+# Filter A Subset of Rows: `filter()`
+
+```{r}
+#| echo: true
+
+mynewdata <- mydata %>% 
+  filter(year > 2020) # filter on year
+
+```
+
+```{r}
+#| echo: false
+
+pander(head(mynewdata))
+  
+```
+
+# Create New Variables: `mutate()`
+
+```{r}
+#| echo: true
+
+mynewdata <- mydata %>% 
+  mutate(myscale = x + z) # create a new variable e.g. a scale
+
+```
+
+```{r}
+#| echo: false
+
+pander(head(mynewdata))
+  
+```
+
+# Recode Variables: `mutate()`
+
+## Continuous Into Categorical: `mutate()` & `cut()`
+
+```{r}
+#| echo: true
+
+mynewdata <- mydata %>% 
+  mutate(zcategorical = cut(z, # cut at breaks
+                            breaks=c(-Inf, 100, Inf), 
+               labels = c("low", "high")))
+
+```
+
+```{r}
+#| echo: false
+
+pander(head(mynewdata))
+  
+```
+
+## Categorical Into Categorical: `mutate()` & `recode()`
+
+```{r}
+#| echo: true
+
+mynewdata <- mydata %>% 
+  mutate(yrecoded = dplyr::recode(y, # recode values
+                         "Group A" = "Red Group",
+                         "Group B" = "Blue Group", 
+                         .default = "Other"))
+```
+
+```{r}
+#| echo: false
+
+pander(head(mynewdata))
+  
+```
+
+# Rename Variables: `rename()`
+
+```{r}
+#| echo: true
+
+newdata <- mydata %>% 
+  rename(age = x, # rename
+         mental_health = z)
+
+```
+
+```{r}
+#| echo: false
+
+pander(head(newdata))
+
+```
+
+# Drop Missing Values: `filter()`
+
+```{r}
+#| echo: true
+
+newdata <- mydata %>% 
+  filter(!is.na(x)) # filter by x is not missing
+
+```
+
+```{r}
+#| echo: false
+
+pander(head(newdata))
+
+```
+
+# Random Sample:  `sample_frac()`
+
+```{r}
+#| echo: true
+
+newdata <- mydata %>% 
+  sample_frac(.5) # fraction of data to sample
+
+```
+
+```{r}
+#| echo: false
+
+pander(head(newdata))
+
+```
+
+# Connecting To Other Packages Like `ggplot`
+
+Notice how, in the code below, I never actually create the new data set `mynewdata`.  I simply pipe `mydata` into a `dplyr` command, and pipe the result directly to `ggplot2`.
+
+```{r}
+#| echo: true
+
+library(ggplot2)
+
+mydata %>% # my data
+  mutate(myscale = x + z) %>% # dplyr command to make new variable 
+  filter(y != "Group C") %>% # filter on values of y
+  ggplot(aes(x = year, # the rest is ggplot
+             fill = y)) +
+  geom_bar() +
+  scale_fill_viridis_d() + # viridis colors
+  theme_minimal() + # minimal theme
+  labs(title = "Group by Year") + # labels
+  theme(axis.text.x = element_text(size = 10, # tweak theme
+                                   angle = 90))
+  
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

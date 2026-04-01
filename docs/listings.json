@@ -3,6 +3,8 @@
     "listing": "/blog.html",
     "items": [
       "/posts/multilevel-thinking/index.html",
+      "/posts/wbdemo/index.html",
+      "/posts/dplyr/index.html",
       "/posts/new-regression-tutorial/index.html",
       "/posts/multivariate/index.html",
       "/posts/colors-in-R/index.html",

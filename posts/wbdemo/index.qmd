@@ -1,0 +1,385 @@
+---
+title: "World Bank Data Demo"
+author: "Andy Grogan-Kaylor"
+date: "2026-03-30"
+categories: [stats, R]
+code-fold: true
+code-summary: "Show the code"
+---
+
+# Background
+
+The [World Bank](http://www.worldbank.org/) collects statistical information from countries around the world.  A particularly useful data set is the **W**orld **D**evelopment **I**ndicators [(WDI)](http://data.worldbank.org/data-catalog/world-development-indicators) which are country level statistical information from around the world.
+
+R is unique in that using `library(WDI)` you can download indicator data directly from the World Bank, read it into a data set, and put it to use.  Using `library(plotly)` you can even make cool looking motion charts, somewhat reminiscent of those popularized by Hans Rosling.
+
+While the code below is seemingly arcane, it is important to recognize that it is simple in structure. It is very possible to re-purpose the code below using some of the many *1,000's* of WDI indicators that are of interest to you.
+
+# Call Relevant Libraries
+
+```{r}
+#| output: false
+#| echo: true
+
+library(WDI) # for accessing World Bank data
+
+library(dplyr) # data wrangling
+
+library(ggplot2) # beautiful graphs
+
+library(plotly) # cool Hans Rosling style visualizations
+
+library(DT) # data table
+
+options(scipen = 999) # penalize scientific notation
+
+```
+
+```{r}
+#| output: false
+#| echo: false
+
+library(foreign) # exporting to Stata
+
+library(haven) # exporting to Stata
+
+```
+
+# Get Some Data From the World Development Indicators (WDI)
+
+```{r}
+#| eval: false
+#| echo: true
+
+# get names of specific indicators from WDI Data Catalog
+
+mydata <- WDI(country="all", 
+              indicator=c("SI.POV.GINI", # Gini
+                          "NY.GDP.PCAP.CD", # GDP
+                          "SE.ADT.LITR.ZS", # adult literacy
+                          "SP.DYN.LE00.IN", # life expectancy
+                          "VC.BTL.DETH", # battle related deaths
+                          "SP.POP.TOTL", # population
+                          "SN.ITK.DEFC.ZS"), # undernourishment
+              start = 1980, 
+              end = 2023, 
+              extra = TRUE) 
+
+
+save(mydata, file="WorldBankData.RData")
+
+```
+
+# Rename Some Variables
+
+```{r}
+#| eval: false
+#| echo: true
+
+# think about renaming some variables with more intuitive names
+# e.g....
+
+# rename some variables with dplyr (just copy and paste your indicators)
+
+mydata <- dplyr::rename(mydata, 
+                        GDP = NY.GDP.PCAP.CD,
+                        adult_literacy = SE.ADT.LITR.ZS,
+                        life_expectancy = SP.DYN.LE00.IN, 
+                        battle_death = VC.BTL.DETH,
+                        population = SP.POP.TOTL,
+                        Gini = SI.POV.GINI,
+                        undernourishment = SN.ITK.DEFC.ZS)
+
+mydata <- mydata %>% 
+  filter(region != "Aggregates") # remove Aggregates
+
+mydata$country_name <- mydata$country
+
+mydata$country <-as.factor(mydata$country)
+
+save(mydata, file="WorldBankData.RData")
+
+```
+
+```{r}
+#| echo: false
+#| eval: false
+
+write_dta(mydata, "WorldBankData.dta")
+
+# write.dta(mydata, "WorldBankData.dta")
+
+write.csv(mydata, 
+          file = "WorldBankData.csv",
+          row.names = FALSE)
+
+```
+
+```{r}
+#| echo: false
+
+load("WorldBankData.RData")
+
+```
+
+# Take a Quick Look at the Data
+
+```{r}
+#| echo: true
+
+# head(mydata) # look at the data
+
+mydata %>% 
+  select(country, 
+         region,
+         year,
+         GDP, 
+         adult_literacy,
+         life_expectancy, 
+         battle_death,
+         population, 
+         Gini,
+         undernourishment) %>%
+  datatable(rownames = FALSE,
+            filter = 'top', 
+            extensions = 'Buttons', 
+            options = list(
+              dom = 'Bfrtip',
+              buttons = c('copy', 'csv', 'excel', 'pdf', 'print')),
+              caption = 'World Bank Data')
+
+```
+
+# ggplot Graphs
+
+```{r}
+#| warning: false
+#| echo: true
+
+p1 <- ggplot(mydata,
+       aes(x = GDP,
+           y = life_expectancy,
+           color = region)) +
+  geom_point() +
+  geom_smooth() +
+  scale_color_viridis_d() +
+  labs(title = "Life Expectancy by GDP",
+       x = "GDP",
+       y = "Life Expectancy")
+
+p1
+
+p1 + facet_wrap(~region)
+
+```
+
+# Map
+
+```{r}
+#| warning: false
+#| echo: true
+
+mymap <- mydata %>% 
+  filter(year == 2020) %>% 
+  plot_geo(locations = ~iso3c,
+           color = ~life_expectancy,
+           z = ~life_expectancy,
+           text = ~country) %>% 
+  layout(title = "Countries by Life Expectancy in 2020", 
+         geo = list(showland = FALSE,
+                    showcountries = TRUE)) %>%
+  colorbar(title = 'life expectancy') 
+         
+mymap
+         
+```
+
+# Globe
+
+```{r}
+#| warning: false
+#| echo: true
+
+myglobe <- mydata %>% 
+  filter(year == 2020) %>% 
+  plot_geo(locations = ~iso3c,
+           color = ~life_expectancy,
+           z = ~life_expectancy,
+           text = ~country) %>% 
+  layout(title = "Countries by Life Expectancy in 2020", 
+         geo = list(showland = FALSE,
+                    showcountries = TRUE,
+                    projection = list(type = 'orthographic',
+                                      rotation = list(lon = -30,
+                                                      lat = 10,
+                                                      roll = 0)))) %>%
+  colorbar(title = 'life expectancy') 
+
+
+myglobe
+
+```
+
+# Plot the Motion Charts
+
+```{r}
+#| echo: true
+
+mydata <- mydata %>% 
+  filter(region != "Aggregates") # remove aggregates
+
+```
+
+## Life Expectancy by Year
+
+::: {.panel-tabset}
+
+### `ggplot` with `ggplotly`
+
+```{r}
+#| echo: true
+
+p0 <- ggplot(mydata,
+       aes(x = year,
+           y = life_expectancy,
+           color = region,
+           size = population,
+           frame = year,
+           label = country)) + 
+  geom_point() +
+  labs(title = "Life Expectancy by Year",
+       x = "Year",
+       y = "Life Expectancy") +
+  scale_color_discrete(name = "Region")
+
+ggplotly(p0)
+
+```
+
+### `plotly`
+
+```{r}
+#| warning: false
+#| echo: true
+
+p1 <- plot_ly(mydata,
+              x = ~year, 
+              y = ~life_expectancy, 
+              size = ~population, 
+              fill = ~'',
+              color = ~region,
+              frame = ~year, 
+              text = ~country, 
+              hoverinfo = "text",
+              type = 'scatter',
+              mode = 'markers',
+              showlegend = TRUE) %>% 
+  layout(title = "Life Expectancy by Year",
+         yaxis = list(title = "life expectancy"))
+
+p1
+
+```
+
+```{r}
+#| echo: false
+#| eval: false
+
+p1 <- mydata %>%
+  plot_ly(x = ~year, 
+          y = ~life_expectancy, 
+          color = ~region,
+          size = ~population, 
+          text = ~country, 
+          hoverinfo = "text")
+
+p1 %>% 
+  # add_markers(color = I("grey"), 
+  #             alpha = 0.1,
+  #             name = "All Years",
+  #             type = 'scatter',
+  #             mode = 'lines') %>%
+  add_markers(frame = ~year, 
+              ids = ~country) %>%
+  animation_opts(1000, 
+                 redraw = FALSE) %>% 
+  layout(title = "Life Expectancy by Year",
+         yaxis = list(title = "life expectancy"))
+
+
+
+```
+
+:::
+
+## Life Expectancy by GDP
+
+```{r}
+#| warning: false
+#| echo: true
+
+p2 <- mydata %>%
+  # filter(!is.na(GDP)) %>% 
+  # filter(is.finite(GDP)) %>%
+  plot_ly(x = ~GDP, 
+          y = ~life_expectancy, 
+          size = ~population, 
+          fill = ~'',
+          color = ~region,
+          frame = ~year, 
+          text = ~country, 
+          hoverinfo = "text",
+          type = 'scatter',
+          mode = 'markers',
+          showlegend = TRUE) %>%
+  layout(title = "Life Expectancy by GDP", 
+         yaxis = list(title = "life expectancy"))
+
+
+p2
+
+```
+
+## Life Expectancy by Logged GDP
+
+Using logged GDP on the *x axis* means that we are looking at *relative*, instead of *absolute* changes in GDP.
+
+::: {.panel-tabset}
+
+### `ggplot` with `ggplotly`
+
+```{r}
+#| echo: true
+
+p3 <- ggplot(mydata,
+       aes(x = GDP,
+           y = life_expectancy,
+           color = region,
+           size = population,
+           frame = year,
+           label = country)) + 
+  geom_point() +
+  labs(title = "Life Expectancy by GDP",
+       x = "GDP",
+       y = "Life Expectancy") +
+  scale_color_discrete(name = "Region") +
+  scale_x_log10()
+
+ggplotly(p3)
+
+```
+
+### `plotly`
+
+```{r}
+#| warning: false
+#| echo: true
+
+p2 %>% 
+  layout(xaxis = list(type = "log"))
+
+```
+
+:::
+
+
