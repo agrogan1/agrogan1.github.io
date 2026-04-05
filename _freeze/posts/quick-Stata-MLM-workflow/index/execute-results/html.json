@@ -1,0 +1,15 @@
+{
+  "hash": "58ce0d3323a1eead1482538e45119821",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"A Stata MLM Workflow\"\nauthor: \"Andy Grogan-Kaylor\"\ndate: \"2025-7-1\"\ncategories: [stats, teaching, workflow, Stata, multilevel]\n---\n\n# Background\n\nI'm sometimes asked for a quick outline of how to proceed with a multilevel analysis. Below are the steps that I would use in Stata, though they would be very conceptually similar in R.\n\n\n::: {.cell}\n\n:::\n\n\n\n# Get acquainted with your data\n\nFigure out what variables correspond to what measures and constructs. e.g.: \n\n* `lookfor health`\n*\t`lookfor ses`\n* `describe question37`\n\n# Prepare and clean your data\n\nRename variables to be more intuitive.  e.g.:\n\n`rename q21 health`\n\t\nRecode missing values. e.g:\n\n`recode health (99=.)`\n\nKeep only necessary variables.\n\n`keep age race sex ses health q21 neighborhood`\n\n# Descriptive statistics\n\n* `summarize continuousvars`\n* `tab1 categoricalvars`\n\nAnd in more recent versions of Stata\n\n* `dtable continousvars i.categoricalvar1 i.categoricalvar2`\n\n# Multilevel model\n\n1. `mixed y || groupid: // unconditional model`\n2. `estat icc`\n3. `mixed y x1 x2 || groupid:`\n4. `mixed y x1 x2 || groupid: x1 x2`\n\n# Graph\t\n\n\n::: {.cell .column-margin}\n\n:::\n\n\n\n::: {.cell}\n\n:::\n\n\n![sample Stata graph](mygraph.png)\n\n\n* `histogram y`\n\n* `twoway scatter y x1`\n\n* `spagplot y x1 id(groupid)`\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

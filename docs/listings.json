@@ -49,6 +49,7 @@
       "/posts/interactions-are-symmetric/index.html",
       "/posts/complexity-hidden-inside-simplicity/index.html",
       "/posts/multilevel-workshop/index.html",
+      "/posts/quick-Stata-MLM-workflow/index.html",
       "/posts/interactions-and-moderation/index.html",
       "/posts/interactions-and-main-effects-mathematical/index.html",
       "/posts/interactions-and-main-effects-substantive/index.html",
@@ -121,11 +122,7 @@
     "items": []
   },
   {
-    "listing": "/posts/Bayesian-resources/index.html",
-    "items": []
-  },
-  {
-    "listing": "/teaching.html",
+    "listing": "/posts/R-resources/index.html",
     "items": []
   },
   {
@@ -133,7 +130,11 @@
     "items": []
   },
   {
-    "listing": "/posts/R-resources/index.html",
+    "listing": "/teaching.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/Bayesian-resources/index.html",
     "items": []
   },
   {
