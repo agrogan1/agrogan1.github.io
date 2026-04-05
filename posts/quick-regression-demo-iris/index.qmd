@@ -57,12 +57,19 @@ tab_model(fit1) # nice table
 
 options(rgl.useNULL = TRUE) # suppress separate RGL window.
 
+iris$mycolor <- NA
+iris$mycolor[iris$Species == "setosa"] <- "yellow"
+iris$mycolor[iris$Species == "versicolor"] <- "orange"
+iris$mycolor[iris$Species == "virginica"] <- "red"
+
+
 car::scatter3d(x = iris$Sepal.Length,
                y = iris$Petal.Length,
                z = iris$Sepal.Width,
                xlab = "Sepal Length",
                ylab = "Petal Length",
-               zlab = "Sepal Width")
+               zlab = "Sepal Width",
+               point.col = iris$mycolor)
 
 rglwidget()
 
