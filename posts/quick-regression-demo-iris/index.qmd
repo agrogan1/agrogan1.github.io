@@ -1,0 +1,71 @@
+---
+title: "Quick Regression Demo"
+subtitle: A Quick Demonstration of Regression With the `iris` Data"
+author: "Andy Grogan-Kaylor"
+date: "2026-4-2"
+categories: [stats, teaching]
+---
+
+```{r}
+#| output: false
+
+library(pander) # nice tables
+
+library(rgl) # 3D graphics
+
+library(car) # companion to applied regression
+
+library(sjPlot) # nice regression tables
+
+```
+
+## Data
+
+These are the famous Iris data, collected by Edgar Anderson.
+
+```{r}
+
+data("iris") # iris data
+
+pander(head(iris)) # nice table of top of data
+
+```
+
+## Irises
+
+![Iris Species](iris-species.png){width=50%}
+
+![Petals and Sepals](petal-sepal.png){width=30%}
+
+## Regression
+
+```{r}
+#| html-table-processing: none
+
+fit1 <- lm(Petal.Length ~ Sepal.Length + Sepal.Width, data = iris)
+
+# pander(fit1) # nice table
+
+tab_model(fit1) # nice table
+
+```
+
+## Visualization
+
+```{r}
+#| message: false
+
+options(rgl.useNULL = TRUE) # suppress separate RGL window.
+
+car::scatter3d(x = iris$Sepal.Length,
+               y = iris$Petal.Length,
+               z = iris$Sepal.Width,
+               xlab = "Sepal Length",
+               ylab = "Petal Length",
+               zlab = "Sepal Width")
+
+rglwidget()
+
+```
+
+

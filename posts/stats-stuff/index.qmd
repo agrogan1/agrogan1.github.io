@@ -13,10 +13,6 @@ listing:
   filter-ui: false
   fields: [title, image]
   contents:
-    - title: "What is Data?"
-      path: https://agrogan1.github.io/teaching/what-is-data/what-is-data.html
-      image: data.png
-      categories: [workflow, stats]
     - title: "Quantitative Data Analysis"
       path: https://agrogan1.github.io/teaching/quantitative-data-analysis/quantitative-data-analysis.html
       image: data.png
@@ -37,10 +33,6 @@ listing:
       path: https://agrogan.shinyapps.io/thinking_about_correlations/
       image: correlation.png
       categories: [stats, interactive]
-    - title: "Regression Tutorial" 
-      path: https://agrogan1.github.io/teaching/new-regression-tutorial/
-      image: regression.png
-      categories: [stats]
     - title: "Regression Demo"
       path: https://agrogan.shinyapps.io/regression_demo/
       image: regression.png
