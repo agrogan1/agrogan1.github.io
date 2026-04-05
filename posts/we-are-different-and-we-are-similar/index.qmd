@@ -1,0 +1,16 @@
+---
+title: "We Are Different And We Are Similar"
+subtitle: "Universals, Commonality, Diversity and Variation In Parenting and Child Development"
+author:  Andy Grogan-Kaylor 
+date: "2026-4-7"
+categories: [multilevel, corporal punishment, positive parenting, MICS]
+image: "positiveparenting.png"
+draft: true
+---
+
+Slides from a talk that I gave this week.
+
+"We Are Different And We Are Similar: Universals, Commonality, Diversity and Variation In Parenting and Child Development"
+
+[https://agrogan1.github.io/positive-and-negative-parenting/positive-and-negative-parenting-revealjs.html](https://agrogan1.github.io/positive-and-negative-parenting/positive-and-negative-parenting-revealjs.html)
+
