@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/we-are-different-and-we-are-similar/index.html",
       "/posts/multilevel-thinking/index.html",
       "/posts/quick-regression-demo-iris/index.html",
       "/posts/wbdemo/index.html",

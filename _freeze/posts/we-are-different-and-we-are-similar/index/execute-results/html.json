@@ -1,0 +1,15 @@
+{
+  "hash": "1a28947bbb325a0152f432ddc57bd739",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"We Are Different And We Are Similar\"\nsubtitle: \"Universals, Commonality, Diversity and Variation In Parenting and Child Development\"\nauthor:  Andy Grogan-Kaylor \ndate: \"2026-4-7\"\ncategories: [multilevel, corporal punishment, positive parenting, MICS]\nimage: \"positiveparenting.png\"\ndraft: false\n---\n\nSlides from a talk that I gave this week.\n\n\"We Are Different And We Are Similar: Universals, Commonality, Diversity and Variation In Parenting and Child Development\"\n\n[https://agrogan1.github.io/positive-and-negative-parenting/positive-and-negative-parenting-revealjs.html](https://agrogan1.github.io/positive-and-negative-parenting/positive-and-negative-parenting-revealjs.html)\n\n\n::: {.cell}\n<iframe src=\"https://agrogan1.github.io/positive-and-negative-parenting/positive-and-negative-parenting-revealjs.html\" width=\"672\" height=\"400px\" data-external=\"1\"></iframe>\n:::\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
