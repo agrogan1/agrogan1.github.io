@@ -3,6 +3,8 @@ title: "Michigan Graph Scheme for Stata"
 authors: "Andy Grogan-Kaylor"
 date: "2026-3-8"
 categories: [stats, Stata, dataviz]
+filters:
+  - highlight-text
 ---
 
 # Introduction
