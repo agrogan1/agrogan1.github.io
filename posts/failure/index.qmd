@@ -1,0 +1,13 @@
+---
+title: "'You need the willingness to fail all the time'"
+author:  Andy Grogan-Kaylor 
+date: "2026-4-10"
+categories: [stats, science, teaching, workflow, Stata, R]
+image: "woodenpuzzle.png"
+---
+
+Some quotes that I like that seem to have a great deal of applicability to both teaching and learning, especially when applied to statistics and data analysis. John Backus was the inventor of the FORTRAN computing language.
+
+> You need the willingness to fail all the time. (John Backus, as quoted in @Ullman2022)
+
+> You have to generate many ideas and then you have to work very hard only to discover that they don’t work. And you keep doing that over and over until you find one that does work. (John Backus, as quoted in @Ullman2022)

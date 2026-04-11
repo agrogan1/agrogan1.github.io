@@ -3,6 +3,7 @@
     "listing": "/blog.html",
     "items": [
       "/posts/multilevel-thinking/index.html",
+      "/posts/failure/index.html",
       "/posts/we-are-different-and-we-are-similar/index.html",
       "/posts/quick-regression-demo-iris/index.html",
       "/posts/wbdemo/index.html",
@@ -123,11 +124,7 @@
     "items": []
   },
   {
-    "listing": "/posts/R-resources/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/Bayesian-resources/index.html",
+    "listing": "/contact.html",
     "items": []
   },
   {
@@ -135,7 +132,11 @@
     "items": []
   },
   {
-    "listing": "/contact.html",
+    "listing": "/posts/Bayesian-resources/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/R-resources/index.html",
     "items": []
   },
   {
