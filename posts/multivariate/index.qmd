@@ -2,7 +2,7 @@
 title: "Why Do We Need Multivariate Models To Evaluate Social Programs?"
 subtitle: "A Long-ish Blog Post"
 author:  Andy Grogan-Kaylor 
-date: "2026-3-25"
+date: "2026-4-14"
 categories: [stats, science, teaching]
 mermaid:
   theme: neutral
@@ -558,7 +558,9 @@ rglwidget()
 
 ```
 
-Briefly, one of the major advantages of a statistical approach is that we can write out--and estimate--a much longer equation or statistical model accounting for multiple possible confounding factors. For example, while we do not do so here, we could easily represent the complex dynamics influencing participation in the program that are illustrated in @fig-participants-decide as an equation, and estimate that equation to estimate outcomes associated with the program, while accounting for multiple other possible confounding factors
+### Models Are Written Down As Equations
+
+Briefly, one of the major advantages of a statistical approach is that we can write out--and estimate--a much longer equation or statistical model accounting for multiple possible confounding factors. For example, I could easily represent the complex dynamics influencing participation in the program that are illustrated in @fig-participants-decide as an equation (@eq-possible-equation), and estimate that equation to estimate outcomes associated with the program, while accounting for multiple other possible confounding factors
 
 ::: {.callout-tip collapse="true"}
 ### A Possible Equation
