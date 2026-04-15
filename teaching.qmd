@@ -8,7 +8,7 @@ listing:
   contents:
     - title: "Multilevel and Longitudinal Modeling"
       path: https://agrogan1.github.io/multilevel/
-      image: plant.png
+      image: multilevel.png
       categories: [multilevel, course]
     - title: "Categorical Data Analysis"
       path: https://agrogan1.github.io/newstuff/categorical/
