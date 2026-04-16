@@ -376,6 +376,8 @@ comparisongroup["comparison group"] ---> outcome0[outcome]
 
 ```
 
+When randomization is not possible, accounting for all of these different background characteristics is likely to be difficult to accomplish soley with one's [**research design**]{color="#FF0000"}.
+
 If, for example, more motivated individuals and those with more socio-economic resources are the ones who choose to participate in the program, then any better outcomes might [**not**]{color="#FF0000"} be the result of the program, but a result of the characteristics of individuals who chose to participate.
 
 ```{mermaid}
