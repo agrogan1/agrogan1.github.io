@@ -132,7 +132,7 @@ In `ggplot` terms, pie charts are bar graphs displayed with *polar coordinates*.
 #| code-fold: true
 #| code-summary: "Show the code"
 
-ggplot(mydata, aes(x = 2, # x is always 1
+ggplot(mydata, aes(x = 1, # x is always 1
                    fill = outcome)) + # color fill is outcome
   geom_bar(position = "fill") + # bars
   scale_fill_manual(values = michigancolors()) + # Michigan colors
@@ -190,6 +190,7 @@ Mosaic plots are another way to display data. They are especially effective for 
 
 ```{r}
 #| echo: true
+#| eval: false
 #| code-fold: true
 #| code-summary: "Show the code"
 
@@ -268,6 +269,7 @@ We will use the data set of `mycounts` that we generated above.
 
 ```{r}
 #| echo: true
+#| eval: false
 #| code-fold: true
 #| code-summary: "Show the code"
 
