@@ -132,12 +132,32 @@ In `ggplot` terms, pie charts are bar graphs displayed with *polar coordinates*.
 #| code-fold: true
 #| code-summary: "Show the code"
 
-ggplot(mydata, aes(x = 1, # x is always 1
+ggplot(mydata, aes(x = 2, # x is always 1
                    fill = outcome)) + # color fill is outcome
   geom_bar(position = "fill") + # bars
   scale_fill_manual(values = michigancolors()) + # Michigan colors
   theme_void() + # void theme for pie charts
   coord_polar(theta = "y") + # polar coordinates
+  facet_wrap(~group) # facet on group
+
+```
+
+# Doughnut Chart
+
+Doughnut charts are pie charts with a center hole. The crucial subcommand here is `xlim`.
+
+```{r}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the code"
+
+ggplot(mydata, aes(x = 2, # x is always 2
+                   fill = outcome)) + # color fill is outcome
+  geom_bar(position = "fill") + # bars
+  scale_fill_manual(values = michigancolors()) + # Michigan colors
+  theme_void() + # void theme for pie charts
+  coord_polar(theta = "y") + # polar coordinates
+  xlim(.5, 2.5) + # xlims set up a doughnut chart
   facet_wrap(~group) # facet on group
 
 ```
