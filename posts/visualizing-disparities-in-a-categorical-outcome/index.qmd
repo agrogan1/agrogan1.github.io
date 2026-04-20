@@ -57,7 +57,7 @@ pander(table(mydata)) # nice table of data
 
 # Call The Graphing Library
 
-I use University of Michigan colors in these graphs, which is completely optional. You can find installation instructions for the Michigan graph scheme [here](https://agrogan1.github.io/R/michigancolors-demo/michigancolors-demo.html).
+I use University of Michigan colors in these graphs, which is completely optional. You can find installation instructions for the Michigan graph scheme [here](https://agrogan1.github.io/michigancolors/).
 
 ```{r}
 #| echo: true
