@@ -184,15 +184,16 @@ ggplot(mydata, aes(x = group, # x is group
 
 ```
 
-# Mosaic Plot
-
-Mosaic plots are another way to display data. They are especially effective for being clear about the relative membership in different groups, and about the proportion of each group experiencing each outcome.
 
 ```{r}
-#| echo: true
+#| echo: false
 #| eval: false
 #| code-fold: true
 #| code-summary: "Show the code"
+
+# Mosaic Plot
+
+# Mosaic plots are another way to display data. They are especially effective for being clear about the relative membership in different groups, and about the proportion of each group experiencing each outcome.
 
 library(ggmosaic) # mosaic plots
 
@@ -241,6 +242,7 @@ mycounts <- mydata %>%
 pander(mycounts) # replay this data
 
 ```
+
 ## Make The Waffle Plot
 
 ```{r}
@@ -261,17 +263,19 @@ ggplot(mycounts, # use this new data
 
 ```
 
-# Alluvial Diagram
 
-Lastly, an alluvial diagram may be useful to illustrate a *flow* from one status to another.
-
-We will use the data set of `mycounts` that we generated above.
 
 ```{r}
-#| echo: true
+#| echo: false
 #| eval: false
 #| code-fold: true
 #| code-summary: "Show the code"
+
+# Alluvial Diagram
+
+# Lastly, an alluvial diagram may be useful to illustrate a *flow* from one status to another.
+
+# We will use the data set of `mycounts` that we generated above.
 
 library(ggalluvial)
 
