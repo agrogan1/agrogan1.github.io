@@ -3,6 +3,7 @@
     "listing": "/blog.html",
     "items": [
       "/posts/multilevel-thinking/index.html",
+      "/posts/patterns-2/index.html",
       "/posts/multivariate/index.html",
       "/posts/failure/index.html",
       "/posts/we-are-different-and-we-are-similar/index.html",
@@ -124,11 +125,7 @@
     "items": []
   },
   {
-    "listing": "/contact.html",
-    "items": []
-  },
-  {
-    "listing": "/teaching.html",
+    "listing": "/posts/R-resources/index.html",
     "items": []
   },
   {
@@ -136,7 +133,11 @@
     "items": []
   },
   {
-    "listing": "/posts/R-resources/index.html",
+    "listing": "/teaching.html",
+    "items": []
+  },
+  {
+    "listing": "/contact.html",
     "items": []
   },
   {
