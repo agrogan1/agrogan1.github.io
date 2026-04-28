@@ -1,7 +1,7 @@
 ---
 title: "Simpson's Paradox"
 author: "Andy Grogan-Kaylor"
-date: "2024-7-9"
+date: "2025-6-1"
 categories: [stats, science, R, Simpson's paradox]
 ---
 
@@ -33,7 +33,11 @@ There are specific mathematical conditions under which Simpson's Paradox applies
 
 Careful inspection of visualizations can help us to develop some understanding of Simpson's Paradox.
 
-> The key substantive conclusion is that models of the data that only account for two variables may provide *very different*--or even *opposite*--conclusions about a treatment or intervention than models of the data that account for many variables.
+::: {.callout-tip}
+## Key Idea
+
+The key substantive idea is that models of the data that only account for two variables may provide *very different*--or even *opposite*--conclusions about a treatment or intervention than models of the data that account for many variables.
+:::
 
 # Some Hypothetical Data
 
@@ -81,7 +85,11 @@ mydata_expanded <- mydata %>% uncount(weights = count)
 
 # Sample As A Whole
 
-> The treatment appears to have NO effect. An equal percentage of those receiving and not receiving treatment are alive.
+::: {.callout-tip}
+## Conclusion
+
+The treatment appears to have NO effect. An equal percentage of those receiving and not receiving treatment are alive.
+:::
 
 ## Cross Tabulation
 
@@ -94,7 +102,11 @@ pander(table(mydata_expanded$treatment,
 
 ## Mosaic Plot
 
-> Mosaic Plots are a little bit counterintuive at first. However, I believe that--after a little bit of study--Mosaic Plots provide the best visual representation of these relationships.
+::: {.callout-tip}
+## Mosaic Plots Are Counterintuive, But Full of Information
+
+Mosaic plots are a little bit counterintuive at first. However, I believe that--after a little bit of study--Mosaic plots provide the best visual representation of these relationships.
+:::
 
 ```{r}
 
@@ -112,7 +124,13 @@ ggplot(mydata_expanded) +
 
 ## Pie Chart
 
-> A Pie Chart sometimes is more intuitive at first, but actually has less information than a Mosaic Chart.
+::: {.callout-tip}
+## Pie Charts Are More Intuitive, But May Have Less Information
+
+A pie chart sometimes is more intuitive at first, but actually has less information than a mosaic chart.
+
+These trade offs need to be carefully considered, and each approach has its advantages.
+:::
 
 ```{r, eval=TRUE}
 
@@ -135,7 +153,11 @@ ggplot(mydata_expanded,
 
 # Sample Divided By Groups
 
-> The treatment appears to have an effect. A greater percentage of those recieving treatment are alive.
+::: {.callout-tip}
+## Conclusion
+
+The treatment appears to have an effect. A greater percentage of those receiving treatment are alive.
+:::
 
 ## Cross Tabulation
 
