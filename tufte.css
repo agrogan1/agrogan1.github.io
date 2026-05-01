@@ -1,0 +1,58 @@
+/* css styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Neucha&display=swap');
+
+body {
+  font-family: "Jost", sans-serif;
+  background-color: #fffff8;
+}
+header {
+  background-color: #fffff8;
+}
+blockquote {
+  color: black;
+  background-color: #fffff8;
+  border-left: 3px solid red; 
+  padding: 0.5em 10px;
+}
+.blockquote { 
+  color: black;
+}
+.navbar-brand{
+  font-weight: bold;
+  font-size: 100%;
+  border-radius: 5px; 
+  background-color: #fffff8;
+}
+.navbar-nav {
+  font-size: 85%;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #fffff8;
+}
+.navbar, .navbar-collapse { 
+  background-color: #fffff8;
+}
+#title-block-header > div.quarto-title-banner.page-columns.page-full, #title-block-header, #title-block-header.quarto-title-block.default .quarto-title .title {
+  background-color: #fffff8;
+}
+#quarto-appendix.default, .quarto-appendix-contents, #quarto-appendix.default .quarto-appendix-heading {
+  background-color: #fffff8;
+}
+.nav-link {
+    border-radius: 5px;    
+}
+.navbar-nav .nav-link.active {
+  color: red;
+}
+.navbar a:hover {
+  color: red;
+}
+.dropdown-item {
+  font-size: 75%;
+  font-weight: bold;
+}
+a {
+  color: #2F65A7;
+}
