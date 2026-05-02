@@ -113,10 +113,15 @@ plot_geo(y) %>%
             showscale = FALSE) %>%
   layout(geo = list(showland = FALSE,
                     showcountries = TRUE,
+                    showocean = TRUE,
+                    oceancolor = "white",
                     projection = list(type = 'orthographic',
                                       rotation = list(lon = -25,
                                             lat = 0,
-                                            roll = 0)))) 
+                                            roll = 0)),
+                    bgcolor = 'transparent'),
+         plot_bgcolor='transparent',
+         paper_bgcolor='transparent') 
 
 ```
 

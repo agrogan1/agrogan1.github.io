@@ -6,9 +6,13 @@ body {
   font-family: "Jost", sans-serif;
   background-color: #fffff8;
 }
-header {
+.navbar, .quarto-appendix-heading, .quarto-appendix-contents, #quarto-appendix.default {
   background-color: #fffff8;
 }
+#title-block-header > div.quarto-title-banner.page-columns.page-full {
+  background-color: #fffff8;
+}
+
 blockquote {
   color: black;
   background-color: #fffff8;
@@ -29,15 +33,6 @@ blockquote {
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
-  background-color: #fffff8;
-}
-.navbar, .navbar-collapse { 
-  background-color: #fffff8;
-}
-#title-block-header > div.quarto-title-banner.page-columns.page-full, #title-block-header, #title-block-header.quarto-title-block.default .quarto-title .title {
-  background-color: #fffff8;
-}
-#quarto-appendix.default, .quarto-appendix-contents, #quarto-appendix.default .quarto-appendix-heading {
   background-color: #fffff8;
 }
 .nav-link {

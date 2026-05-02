@@ -196,11 +196,17 @@ plot_geo(mydata) %>%
             marker = list(size = 10)) %>%
   layout(geo = list(showland = FALSE,
                     showcountries = TRUE,
+                    showocean = TRUE,
+                    oceancolor = "white",
                     projection = list(type = 'orthographic',
                                       rotation = list(lon = -30,
                                                       lat = 10,
                                                       roll = 0)
-                                      ))) %>%
+                                      ),
+                    bgcolor = 'transparent'),
+         plot_bgcolor='transparent',
+         paper_bgcolor='transparent',
+         bg_color = 'transparent') %>%
   colorbar(title = 'year of prohibition') 
 
 ```
