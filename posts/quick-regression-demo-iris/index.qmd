@@ -33,9 +33,12 @@ pander(head(iris)) # nice table of top of data
 
 ## Irises
 
-![Iris Species](iris-species.png){width=50%}
+::: {layout="[[1,1]]"}
+![Iris Species](iris-species.png)
 
-![Petals and Sepals](petal-sepal.png){width=30%}
+![Petals and Sepals](petal-sepal.png)
+:::
+
 
 ## Regression
 

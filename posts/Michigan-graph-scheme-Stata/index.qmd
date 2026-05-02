@@ -19,8 +19,8 @@ library(Statamarkdown)
 
 
 ```{stata, collectcode=TRUE}
-#| output: false
-#| echo: false
+*| output: false
+*| echo: false
 
 clear all
 
@@ -61,8 +61,14 @@ Type `net from https://agrogan1.github.io/Stata` and click the links to install.
 
 We are going to use the famous "iris" data collected by Edgar Anderson.
 
+::: {layout="[[1,1]]"}
+![Iris Species](iris-species.png){width=50%}
+
+![Petals and Sepals](petal-sepal.png){width=50%}
+:::
+
 ```{stata, collectcode=TRUE}
-#| message: false
+*| message: false
 
 clear all
 	
@@ -75,16 +81,16 @@ dtable Sepal_Length Sepal_Width Petal_Length Petal_Width i.Species
 # Histogram
 
 ```{stata, collectcode=TRUE}
-#| output: false
-#| echo: true
+*| output: false
+*| echo: true
 
 histogram Petal_Length, scheme(michigan)
 
 ```
 
 ```{stata}
-#| echo: false
-#| output: false
+*| echo: false
+*| output: false
 
 quietly graph export myhistogram.png, width(1500) replace
 
@@ -95,16 +101,16 @@ quietly graph export myhistogram.png, width(1500) replace
 # Histogram With Transparency
 
 ```{stata, collectcode=TRUE}
-#| output: false
-#| echo: true
+*| output: false
+*| echo: true
 
 histogram Petal_Length, fcolor(%50) scheme(michigan)
 
 ```
 
 ```{stata}
-#| echo: false
-#| output: false
+*| echo: false
+*| output: false
 
 quietly graph export myhistogram2.png, width(1500) replace
 
@@ -116,16 +122,16 @@ quietly graph export myhistogram2.png, width(1500) replace
 # Bar Graph
 
 ```{stata, collectcode=TRUE}
-#| output: false
-#| echo: true
+*| output: false
+*| echo: true
 
 graph bar Petal_Length, over(Species) scheme(michigan) asyvars
 
 ```
 
 ```{stata}	
-#| echo: false
-#| output: false
+*| echo: false
+*| output: false
 
 quietly graph export mybargraph.png, width(1500) replace
 
@@ -136,16 +142,16 @@ quietly graph export mybargraph.png, width(1500) replace
 # Bar Graph With Transparency
 
 ```{stata, collectcode=TRUE}
-#| output: false
-#| echo: true
+*| output: false
+*| echo: true
 
 graph bar Petal_Length, over(Species) intensity(70) scheme(michigan) asyvars
 
 ```
 
 ```{stata}
-#| echo: false
-#| output: false
+*| echo: false
+*| output: false
 
 quietly graph export mybargraph2.png, width(1500) replace
 
@@ -157,8 +163,8 @@ quietly graph export mybargraph2.png, width(1500) replace
 # Scatterplot
 
 ```{stata, collectcode=TRUE}
-#| output: false
-#| echo: true
+*| output: false
+*| echo: true
 
 twoway (scatter Petal_Length Petal_Width) ///
 (lfit Petal_Length Petal_Width), ///
@@ -167,8 +173,8 @@ scheme(michigan)
 ```
 
 ```{stata}
-#| echo: false
-#| output: false
+*| echo: false
+*| output: false
 
 quietly graph export myscatter.png, width(1500) replace
 
@@ -179,8 +185,8 @@ quietly graph export myscatter.png, width(1500) replace
 # Scatterplot With Transparency
 
 ```{stata, collectcode = TRUE}
-#| output: false
-#| echo: true
+*| output: false
+*| echo: true
 
 twoway (scatter Petal_Length Petal_Width, mcolor(%30)) /// markers have 30% transparency
 (lfit Petal_Length Petal_Width), ///
@@ -189,8 +195,8 @@ scheme(michigan)
 ```
 
 ```{stata}
-#| echo: false
-#| output: false
+*| echo: false
+*| output: false
 
 quietly graph export myscatter2.png, width(1500) replace
 
@@ -203,16 +209,16 @@ quietly graph export myscatter2.png, width(1500) replace
 Sometimes you may wish to have the legend of the graph placed at the *bottom* of the graph. The `pos(6)` suboption inside the `legend` option will place the legend at the bottom, while you can manually control the number of legend rows with the `rows` suboption.
 
 ```{stata, collectcode=TRUE}
-#| output: false
-#| echo: true
+*| output: false
+*| echo: true
 
 graph bar Petal_Length, over(Species) scheme(michigan) asyvars legend(pos(6) rows(1))
 
 ```
 
 ```{stata}
-#| echo: false
-#| output: false
+*| echo: false
+*| output: false
 
 quietly graph export mybargraph3.png, width(1500) replace
 
@@ -259,8 +265,8 @@ Color                                           Hex        RGB
 Stata can use RGB codes for colors. As an example.
 
 ```{stata, collectcode=TRUE}
-#| output: false
-#| echo: true
+*| output: false
+*| echo: true
 
 twoway (scatter Petal_Length Petal_Width, mcolor("112 32 130 %30")) /// markers are Amethyst with 30% transparency
 (lfit Petal_Length Petal_Width, lcolor("87 82 148")), /// Violet line
@@ -268,8 +274,8 @@ scheme(michigan)
 ```
 
 ```{stata}
-#| echo: false
-#| output: false
+*| echo: false
+*| output: false
 
 quietly graph export myscatter3.png, width(1500) replace
 
