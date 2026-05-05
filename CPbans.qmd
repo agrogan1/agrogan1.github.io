@@ -30,14 +30,16 @@ library(dplyr) # data wrangling
 
 library(tibble) # library for updated dataframes
 
-library(DT) # nifty data table
+# library(DT) # nifty data table
+
+library(gt) # niftier tables
 
 library(plotly) # interactive plots
 
-library(fontawesome) # Font Awesome icons
+# library(fontawesome) # Font Awesome icons
 
 # library(xaringanExtra)
-# 
+
 # xaringanExtra::use_panelset()
 
 ```
@@ -271,27 +273,44 @@ cpbans2 %>%
 #| eval: true
 #| echo: false
 
-mynewdata <- subset(cpbans, 
-                    select = c(total.number.of.bans, 
-                               country, 
-                               year.of.prohibition))
+cpbans$country_iso <- countrycode(cpbans$country, 
+                                 'country.name', 
+                                 'iso3c')
+# mynewdata <- subset(cpbans, 
+#                     select = c(total.number.of.bans, 
+#                                country, 
+#                                year.of.prohibition,
+#                                country_iso))
 
-datatable(mynewdata, 
-          rownames = FALSE,
-          # filter = 'top',
-          caption = 'Countries With Bans on Corporal Punishment of Children',
-          colnames = c('Number' = 1, 
-                       'Country' = 2, 
-                       'Year of Prohibition' = 3), 
-          extensions = 'Buttons', 
-          options = list(
-            dom = 'Bfrtip',
-            buttons = c('copy', 
-                        'csv', 
-                        'excel', 
-                        'pdf', 
-                        'print'))
-          )
+# datatable(mynewdata, 
+#           rownames = FALSE,
+#           # filter = 'top',
+#           caption = 'Countries With Bans on Corporal Punishment of Children',
+#           colnames = c('Number' = 1, 
+#                        'Country' = 2, 
+#                        'Year of Prohibition' = 3), 
+#           extensions = 'Buttons', 
+#           options = list(
+#             dom = 'Bfrtip',
+#             buttons = c('copy', 
+#                         'csv', 
+#                         'excel', 
+#                         'pdf', 
+#                         'print'))
+#           )
+
+cpbans %>% 
+  select(total.number.of.bans,
+         country,
+         year.of.prohibition,
+         country_iso) %>%
+  relocate(country_iso) %>%
+  gt() %>%
+  fmt_flag(columns = country_iso) %>%
+  cols_label(country_iso = "",
+             total.number.of.bans = "Total Number of Bans",
+             country = "Country",
+             year.of.prohibition = "Year of Ban")
 
 ```
 
