@@ -21,16 +21,12 @@ listing:
       path: https://agrogan1.github.io/R/quick-intro-R/quick-intro-R.html
       image: https://agrogan1.github.io/R/quick-intro-R/histogram.png
       categories: [R]
-    - title: "Working With Data From the World Bank Indicators"
-      path: https://agrogan1.github.io/R/wbdemo/
-      image: https://agrogan1.github.io/R/wbdemo/globe.png
-      categories: [R, dataviz]
     - title: "Introduction to ggplot2"
       path: https://agrogan1.github.io/R/introduction-to-ggplot2/introduction-to-ggplot2.html
       image: https://agrogan1.github.io/R/R.png
       categories: [R, dataviz]
-    - title: "Two Page ggplot"
-      path: https://agrogan1.github.io/R/two-page-ggplot2/two-page-ggplot2.pdf
+    - title: "A Short Guide To ggplot"
+      path: https://agrogan1.github.io/R/short-guide-ggplot/short-guide-ggplot.html
       image: https://agrogan1.github.io/R/R.png
       categories: [R, dataviz]
     - title: "What Geometry Do I Use?"
