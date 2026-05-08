@@ -332,7 +332,7 @@ And lastly, the logistical demands of random assignment may require smaller samp
 
 [^timeframe]: Somewhat relatedly, results that are observed over a shorter time frame (e.g. several months or a year) may not generalize to longer time frames such as several years or many years.
 
-# When Participants Choose Their Own Level Of Particpation
+# When Participants Choose Their Own Level Of Participation
 
 So far in this discussion we have been focusing on improving our [**research design**]{color="#FF0000"}. Randomly assigning participants to a control group or program group might be thought of as one way of improving the *internal validity* of an evaluation by improving the [**research design**]{color="#FF0000"}. 
 
