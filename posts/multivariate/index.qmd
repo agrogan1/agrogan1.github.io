@@ -4,6 +4,7 @@ subtitle: "A Long-ish Blog Post"
 author:  Andy Grogan-Kaylor 
 date: "2026-4-14"
 categories: [stats, science, teaching]
+image: "annotated-equation.png"
 mermaid:
   theme: neutral
 filters:
