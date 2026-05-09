@@ -2,8 +2,8 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/research-designs/index.html",
       "/posts/multilevel-thinking/index.html",
+      "/posts/research-designs/index.html",
       "/posts/patterns-2/index.html",
       "/posts/multivariate/index.html",
       "/posts/failure/index.html",
