@@ -1,0 +1,323 @@
+---
+title: "Why Do We Need Good Research Designs To Evaluate Social Programs?"
+subtitle: "A Long-ish Blog Post"
+author:  Andy Grogan-Kaylor 
+date: "2026-5-9"
+categories: [stats, science, teaching]
+image: "research-design.png"
+mermaid:
+  theme: neutral
+filters:
+  - highlight-text
+---
+
+::: {.callout-note}
+This post is an adapted, and slightly shorter version of my post on [Why Do We Need Multivariate Models To Evaluate Social Programs?](https://agrogan1.github.io/posts/multivariate/)
+:::
+
+# Introduction
+
+Across the world, there is a great deal of suffering. Many people deal with mental health problems or substance use issues. People often suffer the effects of discrimination, poverty, inequality, trauma, violence or conflict.
+
+```{r}
+#| echo: false
+#| message: false
+
+library(rnaturalearth) # natural earth data
+
+library(ggplot2) # beautiful graphs & maps
+
+library(dplyr) # data wrangling
+
+library(sf) # simple (spatial) features
+
+# library(patchwork) # stitch ggplots together
+
+# options(rgl.useNULL = TRUE)
+
+# library(rgl) # 3D plots
+
+# library(car) # Companion to Applied Regression
+
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| label: fig-globe
+
+mapdata <- ne_countries(scale = "medium", # medium scale
+                        returnclass = "sf") # as sf object
+
+# CF https://stackoverflow.com/questions/75860459/change-ocean-color-in-robinson-projection-map
+
+ocean <- st_polygon(list(cbind(c(seq(-180, 179, 
+                                     len = 100), 
+                                 rep(180, 100), 
+                                 seq(179, -180, 
+                                     len = 100),
+                                 rep(-180, 100)),
+                               c(rep(-90, 100), 
+                                 seq(-89, 89, 
+                                     len = 100),
+                                 rep(90, 100), 
+                                 seq(89, -90, 
+                                     len = 100))))) |>
+  st_sfc(crs = "WGS84") |>
+  st_as_sf()
+
+mymap <- ggplot(mapdata) + # the data I am mapping
+  geom_sf(data = ocean, fill = "#ECECFF") +
+  geom_sf(fill = "#FFF4DD") + # the geometry I am using
+  theme_minimal() +
+  theme(axis.text.x = element_blank())
+
+mymap + coord_sf(crs="+proj=robin") # Robinson projection
+
+```
+
+Understandably, many people and organizations try to develop interventions or programs for those who must deal with such difficulties. 
+
+Yet evaluating such social programs may be more difficult than it appears.
+
+# A Simple Evaluation
+
+Let's consider a simple evaluation of a program designed to improve mental health.
+
+In its simplest form, an evaluation might consist of looking at the outcomes--e.g. mental health outcomes--for those who participate in a program.
+
+```{mermaid}
+%%| label: fig-simplest-design
+
+---
+config:
+  look: handDrawn
+  theme: default
+---
+
+flowchart LR
+
+  program[program] --> outcome1[outcome]
+
+  linkStyle 0 stroke:#000000,stroke-width:3px,font-size:36px,color:black;
+
+```
+
+If the program appears to be associated with better outcomes, we might be tempted to claim that the program is successful.
+
+```{mermaid}
+%%| label: fig-associated-better-outcomes
+
+---
+config:
+  look: handDrawn
+  theme: default
+---
+
+flowchart LR
+
+  program[program] --> outcome1["better outcome"]:::forestgreen
+
+  linkStyle 0 stroke:#000000,stroke-width:3px,font-size:36px,color:black;
+
+  classDef forestgreen fill:#CDE498,stroke:#000000,stroke-width:2px,color:#000000;
+
+```
+
+# Our Worry
+
+However, we might wonder, or worry, about a number of issues. For example:
+
+* What were the outcomes like for this group of people *before* they participated in the program?
+* If the outcomes of the program were favorable, it might not be that the program is particularly better, but that people improve or get better *naturally* over time. 
+
+If we fail to account for these possibilities, we are potentially declaring a program successful, when in fact it has [**no effect**]{fg="#FF0000"}. We are potentially advocating that scarce time, energy, and money be put into this program, when our resources would be better allocated elsewhere.
+
+Advocating for programs which have not been successfully evaluated, and which are not backed up by evidence, could thus be seen as an [**ethical issue**]{fg="#FF0000"}. Put another way, we should be advocating that programs be implemented only if they are [**evidence based**]{fg="#FF0000"}.
+
+# A More Sophisticated Evaluation
+
+A more sophisticated research design would be to have one group of people--a program group--participate in the program, while another group--a comparison group--does not participate. We would then compare outcomes across the two groups.[^ethics]
+
+[^ethics]: Valid questions could be raised about the ethics of such an approach, specifically denying participation in the program to one group of people. If a program is of *unknown* benefit, it is ethical to evaluate this program with a comparison group approach--where the comparison group is offered the *usual level of care*--because it is *not yet known* whether the program confers benefit on its participants, and whether the program represents a valid use of time, energy and financial resources, or whether the program is a waste of resources, and of participants' time. Indeed, an evaluation might uncover the fact that the program has no beneficial effects, or even that the program is harmful! Once a program has been established as beneficial, it would likely be *unethical* to conduct an evaluation where the program is withheld from some participants. However, we could then consider a comparison of the program with an enhanced version of the program that might confer even more benefits.
+
+```{mermaid}
+%%| label: fig-more-sophisticated-design
+
+---
+config:
+  look: handDrawn
+  theme: default
+---
+
+flowchart LR
+
+  programgroup["program group"] --> program
+
+  program[program] --> outcome1[outcome]
+
+  comparisongroup["comparison group"] ---> outcome0[outcome]
+
+  linkStyle 0,1,2 stroke:#000000,stroke-width:3px,font-size:36px,color:black;
+
+```
+
+We hope that our results will show that those participants who have participated in the program group have better outcomes than those who were members of the comparison group.
+
+```{mermaid}
+%%| label: fig-associated-better-outcomes-2
+
+---
+config:
+  look: handDrawn
+  theme: default
+---
+
+flowchart LR
+
+  programgroup["program group"] --> program
+
+  program[program] --> outcome1[better outcome]:::forestgreen
+
+  comparisongroup["comparison group"] ---> outcome0[outcome]
+
+  linkStyle 0,1,2 stroke:#000000,stroke-width:3px,font-size:36px,color:black;
+
+  classDef green fill:#80BD41,stroke:#000000,stroke-width:2px,color:#000000;
+  
+  classDef springgreen fill:#00FF7F,stroke:#000000,stroke-width:2px,color:#000000;
+  
+  classDef forestgreen fill:#CDE498,stroke:#000000,stroke-width:2px,color:#000000;
+  
+```
+
+# Different Subgroups of Individuals 
+
+One big question or concern in conducting an evaluation of this type is that our group of participants may be composed of different subgroups of individuals. These groups might be different in that they might represent individuals of different racial, ethnic or gender identities, might be people from different communities, or might have quite different sets of past experiences. 
+
+```{mermaid}
+%%| label: fig-subgroups
+
+---
+config:
+  look: handDrawn
+  theme: default
+---
+
+flowchart TB
+
+  subgraph study["study participants"]
+
+  A["Group A: 100 people"]
+
+  B["Group B: 100 people"]
+
+  end
+
+```
+
+# Are Those In the Program Group And Comparison Group Similar?
+
+If participants from Group A and Group B are evenly distributed across the program and comparison groups, then we are not worried about the idea that an apparent effect of the program is because of unequal allocation of groups to the program.
+
+```{mermaid}
+%%| label: fig-program-comparison-similar
+
+---
+config:
+  look: handDrawn
+  theme: default
+---
+
+flowchart LR
+
+subgraph study["study participants"]
+
+  A["Group A: 100 people"]
+
+  B["Group B: 100 people"]
+
+  end
+
+  A --> |"roughly 50"| programgroup["program group"]
+
+  B --> |"roughly 50"| programgroup["program group"]
+
+  programgroup["program group"] --> program
+
+  program[program] --> outcome1[outcome]
+
+  A --> |"roughly 50"| comparisongroup
+
+  B --> |"roughly 50"| comparisongroup
+
+  comparisongroup["comparison group"] ---> outcome0[outcome]
+
+  linkStyle 0,1,2,3,4,5,6 stroke:#000000,stroke-width:3px,font-size:14px,color:red;
+
+```
+
+# Random Assignment
+
+One way of accomplishing this even distribution would be by *randomly* assigning participants to the program.
+
+Random assignment helps to ensure the *internal validity* of a program evaluation. If the evaluation finds that outcomes in the program group are better than those in the control group, we can be confident that this is due to the effects of the program. 
+
+```{mermaid}
+%%| label: fig-random-assignment
+
+---
+config:
+  look: handDrawn
+  theme: default
+---
+
+flowchart LR
+
+subgraph study["study participants"]
+
+  A["Group A: 100 people"]
+
+  B["Group B: 100 people"]
+
+  end
+
+  A --> |"roughly 50 RANDOMLY ASSIGNED"| programgroup["program group"]
+
+  B --> |"roughly 50 RANDOMLY ASSIGNED"| programgroup["program group"]
+
+  programgroup["program group"] --> program
+
+  program[program] --> outcome1[outcome]
+
+  A --> |"roughly 50 RANDOMLY ASSIGNED"| comparisongroup
+
+  B --> |"roughly 50 RANDOMLY ASSIGNED"| comparisongroup
+
+  comparisongroup["comparison group"] ---> outcome0[outcome]
+
+  linkStyle 0,1,2,3,4,5,6 stroke:#000000,stroke-width:3px,font-size:14px,color:red;
+
+```
+
+# Random Assignment Is Sometimes Not Possible
+
+However, often the nature of the program is such that we want to allow participants in the study to select their own level of participation, or non-participation, in the program.
+
+Often funders have objections to random assignment. Often the individuals or communities who are participating in the evaluation of a program may have valid objections to random assignment.
+
+Sometimes, instead of relying on random assignment, we may wish to observe the effects of a program more naturalistically.
+
+And lastly, the logistical demands of random assignment may require smaller samples, as well as shorter time frames, when we wish to observe the outcomes of a program with a larger more generalizable sample of participants[^generalizability], or over a longer time frame[^timeframe]. Generalizability is often termed *external validity*.
+
+# What To Do?
+
+When randomization is not possible, we will need to resort to other strategies:
+
+* We may need to carefully assess the equivalence of our comparison and program group by comparing their demographic characteristics, as well as any other factors that we measure at the beginning of our study like mental health outcomes.
+* We may need to think about more sophisticated strategies of comparing members of our comparison and program groups by [developing a model of program participation and outcomes](https://agrogan1.github.io/posts/multivariate/).
+
+[^generalizability]: Increasingly we are aware that an evaluation conducted with a small selected group of participants may not generalize well to other groups of people with different demographic or identity characteristics, who are from different cultures, or who live in different countries. 
+
+[^timeframe]: Somewhat relatedly, results that are observed over a shorter time frame (e.g. several months or a year) may not generalize to longer time frames such as several years or many years.
+
