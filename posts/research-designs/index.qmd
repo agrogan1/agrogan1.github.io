@@ -12,7 +12,7 @@ filters:
 ---
 
 ::: {.callout-note}
-This post is an adapted, and slightly shorter version of my post on [Why Do We Need Multivariate Models To Evaluate Social Programs?](https://agrogan1.github.io/posts/multivariate/)
+This post is an adapted, and slightly shorter, version of my post on [Why Do We Need Multivariate Models To Evaluate Social Programs?](../multivariate/)
 :::
 
 # Introduction
@@ -314,7 +314,7 @@ And lastly, the logistical demands of random assignment may require smaller samp
 
 When randomization is not possible, we will need to resort to other strategies:
 
-* We may need to carefully assess the equivalence of our comparison and program group by comparing their demographic characteristics, as well as any other factors that we measure at the beginning of our study like mental health outcomes. Do the members of our comparision and program group have similar identities, backgrounds and histories? Do they intially have similar outcomes on measures such as measures of mental health?
+* We may need to carefully assess the equivalence of our comparison and program group by comparing their demographic characteristics, as well as any other factors that we measure at the beginning of our study like mental health outcomes. Do the members of our comparison and program group have similar identities, backgrounds, and histories? Do they *initially* have similar outcomes on measures such as measures of mental health?
 * We may need to think about more sophisticated strategies of comparing members of our comparison and program groups by [developing a model of program participation and outcomes](https://agrogan1.github.io/posts/multivariate/).
 
 [^generalizability]: Increasingly we are aware that an evaluation conducted with a small selected group of participants may not generalize well to other groups of people with different demographic or identity characteristics, who are from different cultures, or who live in different countries. 

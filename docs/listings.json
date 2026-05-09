@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/research-designs/index.html",
       "/posts/multilevel-thinking/index.html",
       "/posts/patterns-2/index.html",
       "/posts/multivariate/index.html",
@@ -125,11 +126,7 @@
     "items": []
   },
   {
-    "listing": "/posts/R-resources/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/Bayesian-resources/index.html",
+    "listing": "/contact.html",
     "items": []
   },
   {
@@ -137,7 +134,11 @@
     "items": []
   },
   {
-    "listing": "/contact.html",
+    "listing": "/posts/Bayesian-resources/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/R-resources/index.html",
     "items": []
   },
   {

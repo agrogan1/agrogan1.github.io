@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Andy Grogan-Kaylor">
+<meta name="dcterms.date" content="2026-05-09">
 
-<title>Home – Andrew Grogan-Kaylor</title>
+<title>Why Do We Need Good Research Designs To Evaluate Social Programs? – Andrew Grogan-Kaylor</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,26 +28,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-b6a8276bf55561bdbc268162d41bd1f7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-91951e90da365a4745b3d6636fa4fb2d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-b6a8276bf55561bdbc268162d41bd1f7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-91951e90da365a4745b3d6636fa4fb2d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,74 +76,27 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-image','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="agrogan.css">
-<meta property="og:title" content="Home – Andrew Grogan-Kaylor">
-<meta property="og:image" content="thumbnail.jpg">
+<link rel="stylesheet" href="../../agrogan.css">
+<meta property="og:title" content="Why Do We Need Good Research Designs To Evaluate Social Programs? – Andrew Grogan-Kaylor">
+<meta property="og:description" content="A Long-ish Blog Post">
+<meta property="og:image" content="research-design.png">
 <meta property="og:site_name" content="Andrew Grogan-Kaylor">
-<meta name="twitter:title" content="Home – Andrew Grogan-Kaylor">
-<meta name="twitter:image" content="thumbnail.jpg">
+<meta name="twitter:title" content="Why Do We Need Good Research Designs To Evaluate Social Programs? – Andrew Grogan-Kaylor">
+<meta name="twitter:description" content="A Long-ish Blog Post">
+<meta name="twitter:image" content="research-design.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="citation_title" content="Home">
+<meta name="citation_title" content="Why Do We Need Good Research Designs To Evaluate Social Programs?">
+<meta name="citation_author" content="Andy Grogan-Kaylor">
+<meta name="citation_publication_date" content="2026-05-09">
+<meta name="citation_cover_date" content="2026-05-09">
+<meta name="citation_year" content="2026">
+<meta name="citation_online_date" content="2026-05-09">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience;,citation_abstract=Adverse Childhood Experiences (ACEs) such as child abuse are related to poor health outcomes. Spanking has indicated a similar association with health outcomes, but to date has not been considered an ACE. Physical and emotional abuse have been shown in previous research to correlate highly and may be similar in nature to spanking. To determine if spanking should be considered an ACE, this study aimed to examine 1): the grouping of spanking with physical and emotional abuse; and 2) if spanking has similar associations with poor adult health problems and accounts for additional model variance. Adult mental health problems included depressive affect, suicide attempts, moderate to heavy drinking, and street drug use. Data were from the CDC-Kaiser ACE study (N = 8316, response rate = 65;,citation_author=Tracie O. Afifi;,citation_author=Derek Ford;,citation_author=Elizabeth T. Gershoff;,citation_author=Melissa Merrick;,citation_author=Andrew Grogan-Kaylor;,citation_author=Katie A. Ports;,citation_author=Harriet L. MacMillan;,citation_author=George W. Holden;,citation_author=Catherine A. Taylor;,citation_author=Shawna J. Lee;,citation_author=Robbyn Peters Bennett;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_doi=10.1016/j.chiabu.2017.01.014;,citation_isbn=0145-2134;,citation_issn=18737757;,citation_volume=71;,citation_journal_title=Child Abuse and Neglect;">
 <meta name="citation_reference" content="citation_title=Interaction terms in logit and probit models;,citation_abstract=The magnitude of the interaction effect in nonlinear models does not equal the marginal effect of the interaction term, can be of opposite sign, and its statistical significance is not calculated by standard software. We present the correct way to estimate the magnitude and standard errors of the interaction effect in nonlinear models. © 2003 Elsevier Science B.V. All rights reserved.;,citation_author=Chunrong Ai;,citation_author=Edward C. Norton;,citation_publication_date=2003;,citation_cover_date=2003;,citation_year=2003;,citation_doi=10.1016/S0165-1765(03)00032-6;,citation_issn=01651765;,citation_journal_title=Economics Letters;">
@@ -222,11 +178,11 @@ window.Quarto = {
 <body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Andrew Grogan-Kaylor</span>
     </a>
   </div>
@@ -237,7 +193,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -250,29 +206,29 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-research">    
         <li>
-    <a class="dropdown-item" href="./about-research.html">
+    <a class="dropdown-item" href="../../about-research.html">
  <span class="dropdown-text">About My Research</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./research.html">
+    <a class="dropdown-item" href="../../research.html">
  <span class="dropdown-text">Research Papers and Projects</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./CP-meta.html">
+    <a class="dropdown-item" href="../../CP-meta.html">
  <span class="dropdown-text">Meta-Analysis</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./media-mentions-CP-meta.html">
+    <a class="dropdown-item" href="../../media-mentions-CP-meta.html">
  <span class="dropdown-text">Media Mentions of Meta-Analysis</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./earlier-research-on-CP.html">
+    <a class="dropdown-item" href="../../earlier-research-on-CP.html">
  <span class="dropdown-text">Earlier Research on Corporal Punishment</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./teaching.html"> 
+    <a class="nav-link" href="../../teaching.html"> 
 <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -293,7 +249,7 @@ window.Quarto = {
  <span class="dropdown-text">Mapping/GIS</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./CPbans.html">
+    <a class="dropdown-item" href="../../CPbans.html">
  <span class="dropdown-text">Corporal Punishment Bans</span></a>
   </li>  
     </ul>
@@ -304,7 +260,7 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-blog-ish-posts">    
         <li>
-    <a class="dropdown-item" href="./blog.html">
+    <a class="dropdown-item" href="../../blog.html">
  <span class="dropdown-text">Blog</span></a>
   </li>  
         <li>
@@ -322,7 +278,7 @@ window.Quarto = {
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About Me</span></a>
   </li>  
 </ul>
@@ -333,106 +289,417 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Why Do We Need Good Research Designs To Evaluate Social Programs?</h1>
+            <p class="subtitle lead">A Long-ish Blog Post</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">stats</div>
+                <div class="quarto-category">science</div>
+                <div class="quarto-category">teaching</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Andy Grogan-Kaylor </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">May 9, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#a-simple-evaluation" id="toc-a-simple-evaluation" class="nav-link" data-scroll-target="#a-simple-evaluation">A Simple Evaluation</a></li>
+  <li><a href="#our-worry" id="toc-our-worry" class="nav-link" data-scroll-target="#our-worry">Our Worry</a></li>
+  <li><a href="#a-more-sophisticated-evaluation" id="toc-a-more-sophisticated-evaluation" class="nav-link" data-scroll-target="#a-more-sophisticated-evaluation">A More Sophisticated Evaluation</a></li>
+  <li><a href="#different-subgroups-of-individuals" id="toc-different-subgroups-of-individuals" class="nav-link" data-scroll-target="#different-subgroups-of-individuals">Different Subgroups of Individuals</a></li>
+  <li><a href="#are-those-in-the-program-group-and-comparison-group-similar" id="toc-are-those-in-the-program-group-and-comparison-group-similar" class="nav-link" data-scroll-target="#are-those-in-the-program-group-and-comparison-group-similar">Are Those In the Program Group And Comparison Group Similar?</a></li>
+  <li><a href="#random-assignment" id="toc-random-assignment" class="nav-link" data-scroll-target="#random-assignment">Random Assignment</a></li>
+  <li><a href="#random-assignment-is-sometimes-not-possible" id="toc-random-assignment-is-sometimes-not-possible" class="nav-link" data-scroll-target="#random-assignment-is-sometimes-not-possible">Random Assignment Is Sometimes Not Possible</a></li>
+  <li><a href="#what-to-do" id="toc-what-to-do" class="nav-link" data-scroll-target="#what-to-do">What To Do?</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Home</h1>
+
+
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This post is an adapted, and slightly shorter, version of my post on <a href="../multivariate/">Why Do We Need Multivariate Models To Evaluate Social Programs?</a></p>
+</div>
+</div>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>Across the world, there is a great deal of suffering. Many people deal with mental health problems or substance use issues. People often suffer the effects of discrimination, poverty, inequality, trauma, violence or conflict.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-globe" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-globe-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="index_files/figure-html/fig-globe-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: "><img src="index_files/figure-html/fig-globe-1.png" id="fig-globe" class="img-fluid figure-img" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-globe-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Understandably, many people and organizations try to develop interventions or programs for those who must deal with such difficulties.</p>
+<p>Yet evaluating such social programs may be more difficult than it appears.</p>
+</section>
+<section id="a-simple-evaluation" class="level1">
+<h1>A Simple Evaluation</h1>
+<p>Let’s consider a simple evaluation of a program designed to improve mental health.</p>
+<p>In its simplest form, an evaluation might consist of looking at the outcomes–e.g.&nbsp;mental health outcomes–for those who participate in a program.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-simplest-design" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-simplest-design-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-simplest-design">---
+config:
+  look: handDrawn
+  theme: default
+---
 
+flowchart LR
 
+  program[program] --&gt; outcome1[outcome]
 
-<div class="quarto-title-meta">
+  linkStyle 0 stroke:#000000,stroke-width:3px,font-size:36px,color:black;
 
-    
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-simplest-design-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>If the program appears to be associated with better outcomes, we might be tempted to claim that the program is successful.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-associated-better-outcomes" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-associated-better-outcomes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-associated-better-outcomes">---
+config:
+  look: handDrawn
+  theme: default
+---
+
+flowchart LR
+
+  program[program] --&gt; outcome1["better outcome"]:::forestgreen
+
+  linkStyle 0 stroke:#000000,stroke-width:3px,font-size:36px,color:black;
+
+  classDef forestgreen fill:#CDE498,stroke:#000000,stroke-width:2px,color:#000000;
+
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-associated-better-outcomes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="our-worry" class="level1">
+<h1>Our Worry</h1>
+<p>However, we might wonder, or worry, about a number of issues. For example:</p>
+<ul>
+<li>What were the outcomes like for this group of people <em>before</em> they participated in the program?</li>
+<li>If the outcomes of the program were favorable, it might not be that the program is particularly better, but that people improve or get better <em>naturally</em> over time.</li>
+</ul>
+<p>If we fail to account for these possibilities, we are potentially declaring a program successful, when in fact it has <span class="light-content" data-fg="#FF0000" style="color: #FF0000;"><strong>no effect</strong></span>. We are potentially advocating that scarce time, energy, and money be put into this program, when our resources would be better allocated elsewhere.</p>
+<p>Advocating for programs which have not been successfully evaluated, and which are not backed up by evidence, could thus be seen as an <span class="light-content" data-fg="#FF0000" style="color: #FF0000;"><strong>ethical issue</strong></span>. Put another way, we should be advocating that programs be implemented only if they are <span class="light-content" data-fg="#FF0000" style="color: #FF0000;"><strong>evidence based</strong></span>.</p>
+</section>
+<section id="a-more-sophisticated-evaluation" class="level1">
+<h1>A More Sophisticated Evaluation</h1>
+<p>A more sophisticated research design would be to have one group of people–a program group–participate in the program, while another group–a comparison group–does not participate. We would then compare outcomes across the two groups.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-more-sophisticated-design" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-more-sophisticated-design-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-more-sophisticated-design">---
+config:
+  look: handDrawn
+  theme: default
+---
+
+flowchart LR
+
+  programgroup["program group"] --&gt; program
+
+  program[program] --&gt; outcome1[outcome]
+
+  comparisongroup["comparison group"] ---&gt; outcome0[outcome]
+
+  linkStyle 0,1,2 stroke:#000000,stroke-width:3px,font-size:36px,color:black;
+
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-more-sophisticated-design-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>We hope that our results will show that those participants who have participated in the program group have better outcomes than those who were members of the comparison group.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-associated-better-outcomes-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-associated-better-outcomes-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-associated-better-outcomes-2">---
+config:
+  look: handDrawn
+  theme: default
+---
+
+flowchart LR
+
+  programgroup["program group"] --&gt; program
+
+  program[program] --&gt; outcome1[better outcome]:::forestgreen
+
+  comparisongroup["comparison group"] ---&gt; outcome0[outcome]
+
+  linkStyle 0,1,2 stroke:#000000,stroke-width:3px,font-size:36px,color:black;
+
+  classDef green fill:#80BD41,stroke:#000000,stroke-width:2px,color:#000000;
   
-    
-  </div>
+  classDef springgreen fill:#00FF7F,stroke:#000000,stroke-width:2px,color:#000000;
   
+  classDef forestgreen fill:#CDE498,stroke:#000000,stroke-width:2px,color:#000000;
+  
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-associated-better-outcomes-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="different-subgroups-of-individuals" class="level1">
+<h1>Different Subgroups of Individuals</h1>
+<p>One big question or concern in conducting an evaluation of this type is that our group of participants may be composed of different subgroups of individuals. These groups might be different in that they might represent individuals of different racial, ethnic or gender identities, might be people from different communities, or might have quite different sets of past experiences.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-subgroups" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-subgroups-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-subgroups">---
+config:
+  look: handDrawn
+  theme: default
+---
+
+flowchart TB
+
+  subgraph study["study participants"]
+
+  A["Group A: 100 people"]
+
+  B["Group B: 100 people"]
+
+  end
+
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-subgroups-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="are-those-in-the-program-group-and-comparison-group-similar" class="level1">
+<h1>Are Those In the Program Group And Comparison Group Similar?</h1>
+<p>If participants from Group A and Group B are evenly distributed across the program and comparison groups, then we are not worried about the idea that an apparent effect of the program is because of unequal allocation of groups to the program.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-program-comparison-similar" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-program-comparison-similar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-program-comparison-similar">---
+config:
+  look: handDrawn
+  theme: default
+---
+
+flowchart LR
+
+subgraph study["study participants"]
+
+  A["Group A: 100 people"]
+
+  B["Group B: 100 people"]
+
+  end
+
+  A --&gt; |"roughly 50"| programgroup["program group"]
+
+  B --&gt; |"roughly 50"| programgroup["program group"]
+
+  programgroup["program group"] --&gt; program
+
+  program[program] --&gt; outcome1[outcome]
+
+  A --&gt; |"roughly 50"| comparisongroup
+
+  B --&gt; |"roughly 50"| comparisongroup
+
+  comparisongroup["comparison group"] ---&gt; outcome0[outcome]
+
+  linkStyle 0,1,2,3,4,5,6 stroke:#000000,stroke-width:3px,font-size:14px,color:red;
+
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-program-comparison-similar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="random-assignment" class="level1">
+<h1>Random Assignment</h1>
+<p>One way of accomplishing this even distribution would be by <em>randomly</em> assigning participants to the program.</p>
+<p>Random assignment helps to ensure the <em>internal validity</em> of a program evaluation. If the evaluation finds that outcomes in the program group are better than those in the control group, we can be confident that this is due to the effects of the program.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-random-assignment" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-random-assignment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-random-assignment">---
+config:
+  look: handDrawn
+  theme: default
+---
+
+flowchart LR
+
+subgraph study["study participants"]
+
+  A["Group A: 100 people"]
+
+  B["Group B: 100 people"]
+
+  end
+
+  A --&gt; |"roughly 50 RANDOMLY ASSIGNED"| programgroup["program group"]
+
+  B --&gt; |"roughly 50 RANDOMLY ASSIGNED"| programgroup["program group"]
+
+  programgroup["program group"] --&gt; program
+
+  program[program] --&gt; outcome1[outcome]
+
+  A --&gt; |"roughly 50 RANDOMLY ASSIGNED"| comparisongroup
+
+  B --&gt; |"roughly 50 RANDOMLY ASSIGNED"| comparisongroup
+
+  comparisongroup["comparison group"] ---&gt; outcome0[outcome]
+
+  linkStyle 0,1,2,3,4,5,6 stroke:#000000,stroke-width:3px,font-size:14px,color:red;
+
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-random-assignment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="random-assignment-is-sometimes-not-possible" class="level1">
+<h1>Random Assignment Is Sometimes Not Possible</h1>
+<p>However, often the nature of the program is such that we want to allow participants in the study to select their own level of participation, or non-participation, in the program.</p>
+<p>Often funders have objections to random assignment. Often the individuals or communities who are participating in the evaluation of a program may have valid objections to random assignment.</p>
+<p>Sometimes, instead of relying on random assignment, we may wish to observe the effects of a program more naturalistically.</p>
+<p>And lastly, the logistical demands of random assignment may require smaller samples, as well as shorter time frames, when we wish to observe the outcomes of a program with a larger more generalizable sample of participants<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, or over a longer time frame<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. Generalizability is often termed <em>external validity</em>.</p>
+</section>
+<section id="what-to-do" class="level1">
+<h1>What To Do?</h1>
+<p>When randomization is not possible, we will need to resort to other strategies:</p>
+<ul>
+<li>We may need to carefully assess the equivalence of our comparison and program group by comparing their demographic characteristics, as well as any other factors that we measure at the beginning of our study like mental health outcomes. Do the members of our comparison and program group have similar identities, backgrounds, and histories? Do they <em>initially</em> have similar outcomes on measures such as measures of mental health?</li>
+<li>We may need to think about more sophisticated strategies of comparing members of our comparison and program groups by <a href="https://agrogan1.github.io/posts/multivariate/">developing a model of program participation and outcomes</a>.</li>
+</ul>
 
 
-</header>
+</section>
 
 
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
-
-
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1775768898916" data-listing-reading-time-sort="6" data-listing-word-count-sort="1047">
-<a href="./about-research.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="thumbnail.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-About My Research
-</h5>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1777755175877" data-listing-reading-time-sort="10" data-listing-word-count-sort="1830">
-<a href="./research.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="earth.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Research Papers and Projects
-</h5>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1776270226448" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
-<a href="./teaching.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="plant.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Teaching
-</h5>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1777755074141" data-listing-reading-time-sort="9" data-listing-word-count-sort="1757">
-<a href="./about.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="forest.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-About Me
-</h5>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1773073644225" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./blog.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img loading='lazy' src="posts/research-designs/research-design.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Blog-ish Posts
-</h5>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+<ol>
+<li id="fn1"><p>Valid questions could be raised about the ethics of such an approach, specifically denying participation in the program to one group of people. If a program is of <em>unknown</em> benefit, it is ethical to evaluate this program with a comparison group approach–where the comparison group is offered the <em>usual level of care</em>–because it is <em>not yet known</em> whether the program confers benefit on its participants, and whether the program represents a valid use of time, energy and financial resources, or whether the program is a waste of resources, and of participants’ time. Indeed, an evaluation might uncover the fact that the program has no beneficial effects, or even that the program is harmful! Once a program has been established as beneficial, it would likely be <em>unethical</em> to conduct an evaluation where the program is withheld from some participants. However, we could then consider a comparison of the program with an enhanced version of the program that might confer even more benefits.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Increasingly we are aware that an evaluation conducted with a small selected group of participants may not generalize well to other groups of people with different demographic or identity characteristics, who are from different cultures, or who live in different countries.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Somewhat relatedly, results that are observed over a shorter time frame (e.g.&nbsp;several months or a year) may not generalize to longer time frames such as several years or many years.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -834,6 +1101,38 @@ Blog-ish Posts
   });
   </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

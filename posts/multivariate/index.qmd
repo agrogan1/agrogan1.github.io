@@ -33,6 +33,10 @@ options(rgl.useNULL = TRUE)
 
 library(rgl) # 3D plots
 
+knitr::knit_hooks$set(webgl = hook_webgl) # new webhook
+
+# setupKnitr(autoprint = TRUE)
+
 library(car) # Companion to Applied Regression
 
 ```
