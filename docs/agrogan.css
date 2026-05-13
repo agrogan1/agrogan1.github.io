@@ -34,6 +34,9 @@ blockquote {
   font-size: 75%;
   font-weight: bold;
 }
+p {
+  color: black;
+}
 a {
   color: #2F65A7;
 }
