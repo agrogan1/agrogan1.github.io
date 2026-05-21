@@ -1,0 +1,15 @@
+{
+  "hash": "ff9a99cc2b14fed1277c77ea43aac460",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"`stripplot`\"\nsubtitle: \"Better `dotplot`s for Stata\"\nauthor:  Andy Grogan-Kaylor \ndate: \"2026-5-20\"\ncategories: [stats, Stata, teaching, dataviz]\nimage: \"mystripplot.png\"\nhighlight-style: haddock\n---\n\n\n::: {.cell}\n\n:::\n\n\nFor a recent project, we have been working with a lot of Likert scale data (e.g. \"strongly disagree\", \"disagree\", \"neutral\", \"agree\", \"strongly agree\"). Many times we are averaging several questionnaire items into a summary score e.g. `generate myaverage = (Q1 + Q2 + Q3)/3`.\n\nI've been thinking about the best way to visualize these distributions. Stata offers *histograms*, *kernel densities* and *dotplots*, none of which seem 100% intuitive or satisfactory. *dotplots* are intuitive in that every person is represented by a *dot*, but the fact that they are turned sideways in Stata seems unsatisfactory to me.\n\n\n::: {.cell collectcode='true'}\n\n```{.stata .cell-code  code-fold=\"true\" code-summary=\"Show the code\"}\nclear all // clear data\n\nset obs 100 // 100 observations\n\ngenerate myaverage = runiform(1, 5) // randomly simulated score\n\nhistogram myaverage\n\ngraph export \"myhistogram.png\", replace\n\nkdensity myaverage\n\ngraph export \"mydensity.png\", replace\n\ndotplot myaverage\n\ngraph export \"mydotplot.png\", replace\n\n```\n:::\n\n\n::: {layout-ncol=3}\n![histogram](myhistogram.png)\n\n![density](mydensity.png)\n\n![dotplot](mydotplot.png)\n:::\n\nI've come to like `stripplot` [@stripplot] as a more intuitive alternative to the above plots. `stripplot` requires a few options to make the plot I want, but is very useful.\n\n\n::: {.cell collectcode='true'}\n\n```{.stata .cell-code  code-fold=\"true\" code-summary=\"Show the code\"}\nstripplot myaverage, ///\nstack /// stack the dots\nwidth(1) /// bin with width 1\nmsymbol(circle) /// symbols are circles\ntitle(\"Scale 1\") /// title\nxtitle(\"Scale 1\") /// title for x axis\nxlabel(1 \"strongly disagree\" 2 \"disagree\" 3 \"neutral\" 4 \"agree\" 5 \"strongly agree\", labsize(vsmall)) // customize labels\n\ngraph export \"mystripplot.png\", replace\n\n```\n:::\n\n\n![stripplot](mystripplot.png){width=50%}\n\n\n\n\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

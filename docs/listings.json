@@ -3,6 +3,7 @@
     "listing": "/blog.html",
     "items": [
       "/posts/multilevel-thinking/index.html",
+      "/posts/stripplot/index.html",
       "/posts/research-designs/index.html",
       "/posts/patterns-2/index.html",
       "/posts/multivariate/index.html",
@@ -126,11 +127,7 @@
     "items": []
   },
   {
-    "listing": "/contact.html",
-    "items": []
-  },
-  {
-    "listing": "/teaching.html",
+    "listing": "/posts/R-resources/index.html",
     "items": []
   },
   {
@@ -138,7 +135,11 @@
     "items": []
   },
   {
-    "listing": "/posts/R-resources/index.html",
+    "listing": "/teaching.html",
+    "items": []
+  },
+  {
+    "listing": "/contact.html",
     "items": []
   },
   {
