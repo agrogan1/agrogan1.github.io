@@ -18,7 +18,7 @@ library(Statamarkdown)
 
 For a recent project, we have been working with a lot of Likert scale data (e.g. "strongly disagree", "disagree", "neutral", "agree", "strongly agree"). Many times we are averaging several questionnaire items into a summary score e.g. `generate myaverage = (Q1 + Q2 + Q3)/3`.
 
-I've been thinking about the best way to visualize these distributions. Stata offers *histograms*, *kernel densities* and *dotplots*, none of which seem 100% intuitive or satisfactory. *dotplots* are intuitive in that every person is represented by a *dot*, but the fact that they are turned sideways in Stata seems unsatisfactory to me.
+I've been thinking about the best way to visualize these distributions of scale scores. Stata offers *histograms*, *kernel densities* and *dotplots*, none of which seem 100% intuitive or satisfactory. *dotplots* are intuitive in that every person is represented by a *dot*, but the fact that they are turned sideways in Stata seems unsatisfactory and counter-intuitive to me.
 
 ```{stata, collectcode=TRUE}
 *| code-fold: true
