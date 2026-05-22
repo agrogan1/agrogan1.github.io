@@ -124,7 +124,6 @@ leaflet() %>%
 * "Associations between 11 parental discipline behaviours and child outcomes across 60 countries"
     + [Open Access Article](https://bmjopen.bmj.com/content/13/10/e058439)
     + [ArcGIS Storymap](https://arcg.is/1OSzvG0)
-    + [HTML Slides](https://websites.umich.edu/~parentingandchilddev/MICS-discipline-11-forms/v1/MICS-discipline-11-forms.html)
     + [*scrollytelling* Version with `closeread`](https://globalfamilies.quarto.pub/parenting/)
 
 * "Gender Inequality in Low- and Middle-Income Countries: Associations with Parental Physical Abuse and Moderation by Child Gender"
@@ -135,7 +134,6 @@ leaflet() %>%
 * "The Association between Spanking and Physical Abuse of Young Children in 56 Low- and Middle-Income Countries"
     + [Article](https://doi.org/10.1016/j.chiabu.2022.105662)
     + [Press Release](https://news.umich.edu/physical-abuse-less-likely-when-spanking-is-eliminated/)
-    + [HTML Slides](https://websites.umich.edu/~parentingandchilddev/MICS-physical-abuse/MICS-physical-abuse.html)
     + [ArcGIS Storymap](https://arcg.is/fq49)
     
 * "Patterns of Caregiver Aggressive & Nonaggressive Discipline Toward Young Children in Low- and Middle-Income Countries: A Latent Class Approach"
