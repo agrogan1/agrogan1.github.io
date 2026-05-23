@@ -379,8 +379,16 @@ div.csl-indent {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
+  <li><a href="#stripplot" id="toc-stripplot" class="nav-link" data-scroll-target="#stripplot"><code>stripplot</code></a></li>
+  <li><a href="#adjusting-the-bin-width" id="toc-adjusting-the-bin-width" class="nav-link" data-scroll-target="#adjusting-the-bin-width">Adjusting the Bin Width</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -389,6 +397,8 @@ div.csl-indent {
 
 
 
+<section id="background" class="level1">
+<h1>Background</h1>
 <p>For a recent project, we have been working with a lot of Likert scale data (e.g.&nbsp;“strongly disagree”, “disagree”, “neutral”, “agree”, “strongly agree”). Many times we are averaging several questionnaire items into a summary score e.g.&nbsp;<code>generate myaverage = (Q1 + Q2 + Q3)/3</code>.</p>
 <p>I’ve been thinking about the best way to visualize these distributions of scale scores. Stata offers <em>histograms</em>, <em>kernel densities</em> and <em>dotplots</em>, none of which seem 100% intuitive or satisfactory. <em>dotplots</em> are intuitive in that every person is represented by a <em>dot</em>, but the fact that they are turned sideways in Stata seems unsatisfactory and counter-intuitive to me.</p>
 <div class="cell" data-collectcode="true">
@@ -441,6 +451,9 @@ div.csl-indent {
 </div>
 </div>
 </div>
+</section>
+<section id="stripplot" class="level1">
+<h1><code>stripplot</code></h1>
 <p>I’ve come to like <code>stripplot</code> <span class="citation" data-cites="stripplot">(<a href="#ref-stripplot" role="doc-biblioref">Cox, 2003</a>)</span> as a more intuitive alternative to the above plots. <code>stripplot</code> requires a few options to make the plot I want, but is very useful.</p>
 <div class="cell" data-collectcode="true">
 <details class="code-fold">
@@ -462,9 +475,58 @@ div.csl-indent {
 <figcaption>stripplot</figcaption>
 </figure>
 </div>
+</section>
+<section id="adjusting-the-bin-width" class="level1">
+<h1>Adjusting the Bin Width</h1>
+<p>The width of the bins that <code>stripplot</code> uses can be adjusted with the <code>width()</code> option to adjust the <em>resolution</em> of the graph.</p>
+<div class="cell" data-collectcode="true">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>stripplot myaverage, <span class="kw">stack</span> <span class="kw">width</span>(.25) <span class="bn">msymbol</span>(<span class="bn">circle</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> <span class="st">"mystripplotA.png"</span>, <span class="kw">replace</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>stripplot myaverage, <span class="kw">stack</span> <span class="kw">width</span>(.5) <span class="bn">msymbol</span>(<span class="bn">circle</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> <span class="st">"mystripplotB.png"</span>, <span class="kw">replace</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>stripplot myaverage, <span class="kw">stack</span> <span class="kw">width</span>(1) <span class="bn">msymbol</span>(<span class="bn">circle</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> <span class="st">"mystripplotC.png"</span>, <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="mystripplotA.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="binning with width(.25)"><img src="mystripplotA.png" class="img-fluid figure-img" alt="binning with width(.25)"></a></p>
+<figcaption>binning with <code>width(.25)</code></figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="mystripplotB.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="binning with width(.5)"><img src="mystripplotB.png" class="img-fluid figure-img" alt="binning with width(.5)"></a></p>
+<figcaption>binning with <code>width(.5)</code></figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="mystripplotC.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="binning with width(1)"><img src="mystripplotC.png" class="img-fluid figure-img" alt="binning with width(1)"></a></p>
+<figcaption>binning with <code>width(1)</code></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
 
 
 
+</section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
 <div id="ref-stripplot" class="csl-entry" role="listitem">

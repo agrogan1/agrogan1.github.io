@@ -8,6 +8,8 @@ image: "mystripplot.png"
 highlight-style: haddock
 ---
 
+# Background
+
 ```{r}
 #| echo: false
 #| output: false
@@ -54,6 +56,8 @@ graph export "mydotplot.png", replace
 ![dotplot](mydotplot.png)
 :::
 
+# `stripplot`
+
 I've come to like `stripplot` [@stripplot] as a more intuitive alternative to the above plots. `stripplot` requires a few options to make the plot I want, but is very useful.
 
 ```{stata, collectcode=TRUE}
@@ -76,10 +80,37 @@ graph export "mystripplot.png", replace
 
 ![stripplot](mystripplot.png){width=50%}
 
+# Adjusting the Bin Width
 
+The width of the bins that `stripplot` uses can be changed with the `width()` option to adjust the *resolution* of the graph.
 
+```{stata, collectcode=TRUE}
+*| code-fold: true
+*| code-summary: "Show the code"
+*| echo: true
+*| output: false
 
+stripplot myaverage, stack width(.25) msymbol(circle)
 
+graph export "mystripplotA.png", replace
+
+stripplot myaverage, stack width(.5) msymbol(circle)
+
+graph export "mystripplotB.png", replace
+
+stripplot myaverage, stack width(1) msymbol(circle)
+
+graph export "mystripplotC.png", replace
+
+```
+
+::: {layout-ncol=3}
+![binning with `width(.25)`](mystripplotA.png)
+
+![binning with `width(.5)`](mystripplotB.png)
+
+![binning with `width(1)`](mystripplotC.png)
+:::
 
 
 
