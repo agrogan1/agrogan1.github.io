@@ -3,6 +3,7 @@
     "listing": "/blog.html",
     "items": [
       "/posts/multilevel-thinking/index.html",
+      "/posts/very-short-introduction-Stata/index.html",
       "/posts/how-to-choose-a-chart-a-visual-guide-with-Stata/index.html",
       "/posts/stripplot/index.html",
       "/posts/research-designs/index.html",
@@ -11,7 +12,6 @@
       "/posts/failure/index.html",
       "/posts/we-are-different-and-we-are-similar/index.html",
       "/posts/quick-regression-demo-iris/index.html",
-      "/posts/very-short-introduction-Stata/index.html",
       "/posts/wbdemo/index.html",
       "/posts/dplyr/index.html",
       "/posts/new-regression-tutorial/index.html",

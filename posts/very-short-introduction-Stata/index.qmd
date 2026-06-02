@@ -2,13 +2,14 @@
 title: "A *Very* Short Introduction to Stata"
 subtitle: "The basic *philosophy* of Stata."
 author: Andy Grogan-Kaylor
-date: "2026-4-1"
+date: "2026-6-1"
 categories: [stats, Stata]
 image: "Stata.png"
 ---
 
 ::: {.callout-tip}
-# Key Idea
+# Key Idea 
+
 The basic philosophy of Stata---"Stata in one sentence"---is: 
 
 `do_something to_variable(s), options`
