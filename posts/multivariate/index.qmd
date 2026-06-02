@@ -70,7 +70,7 @@ mymap <- ggplot(mapdata) + # the data I am mapping
   geom_sf(data = ocean, fill = "#ECECFF") +
   geom_sf(fill = "#FFF4DD") + # the geometry I am using
   theme_minimal() +
-  theme(axis.text.x = element_blank())
+  theme(axis.text = element_blank())
 
 mymap + coord_sf(crs="+proj=robin") # Robinson projection
 
