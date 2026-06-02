@@ -7,7 +7,7 @@
       "/posts/how-to-choose-a-chart-a-visual-guide-with-Stata/index.html",
       "/posts/stripplot/index.html",
       "/posts/research-designs/index.html",
-      "/posts/patterns-2/index.html",
+      "/posts/patterns2/index.html",
       "/posts/multivariate/index.html",
       "/posts/failure/index.html",
       "/posts/we-are-different-and-we-are-similar/index.html",
@@ -127,10 +127,6 @@
     "items": []
   },
   {
-    "listing": "/posts/R-resources/index.html",
-    "items": []
-  },
-  {
     "listing": "/posts/Bayesian-resources/index.html",
     "items": []
   },
@@ -140,6 +136,10 @@
   },
   {
     "listing": "/contact.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/R-resources/index.html",
     "items": []
   },
   {
