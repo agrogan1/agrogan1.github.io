@@ -3,6 +3,7 @@
     "listing": "/blog.html",
     "items": [
       "/posts/multilevel-thinking/index.html",
+      "/posts/complexity-hidden-inside-simplicity/index.html",
       "/posts/very-short-introduction-Stata/index.html",
       "/posts/how-to-choose-a-chart-a-visual-guide-with-Stata/index.html",
       "/posts/stripplot/index.html",
@@ -53,7 +54,6 @@
       "/posts/updated-Michigan-colors-for-R-graphs/index.html",
       "/posts/interactions-why-care/index.html",
       "/posts/interactions-are-symmetric/index.html",
-      "/posts/complexity-hidden-inside-simplicity/index.html",
       "/posts/multilevel-workshop/index.html",
       "/posts/quick-Stata-MLM-workflow/index.html",
       "/posts/interactions-and-moderation/index.html",
