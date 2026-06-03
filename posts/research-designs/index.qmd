@@ -127,8 +127,8 @@ flowchart LR
 
 However, we might wonder, or worry, about a number of issues. For example:
 
-* What were the outcomes like for this group of people *before* they participated in the program?
-* If the outcomes of the program were favorable, it might not be that the program is particularly better, but that people improve or get better *naturally* over time. 
+* What were the outcomes like for this group of people *before* they participated in the program? Were outcomes *already* favorable before the program?
+* If the outcomes of the program were favorable, it might not be that the program is particularly helpful, but that people improve or get better *naturally* over time. 
 
 If we fail to account for these possibilities, we are potentially declaring a program successful, when in fact it has [**no effect**]{fg="#FF0000"}. We are potentially advocating that scarce time, energy, and money be put into this program, when our resources would be better allocated elsewhere.
 
