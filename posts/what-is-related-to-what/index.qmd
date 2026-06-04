@@ -29,6 +29,8 @@ library(GGally) # pairs plots
 
 library(psych) # useful routines for psych data
 
+library(igraph) # network analysis
+
 ```
 
 
@@ -128,8 +130,6 @@ pairs.panels(mydata, # pairs plot
 
 ```{r}
 #| fig-height: 6
-
-library(igraph) # network analysis
 
 cor_mat <- cor(mydata, use = "complete.obs")
 
