@@ -33,4 +33,9 @@ bibliography  <- gsub(pattern = "Gladys Espinosa-Garc{\\a'\\i}a",
                       x = bibliography,
                       fixed = TRUE)
 
+# bibliography  <- gsub(pattern = "G{\\a'\\a}bor Cs{\\a'\\a}rdi", 
+#                       replace = "Gábor Csárdi", 
+#                       x = bibliography,
+#                       fixed = TRUE)
+
 writeLines(bibliography, con="agrogan.bib")

@@ -1,0 +1,160 @@
+---
+title: "What Is Related To What In My Data?"
+author: "Andy Grogan-Kaylor" 
+date: "2026-6-3"
+categories: [stats, dataviz, R]
+echo: true
+code-fold: true
+code-summary: "Show the code"
+highlight-style: haddock
+---
+
+In some recent projects, I have had to get a quick idea of what *scales* and *demographic* variables in my data are related to other *scales* and *demographic* variables. 
+
+It seems to me that one of the quickest ways to do this is with the `corrgram` [@corrgram] library. I also like `pairs.panels` in the `psych` [@psych] library, and `ggpairs` in the `GGally` [@GGally] library. 
+
+Lastly, a *network graph* using `igraph` [@Csardi2006; @Csardi2025] requires substantially more programming, and produces a quite different looking visualization that may or may not be useful in some situations.
+
+# Call Libraries
+
+```{r}
+
+library(MASS) # simulate multivariate data
+
+library(pander) # nice tables
+
+library(corrgram) # corrgrams
+
+library(GGally) # pairs plots
+
+library(psych) # useful routines for psych data
+
+```
+
+
+# Simulated Data
+
+I simulate some data. 
+
+::: {.callout-tip}
+## Key Idea
+
+Of particular note are that the strongest correlation is between `scaleA` and `scaleB`, and that `scaleA` and `scaleC` are negatively correlated.
+:::
+
+```{r}
+
+set.seed(54321)
+
+# simulate data
+
+mu <- c(scaleA = 10, scaleB = 25, scaleC = 100) # means
+
+Sigma <- matrix(c(1.0, 0.75, -0.3, # variance covariance
+                  0.75, 1.0, 0.4,
+                  -0.3, 0.4, 1.0), 
+                nrow = 3, ncol = 3)
+
+mydata <- mvrnorm(n = 500, 
+                  mu = mu, 
+                  Sigma = Sigma) # variance covariance
+
+```
+
+::: {.callout-note collapse="true"}
+# Look At The Data
+
+```{r}
+
+pander(head(mydata)) # nicely formatted table
+
+```
+
+
+```{r, skimr_include_summary = FALSE}
+
+skimr::skim(mydata) # descriptive statistics
+
+```
+:::
+
+# What Is Related To What In My Data?
+
+::: {.panel-tabset}
+
+## `corrgram`
+
+```{r}
+
+corrgram(mydata, 
+         order=TRUE, 
+         lower.panel = panel.pie, # lower panel is pie charts
+         upper.panel = panel.cor, # upper panel is correlations
+         text.panel = panel.txt, # text panel is variable
+         diag.panel=panel.minmax, # minimum and maximum
+         main="Correlation of Scales in Our Data") 
+
+```
+
+## `ggpairs`
+
+```{r}
+
+# ggpairs(mydata) # simple default plot
+
+ggpairs(mydata, # pairs plot
+        lower = list(continuous = wrap("points", 
+                                       color = "blue", 
+                                       alpha = 0.5)),
+        diag = list(continuous = wrap("densityDiag",
+                                      color = "blue")),
+        upper = list(continuous = wrap("cor",
+                                       color = "black"))) + 
+  labs(title = "Correlation of Scales in Our Data")
+
+```
+
+## `pairs.panels`
+
+```{r}
+
+pairs.panels(mydata, # pairs plot
+             show.points = FALSE, # don't show data points
+             main="Correlation of Scales in Our Data") 
+
+```
+
+## Network Graph
+
+```{r}
+#| fig-height: 6
+
+library(igraph) # network analysis
+
+cor_mat <- cor(mydata, use = "complete.obs")
+
+diag(cor_mat) <- 0 # set diagonal to 0
+
+g <- graph_from_adjacency_matrix(cor_mat, # make network graph
+                                 mode = "undirected", 
+                                 weighted = TRUE)
+
+# par(mar=c(0, 0, 1, 0) + 1.5) # plot margins
+
+absweight <- abs(E(g)$weight) # absolute value of weight
+
+plot(g, 
+     margin = 0.5,
+     edge.width = absweight * 20, # absolute value
+     vertex.size = 15,
+     vertex.label.dist = 2.5,
+     edge.label.color = "red",
+     edge.label = round(E(g)$weight, 2),
+     edge.label.dist = 1, 
+     # layout = coords,
+     edge.curved = .5,
+     main = "Correlation of Scales in Our Data")
+
+```
+
+:::
