@@ -94,7 +94,7 @@ corrgram(mydata,
          upper.panel = panel.cor, # upper panel is correlations
          text.panel = panel.txt, # text panel is variable
          diag.panel=panel.minmax, # minimum and maximum
-         main="Correlation of Scales in Our Data") 
+         main = "Correlation of Scales in Our Data") 
 
 ```
 
@@ -147,12 +147,14 @@ plot(g,
      margin = 0.5,
      edge.width = absweight * 20, # absolute value
      vertex.size = 15,
-     vertex.label.dist = 2.5,
+     vertex.label.dist = 3.5,
+     vertex.shape = "circle",
+     vertex.color = "dodgerblue",
      edge.label.color = "red",
      edge.label = round(E(g)$weight, 2),
      edge.label.dist = 1, 
      # layout = coords,
-     edge.curved = .5,
+     edge.curved = 0,
      main = "Correlation of Scales in Our Data")
 
 ```
