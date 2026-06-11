@@ -126,19 +126,20 @@ plot(g,
 ```{r}
 
 ggraph(g, layout = 'linear', circular = TRUE) + 
-  geom_edge_arc(aes(width = .25 * weight,
+  geom_edge_link(aes(width = .25 * weight,
                     color = weight,
                     label = round(weight, 2)),
                 label_colour = "red",
                 strength = .1,
-                angle_calc = 'along') +
+                angle_calc = 'along',
+                show.legend = FALSE) +
   geom_node_point() +
   geom_node_label(aes(label = name),
                   nudge_y = .025,
                   fill = "white") +
   scale_edge_color_gradient(name = "weight",
-                            low = "lightblue",
-                            high = "darkblue") +
+                            low = "lightgrey",
+                            high = "darkgrey") +
   labs(title = "Network Graph of Reports") +
   theme_void() 
 
