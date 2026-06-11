@@ -3,6 +3,7 @@
     "listing": "/blog.html",
     "items": [
       "/posts/multilevel-thinking/index.html",
+      "/posts/network-graph/index.html",
       "/posts/what-is-related-to-what/index.html",
       "/posts/complexity-hidden-inside-simplicity/index.html",
       "/posts/very-short-introduction-Stata/index.html",
@@ -128,11 +129,7 @@
     "items": []
   },
   {
-    "listing": "/posts/Bayesian-resources/index.html",
-    "items": []
-  },
-  {
-    "listing": "/contact.html",
+    "listing": "/posts/R-resources/index.html",
     "items": []
   },
   {
@@ -140,7 +137,11 @@
     "items": []
   },
   {
-    "listing": "/posts/R-resources/index.html",
+    "listing": "/contact.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/Bayesian-resources/index.html",
     "items": []
   },
   {

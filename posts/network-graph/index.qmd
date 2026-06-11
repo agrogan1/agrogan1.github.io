@@ -1,0 +1,152 @@
+---
+title: "An Updated Network Graph"
+author: "Andy Grogan-Kaylor" 
+date: "2026-6-10"
+categories: [stats, dataviz, R]
+echo: true
+code-fold: true
+code-summary: "Show the code"
+highlight-style: haddock
+---
+
+In a [previous post](../what-is-related-to-what/), I looked at some ways to get an idea of what *scales* and *demographic* variables in my data are related to other *scales* and *demographic* variables in my data. 
+
+Among several methods, I looked at a *network graph* using `igraph` [@Csardi2006; @Csardi2025]. However, the network graph in my previous post was less than satisfactory because of the limited number of scales in my data. 
+
+Below, I provide an example of a network graph with data with more scales.
+
+# Call Libraries
+
+```{r}
+
+library(igraph) # network analysis
+
+library(ggplot2) # beautiful graphs
+
+library(ggraph) # network graphs for ggplot
+
+library(faux) # simulated data
+
+library(pander) # nice tables
+
+library(skimr) # descriptive statistics
+
+```
+
+# Simulated Data
+
+I simulate some data. 
+
+```{r}
+
+set.seed(54321) # random seed
+
+# simulate data
+
+cmat <- c(1.00, 0.30, 0.25, 0.15, 0.15, 0.15,
+          0.30, 1.00, 0.00, 0.50, 0.10, 0.15,
+          0.25, 0.00, 1.00, 0.50, 0.50, 0.15,
+          0.15, 0.50, 0.50, 1.00, 0.00, 0.15,
+          0.15, 0.10, 0.50, 0.00, 1.00, 0.15,
+          0.15, 0.15, 0.15, 0.15, 0.15, 1.00)
+
+mydata <- rnorm_multi(n = 100, 
+                   mu = c(0, 20, 100, 100, 100, 100),
+                   sd = c(1, 5, 5, 5, 5, 5),
+                   r = cmat, # correlation matrix
+                   varnames = c("scaleA", 
+                                "scaleB", 
+                                "scaleC", 
+                                "scaleD", 
+                                "scaleE", 
+                                "scaleF"),
+                   empirical = FALSE)
+
+```
+
+::: {.callout-note collapse="true"}
+# Look At The Data
+
+```{r}
+
+pander(head(mydata)) # nicely formatted table
+
+```
+
+
+```{r, skimr_include_summary = FALSE}
+
+skim(mydata) # descriptive statistics
+
+```
+:::
+
+# Network Graph
+
+::: {.panel-tabset}
+
+## `igraph`
+
+```{r}
+#| fig-height: 6
+#| fig-width: 8
+
+cor_mat <- cor(mydata, use = "complete.obs")
+
+diag(cor_mat) <- 0 # set diagonal to 0
+
+g <- graph_from_adjacency_matrix(cor_mat, # make network graph
+                                 mode = "undirected", 
+                                 weighted = TRUE)
+
+coords <- layout_in_circle(g) # get circular layout
+
+par(mar=c(0, 0, 1, 0) + 1.5) # plot margins
+
+absweight <- abs(E(g)$weight) # absolute value of weight
+
+plot(g, 
+     margin = 0.5,
+     edge.width = absweight * 20, # absolute value
+     vertex.size = 15,
+     vertex.label.dist = 2.5,
+     vertex.shape = "circle",
+     vertex.color = "navy",
+     edge.label.color = "red",
+     edge.label = round(E(g)$weight, 2),
+     edge.label.dist = 1, 
+     layout = coords, # layout
+     edge.curved = 0,
+     main = "Correlation of Scales in Our Data")
+
+```
+
+## `ggraph`
+
+```{r}
+
+ggraph(g, layout = 'linear', circular = TRUE) + 
+  geom_edge_arc(aes(width = .25 * weight,
+                    color = weight,
+                    label = round(weight, 2)),
+                label_colour = "red",
+                strength = .1,
+                angle_calc = 'along') +
+  geom_node_point() +
+  geom_node_label(aes(label = name),
+                  nudge_y = .025,
+                  fill = "white") +
+  scale_edge_color_gradient(name = "weight",
+                            low = "lightblue",
+                            high = "darkblue") +
+  labs(title = "Network Graph of Reports") +
+  theme_void() 
+
+```
+
+:::
+
+
+
+
+

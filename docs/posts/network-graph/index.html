@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Andy Grogan-Kaylor">
-<meta name="dcterms.date" content="2026-06-11">
+<meta name="dcterms.date" content="2026-06-10">
 
-<title>Multilevel Thinking – Andrew Grogan-Kaylor</title>
+<title>An Updated Network Graph – Andrew Grogan-Kaylor</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -25,7 +25,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -42,10 +97,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-b6a8276bf55561bdbc268162d41bd1f7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-03f7d9b32c68af73ef0ecf910dfd98dd.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-91951e90da365a4745b3d6636fa4fb2d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-972f7452c3fae458d1f55b1118a6ca1e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -79,20 +134,20 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../agrogan.css">
-<meta property="og:title" content="Multilevel Thinking – Andrew Grogan-Kaylor">
-<meta property="og:description" content="Discovering Variation, Universals, and Particulars in Cross-Cultural Research">
-<meta property="og:image" content="multilevel-thinking.png">
+<meta property="og:title" content="An Updated Network Graph – Andrew Grogan-Kaylor">
+<meta property="og:description" content="">
+<meta property="og:image" content="index_files/figure-html/unnamed-chunk-5-1.png">
 <meta property="og:site_name" content="Andrew Grogan-Kaylor">
-<meta name="twitter:title" content="Multilevel Thinking – Andrew Grogan-Kaylor">
-<meta name="twitter:description" content="Discovering Variation, Universals, and Particulars in Cross-Cultural Research">
-<meta name="twitter:image" content="multilevel-thinking.png">
+<meta name="twitter:title" content="An Updated Network Graph – Andrew Grogan-Kaylor">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="index_files/figure-html/unnamed-chunk-5-1.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="citation_title" content="Multilevel Thinking">
+<meta name="citation_title" content="An Updated Network Graph">
 <meta name="citation_author" content="Andy Grogan-Kaylor">
-<meta name="citation_publication_date" content="2026-06-11">
-<meta name="citation_cover_date" content="2026-06-11">
+<meta name="citation_publication_date" content="2026-06-10">
+<meta name="citation_cover_date" content="2026-06-10">
 <meta name="citation_year" content="2026">
-<meta name="citation_online_date" content="2026-06-11">
+<meta name="citation_online_date" content="2026-06-10">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience;,citation_abstract=Adverse Childhood Experiences (ACEs) such as child abuse are related to poor health outcomes. Spanking has indicated a similar association with health outcomes, but to date has not been considered an ACE. Physical and emotional abuse have been shown in previous research to correlate highly and may be similar in nature to spanking. To determine if spanking should be considered an ACE, this study aimed to examine 1): the grouping of spanking with physical and emotional abuse; and 2) if spanking has similar associations with poor adult health problems and accounts for additional model variance. Adult mental health problems included depressive affect, suicide attempts, moderate to heavy drinking, and street drug use. Data were from the CDC-Kaiser ACE study (N = 8316, response rate = 65;,citation_author=Tracie O. Afifi;,citation_author=Derek Ford;,citation_author=Elizabeth T. Gershoff;,citation_author=Melissa Merrick;,citation_author=Andrew Grogan-Kaylor;,citation_author=Katie A. Ports;,citation_author=Harriet L. MacMillan;,citation_author=George W. Holden;,citation_author=Catherine A. Taylor;,citation_author=Shawna J. Lee;,citation_author=Robbyn Peters Bennett;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_doi=10.1016/j.chiabu.2017.01.014;,citation_isbn=0145-2134;,citation_issn=18737757;,citation_volume=71;,citation_journal_title=Child Abuse and Neglect;">
 <meta name="citation_reference" content="citation_title=Interaction terms in logit and probit models;,citation_abstract=The magnitude of the interaction effect in nonlinear models does not equal the marginal effect of the interaction term, can be of opposite sign, and its statistical significance is not calculated by standard software. We present the correct way to estimate the magnitude and standard errors of the interaction effect in nonlinear models. © 2003 Elsevier Science B.V. All rights reserved.;,citation_author=Chunrong Ai;,citation_author=Edward C. Norton;,citation_publication_date=2003;,citation_cover_date=2003;,citation_year=2003;,citation_doi=10.1016/S0165-1765(03)00032-6;,citation_issn=01651765;,citation_journal_title=Economics Letters;">
@@ -292,16 +347,11 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Multilevel Thinking</h1>
-            <p class="subtitle lead">Discovering Variation, Universals, and Particulars in Cross-Cultural Research</p>
+      <h1 class="title">An Updated Network Graph</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">stats</div>
-                <div class="quarto-category">multilevel</div>
-                <div class="quarto-category">book</div>
-                <div class="quarto-category">teaching</div>
-                <div class="quarto-category">Stata</div>
+                <div class="quarto-category">dataviz</div>
                 <div class="quarto-category">R</div>
-                <div class="quarto-category">Julia</div>
               </div>
                   </div>
   </div>
@@ -319,7 +369,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">June 11, 2026</p>
+        <p class="date">June 10, 2026</p>
       </div>
     </div>
     
@@ -330,8 +380,16 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#call-libraries" id="toc-call-libraries" class="nav-link active" data-scroll-target="#call-libraries">Call Libraries</a></li>
+  <li><a href="#simulated-data" id="toc-simulated-data" class="nav-link" data-scroll-target="#simulated-data">Simulated Data</a></li>
+  <li><a href="#network-graph" id="toc-network-graph" class="nav-link" data-scroll-target="#network-graph">Network Graph</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -340,22 +398,362 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>I’d like to share that my book, <em>Multilevel Thinking: Discovering Variation, Universals, and Particulars in Cross-Cultural Research</em> has been <a href="https://academic.oup.com/book/60530">published electronically</a> at Oxford University Press. <a href="https://www.google.com/books/edition/_/iYUI0QEACAAJ?hl=en">Electronic and print copies</a> are also available through Google Books.</p>
-<ul>
-<li>This book explains multilevel modeling building upon my 15 years of teaching this topic.</li>
-<li>I argue that multilevel modeling is a principled quantitative way of thinking about human variation, human commonality, and universals.</li>
-<li>The book contains appendices for estimating multilevel models in Stata, R, and Julia.</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
+<p>In a <a href="../what-is-related-to-what/">previous post</a>, I looked at some ways to get an idea of what <em>scales</em> and <em>demographic</em> variables in my data are related to other <em>scales</em> and <em>demographic</em> variables in my data.</p>
+<p>Among several methods, I looked at a <em>network graph</em> using <code>igraph</code> <span class="citation" data-cites="Csardi2006 Csardi2025">(<a href="#ref-Csardi2025" role="doc-biblioref">Csardi et al., 2025</a>; <a href="#ref-Csardi2006" role="doc-biblioref">Csardi &amp; Nepusz, 2006</a>)</span>. However, the network graph in my previous post was less than satisfactory because of the limited number of scales in my data.</p>
+<p>Below, I provide an example of a network graph with data with more scales.</p>
+<section id="call-libraries" class="level1">
+<h1>Call Libraries</h1>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(igraph) <span class="co"># network analysis</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co"># beautiful graphs</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggraph) <span class="co"># network graphs for ggplot</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(faux) <span class="co"># simulated data</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pander) <span class="co"># nice tables</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(skimr) <span class="co"># descriptive statistics</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section>
+<section id="simulated-data" class="level1">
+<h1>Simulated Data</h1>
+<p>I simulate some data.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">54321</span>) <span class="co"># random seed</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># simulate data</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>cmat <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">1.00</span>, <span class="fl">0.30</span>, <span class="fl">0.25</span>, <span class="fl">0.15</span>, <span class="fl">0.15</span>, <span class="fl">0.15</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>          <span class="fl">0.30</span>, <span class="fl">1.00</span>, <span class="fl">0.00</span>, <span class="fl">0.50</span>, <span class="fl">0.10</span>, <span class="fl">0.15</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>          <span class="fl">0.25</span>, <span class="fl">0.00</span>, <span class="fl">1.00</span>, <span class="fl">0.50</span>, <span class="fl">0.50</span>, <span class="fl">0.15</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>          <span class="fl">0.15</span>, <span class="fl">0.50</span>, <span class="fl">0.50</span>, <span class="fl">1.00</span>, <span class="fl">0.00</span>, <span class="fl">0.15</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>          <span class="fl">0.15</span>, <span class="fl">0.10</span>, <span class="fl">0.50</span>, <span class="fl">0.00</span>, <span class="fl">1.00</span>, <span class="fl">0.15</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>          <span class="fl">0.15</span>, <span class="fl">0.15</span>, <span class="fl">0.15</span>, <span class="fl">0.15</span>, <span class="fl">0.15</span>, <span class="fl">1.00</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>mydata <span class="ot">&lt;-</span> <span class="fu">rnorm_multi</span>(<span class="at">n =</span> <span class="dv">100</span>, </span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>                   <span class="at">mu =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">20</span>, <span class="dv">100</span>, <span class="dv">100</span>, <span class="dv">100</span>, <span class="dv">100</span>),</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>                   <span class="at">sd =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">5</span>),</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>                   <span class="at">r =</span> cmat, <span class="co"># correlation matrix</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>                   <span class="at">varnames =</span> <span class="fu">c</span>(<span class="st">"scaleA"</span>, </span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>                                <span class="st">"scaleB"</span>, </span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>                                <span class="st">"scaleC"</span>, </span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>                                <span class="st">"scaleD"</span>, </span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>                                <span class="st">"scaleE"</span>, </span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>                                <span class="st">"scaleF"</span>),</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>                   <span class="at">empirical =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Look At The Data
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pander</span>(<span class="fu">head</span>(mydata)) <span class="co"># nicely formatted table</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">scaleA</th>
+<th style="text-align: center;">scaleB</th>
+<th style="text-align: center;">scaleC</th>
+<th style="text-align: center;">scaleD</th>
+<th style="text-align: center;">scaleE</th>
+<th style="text-align: center;">scaleF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1.602</td>
+<td style="text-align: center;">23.34</td>
+<td style="text-align: center;">99.84</td>
+<td style="text-align: center;">97.63</td>
+<td style="text-align: center;">102.1</td>
+<td style="text-align: center;">101.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1.452</td>
+<td style="text-align: center;">28.85</td>
+<td style="text-align: center;">101.6</td>
+<td style="text-align: center;">99.86</td>
+<td style="text-align: center;">105.9</td>
+<td style="text-align: center;">99.57</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.5092</td>
+<td style="text-align: center;">20.43</td>
+<td style="text-align: center;">105.6</td>
+<td style="text-align: center;">101.7</td>
+<td style="text-align: center;">102.4</td>
+<td style="text-align: center;">101</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1.974</td>
+<td style="text-align: center;">21.07</td>
+<td style="text-align: center;">108.3</td>
+<td style="text-align: center;">106.9</td>
+<td style="text-align: center;">102</td>
+<td style="text-align: center;">106.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">-0.9652</td>
+<td style="text-align: center;">17.06</td>
+<td style="text-align: center;">102</td>
+<td style="text-align: center;">106.7</td>
+<td style="text-align: center;">101.5</td>
+<td style="text-align: center;">95.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.7906</td>
+<td style="text-align: center;">22.49</td>
+<td style="text-align: center;">104</td>
+<td style="text-align: center;">111.2</td>
+<td style="text-align: center;">96.67</td>
+<td style="text-align: center;">98.47</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell" data-skimr_include_summary="false">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">skim</span>(mydata) <span class="co"># descriptive statistics</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<p><strong>Variable type: numeric</strong></p>
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 11%">
+<col style="width: 15%">
+<col style="width: 7%">
+<col style="width: 5%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 6%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">skim_variable</th>
+<th style="text-align: right;">n_missing</th>
+<th style="text-align: right;">complete_rate</th>
+<th style="text-align: right;">mean</th>
+<th style="text-align: right;">sd</th>
+<th style="text-align: right;">p0</th>
+<th style="text-align: right;">p25</th>
+<th style="text-align: right;">p50</th>
+<th style="text-align: right;">p75</th>
+<th style="text-align: right;">p100</th>
+<th style="text-align: left;">hist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">scaleA</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-0.05</td>
+<td style="text-align: right;">1.09</td>
+<td style="text-align: right;">-2.65</td>
+<td style="text-align: right;">-0.80</td>
+<td style="text-align: right;">-0.08</td>
+<td style="text-align: right;">0.65</td>
+<td style="text-align: right;">2.84</td>
+<td style="text-align: left;">▂▆▇▅▁</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">scaleB</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">20.13</td>
+<td style="text-align: right;">4.70</td>
+<td style="text-align: right;">7.58</td>
+<td style="text-align: right;">16.83</td>
+<td style="text-align: right;">20.32</td>
+<td style="text-align: right;">23.44</td>
+<td style="text-align: right;">29.89</td>
+<td style="text-align: left;">▁▅▇▆▃</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">scaleC</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">100.11</td>
+<td style="text-align: right;">4.84</td>
+<td style="text-align: right;">88.04</td>
+<td style="text-align: right;">96.77</td>
+<td style="text-align: right;">100.35</td>
+<td style="text-align: right;">102.94</td>
+<td style="text-align: right;">111.84</td>
+<td style="text-align: left;">▂▃▇▃▂</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">scaleD</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">100.75</td>
+<td style="text-align: right;">4.86</td>
+<td style="text-align: right;">88.29</td>
+<td style="text-align: right;">97.52</td>
+<td style="text-align: right;">100.31</td>
+<td style="text-align: right;">103.65</td>
+<td style="text-align: right;">113.34</td>
+<td style="text-align: left;">▁▆▇▆▁</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">scaleE</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">100.14</td>
+<td style="text-align: right;">4.95</td>
+<td style="text-align: right;">82.39</td>
+<td style="text-align: right;">97.41</td>
+<td style="text-align: right;">100.81</td>
+<td style="text-align: right;">103.05</td>
+<td style="text-align: right;">112.10</td>
+<td style="text-align: left;">▁▂▅▇▁</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">scaleF</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">100.24</td>
+<td style="text-align: right;">5.77</td>
+<td style="text-align: right;">86.48</td>
+<td style="text-align: right;">95.77</td>
+<td style="text-align: right;">100.42</td>
+<td style="text-align: right;">103.80</td>
+<td style="text-align: right;">113.96</td>
+<td style="text-align: left;">▁▇▇▅▂</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="network-graph" class="level1">
+<h1>Network Graph</h1>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href=""><code>igraph</code></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href=""><code>ggraph</code></a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>cor_mat <span class="ot">&lt;-</span> <span class="fu">cor</span>(mydata, <span class="at">use =</span> <span class="st">"complete.obs"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">diag</span>(cor_mat) <span class="ot">&lt;-</span> <span class="dv">0</span> <span class="co"># set diagonal to 0</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>g <span class="ot">&lt;-</span> <span class="fu">graph_from_adjacency_matrix</span>(cor_mat, <span class="co"># make network graph</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">mode =</span> <span class="st">"undirected"</span>, </span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">weighted =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>coords <span class="ot">&lt;-</span> <span class="fu">layout_in_circle</span>(g) <span class="co"># get circular layout</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>) <span class="sc">+</span> <span class="fl">1.5</span>) <span class="co"># plot margins</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>absweight <span class="ot">&lt;-</span> <span class="fu">abs</span>(<span class="fu">E</span>(g)<span class="sc">$</span>weight) <span class="co"># absolute value of weight</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(g, </span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>     <span class="at">margin =</span> <span class="fl">0.5</span>,</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>     <span class="at">edge.width =</span> absweight <span class="sc">*</span> <span class="dv">20</span>, <span class="co"># absolute value</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>     <span class="at">vertex.size =</span> <span class="dv">15</span>,</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>     <span class="at">vertex.label.dist =</span> <span class="fl">2.5</span>,</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>     <span class="at">vertex.shape =</span> <span class="st">"circle"</span>,</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>     <span class="at">vertex.color =</span> <span class="st">"navy"</span>,</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>     <span class="at">edge.label.color =</span> <span class="st">"red"</span>,</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>     <span class="at">edge.label =</span> <span class="fu">round</span>(<span class="fu">E</span>(g)<span class="sc">$</span>weight, <span class="dv">2</span>),</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>     <span class="at">edge.label.dist =</span> <span class="dv">1</span>, </span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>     <span class="at">layout =</span> coords, <span class="co"># layout</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>     <span class="at">edge.curved =</span> <span class="dv">0</span>,</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Correlation of Scales in Our Data"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
 <figure class="figure">
-<p><a href="bookcover.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Multilevel Thinking"><img src="bookcover.jpeg" class="img-fluid figure-img" style="width:33.0%" alt="Multilevel Thinking"></a></p>
-<figcaption>Multilevel Thinking</figcaption>
+<p><a href="index_files/figure-html/unnamed-chunk-5-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="768"></a></p>
 </figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggraph</span>(g, <span class="at">layout =</span> <span class="st">'linear'</span>, <span class="at">circular =</span> <span class="cn">TRUE</span>) <span class="sc">+</span> </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_edge_arc</span>(<span class="fu">aes</span>(<span class="at">width =</span> .<span class="dv">25</span> <span class="sc">*</span> weight,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                    <span class="at">color =</span> weight,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>                    <span class="at">label =</span> <span class="fu">round</span>(weight, <span class="dv">2</span>)),</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">label_colour =</span> <span class="st">"red"</span>,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">strength =</span> .<span class="dv">1</span>,</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>                <span class="at">angle_calc =</span> <span class="st">'along'</span>) <span class="sc">+</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_node_point</span>() <span class="sc">+</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_node_label</span>(<span class="fu">aes</span>(<span class="at">label =</span> name),</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>                  <span class="at">nudge_y =</span> .<span class="dv">025</span>,</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>                  <span class="at">fill =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_edge_color_gradient</span>(<span class="at">name =</span> <span class="st">"weight"</span>,</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>                            <span class="at">low =</span> <span class="st">"lightblue"</span>,</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>                            <span class="at">high =</span> <span class="st">"darkblue"</span>) <span class="sc">+</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Network Graph of Reports"</span>) <span class="sc">+</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="index_files/figure-html/unnamed-chunk-6-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
 
 
-</main> <!-- /main -->
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-Csardi2006" class="csl-entry" role="listitem">
+Csardi, G., &amp; Nepusz, T. (2006). The igraph software package for complex network research. <em>InterJournal</em>, <em>Complex Systems</em>, 1695. <a href="https://igraph.org">https://igraph.org</a>
+</div>
+<div id="ref-Csardi2025" class="csl-entry" role="listitem">
+Csardi, G., Nepusz, T., Traag, V., Horvat, S., Zanini, F., Noom, D., &amp; Müller, K. (2025). <em><span class="nocase">igraph</span>: Network analysis and visualization in <span>R</span></em>. <a href="https://doi.org/10.5281/zenodo.7682609">https://doi.org/10.5281/zenodo.7682609</a>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

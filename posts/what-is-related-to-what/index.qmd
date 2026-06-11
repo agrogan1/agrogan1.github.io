@@ -9,7 +9,7 @@ code-summary: "Show the code"
 highlight-style: haddock
 ---
 
-In some recent projects, I have had to get a quick idea of what *scales* and *demographic* variables in my data are related to other *scales* and *demographic* variables. 
+In some recent projects, I have had to get a quick idea of what *scales* and *demographic* variables in my data are related to other *scales* and *demographic* variables in my data. 
 
 It seems to me that one of the quickest ways to do this is with the `corrgram` [@corrgram] library. I also like `pairs.panels` in the `psych` [@psych] library, and `ggpairs` in the `GGally` [@GGally] library. 
 
