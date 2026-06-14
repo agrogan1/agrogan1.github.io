@@ -2,7 +2,7 @@
 title: "An Updated Network Graph"
 author: "Andy Grogan-Kaylor" 
 date: "2026-6-10"
-categories: [stats, dataviz, R]
+categories: [stats, dataviz, R, exploring data]
 echo: true
 code-fold: true
 code-summary: "Show the code"
