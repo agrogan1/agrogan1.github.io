@@ -82,6 +82,12 @@ skim(mydata) # descriptive statistics
 #| fig-height: 6
 #| fig-width: 8
 
+grid.col = c(scaleA = "red", 
+             scaleB = "green", 
+             scaleC = "blue", 
+             scaleD = "orange", 
+             scaleE = "purple")
+
 cor_mat <- cor(mydata, use = "complete.obs") # correlation matrix
 
 diag(cor_mat) <- 0 # set diagonal to 0
@@ -89,7 +95,8 @@ diag(cor_mat) <- 0 # set diagonal to 0
 chordDiagram(cor_mat, 
              annotationTrack = c("name", "grid"), 
              big.gap = 25,
-             scale = TRUE)
+             scale = TRUE, 
+             grid.col = grid.col)
 
 ```
 
