@@ -2,8 +2,8 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/chord-diagram/index.html",
       "/posts/multilevel-thinking/index.html",
+      "/posts/chord-diagram/index.html",
       "/posts/network-graph/index.html",
       "/posts/what-is-related-to-what/index.html",
       "/posts/complexity-hidden-inside-simplicity/index.html",
