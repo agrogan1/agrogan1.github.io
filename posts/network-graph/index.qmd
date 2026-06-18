@@ -43,7 +43,7 @@ set.seed(54321) # random seed
 
 # simulate data
 
-cmat <- c(1.00, 0.30, 0.25, 0.15, 0.15, 0.15,
+cmat <- c(1.00, 0.30, 0.25, 0.15, 0.15, 0.15, # correlation matrix
           0.30, 1.00, 0.00, 0.50, 0.10, 0.15,
           0.25, 0.00, 1.00, 0.50, 0.50, 0.15,
           0.15, 0.50, 0.50, 1.00, 0.00, 0.15,
@@ -101,6 +101,8 @@ g <- graph_from_adjacency_matrix(cor_mat, # make network graph
 
 coords <- layout_in_circle(g) # get circular layout
 
+# coords <- layout.fruchterman.reingold(g) # Fruchterman-Reingold layout
+
 par(mar=c(0, 0, 1, 0) + 1.5) # plot margins
 
 absweight <- abs(E(g)$weight) # absolute value of weight
@@ -109,7 +111,7 @@ plot(g,
      margin = 0.5,
      edge.width = absweight * 20, # absolute value
      vertex.size = 15,
-     vertex.label.dist = 2.5,
+     vertex.label.dist = 3.5,
      vertex.shape = "circle",
      vertex.color = "navy",
      edge.label.color = "red",
