@@ -83,6 +83,8 @@ skim(mydata) # descriptive statistics
 
 # Network Graph
 
+I provide code for labels, but because labels sometimes overlap and are thus difficult to read, I have commented out this code in the `igraph` code. I use a *Fruchterman-Reingold* layout [@ggraph; @Csardi2006; @Csardi2025] in each case to try to highlight the connections and centrality of different graph nodes. 
+
 ::: {.panel-tabset}
 
 ## `igraph`
@@ -99,9 +101,9 @@ g <- graph_from_adjacency_matrix(cor_mat, # make network graph
                                  mode = "undirected", 
                                  weighted = TRUE)
 
-coords <- layout_in_circle(g) # get circular layout
+# coords <- layout_in_circle(g) # get circular layout
 
-# coords <- layout.fruchterman.reingold(g) # Fruchterman-Reingold layout
+coords <- layout.fruchterman.reingold(g) # Fruchterman-Reingold layout
 
 par(mar=c(0, 0, 1, 0) + 1.5) # plot margins
 
@@ -114,9 +116,9 @@ plot(g,
      vertex.label.dist = 3.5,
      vertex.shape = "circle",
      vertex.color = "navy",
-     edge.label.color = "red",
-     edge.label = round(E(g)$weight, 2),
-     edge.label.dist = 1, 
+     # edge.label.color = "red",
+     # edge.label = round(E(g)$weight, 2),
+     # edge.label.dist = 1, 
      layout = coords, # layout
      edge.curved = 0,
      main = "Correlation of Scales in Our Data")
@@ -127,17 +129,19 @@ plot(g,
 
 ```{r}
 
-ggraph(g, layout = 'linear', circular = TRUE) + 
+ggraph(g, layout = 'fr') + 
   geom_edge_link(aes(width = .25 * weight,
                     color = weight,
-                    label = round(weight, 2)),
+                    label = round(weight, 2)
+                    ),
                 label_colour = "red",
                 strength = .1,
                 angle_calc = 'along',
                 show.legend = FALSE) +
-  geom_node_point() +
-  geom_node_label(aes(label = name),
-                  nudge_y = .025,
+  geom_node_point(size = 7,
+                  color = "navy") +
+  geom_node_text(aes(label = name),
+                  nudge_y = .15,
                   fill = "white") +
   scale_edge_color_gradient(name = "weight",
                             low = "lightgrey",
