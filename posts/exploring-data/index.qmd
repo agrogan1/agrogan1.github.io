@@ -2,7 +2,7 @@
 title: "Exploring Data"
 author: "Andy Grogan-Kaylor" 
 date: "2025-9-7"
-categories: [stats, dataviz, R, exploring data]
+categories: [stats, dataviz, Stata, exploring data]
 image: "marginsplot2.png"
 ---
 
