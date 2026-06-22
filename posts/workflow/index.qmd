@@ -7,6 +7,9 @@ categories: [stats, science, teaching, workflow]
 mermaid: 
   theme: default
 image: "workflow.png"
+highlight-style: haddock
+code-fold: true
+code-summary: "Show the code"
 ---
 
 ```{r}
@@ -57,11 +60,15 @@ clean[clean the data, e.g. outliers & errors]-->wrangle
 
 wrangle[create any new variables or scales]-->descriptives
 
-descriptives[descriptive statistics]-->visualize
+descriptives[descriptive statistics including sample size]-->visualize
 
 visualize[visualize the data]-->analyze
 
-analyze[analyze with bivariate or multivariate statistics]-->share["share your results with your community(ies)"]
+analyze[analyze with bivariate or multivariate statistics]--> descriptives2
+
+descriptives2[descriptive statistics including sample size for analysis sample] --> share
+
+share["share your results with your community(ies)"]
 
 ```
 
@@ -144,11 +151,11 @@ The example below is in Stata, due to Stata's ease of readability, but could as 
 
 ```{stata, echo = TRUE}
 
-* Learning About Penguins
+// Learning About Penguins
 
-* Ask A Question
+// Ask A Question
 
-* What can I learn about penguins?
+// What can I learn about penguins?
   
 ```
 
@@ -156,7 +163,7 @@ The example below is in Stata, due to Stata's ease of readability, but could as 
 
 * Open The Raw Data
 
-use "https://github.com/agrogan1/Stata/raw/main/do-files/penguins.dta", clear 
+use "penguins.dta", clear 
 
 * Clean and Wrangle Data
 
@@ -168,7 +175,7 @@ generate big_penguin = body_mass_g > 4000 // create a big penguin variable
 
 * Descriptive Statistics
 
-use "https://github.com/agrogan1/Stata/raw/main/do-files/penguins.dta", clear
+use "penguins.dta", clear
 
 dtable culmen_length_mm culmen_depth_mm flipper_length_mm body_mass_g i.species
 
@@ -179,7 +186,7 @@ dtable culmen_length_mm culmen_depth_mm flipper_length_mm body_mass_g i.species
 
 * Visualize The Data
 
-use "https://github.com/agrogan1/Stata/raw/main/do-files/penguins.dta", clear
+use "penguins.dta", clear
 
 graph bar body_mass_g, over(species) // bar graph
 
@@ -203,7 +210,7 @@ quietly graph export "myscatterplot.png", replace
 
 * Analyze
 
-use "https://github.com/agrogan1/Stata/raw/main/do-files/penguins.dta", clear
+use "penguins.dta", clear
 
 quietly: regress culmen_length_mm body_mass_g // regress culmen length on body mass
 
