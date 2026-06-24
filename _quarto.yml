@@ -19,7 +19,7 @@ website:
             href: about-research.qmd
           - text: "Research Papers and Projects"
             href: research.qmd
-          - text: "Meta-Analysis"
+          - text: "Meta-Analysis of Corporal Punishment Studies"
             href: CP-meta.qmd
           - text: "Media Mentions of Meta-Analysis"
             href: media-mentions-CP-meta.qmd

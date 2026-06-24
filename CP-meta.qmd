@@ -39,7 +39,7 @@ ggplotly(p1, tooltip = c("fill", "label"))
 
 1. Paper: @Gershoff2016
 2. [PubMed Full Text](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7992110/)
-3. [Slides](https://agrogan1.github.io/research/cpmeta-slides/cpmeta-slides.html)
+3. [Slides](https://agrogan1.github.io/teaching/cpmeta-slides/cpmeta-slides.html)
 
 ::: {.callout-note}
 This article received a [considerable amount of media attention](media-mentions-CP-meta.qmd).
