@@ -497,7 +497,7 @@ p2 # replay
 
 ```
 
-We see that when we consider a third *dimension* of the data, motivation, that our analysis changes. People with higher levels of motivation are more likely to participate in the program, but among both people with higher levels of motivation, and people with lower levels of motivation, participation in the program is associated with [**no change**]{fg="#FF0000"} in the good outcome. 
+We see that when we consider a third *dimension* of the data, motivation, that our analysis changes. People with higher levels of motivation are more likely to participate in the program, but among both people with higher levels of motivation, and people with lower levels of motivation, participation in the program is associated with [**no difference**]{fg="#FF0000"} in the good outcome. 
 
 ::: {.callout-tip}
 #### Key Takeaway
@@ -537,7 +537,7 @@ While a full treatment of statistics is beyond the scope of this presentation, t
 
 ### An Example Equation
 
-In @fig-annotated-equation we are estimating the association of the program with the outcome, while accounting for motivation, while simultaneously estimating the association of motivation with the outcome while accounting for program participation.
+In @fig-annotated-equation we are estimating the association of the program with the outcome, while accounting for motivation, while simultaneously estimating the association of motivation with the outcome while accounting for program participation. We are also controlling for the level of the outcome at time 1.
 
 ![annotated equation](annotated-equation.png){#fig-annotated-equation}
 
