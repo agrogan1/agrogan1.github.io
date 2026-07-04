@@ -1,0 +1,22 @@
+---
+title: "Toward Childhoods Free From Violence"
+subtitle: "50 Years of Research Tells Us to End Corporal Punishment" 
+author:  Andy Grogan-Kaylor 
+date: "2026-7-3"
+categories: [multilevel, corporal punishment, positive parenting, MICS]
+image: "caregiving.png"
+draft: false
+---
+
+Slides from a talk:  "Toward Childhoods Free From Violence:  50 Years of Research Tells Us to End Corporal Punishment""
+
+[https://agrogan1.github.io/toward-childhoods-free-from-violence/](https://agrogan1.github.io/toward-childhoods-free-from-violence/)
+
+```{r}
+
+knitr::include_url("https://agrogan1.github.io/toward-childhoods-free-from-violence/")
+
+```
+
+
+
