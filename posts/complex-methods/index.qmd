@@ -1,0 +1,14 @@
+---
+title: "'We need methods suited to the complexity of the data and to the complexity of the issues we study'"
+author:  Andy Grogan-Kaylor 
+date: "2026-7-3"
+categories: [stats, science, teaching]
+image: "math-trig.png"
+draft: false
+---
+
+We've recently written a commentary for a special issue of *Child Abuse and Neglect* [@Grogan-Kaylor2026].
+
+> "With the emergence of abundant large and complex data sources that are useful for the study of child abuse and neglect, and child well-being more generally, we argue that researchers need to look for methods that help us retain the complexity of the phenomena under study, and that adequately characterize this complexity. Put another way, we researchers need to avoid deconstructing or oversimplifying complex ideas by “fitting” them to existing methods. Rather, we need to identify methods that match the complexity of the problems that we are examining."
+
+> "Quantitative methods are sometimes seen as 'positivist' methods that impose an overly simplified structure on top of a complex social world. In contrast, we argue that appropriately advanced statistical methods provide an alternative vision: one that recognizes the intricacies of the social world and develops appropriately sophisticated models that elevate this complexity while at the same time providing concrete estimable parameters that can concretely guide our understanding of the interplay of risk factors, protective factors, contextual factors, and important outcomes. In reflecting upon the utility of advanced statistical methods for studying the phenomenon of child maltreatment, we see parallels to the idea of the poet Mary Oliver's idea that one of her central tasks as a poet was to “listen to the world” [@Oliver2015]. We would argue that academic researchers, particularly quantitative researchers, should similarly see one of their core missions as “listening to the world” by adopting quantitative methods that suitably address the complexity of social problems under study. Quantitative methods may thus have the potential to distill important clinical messages, and to provide nuanced recommendations for practice and policy."
