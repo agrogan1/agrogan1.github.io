@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Andy Grogan-Kaylor">
-<meta name="dcterms.date" content="2026-06-01">
+<meta name="dcterms.date" content="2026-07-01">
 
 <title>A Very Short Introduction to Stata – Andrew Grogan-Kaylor</title>
 <style>
@@ -86,12 +86,12 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:card" content="summary_large_image">
 <meta name="citation_title" content="A *Very* Short Introduction to Stata">
 <meta name="citation_author" content="Andy Grogan-Kaylor">
-<meta name="citation_publication_date" content="2026-06-01">
-<meta name="citation_cover_date" content="2026-06-01">
+<meta name="citation_publication_date" content="2026-07-01">
+<meta name="citation_cover_date" content="2026-07-01">
 <meta name="citation_year" content="2026">
-<meta name="citation_online_date" content="2026-06-01">
+<meta name="citation_online_date" content="2026-07-01">
 <meta name="citation_language" content="en">
-<meta name="citation_reference" content="citation_title=We need methods suited to the complexity of the data and to the complexity of the issues we study;,citation_author=Andrew Grogan-Kaylor;,citation_author=Lijian Zhao;,citation_author=Nehal Eldeeb;,citation_author=Tania Ramos-García;,citation_author=Todd Herrenkohl;,citation_publication_date=2026;,citation_cover_date=2026;,citation_year=2026;,citation_fulltext_html_url=https://www.sciencedirect.com/science/article/pii/S0145213426003054;,citation_doi=https://doi.org/10.1016/j.chiabu.2026.108185;,citation_issn=0145-2134;,citation_volume=179;,citation_journal_title=Child Abuse &amp;amp;amp; Neglect;">
+<meta name="citation_reference" content="citation_title=We need methods suited to the complexity of the data and to the complexity of the issues we study;,citation_author=Andrew Grogan-Kaylor;,citation_author=Lijian Zhao;,citation_author=Nehal Eldeeb;,citation_author=Tania Ramos-García;,citation_author=Todd Herrenkohl;,citation_publication_date=2026;,citation_cover_date=2026;,citation_year=2026;,citation_doi=10.1016/j.chiabu.2026.108185;,citation_issn=0145-2134;,citation_volume=179;,citation_journal_title=Child Abuse &amp;amp;amp; Neglect;">
 <meta name="citation_reference" content="citation_title=Mary Oliver: “I got saved by the beauty of the world.”;,citation_author=Mary Oliver;,citation_author=Krista Tippett;,citation_publication_date=2015;,citation_cover_date=2015;,citation_year=2015;,citation_fulltext_html_url=https://onbeing.org/programs/mary-oliver-i-got-saved-by-the-beauty-of-the-world/;,citation_publisher=The On Being Project;">
 <meta name="citation_reference" content="citation_title=Ggraph: An implementation of grammar of graphics for graphs and networks;,citation_author=Thomas Lin Pedersen;,citation_publication_date=2025;,citation_cover_date=2025;,citation_year=2025;,citation_fulltext_html_url=https://CRAN.R-project.org/package=ggraph;,citation_doi=10.32614/CRAN.package.ggraph;">
 <meta name="citation_reference" content="citation_title=Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience;,citation_abstract=Adverse Childhood Experiences (ACEs) such as child abuse are related to poor health outcomes. Spanking has indicated a similar association with health outcomes, but to date has not been considered an ACE. Physical and emotional abuse have been shown in previous research to correlate highly and may be similar in nature to spanking. To determine if spanking should be considered an ACE, this study aimed to examine 1): the grouping of spanking with physical and emotional abuse; and 2) if spanking has similar associations with poor adult health problems and accounts for additional model variance. Adult mental health problems included depressive affect, suicide attempts, moderate to heavy drinking, and street drug use. Data were from the CDC-Kaiser ACE study (N = 8316, response rate = 65;,citation_author=Tracie O. Afifi;,citation_author=Derek Ford;,citation_author=Elizabeth T. Gershoff;,citation_author=Melissa Merrick;,citation_author=Andrew Grogan-Kaylor;,citation_author=Katie A. Ports;,citation_author=Harriet L. MacMillan;,citation_author=George W. Holden;,citation_author=Catherine A. Taylor;,citation_author=Shawna J. Lee;,citation_author=Robbyn Peters Bennett;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_doi=10.1016/j.chiabu.2017.01.014;,citation_isbn=0145-2134;,citation_issn=18737757;,citation_volume=71;,citation_journal_title=Child Abuse and Neglect;">
@@ -315,7 +315,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">June 1, 2026</p>
+        <p class="date">July 1, 2026</p>
       </div>
     </div>
     
@@ -374,87 +374,99 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>Describe the data</td>
-<td><code>describe x</code> <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></td>
+<td><code>describe x y z</code> <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></td>
 </tr>
 <tr class="even">
+<td>Codebook of variables</td>
+<td><code>codebook x y z</code></td>
+</tr>
+<tr class="odd">
 <td>Descriptive statistics</td>
 <td><code>summarize x y</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Frequencies</td>
 <td><code>tabulate x</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Cross-Tabulation.</td>
 <td><code>tabulate x y</code> <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Cronbach’s alpha</td>
 <td><code>alpha x y z</code> <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Recode</td>
 <td><code>recode x (old = new)(...), generate(xR)</code><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Rename</td>
 <td><code>rename x z</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Keep</td>
 <td><code>keep x y z</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Drop</td>
 <td><code>drop x y z</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Correlation</td>
 <td><code>corr x y</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Regression</td>
 <td><code>regress y x z</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Logistic Regression</td>
 <td><code>logit y x z, or</code> <a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Ordinal Logistic Regression</td>
 <td><code>ologit y x z, or</code> <a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Multinomial Logistic Regression</td>
 <td><code>mlogit y x z, rr</code> <a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Multilevel Model</td>
 <td><code>mixed y x z || group: x</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Structural Equation Modeling</td>
 <td><code>sem (y &lt;- x m z) (m &lt;- x z)</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Histogram</td>
 <td><code>histogram x</code> <a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Bar Graph (of categories)</td>
 <td><code>graph bar, over(x)</code> <a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Bar Graph (of means over categories)</td>
 <td><code>graph bar y, over(x)</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Pie Chart</td>
 <td><code>graph pie, over(x)</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Scatterplot</td>
 <td><code>twoway scatter y x</code></td>
+</tr>
+<tr class="odd">
+<td>Linear Fit</td>
+<td><code>twoway lfit y x</code></td>
+</tr>
+<tr class="even">
+<td>Scatterplot and Linear Fit</td>
+<td><code>twoway (scatter y x) (lfit y x)</code></td>
 </tr>
 </tbody>
 </table>
