@@ -447,10 +447,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> region.dta, <span class="kw">clear</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> region.dta, <span class="kw">clear</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>     |    region    z |
@@ -548,7 +547,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span> <span class="kw">in</span> 1/3</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>     |       name   id   age      region     x        _merge |
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/merging-data-with-Stata/prof
+
+&gt; ile.do ...
+
+     +-------------------------------------------------------+
+     |       name   id   age      region     x        _merge |
      |-------------------------------------------------------|
   1. | A. Cesaire    1    40   Caribbean    90   Matched (3) |
   2. | K. Nkrumah    2    50      Africa   100   Matched (3) |
@@ -574,7 +578,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span> <span class="kw">in</span> 1/2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>     |       name   id   age      region |
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/merging-data-with-Stata/prof
+
+&gt; ile.do ...
+
+     +-----------------------------------+
+     |       name   id   age      region |
      |-----------------------------------|
   1. | A. Cesaire    1    40   Caribbean |
   2. | K. Nkrumah    2    50      Africa |
@@ -600,7 +609,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="kw">merge</span> <span class="fu">m</span>:1 region <span class="kw">using</span> region.dta</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>    Result                      Number of obs
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/merging-data-with-Stata/prof
+
+&gt; ile.do ...
+
+    Result                      Number of obs
     -----------------------------------------
     Not matched                             0
     Matched                                 3  (_merge==3)
@@ -615,7 +628,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span> <span class="kw">in</span> 1/3</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>     |       name   id   age      region    z        _merge |
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/merging-data-with-Stata/prof
+
+&gt; ile.do ...
+
+     +------------------------------------------------------+
+     |       name   id   age      region    z        _merge |
      |------------------------------------------------------|
   1. | L. Senghor    3    60      Africa   60   Matched (3) |
   2. | K. Nkrumah    2    50      Africa   60   Matched (3) |

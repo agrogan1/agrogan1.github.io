@@ -38,8 +38,8 @@ library(haven)
 ```
 
 ```{stata}
-#| output: false
-#| echo: false
+*| output: false
+*| echo: false
 
 clear 
 
@@ -98,7 +98,6 @@ list
 
 ```{stata}
 
-  
 use region.dta, clear
 
 list

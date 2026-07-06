@@ -26,7 +26,7 @@ I make use of the `///` notation which allows me to spread the graph along multi
 # Get The Data
 
 ```{stata, collectcode=TRUE}
-#| output: false
+*| output: false
 
 use "https://github.com/agrogan1/multilevel/raw/master/fixed-effects-example-World-Bank-data/WorldBankData.dta", clear
 
@@ -35,7 +35,7 @@ use "https://github.com/agrogan1/multilevel/raw/master/fixed-effects-example-Wor
 # Data Management
 
 ```{stata, collectcode=TRUE}
-#| output: false
+*| output: false
 
 drop if region == "Aggregates" // drop Aggregates
 
@@ -44,7 +44,7 @@ drop if region == "Aggregates" // drop Aggregates
 # Graph
 
 ```{stata, collectcode=TRUE}
-#| output: false
+*| output: false
 
 
 twoway (scatter GDP year, mcolor(%10)) /// scatterplot; transparent markers

@@ -26,8 +26,8 @@ library(Statamarkdown)
 # Get The Data
 
 ```{stata, collectcode=TRUE}
-#| echo: true
-#| output: false
+*| echo: true
+*| output: false
 
 use simulated_multilevel_data.dta, clear
 
@@ -36,8 +36,8 @@ use simulated_multilevel_data.dta, clear
 # `describe` The Data
 
 ```{stata}
-#| echo: true
-#| output: true
+*| echo: true
+*| output: true
 
 describe
 
@@ -48,8 +48,8 @@ describe
 Because these data are clustered by country, I use the `mixed` command to get accurate standard errors and p values. 
 
 ```{stata, collectcode=TRUE}
-#| echo: true
-#| eval: false
+*| echo: true
+*| eval: false
 
 mixed outcome warmth physical_punishment i.intervention i.identity || country: 
   
@@ -59,8 +59,8 @@ mixed outcome warmth physical_punishment i.intervention i.identity || country:
 ## Show The Results
 
 ```{stata, collectcode=TRUE}
-#| echo: false
-#| eval: true
+*| echo: false
+*| eval: true
 
 mixed outcome warmth physical_punishment i.intervention i.identity || country: 
   
@@ -70,8 +70,8 @@ mixed outcome warmth physical_punishment i.intervention i.identity || country:
 Were the data not clustered, I could have just as easily used `regress`.
 
 ```{stata}
-#| echo: true
-#| eval: false
+*| echo: true
+*| eval: false
 
 regress outcome warmth physical_punishment i.intervention i.identity
   
@@ -98,7 +98,7 @@ Again, we are essentially using slightly complicated syntax to get simple result
 :::
 
 ```{stata, collectcode=TRUE}
-#| echo: true
+*| echo: true
 
 margins, dydx(*)
 
@@ -109,8 +109,8 @@ margins, dydx(*)
 First I use `marginsplot` with no options to visualize the marginal effects. This produces a pretty non-intuitive graph.
 
 ```{stata}
-#| echo: true
-#| output: false
+*| echo: true
+*| output: false
 
 marginsplot
 
@@ -125,8 +125,8 @@ graph export "marginsplot1.png", replace
 I add some options to clarify the graph. I `recast` the graph as a `scatter`plot. I flip the graph to be `horizontal`. I also add a reference line at $x = 0$ to make more clear which coefficients are significant, and which coefficients are not significant. 
 
 ```{stata}
-#| echo: true
-#| output: false
+*| echo: true
+*| output: false
 
 marginsplot, ///
 recast(scatter) /// recast as scatterplot

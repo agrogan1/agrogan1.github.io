@@ -64,10 +64,10 @@ In my teaching, I often emphasize the importance of thinking in code, whether th
 `.do` files are Stata's way of storing code. I've provided an example `.do` file below.
 
 ```{stata}
-#| eval: false
-#| echo: true
-#| code-fold: false
-#| code-summary: "Show the do file"
+*| eval: false
+*| echo: true
+*| code-fold: false
+*| code-summary: "Show the do file"
 
 ******************************
 * Penguin Analysis

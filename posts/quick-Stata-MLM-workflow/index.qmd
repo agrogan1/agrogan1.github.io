@@ -77,7 +77,7 @@ write_dta(mydata, "mydata.dta")
 ```
 
 ```{stata}
-#| output: false
+*| output: false
 
 use mydata.dta
 

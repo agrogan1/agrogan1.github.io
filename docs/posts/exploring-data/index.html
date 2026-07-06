@@ -417,7 +417,7 @@ window.Quarto = {
 
 
 <p>In <a href="../pairs-plots">another post</a>, I mentioned that for a few recent projects, I have had to quickly get up to speed on new data. In that other post, I focused on the idea of using a <em>pairs plot</em> in R.</p>
-<p>In this post, I want to focus on a similar idea. But instead of a <em>pairs plot</em>, I focus on using a <em>regression model</em> with a number of risk and protective factors predicting an outcome. Here I use Stata instead of R, and use Stata’s powerful <code>margins</code> and <code>marginsplot</code> command to get a visual idea of the way that these different risk and protective factors are associated with the outcome.</p>
+<p>In this post, I want to focus on a similar idea. But instead of a <em>pairs plot</em>, I focus on using a <em>regression model</em> with a number of risk and protective factors predicting an outcome. Here I use Stata instead of R, and use Stata’s powerful <code>margins</code> and <code>marginsplot</code> commands to get a visual idea of the way that these different risk and protective factors are associated with the outcome.</p>
 <p>Using <code>margins</code> means that I’m going to use some complicated looking syntax to get some results that are actually pretty straightforward.</p>
 <p>For this example, I use the data from my <a href="https://agrogan1.github.io/multilevel-workshop/">Multilevel Workshop</a> site.</p>
 <section id="get-the-data" class="level1">
@@ -431,19 +431,19 @@ window.Quarto = {
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">describe</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/exploring-data/profile
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/exploring-data/profile.do ..
 
-&gt; .do ...
+&gt; .
 
 
 
 Contains data from simulated_multilevel_data.dta
  Observations:         3,000                  
     Variables:             9                  15 May 2024 14:54
--------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
--------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
 country         float   %9.0g                 country id
 HDI             float   %9.0g                 Human Development Index
 family          float   %9.0g                 family id
@@ -453,7 +453,7 @@ intervention    float   %9.0g                 recieved intervention
 physical_puni~t float   %9.0g                 physical punishment in past week
 warmth          float   %9.0g                 parental warmth in past week
 outcome         float   %9.0g                 beneficial outcome
--------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
 Sorted by: country  family</code></pre>
 </div>
 </div>
@@ -479,9 +479,9 @@ Sorted by: country  family</code></pre>
 <div class="callout-body-container callout-body">
 <div class="cell" data-collectcode="true">
 <div class="cell-output cell-output-stdout">
-<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/exploring-data/profile
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/exploring-data/profile.do ..
 
-&gt; .do ...
+&gt; .
 
 
 
@@ -502,15 +502,15 @@ Group variable: country                              Number of groups =     30
                                                      Wald chi2(4)     = 373.21
 Log likelihood = -9627.1393                          Prob &gt; chi2      = 0.0000
 
-------------------------------------------------------------------------------------
-           outcome | Coefficient  Std. err.      z    P&gt;|z|     [95% conf. interval]
--------------------+----------------------------------------------------------------
-            warmth |   .8342119   .0574661    14.52   0.000     .7215805    .9468434
-physical_punishm~t |  -.9934352   .0798217   -12.45   0.000    -1.149883   -.8369874
-    1.intervention |   .6462874   .2175097     2.97   0.003     .2199762    1.072598
-        1.identity |  -.3104984   .2170594    -1.43   0.153    -.7359271    .1149302
-             _cons |   51.79936   .4777788   108.42   0.000     50.86293    52.73579
-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+            outcome | Coefficient  Std. err.      z    P&gt;|z|     [95% conf. interval]
+--------------------+----------------------------------------------------------------
+             warmth |   .8342119   .0574661    14.52   0.000     .7215805    .9468434
+physical_punishment |  -.9934352   .0798217   -12.45   0.000    -1.149883   -.8369874
+     1.intervention |   .6462874   .2175097     2.97   0.003     .2199762    1.072598
+         1.identity |  -.3104984   .2170594    -1.43   0.153    -.7359271    .1149302
+              _cons |   51.79936   .4777788   108.42   0.000     50.86293    52.73579
+-------------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------------
   Random-effects parameters  |   Estimate   Std. err.     [95% conf. interval]
@@ -547,7 +547,7 @@ LR test vs. linear model: chibar2(01) = 204.68        Prob &gt;= chibar2 = 0.000
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p>We want to “let <code>margins</code> know about the regression coefficients”.</p>
+<p>We want to “let <code>margins</code>”know” about the regression coefficients”.</p>
 <p>As we will see below, letting <code>margins</code> calculate the regression coefficients lets us graph the results using <code>marginsplot</code>.</p>
 </div>
 </div>
@@ -572,9 +572,9 @@ LR test vs. linear model: chibar2(01) = 204.68        Prob &gt;= chibar2 = 0.000
 <div class="cell" data-collectcode="true">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>margins, <span class="kw">dydx</span>(*)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/exploring-data/profile
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/exploring-data/profile.do ..
 
-&gt; .do ...
+&gt; .
 
 
 
@@ -583,15 +583,15 @@ Average marginal effects                                 Number of obs = 3,000
 Expression: Linear prediction, fixed portion, predict()
 dy/dx wrt:  warmth physical_punishment 1.intervention 1.identity
 
-------------------------------------------------------------------------------------
-                   |            Delta-method
-                   |      dy/dx   std. err.      z    P&gt;|z|     [95% conf. interval]
--------------------+----------------------------------------------------------------
-            warmth |   .8342119   .0574661    14.52   0.000     .7215805    .9468434
-physical_punishm~t |  -.9934352   .0798217   -12.45   0.000    -1.149883   -.8369874
-    1.intervention |   .6462874   .2175097     2.97   0.003     .2199762    1.072598
-        1.identity |  -.3104984   .2170594    -1.43   0.153    -.7359271    .1149302
-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+                    |            Delta-method
+                    |      dy/dx   std. err.      z    P&gt;|z|     [95% conf. interval]
+--------------------+----------------------------------------------------------------
+             warmth |   .8342119   .0574661    14.52   0.000     .7215805    .9468434
+physical_punishment |  -.9934352   .0798217   -12.45   0.000    -1.149883   -.8369874
+     1.intervention |   .6462874   .2175097     2.97   0.003     .2199762    1.072598
+         1.identity |  -.3104984   .2170594    -1.43   0.153    -.7359271    .1149302
+-------------------------------------------------------------------------------------
 Note: dy/dx for factor levels is the discrete change from the base level.</code></pre>
 </div>
 </div>

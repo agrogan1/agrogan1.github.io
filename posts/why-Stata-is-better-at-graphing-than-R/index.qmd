@@ -25,7 +25,7 @@ library(Statamarkdown)
 # Stata
 
 ```{stata, collectcode=TRUE}
-#| output: false
+*| output: false
 
 import delimited "clients.csv", clear // import data
 	
@@ -36,8 +36,8 @@ asyvars // bars that have color
 ```
 
 ```{stata}
-#| output: false
-#| echo: false
+*| output: false
+*| echo: false
 
 quietly graph export mybarStata.png, width(2000) replace
 

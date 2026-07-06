@@ -1,0 +1,19 @@
+{
+  "hash": "221f4b850c526446fc2e82e5b070e2db",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Cleaning Data\"\nsubtitle: \"Resources for Stata and R\"\nauthor:  Andy Grogan-Kaylor \ndate: \"2023-12-14\"\ncategories: [stats, workflow, R, Stata]\nimage: \"data.png\"\n---\n\nI have developed a few resources for cleaning data and decided to list them all in one place. \n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"datatables html-widget html-fill-item\" id=\"htmlwidget-1b712b09be6248241998\" style=\"width:100%;height:auto;\"></div>\n<script type=\"application/json\" data-for=\"htmlwidget-1b712b09be6248241998\">{\"x\":{\"filter\":\"none\",\"vertical\":false,\"data\":[[\"1\",\"2\",\"3\"],[\"<a href =https://agrogan1.github.io/Stata/cleaning-data-with-stata/cleaning-data-with-stata.html>Cleaning Data With Stata<\\/a>\",\"<a href =https://agrogan1.github.io/teaching/quantitative-data-analysis/quantitative-data-analysis.html#cleaning-data>Cleaning Data Section in 'Quantitative Data Analysis'<\\/a>\",\"<a href =https://globalfamilies.quarto.pub/global-families-project/quantitative-data-analysis.html#cleaning-data>Global Families Project on Cleaning Data<\\/a>\"],[\"yes\",\"yes\",\"no\"],[\"no\",\"yes\",\"yes\"]],\"container\":\"<table class=\\\"display\\\">\\n  <thead>\\n    <tr>\\n      <th> <\\/th>\\n      <th>resource<\\/th>\\n      <th>Stata<\\/th>\\n      <th>R<\\/th>\\n    <\\/tr>\\n  <\\/thead>\\n<\\/table>\",\"options\":{\"columnDefs\":[{\"orderable\":false,\"targets\":0},{\"name\":\" \",\"targets\":0},{\"name\":\"resource\",\"targets\":1},{\"name\":\"Stata\",\"targets\":2},{\"name\":\"R\",\"targets\":3}],\"order\":[],\"autoWidth\":false,\"orderClasses\":false}},\"evals\":[],\"jsHooks\":[]}</script>\n```\n\n:::\n:::\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<link href=\"../../site_libs/htmltools-fill-0.5.9/fill.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js\"></script>\n<link href=\"../../site_libs/datatables-css-0.0.0/datatables-crosstalk.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/datatables-binding-0.34.0/datatables.js\"></script>\n<script src=\"../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js\"></script>\n<link href=\"../../site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css\" rel=\"stylesheet\" />\n<link href=\"../../site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js\"></script>\n<link href=\"../../site_libs/crosstalk-1.2.2/css/crosstalk.min.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/crosstalk-1.2.2/js/crosstalk.min.js\"></script>\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

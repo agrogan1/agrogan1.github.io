@@ -69,7 +69,7 @@ The documentation goes on to further note that:
 > "The data are measures from 107 trees. The trees were selected as being of average size from healthy and well stocked stands in the Alps."
 
 ```{stata, collectcode=TRUE}
-#| echo: true
+*| echo: true
 
 use "gutten.dta", clear
 
@@ -100,8 +100,8 @@ use "gutten.dta", clear
 ## One Continuous Thing At A Time (`histogram x`)
 
 ```{stata}
-#| output: false
-#| echo: true
+*| output: false
+*| echo: true
 
 histogram height, title("Tree Height")
 	
@@ -114,8 +114,8 @@ graph export myhistogram.png, width(2000) replace
 ## One Categorical Thing At A Time (`graph bar, over(x)`)
 
 ```{stata}
-#| output: false
-#| echo: true
+*| output: false
+*| echo: true
 
 graph bar, over(location) title("Tree Location")
 	
@@ -132,8 +132,8 @@ graph export mybargraph.png, width(2000) replace
 The `asyvars` option is especially helpful with bar graphs to create bar graphs with different color bars.
 
 ```{stata}
-#| output: false
-#| echo: true
+*| output: false
+*| echo: true
 
 graph bar, over(location) title("Tree Location") asyvars
 	
@@ -147,8 +147,8 @@ graph export mybargraph_asyvars.png, width(2000) replace
 ## Continuous by Continuous (`twoway scatter y x`)
 
 ```{stata}
-#| output: false
-#| echo: true
+*| output: false
+*| echo: true
 
 twoway scatter height age_base, title("Tree Height by Age")
 	
@@ -164,8 +164,8 @@ graph export myscatter.png, width(2000) replace
 
 
 ```{stata}
-#| output: false
-#| echo: true
+*| output: false
+*| echo: true
 
 graph bar, over(site) over(location) title("Tree Site Growth Quality by Location")
 	
@@ -181,8 +181,8 @@ graph export mybargraph2.png, width(2000) replace
 [^asyvars1]: You can also use `asyvars` here.
 
 ```{stata}
-#| output: false
-#| echo: true
+*| output: false
+*| echo: true
 
 graph bar height, over(location) title("Tree Height by Location")
 	
@@ -201,8 +201,8 @@ I have written a [Stata Michigan graph scheme](https://agrogan1.github.io/posts/
 ## Continuous by Continuous (`twoway scatter y x, scheme(...)`)
 
 ```{stata}
-#| output: false
-#| echo: true
+*| output: false
+*| echo: true
 
 twoway scatter height age_base, title("Tree Height by Age") scheme(michigan)
 	
@@ -212,8 +212,8 @@ graph export myscatterM.png, width(2000) replace
 
 ![Scatterplot Of Tree Height By Age With `michigan` Graph Scheme](myscatterM.png){width=50%}
 ```{stata}
-#| output: false
-#| echo: true
+*| output: false
+*| echo: true
 
 twoway scatter height age_base, title("Tree Height by Age") scheme(s1rcolor) msymbol(o)
 
@@ -224,8 +224,8 @@ graph export myscatterS1R.png, width(2000) replace
 ![Scatterplot Of Tree Height By Age With `s1rcolor` Graph Scheme](myscatterS1R.png){width=50%}
 
 ```{stata}
-#| output: false
-#| echo: true
+*| output: false
+*| echo: true
 
 twoway scatter height age_base, title("Tree Height by Age") scheme(s1color)
 
@@ -238,8 +238,8 @@ graph export myscatterS.png, width(2000) replace
 ## Continuous by Categorical (`graph bar y, over(x) scheme(...)`)[^asyvars1]
 
 ```{stata}
-#| output: false
-#| echo: true
+*| output: false
+*| echo: true
 
 graph bar height, over(location) asyvars title("Tree Height by Location") scheme(michigan)
 	
@@ -249,8 +249,8 @@ graph export mybarM.png, width(2000) replace
 
 ![Bar Graph Of Mean Tree Height By Location With `michigan` Graph Scheme](mybarM.png){width=50%}
 ```{stata}
-#| output: false
-#| echo: true
+*| output: false
+*| echo: true
 
 graph bar height, over(location) asyvars title("Tree Height by Location") scheme(s1rcolor)
 	
@@ -260,8 +260,8 @@ graph export mybarS1R.png, width(2000) replace
 
 ![Bar Graph Of Mean Tree Height By Location With `s1rcolor` Graph Scheme](mybarS1R.png){width=50%}
 ```{stata}
-#| output: false
-#| echo: true
+*| output: false
+*| echo: true
 
 graph bar height, over(location) asyvars title("Tree Height by Location") scheme(s1color)
 	

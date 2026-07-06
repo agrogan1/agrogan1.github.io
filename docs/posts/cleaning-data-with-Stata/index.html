@@ -432,7 +432,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span> <span class="kw">in</span> 1/10 <span class="co">// list first 10 observations</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>     | id        age   happy   somethi~e |
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/cleaning-data-with-Stata/pro
+
+&gt; file.do ...
+
+     +-----------------------------------+
+     | id        age   happy   somethi~e |
      |-----------------------------------|
   1. |  1        200       1      .06784 |
   2. |  2   60.42631       3    1.459888 |
@@ -469,18 +474,24 @@ Tip
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">describe</span> <span class="co">// describe the data</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Contains data
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/cleaning-data-with-Stata/pro
+
+&gt; file.do ...
+
+
+
+Contains data
  Observations:           100                  
     Variables:             4                  
--------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
--------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
 id              float   %9.0g                 
 age             float   %9.0g                 
 happy           float   %9.0g                 
 somethingelse   float   %9.0g                 
--------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
 Sorted by: 
      Note: Dataset has changed since last saved.</code></pre>
 </div>
@@ -489,7 +500,11 @@ Sorted by:
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">summarize</span> <span class="co">// descriptive statistics</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>    Variable |        Obs        Mean    Std. dev.       Min        Max
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/cleaning-data-with-Stata/pro
+
+&gt; file.do ...
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
 -------------+---------------------------------------------------------
           id |        100        50.5    29.01149          1        100
          age |        100    49.85175    17.83505   24.33709        200
@@ -500,7 +515,11 @@ somethinge~e |        100   -.0085413    1.072256  -2.685881   2.794861</code></
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">tabulate</span> happy <span class="co">// tabulation of this particular categorical variable</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>      happy |      Freq.     Percent        Cum.
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/cleaning-data-with-Stata/pro
+
+&gt; file.do ...
+
+      happy |      Freq.     Percent        Cum.
 ------------+-----------------------------------
           1 |         21       21.00       21.00
           2 |         19       19.00       40.00
@@ -515,8 +534,15 @@ somethinge~e |        100   -.0085413    1.072256  -2.685881   2.794861</code></
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">codebook</span> happy <span class="co">// VERY detailed view of this particular categorical variable</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>happy                                                               (unlabeled)
--------------------------------------------------------------------------------
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/cleaning-data-with-Stata/pro
+
+&gt; file.do ...
+
+
+
+-------------------------------------------------------------------------------------------
+happy                                                                           (unlabeled)
+-------------------------------------------------------------------------------------------
 
                   Type: Numeric (float)
 
@@ -562,40 +588,65 @@ Tip
 <p>For this particular analysis we may wish to drop the variable called <code>somethingelse</code>.</p>
 <div class="cell" data-collectcode="true">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">keep</span> id age happy <span class="co">// keep only relevant variables</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/cleaning-data-with-Stata/pro
+
+&gt; file.do ...</code></pre>
+</div>
 </div>
 <p>We could also have said <code>drop somethingelse</code>.</p>
 </section>
 <section id="add-variable-labels-label-variable-..." class="level2">
 <h2 class="anchored" data-anchor-id="add-variable-labels-label-variable-...">Add <em>Variable</em> Labels (<code>label variable "..."</code>)</h2>
 <div class="cell" data-collectcode="true">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">label</span> <span class="kw">variable</span> id <span class="st">"ID"</span> <span class="co">// label variable</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="kw">label</span> <span class="kw">variable</span> age <span class="st">"Age in Years"</span> <span class="co">// label variable</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="kw">label</span> <span class="kw">variable</span> happy <span class="st">"Happiness Scale"</span> <span class="co">// label variable</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">label</span> <span class="kw">variable</span> id <span class="st">"ID"</span> <span class="co">// label variable</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="kw">label</span> <span class="kw">variable</span> age <span class="st">"Age in Years"</span> <span class="co">// label variable</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="kw">label</span> <span class="kw">variable</span> happy <span class="st">"Happiness Scale"</span> <span class="co">// label variable</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/cleaning-data-with-Stata/pro
+
+&gt; file.do ...</code></pre>
+</div>
 </div>
 </section>
 <section id="create-value-labels-label-define-..." class="level2">
 <h2 class="anchored" data-anchor-id="create-value-labels-label-define-...">Create <em>Value</em> Labels (<code>label define ...</code>)</h2>
 <div class="cell" data-collectcode="true">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">label</span> <span class="kw">define</span> happy 1 <span class="st">"Rarely"</span> 2 <span class="st">"Sometimes"</span> 3 <span class="st">"Often"</span> 4 <span class="st">"Always"</span> <span class="co">// create value label</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">label</span> <span class="kw">define</span> happy 1 <span class="st">"Rarely"</span> 2 <span class="st">"Sometimes"</span> 3 <span class="st">"Often"</span> 4 <span class="st">"Always"</span> <span class="co">// create value label</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/cleaning-data-with-Stata/pro
+
+&gt; file.do ...</code></pre>
+</div>
 </div>
 </section>
 <section id="attach-value-labels-to-variables-label-values-..." class="level2">
 <h2 class="anchored" data-anchor-id="attach-value-labels-to-variables-label-values-...">Attach <em>Value</em> Labels To <em>Variables</em> (<code>label values ...</code>)</h2>
 <p><em>Variables</em> and <em>value labels</em> can have the same names but are different things. We add the variable label <code>happy</code> to the variable named <code>happy</code>.</p>
 <div class="cell" data-collectcode="true">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">label</span> <span class="kw">values</span> happy happy <span class="co">// attach VALUE LABEL happy to VARIABLE happy</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">label</span> <span class="kw">values</span> happy happy <span class="co">// attach VALUE LABEL happy to VARIABLE happy</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/cleaning-data-with-Stata/pro
+
+&gt; file.do ...</code></pre>
+</div>
 </div>
 </section>
 <section id="recode-outliers-values-that-are-errors-or-values-that-should-be-coded-as-missing-recode" class="level2">
 <h2 class="anchored" data-anchor-id="recode-outliers-values-that-are-errors-or-values-that-should-be-coded-as-missing-recode">Recode Outliers, Values That Are Errors, Or Values That Should Be Coded As Missing (<code>recode</code>)</h2>
 <div class="cell" data-collectcode="true">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">recode</span> happy (999 = .) <span class="co">// recode values as missing</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="kw">recode</span> age (100/<span class="fu">max</span> = 100) <span class="co">// age is topcoded at 100 (may or may not be plausible)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">recode</span> happy (999 = .) <span class="co">// recode values as missing</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="kw">recode</span> age (100/<span class="fu">max</span> = 100) <span class="co">// age is topcoded at 100 (may or may not be plausible)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>(1 changes made to happy)
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/cleaning-data-with-Stata/pro
+
+&gt; file.do ...
+
+
+(1 changes made to happy)
 
 (1 changes made to age)</code></pre>
 </div>
@@ -605,28 +656,38 @@ Tip
 <section id="we-describe-and-summarize-the-data-and-see-the-changes-that-have-been-made" class="level1">
 <h1>We <code>describe</code> and <code>summarize</code> The Data And See The Changes That Have Been Made</h1>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">describe</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">describe</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Contains data
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/cleaning-data-with-Stata/pro
+
+&gt; file.do ...
+
+
+
+Contains data
  Observations:           100                  
     Variables:             3                  
--------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
--------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
 id              float   %9.0g                 ID
 age             float   %9.0g                 Age in Years
 happy           float   %9.0g      happy      Happiness Scale
--------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
 Sorted by: 
      Note: Dataset has changed since last saved.</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">summarize</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="kw">summarize</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>    Variable |        Obs        Mean    Std. dev.       Min        Max
+<pre><code>Running /Users/agrogan/Desktop/GitHub/agrogan1.github.io/posts/cleaning-data-with-Stata/pro
+
+&gt; file.do ...
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
 -------------+---------------------------------------------------------
           id |        100        50.5    29.01149          1        100
          age |        100    48.85175    10.71257   24.33709        100

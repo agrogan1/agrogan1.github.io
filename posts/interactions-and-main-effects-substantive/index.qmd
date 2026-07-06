@@ -16,7 +16,7 @@ library(Statamarkdown)
 ```
 
 ```{stata}
-#| output: false
+*| output: false
 
 * main effects and interactions
 

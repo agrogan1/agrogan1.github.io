@@ -536,13 +536,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mydata)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>       ID            age          gender            program         
- Min.   :1320   Min.   :20.0   Length:4           Length:4          
- 1st Qu.:2050   1st Qu.:21.5   Class :character   Class :character  
- Median :2519   Median :25.0   Mode  :character   Mode  :character  
- Mean   :2325   Mean   :25.5                                        
- 3rd Qu.:2794   3rd Qu.:29.0                                        
- Max.   :2941   Max.   :32.0                                        </code></pre>
+<pre><code>       ID            age             gender        program 
+ Min.   :1320   Min.   :20.0   Length   : 4   Length   :4  
+ 1st Qu.:2050   1st Qu.:21.5   N.unique : 3   N.unique :3  
+ Median :2519   Median :25.0   N.blank  : 0   N.blank  :0  
+ Mean   :2325   Mean   :25.5   Min.nchar: 4   Min.nchar:9  
+ 3rd Qu.:2794   3rd Qu.:29.0   Max.nchar:14   Max.nchar:9  
+ Max.   :2941   Max.   :32.0                               </code></pre>
 </div>
 </div>
 <p>It may then be helpful to insure some variables are changed to <code>factor</code>s.</p>

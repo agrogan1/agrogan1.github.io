@@ -1,0 +1,15 @@
+{
+  "hash": "d144afb23c5eb5265fcae7e45dabda12",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"How To Choose A Chart\"\nsubtitle: \"A Statistically Informed Visual Guide With Stata Commands\"\nauthor: \"Andy Grogan-Kaylor\" \ndate: \"2026-5-23\"\ncategories: [stats, dataviz, Stata]\nimage: \"how-to-choose-a-chart-a-visual-guide-with-Stata.png\"\n---\n\nI've updated my graphing tutorial for Stata:  [How To Choose A Chart - A Statistically Informed Visual Guide With Stata Commands](https://agrogan1.github.io/Stata/how-to-choose-a-chart-a-visual-guide-with-Stata/how-to-choose-a-chart-a-visual-guide-with-Stata.pdf)\n\n\n::: {.cell}\n\n:::\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](https://agrogan1.github.io/Stata/how-to-choose-a-chart-a-visual-guide-with-Stata/how-to-choose-a-chart-a-visual-guide-with-Stata.png)\n:::\n:::\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

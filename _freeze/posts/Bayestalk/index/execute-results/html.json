@@ -1,0 +1,15 @@
+{
+  "hash": "3011e4fb105aa77c38515da4a053985d",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"An Introduction to Bayesian Statistics\"\nauthor: \"Andy Grogan-Kaylor\"\ndate: \"2024-5-12\"\ncategories: [stats, Bayes, multilevel, Stata, R]\nimage: \"Bayestalk.png\"\n---\n\nLast Fall, I gave a talk on Bayesian statistics to a group of PHD students at Michigan. \n\nThe slides are display below, but here is a link to the fullscreen version:\n\n[https://agrogan1.github.io/Bayes/Bayestalk/Bayestalk.html](https://agrogan1.github.io/Bayes/Bayestalk/Bayestalk.html).\n\n\n\n::: {.cell}\n<iframe src=\"https://agrogan1.github.io/Bayes/Bayestalk/Bayestalk.html\" width=\"672\" height=\"400px\" data-external=\"1\"></iframe>\n:::\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

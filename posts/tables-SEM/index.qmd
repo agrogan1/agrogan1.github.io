@@ -23,7 +23,7 @@ library(Statamarkdown)
 Data from [Multilevel Thinking](https://agrogan1.github.io/posts/multilevel-thinking/)
 
 ```{stata, collectcode=TRUE}
-#| echo: true
+*| echo: true
 
 use "simulated_multilevel_data.dta", clear
 
@@ -37,8 +37,8 @@ Outcome is a function of physical punishment, parental warmth and the interventi
 I use `quietly` to suppress the outcome from the `sem` command
 
 ```{stata, collectcode=TRUE}
-#| echo: true
-#| output: false
+*| echo: true
+*| output: false
 
 quietly: sem (outcome <- physical_punishment warmth intervention) ///
 (physical_punishment <- intervention) // sem model
@@ -52,7 +52,7 @@ est store M1 // store estimates from this model
 As long as the variables have variable labels, `etable` (with a few options) will automatically make a nice regression table. 
 
 ```{stata, collectcode=TRUE}
-#| echo: true
+*| echo: true
 
 etable, ///
 estimates(M1) /// using these estimates 

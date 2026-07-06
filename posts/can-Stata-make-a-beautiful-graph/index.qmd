@@ -33,7 +33,7 @@ The documentation goes on to further note that:
 > "The data are measures from 107 trees. The trees were selected as being of average size from healthy and well stocked stands in the Alps."
 
 ```{stata, collectcode=TRUE}
-#| echo: true
+*| echo: true
 
 clear all
 
@@ -46,8 +46,8 @@ use "https://github.com/agrogan1/multilevel/raw/master/mlm-R2-gutten/gutten.dta"
 The default graphing scheme in Stata 18 is much improved over previous versions, and the below graph may be very good for many purposes.
 
 ```{stata}
-#| echo: true
-#| output: false
+*| echo: true
+*| output: false
 
 use gutten.dta
 
@@ -68,8 +68,8 @@ Below please find an *admittedly complicated* graph command. Note, however, that
 I make extensive use of the `///` notation which allows me to spread the graph along multiple lines.
 
 ```{stata}
-#| echo: true
-#| output: false
+*| echo: true
+*| output: false
 
 use gutten.dta
 

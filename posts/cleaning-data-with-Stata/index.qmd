@@ -24,8 +24,8 @@ library(Statamarkdown)
 This section is provided for illustration only, as it may be helpful to see *how* the data was simulated, and the decisions that went into simulating the data. You may also *safely ignore* this section if you like.
 
 ```{stata, collectcode=TRUE}
-#| echo: true
-#| output: false
+*| echo: true
+*| output: false
 
 clear all 
 
@@ -50,7 +50,7 @@ generate somethingelse = rnormal(0, 1) // something else!
 # Look At Some Of The Data
 
 ```{stata}
-#| echo: true
+*| echo: true
 
 list in 1/10 // list first 10 observations
 
@@ -65,28 +65,28 @@ When we look at variables we are looking for values that don't make sense, or th
 :::
 
 ```{stata}
-#| echo: true
+*| echo: true
 
 describe // describe the data
 
 ```
 
 ```{stata}
-#| echo: true
+*| echo: true
 
 summarize // descriptive statistics
 	
 ```
 
 ```{stata}
-#| echo: true
+*| echo: true
 
 tabulate happy // tabulation of this particular categorical variable
 
 ```
 
 ```{stata}
-#| echo: true
+*| echo: true
 
 codebook happy // VERY detailed view of this particular categorical variable
 
@@ -111,7 +111,7 @@ We may only be interested in keeping some variables to keep our analytic data se
 For this particular analysis we may wish to drop the variable called `somethingelse`.
 
 ```{stata, collectcode=TRUE}
-#| echo: true
+*| echo: true
 
 keep id age happy // keep only relevant variables
 
@@ -122,7 +122,7 @@ We could also have said `drop somethingelse`.
 ## Add *Variable* Labels (`label variable "..."`)
 
 ```{stata, collectcode=TRUE}
-#| echo: true
+*| echo: true
 
 label variable id "ID" // label variable
 
@@ -135,7 +135,7 @@ label variable happy "Happiness Scale" // label variable
 ## Create *Value* Labels (`label define ...`)
 
 ```{stata, collectcode=TRUE}
-#| echo: true
+*| echo: true
 
 label define happy 1 "Rarely" 2 "Sometimes" 3 "Often" 4 "Always" // create value label
 
@@ -146,7 +146,7 @@ label define happy 1 "Rarely" 2 "Sometimes" 3 "Often" 4 "Always" // create value
 *Variables* and *value labels* can have the same names but are different things.  We add the variable label `happy` to the variable named `happy`.
 
 ```{stata, collectcode=TRUE}
-#| echo: true
+*| echo: true
 
 label values happy happy // attach VALUE LABEL happy to VARIABLE happy
 
@@ -155,7 +155,7 @@ label values happy happy // attach VALUE LABEL happy to VARIABLE happy
 ## Recode Outliers, Values That Are Errors, Or Values That Should Be Coded As Missing (`recode`)
 
 ```{stata, collectcode=TRUE}
-#| echo: true
+*| echo: true
 
 recode happy (999 = .) // recode values as missing
 
@@ -166,14 +166,14 @@ recode age (100/max = 100) // age is topcoded at 100 (may or may not be plausibl
 # We `describe` and `summarize` The Data And See The Changes That Have Been Made
 
 ```{stata}
-#| echo: true
+*| echo: true
 
 describe
 
 ```
 
 ```{stata}
-#| echo: true
+*| echo: true
 	
 summarize
 	
