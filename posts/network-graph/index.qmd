@@ -121,7 +121,7 @@ plot(g,
      # edge.label.dist = 1, 
      layout = coords, # layout
      edge.curved = 0,
-     main = "Correlation of Scales in Our Data")
+     main = "Relationship of Scales in Our Data")
 
 ```
 
@@ -145,7 +145,7 @@ ggraph(g, layout = 'fr') +
   scale_edge_color_gradient(name = "weight",
                             low = "lightgrey",
                             high = "darkgrey") +
-  labs(title = "Network Graph of Reports") +
+  labs(title = "Relationship of Scales in Our Data") +
   theme_void() 
 
 ```

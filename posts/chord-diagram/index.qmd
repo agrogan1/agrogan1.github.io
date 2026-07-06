@@ -104,6 +104,8 @@ chordDiagram(cor_mat,
              scale = TRUE, # scale equivalently
              grid.col = grid.col)
 
+title(main = "Relationship of Scales In Our Data")
+
 ```
 
 
