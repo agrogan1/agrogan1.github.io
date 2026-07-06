@@ -1,7 +1,7 @@
 ---
 title: "An Updated Network Graph"
 author: "Andy Grogan-Kaylor" 
-date: "2026-6-10"
+date: "2026-7-5"
 categories: [stats, dataviz, R, exploring data]
 echo: true
 code-fold: true
@@ -58,8 +58,8 @@ mydata <- rnorm_multi(n = 100,
                                 "scaleB", 
                                 "scaleC", 
                                 "scaleD", 
-                                "scaleE", 
-                                "scaleF"),
+                                "demographic1", 
+                                "demographic2"),
                    empirical = FALSE)
 
 ```
@@ -132,8 +132,7 @@ plot(g,
 ggraph(g, layout = 'fr') + 
   geom_edge_link(aes(width = .25 * weight,
                     color = weight,
-                    label = round(weight, 2)
-                    ),
+                    label = round(weight, 2)),
                 label_colour = "red",
                 strength = .1,
                 angle_calc = 'along',
