@@ -58,8 +58,8 @@ mydata <- rnorm_multi(n = 100,
                                 "scaleB", 
                                 "scaleC", 
                                 "scaleD", 
-                                "demographic1", 
-                                "demographic2"),
+                                "scaleE", 
+                                "scaleF"),
                    empirical = FALSE)
 
 ```
