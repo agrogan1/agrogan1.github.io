@@ -3,10 +3,11 @@
     "listing": "/blog.html",
     "items": [
       "/posts/multilevel-thinking/index.html",
+      "/posts/network-graph/index.html",
+      "/posts/toward-childhoods-free-from-violence/index.html",
       "/posts/complex-methods/index.html",
       "/posts/very-short-introduction-Stata/index.html",
       "/posts/chord-diagram/index.html",
-      "/posts/network-graph/index.html",
       "/posts/what-is-related-to-what/index.html",
       "/posts/complexity-hidden-inside-simplicity/index.html",
       "/posts/how-to-choose-a-chart-a-visual-guide-with-Stata/index.html",
@@ -131,11 +132,11 @@
     "items": []
   },
   {
-    "listing": "/teaching.html",
+    "listing": "/contact.html",
     "items": []
   },
   {
-    "listing": "/contact.html",
+    "listing": "/teaching.html",
     "items": []
   },
   {

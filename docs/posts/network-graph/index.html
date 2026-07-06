@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Andy Grogan-Kaylor">
-<meta name="dcterms.date" content="2026-06-10">
+<meta name="dcterms.date" content="2026-07-05">
 
 <title>An Updated Network Graph – Andrew Grogan-Kaylor</title>
 <style>
@@ -144,10 +144,10 @@ div.csl-indent {
 <meta name="twitter:card" content="summary_large_image">
 <meta name="citation_title" content="An Updated Network Graph">
 <meta name="citation_author" content="Andy Grogan-Kaylor">
-<meta name="citation_publication_date" content="2026-06-10">
-<meta name="citation_cover_date" content="2026-06-10">
+<meta name="citation_publication_date" content="2026-07-05">
+<meta name="citation_cover_date" content="2026-07-05">
 <meta name="citation_year" content="2026">
-<meta name="citation_online_date" content="2026-06-10">
+<meta name="citation_online_date" content="2026-07-05">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=We need methods suited to the complexity of the data and to the complexity of the issues we study;,citation_author=Andrew Grogan-Kaylor;,citation_author=Lijian Zhao;,citation_author=Nehal Eldeeb;,citation_author=Tania Ramos-García;,citation_author=Todd Herrenkohl;,citation_publication_date=2026;,citation_cover_date=2026;,citation_year=2026;,citation_doi=10.1016/j.chiabu.2026.108185;,citation_issn=0145-2134;,citation_volume=179;,citation_journal_title=Child Abuse &amp;amp;amp; Neglect;">
 <meta name="citation_reference" content="citation_title=Mary Oliver: “I got saved by the beauty of the world.”;,citation_author=Mary Oliver;,citation_author=Krista Tippett;,citation_publication_date=2015;,citation_cover_date=2015;,citation_year=2015;,citation_fulltext_html_url=https://onbeing.org/programs/mary-oliver-i-got-saved-by-the-beauty-of-the-world/;,citation_publisher=The On Being Project;">
@@ -374,7 +374,7 @@ div.csl-indent {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">June 10, 2026</p>
+        <p class="date">July 5, 2026</p>
       </div>
     </div>
     
@@ -670,7 +670,7 @@ div.csl-indent {
 </section>
 <section id="network-graph" class="level1">
 <h1>Network Graph</h1>
-<p>I provide code for labels, but because labels often overlap and are thus difficult to read, I have commented out this code in the <code>igraph</code> code. I use a <em>Fruchterman-Reingold</em> layout <span class="citation" data-cites="ggraph Csardi2006 Csardi2025">(<a href="#ref-Csardi2025" role="doc-biblioref">Csardi et al., 2025</a>; <a href="#ref-Csardi2006" role="doc-biblioref">Csardi &amp; Nepusz, 2006</a>; <a href="#ref-ggraph" role="doc-biblioref">Pedersen, 2025</a>)</span> in each case to try to highlight the connections and centrality of different graph nodes.</p>
+<p>I provide code for labels, but because labels sometimes overlap and are thus difficult to read, I have commented out this code in the <code>igraph</code> code. I use a <em>Fruchterman-Reingold</em> layout <span class="citation" data-cites="ggraph Csardi2006 Csardi2025">(<a href="#ref-Csardi2025" role="doc-biblioref">Csardi et al., 2025</a>; <a href="#ref-Csardi2006" role="doc-biblioref">Csardi &amp; Nepusz, 2006</a>; <a href="#ref-ggraph" role="doc-biblioref">Pedersen, 2025</a>)</span> in each case to try to highlight the connections and centrality of different graph nodes.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href=""><code>igraph</code></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href=""><code>ggraph</code></a></li></ul>
 <div class="tab-content">
@@ -724,22 +724,21 @@ div.csl-indent {
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggraph</span>(g, <span class="at">layout =</span> <span class="st">'fr'</span>) <span class="sc">+</span> </span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_edge_link</span>(<span class="fu">aes</span>(<span class="at">width =</span> .<span class="dv">25</span> <span class="sc">*</span> weight,</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                    <span class="at">color =</span> weight,</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>                    <span class="at">label =</span> <span class="fu">round</span>(weight, <span class="dv">2</span>)</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>                    ),</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">label_colour =</span> <span class="st">"red"</span>,</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>                <span class="at">strength =</span> .<span class="dv">1</span>,</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>                <span class="at">angle_calc =</span> <span class="st">'along'</span>,</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>                <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_node_point</span>(<span class="at">size =</span> <span class="dv">7</span>,</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>                  <span class="at">color =</span> <span class="st">"navy"</span>) <span class="sc">+</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_node_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> name),</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>                  <span class="at">nudge_y =</span> .<span class="dv">15</span>,</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>                  <span class="at">fill =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_edge_color_gradient</span>(<span class="at">name =</span> <span class="st">"weight"</span>,</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>                            <span class="at">low =</span> <span class="st">"lightgrey"</span>,</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>                            <span class="at">high =</span> <span class="st">"darkgrey"</span>) <span class="sc">+</span></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Network Graph of Reports"</span>) <span class="sc">+</span></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>                    <span class="at">label =</span> <span class="fu">round</span>(weight, <span class="dv">2</span>)),</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">label_colour =</span> <span class="st">"red"</span>,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">strength =</span> .<span class="dv">1</span>,</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>                <span class="at">angle_calc =</span> <span class="st">'along'</span>,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>                <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_node_point</span>(<span class="at">size =</span> <span class="dv">7</span>,</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>                  <span class="at">color =</span> <span class="st">"navy"</span>) <span class="sc">+</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_node_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> name),</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>                  <span class="at">nudge_y =</span> .<span class="dv">15</span>,</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>                  <span class="at">fill =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_edge_color_gradient</span>(<span class="at">name =</span> <span class="st">"weight"</span>,</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>                            <span class="at">low =</span> <span class="st">"lightgrey"</span>,</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>                            <span class="at">high =</span> <span class="st">"darkgrey"</span>) <span class="sc">+</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Network Graph of Reports"</span>) <span class="sc">+</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div>
