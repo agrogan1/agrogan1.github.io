@@ -6,6 +6,7 @@ categories: [stats, dataviz, R]
 echo: true
 code-fold: true
 code-summary: "Show the code"
+fig-height: 5
 ---
 
 # Background
@@ -18,7 +19,8 @@ One often tricky type of graph is the bar chart.  I have come to think that part
 
 **Many** bar charts look **something like** the bar chart below.
 
-```{r, echo=FALSE}
+```{r}
+#| echo: false
 
 x <- round(rnorm(10, 10, 3), digits = 0)
 
@@ -43,7 +45,8 @@ Let's look at each situation in turn, since each situation demands a slightly di
 
 # Our Data
 
-```{r, echo=FALSE}
+```{r}
+#| echo: false
 
 x <- c(1, 2, 2, 3, 3, 3)
 
@@ -89,7 +92,9 @@ ggplot(mydata, # the data that I am using
 
 ```
 
-> We then return to an unstacked bar chart to consider the syntax for adding labels.
+::: {.callout-note}
+We then return to an unstacked bar chart to consider the syntax for adding labels.
+:::
 
 ## Add Labels
 
@@ -127,7 +132,9 @@ ggplot(mydata, # the data that I am using
 
 # Bar charts where the <span style="background-color: #FFFF00">height of the bars is the **average value of the y variable** for that category</span>.
 
-> For this kind of bar chart, we need ask R to summarize the value of `y` for different categories of `x`. The syntax is--shall we say--not very intuitive, but does make sense.
+::: {.callout-note}
+For this kind of bar chart, we need ask R to summarize the value of `y` for different categories of `x`. The syntax is--shall we say--not very intuitive, but does make sense.
+:::
 
 ```{r}
 
@@ -306,7 +313,9 @@ ggplot(mydata, # the data that I am using
   
 ```
 
-> Unfortunately, pie charts are deprecated in some circles, so support for pie charts is not very strong in `ggplot`. It is certainly possible to create a pie chart in `ggplot`, but adding labels to a pie chart ends up being very very difficult.
+::: {.callout-note}
+Unfortunately, pie charts are deprecated in some circles, so support for pie charts is not very strong in `ggplot`. It is certainly possible to create a pie chart in `ggplot`, but adding labels to a pie chart ends up being very very difficult.
+:::
 
 ```{r, eval=FALSE, echo=FALSE}
 
