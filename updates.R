@@ -33,6 +33,11 @@ bibliography  <- gsub(pattern = "Gladys Espinosa-Garc{\\a'\\i}a",
                       x = bibliography,
                       fixed = TRUE)
 
+bibliography  <- gsub(pattern = "Tania Ramos-Garc{\\a'\\i}a", 
+                      replace = "Tania Ramos-García", 
+                      x = bibliography,
+                      fixed = TRUE)
+
 # bibliography  <- gsub(pattern = "G{\\a'\\a}bor Cs{\\a'\\a}rdi", 
 #                       replace = "Gábor Csárdi", 
 #                       x = bibliography,
