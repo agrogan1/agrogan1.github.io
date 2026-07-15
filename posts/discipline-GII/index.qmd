@@ -6,7 +6,7 @@ categories: [multilevel, corporal punishment, positive parenting, MICS]
 image: "positiveparenting.png"
 ---
 
-We've just published an article entitled *Interactions Of Gender Inequality And Parental Discipline Predicting Child Aggression In Low- And Middle-Income Countries*.
+We've just published an article entitled *Interactions Of Gender Inequality And Parental Discipline Predicting Child Aggression In Low- And Middle-Income Countries* [@Ward2024].
 
 Contrary to expectations from theory, we find that parenting effects are *weaker* in contexts of *higher* gender inequality, and *stronger* in contexts of *lower* gender inequality. We recommend that interventions to improve parenting and child well being need to have a *multilevel* conceptualization, and to focus on both parenting and reducing gender inequality at a country level.
 
