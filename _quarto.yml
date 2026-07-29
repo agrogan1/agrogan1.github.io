@@ -38,13 +38,13 @@ website:
             href: CPbans.qmd
       - text: "Blog-ish Posts"
         menu: 
-          - text: Blog
+          - text: "Blog"
             href: blog.qmd  
-          - text: Multilevel Thinking
+          - text: "Multilevel Thinking"
             href: https://agrogan1.github.io/posts/multilevel-thinking/
-          - text: Be Less Wrong
+          - text: "Be Less Wrong"
             href: https://agrogan1.github.io/posts/be-less-wrong/index.html
-          - text: Multiple Principled Solutions
+          - text: "Multiple Principled Solutions"
             href: https://agrogan1.github.io/posts/multiple-principled-solutions/index.html
       - about.qmd
 
