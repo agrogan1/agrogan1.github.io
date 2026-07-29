@@ -4,7 +4,7 @@ subtitle: "A Substantive Example"
 author: "Andy Grogan-Kaylor" 
 date: "2025-6-10"
 categories: [stats, teaching, interactions]
-image: partial-derivative.png
+image: slope.png
 ---
 
 In [another post](../interactions-and-main-effects-mathematical/index.html), I wrote about how interactions and main effects need to be interpreted together from a mathematical perspective. Below, please find a visual example of a substantive issue that we have been thinking through for some papers that we have been working on. This visual example should similarly demonstrate that interactions and main effects need to be interpreted together. 
