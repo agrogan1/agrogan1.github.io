@@ -11,7 +11,7 @@ George Box famously said:
 
 > "All models are wrong, but some are useful." [@Box1979]
 
-Drawing upon this idea, about a year ago, I developed a tutorial to explore the idea of how quantitative methods can allow one to *be less wrong* about important social issues:  [https://globalfamilies.quarto.pub/be-less-wrong/](https://globalfamilies.quarto.pub/be-less-wrong/).
+Drawing upon this idea, about a year ago, I developed a tutorial to explore the idea of how quantitative methods can allow one to *be less wrong* about important social issues:  [https://agrogan1.github.io/closeread/be-less-wrong/be-less-wrong.html](https://agrogan1.github.io/closeread/be-less-wrong/be-less-wrong.html).
 
 Since that time, I've made some updates: minor updates to the diagrams; and some notes clarifying the relationship of the ideas in the tutorial to ideas about RCT's, statistical mediation, statistical confounders, and statistical colliders. 
 

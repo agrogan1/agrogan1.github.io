@@ -10,7 +10,7 @@ We have published an article entitled "Spillover of macro-level violence to pare
 
 The Open Access Article is available here:  [https://doi.org/10.1016/j.chiabu.2025.107468](https://doi.org/10.1016/j.chiabu.2025.107468)
 
-I prepared a *scrollytelling* webpage summarizing that research: [https://globalfamilies.quarto.pub/spillover-of-violence/](https://globalfamilies.quarto.pub/spillover-of-violence/)
+I prepared a *scrollytelling* webpage summarizing that research: [https://agrogan1.github.io/closeread/spillover-of-violence/spillover-of-violence.html](https://agrogan1.github.io/closeread/spillover-of-violence/spillover-of-violence.html)
 
 ![Countries in UNICEF MICS Data](MICS-countries.png){width=33%}
 

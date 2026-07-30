@@ -27,7 +27,7 @@ listing:
       image: mysmallmultiples.png
       categories: [multilevel, dataviz, resource]
     - title: "Be Less Wrong"
-      path: https://globalfamilies.quarto.pub/be-less-wrong/
+      path: https://agrogan1.github.io/closeread/be-less-wrong/be-less-wrong.html
       image: fig-combined-1.png
       categories: [resource]
 ---

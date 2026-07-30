@@ -17,7 +17,7 @@ name <- c("Cleaning Data With Stata",
 
 URL <- c("https://agrogan1.github.io/Stata/cleaning-data-with-stata/cleaning-data-with-stata.html",
          "https://agrogan1.github.io/teaching/quantitative-data-analysis/quantitative-data-analysis.html#cleaning-data",
-         "https://globalfamilies.quarto.pub/global-families-project/quantitative-data-analysis.html#cleaning-data")
+         "https://agrogan1.github.io/globalfamilies/quantitative-data-analysis.html#cleaning-data")
 
 R <- c("no", "yes", "yes")
 

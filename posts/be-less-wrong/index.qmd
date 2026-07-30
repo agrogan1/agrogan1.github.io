@@ -11,7 +11,7 @@ George Box famously said:
 
 > "All models are wrong, but some are useful." [@Box1979]
 
-Drawing upon this idea, I have developed a page to explore the idea of how quantitative methods can allow one to *be less wrong* about important social issues:  [https://globalfamilies.quarto.pub/be-less-wrong/](https://globalfamilies.quarto.pub/be-less-wrong/).
+Drawing upon this idea, I have developed a page to explore the idea of how quantitative methods can allow one to *be less wrong* about important social issues:  [https://agrogan1.github.io/closeread/be-less-wrong/be-less-wrong.html](https://agrogan1.github.io/closeread/be-less-wrong/be-less-wrong.html).
 
 The page uses ideas of *scrollytelling* to explain these ideas. [`closeread`](https://closeread.dev/) is a new extension for [Quarto](https://quarto.org/) that allows one to present stories using *scrollytelling.*
 
