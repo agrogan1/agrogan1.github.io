@@ -11,7 +11,7 @@ highlight-style: haddock
 draft: false
 ---
 
-In [previous posts](https://agrogan1.github.io/blog.html#category=exploring%20data), I have looked at some ways to get an idea of what *scales* and *demographic* variables in my data are related to other *scales* and *demographic* variables in my data. One way of visualizing these relationships is a [chord diagram](https://agrogan1.github.io/posts/chord-diagram/).
+In [other earlier posts](https://agrogan1.github.io/blog.html#category=exploring%20data), I have looked at some ways to get an idea of what *scales* and *demographic* variables in my data are related to other *scales* and *demographic* variables in my data. One way of visualizing these relationships is a [chord diagram](https://agrogan1.github.io/posts/chord-diagram/).
 
 In this post, I try creating a *chord diagram* using the fantastic new `ggchord2` [@rennie2026; @ggchord2].
 
