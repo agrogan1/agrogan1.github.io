@@ -1,0 +1,142 @@
+---
+title: "A Chord Diagram With `ggplot`"
+subtitle: "Using The New `ggchord2` Library"
+author: "Andy Grogan-Kaylor" 
+date: "2026-8-25"
+categories: [stats, dataviz, R, exploring data]
+echo: true
+code-fold: true
+code-summary: "Show the code"
+highlight-style: haddock
+draft: false
+---
+
+In [previous posts](https://agrogan1.github.io/blog.html#category=exploring%20data), I have looked at some ways to get an idea of what *scales* and *demographic* variables in my data are related to other *scales* and *demographic* variables in my data. One way of visualizing these relationships is a [chord diagram](https://agrogan1.github.io/posts/chord-diagram/).
+
+In this post, I try creating a *chord diagram* using the fantastic new `ggchord2` [@rennie2026; @ggchord2].
+
+# Call Libraries
+
+```{r}
+
+library(faux) # simulated data
+
+library(pander) # nice tables
+
+library(skimr) # descriptive statistics
+
+library(circlize) # circular graphs and chord diagrams
+
+library(scales) # viridis color palettes
+
+library(ggplot2) # beautiful graphs
+
+library(ggchord2) # chord diagrams
+
+```
+
+# Simulated Data
+
+I again simulate some data. 
+
+```{r}
+
+set.seed(54321) # random seed
+
+# simulate data
+
+cmat <- c(1.00, 0.30, 0.25, 0.15, 0.15, 0.15,
+          0.30, 1.00, 0.00, 0.50, 0.10, 0.15,
+          0.25, 0.00, 1.00, 0.50, 0.50, 0.15,
+          0.15, 0.50, 0.50, 1.00, 0.00, 0.15,
+          0.15, 0.10, 0.50, 0.00, 1.00, 0.15,
+          0.15, 0.15, 0.15, 0.15, 0.15, 1.00)
+
+mydata <- rnorm_multi(n = 100, 
+                   mu = c(0, 20, 100, 100, 100, 100),
+                   sd = c(1, 5, 5, 5, 5, 5),
+                   r = cmat, # correlation matrix
+                   varnames = c("scaleA", 
+                                "scaleB", 
+                                "scaleC", 
+                                "scaleD", 
+                                "scaleE", 
+                                "scaleF"),
+                   empirical = FALSE)
+
+```
+
+::: {.callout-note collapse="true"}
+# Look At The Data
+
+```{r}
+
+pander(head(mydata)) # nicely formatted table
+
+```
+
+
+```{r, skimr_include_summary = FALSE}
+
+skim(mydata) # descriptive statistics
+
+```
+:::
+
+# Chord Diagram
+
+For `ggchord` to work, I need data on the *correlations* of different scales, but need this correlation data to be formatted as a list of *sources* and *destinations.* 
+
+I therefore first create a correlation matrix of my data, and then reformat this correlation matrix as a data frame of *sources*, *destinations*, and *correlations.*
+
+[https://www.tutorialspoint.com/](https://www.tutorialspoint.com/article/how-to-convert-the-correlation-matrix-into-a-data-frame-with-combination-of-variables-and-their-correlations-in-r) has a page suggesting how to achieve this using *Base R*.
+
+```{r}
+
+cor_mat <- cor(mydata, # correlation matrix
+               use = "complete.obs")
+
+diag(cor_mat) <- 0 # set diagonal to 0
+
+# thanks tutorialspoint.com!
+mychorddata <- as.data.frame(as.table(cor_mat))
+
+head(mychorddata) # look at the data
+
+```
+
+Using `ggchord` is then relatively straightforward. I use `geom_chord_diagram` which adds all of the required geometries of a chord diagram, but could use other `geoms` to add each geometry separately.
+
+```{r}
+#| fig-height: 6
+#| fig-width: 8
+#| label: fig-chord-diagram
+#| fig-cap: "a chord diagram "
+
+# pal_viridis()(5) # 5 viridis colors
+
+ggplot(data = mychorddata, 
+       mapping = aes(
+         source = Var1,
+         target = Var2,
+         freq = Freq,
+         fill = Var1)) + 
+  geom_chord_diagram() + # add all the chord geoms
+  # geom_chord_arcs() + # selecting specific 
+  # geom_chord_sectors() + # chord geoms allows 
+  # geom_chord_labels() + # for more customization
+  scale_fill_viridis_d(name = "scale") + # nice colors
+  labs(title = "Relationship of Scales In Our Data") +
+  theme_void() +
+  coord_fixed(clip = "off") # fixed coordinates; don't clip labels
+
+```
+
+
+
+
+
+
+
+
+

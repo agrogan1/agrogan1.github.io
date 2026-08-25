@@ -3,6 +3,7 @@
     "listing": "/blog.html",
     "items": [
       "/posts/multilevel-thinking/index.html",
+      "/posts/chord-diagram-2/index.html",
       "/posts/network-graph/index.html",
       "/posts/toward-childhoods-free-from-violence/index.html",
       "/posts/complex-methods/index.html",
@@ -132,11 +133,7 @@
     "items": []
   },
   {
-    "listing": "/contact.html",
-    "items": []
-  },
-  {
-    "listing": "/teaching.html",
+    "listing": "/posts/R-resources/index.html",
     "items": []
   },
   {
@@ -144,7 +141,11 @@
     "items": []
   },
   {
-    "listing": "/posts/R-resources/index.html",
+    "listing": "/teaching.html",
+    "items": []
+  },
+  {
+    "listing": "/contact.html",
     "items": []
   },
   {
