@@ -1,7 +1,7 @@
 ---
 title: "Data Visualization With Stata (The Basics)"
 author: "Andy Grogan-Kaylor"
-date: "2026-2-24"
+date: "2026-8-27"
 categories: [stats, dataviz, Stata]
 image: "myscatter.png"
 ---
@@ -18,7 +18,10 @@ In some commands, I use `///` so that Stata commands can be on multiple lines.
 
 This is a quick guide to these ideas using the [Palmer Penguins Data](https://github.com/allisonhorst/palmerpenguins/blob/master/README.md).
 
-![Palmer Penguins Illustration from Allison Horst](lter_penguins.png){width=20%}  ![Culmen Depth from Allison Horst](culmen_depth.png){width=20%}
+::: {layout-ncol=2}
+![Palmer Penguins Illustration from Allison Horst](lter_penguins.png){width=33%}
+![Culmen Depth from Allison Horst](culmen_depth.png){width=33%}
+:::
 
 # Setup
 
@@ -46,7 +49,7 @@ use "penguins.dta", clear
 I am not a particular fan of the default `s2color` graph scheme in earlier versions of Stata.  In earlier versions of Stata, I might use the `s1color` scheme by typing `set scheme s1color`. This handout makes use of the `stcolor` graph scheme which is the default in newer versions of Stata.
 :::
 
-# Histogram: `histogram x`
+# Histogram: `histogram x` [^stripplot]
 
 ```{stata, collectcode=TRUE}
 *| output: false
@@ -65,6 +68,8 @@ quietly: graph export myhistogram.png, width(1000) replace
 ```
 
 ![histogram](myhistogram.png){width=33%}
+
+[^stripplot]: Histograms are often our default choice to display distributions of a single variable, but I have started to think that [`stripplot`'s](https://agrogan1.github.io/posts/stripplot/index.html)--which require a few more options to configure--are often a better choice for more intuitive displays of distributions. 
 
 # Bar Graph: `graph bar`
 
