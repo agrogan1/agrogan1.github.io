@@ -57,9 +57,9 @@ google-scholar: true
 format:
   html:
     theme: [yeti, theme-light.scss]
+    css: agrogan.css
     mermaid: 
       theme: default
-    css: agrogan.css
     lightbox: true
     toc: true
     execute:
