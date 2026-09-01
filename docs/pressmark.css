@@ -1,0 +1,24 @@
+.quarto-title .quarto-categories .quarto-category a {
+  color: black;
+}
+
+div.quarto-categories::before {
+  color: black !important;
+}
+
+#title-block-header.page-full {
+  color: black;
+  background-color: #faf9f6 !important;
+}
+
+#title-block-header > div.quarto-title-banner.page-columns.page-full {
+  background-color: #faf9f6 !important;
+}
+
+#title-block-header.quarto-title-block.default .quarto-title .title {
+  color: black;
+}
+
+p.subtitle.lead {
+  color: black;
+}
