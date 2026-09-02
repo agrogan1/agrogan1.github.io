@@ -5,38 +5,48 @@ blockquote {
   border-left: 3px solid #FFCB05; 
   padding: 0.5em 10px;
 }
+
 .blockquote { 
   color: black;
 }
+
 .navbar-brand{
   font-weight: bold;
   font-size: 100%;
-  border-radius: 5px;    
+  border-radius: 5px;   
+  padding: 5px 10px;    
 }
+
 .navbar-nav {
   font-size: 85%;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
 }
+
 .nav-link {
     border-radius: 5px;    
 }
+
 .navbar-nav .nav-link.active {
   color: #FFCB05;
   background-color: #00274C;
 }
+
 .navbar a:hover {
   color: black;
   background-color: #FFCB05;
 }
+
 .dropdown-item {
   font-size: 75%;
   font-weight: bold;
 }
+
 p {
   color: black;
 }
+
 a {
   color: #2F65A7;
 }
