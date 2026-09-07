@@ -2,7 +2,7 @@
 title: "`stripplot`"
 subtitle: "Better `dotplot`s for Stata"
 author:  Andy Grogan-Kaylor 
-date: "2026-5-20"
+date: "2026-9-1"
 categories: [stats, Stata, teaching, dataviz, exploring data]
 image: "mystripplot.png"
 highlight-style: haddock
@@ -70,6 +70,7 @@ stripplot myaverage, ///
 stack /// stack the dots
 width(1) /// bin with width 1
 msymbol(circle) /// symbols are circles
+msize(medium) /// larger markers
 title("Scale 1") /// title
 xtitle("Scale 1") /// title for x axis
 xlabel(1 "strongly disagree" 2 "disagree" 3 "neutral" 4 "agree" 5 "strongly agree", labsize(vsmall)) // customize labels
@@ -90,15 +91,15 @@ The width of the bins that `stripplot` uses can be changed with the `width()` op
 *| echo: true
 *| output: false
 
-stripplot myaverage, stack width(.25) msymbol(circle)
+stripplot myaverage, stack width(.25) msymbol(circle) msize(medium)
 
 graph export "mystripplotA.png", replace
 
-stripplot myaverage, stack width(.5) msymbol(circle)
+stripplot myaverage, stack width(.5) msymbol(circle) msize(medium)
 
 graph export "mystripplotB.png", replace
 
-stripplot myaverage, stack width(1) msymbol(circle)
+stripplot myaverage, stack width(1) msymbol(circle) msize(medium)
 
 graph export "mystripplotC.png", replace
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Andy Grogan-Kaylor">
-<meta name="dcterms.date" content="2026-05-20">
+<meta name="dcterms.date" content="2026-09-01">
 
 <title>stripplot – Andrew Grogan-Kaylor</title>
 <style>
@@ -144,10 +144,10 @@ div.csl-indent {
 <meta name="twitter:card" content="summary_large_image">
 <meta name="citation_title" content="`stripplot`">
 <meta name="citation_author" content="Andy Grogan-Kaylor">
-<meta name="citation_publication_date" content="2026-05-20">
-<meta name="citation_cover_date" content="2026-05-20">
+<meta name="citation_publication_date" content="2026-09-01">
+<meta name="citation_cover_date" content="2026-09-01">
 <meta name="citation_year" content="2026">
-<meta name="citation_online_date" content="2026-05-20">
+<meta name="citation_online_date" content="2026-09-01">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience;,citation_abstract=Adverse Childhood Experiences (ACEs) such as child abuse are related to poor health outcomes. Spanking has indicated a similar association with health outcomes, but to date has not been considered an ACE. Physical and emotional abuse have been shown in previous research to correlate highly and may be similar in nature to spanking. To determine if spanking should be considered an ACE, this study aimed to examine 1): the grouping of spanking with physical and emotional abuse; and 2) if spanking has similar associations with poor adult health problems and accounts for additional model variance. Adult mental health problems included depressive affect, suicide attempts, moderate to heavy drinking, and street drug use. Data were from the CDC-Kaiser ACE study (N = 8316, response rate = 65;,citation_author=Tracie O. Afifi;,citation_author=Derek Ford;,citation_author=Elizabeth T. Gershoff;,citation_author=Melissa Merrick;,citation_author=Andrew Grogan-Kaylor;,citation_author=Katie A. Ports;,citation_author=Harriet L. MacMillan;,citation_author=George W. Holden;,citation_author=Catherine A. Taylor;,citation_author=Shawna J. Lee;,citation_author=Robbyn Peters Bennett;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_doi=10.1016/j.chiabu.2017.01.014;,citation_isbn=0145-2134;,citation_issn=18737757;,citation_volume=71;,citation_journal_title=Child Abuse and Neglect;">
 <meta name="citation_reference" content="citation_title=Interaction terms in logit and probit models;,citation_abstract=The magnitude of the interaction effect in nonlinear models does not equal the marginal effect of the interaction term, can be of opposite sign, and its statistical significance is not calculated by standard software. We present the correct way to estimate the magnitude and standard errors of the interaction effect in nonlinear models. © 2003 Elsevier Science B.V. All rights reserved.;,citation_author=Chunrong Ai;,citation_author=Edward C. Norton;,citation_publication_date=2003;,citation_cover_date=2003;,citation_year=2003;,citation_doi=10.1016/S0165-1765(03)00032-6;,citation_issn=01651765;,citation_journal_title=Economics Letters;">
@@ -360,6 +360,7 @@ div.csl-indent {
                 <div class="quarto-category">Stata</div>
                 <div class="quarto-category">teaching</div>
                 <div class="quarto-category">dataviz</div>
+                <div class="quarto-category">exploring data</div>
               </div>
                   </div>
   </div>
@@ -377,7 +378,7 @@ div.csl-indent {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">May 20, 2026</p>
+        <p class="date">September 1, 2026</p>
       </div>
     </div>
     
@@ -471,11 +472,12 @@ div.csl-indent {
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">stack</span> <span class="co">/// stack the dots</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">width</span>(1) <span class="co">/// bin with width 1</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bn">msymbol</span>(<span class="bn">circle</span>) <span class="co">/// symbols are circles</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="bn">title</span>(<span class="st">"Scale 1"</span>) <span class="co">/// title</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="bn">xtitle</span>(<span class="st">"Scale 1"</span>) <span class="co">/// title for x axis</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">xlabel</span>(1 <span class="st">"strongly disagree"</span> 2 <span class="st">"disagree"</span> 3 <span class="st">"neutral"</span> 4 <span class="st">"agree"</span> 5 <span class="st">"strongly agree"</span>, <span class="bn">labsize</span>(vsmall)) <span class="co">// customize labels</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> <span class="st">"mystripplot.png"</span>, <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>msize(medium) <span class="co">/// larger markers</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="bn">title</span>(<span class="st">"Scale 1"</span>) <span class="co">/// title</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="bn">xtitle</span>(<span class="st">"Scale 1"</span>) <span class="co">/// title for x axis</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="kw">xlabel</span>(1 <span class="st">"strongly disagree"</span> 2 <span class="st">"disagree"</span> 3 <span class="st">"neutral"</span> 4 <span class="st">"agree"</span> 5 <span class="st">"strongly agree"</span>, <span class="bn">labsize</span>(vsmall)) <span class="co">// customize labels</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> <span class="st">"mystripplot.png"</span>, <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -491,15 +493,15 @@ div.csl-indent {
 <div class="cell" data-collectcode="true">
 <details class="code-fold">
 <summary>Show the code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>stripplot myaverage, <span class="kw">stack</span> <span class="kw">width</span>(.25) <span class="bn">msymbol</span>(<span class="bn">circle</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>stripplot myaverage, <span class="kw">stack</span> <span class="kw">width</span>(.25) <span class="bn">msymbol</span>(<span class="bn">circle</span>) msize(medium)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> <span class="st">"mystripplotA.png"</span>, <span class="kw">replace</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>stripplot myaverage, <span class="kw">stack</span> <span class="kw">width</span>(.5) <span class="bn">msymbol</span>(<span class="bn">circle</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>stripplot myaverage, <span class="kw">stack</span> <span class="kw">width</span>(.5) <span class="bn">msymbol</span>(<span class="bn">circle</span>) msize(medium)</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> <span class="st">"mystripplotB.png"</span>, <span class="kw">replace</span></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>stripplot myaverage, <span class="kw">stack</span> <span class="kw">width</span>(1) <span class="bn">msymbol</span>(<span class="bn">circle</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>stripplot myaverage, <span class="kw">stack</span> <span class="kw">width</span>(1) <span class="bn">msymbol</span>(<span class="bn">circle</span>) msize(medium)</span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> <span class="st">"mystripplotC.png"</span>, <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
