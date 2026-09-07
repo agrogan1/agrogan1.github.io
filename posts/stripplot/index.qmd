@@ -3,7 +3,7 @@ title: "`stripplot`"
 subtitle: "Better `dotplot`s for Stata"
 author:  Andy Grogan-Kaylor 
 date: "2026-5-20"
-categories: [stats, Stata, teaching, dataviz]
+categories: [stats, Stata, teaching, dataviz, exploring data]
 image: "mystripplot.png"
 highlight-style: haddock
 ---
