@@ -3,7 +3,7 @@ title: "Cohen's d Calculator"
 subtitle: "Calculating and Visualizing Effect Sizes."
 author: "Andy Grogan-Kaylor" 
 categories: [stats]
-date: "2024-3-10"
+date: "2026-9-10"
 ---
 
 # Effect Sizes 
@@ -32,9 +32,11 @@ treatment <- rnorm(N, 110, 7) # control group data
 #| echo: false
 #| fig-height: 3
 
-library(ggplot2)
+library(ggplot2) # beautiful graphs
 
-library(michigancolors)
+library(ggdist) # distribution plots
+
+library(michigancolors) # Michigan colors
 
 x <- c(control, treatment)
 
@@ -46,7 +48,8 @@ mydata <- data.frame(x, group)
 ggplot(data = mydata,
        aes(x = x,
            fill = group)) +
-  geom_histogram(alpha = .5) +
+  # geom_histogram(alpha = .5) + # histogram
+  geom_dots() + # dotplot from ggdist
   scale_fill_manual(values = c(michigancolors("blue"),
                                michigancolors("maize"))) +
   theme_minimal()
