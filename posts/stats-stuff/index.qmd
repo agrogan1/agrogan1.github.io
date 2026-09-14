@@ -25,6 +25,10 @@ listing:
       path: https://agrogan.shinyapps.io/shiny-t-test/
       image: t-test.png
       categories: [stats, interactive]
+    - title: "Cohen's d"
+      path: https://agrogan.shinyapps.io/es_calculator/
+      image: Cohens-d.png
+      categories: [stats, interactive]      
     - title: "Correlation"
       path: https://agrogan.shinyapps.io/correlation_demo/
       image: correlation.png
