@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Andy Grogan-Kaylor">
-<meta name="dcterms.date" content="2026-08-25">
+<meta name="dcterms.date" content="2026-09-10">
 
-<title>A Chord Diagram With ggplot – Andrew Grogan-Kaylor</title>
+<title>Correlations – Andrew Grogan-Kaylor</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -28,62 +28,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -100,13 +45,10 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-a4cb4ebf4d7f74674d23506c691191f8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-001904860a9458cea9791a1a6570dcee.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-9ce7cd6ae56684dc6dc3104da5ae5567.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -137,20 +79,20 @@ div.csl-indent {
 
 
 <link rel="stylesheet" href="../../agrogan.css">
-<meta property="og:title" content="A Chord Diagram With ggplot – Andrew Grogan-Kaylor">
-<meta property="og:description" content="Using The New ggchord2 Library">
-<meta property="og:image" content="index_files/figure-html/fig-chord-diagram-1.png">
+<meta property="og:title" content="Correlations – Andrew Grogan-Kaylor">
+<meta property="og:description" content="">
+<meta property="og:image" content="correlation.png">
 <meta property="og:site_name" content="Andrew Grogan-Kaylor">
-<meta name="twitter:title" content="A Chord Diagram With ggplot – Andrew Grogan-Kaylor">
-<meta name="twitter:description" content="Using The New ggchord2 Library">
-<meta name="twitter:image" content="index_files/figure-html/fig-chord-diagram-1.png">
+<meta name="twitter:title" content="Correlations – Andrew Grogan-Kaylor">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="correlation.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="citation_title" content="A Chord Diagram With `ggplot`">
+<meta name="citation_title" content="Correlations">
 <meta name="citation_author" content="Andy Grogan-Kaylor">
-<meta name="citation_publication_date" content="2026-08-25">
-<meta name="citation_cover_date" content="2026-08-25">
+<meta name="citation_publication_date" content="2026-09-10">
+<meta name="citation_cover_date" content="2026-09-10">
 <meta name="citation_year" content="2026">
-<meta name="citation_online_date" content="2026-08-25">
+<meta name="citation_online_date" content="2026-09-10">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience;,citation_abstract=Adverse Childhood Experiences (ACEs) such as child abuse are related to poor health outcomes. Spanking has indicated a similar association with health outcomes, but to date has not been considered an ACE. Physical and emotional abuse have been shown in previous research to correlate highly and may be similar in nature to spanking. To determine if spanking should be considered an ACE, this study aimed to examine 1): the grouping of spanking with physical and emotional abuse; and 2) if spanking has similar associations with poor adult health problems and accounts for additional model variance. Adult mental health problems included depressive affect, suicide attempts, moderate to heavy drinking, and street drug use. Data were from the CDC-Kaiser ACE study (N = 8316, response rate = 65;,citation_author=Tracie O. Afifi;,citation_author=Derek Ford;,citation_author=Elizabeth T. Gershoff;,citation_author=Melissa Merrick;,citation_author=Andrew Grogan-Kaylor;,citation_author=Katie A. Ports;,citation_author=Harriet L. MacMillan;,citation_author=George W. Holden;,citation_author=Catherine A. Taylor;,citation_author=Shawna J. Lee;,citation_author=Robbyn Peters Bennett;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_doi=10.1016/j.chiabu.2017.01.014;,citation_isbn=0145-2134;,citation_issn=18737757;,citation_volume=71;,citation_journal_title=Child Abuse and Neglect;">
 <meta name="citation_reference" content="citation_title=Interaction terms in logit and probit models;,citation_abstract=The magnitude of the interaction effect in nonlinear models does not equal the marginal effect of the interaction term, can be of opposite sign, and its statistical significance is not calculated by standard software. We present the correct way to estimate the magnitude and standard errors of the interaction effect in nonlinear models. © 2003 Elsevier Science B.V. All rights reserved.;,citation_author=Chunrong Ai;,citation_author=Edward C. Norton;,citation_publication_date=2003;,citation_cover_date=2003;,citation_year=2003;,citation_doi=10.1016/S0165-1765(03)00032-6;,citation_issn=01651765;,citation_journal_title=Economics Letters;">
@@ -356,13 +298,9 @@ div.csl-indent {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">A Chord Diagram With <code>ggplot</code></h1>
-            <p class="subtitle lead">Using The New <code>ggchord2</code> Library</p>
+      <h1 class="title">Correlations</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">stats</div>
-                <div class="quarto-category">dataviz</div>
-                <div class="quarto-category">R</div>
-                <div class="quarto-category">exploring data</div>
               </div>
                   </div>
   </div>
@@ -380,7 +318,7 @@ div.csl-indent {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">August 25, 2026</p>
+        <p class="date">September 10, 2026</p>
       </div>
     </div>
     
@@ -396,9 +334,7 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#call-libraries" id="toc-call-libraries" class="nav-link active" data-scroll-target="#call-libraries">Call Libraries</a></li>
-  <li><a href="#simulated-data" id="toc-simulated-data" class="nav-link" data-scroll-target="#simulated-data">Simulated Data</a></li>
-  <li><a href="#chord-diagram" id="toc-chord-diagram" class="nav-link" data-scroll-target="#chord-diagram">Chord Diagram</a></li>
+  <li><a href="#correlations" id="toc-correlations" class="nav-link active" data-scroll-target="#correlations">Correlations</a></li>
   </ul>
 </nav>
     </div>
@@ -409,347 +345,18 @@ div.csl-indent {
 
 
 
-<p>In <a href="https://agrogan1.github.io/blog.html#category=exploring%20data">other earlier posts</a>, I have looked at some ways to get an idea of what <em>scales</em> and <em>demographic</em> variables in my data are related to other <em>scales</em> and <em>demographic</em> variables in my data. One way of visualizing these relationships is a <a href="https://agrogan1.github.io/posts/chord-diagram/">chord diagram</a>.</p>
-<p>In this post, I try creating a <em>chord diagram</em> using the fantastic new <code>ggchord2</code> <span class="citation" data-cites="rennie2026 ggchord2">(<a href="#ref-ggchord2" role="doc-biblioref">Rennie, 2026a</a>, <a href="#ref-rennie2026" role="doc-biblioref">2026b</a>)</span>.</p>
-<section id="call-libraries" class="level1">
-<h1>Call Libraries</h1>
-<div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(faux) <span class="co"># simulated data</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pander) <span class="co"># nice tables</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(skimr) <span class="co"># descriptive statistics</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(circlize) <span class="co"># circular graphs and chord diagrams</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales) <span class="co"># viridis color palettes</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co"># beautiful graphs</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggchord2) <span class="co"># chord diagrams</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-</section>
-<section id="simulated-data" class="level1">
-<h1>Simulated Data</h1>
-<p>I again simulate some data.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">54321</span>) <span class="co"># random seed</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># simulate data</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>cmat <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">1.00</span>, <span class="fl">0.30</span>, <span class="fl">0.25</span>, <span class="fl">0.15</span>, <span class="fl">0.15</span>, <span class="fl">0.15</span>,</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>          <span class="fl">0.30</span>, <span class="fl">1.00</span>, <span class="fl">0.00</span>, <span class="fl">0.50</span>, <span class="fl">0.10</span>, <span class="fl">0.15</span>,</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>          <span class="fl">0.25</span>, <span class="fl">0.00</span>, <span class="fl">1.00</span>, <span class="fl">0.50</span>, <span class="fl">0.50</span>, <span class="fl">0.15</span>,</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>          <span class="fl">0.15</span>, <span class="fl">0.50</span>, <span class="fl">0.50</span>, <span class="fl">1.00</span>, <span class="fl">0.00</span>, <span class="fl">0.15</span>,</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>          <span class="fl">0.15</span>, <span class="fl">0.10</span>, <span class="fl">0.50</span>, <span class="fl">0.00</span>, <span class="fl">1.00</span>, <span class="fl">0.15</span>,</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>          <span class="fl">0.15</span>, <span class="fl">0.15</span>, <span class="fl">0.15</span>, <span class="fl">0.15</span>, <span class="fl">0.15</span>, <span class="fl">1.00</span>)</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>mydata <span class="ot">&lt;-</span> <span class="fu">rnorm_multi</span>(<span class="at">n =</span> <span class="dv">100</span>, </span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>                   <span class="at">mu =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">20</span>, <span class="dv">100</span>, <span class="dv">100</span>, <span class="dv">100</span>, <span class="dv">100</span>),</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>                   <span class="at">sd =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">5</span>),</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>                   <span class="at">r =</span> cmat, <span class="co"># correlation matrix</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>                   <span class="at">varnames =</span> <span class="fu">c</span>(<span class="st">"scaleA"</span>, </span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>                                <span class="st">"scaleB"</span>, </span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>                                <span class="st">"scaleC"</span>, </span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>                                <span class="st">"scaleD"</span>, </span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>                                <span class="st">"scaleE"</span>, </span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>                                <span class="st">"scaleF"</span>),</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>                   <span class="at">empirical =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Look At The Data
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pander</span>(<span class="fu">head</span>(mydata)) <span class="co"># nicely formatted table</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 13%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">scaleA</th>
-<th style="text-align: center;">scaleB</th>
-<th style="text-align: center;">scaleC</th>
-<th style="text-align: center;">scaleD</th>
-<th style="text-align: center;">scaleE</th>
-<th style="text-align: center;">scaleF</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">1.602</td>
-<td style="text-align: center;">23.34</td>
-<td style="text-align: center;">99.84</td>
-<td style="text-align: center;">97.63</td>
-<td style="text-align: center;">102.1</td>
-<td style="text-align: center;">101.5</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">1.452</td>
-<td style="text-align: center;">28.85</td>
-<td style="text-align: center;">101.6</td>
-<td style="text-align: center;">99.86</td>
-<td style="text-align: center;">105.9</td>
-<td style="text-align: center;">99.57</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">0.5092</td>
-<td style="text-align: center;">20.43</td>
-<td style="text-align: center;">105.6</td>
-<td style="text-align: center;">101.7</td>
-<td style="text-align: center;">102.4</td>
-<td style="text-align: center;">101</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">1.974</td>
-<td style="text-align: center;">21.07</td>
-<td style="text-align: center;">108.3</td>
-<td style="text-align: center;">106.9</td>
-<td style="text-align: center;">102</td>
-<td style="text-align: center;">106.1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">-0.9652</td>
-<td style="text-align: center;">17.06</td>
-<td style="text-align: center;">102</td>
-<td style="text-align: center;">106.7</td>
-<td style="text-align: center;">101.5</td>
-<td style="text-align: center;">95.6</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">0.7906</td>
-<td style="text-align: center;">22.49</td>
-<td style="text-align: center;">104</td>
-<td style="text-align: center;">111.2</td>
-<td style="text-align: center;">96.67</td>
-<td style="text-align: center;">98.47</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="cell" data-skimr_include_summary="false">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">skim</span>(mydata) <span class="co"># descriptive statistics</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output-display">
-<p><strong>Variable type: numeric</strong></p>
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 15%">
-<col style="width: 11%">
-<col style="width: 15%">
-<col style="width: 7%">
-<col style="width: 5%">
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 7%">
-<col style="width: 7%">
-<col style="width: 7%">
-<col style="width: 6%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">skim_variable</th>
-<th style="text-align: right;">n_missing</th>
-<th style="text-align: right;">complete_rate</th>
-<th style="text-align: right;">mean</th>
-<th style="text-align: right;">sd</th>
-<th style="text-align: right;">p0</th>
-<th style="text-align: right;">p25</th>
-<th style="text-align: right;">p50</th>
-<th style="text-align: right;">p75</th>
-<th style="text-align: right;">p100</th>
-<th style="text-align: left;">hist</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">scaleA</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">-0.05</td>
-<td style="text-align: right;">1.09</td>
-<td style="text-align: right;">-2.65</td>
-<td style="text-align: right;">-0.80</td>
-<td style="text-align: right;">-0.08</td>
-<td style="text-align: right;">0.65</td>
-<td style="text-align: right;">2.84</td>
-<td style="text-align: left;">▂▆▇▅▁</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">scaleB</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">20.13</td>
-<td style="text-align: right;">4.70</td>
-<td style="text-align: right;">7.58</td>
-<td style="text-align: right;">16.83</td>
-<td style="text-align: right;">20.32</td>
-<td style="text-align: right;">23.44</td>
-<td style="text-align: right;">29.89</td>
-<td style="text-align: left;">▁▅▇▆▃</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">scaleC</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">100.11</td>
-<td style="text-align: right;">4.84</td>
-<td style="text-align: right;">88.04</td>
-<td style="text-align: right;">96.77</td>
-<td style="text-align: right;">100.35</td>
-<td style="text-align: right;">102.94</td>
-<td style="text-align: right;">111.84</td>
-<td style="text-align: left;">▂▃▇▃▂</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">scaleD</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">100.75</td>
-<td style="text-align: right;">4.86</td>
-<td style="text-align: right;">88.29</td>
-<td style="text-align: right;">97.52</td>
-<td style="text-align: right;">100.31</td>
-<td style="text-align: right;">103.65</td>
-<td style="text-align: right;">113.34</td>
-<td style="text-align: left;">▁▆▇▆▁</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">scaleE</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">100.14</td>
-<td style="text-align: right;">4.95</td>
-<td style="text-align: right;">82.39</td>
-<td style="text-align: right;">97.41</td>
-<td style="text-align: right;">100.81</td>
-<td style="text-align: right;">103.05</td>
-<td style="text-align: right;">112.10</td>
-<td style="text-align: left;">▁▂▅▇▁</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">scaleF</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">100.24</td>
-<td style="text-align: right;">5.77</td>
-<td style="text-align: right;">86.48</td>
-<td style="text-align: right;">95.77</td>
-<td style="text-align: right;">100.42</td>
-<td style="text-align: right;">103.80</td>
-<td style="text-align: right;">113.96</td>
-<td style="text-align: left;">▁▇▇▅▂</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="chord-diagram" class="level1">
-<h1>Chord Diagram</h1>
-<p>For <code>ggchord</code> to work, I need data on the <em>correlations</em> of different scales, but need this correlation data to be formatted as a list of <em>sources</em> and <em>destinations.</em></p>
-<p>I therefore first create a correlation matrix of my data, and then reformat this correlation matrix as a data frame of <em>sources</em>, <em>destinations</em>, and <em>correlations.</em></p>
-<p><a href="https://www.tutorialspoint.com/article/how-to-convert-the-correlation-matrix-into-a-data-frame-with-combination-of-variables-and-their-correlations-in-r">https://www.tutorialspoint.com/</a> has a page suggesting how to achieve this using <em>Base R</em>.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>cor_mat <span class="ot">&lt;-</span> <span class="fu">cor</span>(mydata, <span class="co"># correlation matrix</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>               <span class="at">use =</span> <span class="st">"complete.obs"</span>)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">diag</span>(cor_mat) <span class="ot">&lt;-</span> <span class="dv">0</span> <span class="co"># set diagonal to 0</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># thanks tutorialspoint.com!</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>mychorddata <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">as.table</span>(cor_mat))</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(mychorddata) <span class="co"># look at the data</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>    Var1   Var2      Freq
-1 scaleA scaleA 0.0000000
-2 scaleB scaleA 0.5407251
-3 scaleC scaleA 0.4047779
-4 scaleD scaleA 0.2703827
-5 scaleE scaleA 0.3092786
-6 scaleF scaleA 0.1796353</code></pre>
-</div>
-</div>
-<p>Using <code>ggchord</code> is then relatively straightforward. I use <code>geom_chord_diagram</code> which adds all of the required geometries of a chord diagram, but could use other <code>geoms</code> to add each geometry separately.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pal_viridis()(5) # 5 viridis colors</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mychorddata, </span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">source =</span> Var1,</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">target =</span> Var2,</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">freq =</span> Freq,</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">fill =</span> Var1)) <span class="sc">+</span> </span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_chord_diagram</span>() <span class="sc">+</span> <span class="co"># add all the chord geoms</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># geom_chord_arcs() + # selecting specific </span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># geom_chord_sectors() + # chord geoms allows </span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># geom_chord_labels() + # for more customization</span></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_d</span>(<span class="at">name =</span> <span class="st">"scale"</span>) <span class="sc">+</span> <span class="co"># nice colors</span></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Relationship of Scales In Our Data"</span>) <span class="sc">+</span></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_fixed</span>(<span class="at">clip =</span> <span class="st">"off"</span>) <span class="co"># fixed coordinates; don't clip labels</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output-display">
-<div id="fig-chord-diagram" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-chord-diagram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="index_files/figure-html/fig-chord-diagram-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: a chord diagram"><img src="index_files/figure-html/fig-chord-diagram-1.png" class="img-fluid figure-img" width="768"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-chord-diagram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: a chord diagram
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-
+<section id="correlations" class="level1">
+<h1>Correlations</h1>
+<p>I have a few demonstrations of correlations but find myself looking for them often enough that I’ve made this sign post blog post to keep track of where they are.</p>
+<ul>
+<li><a href="https://agrogan.shinyapps.io/correlation_demo/">Correlation Demo</a></li>
+<li><a href="https://agrogan.shinyapps.io/thinking_about_correlations/">Thinking About Correlations</a></li>
+</ul>
 
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-ggchord2" class="csl-entry" role="listitem">
-Rennie, N. (2026a). <em>ggchord2: Chord diagrams with ’ggplot2’</em>. <a href="https://doi.org/10.32614/CRAN.package.ggchord2">https://doi.org/10.32614/CRAN.package.ggchord2</a>
-</div>
-<div id="ref-rennie2026" class="csl-entry" role="listitem">
-Rennie, N. (2026b). <em>Chord diagrams in <span>R</span> with ‘ggchord2‘</em>. <a href="https://nrennie.rbind.io/blog/chord-diagrams-ggchord2/">https://nrennie.rbind.io/blog/chord-diagrams-ggchord2/</a>
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -1151,38 +758,6 @@ Rennie, N. (2026b). <em>Chord diagrams in <span>R</span> with ‘ggchord2‘</em
   });
   </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 
