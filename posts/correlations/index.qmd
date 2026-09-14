@@ -1,0 +1,18 @@
+---
+title: "Correlations"
+author: "Andy Grogan-Kaylor" 
+categories: [stats]
+date: "2026-9-10"
+image: "correlation.png"
+---
+
+# Correlations
+
+I have a few demonstrations of correlations, but find myself looking for them often enough that I've made this sign-post blog entry to keep track of where they are.
+
+* [Correlation Demo](https://agrogan.shinyapps.io/correlation_demo/)
+* [Thinking About Correlations](https://agrogan.shinyapps.io/thinking_about_correlations/)
+
+
+
+
