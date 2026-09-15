@@ -3,6 +3,7 @@
     "listing": "/blog.html",
     "items": [
       "/posts/multilevel-thinking/index.html",
+      "/posts/terrible-first-drafts/index.html",
       "/posts/Cohens-d-calculator/index.html",
       "/posts/correlations/index.html",
       "/posts/stripplot/index.html",
@@ -134,7 +135,7 @@
     "items": []
   },
   {
-    "listing": "/contact.html",
+    "listing": "/posts/Bayesian-resources/index.html",
     "items": []
   },
   {
@@ -142,7 +143,7 @@
     "items": []
   },
   {
-    "listing": "/posts/Bayesian-resources/index.html",
+    "listing": "/contact.html",
     "items": []
   },
   {

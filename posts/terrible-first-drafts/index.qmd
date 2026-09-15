@@ -1,0 +1,16 @@
+---
+title: "Terrible First Drafts"
+subtitle: "Good Advice For Writing, Or For Any Project"
+author:  Andy Grogan-Kaylor 
+date: "2026-9-14"
+categories: [teaching, workflow]
+image: path.png
+---
+
+I have been thinking a lot about Anne Lamott's [@Lamott2017] idea that: 
+
+> "Every writer you know writes really terrible first drafts...".
+
+This seems to me to be good advice for any kind of writing, but also any kind of project in general!
+
+

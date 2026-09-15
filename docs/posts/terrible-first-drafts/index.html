@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Andy Grogan-Kaylor">
-<meta name="dcterms.date" content="2026-01-29">
+<meta name="dcterms.date" content="2026-09-14">
 
-<title>Multiple Principled Solutions – Andrew Grogan-Kaylor</title>
+<title>Terrible First Drafts – Andrew Grogan-Kaylor</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -96,20 +96,20 @@ div.csl-indent {
 
 
 <link rel="stylesheet" href="../../agrogan.css">
-<meta property="og:title" content="Multiple Principled Solutions – Andrew Grogan-Kaylor">
-<meta property="og:description" content="">
-<meta property="og:image" content="northernlights.png">
+<meta property="og:title" content="Terrible First Drafts – Andrew Grogan-Kaylor">
+<meta property="og:description" content="Good Advice For Writing, Or For Any Project">
+<meta property="og:image" content="path.png">
 <meta property="og:site_name" content="Andrew Grogan-Kaylor">
-<meta name="twitter:title" content="Multiple Principled Solutions – Andrew Grogan-Kaylor">
-<meta name="twitter:description" content="">
-<meta name="twitter:image" content="northernlights.png">
+<meta name="twitter:title" content="Terrible First Drafts – Andrew Grogan-Kaylor">
+<meta name="twitter:description" content="Good Advice For Writing, Or For Any Project">
+<meta name="twitter:image" content="path.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="citation_title" content="Multiple Principled Solutions">
+<meta name="citation_title" content="Terrible First Drafts">
 <meta name="citation_author" content="Andy Grogan-Kaylor">
-<meta name="citation_publication_date" content="2026-01-29">
-<meta name="citation_cover_date" content="2026-01-29">
+<meta name="citation_publication_date" content="2026-09-14">
+<meta name="citation_cover_date" content="2026-09-14">
 <meta name="citation_year" content="2026">
-<meta name="citation_online_date" content="2026-01-29">
+<meta name="citation_online_date" content="2026-09-14">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Spanking and adult mental health impairment: The case for the designation of spanking as an adverse childhood experience;,citation_abstract=Adverse Childhood Experiences (ACEs) such as child abuse are related to poor health outcomes. Spanking has indicated a similar association with health outcomes, but to date has not been considered an ACE. Physical and emotional abuse have been shown in previous research to correlate highly and may be similar in nature to spanking. To determine if spanking should be considered an ACE, this study aimed to examine 1): the grouping of spanking with physical and emotional abuse; and 2) if spanking has similar associations with poor adult health problems and accounts for additional model variance. Adult mental health problems included depressive affect, suicide attempts, moderate to heavy drinking, and street drug use. Data were from the CDC-Kaiser ACE study (N = 8316, response rate = 65;,citation_author=Tracie O. Afifi;,citation_author=Derek Ford;,citation_author=Elizabeth T. Gershoff;,citation_author=Melissa Merrick;,citation_author=Andrew Grogan-Kaylor;,citation_author=Katie A. Ports;,citation_author=Harriet L. MacMillan;,citation_author=George W. Holden;,citation_author=Catherine A. Taylor;,citation_author=Shawna J. Lee;,citation_author=Robbyn Peters Bennett;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_doi=10.1016/j.chiabu.2017.01.014;,citation_isbn=0145-2134;,citation_issn=18737757;,citation_volume=71;,citation_journal_title=Child Abuse and Neglect;">
 <meta name="citation_reference" content="citation_title=Interaction terms in logit and probit models;,citation_abstract=The magnitude of the interaction effect in nonlinear models does not equal the marginal effect of the interaction term, can be of opposite sign, and its statistical significance is not calculated by standard software. We present the correct way to estimate the magnitude and standard errors of the interaction effect in nonlinear models. © 2003 Elsevier Science B.V. All rights reserved.;,citation_author=Chunrong Ai;,citation_author=Edward C. Norton;,citation_publication_date=2003;,citation_cover_date=2003;,citation_year=2003;,citation_doi=10.1016/S0165-1765(03)00032-6;,citation_issn=01651765;,citation_journal_title=Economics Letters;">
@@ -316,13 +316,11 @@ div.csl-indent {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Multiple Principled Solutions</h1>
+      <h1 class="title">Terrible First Drafts</h1>
+            <p class="subtitle lead">Good Advice For Writing, Or For Any Project</p>
                                 <div class="quarto-categories">
-                <div class="quarto-category">stats</div>
-                <div class="quarto-category">workflow</div>
-                <div class="quarto-category">science</div>
                 <div class="quarto-category">teaching</div>
-                <div class="quarto-category">theory</div>
+                <div class="quarto-category">workflow</div>
               </div>
                   </div>
   </div>
@@ -340,7 +338,7 @@ div.csl-indent {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 29, 2026</p>
+        <p class="date">September 14, 2026</p>
       </div>
     </div>
     
@@ -361,28 +359,18 @@ div.csl-indent {
 
 
 
-<p>For me, a recurring idea about statistical workflows is that there are certainly <em>wrong</em> decisions that one can make with data.</p>
-<p>For example, I would not want to write the paper that says that smoking prevents lung cancer, nor would I want to write a paper saying spanking is good for children. (I talk in a little more detail about some of the statistical specifics of this process <a href="https://agrogan1.github.io/closeread/be-less-wrong/be-less-wrong.html">here</a>.)</p>
-<p>That being said, I think there are often <em>multiple principled ways forward</em> or <em>multiple principled solutions</em>.</p>
-<p>Often the key is not so much to make the 100% correct decision, but to make one of <em>several possible principled decisions</em>.</p>
-<p>Then after making a <em>principled decision</em>, one is <em>transparent</em> and <em>thorough</em> about describing the decision that one made.</p>
+<p>I have been thinking a lot about Anne Lamott’s <span class="citation" data-cites="Lamott2017">(<a href="#ref-Lamott2017" role="doc-biblioref">Lamott, 2017</a>)</span> idea that:</p>
 <blockquote class="blockquote">
-<p>“In general, when building statistical models, we must not forget that the aim is to understand something about the real world. Or predict, choose an action, make a decision, summarize evidence, and so on, but always about the real world, not an abstract mathematical world: our models are not the reality—a point well made by George Box in his oft-cited remark that <strong>‘all models are wrong, but some are useful’</strong> (Box, 1979 in <span class="citation" data-cites="MR0554183">Launer &amp; Wilkinson (<a href="#ref-MR0554183" role="doc-biblioref">1979</a>)</span>).” <span class="citation" data-cites="Hand2014">(<a href="#ref-Hand2014" role="doc-biblioref">Hand, 2014</a>)</span> [emphasis added]</p>
+<p>“Every writer you know writes really terrible first drafts…”.</p>
 </blockquote>
-<p>To propose a concrete example, to analyze <em>clustered data</em>, I could employ multilevel models, fixed effects regression, clustered standard errors, or generalized estimating equations. Each of these methods of analysis would carry with it different assumptions.</p>
-<p>To further illustrate this point, within the domain of <em>multilevel models</em>, I would have further choices: I could estimate only a random intercept; estimate one or more random slopes; or estimate all possible random slopes. These random effects could be correlated or uncorrelated. I could estimate only main effects, or could estimate interactions of several variables. Each of these would be a different, yet principled, approach to analyzing the data.</p>
-<p>As another example, to more robustly estimate <em>causal</em> effects, I could employ fixed effects, propensity scores, or cross-lagged regression models. Again, each of these methods of analysis would carry with it different assumptions, and would be a different, yet principled, approach to analyzing the data.</p>
-<p>In science and statistics, we often want an answer that provides one clear direction. Instead, I’m increasingly convinced that the best science (and teaching!) often involves engaging in open discussion about the multiple possible alternatives, and then choosing one principled solution and being transparent about its implementation.</p>
+<p>This seems to me to be good advice for any kind of writing, but also any kind of project in general!</p>
 
 
 
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-Hand2014" class="csl-entry" role="listitem">
-Hand, D. J. (2014). <span class="nocase">Wonderful Examples, but Let’s not Close Our Eyes</span>. <em>Statistical Science</em>, <em>29</em>(1), 98–100. <a href="https://doi.org/10.1214/13-STS446">https://doi.org/10.1214/13-STS446</a>
-</div>
-<div id="ref-MR0554183" class="csl-entry" role="listitem">
-Launer, R. L., &amp; Wilkinson, G. N. (1979). Robustness in statistics. In R. L. Launer &amp; G. N. Wilkinson (Eds.), <em>Proceedings of a <span>W</span>orkshop held at the <span>A</span>rmy <span>R</span>esearch <span>O</span>ffice, <span>R</span>esearch <span>T</span>riangle <span>P</span>ark, <span>N</span>.<span>C</span>., <span>A</span>pril 11–12, 1978</em> (p. xvi+296). Academic Press, Inc. [Harcourt Brace Jovanovich, Publishers], New York-London.
+<div id="ref-Lamott2017" class="csl-entry" role="listitem">
+Lamott, A. (2017). <em>12 truths <span>I</span> learned from life and writing</em>. TED. <a href="https://www.ted.com/talks/anne_lamott_12_truths_i_learned_from_life_and_writing">https://www.ted.com/talks/anne_lamott_12_truths_i_learned_from_life_and_writing</a>
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
