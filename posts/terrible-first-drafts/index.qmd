@@ -3,7 +3,7 @@ title: "Terrible First Drafts"
 subtitle: "Good Advice For Writing, Or For Any Project"
 author:  Andy Grogan-Kaylor 
 date: "2026-9-14"
-categories: [teaching, workflow]
+categories: [teaching, science, workflow]
 image: path.png
 ---
 
