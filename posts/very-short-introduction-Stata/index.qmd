@@ -56,7 +56,7 @@ Commands that you actually type are represented in `monospace` font. `x` and `y`
 [^logit]: Here we need to use the `, or` option to ask for *odds ratios* instead of *logit coefficients*.
 [^ologit]: Here again we need to use the `, or` option to ask for *odds ratios* instead of *logit coefficients*.
 [^mlogit]: Here we need to use the `, rr` option to ask for *risk ratios* instead of *logit coefficients*.
-[^melogit]: An equivalent multilevel *logistic* regression model would be `melogit y x z || group: x`.
+[^melogit]: An equivalent multilevel *logistic* regression model would be `melogit y x z || group: x, or`.
 [^graph]: For graphing commands, you can often add options after a `,`. e.g. `title("title of the graph")`, `xtitle("title of the x axis")`, `ytitle("title of the y axis")`.
 [^asyvars]: For bar graphs, the `asyvars` option is often helpful, as it causes the bars to be different colors.
 
