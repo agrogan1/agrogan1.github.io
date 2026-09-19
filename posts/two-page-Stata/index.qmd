@@ -2,7 +2,7 @@
 title: "Two Page Stata"
 subtitle: "Content updates and clarifications"
 author: "Andy Grogan-Kaylor" 
-date: "2024-2-15"
+date: "2026-9-1"
 categories: [stats, Stata]
 image: "Stata.png"
 ---
