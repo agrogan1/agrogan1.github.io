@@ -552,7 +552,7 @@ Visually, this is equivalent to the three dimensional figure that we encountered
 #| echo: false
 #| message: false
 #| warning: false
-#| fig-cap: "A Three Dimensional Graph"
+#| fig-cap: "A Manipulable Three Dimensional Graph"
 #| label: fig-threeD-2
 
 # rglwidget()
@@ -575,8 +575,9 @@ Briefly, one of the major advantages of a statistical approach is that we can wr
 A possible equation to estimate this model might look something like the below.
 
 $$\begin{aligned}
-& \text{outcome} = \\
-& \beta_0 + \beta \text{age} + \beta \text{gender} + \beta \text{SES} + \beta \text{motivation} \ + \\ 
+& \text{outcome}_2 = \\
+& \beta_0 + \beta \text{outcome}_1 + \\ 
+& \beta \text{age} + \beta \text{gender} + \beta \text{SES} + \beta \text{motivation} \ + \\ 
 & \Sigma \beta \text{background} + \Sigma \beta \text{history} + e_i
 \end{aligned}
 $$ {#eq-possible-equation}
