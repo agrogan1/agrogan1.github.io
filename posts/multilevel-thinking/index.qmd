@@ -3,7 +3,7 @@ title: "Multilevel Thinking"
 subtitle: "Discovering Variation, Universals, and Particulars in Cross-Cultural Research"
 author: "Andy Grogan-Kaylor"
 date: "today"
-categories: [stats, multilevel, book, teaching, Stata, R, Julia]
+categories: [stats, multilevel, book, Stata, R, Julia]
 image: "multilevel-thinking.png"
 ---
 

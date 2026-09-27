@@ -3,7 +3,7 @@ title: "Selected Statistical Resources"
 subtitle: "Moved from stats-stuff"
 author: "Andy Grogan-Kaylor" 
 date: "2025-11-28"
-categories: [stats, teaching]
+categories: [stats]
 image: data.png
 listing:
   type: grid

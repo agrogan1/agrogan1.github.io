@@ -3,7 +3,7 @@ title: "Quick Regression Demo"
 subtitle: A Quick Demonstration of Regression With the `iris` Data"
 author: "Andy Grogan-Kaylor"
 date: "2026-4-2"
-categories: [stats, teaching]
+categories: [stats]
 ---
 
 ```{r}

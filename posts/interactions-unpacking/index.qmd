@@ -2,7 +2,7 @@
 title: "Unpacking Interactions"
 author: "Andy Grogan-Kaylor" 
 date: "2025-6-10"
-categories: [stats, teaching, interactions]
+categories: [stats, interactions]
 ---
 
 ```{r}

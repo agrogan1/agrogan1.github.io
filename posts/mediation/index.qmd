@@ -2,7 +2,7 @@
 title: "Mediation"
 author: "Andy Grogan-Kaylor" 
 date: "2024-11-6"
-categories: [stats, teaching]
+categories: [stats]
 image: "gears.png"
 ---
 

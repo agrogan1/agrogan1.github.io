@@ -2,7 +2,7 @@
 title: "A Stata MLM Workflow"
 author: "Andy Grogan-Kaylor"
 date: "2025-7-1"
-categories: [stats, teaching, workflow, Stata, multilevel]
+categories: [stats, workflow, Stata, multilevel]
 ---
 
 # Background

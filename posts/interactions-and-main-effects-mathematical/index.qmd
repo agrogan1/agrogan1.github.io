@@ -3,7 +3,7 @@ title: "Interactions And Main Effects Need To Be Interpreted Together"
 subtitle: "A Mathematical Perspective"
 author: "Andy Grogan-Kaylor" 
 date: "2025-6-10"
-categories: [stats, teaching, interactions]
+categories: [stats, interactions]
 image: partial-derivative.png
 ---
 

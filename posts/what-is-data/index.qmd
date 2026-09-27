@@ -3,7 +3,7 @@ title: "What Is Data?"
 subtitle: "An Introductory Tutorial On The Basic Ideas of A Data Set"
 author: Andy Grogan-Kaylor
 date: "2025-6-1"
-categories: [stats, teaching]
+categories: [stats]
 image: "data.png"
 ---
 

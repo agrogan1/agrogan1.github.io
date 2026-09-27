@@ -2,7 +2,7 @@
 title: "Interactions and Moderation"
 author: "Andy Grogan-Kaylor" 
 date: "2025-7-1"
-categories: [stats, teaching, interactions]
+categories: [stats, interactions]
 image: "colorsplash.png"
 ---
 

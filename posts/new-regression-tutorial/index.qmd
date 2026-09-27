@@ -3,7 +3,7 @@ title: "The Idea of Regression"
 subtitle: "New Regression Tutorial (A Hypothetical Example With Runners)"
 author: "Andy Grogan-Kaylor" 
 date: "2026-3-26"
-categories: [teaching, stats]
+categories: [stats]
 fig-height: 3
 ---
 

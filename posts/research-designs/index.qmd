@@ -2,7 +2,7 @@
 title: "Why Do We Need Good Research Designs To Evaluate Social Programs?"
 author:  Andy Grogan-Kaylor 
 date: "2026-5-8"
-categories: [stats, science, teaching]
+categories: [stats, science]
 image: "research-design.png"
 mermaid:
   theme: neutral
