@@ -416,7 +416,7 @@ flowchart LR
 When participation in a program is not randomly assigned, we need to think about a way to [**account for**]{fg="#FF0000"}, or [**model**]{fg="#FF0000"} the various background and demographic factors that may be different between participants and non-participants.
 
 :::{.story-scroll-hint}
-Take a look at both 
+Take a look at both
 
 `r emo::ji("down_left_arrow")`
 a Visual Exploration and 
@@ -433,7 +433,7 @@ a Statistical Exploration.
     align-items: center;
     gap: 4px;
     margin-top: 30px;
-    color: darkgrey;
+    color: darkgrey !important;
     font-size: 1.0rem;
     font-weight: 600;
     letter-spacing: 1px;
