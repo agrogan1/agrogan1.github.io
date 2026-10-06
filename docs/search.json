@@ -1677,7 +1677,7 @@
     "href": "posts/interactions-unpacking/index.html",
     "title": "Unpacking Interactions",
     "section": "",
-    "text": "Figure 1: Unpacking Interactions\n\n\n\nEach group in Figure 1 has its own intercept and slope:\n\n\n\nTable 1: Unpacking Interactions\n\n\n\n\n\nGroup\nIntercept\nSlope\n\n\n\n\nx = 0\n\\(\\beta_0\\)\n\\(\\beta_2\\)\n\n\nx = 1\n\\(\\beta_0 + \\beta_1\\)\n\\(\\beta_2 + \\beta_3\\)"
+    "text": "Figure\n\n\n\n\n\n\nFigure 1: Unpacking Interactions\n\n\n\n\n\nTable\nEach group in Figure 1 has its own intercept and slope:\n\n\n\nTable 1: Unpacking Interactions\n\n\n\n\n\nGroup\nIntercept\nSlope\n\n\n\n\nx = 0\n\\(\\beta_0\\)\n\\(\\beta_2\\)\n\n\nx = 1\n\\(\\beta_0 + \\beta_1\\)\n\\(\\beta_2 + \\beta_3\\)"
   },
   {
     "objectID": "posts/Bayestalk/index.html",

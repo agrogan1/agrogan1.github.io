@@ -12,6 +12,8 @@ library(Statamarkdown)
 
 ```
 
+# Figure
+
 ```{stata}
 *| output: false
 
@@ -37,6 +39,8 @@ graph export "interactions-unpacking.png", as(png) name("unpacking") replace
 ```
 
 ![Unpacking Interactions](interactions-unpacking.png){#fig-unpacking}
+
+# Table
 
 Each group in @fig-unpacking has its own intercept and slope:
 
