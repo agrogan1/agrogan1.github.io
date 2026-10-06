@@ -111,7 +111,37 @@ In Stata, there are four types of merges `1:1` (one to one), `1:m` (one to many)
 
 In this post, I consider the `1:1` and `m:1` merges.
 
-Looking at your data using `list` or `browse` is often very helpful. In this post, I use the `list in x` syntax to list the first `x` observations of different data sets.
+:::{.story-scroll-hint}
+Continuously looking at your data 
+
+using `list` or `browse` 
+
+is often very helpful.
+:::
+
+```{css, echo=FALSE}
+
+.story-scroll-hint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin-top: 30px;
+    color: darkgrey !important;
+    font-size: 1.0rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    animation: storyScrollBounce 2s ease-in-out infinite;
+  }
+
+  @keyframes storyScrollBounce {
+    0%, 100% { transform: translateY(0); opacity: 0.6; }
+    50% { transform: translateY(6px); opacity: 1; }
+}
+
+```
+
+In this post, I use the `list in x` syntax to list the first `x` observations of different data sets.
 
 ::: {.callout-tip}
 ## Key Idea
