@@ -19,8 +19,8 @@ In some commands, I use `///` so that Stata commands can be on multiple lines.
 This is a quick guide to these ideas using the [Palmer Penguins Data](https://github.com/allisonhorst/palmerpenguins/blob/master/README.md).
 
 ::: {layout-ncol=2}
-![Palmer Penguins Illustration from Allison Horst](lter_penguins.png){width=33%}
-![Culmen Depth from Allison Horst](culmen_depth.png){width=33%}
+![Palmer Penguins Illustration from Allison Horst](lter_penguins.png){width=45%}
+![Culmen Depth from Allison Horst](culmen_depth.png){width=45%}
 :::
 
 # Setup
