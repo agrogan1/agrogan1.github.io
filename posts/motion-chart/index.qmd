@@ -1,0 +1,90 @@
+---
+title: "Motion Chart"
+author:  Andy Grogan-Kaylor 
+date: "2026-10-10"
+categories: [stats, dataviz]
+image: "motion-chart.png"
+code-fold: true
+code-summary: "Show the code"
+draft: false
+---
+
+Using [Observable JavaScript](https://quarto.org/docs/interactive/ojs/) in Quarto, I have worked to build an example motion chart of the World Bank Data similar to those in [this example](../wbdemo/#plot-the-motion-charts).
+
+```{ojs}
+//| echo: true
+//| eval: true
+
+mydata = FileAttachment("WorldBankData.csv").csv({ typed: true })
+
+```
+
+```{ojs}
+//| echo: true
+//| eval: true
+
+viewof YEAR = Inputs.range(
+  [2000, 2020], 
+  {value: 2000, step: 1, label: "Year:"}
+)
+
+```
+
+```{ojs}
+//| echo: true
+//| eval: true
+
+Plot.plot({
+  grid: true,
+  color: {legend: false},
+  symbol: {legend: true},
+  x: { type: "log" },
+  marks: [
+    Plot.dot(mydata.filter(mydata=> mydata.year === YEAR), 
+      {x: "GDP", 
+      y: "life_expectancy", 
+      fill: "region", 
+      r: "population", 
+      channels: {name: "country"}, 
+      tip: true}),
+    Plot.linearRegressionY(mydata.filter(mydata=> mydata.year === YEAR), 
+      { x: "GDP", y: "life_expectancy", stroke: "red" })
+
+  ]
+})
+
+```
+
+```{ojs}
+//| echo: false
+//| eval: false
+
+viewof YEAR2 = Inputs.range(
+  [2000, 2020], 
+  {value: 2000, step: 1, label: "Year:"}
+)
+
+```
+
+```{ojs}
+//| echo: false
+//| eval: false
+
+Plot.plot({
+  grid: true,
+  color: {legend: false},
+  symbol: {legend: true},
+  x: {domain: [2000, 2020]},
+  marks: [
+    Plot.dot(mydata.filter(mydata=> mydata.year === YEAR2), 
+      {x: "year", 
+      y: "life_expectancy", 
+      fill: "region", 
+      r: "population", 
+      channels: {name: "country"}, 
+      tip: true})
+  ]
+})
+
+```
+

@@ -3,6 +3,7 @@
     "listing": "/blog.html",
     "items": [
       "/posts/multilevel-thinking/index.html",
+      "/posts/motion-chart/index.html",
       "/posts/two-page-Stata/index.html",
       "/posts/very-short-introduction-Stata/index.html",
       "/posts/terrible-first-drafts/index.html",
@@ -139,11 +140,11 @@
     "items": []
   },
   {
-    "listing": "/teaching.html",
+    "listing": "/contact.html",
     "items": []
   },
   {
-    "listing": "/contact.html",
+    "listing": "/teaching.html",
     "items": []
   },
   {
