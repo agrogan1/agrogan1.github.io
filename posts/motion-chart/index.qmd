@@ -11,6 +11,8 @@ draft: false
 
 Using [Observable JavaScript](https://quarto.org/docs/interactive/ojs/) in Quarto, I have worked to build an example motion chart of the World Bank Data similar to those in [this example](../wbdemo/#plot-the-motion-charts).
 
+# Setup
+
 ```{ojs}
 //| echo: true
 //| eval: true
@@ -23,10 +25,28 @@ mydata = FileAttachment("WorldBankData.csv").csv({ typed: true })
 //| echo: true
 //| eval: true
 
+import {Scrubber} from "@mbostock/scrubber"
+
+```
+
+```{ojs}
+//| echo: false
+//| eval: false
+
 viewof YEAR = Inputs.range(
   [2000, 2020], 
   {value: 2000, step: 1, label: "Year:"}
 )
+
+```
+
+# Motion Chart of Life Expectancy by GDP from World Bank Data
+
+```{ojs}
+//| echo: true
+//| eval: true
+
+viewof YEAR = Scrubber(d3.range(2000, 2020), {delay: 1000})
 
 ```
 
