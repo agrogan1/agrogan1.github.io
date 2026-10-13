@@ -1,0 +1,41 @@
+---
+title: "Data = Model + Error"
+author:  Andy Grogan-Kaylor 
+date: "2026-10-12"
+categories: [stats]
+draft: true
+filters:
+  - highlight-text
+---
+
+A quick post about a phrase that has proven useful in teaching statistics.
+
+```{r}
+
+library(ggplot2) # dummy call to ggplot
+
+```
+
+```{css, echo = FALSE}
+
+.math.display .MathJax {
+  font-size: 300% !important;
+}
+
+```
+
+$$\text{\color{purple}{Data}} = \text{\color{blue}{Model}} + \text{\color{red}{Error}}$$
+
+I have no clear memory of where I first heard this phrase, but I have an idea that it was in the blog of [https://www.johndcook.com/](https://www.johndcook.com/).
+
+The idea, as I have understood it, is that our [**observed data about the real world**]{fg="#800080"}, can be broken down into two parts: [**our model of the world**]{fg="#0000FF"}; and [**the ways in which our model is wrong**]{fg="#FF0000"}.
+
+
+
+
+
+
+
+
+
+

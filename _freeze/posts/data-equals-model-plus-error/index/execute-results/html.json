@@ -1,0 +1,15 @@
+{
+  "hash": "cf409320a3d14dd93cf6f3619b808174",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Data = Model + Error\"\nauthor:  Andy Grogan-Kaylor \ndate: \"2026-10-12\"\ncategories: [stats]\ndraft: false\nfilters:\n  - highlight-text\n---\n\nA quick post about a phrase that has proven useful in teaching statistics.\n\n\n::: {.cell}\n\n:::\n\n\n\n::: {.cell}\n<style type=\"text/css\">\n\n.math.display .MathJax {\n  font-size: 300% !important;\n}\n\n</style>\n:::\n\n\n$$\\text{\\color{purple}{Data}} = \\text{\\color{blue}{Model}} + \\text{\\color{red}{Error}}$$\n\nI have no clear memory of where I first heard this phrase, but I have an idea that it was in the blog of [https://www.johndcook.com/](https://www.johndcook.com/).\n\nThe idea, as I have understood it, is that our [**observed data about the real world**]{fg=\"#800080\"}, can be broken down into two parts: [**our model of the world**]{fg=\"#0000FF\"}; and [**the ways in which our model is wrong**]{fg=\"#FF0000\"}.\n\n\n\n\n\n\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
