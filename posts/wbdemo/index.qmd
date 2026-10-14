@@ -250,7 +250,8 @@ p0 <- ggplot(mydata,
   labs(title = "Life Expectancy by Year",
        x = "Year",
        y = "Life Expectancy") +
-  scale_color_discrete(name = "Region")
+  scale_color_discrete(name = "Region") + 
+  theme_minimal()
 
 ggplotly(p0)
 
@@ -314,6 +315,33 @@ p1 %>%
 
 ## Life Expectancy by GDP
 
+::: {.panel-tabset}
+
+### `ggplot` with `ggplotly`
+
+```{r}
+#| echo: true
+
+p2ggplot <- ggplot(mydata,
+       aes(x = GDP,
+           y = life_expectancy,
+           color = region,
+           size = population,
+           frame = year,
+           label = country)) + 
+  geom_point() +
+  labs(title = "Life Expectancy by GDP",
+       x = "GDP",
+       y = "Life Expectancy") +
+  scale_color_discrete(name = "Region") +
+  theme_minimal()
+
+ggplotly(p2ggplot)
+
+```
+
+### `plotly`
+
 ```{r}
 #| warning: false
 #| echo: true
@@ -340,6 +368,8 @@ p2
 
 ```
 
+:::
+
 ## Life Expectancy by Logged GDP
 
 Using logged GDP on the *x axis* means that we are looking at *relative*, instead of *absolute* changes in GDP.
@@ -363,7 +393,8 @@ p3 <- ggplot(mydata,
        x = "GDP",
        y = "Life Expectancy") +
   scale_color_discrete(name = "Region") +
-  scale_x_log10()
+  scale_x_log10() + 
+  theme_minimal()
 
 ggplotly(p3)
 
