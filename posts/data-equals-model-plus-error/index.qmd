@@ -24,13 +24,17 @@ library(ggplot2) # dummy call to ggplot
 
 ```
 
-$$\text{\color{purple}{Data}} = \text{\color{blue}{Model}} + \text{\color{red}{Error}}$$
+$$\text{\color{purple}{Data}} = \text{\color{blue}{Model}} + \text{\color{red}{Error}}$$ {#eq-data-equals-model-plus-error}
 
 I have no clear memory of where I first heard this phrase, but I have an idea that it was in the blog of [https://www.johndcook.com/](https://www.johndcook.com/).
 
 The idea, as I have understood it, is that our [**observed data about the real world**]{fg="#800080"}, can be broken down into two parts: [**our model of the world**]{fg="#0000FF"}; and [**the ways in which our model is wrong**]{fg="#FF0000"}.
 
+Consider a basic regression equation:
 
+$$y_i = \beta_0 + \beta_1 x_{1i} + e_i$$
+
+Broadly speaking, as we add independent variables (e.g. $x_2, x_3, \text{etc}...$) to the [**model**]{fg="#0000FF"} we reduce the amount of variation in $y_i$ that needs to be explained by the [**error**]{fg="#FF0000"}, $e_i$:  as the model gains more power, the error decreases
 
 
 
