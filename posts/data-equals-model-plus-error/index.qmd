@@ -3,7 +3,7 @@ title: "Data = Model + Error"
 author:  Andy Grogan-Kaylor 
 date: "2026-10-12"
 categories: [stats]
-draft: true
+draft: false
 filters:
   - highlight-text
 ---
@@ -32,9 +32,11 @@ The idea, as I have understood it, is that our [**observed data about the real w
 
 Consider a basic regression equation:
 
-$$y_i = \beta_0 + \beta_1 x_{1i} + e_i$$
+$$\color{purple}{y_i} \color{black}{=} \color{blue}{\beta_0 + \beta_1 x_{1i}} \color{black}{+} \color{red}{e_i}$$ {#eq-basic-regression-equation}
 
-Broadly speaking, as we add independent variables (e.g. $x_2, x_3, \text{etc}...$) to the [**model**]{fg="#0000FF"} we reduce the amount of variation in $y_i$ that needs to be explained by the [**error**]{fg="#FF0000"}, $e_i$:  as the model gains more power, the error decreases
+Broadly speaking, as we add independent variables (e.g. $x_2, x_3, \text{etc}...$) to the [**model**]{fg="#0000FF"} we reduce the amount of variation in $y_i$ that needs to be explained by the [**error**]{fg="#FF0000"}, $e_i$:  as the model gains more power, the error decreases.
+
+This idea has specific implications for multilevel models, because multilevel models divide up the [**error**]{fg="#FF0000"} into pieces. For example $e_{ij}$ may become $e_{ij} + u_{0j}$. As the $x$'s in the model start to explain more and more of the variation in the dependent variable $y_{ij}$, the random intercept $u_{0j}$, possibly along with other random effects, often becomes less and less significant, and may ultimately become an *insignificant* part of the model. Put more intuitively: sometimes one starts with an unconditional multilevel model in which the random effects are a statistically significant part; as more and more $x$'s are added to the model, the random effects (e.g. $u_{0j}$) become less and less important and may even become statistically insignificant!
 
 
 
