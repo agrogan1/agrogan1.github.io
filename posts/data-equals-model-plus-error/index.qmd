@@ -1,14 +1,17 @@
 ---
 title: "Data = Model + Error"
 author:  Andy Grogan-Kaylor 
-date: "2026-10-12"
+date: "2026-10-15"
 categories: [stats]
 draft: false
+image: lightbulb.png
 filters:
   - highlight-text
 ---
 
-A quick post about a phrase that has proven useful in teaching statistics.
+# Introducing the Idea
+
+A quick post about an idea that has proven useful in teaching statistics.
 
 ```{r}
 
@@ -36,8 +39,19 @@ $$\color{purple}{y_i} \color{black}{=} \color{blue}{\beta_0 + \beta_1 x_{1i}} \c
 
 Broadly speaking, as we add independent variables (e.g. $x_2, x_3, \text{etc}...$) to the [**model**]{fg="#0000FF"} we reduce the amount of variation in $y_i$ that needs to be explained by the [**error**]{fg="#FF0000"}, $e_i$:  as the model gains more power, the error decreases.
 
-This idea has specific implications for multilevel models, because multilevel models divide up the [**error**]{fg="#FF0000"} into pieces. For example $e_{ij}$ may become $e_{ij} + u_{0j}$. As the $x$'s in the model start to explain more and more of the variation in the dependent variable $y_{ij}$, the random intercept $u_{0j}$, possibly along with other random effects, often becomes less and less significant, and may ultimately become an *insignificant* part of the model. Put more intuitively: sometimes one starts with an unconditional multilevel model in which the random effects are a statistically significant part; as more and more $x$'s are added to the model, the random effects (e.g. $u_{0j}$) become less and less important and may even become statistically insignificant!
+::: {.callout-tip}
+## Specific Implications for Multilevel Models
 
+This idea has specific implications for multilevel models, because multilevel models divide up the [**error**]{fg="#FF0000"} into pieces. For example $e_{ij}$ may become $e_{ij} + u_{0j}$. As the $x$'s in the model start to explain more and more of the variation in the dependent variable $y_{ij}$, the random intercept $u_{0j}$, possibly along with other random effects, often becomes less and less significant, and may ultimately become an *insignificant* part of the model. Put more intuitively: sometimes one starts with an unconditional multilevel model in which the random effects are a statistically significant part; as more and more $x$'s are added to the model, the random effects (e.g. $u_{0j}$) become less and less important and may even become statistically insignificant! As we improve the multilevel model, the multilevel aspect of the model may become unnecessary!
+:::
+
+# "All Models Are Wrong, Some Are Useful"
+
+I am perennially thinking about George Box's idea that "all models are wrong, and some are useful" [@Box1979]. Box's idea seems to have some connections to the idea that $\text{\color{purple}{Data}} = \text{\color{blue}{Model}} + \text{\color{red}{Error}}$. As we add independent variables to our model, we are essentially trying to make our model less wrong. Models are abstractions of reality, so no model is a perfect accounting of reality, but we can always test our models against the data. And we can test whether a more complex model is less wrong than a simpler model. 
+
+# A Map of the World
+
+I also connect Box's idea, and the idea of $\text{\color{purple}{Data}} = \text{\color{blue}{Model}} + \text{\color{red}{Error}}$ to Borges' [-@Borges] story of the map-maker. Briefly, the map-maker tried to make as accurate a map of the world as they could. But this perfectly accurate map turned out to be as large as the world itself, and therefore of little use. To be useful, a map has to be an abstraction, it has to be smaller than the world that it tries to describe. 
 
 
 

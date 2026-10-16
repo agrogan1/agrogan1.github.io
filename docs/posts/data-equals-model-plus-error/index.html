@@ -25,7 +25,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -107,10 +127,12 @@ window.Quarto = {
 <link rel="stylesheet" href="../../agrogan.css">
 <meta property="og:title" content="Data = Model + Error – Andrew Grogan-Kaylor">
 <meta property="og:description" content="">
+<meta property="og:image" content="lightbulb.png">
 <meta property="og:site_name" content="Andrew Grogan-Kaylor">
 <meta name="twitter:title" content="Data = Model + Error – Andrew Grogan-Kaylor">
 <meta name="twitter:description" content="">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="lightbulb.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="citation_title" content="Data = Model + Error">
 <meta name="citation_author" content="Andy Grogan-Kaylor">
 <meta name="citation_publication_date" content="2026-10-12">
@@ -124,6 +146,7 @@ window.Quarto = {
 <meta name="citation_reference" content="citation_title=Resolution on physical discipline of children by parents;,citation_author=American Psychological Association;,citation_publication_date=2019;,citation_cover_date=2019;,citation_year=2019;,citation_fulltext_html_url=https://www.apa.org/about/policy/physical-discipline.pdf;,citation_technical_report_institution=American Psychological Association;">
 <meta name="citation_reference" content="citation_title=Address to world bank conference ’global knowledge ’97;,citation_author=Kofi Annan;,citation_publication_date=1997;,citation_cover_date=1997;,citation_year=1997;,citation_inbook_title=Global knowledge ’97;">
 <meta name="citation_reference" content="citation_title=Inequality in postscondary education;,citation_author=Martha Bailey;,citation_author=Susan Dynarski;,citation_editor=Greg Duncan;,citation_editor=Richard Murnane;,citation_publication_date=2011;,citation_cover_date=2011;,citation_year=2011;,citation_inbook_title=Whither opportunity?: Rising inequality, schools, and children’s life chances;">
+<meta name="citation_reference" content="citation_title=A universal history of iniquity;,citation_author=Jorge Luis Borges;">
 <meta name="citation_reference" content="citation_title=Robustness in the strategy of scientific model building;,citation_author=George Box;,citation_editor=Robert L. Launer;,citation_editor=Graham N. Wilkinson;,citation_publication_date=1979;,citation_cover_date=1979;,citation_year=1979;,citation_isbn=0-12-438150-2;,citation_inbook_title=Robustness in statistics;">
 <meta name="citation_reference" content="citation_title=Empirical model-building and response surfaces;,citation_author=G. E. P. Box;,citation_author=N. R. Draper;,citation_publication_date=1987;,citation_cover_date=1987;,citation_year=1987;,citation_isbn=9780471810339;,citation_series_title=Wiley series in probability and statistics;">
 <meta name="citation_reference" content="citation_title=Liberation Social Psychology: Learning From Latin America Psychology of liberation: Learning from Latin America;,citation_abstract=Liberation Social Psychology (la psicologia social de la liberacion, LSP) has developed amongst a body of psychologists in Latin America over the last decade. There has been no survey of the field in English, although some of the ideas are of relevance for those working with oppressed groups elsewhere in the world. This article explores the context in which LSP grew from the work of Ignacio Martin-Baro and was developed by Maritza Montero, amongst others. Within LSP, key concepts emerge, including ’conscientization’, ’realismo-critico’, ’de-ideologization’, a social orientation, ’the preferential option for the oppressed majorities’ and methodological eclecticism. The application of LSP is explored with reference to three domains. First, it is suggested that community social psychology as practised in some parts of Latin America reflects LSP in its emphasis on social transformation and participatory methods. Second, psycho-social work with victims of state oppression, which adopts a highly social and societal orientation embodies LSP. Third, social analyses which explicitly adopt socio-psychological-political analyses of the social realities confronting countries in Latin America embrace, in different ways, principles and concepts of LSE Some of the challenges facing LSP are discussed and open dialogue is encouraged between LSP and critical, community and applied social psychologists. Copyright (C) 2004 John Wiley Sons, Ltd.;,citation_author=Mark Burton;,citation_author=Carolyn Kagan;,citation_publication_date=2005-01;,citation_cover_date=2005-01;,citation_year=2005;,citation_doi=10.1002/casp.786;,citation_volume=15;,citation_journal_title=Journal of Community &amp;amp;amp; Applied Social Psychology;">
@@ -354,8 +377,16 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introducing-the-idea" id="toc-introducing-the-idea" class="nav-link active" data-scroll-target="#introducing-the-idea">Introducing the Idea</a></li>
+  <li><a href="#all-models-are-wrong-some-are-useful" id="toc-all-models-are-wrong-some-are-useful" class="nav-link" data-scroll-target="#all-models-are-wrong-some-are-useful">“All Models Are Wrong, Some Are Useful”</a></li>
+  <li><a href="#a-map-of-the-world" id="toc-a-map-of-the-world" class="nav-link" data-scroll-target="#a-map-of-the-world">A Map of the World</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -364,7 +395,9 @@ window.Quarto = {
 
 
 
-<p>A quick post about a phrase that has proven useful in teaching statistics.</p>
+<section id="introducing-the-idea" class="level1">
+<h1>Introducing the Idea</h1>
+<p>A quick post about an idea that has proven useful in teaching statistics.</p>
 <div class="cell">
 <style type="text/css">
 
@@ -380,11 +413,40 @@ window.Quarto = {
 <p>Consider a basic regression equation:</p>
 <p><span id="eq-basic-regression-equation"><span class="math display">\[\color{purple}{y_i} \color{black}{=} \color{blue}{\beta_0 + \beta_1 x_{1i}} \color{black}{+} \color{red}{e_i} \tag{2}\]</span></span></p>
 <p>Broadly speaking, as we add independent variables (e.g.&nbsp;<span class="math inline">\(x_2, x_3, \text{etc}...\)</span>) to the <span class="light-content" data-fg="#0000FF" style="color: #0000FF;"><strong>model</strong></span> we reduce the amount of variation in <span class="math inline">\(y_i\)</span> that needs to be explained by the <span class="light-content" data-fg="#FF0000" style="color: #FF0000;"><strong>error</strong></span>, <span class="math inline">\(e_i\)</span>: as the model gains more power, the error decreases.</p>
-<p>This idea has specific implications for multilevel models, because multilevel models divide up the <span class="light-content" data-fg="#FF0000" style="color: #FF0000;"><strong>error</strong></span> into pieces. For example <span class="math inline">\(e_{ij}\)</span> may become <span class="math inline">\(e_{ij} + u_{0j}\)</span>. As the <span class="math inline">\(x\)</span>’s in the model start to explain more and more of the variation in the dependent variable <span class="math inline">\(y_{ij}\)</span>, the random intercept <span class="math inline">\(u_{0j}\)</span>, possibly along with other random effects, often becomes less and less significant, and may ultimately become an <em>insignificant</em> part of the model. Put more intuitively: sometimes one starts with an unconditional multilevel model in which the random effects are a statistically significant part; as more and more <span class="math inline">\(x\)</span>’s are added to the model, the random effects (e.g.&nbsp;<span class="math inline">\(u_{0j}\)</span>) become less and less important and may even become statistically insignificant!</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Specific Implications for Multilevel Models
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This idea has specific implications for multilevel models, because multilevel models divide up the <span class="light-content" data-fg="#FF0000" style="color: #FF0000;"><strong>error</strong></span> into pieces. For example <span class="math inline">\(e_{ij}\)</span> may become <span class="math inline">\(e_{ij} + u_{0j}\)</span>. As the <span class="math inline">\(x\)</span>’s in the model start to explain more and more of the variation in the dependent variable <span class="math inline">\(y_{ij}\)</span>, the random intercept <span class="math inline">\(u_{0j}\)</span>, possibly along with other random effects, often becomes less and less significant, and may ultimately become an <em>insignificant</em> part of the model. Put more intuitively: sometimes one starts with an unconditional multilevel model in which the random effects are a statistically significant part; as more and more <span class="math inline">\(x\)</span>’s are added to the model, the random effects (e.g.&nbsp;<span class="math inline">\(u_{0j}\)</span>) become less and less important and may even become statistically insignificant! As we improve the multilevel model, the multilevel aspect of the model may become unnecessary!</p>
+</div>
+</div>
+</section>
+<section id="all-models-are-wrong-some-are-useful" class="level1">
+<h1>“All Models Are Wrong, Some Are Useful”</h1>
+<p>I am perennially thinking about George Box’s idea that “all models are wrong, and some are useful” <span class="citation" data-cites="Box1979">(<a href="#ref-Box1979" role="doc-biblioref">Box, 1979</a>)</span>. Box’s idea seems to have some connections to the idea that <span class="math inline">\(\text{\color{purple}{Data}} = \text{\color{blue}{Model}} + \text{\color{red}{Error}}\)</span>. As we add independent variables to our model, we are essentially trying to make our model less wrong. Models are abstractions of reality, so no model is a perfect accounting of reality, but we can always test our models against the data. And we can test whether a more complex model is less wrong than a simpler model.</p>
+</section>
+<section id="a-map-of-the-world" class="level1">
+<h1>A Map of the World</h1>
+<p>I also connect Box’s idea, and the idea of <span class="math inline">\(\text{\color{purple}{Data}} = \text{\color{blue}{Model}} + \text{\color{red}{Error}}\)</span> to Borges’ <span class="citation" data-cites="Borges">(<a href="#ref-Borges" role="doc-biblioref">1946; 2004</a>)</span> story of the map-maker. Briefly, the map-maker tried to make as accurate a map of the world as they could. But this perfectly accurate map turned out to be as large as the world itself, and therefore of little use. To be useful, a map has to be an abstraction, it has to be smaller than the world that it tries to describe.</p>
 
 
 
-</main> <!-- /main -->
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-Borges" class="csl-entry" role="listitem">
+Borges, J. L. (1946; 2004). <em>A universal history of iniquity</em>. Penguin Publishing Group.
+</div>
+<div id="ref-Box1979" class="csl-entry" role="listitem">
+Box, G. (1979). Robustness in the strategy of scientific model building. In R. L. Launer &amp; G. N. Wilkinson (Eds.), <em>Robustness in statistics</em>. Academic Press, Inc. [Harcourt Brace Jovanovich, Publishers], New York-London.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

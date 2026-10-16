@@ -65,7 +65,7 @@ Plot.plot({
       y: "life_expectancy", 
       fill: "region", 
       r: "population", 
-      channels: {name: "country"}, 
+      channels: {name: "country", year: "year"}, 
       tip: true}),
     Plot.linearRegressionY(mydata.filter(mydata=> mydata.year === YEAR), 
       { x: "GDP", y: "life_expectancy", stroke: "red" })
