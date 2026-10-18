@@ -3,6 +3,7 @@
     "listing": "/blog.html",
     "items": [
       "/posts/multilevel-thinking/index.html",
+      "/posts/corrgram/index.html",
       "/posts/data-equals-model-plus-error/index.html",
       "/posts/motion-chart/index.html",
       "/posts/two-page-Stata/index.html",
@@ -137,11 +138,7 @@
     "items": []
   },
   {
-    "listing": "/posts/R-resources/index.html",
-    "items": []
-  },
-  {
-    "listing": "/teaching.html",
+    "listing": "/posts/Bayesian-resources/index.html",
     "items": []
   },
   {
@@ -149,7 +146,11 @@
     "items": []
   },
   {
-    "listing": "/posts/Bayesian-resources/index.html",
+    "listing": "/teaching.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/R-resources/index.html",
     "items": []
   },
   {

@@ -62,6 +62,8 @@ mydata <- rnorm_multi(n = 100,
                                 "scaleF"),
                    empirical = FALSE)
 
+save(mydata, file = "mydata.RData")
+
 ```
 
 ::: {.callout-note collapse="true"}

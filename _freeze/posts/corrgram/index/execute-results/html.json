@@ -1,0 +1,17 @@
+{
+  "hash": "84179eedae32ae127b920218e300468e",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"An Updated `corrgram`\"\nauthor: \"Andy Grogan-Kaylor\" \ndate: \"2026-10-17\"\ncategories: [stats, dataviz, R, exploring data]\necho: true\ncode-fold: true\ncode-summary: \"Show the code\"\nhighlight-style: haddock\n---\n\nIn [earlier posts](https://agrogan1.github.io/blog.html#category=exploring%20data), I have been looking at different ways to get an idea of what *scales* and *demographic* variables in my data are related to other *scales* and *demographic* variables in my data. \n\nIn [a post from a while back](../what-is-related-to-what), I looked at `corrgram`s [@corrgram]. I think that there are many ways to explore data visually, but have come to like the simplicity of both the code for, and the visual presentation of, `corrgram`s for many purposes. \n\nHere I use the data from [a post on making a network graph](../network-graph/).\n\n\n::: {.cell}\n\n```{.r .cell-code}\nload(\"../network-graph/mydata.RData\")\n```\n:::\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(corrgram) # corrgrams\n\ncorrgram(mydata, \n         order=TRUE, \n         lower.panel = panel.pie, # lower panel is pie charts\n         upper.panel = panel.cor, # upper panel is correlations\n         text.panel = panel.txt, # text panel is variable\n         diag.panel=panel.minmax, # minimum and maximum\n         main = \"Correlation of Scales in Our Data\") \n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
