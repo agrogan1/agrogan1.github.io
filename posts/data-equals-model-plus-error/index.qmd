@@ -2,7 +2,7 @@
 title: "Data = Model + Error"
 author:  Andy Grogan-Kaylor 
 date: "2026-10-15"
-categories: [stats]
+categories: [stats, multilevel]
 draft: false
 image: lightbulb.png
 filters:
