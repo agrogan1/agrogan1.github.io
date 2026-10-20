@@ -11,9 +11,9 @@ highlight-style: haddock
 
 In [earlier posts](https://agrogan1.github.io/blog.html#category=exploring%20data), I have been looking at different ways to get an idea of what *scales* and *demographic* variables in my data are related to other *scales* and *demographic* variables in my data. 
 
-In [a post from a while back](../what-is-related-to-what), I looked at `corrgram`s [@corrgram]. I think that there are many ways to explore data visually, but have come to like the simplicity of both the code for, and the visual presentation of, `corrgram`s for many purposes. 
+In [a post from a while back](../what-is-related-to-what), I looked at `corrgram`s [@corrgram]. I think that there are many ways to explore data visually, but have come to like the simplicity of both the code for `corrgram`s, and the visual presentation of `corrgram`s for many purposes.
 
-Here I use the data from [a post on making a network graph](../network-graph/).
+Here is a `corrgram` using the the data from [a post on making a network graph](../network-graph/).
 
 ```{r}
 
