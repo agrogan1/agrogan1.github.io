@@ -2,6 +2,7 @@
 title: "About Me"
 about:
   template: solana
+  image: forest.png
   links:
     - icon: mailbox
       text: E-mail
@@ -39,8 +40,6 @@ In my work I use advanced statistical models, like [multilevel models](https://a
 
 I have also worked on developing and evaluating interventions for under-served populations, particularly among people who speak Spanish as their primary language. 
 
-A lot of my work is done with international samples. The globe on this webpage indicates the countries where some of the data that I’ve used has come from, or where I have done some work.
-
 ```{r}
 
 library(ggplot2)
@@ -54,6 +53,7 @@ library(countrycode)
 ```
 
 ```{r}
+#| eval: false
 
 countries <- c("United States", 
                "Canada", 
@@ -96,6 +96,7 @@ save(y, file="countries.Rdata")
 ```{r}
 #| fig-cap: "Countries where some of the data that I’ve used has come from, or where I have done some work."
 #| label: fig-1
+#| eval: false
 
 l <- list(color = toRGB("black"), width = 1)
 
@@ -125,7 +126,7 @@ plot_geo(y) %>%
 
 ```
 
-More recently, my collaborators and I have been doing quite a bit of work with the MICS data collected by UNICEF. Below, please find a map of the countries in which the MICS surveys were conducted.
+Over the past several years, my collaborators and I have been doing quite a bit of work with the MICS data collected by UNICEF. Below, please find a map of the countries in which the MICS surveys were conducted.
 
 ```{r}
 #| echo: false
@@ -185,8 +186,6 @@ p0 <- MICScountries %>%
 p0
 
 ```
-
-Please click here for my [faculty page](https://ssw.umich.edu/faculty/profiles/tenure-track/agrogan) on the School of Social Work website.
 
 For copies of any of my published research papers, please e-mail me at [agrogan@umich.edu](agrogan@umich.edu).
 

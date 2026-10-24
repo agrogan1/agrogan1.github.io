@@ -147,7 +147,7 @@ Information on countries that have banned corporal punishment available from  [e
 
 ::: {.panel-tabset}
 
-## Interactive Globe
+## Globe
 
 ```{r make_globe}
 #| eval: true
