@@ -2,13 +2,13 @@
 title: "A *Very* Short Introduction to Stata"
 subtitle: "The basic *philosophy* of Stata."
 author: Andy Grogan-Kaylor
-date: "2026-9-15"
+date: "2026-10-24"
 categories: [stats, Stata]
 image: "Stata.png"
 ---
 
 ::: {.callout-tip}
-# Key Idea 
+# Stata Is Very Intuitive 
 
 The basic philosophy of Stata---"Stata in one sentence"---is: 
 
@@ -35,6 +35,7 @@ Commands that you actually type are represented in `monospace` font. `x` and `y`
 | Drop                            | `drop x y z`                  |
 | Correlation                     | `corr x y`                    |
 | Regression                      | `regress y x z`               |
+| Regression with weighted data   | `regress y x z [pweight = myweight]` [^weights] |
 | Logistic Regression             | `logit y x z, or` [^logit]    |
 | Ordinal Logistic Regression     | `ologit y x z, or` [^ologit]  |
 | Multinomial Logistic Regression | `mlogit y x z, rr` [^mlogit]  |
@@ -53,6 +54,7 @@ Commands that you actually type are represented in `monospace` font. `x` and `y`
 [^rowcol]: After the `,` the `row` and `col` options can be helpful to generate *row* and *column* percentages.
 [^item]: After the `,` the `item` option will estimate the increase in *alpha* if the particular item were removed. 
 [^recode]: It is usually best practice, but not required, to `recode` values of a variable (e.g. `x`) into a *new* variable (e.g. `xR`), leaving the original variable untouched. 
+[^weights]: This example is using *probability weights* or *sampling weights*. Stata has other kinds of weights. See `help weight` for more information. For more complex survey designs see `help svy`.
 [^logit]: Here we need to use the `, or` option to ask for *odds ratios* instead of *logit coefficients*.
 [^ologit]: Here again we need to use the `, or` option to ask for *odds ratios* instead of *logit coefficients*.
 [^mlogit]: Here we need to use the `, rr` option to ask for *risk ratios* instead of *logit coefficients*.
