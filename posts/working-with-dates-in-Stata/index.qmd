@@ -4,6 +4,7 @@ author: "Andrew Grogan-Kaylor"
 date: "2023-10-20"
 categories: [stats, Stata]
 image: "data.png"
+highlight-style: haddock
 ---
 
 # Introduction
@@ -34,7 +35,8 @@ use simulated-date.dta, clear
 
 We see that both date variables are formatted as strings
 
-```{stata, echo=TRUE}
+```{stata}
+*| echo: true
 
 list
 
@@ -44,7 +46,11 @@ describe
 
 # Create Date Variables
 
-> There are *many* date functions in Stata, to work with different kinds of data in different formats. `help date` should direct you to the documentation for *Date and time functions*.
+::: {.callout-tip}
+## Key Idea
+
+There are *many* date functions in Stata, to work with different kinds of data in different formats. `help date` and `help datetime` should direct you to the documentation for *Date and time functions*.
+:::
 
 ```{stata, collectcode=TRUE, echo=TRUE}
 
@@ -54,9 +60,14 @@ generate enddate2 = date(enddate, "YMD") // create a date, specifying order of e
 
 ```
 
-> The command has created 2 dates in numeric form, but they display as numbers.
+::: {.callout-tip}
+## Key Idea
 
-```{stata, echo=TRUE}
+The command has created 2 dates in numeric form, but they display as numbers.
+:::
+
+```{stata}
+*| echo: true
 
 describe
 

@@ -77,10 +77,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-b6a8276bf55561bdbc268162d41bd1f7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-03f7d9b32c68af73ef0ecf910dfd98dd.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-91951e90da365a4745b3d6636fa4fb2d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-972f7452c3fae458d1f55b1118a6ca1e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -404,10 +404,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>List And Describe The Data</h1>
 <p>We see that both date variables are formatted as strings</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">describe</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">describe</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     |  startdate     enddate |
      |------------------------|
@@ -420,49 +419,68 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 Contains data from simulated-date.dta
  Observations:             3                  
     Variables:             2                  6 Apr 2021 16:46
--------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
--------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 startdate       str10   %10s                  startdate
 enddate         str9    %9s                   enddate
--------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 Sorted by: </code></pre>
 </div>
 </div>
 </section>
 <section id="create-date-variables" class="level1">
 <h1>Create Date Variables</h1>
-<blockquote class="blockquote">
-<p>There are <em>many</em> date functions in Stata, to work with different kinds of data in different formats. <code>help date</code> should direct you to the documentation for <em>Date and time functions</em>.</p>
-</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Key Idea
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>There are <em>many</em> date functions in Stata, to work with different kinds of data in different formats. <code>help date</code> and <code>help datetime</code> should direct you to the documentation for <em>Date and time functions</em>.</p>
+</div>
+</div>
 <div class="cell" data-collectcode="true">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">generate</span> startdate2 = <span class="fu">date</span>(startdate, <span class="st">"YMD"</span>) <span class="co">// create a date, specifying order of elements</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">generate</span> enddate2 = <span class="fu">date</span>(enddate, <span class="st">"YMD"</span>) <span class="co">// create a date, specifying order of elements</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<blockquote class="blockquote">
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Key Idea
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>The command has created 2 dates in numeric form, but they display as numbers.</p>
-</blockquote>
+</div>
+</div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">describe</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">describe</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Contains data from simulated-date.dta
  Observations:             3                  
     Variables:             4                  6 Apr 2021 16:46
--------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
--------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 startdate       str10   %10s                  startdate
 enddate         str9    %9s                   enddate
 startdate2      float   %9.0g                 
 enddate2        float   %9.0g                 
--------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 Sorted by: 
      Note: Dataset has changed since last saved.
 
@@ -490,15 +508,15 @@ Sorted by:
 <pre><code>Contains data from simulated-date.dta
  Observations:             3                  
     Variables:             4                  6 Apr 2021 16:46
--------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
--------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 startdate       str10   %10s                  startdate
 enddate         str9    %9s                   enddate
 startdate2      float   %d                    
 enddate2        float   %d                    
--------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 Sorted by: 
      Note: Dataset has changed since last saved.
 
@@ -523,12 +541,28 @@ Sorted by:
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span>, abbreviate(15) <span class="co">// list out the data with new variables</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>     |  startdate     enddate   startdate2    enddate2   elapseddays   elapsedyears |
-     |------------------------------------------------------------------------------|
-  1. | 2019-01-01   2019-1-30    01jan2019   30jan2019            29       .0794521 |
-  2. | 2019-02-15   2019-5-30    15feb2019   30may2019           104       .2849315 |
-  3. | 2019-03-01   2019-4-30    01mar2019   30apr2019            60       .1643836 |
-     +------------------------------------------------------------------------------+</code></pre>
+<pre><code>  1. |  startdate |   enddate | startdate2 |  enddate2 | elapseddays |
+     | 2019-01-01 | 2019-1-30 |  01jan2019 | 30jan2019 |          29 |
+     |---------------------------------------------------------------|
+     |                         elapsedyears                          |
+     |                             .0794521                          |
+     +---------------------------------------------------------------+
+
+     +---------------------------------------------------------------+
+  2. |  startdate |   enddate | startdate2 |  enddate2 | elapseddays |
+     | 2019-02-15 | 2019-5-30 |  15feb2019 | 30may2019 |         104 |
+     |---------------------------------------------------------------|
+     |                         elapsedyears                          |
+     |                             .2849315                          |
+     +---------------------------------------------------------------+
+
+     +---------------------------------------------------------------+
+  3. |  startdate |   enddate | startdate2 |  enddate2 | elapseddays |
+     | 2019-03-01 | 2019-4-30 |  01mar2019 | 30apr2019 |          60 |
+     |---------------------------------------------------------------|
+     |                         elapsedyears                          |
+     |                             .1643836                          |
+     +---------------------------------------------------------------+</code></pre>
 </div>
 </div>
 
