@@ -4,11 +4,13 @@ author:  Andy Grogan-Kaylor
 date: "2026-3-14"
 categories: [stats, workflow, Stata]
 image: "color.png"
+highlight-style: haddock
+number-sections: true
 ---
 
 # Background
 
-It sometimes seems like 80% of our work as data analysts is cleaning the data, while only 20% is the actual analysis.  Here are some Stata commands that are useful in cleaning data.
+It sometimes seems like 80% of our work as data analysts is cleaning the data, while only 20% is the actual analysis. Here are some Stata commands that are useful in cleaning data.
 
 First we simulate some data to work with, and to clean.
 
@@ -58,10 +60,12 @@ list in 1/10 // list first 10 observations
 
 # Clean The Data!
 
-## Look at The Data and Think About The Data (`describe`, `summarize`, `tabulate`, `codebook`, `browse`)
+## Look at The Data and Think About The Data (`browse`, `describe`, `summarize`, `tabulate`, `codebook`)
 
 ::: {.callout-tip}
-When we look at variables we are looking for values that don't make sense, or that are outside the plausible range. As we are working with the data, it may sometimes be helpful to `browse` the data.
+When we look at variables we are looking for values that don't make sense, or that are outside the plausible range. As we are working with the data, it is *always* helpful to `browse` the data.
+
+Good next steps are to use commands like `describe`, `summarize`, `tabulate` and `codebook` to look at the data.
 :::
 
 ```{stata}
