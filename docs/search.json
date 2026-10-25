@@ -1008,53 +1008,39 @@
     "text": "It sometimes seems like 80% of our work as data analysts is cleaning the data, while only 20% is the actual analysis. Here are some Stata commands that are useful in cleaning data.\nFirst we simulate some data to work with, and to clean.\n\n\n\n\n\n\nNoteSimulate Some Data\n\n\n\n\n\nThis section is provided for illustration only, as it may be helpful to see how the data was simulated, and the decisions that went into simulating the data. You may also safely ignore this section if you like.\n\nclear all \n\nset obs 100 // 100 observations\n\ngenerate id = _n // random id \n\ngenerate age = rnormal(50, 10) // random generated age\n\nreplace age = 200 in 1 // someone is 200 years old!\n\ngenerate happy = runiformint(1,5) // randomly generated happiness\n    \nreplace happy = 999 in 10 // simulate a missing value\n    \ngenerate somethingelse = rnormal(0, 1) // something else!"
   },
   {
-    "objectID": "posts/cleaning-data-with-Stata/index.html#look-at-the-data-and-think-about-the-data-browse-describe-summarize-tabulate-codebook",
-    "href": "posts/cleaning-data-with-Stata/index.html#look-at-the-data-and-think-about-the-data-browse-describe-summarize-tabulate-codebook",
-    "title": "Cleaning Data With Stata",
-    "section": "3.1 Look at The Data and Think About The Data (browse, describe, summarize, tabulate, codebook)",
-    "text": "3.1 Look at The Data and Think About The Data (browse, describe, summarize, tabulate, codebook)\n\n\n\n\n\n\nTip\n\n\n\nWhen we look at variables we are looking for values that don’t make sense, or that are outside the plausible range. As we are working with the data, it is always helpful to browse the data.\nGood next steps are to use commands like describe, summarize, tabulate and codebook to look at the data.\n\n\n\ndescribe // describe the data\n\nContains data\n Observations:           100                  \n    Variables:             4                  \n-----------------------------------------------------------------------------------\nVariable      Storage   Display    Value\n    name         type    format    label      Variable label\n-----------------------------------------------------------------------------------\nid              float   %9.0g                 \nage             float   %9.0g                 \nhappy           float   %9.0g                 \nsomethingelse   float   %9.0g                 \n-----------------------------------------------------------------------------------\nSorted by: \n     Note: Dataset has changed since last saved.\n\n\n\nsummarize // descriptive statistics\n    \n\n    Variable |        Obs        Mean    Std. dev.       Min        Max\n-------------+---------------------------------------------------------\n          id |        100        50.5    29.01149          1        100\n         age |        100    49.85175    17.83505   24.33709        200\n       happy |        100        12.9    99.61598          1        999\nsomethinge~e |        100   -.0085413    1.072256  -2.685881   2.794861\n\n\n\ntabulate happy // tabulation of this particular categorical variable\n\n      happy |      Freq.     Percent        Cum.\n------------+-----------------------------------\n          1 |         21       21.00       21.00\n          2 |         19       19.00       40.00\n          3 |         23       23.00       63.00\n          4 |         17       17.00       80.00\n          5 |         19       19.00       99.00\n        999 |          1        1.00      100.00\n------------+-----------------------------------\n      Total |        100      100.00\n\n\n\ncodebook happy // VERY detailed view of this particular categorical variable\n\nhappy                                                                   (unlabeled)\n-----------------------------------------------------------------------------------\n\n                  Type: Numeric (float)\n\n                 Range: [1,999]                       Units: 1\n         Unique values: 6                         Missing .: 0/100\n\n            Tabulation: Freq.  Value\n                           21  1\n                           19  2\n                           23  3\n                           17  4\n                           19  5\n                            1  999"
-  },
-  {
-    "objectID": "posts/cleaning-data-with-Stata/index.html#notice-that",
-    "href": "posts/cleaning-data-with-Stata/index.html#notice-that",
-    "title": "Cleaning Data With Stata",
-    "section": "3.2 Notice that…",
-    "text": "3.2 Notice that…\n\nThere are variables in which we may not have interest.\nNone of the variables are labelled informatively.\nVariables do not seem to have informative value labels.\nSomeone appears to 200 years old.\nThere appear to be missing values in the variable happy that need to be re-coded.\n\n\n\n\n\n\n\nTip\n\n\n\nRemember that the command lookfor is often very helpful in looking for a particular variable. e.g. lookfor happy."
-  },
-  {
     "objectID": "posts/cleaning-data-with-Stata/index.html#only-keep-the-variables-of-interest",
     "href": "posts/cleaning-data-with-Stata/index.html#only-keep-the-variables-of-interest",
     "title": "Cleaning Data With Stata",
-    "section": "3.3 Only keep The Variables Of Interest",
-    "text": "3.3 Only keep The Variables Of Interest\nWe may only be interested in keeping some variables to keep our analytic data set more manageable.\nFor this particular analysis we may wish to drop the variable called somethingelse.\n\nkeep id age happy // keep only relevant variables\n\nWe could also have said drop somethingelse."
+    "section": "5.1 Only keep The Variables Of Interest",
+    "text": "5.1 Only keep The Variables Of Interest\nWe may only be interested in keeping some variables to keep our analytic data set more manageable.\nFor this particular analysis we may wish to drop the variable called somethingelse.\n\nkeep id age happy // keep only relevant variables\n\nWe could also have said drop somethingelse."
   },
   {
     "objectID": "posts/cleaning-data-with-Stata/index.html#add-variable-labels-label-variable-...",
     "href": "posts/cleaning-data-with-Stata/index.html#add-variable-labels-label-variable-...",
     "title": "Cleaning Data With Stata",
-    "section": "3.4 Add Variable Labels (label variable \"...\")",
-    "text": "3.4 Add Variable Labels (label variable \"...\")\n\nlabel variable id \"ID\" // label variable\n\nlabel variable age \"Age in Years\" // label variable\n\nlabel variable happy \"Happiness Scale\" // label variable"
+    "section": "5.2 Add Variable Labels (label variable \"...\")",
+    "text": "5.2 Add Variable Labels (label variable \"...\")\n\nlabel variable id \"ID\" // label variable\n\nlabel variable age \"Age in Years\" // label variable\n\nlabel variable happy \"Happiness Scale\" // label variable"
   },
   {
     "objectID": "posts/cleaning-data-with-Stata/index.html#create-value-labels-label-define-...",
     "href": "posts/cleaning-data-with-Stata/index.html#create-value-labels-label-define-...",
     "title": "Cleaning Data With Stata",
-    "section": "3.5 Create Value Labels (label define ...)",
-    "text": "3.5 Create Value Labels (label define ...)\n\nlabel define happy 1 \"Rarely\" 2 \"Sometimes\" 3 \"Often\" 4 \"Always\" // create value label"
+    "section": "5.3 Create Value Labels (label define ...)",
+    "text": "5.3 Create Value Labels (label define ...)\n\nlabel define happy 1 \"Rarely\" 2 \"Sometimes\" 3 \"Often\" 4 \"Always\" // create value label"
   },
   {
     "objectID": "posts/cleaning-data-with-Stata/index.html#attach-value-labels-to-variables-label-values-...",
     "href": "posts/cleaning-data-with-Stata/index.html#attach-value-labels-to-variables-label-values-...",
     "title": "Cleaning Data With Stata",
-    "section": "3.6 Attach Value Labels To Variables (label values ...)",
-    "text": "3.6 Attach Value Labels To Variables (label values ...)\nVariables and value labels can have the same names but are different things. We add the variable label happy to the variable named happy.\n\nlabel values happy happy // attach VALUE LABEL happy to VARIABLE happy"
+    "section": "5.4 Attach Value Labels To Variables (label values ...)",
+    "text": "5.4 Attach Value Labels To Variables (label values ...)\nVariables and value labels can have the same names but are different things. We add the variable label happy to the variable named happy.\n\nlabel values happy happy // attach VALUE LABEL happy to VARIABLE happy"
   },
   {
     "objectID": "posts/cleaning-data-with-Stata/index.html#recode-outliers-values-that-are-errors-or-values-that-should-be-coded-as-missing-recode",
     "href": "posts/cleaning-data-with-Stata/index.html#recode-outliers-values-that-are-errors-or-values-that-should-be-coded-as-missing-recode",
     "title": "Cleaning Data With Stata",
-    "section": "3.7 Recode Outliers, Values That Are Errors, Or Values That Should Be Coded As Missing (recode)",
-    "text": "3.7 Recode Outliers, Values That Are Errors, Or Values That Should Be Coded As Missing (recode)\n\nrecode happy (999 = .) // recode values as missing\n\nrecode age (100/max = 100) // age is topcoded at 100 (may or may not be plausible)\n\n(1 changes made to happy)\n\n(1 changes made to age)"
+    "section": "5.5 Recode Outliers, Values That Are Errors, Or Values That Should Be Coded As Missing (recode)",
+    "text": "5.5 Recode Outliers, Values That Are Errors, Or Values That Should Be Coded As Missing (recode)\n\nrecode happy (999 = .) // recode values as missing\n\nrecode age (100/max = 100) // age is topcoded at 100 (may or may not be plausible)\n\n(1 changes made to happy)\n\n(1 changes made to age)"
   },
   {
     "objectID": "posts/what-is-related-to-what/index.html",

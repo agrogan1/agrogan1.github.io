@@ -6,6 +6,8 @@ categories: [stats, workflow, Stata]
 image: "color.png"
 highlight-style: haddock
 number-sections: true
+filters:
+  - highlight-text
 ---
 
 # Background
@@ -58,14 +60,16 @@ list in 1/10 // list first 10 observations
 
 ```
 
-# Clean The Data!
-
-## Look at The Data and Think About The Data (`browse`, `describe`, `summarize`, `tabulate`, `codebook`)
+# Look at The Data and Think About The Data (`browse`, `describe`, `summarize`, `tabulate`, `codebook`)
 
 ::: {.callout-tip}
 When we look at variables we are looking for values that don't make sense, or that are outside the plausible range. As we are working with the data, it is *always* helpful to `browse` the data.
 
 Good next steps are to use commands like `describe`, `summarize`, `tabulate` and `codebook` to look at the data.
+:::
+
+::: {.callout-tip}
+Remember that the command `lookfor` is often very helpful in *looking for* a particular variable. e.g. `lookfor happy`.
 :::
 
 ```{stata}
@@ -96,7 +100,7 @@ codebook happy // VERY detailed view of this particular categorical variable
 
 ```
 
-## Notice that... 
+# [Notice that...]{fg="#FF0000"} 
 
 * There are variables in which we may not have interest.
 * None of the variables are labelled informatively.
@@ -104,9 +108,7 @@ codebook happy // VERY detailed view of this particular categorical variable
 * Someone appears to 200 years old.
 * There appear to be missing values in the variable `happy` that need to be re-coded.
 
-::: {.callout-tip}
-Remember that the command `lookfor` is often very helpful in *looking for* a particular variable. e.g. `lookfor happy`.
-:::
+# Clean The Data!
 
 ## Only `keep` The Variables Of Interest
 
