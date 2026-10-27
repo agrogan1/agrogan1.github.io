@@ -1,0 +1,15 @@
+{
+  "hash": "061da572e2c5aba56f341d44aef86349",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Parenting and Child Behavioral Problems\"\nsubtitle: \"Slides from a Presentation at the Canadian Stata Conference 2026\"\nauthor:  Andy Grogan-Kaylor \ndate: \"2026-11-10\"\ncategories: [corporal punishment, positive parenting]\nimage: \"caregiving.png\"\ndraft: false\n---\n\nSlides from a a presentation at the *Canadian Stata Conference 2026*.\n\n\"Parenting and Child Behavioral Problems: Old Questions and New Panel Data Analyses\"\n\n[parenting-and-child-behavioral-problems.pdf](parenting-and-child-behavioral-problems.pdf)\n\n\n::: {.cell}\n<iframe src=\"parenting-and-child-behavioral-problems.pdf\" width=\"672\" height=\"400px\" data-external=\"1\"></iframe>\n:::\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

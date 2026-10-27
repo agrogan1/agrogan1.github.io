@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/parenting-and-child-behavioral-problems/index.html",
       "/posts/multilevel-thinking/index.html",
       "/posts/very-short-introduction-Stata/index.html",
       "/posts/corrgram/index.html",
@@ -138,11 +139,7 @@
     "items": []
   },
   {
-    "listing": "/posts/Bayesian-resources/index.html",
-    "items": []
-  },
-  {
-    "listing": "/contact.html",
+    "listing": "/posts/R-resources/index.html",
     "items": []
   },
   {
@@ -150,7 +147,11 @@
     "items": []
   },
   {
-    "listing": "/posts/R-resources/index.html",
+    "listing": "/contact.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/Bayesian-resources/index.html",
     "items": []
   },
   {

@@ -1,7 +1,9 @@
 project:
   type: website
   output-dir: docs
-
+  resources:
+    - "parenting-and-child-behavioral-problems.pdf"
+    
 website:
   title: "Andrew Grogan-Kaylor"
   twitter-card: true
