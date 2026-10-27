@@ -5,7 +5,7 @@ author:  Andy Grogan-Kaylor
 date: "2026-11-10"
 categories: [corporal punishment, positive parenting]
 image: "caregiving.png"
-draft: false
+draft: true
 ---
 
 Slides from a a presentation at the *Canadian Stata Conference 2026*.
