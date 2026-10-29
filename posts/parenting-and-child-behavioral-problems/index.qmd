@@ -4,18 +4,18 @@ subtitle: "Slides from a Presentation at the Canadian Stata Conference 2026"
 author:  Andy Grogan-Kaylor 
 date: "2026-11-10"
 categories: [corporal punishment, positive parenting]
-image: "caregiving.png"
+image: "DAG.png"
 draft: true
 ---
 
 Slides from a a presentation at the *Canadian Stata Conference 2026*.
 
-"Parenting and Child Behavioral Problems: Old Questions and New Panel Data Analyses"
+"Parenting and Child Behavioral Problems: Old Questions and New Panel Data Analyses" [@Grogan-Kaylor2026Canadian]
 
-[https://agrogan1.github.io/parenting-and-child-behavioral-problems.pdf](https://agrogan1.github.io/parenting-and-child-behavioral-problems.pdf)
+[https://agrogan1.github.io/parenting-and-child-behavioral-problems/parenting-and-child-behavioral-problems.pdf](https://agrogan1.github.io/parenting-and-child-behavioral-problems/parenting-and-child-behavioral-problems.pdf)
 
 ```{r}
 
-knitr::include_url("https://agrogan1.github.io/https://agrogan1.github.io/parenting-and-child-behavioral-problems.pdf")
+knitr::include_url("https://agrogan1.github.io/parenting-and-child-behavioral-problems/parenting-and-child-behavioral-problems.pdf")
 
 ```
