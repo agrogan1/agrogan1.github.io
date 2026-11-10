@@ -10,18 +10,23 @@ listing:
   fields: [image, title]
   contents:
     - title: "About My Research"
-      path: about-research.qmd
+      path: https://agrogan1.github.io/about-research.html
       image: thumbnail.jpg
     - title: "Research Papers and Projects"
-      path: research.qmd
+      path: https://agrogan1.github.io/research.html
       image: earth.png
     - title: "Teaching"
-      path: teaching.qmd
+      path: https://agrogan1.github.io/teaching.html
       image: plant.png
     - title: "About Me"
-      path: about.qmd  
+      path: https://agrogan1.github.io/about.html
       image: forest.png   
     - title: "Blog-ish Posts" 
-      path: blog.qmd
+      path: https://agrogan1.github.io/blog.html
+      image: bookcover.png
 ---
+
+
+
+
 

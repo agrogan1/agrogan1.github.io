@@ -3,9 +3,9 @@ title: "Parenting and Child Behavioral Problems"
 subtitle: "Slides from a Presentation at the Canadian Stata Conference 2026"
 author:  Andy Grogan-Kaylor 
 date: "2026-11-10"
-categories: [corporal punishment, positive parenting]
+categories: [corporal punishment, positive parenting, FFCWS]
 image: "DAG.png"
-draft: true
+draft: false
 ---
 
 Slides from a a presentation at the *Canadian Stata Conference 2026*.
