@@ -1,0 +1,15 @@
+{
+  "hash": "a42962a3c26bd00f9f402e172cfc422b",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Two Page Stata\"\nsubtitle: \"Content updates and clarifications\"\nauthor: \"Andy Grogan-Kaylor\" \ndate: \"2026-9-19\"\ncategories: [stats, Stata]\nimage: \"TwoPageStata.png\"\n---\n\nI've made updates to *Two Page Stata*: [https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.pdf](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.pdf) [[HTML](https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.html)].\n\n*Two Page Stata* is intended to be an introduction to Stata in 2 pages. The treatment here is intended to be extremely brief, in order to create a kind of \"cheat sheet\" that can be presented in 2 pages.\n\n\n::: {.cell}\n<iframe src=\"https://agrogan1.github.io/Stata/two-page-stata/TwoPageStata.pdf\" width=\"672\" height=\"400px\" data-external=\"1\"></iframe>\n:::\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
