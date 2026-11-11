@@ -74,7 +74,7 @@ But what if you want to think about the *substantive significance* of the differ
 
 # Cohen's d Calculator
 
-I have recently updated my calculator to calculate and visualize Cohen's d. It can be found here: [https://agrogan.shinyapps.io/es_calculator/](https://agrogan.shinyapps.io/es_calculator/).
+I have recently updated my calculator to calculate and visualize Cohen's d. It can be found here: [https://agrogan1-es-calculator.share.connect.posit.cloud/](https://agrogan1-es-calculator.share.connect.posit.cloud/).
 
 
 

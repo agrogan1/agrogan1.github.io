@@ -18,31 +18,23 @@ listing:
       image: data.png
       categories: [workflow, stats, Stata, R]
     - title: "Causality"
-      path: https://agrogan.shinyapps.io/causality/
+      path: https://agrogan1-causality.share.connect.posit.cloud/
       image: causality.png
       categories: [stats, causality, interactive]
     - title: "t-test"
-      path: https://agrogan.shinyapps.io/shiny-t-test/
+      path: https://agrogan1-shiny-t-test.share.connect.posit.cloud/
       image: t-test.png
       categories: [stats, interactive]
     - title: "Cohen's d"
-      path: https://agrogan.shinyapps.io/es_calculator/
+      path: https://agrogan1-es-calculator.share.connect.posit.cloud/
       image: Cohens-d.png
-      categories: [stats, interactive]      
-    - title: "Correlation"
-      path: https://agrogan.shinyapps.io/correlation_demo/
-      image: correlation.png
       categories: [stats, interactive]
     - title: "Thinking about Correlations"
-      path: https://agrogan.shinyapps.io/thinking_about_correlations/
+      path: https://agrogan1-thinking-about-correlations.share.connect.posit.cloud/
       image: correlation.png
       categories: [stats, interactive]
-    - title: "Regression Demo"
-      path: https://agrogan.shinyapps.io/regression_demo/
-      image: regression.png
-      categories: [stats, interactive]
     - title: "Exploring Logistic Regression"
-      path: https://agrogan.shinyapps.io/exploring_logistic_regression/
+      path: https://agrogan1-exploring-logistic-regression.share.connect.posit.cloud/
       categories: [stats, interactive, categorical]
       image: logistic.png
 ---

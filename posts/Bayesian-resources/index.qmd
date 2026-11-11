@@ -22,7 +22,7 @@ listing:
       image: https://agrogan1.github.io/Bayes/basic-Bayes/Thomas_Bayes.png
       categories: [Bayes]
     - title: "Thinking Through Bayesian Ideas"
-      path: https://agrogan.shinyapps.io/Thinking-Through-Bayes/
+      path: https://agrogan1-thinking-through-bayes.share.connect.posit.cloud/
       image: https://agrogan1.github.io/Bayes/basic-Bayes/Thomas_Bayes.png
       categories: [Bayes, interactive]
     - title: "Notes on Accepting the Null ($H_0$) Hypothesis"
