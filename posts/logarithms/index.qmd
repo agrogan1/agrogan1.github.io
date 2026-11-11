@@ -2,7 +2,7 @@
 title: "Logarithms"
 subtitle: "A *scrollytelling* explanation"
 author: "Andy Grogan-Kaylor"
-date: "2025-10-25"
+date: "2026-11-10"
 categories: [stats, math, closeread, scrollytelling]
 ---
 
