@@ -47,7 +47,7 @@ This idea has specific implications for multilevel models, because multilevel mo
 
 # "All Models Are Wrong, Some Are Useful"
 
-I am perennially thinking about George Box's idea that "all models are wrong, and some are useful" [@Box1979]. Box's idea seems to have some connections to the idea that $\text{\color{purple}{Data}} = \text{\color{blue}{Model}} + \text{\color{red}{Error}}$. As we add independent variables to our model, we are essentially trying to make our model less wrong. Models are abstractions of reality, so no model is a perfect accounting of reality, but we can always test our models against the data. And we can test whether a more complex model is less wrong than a simpler model. 
+I am [perennially thinking about George Box's idea that "all models are wrong, and some are useful"](https://agrogan1.github.io/closeread/be-less-wrong/be-less-wrong.html) [@Box1979]. Box's idea seems to have some connections to the idea that $\text{\color{purple}{Data}} = \text{\color{blue}{Model}} + \text{\color{red}{Error}}$. As we add independent variables to our model, we are essentially trying to make our model less wrong. Models are abstractions of reality, so no model is a perfect accounting of reality, but we can always test our models against the data. And we can test whether a more complex model is less wrong than a simpler model. 
 
 # A Map of the World
 
