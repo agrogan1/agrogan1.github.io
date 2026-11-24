@@ -18,7 +18,8 @@ body {
 blockquote {
   color: black;
   background-color: #fffff8;
-  border-left: 3px solid red; 
+  font-style: italic;
+  border-left: 0px solid red; 
   padding: 0.5em 10px;
 }
 
@@ -56,6 +57,10 @@ blockquote {
 .dropdown-item {
   font-size: 75%;
   font-weight: bold;
+}
+
+.card-body {
+  background-color: #fffff8;
 }
 
 a {
